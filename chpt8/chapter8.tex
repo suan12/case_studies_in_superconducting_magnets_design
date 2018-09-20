@@ -1,0 +1,97 @@
+\chapter{保护}
+\section{引言}
+保护是五大关键设计和运行项目之一——其他四项是稳定性、机械完整性、制冷和导体。
+\subsection{热能密度 vs. 磁能密度}
+除非绕组得到了保护，不然磁体绕组的一小部分，即“热点”，就要吸收掉存储于绕组中的大部分磁能。这样，该部分将过热并永久性损坏。
+不过，熔化磁体中单位绕组体积的热能密度要远大于磁体存储的磁能密度。
+
+仅考虑将磁体内部空间内存储的能量全部绝热转换为热，引起铜（绕组的一种代表性材料）的焓密度$h_{Cu}(T)$变化。如果是从4K（或者80K）加热到它的熔点1356K，
+那么初始磁感应密度$B_0$将高达$~150 T$：
+\begin{eqnarray}\label{eqn: 8.1}
+% \nonumber % Remove numbering (before each equation)
+  \frac{B_0^2}{2\mu_0}&=& h_{Cu}(1356K)-h_{Cu}(4K/80K)\approx 5.2\times 10^9 J/m^3 \nonumber\\
+  B_0 &\approx
+   &\sqrt{2(4\pi \times 10^-7 H/m)(5.2\times 10^9 J/m^3)}\approx 115 T
+\end{eqnarray}
+
+\subsection{热点和热点温度}
+
+\subsection{绕组材料的温度数据}
+
+\subsection{$T_f$的安全、风险、高度风险区间}
+
+\subsection{温度引起的应变}
+
+
+\section{绝热加热}
+\subsection{恒定电流模式下的绝热加热}
+\subsection{恒定放电量模式下的绝热加热}
+\subsection{引线短接的磁体的绝热加热}
+\subsection{恒定电压模式下的绝热加热}
+
+\section{高电压}
+\subsection{电弧环境}
+\subsection{Paschen电压试验}
+\subsection{失超磁体内的电压峰值}
+
+\section{正常区传播（NZP）}
+
+\subsection{轴向NZP速度}
+\subsection{“制冷”条件下的NZP}
+\subsection{横向匝间速度}
+\subsection{热-流体失超恢复（THQB）}
+\subsection{交流损耗诱导的NZP}
+
+\section{计算机仿真}
+
+\section{自保护磁体}
+\subsection{尺度限制}
+
+\section{孤立磁体的被动保护}
+
+
+\section{主动保护}
+\subsection{过热}
+\subsection{多线圈磁体中的过压}
+\subsection{主动保护技术：检测-抑制}
+\subsection{主动保护技术：检测-激活加热器}
+\subsection{失超电压保护技术：基本电桥}
+
+\section{专题}
+\subsection{问题1：大型超导磁体的回温}
+
+\newpage
+\subsection{问题2：6 kA气冷HTS引线的保护}
+
+\newpage
+\subsection{问题3：制冷机制冷的NbTi磁体的保护}
+
+\newpage
+\subsection{问题4：混合III SCM的“热点”温度}
+
+\newpage
+\subsection{讨论5：失超电压探测——一个变种}
+
+\newpage
+\subsection{问题6：抑制电阻的设计}
+
+\newpage
+\subsection{讨论7：磁体的“缓慢”放电模式}
+
+\newpage
+\subsection{讨论8：低阻电阻器设计}
+
+\newpage
+\subsection{讨论9：过热\& 内部电压判据}
+
+\newpage
+\subsection{讨论10：Bi2223带电流引线的保护}
+
+\newpage
+\subsection{讨论11：$MgB_2$磁体的主动保护}
+
+\newpage
+\subsection{问题12：NMR磁体的被动保护}
+
+\newpage
+\subsection{讨论13：HTS磁体到底要不要保护？}
