@@ -8,3 +8,9 @@
 - 冯砚墀
 - 韩泽岩
 - 张家辉
+
+# 工具链
+- TeX套装：TeX Live 2018
+- 编译器：XeLaTeX
+- 编辑器：texstudio 2.12.2
+- eps转换：Adobe Illustrator CC 2018
