@@ -1956,6 +1956,9 @@ SCM由三个线圈A、B、C组成，运行于1.8K，最初产生了14T磁场，�
 它使用两个一致的空间上同轴但在磁场轴线($z$向)分开一定距离的的线圈(图3.24a)；
 两个线圈分别位于$z = d/2$和$z = −d/2$。通过调整间隔$d$，使得磁场中心处于($r=0,z=0$):
 %3.121
+\begin{equation}% 3.121
+\frac{d^2H_z(0,z)}{dz^2}\mid_{z=0}=0
+\end{equation}
 
 a) 将两个线圈看成理想的“环”线圈，半径为$a$，证明当$d=a$时，在中心处有$dH^2_z(0, z)/dz^2 = 0$。
 图3.24b中的实线给出了一个不满足方程3.121的$d$下的$H_z(0, z)$。
@@ -1973,17 +1976,30 @@ b) 证明两个线圈如果反极性，中心处会产生一个梯度场。
 \subsubsection{问题3.3之解}
 a) 位于下方$z=−d/2$处环产生的轴向($r =0$)磁场的$z$分量可由方程3.3a给出：
 % 方程
+\begin{equation}% page139
+H_z(0,z)=\frac{a^2I}{2[a^2+(z+\frac{d}{2})^2]^\frac{3}{2}}
+\end{equation}
 
 加上位于上面$z=d/2$处的线圈的磁场，有：
 %S3.1
+\begin{equation}% S3.1
+H_z(0,z)=\frac{a^2I}{2}\{\frac{1}{[a^2+(z+\frac{d}{2})^2]^\frac{3}{2}}+\frac{1}{[a^2+(z-\frac{d}{2})^2]^\frac{3}{2}}\}
+\end{equation}
 
 将S3.1给出的方程$H_z(z)$对$z$微分，有：
 % 方程
+\begin{equation}
+\frac{d^2H_z(0,z)}{dz}=\frac{3a^2I}{2}\{{-\frac{(z+\frac{d}{2})}{[a^2+(z+\frac{d}{2})^2]^\frac{5}{2}}-\frac{(z-\frac{d}{2})}{[a^2+(z-\frac{d}{2})^2]^\frac{5}{2}}}\}
+\end{equation}
 
 注意，由于对称性，$dH_z(0,z)/dz=0$在$z=0$处对任意$a$成立。
 
 对S3.1二次微分有：
 % 方程
+\begin{equation}
+\frac{d^2H_z(0,z)}{dz^2}=\frac{3a^2I}{2}\{{-\frac{a^2-4(z+\frac{d}{2})^2}{[a^2+(z+\frac{d}{2})^2]^\frac{7}{2}}}
+-\frac{a^2-4(z-\frac{d}{2})^2}{[a^2+(z-\frac{d}{2})^2]^\frac{7}{2}}\}
+\end{equation}
 
 如果$d = a$，在$z = 0$处二阶导数为零。
 这种同轴放置两个同一线圈，且其距离等于线圈半径的做法产生了一个高均匀场区域。
@@ -1991,12 +2007,21 @@ a) 位于下方$z=−d/2$处环产生的轴向($r =0$)磁场的$z$分量可由�
 
 b) 对这个系统，下方线圈的电流极性反转，有：
 % s3.2
+\begin{equation}% S3.2
+H_z(0,z)=\frac{a^2I}{2}\{{-\frac{1}{[a^2+(z+\frac{d}{2})^2]^\frac{3}{2}}+\frac{1}{[a^2+(z-\frac{d}{2})^2]^\frac{3}{2}}}\}
+\end{equation}
 
 根据对称性，$H_z(z=0)=0$。对S3.2依$z$求导，有：
 %s3.3
+\begin{equation}% S3.3
+\frac{dH_z(0,z)}{dz}=\frac{3a^2I}{2}\{{\frac{(z+\frac{d}{2})}{[a^2+(z+\frac{d}{2})^2]^\frac{5}{2}}-\frac{(z-\frac{d}{2})}{[a^2+(z-\frac{d}{2})^2]^\frac{5}{2}}}\}
+\end{equation}
 
 在$z=0$处计算S3.3，有：
 %方程
+\begin{equation}
+\frac{dH_z(0,z)}{dz}\mid_0=\frac{3a^2Id}{2[a^2+(z+\frac{d}{2})^2]^\frac{5}{2}}
+\end{equation}
 
 这种放置两个同一但电流方向相反的线圈产生梯度场的方法是要求中平面梯度场磁体设计中使用的基本法则。
 MRI系统中使用的脉冲磁体产生梯度场(从成像中提取空间信息)就是一个例子。
@@ -2014,23 +2039,79 @@ MRI系统中使用的脉冲磁体产生梯度场(从成像中提取空间信息)
 导出$E_2(1, 0)\cdots E_{10}(1, 0)$的技术也可以用于从3.15b导出$E_{12}(\alpha, 0)\cdots E_{20}(\alpha, 0)$，$f_{12}(\alpha,\beta)\cdots f_{20}(\alpha,\beta)$在附录IB中有。
 在极限$\beta\rightarrow 0$下，将$1/(1+\beta^2)^{19.5}$展开至$\beta^{20}$项，有：
 %3.122
+\begin{equation}% 3.122
+\frac{1}{(1+\beta)^{19.5}}=1-\frac{39}{2}\beta^2+\frac{39}{2}\cdot\frac{41}{2}\frac{\beta^4}{2!}-\frac{39}{2}\cdot\frac{41}{2}\cdot\frac{43}{2}\frac{\beta^6}{3!}+\cdots
++\frac{39}{2}\cdot\frac{41}{2}\cdot\frac{43}{2}\cdot\frac{45}{2}\cdot\frac{47}{2}\cdot\frac{49}{2}\cdot\frac{51}{2}\cdot\frac{53}{2}
+\cdot\frac{53}{2}\cdot\frac{57}{2}\frac{\beta^{20}}{10!}
+\end{equation}
 
 $E_{12}(\alpha, 0)\cdots E_{20}(\alpha, 0)$类似于方程3.21中的$E_{2}(\alpha, 0)\cdots E_{10}(\alpha, 0)$，我们有：
 %3.123
-
+\begin{equation}% 3.123a
+E_{12}(\alpha,0)=\frac{7\cdot11\cdot13}{2^{12}}\cdot\frac{(\alpha^{12}-1)}{\alpha^{12}\ln\alpha}=\frac{1001(\alpha^{12}-1)}{4096\alpha^{12}\ln\alpha}
+\end{equation}
+\begin{equation}% 3.123b
+E_{14}(\alpha,0)=-\frac{5\cdot9\cdot11\cdot13}{2^{12}\cdot7}\cdot\frac{(\alpha^{14}-1)}{\alpha^{14}\ln\alpha}=-\frac{6435(\alpha^{14}-1)}{28672\alpha^{14}\ln\alpha}
+\end{equation}
+\begin{equation}% 3.123c
+E_{16}(\alpha,0)=\frac{5\cdot9\cdot11\cdot13\cdot17}{2^{19}}\cdot\frac{(\alpha^{16}-1)}{\alpha^{16}\ln\alpha}=\frac{109395(\alpha^{16}-1)}{524288\alpha^{16}\ln\alpha}
+\end{equation}
+\begin{equation}% 3.123d
+E_{18}(\alpha,0)=-\frac{5\cdot11\cdot13\cdot17\cdot19}{2^{17}\cdot3^2}\cdot\frac{(\alpha^{18}-1)}{\alpha^{18}\ln\alpha}=-\frac{230945(\alpha^{18}-1)}{1179648\alpha^{18}\ln\alpha}
+\end{equation}
+\begin{equation}% 3.123e
+E_{20}(\alpha,0)=\frac{3\cdot7\cdot11\cdot13\cdot17\cdot19}{2^{20}\cdot5}\cdot\frac{(\alpha^{20}-1)}{\alpha^{20}\ln\alpha}=\frac{969969(\alpha^{20}-1)}{5242880\alpha^{20}\ln\alpha}
+\end{equation}
 
 在极限$\alpha\rightarrow 1$时，方程3.123a-3.123e成为：
 %3.124
+\begin{equation}% 3.124a
+E_{12}(1,0)=\frac{3003}{1024}=\frac{3\cdot7\cdot11\cdot13}{2^{10}}=\frac{3\cdot5\cdot7\cdot9\cdot11\cdot13}{2\cdot4\cdot6\cdot8\cdot10\cdot12}\simeq2.933
+\end{equation}
+\begin{equation}% 3.124b
+E_{14}(1,0)=-\frac{6435}{2048}=-\frac{5\cdot9\cdot11\cdot13}{2^{11}}=-\frac{3\cdot5\cdot7\cdot9\cdot11\cdot13\cdot15}{2\cdot4\cdot6\cdot8\cdot10\cdot12\cdot14}\simeq-3.142
+\end{equation}
+\begin{equation}% 3.124c
+E_{16}(1,0)=\frac{109395}{32768}=\frac{5\cdot9\cdot11\cdot13\cdot17}{10^{15}}=\frac{3\cdot5\cdot7\cdot9\cdot11\cdot13\cdot15\cdot17} {2\cdot4\cdot6\cdot8\cdot10\cdot12\cdot14\cdot16}\simeq3.338
+\end{equation}
+\begin{equation}% 3.124d
+E_{18}(1,0)=-\frac{230945}{65536}=\frac{5\cdot11\cdot13\cdot17\cdot19}{10^{16}}=-\frac{3\cdot5\cdot7\cdot9\cdot11\cdot13\cdot15\cdot17\cdot19} {2\cdot4\cdot6\cdot8\cdot10\cdot12\cdot14\cdot16\cdot18}\simeq-3.524
+\end{equation}
+\begin{equation}% 3.124e
+E_{20}(1,0)=\frac{969969}{262144}=\frac{3\cdot7\cdot11\cdot13\cdot17\cdot19}{10^{18}}=\frac{3\cdot5\cdot7\cdot9\cdot11\cdot13\cdot15\cdot17\cdot19\cdot21} {2\cdot4\cdot6\cdot8\cdot10\cdot12\cdot14\cdot16\cdot18\cdot20}\simeq3.700
+\end{equation}
 
 \subsubsection{问题3.4之解}
 位于$\xi=+0.5$的线圈1贡献的$d^2h_z(\xi)/dxi^2$在 $xi=0$时$d^2h_z(0)/d\xi^2|_{1/2}$由方程3.16a给出：
 %s4.1
+\begin{equation}% S4.1
+\frac{d^2h_z(0)}{d\zeta^2}\mid_{\frac{1}{2}}=2E_2(1,0)+12E_4(1,0)\times(0.5)^2+30E_6(1,0)\times(0.5)^4+56E_8(1,0)\times(0.5)^6+90E_{10}(1,0)\times(0.5)^8
++132E_{12}(1,0)\times(0.5)^{10}+182E_{14}(1,0)\times(0.5)^{12}+240E_{16}(1,0)\times(0.5)^{14}+306E_{18}(1,0)\times(0.5)^{16}+380E_{20}(1,0)\times(0.5)^{18}+\cdots
+\end{equation}
 
 由于线圈2(位于$\xi=−0.5$)和位于$\xi=0.5$的线圈1在$\xi=0.5$处给出树枝上相同的$d^2\xi_z/d\xi^2$，我们有：
 %s4.2
+\begin{equation}% S4.2
+\frac{d^2h_z(0)}{d\zeta^2}\mid_{\frac{1}{2}}=4(-\frac{3}{2})+24(\frac{15}{8})(0.5)^2+60(-\frac{35}{16})(0.5)^4+112(\frac{315}{128})(0.5)^6+180(-\frac{693}{256})(0.5)^8
++264(\frac{3003}{1024})(0.5)^{10}+264(-\frac{6435}{2048})(0.5)^{12}+480(\frac{109395}{32768})(0.5)^{14}+612(-\frac{230945}{65536})(0.5)^{16}
++760(\frac{969969}{262144})(0.5)^{18}+\cdots
+\end{equation}
 
 随着项数增加，我们计算方程S4.2：
 %方程
+\begin{eqnarray}
+\frac{d^2h_z(0)}{d\zeta^2}\mid_{\frac{1}{2}}&=-6(only E_2)\\
+&=5.25   (through E_4)\\
+&\simeq -2.9531   (through E_6)\\
+&\simeq 1.3535 (through E_8)\\
+&\simeq -0.5499   (through E_{10})\\
+&\simeq 0.2062   (through E_{12})\\
+&\simeq -0.0730   (through E_{14})\\
+&\simeq 0.0248   (through E_{16})\\
+&\simeq-0.0081   (through E_{18})\\
+&\simeq 0.0026   (through E_{20})
+\end{eqnarray}
+
 
 由上可知，随着高次项的加入， $d^2h_z(0)/d\xi^2|_{1/2}\rightarrow 0$。
 注意到，对置于$\xi=0$的一个孤立环线圈： $d^2h_z(0)/d\xi^2=−3$。
@@ -2078,18 +2159,44 @@ b) 应用方程3.14和3.17，并使用手持科学计算器，计算本磁体的
 %表格3.5
 
 %计算的F
+\begin{eqnarray}% page144
+F_A(\alpha,\beta)&=0.12094421\\
+F_B(\alpha,\beta)&=0.05287933\\
+F_C(\alpha,\beta)&=0.11053327
+\end{eqnarray}
 
 a)从方程3.125，我们有：
 %%
+\begin{equation}% page144
+B_0=(4\pi\times 10^{-7}H/m)(2.5147\times 10^8 A/m^2)(5\times 10^{-2}m)\times(0.12094421+0.05287933-0.11053327)=1.000 T
+\end{equation}
 
 b)将$\alpha$和$\beta$代入方程3.14a和3.14b1，我们有：
 %%
+ \begin{equation}% page144
+F(\alpha,\beta)E_2(\alpha,\beta)_A=-0.002277367;F(\alpha,\beta)E_4(\alpha,\beta)_A=-0.000315757\\
+F(\alpha,\beta)E_2(\alpha,\beta)_B=-0.007938543;F(\alpha,\beta)E_4(\alpha,\beta)_B=-0.001737981\\
+F(\alpha,\beta)E_2(\alpha,\beta)_C=-0.010216278;F(\alpha,\beta)E_4(\alpha,\beta)_C=-0.002133593\\
+\end{equation}
 
 当所有线圈都有相同的$a_1$和$\lambda J a_1$时，方程3.18成为：
 %%S5.1
+\begin{equation}% S5.1
+h_\zeta(\zeta)=1+\frac{\sum_{k}^{j=1}F(\alpha_j,\beta_j)E_2(\alpha_j,\beta_j)}{\sum_{k}^{j=1}F(\alpha_j,\beta_j)}\zeta^2+\cdots
+\end{equation}
+
+ \begin{equation}% page144
+E_2(\alpha,\beta)=\frac{F(\alpha,\beta)E_2(\alpha,\beta)_A+F(\alpha,\beta)E_2(\alpha,\beta)_B-F(\alpha,\beta)E_2(\alpha,\beta)_C}{F(\alpha,\beta)_A+F(\alpha,\beta)_B-F(\alpha,\beta)_C}
+=\frac{-0.002277367-0.007938543+0.010216278}{0.120924421+0.05287933-0.11053327}=0.000005822
+E_4(\alpha,\beta)=\frac{-0.000315757-0.001737981+0.002132363}{0.6329027}=0.001261725
+\end{equation}
 
 于是我们有：
 %%%
+ \begin{equation}% page144
+\frac{d^2B}{dz^2}\mid0=2E_2(\frac{B_0}{a_{1}^{2}})=2(0.000005822)\frac{1.000T}{(5 cm)^2}=0.4658\times10^{-6}T/cm^2
+\frac{d^4B}{dz^4}\mid0=24E_4(\frac{B_0}{a_{1}^{4}})=24(0.001261725)(\frac{(1.000T)}{(5 cm)^4})=4.8453\times10^{-5}T/cm^4
+\end{equation}
 
 这些数值与表3.4给出的事实上是一致的，尽管需要我们勤奋的计算至第九位小数。
 
@@ -2104,31 +2211,77 @@ b)将$\alpha$和$\beta$代入方程3.14a和3.14b1，我们有：
 
 证明，笛卡尔坐标系下$H_z(r, \theta,\phi)$的表达式$H_z(x, y, z)$在$n=0, 1, 2$分别为：
 %%3.126
+\begin{equation}% 3.126a
+n=0 H_z(x,y,z)=A_{0}^{0}\\
+n=1 H_z(x,y,z)=A_{0}^{0}+2zA_{1}^{0}+3(A_{1}^{1}x+B_{1}^{1}y)
+\\n=2 H_z(x,y,z)=A_{0}^{0}+2zA_{1}^{0}+3(A_{1}^{1}x+B_{1}^{1}y)+\frac{3}{2}A_{2}^{0}(2z^2-x^2-y^2)+12z(A_{2}^{1}x+B_{2}^{1}y)+15[A_{2}^{2}(x^2-y^2)+2B_{2}^{2}xy]
+\end{equation}
 
 \subsubsection{问题3.6之解}
 球坐标参数$r, u = \cos\theta, s = \sin\theta, \sin\phi,\cos\phi$用$x,y,z$表示为：
 
 %%S6.1
+ \begin{equation}% S6.1a
+r=\sqrt{x^2+y^2+z^2}
+\end{equation}
+\begin{equation}% S6.1b
+u=cos\theta=\frac{z}{\sqrt{x^2+y^2+z^2}}
+\end{equation}
+\begin{equation}% S6.1c
+s=sin\theta=\frac{\sqrt{x^2+y^2}}{\sqrt{x^2+y^2+z^2}}
+\end{equation}
+\begin{equation}% S6.1d
+sin\varphi=\frac{y}{\sqrt{x^2+y^2}}
+\end{equation}
+\begin{equation}% S6.1e
+cos\varphi=\frac{x}{\sqrt{x^2+y^2}}
+\end{equation}
 
 方程3.9与S6.1a-S6.1e分别对$n=0,1,2$联立，有：
 %%S6.2
+\begin{equation}% S6.2a
+H_z(x,y,z)=\sum_{0}^{m=0}r^0(1+0)P_{0}^{0}(u)(A_{0}^{0}cos0+B_{0}^{0}sin0)=(1)(1)(1)(A_{0}^{0})
+\end{equation}
 
 对$n=0$，我们有：
 %%S3.126a
+ \begin{equation}% 3.126a
+H_z(x,y,z)=A_{0}^{0}
+\end{equation}
 
 注意到，$A_0^0$表示磁体中心场$H_z(0, 0, 0)$。
-
 %%S6.3
+\begin{equation}% s6.3a
+H_z(x,y,z)=\sum_{1}^{m=0}r^1(2+m)P_{1}^{m}(A_{1}^{m}cosm\varphi+B_{1}^{m}sinm\varphi)=r^1(2+0)P_{1}^{0}(A_{1}^{0})+r^1(2+1)
+P_{1}^{1}(A_{1}^{1}cos\varphi+B_{1}^{1}sin\varphi)=2ruA_{1}^{0}+3rs(A_{1}^{1}cos\varphi+B_{1}^{1}sin\varphi)=2\sqrt{x^2+y^2+z^2}\frac{z}{\sqrt{x^2+y^2+z^2}}A_{1}^{0}
++3\sqrt{x^2+y^2+z^2}\frac{\sqrt{x^2+y^2}}{\sqrt{x^2+y^2+z^2}}(\frac{A_{1}^{1}x+B_{1}^{1}y}{\sqrt{x^2+y^2}})=2zA_{1}^{0}+3(A_{1}^{1}x+B_{1}^{1}y)
+\end{equation}
 
 于是，对最大为1的$n$值，我们有：
 %%3.126b
+\begin{equation}% 3.126b
+H_z(x,y,z)=A_{0}^{0}+zA_{1}^{0}+3(A_{1}^{1}x+B_{1}^{1}y)
+\end{equation}
 
 注意，$H_z(x, y, z)$含有仅随着$z,x,y$变化的项。
 
 %%S6.4
+ \begin{equation}% S6.4
+H_z(x,y,z)=\sum_{2}^{m=0}r^2(3+m)P_{2}^{m}(A_{2}^{m}cosm\varphi+B_{2}^{m}sinm\varphi)=r^2(3+0)P_{2}^{0}(A_{2}^{0})+r^2(3+1)P_{2}^{1}
+(A_{2}^{1}cos\varphi+B_{2}^{1}sin\varphi)+r^2(3+2)P_{2}^{2}(A_{2}^{2}cos2\varphi+B_{2}^{2}sin2\varphi)
+\end{equation}
+\begin{equation}% S6.4b
+H_z(x,y,z)=3(x^2+y^2+z^2)\frac{1}{2}(\frac{2z^2-x^2-y^2}{x^2+y^2+z^2})A_{2}^{0}+4(x^2+y^2+z^2)\frac{3z\sqrt{x^2+y^2}}{x^2+y^2+z^2}
+(A_{2}^{1}\frac{x}{\sqrt{x^2+y^2}}+B_{2}^{1}\frac{y}{\sqrt{x^2+y^2}})+5(x^2+y^2+z^2)\frac{3(x^2+y^2)}{x^2+y^2+z^2}[A_{2}^{2}(\frac{2x^2}{x^2+y^2}-1)+B_{2}^{2}\frac{2xy}{x^2+y^2}]
+=\frac{3}{2}A_{2}^{0}(2z^2-x^2-y^2)+12z(A_{2}^{1}x+B_{2}^{1}y)+15[A_{2}^{2}(x^2-y^2)+2B_{2}^{2}xy]
+\end{equation}
 
 累加方程S6.2b, S6.3b和S6.4b，我们得到对最大为2的$n$值情况：
 %%3.126c
+ \begin{equation}% 3.126c
+H_z(x,y,z)=A_{0}^{0}+2zA_{1}^{0}+3(A_{1}^{1}x+B_{1}^{1}y)+\frac{3}{2}A_{2}^{0}(2z^2-x^2-y^2)+12z(A_{2}^{1}x+B_{2}^{1}y)
++15[A_{2}^{2}(x^2-y^2)+2B_{2}^{2}xy]
+\end{equation}
 
 注意到，当对$n=0,1,2$计算$H_z(x, y, z)$时，它包含随$x, y, z, z^2, x^2, y^2, zx, zy$和$xy$变化的项。
 \newpage
@@ -2140,10 +2293,20 @@ Helmholtz线圈的准则——关于螺管中心对称放置载流元以在中�
 对一个简单螺管，绕组内半径$a_1$，外半径$a_2$，总长度$2b$，总电流密度$\lambda J$。
 回想到前面方程3.13a和3.13b给出中心轴向场$H_0\equiv H_z(0, 0)$，有：
 %%3.13a/b
+ \begin{equation}% 3.13a
+H_0=\lambda Ja_1F(\alpha,\beta)
+\end{equation}
+\begin{equation}% 3.13b
+F(\alpha,\beta)=\beta\ln(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}})
+\end{equation}
 
 考虑到对称性以及前面讨论3.4给出的叠加技术，证明
 如图3.27所示的具有均匀电流密度$\lambda J$的notched螺管的$H_z(0, z_1)$的表达式为：
 %%3.127
+\begin{equation}% 3.127
+H_z(0,z_1)=\frac{1}{2}\lambda a_1[F(\alpha_1,\beta_1+\gamma_1)+F(\alpha_1,\beta_1-\gamma_1)]-\frac{1}{2}\lambda Ja_3
+[F(\alpha_2,\beta_2+\gamma_2)+F(\alpha_2,\beta_2-\gamma_2)]
+\end{equation}
 
 式中，$\alpha_1=a_2/a_1,\beta_1=b_1/a_1,\gamma_1=z_1/a_1,\alpha_2=a_2/a_3,\beta_2=b_2/a_3,\gamma_2=z_1/a_3$。螺管参数$a_1, a_2, a_3, b_1, b_2$如图3.27的定义。
 \begin{figure}[htbp]
@@ -3882,12 +4045,16 @@ Eq. 3.57a to be valid is satisfied in this particular case.
 %%表格3.14
 
 e)式3.60由下式给出：
-$$F_{zR}(\rho)=-\frac{\mu_{o}}{2}(\frac{N_{A}I_{A}}{2b_{A}})(\frac{N_{B}I_{B}}{2b_{B}})\times\\
-(\frac{b_{T}-\rho}{\sqrt{a_{T}^{2}+(b_{T}-\rho)^{2}}}\{[a_{T}^{2}+(b_{T}-\rho)^{2}][K(k_{T-})-E(k_{T-})]-\Upsilon(C^{2},K_{T-})\}\\
-+\frac{b_{D}+\rho}{\sqrt{a_{T}^{2}+(b_{D}+\rho)^{2}}}\{[a_{T}^{2}+(b_{D}+\rho)^{2}][K(k_{D+})-E(k_{D+})]-\Upsilon(c^{2},k_{D+})\}\\
--\frac{b_{T}+\rho}{\sqrt{a_{T}^{2}+(b_{T}+\rho)^{2}}}\{[a_{T}^{2}+(b_{T}+\rho)^{2}][K(k_{T+})-E(k_{T+})]-\Upsilon(c^{2},k_{T+})\}\\
--\frac{b_{D}+\rho}{\sqrt{a_{T}^{2}+(b_{D}-\rho)^{2}}}\{[a_{T}^{2}+(b_{D}-\rho)^{2}][K(k_{D-})-E(k_{D-})]-\Upsilon(c^{2},k_{D-})\}\\%(3.60）
-$$
+\begin{equation}
+\begin{split}
+F_{zR}(\rho)=&-\frac{\mu_{o}}{2}(\frac{N_{A}I_{A}}{2b_{A}})(\frac{N_{B}I_{B}}{2b_{B}})\times\\
+&(\frac{b_{T}-\rho}{\sqrt{a_{T}^{2}+(b_{T}-\rho)^{2}}}\{[a_{T}^{2}+(b_{T}-\rho)^{2}][K(k_{T-})-E(k_{T-})]-\Upsilon(C^{2},K_{T-})\}\\
+&+\frac{b_{D}+\rho}{\sqrt{a_{T}^{2}+(b_{D}+\rho)^{2}}}\{[a_{T}^{2}+(b_{D}+\rho)^{2}][K(k_{D+})-E(k_{D+})]-\Upsilon(c^{2},k_{D+})\}\\
+&-\frac{b_{T}+\rho}{\sqrt{a_{T}^{2}+(b_{T}+\rho)^{2}}}\{[a_{T}^{2}+(b_{T}+\rho)^{2}][K(k_{T+})-E(k_{T+})]-\Upsilon(c^{2},k_{T+})\}\\
+&-\frac{b_{D}+\rho}{\sqrt{a_{T}^{2}+(b_{D}-\rho)^{2}}}\{[a_{T}^{2}+(b_{D}-\rho)^{2}][K(k_{D-})-E(k_{D-})]-\Upsilon(c^{2},k_{D-})\}\\%(3.60）
+\end{split}
+\end{equation}
+
 Parameter values other than those given in question e) are: aT=aA+aB=242.5 mm;
 bT=bA+bB=540.8 mm; bD=bA−bB=−134.2 mm; and
 %%缺公式
@@ -3910,13 +4077,14 @@ from a large magnet. Using the 45-T hybrid as an example, we derive here magneti
 force expressions for an iron sphere (Fig. 3.46) “far” from the hybrid. The fringing
 (far) field of a solenoid, as discussed in PROBLEM 3.11, is given by a dipole field:
 
-$$
+\begin{equation}
 \vec{H}_{f}=H_{0}(\frac{R_{e}}{r})^{3}(\cos\theta\vec{\imath}_{r}+\frac{1}{2}\sin\theta\vec{\imath}_{\theta})\\%(3.163)
-$$
+\end{equation}
+
 当一个磁性物体，比如铁球，处于空间变化的磁场中时，它会受到一个磁场力$\vec{f}_m$：
-$$
+\begin{equation}
 \vec{f}_{m}(r,\theta)=\nabla e_{m}\\%(3.173)
-$$
+\end{equation}
 
 where ∇ is the grad operator in spherical coordinates and em is the magnetic
 energy density stored in the iron due to its magnetization. For a ferromagnetic
@@ -3924,16 +4092,16 @@ sphere with μ/μ◦  1, the magnetic induction inside the sphere, Bsp, is three
 the “uniform” applied magnetic induction: Bsp  3μ◦H f = 3Bf (PROBLEM 2.1).
 For a sphere of a diameter much smaller than the distance from the magnet center
 to the sphere, Bf may be assumed uniform over the sphere. Thus:
-$$
+\begin{equation}
 e_{m}=\frac{\vec{B}_{sp}\cdot\vec{B}_{f}}{2\mu_{o}}=\frac{3|\vec{B}_{f}|^{2}}{2\mu_{o}}\\%(3.174)
-$$
+\end{equation}
 
 When the iron is saturated with magnetization M sa, its magnetic induction is
 approximately equal to Bsa (= μ◦M sa), which is constant and aligned with Bf.
 Its energy density ems is thus given by:
-$$
+\begin{equation}
 e_{ms}\simeq\frac{\vec{B}_{sa}\cdot\vec{B}_{f}}{2\mu_{o}}\\%(3.17)
-$$
+\end{equation}
 
 In Eqs. 3.174 and 3.175, it is assumed that the impinging field is “uniform” for
 energy density computation, but nonuniform for force density computation.
@@ -3955,9 +4123,9 @@ spherical coordinates (Eq. 2.36a) on Eq. 3.173, we obtain:
 %%缺公式
 
 which may be simplified to:
-$$
+\begin{equation}
 \vec{f}_{m}(r,\theta)=-\frac{9\mu_{o}H_{0}^{2}}{4R_{e}}(\frac{R_{e}}{r})^{2}[(1+3\cos^{2}\theta)\vec{\imath}_{r}+\sin\theta\cos\theta\vec{\imath}_{\theta}]\\%(3.176a)
-$$
+\end{equation}
 
 Note that fm(r, θ) varies as 1/r7 and, as expected for any ferromagnetic object,
 the r-component of fm(r, θ) is directed towards the magnet center.
@@ -3968,10 +4136,12 @@ The magnetic energy density of Eq. 3.175 is given by:
 %%缺公式
 
 Performing a similar grad operation on em, we obtain:
-$$
-\vec{f}_{ms}(r\theta)=-\frac{3\mu_{o}M_{sa}H_{0}}{2R_{e}}(\frac{R_{e}}{r})^{4}\\
-\times(\sqrt{1+3\cos^{2}\theta\vec{\imath}_{r}}+\frac{\sin\theta\cos\theta}{\sqrt{1+3\cos^{2}\theta}}\vec{\theta})\\%(3.176b)
-$$
+\begin{equation}
+\begin{split}
+\vec{f}_{ms}(r\theta)=&-\frac{3\mu_{o}M_{sa}H_{0}}{2R_{e}}(\frac{R_{e}}{r})^{4}\\
+&\times(\sqrt{1+3\cos^{2}\theta\vec{\imath}_{r}}+\frac{\sin\theta\cos\theta}{\sqrt{1+3\cos^{2}\theta}}\vec{\theta})\\%(3.176b)
+\end{split}
+\end{equation}
 
 The magnetic force thus varies as 1/r4 when the iron sphere is saturated. Note
 also that because it is −r-directed, as in the unsaturated case, the iron sphere is
@@ -3982,16 +4152,18 @@ which B0 = 14 T and Re = 0.67 m (see PROBLEM 3.11), we may compute y0.1g,
 the y-axis distance from the magnet center on the platform (z=2.75 m) at which
 fmy, the y-component of the magnetic force density on an unsaturated iron sphere
 of density , is 0.1g (an acceleration of 0.1 that of gravity) fmy is given by:
-$$
+\begin{equation}
 f_{my}=f_{mr}\sin\theta+f_{m\theta}\cos\theta\\%(3.177)
-$$
+\end{equation}
 
 where fmr and fmθ are, respectively, the r- and θ-components of the magnetic
 force. Combining Eqs. 3.176a and 3.177, we have:
-$$
-f_{my}=\frac{9\mu_{o}H_{0}^{2}}{4R_{e}}(\frac{R_{e}}{r})^{7}[-(1+3\cos^{2}\theta)\sin\theta-\sin\theta\cos^{2}\theta]\\
-=-\frac{9\mu_{o}H_{0}^{2}}{4R_{e}}(\frac{R_{e}}{r})^{7}(1+4\cos^{2}\theta)\sin\theta\\%(3.178)
-$$
+\begin{equation}
+\begin{split}
+f_{my}&=\frac{9\mu_{o}H_{0}^{2}}{4R_{e}}(\frac{R_{e}}{r})^{7}[-(1+3\cos^{2}\theta)\sin\theta-\sin\theta\cos^{2}\theta]\\
+&=-\frac{9\mu_{o}H_{0}^{2}}{4R_{e}}(\frac{R_{e}}{r})^{7}(1+4\cos^{2}\theta)\sin\theta\\%(3.178)
+\end{split}
+\end{equation}
 
 where fmr and fmθ are, respectively, the r- and θ-components of the magnetic
 force. Combining Eqs. 3.176a and 3.177, we have:
@@ -4024,9 +4196,9 @@ then Bz2 on one half (180◦ arc on the +x side of the x-y plane) of its winding
 volume is on average greater than Bz2 on the other half (180◦ arc mostly on the
 −x side of the x-y plane) of the winding volume. The resulting net unbalanced
 force, Fx1, may be given approximately by:
-$$
-F_{x1}\simeq4\pi\triangle x\int_{0}^{b}\int_{a_{1}}^{a_{2}}J_{\theta1}\frac{\partial B_{z2}(r,z)}{\partial r}r\quad dr\quad dz\\%(3.179)
-$$
+\begin{equation}%(3.179)
+F_{x1}\simeq4\pi\triangle x\int_{0}^{b}\int_{a_{1}}^{a_{2}}J_{\theta1}\frac{\partial B_{z2}(r,z)}{\partial r}r\ dr\ dz\\
+\end{equation}
 
 where Bz2 is the axial field generated by Coil 2. As indicated by Eq. 3.12b and also
 by Eqs. 3.117a–3.117c (PROBLEM 3.2), Bz2 increases with displacement in the xy plane, i.e., ∂Bz2/∂r>0. Thus, Fx1 is positive and increasing in the x-direction;
@@ -4097,62 +4269,105 @@ copper, and Nb3Sn, given respectively by br0, cu0, s0, after cooldown from
 composite at 4.2 K are as shown in the figure. That is, both bronze and copper
 will be in tension, while Nb3Sn will be in compression. In the figure E and A refer, respectively, to Young’s modulus and cross section, with subscripts indicating
 constituents. Here, these strains as drawn in Fig. 3.48 are scalar quantities.
-\begin{figure}[htbp]A
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.5]{chpt3/figs/fig3.48.eps}
-	\caption{Schematic strain states in the Nb3Sn composite after cooldown}
+	\caption{$Nb_3Sn$复合材料冷却后的应力应变。}
 \end{figure}
 
-A. Equilibrium Equations
-The stress and strain equilibrium equations for the composite at 4.2 K are:
-%%3.180
+\textbf{A. 平衡方程}
+
+处于4.2 K的复合材料的应力应变平衡方程为：
+\begin{eqnarray}% 3.180a,b,c,d
+\epsilon_{br_r}A_{br}E_{br}+\epsilon_{cu_r}A_{cu}E_{cu}-\epsilon_{s_r}A_sE_s&=&0\\
++\epsilon_{br_r}+\epsilon_{s_r}&=&\epsilon_{br_0}-\epsilon_{s_0}\\
+-\epsilon_{cu_r}+\epsilon_{s_r}&=&\epsilon_{cu_0}-\epsilon_{s_0}\\
+-\epsilon_{cu_r}+\epsilon_{br_r}&=&\epsilon_{cu_0}-\epsilon_{br_0}
+\end{eqnarray}
 
 Equation 3.180a states that the net internal force is zero. Equations 3.180b –3.180d
 give the strain compatibilities for, respectively, the bronze/Nb3Sn, copper/Nb3Sn,
 and copper/bronze. Be aware that Eq. 3.180 implicitly assumes that each constituent is in its elastic range, which usually is not the case.
 
-B. Residual Strains
-From Eqs. 3.180b and 3.180c, we may obtain expressions for sr and cur:
-%%缺公式
+\textbf{B. 残余应变}
 
-Combining the above expressions with Eq. 3.180, we obtain:
-%%缺公式
+从方程3.180b和3.180c，我们可以得到$\epsilon_{s_r}$和$\epsilon_{cu_r}$的表达式：
+\begin{eqnarray*}% page206
+\epsilon_{s_r}&=\epsilon_{cu_0}-\epsilon_{s_0}-\epsilon_{cu_r}\\
+\epsilon_{cu_r}&=\epsilon_{br_r}-\epsilon_{br_0}+\epsilon_{cu_0}
+\end{eqnarray*}
+
+将上面的式子与方程3.180联立，有：
+\begin{equation*}
+\epsilon_{br_r}A_{br}E_{br}+(\epsilon_{br_r}-\epsilon_{br_0}+\epsilon_{cu_0})A_{cu}E_{cu}+(\epsilon_{br_r}-\epsilon_{br_0}+\epsilon_{s_0})A_sE_s=0
+\end{equation*}
 
 Solving the above equation for brr, we have:
 %%3.181
+ \begin{equation}% 3.181a
+\epsilon_{br_r}=\frac{(\epsilon_{br_0}-\epsilon_{cu_0})A_{cu}E_{cu}+(\epsilon_{br_0}-\epsilon_{s_0})A_sE_s}{A_{cu}E_{cu}+A_{br}E_{br}+A_{s}E_{s}}
+\end{equation}
 
-Similarly, from Eqs. 3.180b–3.180d we may obtain expressions for sr and brr:
-
-%%
+类似的，从方程3.180b–3.180d，我们可以得到$\epsilon_{s_r}$和$\epsilon_{br_r}$：
+\begin{eqnarray*}
+\epsilon_{s_r}&=\epsilon_{cu_0}-\epsilon_{s_0}-\epsilon_{cu_r}\\
+\epsilon_{br_r}&=\epsilon_{br_0}-\epsilon_{cu_0}+\epsilon_{cu_r}
+\end{eqnarray*}
 
 于是：
-%%
+\begin{equation*}
+(\epsilon_{br_0}-\epsilon_{cu_0}+\epsilon_{cu_r})A_{br}E_{br}+\epsilon_{cu_r}A_{cu}E_{cu}+(\epsilon_{cu_r}-\epsilon_{cu_0}+\epsilon_{s_0})A_sE_s=0
+\end{equation*}
 
-Solving for cur from the above equations, we have:
-%%
+从上面的方程中解出$\epsilon_{cu_r}$：
+\begin{equation}% 3.181b
+\epsilon_{cu_r}=\frac{(\epsilon_{cu_0}-\epsilon_{br_0})A_{br}E_{br}+(\epsilon_{cu_0}-\epsilon_{s_0})A_sE_s}{A_{cu}E_{cu}+A_{br}E_{br}+A_{s}E_{s}}
+\end{equation}
 
-同时
-%%
+同时，
+\begin{eqnarray*}
+\epsilon_{br_r}&=\epsilon_{br_0}-\epsilon_{s_0}-\epsilon_{s_r}\\
+\epsilon_{cu_r}&=\epsilon_{cu_0}-\epsilon_{s_0}-\epsilon_{s_r}
+\end{eqnarray*}
+
 于是
-%%
+\begin{equation*}
+(\epsilon_{br_0}-\epsilon_{s_0}-\epsilon_{s_r})A_{br}E_{br}+(\epsilon_{cu_0}-\epsilon_{s_0}-\epsilon_{s_r})A_{cu}E_{cu}-\epsilon_{s_r}A_sE_s=0
+\end{equation*}
 
-Solving for sr from the above equations, we have:
-%%
+从上面的方程解出$\epsilon_{sr}$，有：
+\begin{equation}% 3.181c
+\epsilon_{s_r}=\frac{(\epsilon_{cu_0}-\epsilon_{s_0})A_{cu}E_{cu}+(\epsilon_{br_0}-\epsilon_{s_0})A_{br}E_{br}}{A_{cu}E_{cu}+A_{br}E_{br}+A_{s}E_{s}}
+\end{equation}
 
 Numerical Values By using Eqs. 3.181a — 3.181c and the values given in Table
 3.16 for each constituent, we may compute values of brr, cur, and sr.
 %%缺公式
+\begin{eqnarray*}% page207
+\begin{split}
+\epsilon_{br_r}&=\frac{(1.66-1.62)(0.62)(100GPa)+(1.66-0.72)(0.14)(165GPa)}{(0.24)(100GPa)+(0.62)(100GPa)+(0.14)(165GPa)}\\
+&=(\frac{22.19GPa}{109.1GPa})\% \simeq0.22\% \\
+\epsilon_{cu_r}&=\frac{(1.62-1.66)(0.24)(100GPa)+(1.62-0.72)(0.14)(165GPa)}{62.9GPa}\\
+&=(\frac{19.83GPa}{109.1GPa}\%)\simeq0.18\% \\
+\epsilon_{s_r}&=\frac{(1.62-0.72)(0.62)(100GPa)+(1.66-0.72)(0.24)(100GPa)}{62.9GPa}\\
+&=(\frac{78.36GPa}{109.1GPa}\%)\simeq0.72\% 
+\end{split}
+\end{eqnarray*}
 
 Note that both matrix materials are in tension, while Nb3Sn is in compression; sr
-of 0.72% is too severe and would certainly damage the conductor. However, when
+of 0.72\% is too severe and would certainly damage the conductor. However, when
 the magnet is energized, the conductor is subjected mostly to a tensile stress, which
 tends to place sr towards zero strain; usually, the Lorentz stresses are sufficient
 to put Nb3Sn in tensile strain when the magnet is energized.
 
-C. Stresses in Bronze and Copper
+\textbf{C. Stresses in Bronze and Copper}
 
 From brr and cur computed above, we may compute the corresponding stresses
 in the bronze and copper. We have:
+ \begin{eqnarray*}
+\sigma_{br_r}&=\epsilon_{br_r}E_{br}\simeq(2.2\times10^{-3})(100\times10^9Pa)\simeq220MPa\\
+\sigma_{cr_r}&=\epsilon_{cr_r}E_{cr}\simeq(1.8\times10^{-3})(100\times10^9Pa)\simeq180MPa
+\end{eqnarray*}
 
 %%缺公式
 The yield stresses of annealed bronze, σbry, and annealed copper, σcuy, are both
@@ -4167,151 +4382,267 @@ only ∼100 MPa; both bronze and copper thus yield plastically during cooldown.
 \subsection{问题3.18：部分系统的自感}
 Derive the “low” frequency self inductance formulas given in 3.7.3.
 a) Equation 3.83, for the interior of the wire of radius a per unit length:
+ \begin{equation}% 3.83
+L=\frac{\mu_0}{8\pi}
+\end{equation}
 
-%%
 b) Equation 3.84c, for a “very long” (β α) and thin coil with N total turns:
-%%
+ \begin{equation}% 3.84c
+L=\mu a_1N62(\frac{\pi}{2\beta})
+\end{equation}
 
 c) Equation 3.87, for the unit length of an “ideal” dipole with N total turns:
-%%
+ \begin{equation}% 3.87
+L=\frac{1}{8}\mu_0\pi N^2
+\end{equation}
 
 Derive Eq. 3.87 using two expressions: 1) L = 2Em/I2; and 2) L=NΦ.
 d) For the unit length of an “ideal” quadrupole with N total turns, Eq. 3.88:
-%%
+ \begin{equation}% 3.88
+L=\frac{1}{16}\mu_0\pi N^2
+\end{equation}
+
 Derive Eq. 3.88 using two expressions: 1) L = 2Em/I2; and 2) L=NΦ.
 
 e) Equation 3.89a, for an “ideal” toroidal coil of major radius R and circular
 section of radius a with N total turns.
-%%
+ \begin{equation}%3.89a
+L=\mu_0RN^2[1-\sqrt{1-(\frac{a}{R})}]
+\end{equation}
+
 f) Equation 3.89b, for the ideal toroidal coil of e) in the limit aR
-…%%
+ \begin{equation}% 3.89b
+L=\mu_0aN^2(\frac{a}{2R})[1+\frac{1}{4}(\frac{a}{R})^2+\frac{1}{8}(\frac{a}{R})^4\cdots]
+\end{equation}
 
 g) Equation 3.90a, for an ideal toroid of major radius R and rectangular section
 of width (r-axis) 2a, height (z-axis) 2b, and N total turns.
-%%
+ \begin{equation}% 3.90a
+L=\mu_0bN^2[\frac{1}{\pi}\ln(\frac{R+a}{R-a})]
+\end{equation}
 
 h) Equation 3.90b, for the ideal toroidal coil of g) in the limit aR
-%%
+ \begin{equation}% 3.90b
+L=\mu_0bN^2(\frac{2a}{\pi R})[1+\frac{1}{3}(\frac{a}{R})^2+\frac{1}{5}(\frac{a}{R})^4\cdots]
+\end{equation}
 
 
 \subsubsection{问题3.18之解}
 a) For a wire of radius a carrying current I distributed uniformly over its cross
 section, the interior magnetic field is given by:
-%%
+ \begin{equation}% S18.1
+H_\theta(r)=\frac{I}{2\pi a^2}r
+\end{equation}
 
 Magnetic energy per unit wire length stored in the wire interior, em, is given by:
-%5
+ \begin{equation}%S18.2
+e_m=\frac{1}{2}\mu_0\int_{0}^{a}2\pi H_{\theta}^{2}(r)rdr
+\end{equation}
 
 Combining Eqs. S18.1 and S18.2, we obtain:
-%%
+ \begin{equation}%S 18.3
+e_m=\frac{\mu_0}{16\pi}I^2
+\end{equation}
 
 Combining Eqs. 3.79 (Em =LI2/2; em =LI2/2 on a unit length basis) and S18.3
 and solving for the self inductance of the wire interior, L, we have:
-%%
+ \begin{equation}% 3.83
+L=\frac{\mu_0}{8\pi}
+\end{equation}
 
 b) From Eq. 3.111d, the center field, Bz(0, 0), of a long solenoid (β α) is given
 by μ◦NI/2b. As may be inferred from Eq. 3.117c, the field in a “thin-walled” and
 “long” solenoid is uniform in both axial and radial directions and equal to the
 center field. Thus the total flux linked by N turns of the solenoid is given by:
-%%
+ \begin{equation}% S18.4
+\Phi=\int_{0}^{a_1}2\pi rH_z(0,0)dr=N(\frac{\pi a_{1}^{2}\mu_0NI}{2b})
+\end{equation}
 
 Combining Eqs. 3.78 (Φ=LI) and S18.4, we obtain:
-%%
+ \begin{equation}% 3.84c
+L=\mu_0a_1N^2(\frac{\pi}{2\beta})
+\end{equation}
 
 c) Method 1: Energy The total ampere-turns (NI) in an ideal dipole, as
 studied in PROBLEM 3.8, is given by:
-%%
+ \begin{equation}% S18.5
+NI=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}K_fRd\theta
+\end{equation}
+
 where R is the dipole radius. Combining Eqs. 3.140 (for K f) and S18.5, we have:
-%%
+ \begin{equation}% S18.6
+NI=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}2H_0Rcos\theta d\theta=4H_0R
+\end{equation}
+
 The total magnetic energy Em per unit length of the dipole is given by Eq. 3.143:
-%%
+ \begin{equation}% 3.143
+E_m=\frac{\pi R^2B_{0}^{2}}{\mu_0}
+\end{equation}
 
 From S18.6, we compute H0R=NI/4. Now combining this, Eqs. 3.143 and 3.79,
 and solving for L (L per unit length), we have:
-%%
-
+ \begin{equation}% 3.87
+L_\ell=\frac{1}{8}\mu_0\pi N^2
+\end{equation}
 
 Method 2: Flux Linkage First, because the surface current density, Kf, is
 not uniform over the dipole winding, i.e., Kf = −2H0 cos θz (Eq. 3.140), for a
 “uniform” I in the winding, the “turn density,” n(θ), must vary with θ as:
-%%
+ \begin{equation}% S18.7
+n_(\theta)=\frac{1}{2}N\cos\theta
+\end{equation}
+
 Because the dipole has a uniform field of H0, the total flux linkage by the N turns
 of the dipole is given by:
-%Z%
+\begin{equation}% S18.8
+\begin{split}
+N\Phi&=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}n(\theta)\mu_0H_0(2R\cos\theta)d\theta=
+\mu_0NH_0R\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\cos\theta^2d\theta \\
+&=\frac{1}{2}\mu_0\pi H_0 R=\frac{1}{8}\mu_0\pi N^2I
+\end{split}
+\end{equation}
+
 Combining Eqs. S18.8 and 3.78, we obtain:
+ \begin{equation}% 3.87
+L_\ell=\frac{1}{8}\mu_0\pi N^2
+\end{equation}
 
 d) Method 1: Energy The total ampere-turns (NI) in an ideal quadrupole
 (PROBLEM 3.9) is given by:
-%%
+ \begin{equation}% S18.9
+NI=2\times\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}K_fRd\theta
+\end{equation}
+
 R is the quadrupole radius. The integral is multiplied by 2 because, as may be
 seen from Fig. 3.35(b), the current distribution is divided in two regions—we are
 considering only one polarity. Combining Eqs. 3.146 (for K f) and S18.9, we have:
-%%
+ \begin{equation}% S18.10
+NI=2\times\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}2H_0R\cos 2\theta d\theta=4H_0R
+\end{equation}
+
 The total magnetic energy Em per unit length of the quadrupole is obtained by
 integrating μ◦|H(r, θ)|2/2 over the entire surface. |H(r, θ)|2, from Eq. 3.145, is
 independent of θ, because sin22θ+cos22θ=1.
-%%
+\begin{equation}% S18.11
+\begin{split}
+E_m&=\frac{1}{2}\mu_0(\frac{H_0}{R})^2\int_{0}^{R}2\pi r^3dr+\frac{1}{2}\mu_0H_{0}^{2}R^6\int_{R}^{\infty}\frac{2\pi dr}{r^5}\\
+&=\frac{1}{2}\mu_0\pi H_{0}^{2}R^2
+\end{split}
+\end{equation}
 
 Combining Eqs. 3.79, S18.10, and S18.11, we obtain:
-%%
+ \begin{equation}% 3.88
+L_\ell=\frac{1}{16}\mu_0\pi N^2
+\end{equation}
+
 That Em of an ideal quadrupole is 1/2 that of an ideal dipole is reasonable because
 the quadrupole field varies from 0 to H0 within the bore rather than uniform as
 for a dipole and decays as 1/r3 outside rather than as 1/r2 for a dipole field.
 
 Method 2: Flux Linkage As with the dipole treated above, the “turn density,”
 n(θ), in the quadrupole also must vary with θ, here, as:
-%%
+ \begin{equation}% S18.12
+n(\theta)=\frac{1}{2}N\cos 2\theta
+\end{equation}
 
 Note that the integral of Eq. S18.12 over one quadrant, e.g., from to −45◦ to
 +45◦, gives, as it must, the total number of turns in that quadrant: N/2. For the
 ideal quadrupole, the total flux linkage, Φ, is given by:
-%%
+ \begin{equation}% S18.13b
+n\Phi=2\times\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}n(\theta)\phi(R,\theta)d\theta
+\end{equation}
+
 Because H1r = H0(r/R) sin 2θ (Eq. 3.145a), we have:
-.%%
+ \begin{equation}% 18.13b
+\phi(R,\theta)d\theta=2\mu_0H_0R\int_{0}^{\theta}\sin 2\omega d\omega=\mu_0H_0R\cos 2\theta
+\end{equation}
 
 Therefore:
-%%
+ \begin{equation}% S18.4
+N\Phi=\mu_0NH_0R\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}(cos)^22\theta d\theta
+=\frac{1}{4}\mu_0\pi NH_0R=\frac{1}{16}\mu_0\pi N^2I
+\end{equation}
+
 Combining Eqs. 3.78 and S18.14, we obtain:
-%%
+ \begin{equation}% 3.88
+L_\ell=\frac{1}{16}\mu_0\pi N^2
+\end{equation}
 
 e) As discussed in PROBLEM 3.10, the field within the circular section of an
 ideal toroid, H(r), is in the azimuthal (ϕ) direction and, from Eq. 3.161, given by:
-%%
+ \begin{equation}% S18.15
+H_\varphi(r)=\frac{NI}{2\pi r}
+\end{equation}
 
 
 The total flux linked by the toroid, Φ, is thus given by:
-%%
+ \begin{equation}% S18.16
+\Phi=\mu_0N\int_{R-a}^{R+a}\int_{z=-a}^{z=+a}H(r)dzdr
+\end{equation}
 
 The equation of the circle that defines the cross section is given by:
-%%
+ \begin{equation}% 18.17
+z^2+(R-r)^2=a^2
+\end{equation}
 
 Solving z from Eq. S18.17 for the limits of z in the integral of Eq. S18.16 in terms
 of r and constants, and after combining with Eq. S18.15, we have:
-%%
+\begin{equation}% S18.18
+\begin{split}
+\Phi&=\frac{\mu_0N^2}{2\pi}\int_{R-a}^{R+a}\int_{-\sqrt{a^2-(R-r)^2}}^{\sqrt{a^2-(R-r)^2}}\frac{dzdr}{r}\\
+&=\frac{\mu_0N^2I}{\pi}\int_{R-a}^{R+a}\frac{\sqrt{a^2-R^2+2Rr-r^2}}{r}dr
+\end{split}
+\end{equation}
+
+\begin{equation}% S18.19
+\begin{split}
+\Phi&=\frac{\mu_0N^2I}{\pi}\mid R(\sin)^{-1}(\frac{2r-2R}{2a})+\frac{(a^2-R^2)}{\sqrt{R^2-a^2}}(\sin)^{-1}(\frac{2Rr+2a^2-2R^2}{2ra})\mid_{R-a}^{R+a} \\
+&=\frac{\mu_0N^2I}{\pi}(R\pi+\pi\frac{a^2-R^2}{\sqrt{R^2-a^2}})=\mu_0N^2RI[1-\sqrt{1-(\frac{a}{R})^2}]
+\end{split}
+\end{equation}
 
 Combining Eqs. 3.78 and S18.19, we obtain:
-%%
+ \begin{equation}% 3.89a
+L=\mu_0RN^2[1-\sqrt{1-(\frac{a}{R})^2}]
+\end{equation}
 
 f) For aR, we have:
-%%
+ \begin{equation}% S18.20
+\sqrt{1-(\frac{a}{R})^2}=1-\frac{1}{2}(\frac{a}{R})^2-\frac{1}{8}(\frac{a}{R})^4-\frac{1}{16}(\frac{a}{R})^6\cdots
+\end{equation}
 
 From Eqs. 3.89a and S18.20
-%%
+\begin{equation}
+L=\mu_0RN^2[\frac{1}{2}(\frac{a}{R})^2+\frac{1}{8}(\frac{a}{R})^4+\frac{1}{16}(\frac{a}{R})^6\cdots]
+\end{equation}
+
 于是
-Thus:
+ \begin{equation}% 3.89b
+L=\frac{\mu_0a^2N^2}{2R}[1+\frac{1}{4}(\frac{a}{R})^2+\frac{1}{8}(\frac{a}{R})^4\cdots]
+\end{equation}
 
 g) The field within the rectangular section of this ideal toroid is the same as that
 in the circular section of the toroid studied above. Thus:
-%%
+ \begin{equation}% S18.21
+N\Phi=\frac{\mu_0N^2I}{2\pi}\int_{R-a}^{R+a}\int_{z=-b}^{z=+b}\frac{1}{r}dzdr
+=\frac{\mu_0N^2bI}{\pi}\ln(\frac{R+a}{R-a})
+\end{equation}
 
 Combining Eqs. 3.78 and S18.21, we obtain:
-%%
+ \begin{equation}% 3.90a
+L=\frac{\mu_0bN^2}{\pi}\ln(\frac{R+a}{R-a})
+\end{equation}
 
 h) For a  R, we may expand ln(1±a/R) as:
-%%
+ \begin{equation}% S18.22
+\ln(1\pm\frac{a}{R})=\pm\frac{a}{R}-\frac{1}{2}(\frac{a}{R})^2\pm\frac{1}{3}(\frac{a}{R})^3-\frac{1}{4}(\frac{a}{R})^4\pm\frac{1}{5}(\frac{a}{R})^5\cdots
+\end{equation}
 
 Combining Eqs. 3.90a and S18.22, we obtain:
-%%
+ \begin{eqnarray}% 3.90b
+L&=\frac{\mu_0bN^2}{\pi}\left[2(\frac{a}{R})+\frac{2}{3}(\frac{a}{R})^3+\frac{2}{5}(\frac{a}{R})^5\cdots\right]\\
+L&=\frac{2\mu_0abN^2}{\pi R}\left[1+\frac{1}{3}(\frac{a}{R})^2+\frac{1}{5}(\frac{a}{R})^4\cdots\right]
+\end{eqnarray}
 
 \newpage
 
@@ -4320,11 +4651,17 @@ Combining Eqs. 3.90a and S18.22, we obtain:
 \subsection{讨论3.16：Rogowski线圈的互感}
 The Rogowski coil was studied in PROBLEM 2.11 and an expression was derived
 for total flux linked to the Rogowski coil:
-%%
+ \begin{equation}% 2.69
+\Phi(t)\simeq\frac{\mu_0Nc^2}{2R}I(t)
+\end{equation}
+
 where R is the radius of the Rogowski coil and c is the radius of each of N loops.
 Equation 2.69 is valid for (c/R)41, which is generally satisfied by most Rogowski
 coils. The mutual inductance, Mri, between the current element and the Rogowski
 coil is thus given by:
+ \begin{equation}% 3.182
+M_{ri}\equiv\frac{\Phi}{I}\simeq\frac{\mu_0Nc^2}{2R}
+\end{equation}
 
 \newpage
 
@@ -4335,20 +4672,42 @@ From fm(r, θ)=∇em (Eq. 3.173) given in DISCUSSION 3.12 (p. 200), we may reder
 the mutual inductance between them, MAB, or vice versa. Here, we study a simple
 case in which two “ring” coils are “far apart” in which case, FzA(ρ) is given by
 Eq. 3.39c and MAB is given by Eq. 3.97. Thus:
-%%%
+ \begin{equation}% 3.39c
+F_{ZA}(\rho)=\frac{3\mu_0}{2\pi}(\frac{\pi a_{A}^{2}N_AI_A}{\rho^2})(\frac{\pi a_{B}^{2}N_BI_B}{\rho^2})
+\end{equation}
+
+以及
+\begin{equation}% 3.97
+M_{AB}\simeq\frac{\mu_0}{2\pi}[\frac{(\pi a_{A}^{2}N_A)(\pi a_{B}^{2}N_B)}{\rho^3}]
+\end{equation}
 
 For this system, we have:
-%%
+\begin{equation}% 3.183
+e_m=I_AI_BM_{AB}
+\end{equation}
 
 Applying Eq. 3.173 in the ρ-direction and combining Eqs. 3.97 and 3.182, we have:
-%%%
+\begin{eqnarray}% 3.184a 3.184b 3.184c
+F_{ZB}(\rho)&=&I_A I_B\frac{dM_{AB}}{d\rho}\\
+&=&I_A I_B\frac{d}{d\rho}\{\frac{\mu_0}{2\pi}[\frac{(\pi a_{A}^{2}N_A)(\pi a_{B}^{2}N_B)}{\rho^3}]\}\\
+&=&-\frac{3\mu_0}{2\pi}(\frac{\pi a_{A}^{2}N_A I_A}{\rho^2})(\frac{\pi a_{A}^{2}N_B I_B}{\rho^2})
+\end{eqnarray}
 
 Note that in the d/dρ operation in Eq. 3.184a, it is Coil B (right-hand side of two
 coils in Fig. 3.5, p. 83) that is moved by a distance of ∂ρ, and thus FzB(ρ) points
 in the negative direction of ρ. That is,
-%%%%
+\begin{equation}% 3.39c
+F_{ZA}(\rho)=-F_{ZB}(\rho)
+=\frac{3\mu_0}{2\pi}(\frac{\pi a_{A}^{2}N_A I_A}{\rho^2})(\frac{\pi a_{A}^{2}N_B I_B}{\rho^2})
+\end{equation}
 
 Clearly, the above process may be reversed to obtain an expression of MAB from a
 known expression of FzA(ρ). Again, we must watch out for the sign
-%%%%
+ \begin{equation}% 3.185
+M_{AB}=-\frac{1}{I_AI_B}\int_{0}^{\rho}F_{ZA}(y)dy
+\end{equation}
+
+\begin{equation}%3.97
+=\frac{\mu_0}{2\pi}[\frac{(\pi a_{A}^{2}N_A)(\pi a_{B}^{2}N_B)}{\rho^3}]
+\end{equation}
 
