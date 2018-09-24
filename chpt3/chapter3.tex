@@ -4414,7 +4414,7 @@ L=\mu_0aN^2(\frac{a}{2R})[1+\frac{1}{4}(\frac{a}{R})^2+\frac{1}{8}(\frac{a}{R})^
 
 g) 主半径为$R$，矩形截面宽$2a$(r轴)、高$2b$(z轴)，共N匝的“理想”环形线圈的自感：
  \begin{equation}% 3.90a
-L=\mu_0 b N^2\left[\frac{1}{\pi}\ln(\frac{R+a}{R-a})\right]
+L=\mu_0 b N^2\left[\frac{1}{\pi}\ln\left(\frac{R+a}{R-a}\right)\right]
 \end{equation}
 
 h) 在极限$a\ll R$下，g)中理想环线圈的自感：
@@ -4448,7 +4448,7 @@ b) 根据方程3.111d，长螺管($\beta\gg\alpha$)的中心场$B_z(0, 0)$为$\m
 从方程3.117c可以得出，“薄壁”和“长”螺管的磁场在轴向和径向都是均匀分布的，并且等于中心场。
 于是，螺管的N匝交链的总磁链为：
  \begin{equation}% S18.4
-\Phi=\int_{0}^{a_1}2\pi rH_z(0,0)dr=N(\frac{\pi a_{1}^{2}\mu_0NI}{2b})
+\Phi=\int_{0}^{a_1}2\pi rH_z(0,0)dr=N\left(\frac{\pi a_{1}^{2}\mu_0NI}{2b}\right)
 \end{equation}
 
 联立方程3.78 ($\Phi=LI$)和S18.4，我们得到：
@@ -4463,7 +4463,7 @@ NI=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}K_f Rd\theta
 
 式中，$R$是双极半径。联立3.140 ($\vec{K}_f$)和S18.5，有：
 \begin{equation}% S18.6
-NI=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}2H_0Rcos\theta d\theta=4H_0R
+NI=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}2H_0R\cos\theta d\theta=4H_0R
 \end{equation}
 
 双极磁体的单位长度总磁能$E_m$由方程3.143表示：
@@ -4542,7 +4542,7 @@ n\Phi=2\times\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}n(\theta)\phi(R,\theta)d\theta
 
 于是：
  \begin{equation}% S18.4
-N\Phi=\mu_0NH_0R\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}(cos)^22\theta d\theta
+N\Phi=\mu_0NH_0R\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}(\cos)^22\theta d\theta
 =\frac{1}{4}\mu_0\pi NH_0R=\frac{1}{16}\mu_0\pi N^2I
 \end{equation}
 
@@ -4583,33 +4583,33 @@ z^2+(R-r)^2=a^2
 
 联立3.78和S18.19，我们得到：
  \begin{equation}% 3.89a
-L=\mu_0RN^2[1-\sqrt{1-(\frac{a}{R})^2}]
+L=\mu_0RN^2\left[1-\sqrt{1-\left(\frac{a}{R}\right)^2}\right]
 \end{equation}
 
 f) 对$a\ll R$，我们有：
- \begin{equation}% S18.20
-\sqrt{1-(\frac{a}{R})^2}=1-\frac{1}{2}(\frac{a}{R})^2-\frac{1}{8}(\frac{a}{R})^4-\frac{1}{16}(\frac{a}{R})^6\cdots
+\begin{equation}% S18.20
+\sqrt{1-\left(\frac{a}{R}\right)^2}=1-\frac{1}{2}(\frac{a}{R})^2-\frac{1}{8}(\frac{a}{R})^4-\frac{1}{16}(\frac{a}{R})^6\cdots
 \end{equation}
 
 从3.89a和S18.20，
 \begin{equation}
-L=\mu_0RN^2[\frac{1}{2}(\frac{a}{R})^2+\frac{1}{8}(\frac{a}{R})^4+\frac{1}{16}(\frac{a}{R})^6\cdots]
+L=\mu_0RN^2\left[\frac{1}{2}(\frac{a}{R})^2+\frac{1}{8}(\frac{a}{R})^4+\frac{1}{16}(\frac{a}{R})^6\cdots\right]
 \end{equation}
 
 于是
  \begin{equation}% 3.89b
-L=\frac{\mu_0a^2N^2}{2R}[1+\frac{1}{4}(\frac{a}{R})^2+\frac{1}{8}(\frac{a}{R})^4\cdots]
+L=\frac{\mu_0a^2N^2}{2R}\left[1+\frac{1}{4}(\frac{a}{R})^2+\frac{1}{8}(\frac{a}{R})^4\cdots\right]
 \end{equation}
 
 g) 本理想矩形截面环线圈内部的磁场与上面研究过的圆截面环线圈是一样的，即：
  \begin{equation}% S18.21
 N\Phi=\frac{\mu_0N^2I}{2\pi}\int_{R-a}^{R+a}\int_{z=-b}^{z=+b}\frac{1}{r}dzdr
-=\frac{\mu_0N^2bI}{\pi}\ln(\frac{R+a}{R-a})
+=\frac{\mu_0N^2bI}{\pi}\ln\left(\frac{R+a}{R-a}\right)
 \end{equation}
 
 联立3.78和S18.21，我们有：
  \begin{equation}% 3.90a
-L=\frac{\mu_0bN^2}{\pi}\ln(\frac{R+a}{R-a})
+L=\frac{\mu_0bN^2}{\pi}\ln\left(\frac{R+a}{R-a}\right)
 \end{equation}
 
 h) 对$a\ll R$，我们可以展开$\ln(1\pm a/R)$：
@@ -4645,46 +4645,40 @@ M_{ri}\equiv\frac{\Phi}{I}\simeq\frac{\mu_0Nc^2}{2R}
 
 
 \subsection{讨论3.17：力 vs. 互感}
-From fm(r, θ)=∇em (Eq. 3.173) given in DISCUSSION 3.12 (p. 200), we may rederive an expression, e.g., for the axial force between two “ring” coils FzA(ρ) from
-the mutual inductance between them, MAB, or vice versa. Here, we study a simple
-case in which two “ring” coils are “far apart” in which case, FzA(ρ) is given by
-Eq. 3.39c and MAB is given by Eq. 3.97. Thus:
+根据讨论3.12中的方程3.173，$\vec{f_m}(r,\theta)=\nabla e_m$，我们可以由两个“环”线圈
+的互感$M_{AB}$导出其轴向力的表达式，反之亦然。
+这里，我们研究一个简单情况：两个“环”线圈距离“很远”，$F_{zA}(\rho)$由方程3.39c给出，
+$M_{AB}$由方程3.97给出。即：
  \begin{equation}% 3.39c
-F_{ZA}(\rho)=\frac{3\mu_0}{2\pi}(\frac{\pi a_{A}^{2}N_AI_A}{\rho^2})(\frac{\pi a_{B}^{2}N_BI_B}{\rho^2})
+F_{zA}(\rho)=\frac{3\mu_0}{2\pi}\left(\frac{\pi a_{A}^{2}N_AI_A}{\rho^2}\right)\left(\frac{\pi a_{B}^{2}N_BI_B}{\rho^2}\right)
 \end{equation}
 
 以及
 \begin{equation}% 3.97
-M_{AB}\simeq\frac{\mu_0}{2\pi}[\frac{(\pi a_{A}^{2}N_A)(\pi a_{B}^{2}N_B)}{\rho^3}]
+M_{AB}\simeq\frac{\mu_0}{2\pi}\left[\frac{(\pi a_{A}^{2}N_A)(\pi a_{B}^{2}N_B)}{\rho^3}\right]
 \end{equation}
 
-For this system, we have:
+对这个系统，我们有：
 \begin{equation}% 3.183
 e_m=I_AI_BM_{AB}
 \end{equation}
 
-Applying Eq. 3.173 in the ρ-direction and combining Eqs. 3.97 and 3.182, we have:
+在$\rho$方向应用方程3.173，并与方程3.97和3.182联立，得：
 \begin{eqnarray}% 3.184a 3.184b 3.184c
-F_{ZB}(\rho)&=&I_A I_B\frac{dM_{AB}}{d\rho}\\
-&=&I_A I_B\frac{d}{d\rho}\{\frac{\mu_0}{2\pi}[\frac{(\pi a_{A}^{2}N_A)(\pi a_{B}^{2}N_B)}{\rho^3}]\}\\
-&=&-\frac{3\mu_0}{2\pi}(\frac{\pi a_{A}^{2}N_A I_A}{\rho^2})(\frac{\pi a_{A}^{2}N_B I_B}{\rho^2})
+F_{zB}(\rho)&=&I_A I_B\frac{dM_{AB}}{d\rho}\\
+&=&I_A I_B\frac{d}{d\rho}\left\{\frac{\mu_0}{2\pi}\left[\frac{(\pi a_{A}^{2}N_A)(\pi a_{B}^{2}N_B)}{\rho^3}\right]\right\}\\
+&=&-\frac{3\mu_0}{2\pi}\left(\frac{\pi a_{A}^{2}N_A I_A}{\rho^2}\right)\left(\frac{\pi a_{A}^{2}N_B I_B}{\rho^2}\right)
 \end{eqnarray}
 
-Note that in the d/dρ operation in Eq. 3.184a, it is Coil B (right-hand side of two
-coils in Fig. 3.5, p. 83) that is moved by a distance of ∂ρ, and thus FzB(ρ) points
-in the negative direction of ρ. That is,
+注意方程3.184a中的$d/d\rho$运算。它是线圈B运动了距离$\partial\rho$，于是
+$F_{zB}(\rho)$指向$\rho$相反的方向。也即：
 \begin{equation}% 3.39c
-F_{ZA}(\rho)=-F_{ZB}(\rho)
-=\frac{3\mu_0}{2\pi}(\frac{\pi a_{A}^{2}N_A I_A}{\rho^2})(\frac{\pi a_{A}^{2}N_B I_B}{\rho^2})
+F_{zA}(\rho)=-F_{zB}(\rho)
+=\frac{3\mu_0}{2\pi}\left(\frac{\pi a_{A}^{2}N_A I_A}{\rho^2}\right)\left(\frac{\pi a_{A}^{2}N_B I_B}{\rho^2}\right)
 \end{equation}
 
-Clearly, the above process may be reversed to obtain an expression of MAB from a
-known expression of FzA(ρ). Again, we must watch out for the sign
- \begin{equation}% 3.185
-M_{AB}=-\frac{1}{I_AI_B}\int_{0}^{\rho}F_{ZA}(y)dy
-\end{equation}
-
-\begin{equation}%3.97
-=\frac{\mu_0}{2\pi}[\frac{(\pi a_{A}^{2}N_A)(\pi a_{B}^{2}N_B)}{\rho^3}]
-\end{equation}
-
+很明显，上面的过程反过来就可以用于在已知$F_{zA}(\rho)$时求$M_{AB}$。再次提醒注意：一定要注意符号。
+\begin{eqnarray}% 3.185
+M_{AB}&=&-\frac{1}{I_AI_B}\int_{0}^{\rho}F_{zA}(y)dy\\
+&=&\frac{\mu_0}{2\pi}\left[\frac{(\pi a_{A}^{2}N_A)(\pi a_{B}^{2}N_B)}{\rho^3}\right]
+\end{eqnarray}
