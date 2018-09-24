@@ -4380,120 +4380,109 @@ only ∼100 MPa; both bronze and copper thus yield plastically during cooldown.
 
 
 \subsection{问题3.18：部分系统的自感}
-Derive the “low” frequency self inductance formulas given in 3.7.3.
-a) Equation 3.83, for the interior of the wire of radius a per unit length:
+推导3.7.3节给出的“低频”自感公式。
+
+a) 半径为$a$的导线内部的单位长度电感为：
  \begin{equation}% 3.83
 L=\frac{\mu_0}{8\pi}
 \end{equation}
 
-b) Equation 3.84c, for a “very long” (β α) and thin coil with N total turns:
+b) N匝“特别长”($\beta\gg \alpha$)的薄线圈的自感：
  \begin{equation}% 3.84c
-L=\mu a_1N62(\frac{\pi}{2\beta})
+L=\mu a_1N62\left(\frac{\pi}{2\beta}\right)
 \end{equation}
 
-c) Equation 3.87, for the unit length of an “ideal” dipole with N total turns:
+c) “理想”N匝双极线圈单位长度自感：
  \begin{equation}% 3.87
 L=\frac{1}{8}\mu_0\pi N^2
 \end{equation}
 
-Derive Eq. 3.87 using two expressions: 1) L = 2Em/I2; and 2) L=NΦ.
-d) For the unit length of an “ideal” quadrupole with N total turns, Eq. 3.88:
- \begin{equation}% 3.88
+使用两种表达式：1) $L= 2E_m/I^2$；和2)$ L=N\Phi$推导上式(方程3.87)。
+\begin{equation}% 3.88
 L=\frac{1}{16}\mu_0\pi N^2
 \end{equation}
 
-Derive Eq. 3.88 using two expressions: 1) L = 2Em/I2; and 2) L=NΦ.
-
-e) Equation 3.89a, for an “ideal” toroidal coil of major radius R and circular
-section of radius a with N total turns.
+e) 主半径为$R$，圆形截面半径$a$，共N匝的“理想”环形线圈的自感：
  \begin{equation}%3.89a
-L=\mu_0RN^2[1-\sqrt{1-(\frac{a}{R})}]
+L=\mu_0 R N^2\left[1-\sqrt{1-\left(\frac{a}{R}\right)}\right]
 \end{equation}
 
-f) Equation 3.89b, for the ideal toroidal coil of e) in the limit aR
+f) 在极限$a\ll R$下，e)中理想环线圈的自感：
  \begin{equation}% 3.89b
 L=\mu_0aN^2(\frac{a}{2R})[1+\frac{1}{4}(\frac{a}{R})^2+\frac{1}{8}(\frac{a}{R})^4\cdots]
 \end{equation}
 
-g) Equation 3.90a, for an ideal toroid of major radius R and rectangular section
-of width (r-axis) 2a, height (z-axis) 2b, and N total turns.
+g) 主半径为$R$，矩形截面宽$2a$(r轴)、高$2b$(z轴)，共N匝的“理想”环形线圈的自感：
  \begin{equation}% 3.90a
-L=\mu_0bN^2[\frac{1}{\pi}\ln(\frac{R+a}{R-a})]
+L=\mu_0 b N^2\left[\frac{1}{\pi}\ln(\frac{R+a}{R-a})\right]
 \end{equation}
 
-h) Equation 3.90b, for the ideal toroidal coil of g) in the limit aR
+h) 在极限$a\ll R$下，g)中理想环线圈的自感：
  \begin{equation}% 3.90b
 L=\mu_0bN^2(\frac{2a}{\pi R})[1+\frac{1}{3}(\frac{a}{R})^2+\frac{1}{5}(\frac{a}{R})^4\cdots]
 \end{equation}
 
-
 \subsubsection{问题3.18之解}
-a) For a wire of radius a carrying current I distributed uniformly over its cross
-section, the interior magnetic field is given by:
+a) 一条半径为$a$的导线，通过均匀分布于其截面的电流$I$，内部的磁场为：
  \begin{equation}% S18.1
 H_\theta(r)=\frac{I}{2\pi a^2}r
 \end{equation}
 
-Magnetic energy per unit wire length stored in the wire interior, em, is given by:
+导体内部单位长度储存的磁场能$e_m$为：
  \begin{equation}%S18.2
 e_m=\frac{1}{2}\mu_0\int_{0}^{a}2\pi H_{\theta}^{2}(r)rdr
 \end{equation}
 
-Combining Eqs. S18.1 and S18.2, we obtain:
+联立方程S18.1和S18.2，我们有：
  \begin{equation}%S 18.3
 e_m=\frac{\mu_0}{16\pi}I^2
 \end{equation}
 
-Combining Eqs. 3.79 (Em =LI2/2; em =LI2/2 on a unit length basis) and S18.3
-and solving for the self inductance of the wire interior, L, we have:
+联立方程3.79 ($E_m =LI^2/2$;单位长度$e_m =LI^2/2$)和S18.3，
+解出导线内部的自感$L$：
  \begin{equation}% 3.83
 L=\frac{\mu_0}{8\pi}
 \end{equation}
 
-b) From Eq. 3.111d, the center field, Bz(0, 0), of a long solenoid (β α) is given
-by μ◦NI/2b. As may be inferred from Eq. 3.117c, the field in a “thin-walled” and
-“long” solenoid is uniform in both axial and radial directions and equal to the
-center field. Thus the total flux linked by N turns of the solenoid is given by:
+b) 根据方程3.111d，长螺管($\beta\gg\alpha$)的中心场$B_z(0, 0)$为$\mu_0 NI/2b$。
+从方程3.117c可以得出，“薄壁”和“长”螺管的磁场在轴向和径向都是均匀分布的，并且等于中心场。
+于是，螺管的N匝交链的总磁链为：
  \begin{equation}% S18.4
 \Phi=\int_{0}^{a_1}2\pi rH_z(0,0)dr=N(\frac{\pi a_{1}^{2}\mu_0NI}{2b})
 \end{equation}
 
-Combining Eqs. 3.78 (Φ=LI) and S18.4, we obtain:
+联立方程3.78 ($\Phi=LI$)和S18.4，我们得到：
  \begin{equation}% 3.84c
 L=\mu_0a_1N^2(\frac{\pi}{2\beta})
 \end{equation}
 
-c) Method 1: Energy The total ampere-turns (NI) in an ideal dipole, as
-studied in PROBLEM 3.8, is given by:
- \begin{equation}% S18.5
-NI=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}K_fRd\theta
+c)\textbf{方法一：能量} \ 如问题3.8所给出的，理想双极线圈的总安匝($NI$)：
+\begin{equation}% S18.5
+NI=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}K_f Rd\theta
 \end{equation}
 
-where R is the dipole radius. Combining Eqs. 3.140 (for K f) and S18.5, we have:
- \begin{equation}% S18.6
+式中，$R$是双极半径。联立3.140 ($\vec{K}_f$)和S18.5，有：
+\begin{equation}% S18.6
 NI=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}2H_0Rcos\theta d\theta=4H_0R
 \end{equation}
 
-The total magnetic energy Em per unit length of the dipole is given by Eq. 3.143:
+双极磁体的单位长度总磁能$E_m$由方程3.143表示：
  \begin{equation}% 3.143
 E_m=\frac{\pi R^2B_{0}^{2}}{\mu_0}
 \end{equation}
 
-From S18.6, we compute H0R=NI/4. Now combining this, Eqs. 3.143 and 3.79,
-and solving for L (L per unit length), we have:
+下面我们从方程S18.6计算$H_0R=NI/4$。联立3.143和3.79，解出$L_\ell$ (单位长度的$L$)，有：
  \begin{equation}% 3.87
 L_\ell=\frac{1}{8}\mu_0\pi N^2
 \end{equation}
 
-Method 2: Flux Linkage First, because the surface current density, Kf, is
-not uniform over the dipole winding, i.e., Kf = −2H0 cos θz (Eq. 3.140), for a
-“uniform” I in the winding, the “turn density,” n(θ), must vary with θ as:
- \begin{equation}% S18.7
+\textbf{方法二：磁链}\ 首先，表面电流密度$\vec{K}_f$在双极绕组上不均匀。方程3.140指出，$\vec{K}_f=-2H_0\cos\theta\vec{i_z}$。
+如果$I$在绕组中均匀分布，则“匝密度”$n(\theta)$必须如下随$\theta$变化：
+\begin{equation}% S18.7
 n_(\theta)=\frac{1}{2}N\cos\theta
 \end{equation}
 
-Because the dipole has a uniform field of H0, the total flux linkage by the N turns
-of the dipole is given by:
+因为双极磁体有一个均匀分布的磁场$H_0$，双极的N匝总交链为：
 \begin{equation}% S18.8
 \begin{split}
 N\Phi&=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}n(\theta)\mu_0H_0(2R\cos\theta)d\theta=
@@ -4502,27 +4491,24 @@ N\Phi&=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}n(\theta)\mu_0H_0(2R\cos\theta)d\the
 \end{split}
 \end{equation}
 
-Combining Eqs. S18.8 and 3.78, we obtain:
+联立方程S18.8和3.78，我们有：
  \begin{equation}% 3.87
 L_\ell=\frac{1}{8}\mu_0\pi N^2
 \end{equation}
 
-d) Method 1: Energy The total ampere-turns (NI) in an ideal quadrupole
-(PROBLEM 3.9) is given by:
- \begin{equation}% S18.9
+d) \textbf{方法一：能量}\ 理想四极磁体(问题3.9)的总安匝$NI$为：
+\begin{equation}% S18.9
 NI=2\times\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}K_fRd\theta
 \end{equation}
 
-R is the quadrupole radius. The integral is multiplied by 2 because, as may be
-seen from Fig. 3.35(b), the current distribution is divided in two regions—we are
-considering only one polarity. Combining Eqs. 3.146 (for K f) and S18.9, we have:
+$R$是四极磁体的半径。积分前面的乘数2的原因可由图3.35(b)看出，即电流分布被分到两个区域，我们只考虑了一极。
+联立方程3.146和 ($\vec{K}_f$)和S18.9，我们有：
  \begin{equation}% S18.10
 NI=2\times\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}2H_0R\cos 2\theta d\theta=4H_0R
 \end{equation}
 
-The total magnetic energy Em per unit length of the quadrupole is obtained by
-integrating μ◦|H(r, θ)|2/2 over the entire surface. |H(r, θ)|2, from Eq. 3.145, is
-independent of θ, because sin22θ+cos22θ=1.
+四极磁体单位长度的总磁能在整个表面积分$\mu_0|H(r,\theta)|^2/2$获得。
+方程3.145给出的$|H(r,\theta)|^2$与$\theta$无关，因为$\sin^2 2\theta+\cos^2 2\theta=1$：
 \begin{equation}% S18.11
 \begin{split}
 E_m&=\frac{1}{2}\mu_0(\frac{H_0}{R})^2\int_{0}^{R}2\pi r^3dr+\frac{1}{2}\mu_0H_{0}^{2}R^6\int_{R}^{\infty}\frac{2\pi dr}{r^5}\\
@@ -4530,63 +4516,57 @@ E_m&=\frac{1}{2}\mu_0(\frac{H_0}{R})^2\int_{0}^{R}2\pi r^3dr+\frac{1}{2}\mu_0H_{
 \end{split}
 \end{equation}
 
-Combining Eqs. 3.79, S18.10, and S18.11, we obtain:
+联立3.79、S18.10和S18.11，我们得到：
  \begin{equation}% 3.88
 L_\ell=\frac{1}{16}\mu_0\pi N^2
 \end{equation}
 
-That Em of an ideal quadrupole is 1/2 that of an ideal dipole is reasonable because
-the quadrupole field varies from 0 to H0 within the bore rather than uniform as
-for a dipole and decays as 1/r3 outside rather than as 1/r2 for a dipole field.
+理想四极磁体的$E_m$是理想双极磁体的$1/2$很容易理解：四极磁场在室温孔内是从$0$到$H_0$变化的，而不是像双极磁场是均匀的；
+同时，四极磁体在外部按$1/r^3$衰减，而不是像双极磁体按$1/r^2$衰减。
 
-Method 2: Flux Linkage As with the dipole treated above, the “turn density,”
-n(θ), in the quadrupole also must vary with θ, here, as:
+\textbf{方法二：磁链}\ 类似于上面处理的双极磁体的“匝密度”，四极磁体的匝密度也必须随$\theta$按下式变化：
  \begin{equation}% S18.12
 n(\theta)=\frac{1}{2}N\cos 2\theta
 \end{equation}
 
-Note that the integral of Eq. S18.12 over one quadrant, e.g., from to −45◦ to
-+45◦, gives, as it must, the total number of turns in that quadrant: N/2. For the
-ideal quadrupole, the total flux linkage, Φ, is given by:
- \begin{equation}% S18.13b
+注意到，对上式在$1/4$区域内积分，比如从$-45^\circ$到$45^\circ$，它将给出也必须给出该部分的总匝数$N/2$。
+对理想四极磁体，总磁链$\Phi$由下式给出：
+\begin{equation}% S18.13b
 n\Phi=2\times\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}n(\theta)\phi(R,\theta)d\theta
 \end{equation}
 
-Because H1r = H0(r/R) sin 2θ (Eq. 3.145a), we have:
+因为$H_{1r} = H_0(r/R) \sin 2\theta$ (方程3.145a)，我们有：
  \begin{equation}% 18.13b
 \phi(R,\theta)d\theta=2\mu_0H_0R\int_{0}^{\theta}\sin 2\omega d\omega=\mu_0H_0R\cos 2\theta
 \end{equation}
 
-Therefore:
+于是：
  \begin{equation}% S18.4
 N\Phi=\mu_0NH_0R\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}(cos)^22\theta d\theta
 =\frac{1}{4}\mu_0\pi NH_0R=\frac{1}{16}\mu_0\pi N^2I
 \end{equation}
 
-Combining Eqs. 3.78 and S18.14, we obtain:
+联立3.78和S18.14，我们有：
  \begin{equation}% 3.88
 L_\ell=\frac{1}{16}\mu_0\pi N^2
 \end{equation}
 
-e) As discussed in PROBLEM 3.10, the field within the circular section of an
-ideal toroid, H(r), is in the azimuthal (ϕ) direction and, from Eq. 3.161, given by:
+e) 正如在问题3.10中讨论的，理想圆截面环线圈内部的场$H(r)$是绕向角$(\phi)$向的。根据方程3.161：
  \begin{equation}% S18.15
 H_\varphi(r)=\frac{NI}{2\pi r}
 \end{equation}
 
-
-The total flux linked by the toroid, Φ, is thus given by:
- \begin{equation}% S18.16
+环形线圈的总磁链$\Phi$于是为：
+\begin{equation}% S18.16
 \Phi=\mu_0N\int_{R-a}^{R+a}\int_{z=-a}^{z=+a}H(r)dzdr
 \end{equation}
 
-The equation of the circle that defines the cross section is given by:
+定义圆截面的方程为：
  \begin{equation}% 18.17
 z^2+(R-r)^2=a^2
 \end{equation}
 
-Solving z from Eq. S18.17 for the limits of z in the integral of Eq. S18.16 in terms
-of r and constants, and after combining with Eq. S18.15, we have:
+在方程S18.16的积分中，对$r$和常数从S18.17中解出$z$并与方程S18.15联立后，有：
 \begin{equation}% S18.18
 \begin{split}
 \Phi&=\frac{\mu_0N^2}{2\pi}\int_{R-a}^{R+a}\int_{-\sqrt{a^2-(R-r)^2}}^{\sqrt{a^2-(R-r)^2}}\frac{dzdr}{r}\\
@@ -4601,17 +4581,17 @@ of r and constants, and after combining with Eq. S18.15, we have:
 \end{split}
 \end{equation}
 
-Combining Eqs. 3.78 and S18.19, we obtain:
+联立3.78和S18.19，我们得到：
  \begin{equation}% 3.89a
 L=\mu_0RN^2[1-\sqrt{1-(\frac{a}{R})^2}]
 \end{equation}
 
-f) For aR, we have:
+f) 对$a\ll R$，我们有：
  \begin{equation}% S18.20
 \sqrt{1-(\frac{a}{R})^2}=1-\frac{1}{2}(\frac{a}{R})^2-\frac{1}{8}(\frac{a}{R})^4-\frac{1}{16}(\frac{a}{R})^6\cdots
 \end{equation}
 
-From Eqs. 3.89a and S18.20
+从3.89a和S18.20，
 \begin{equation}
 L=\mu_0RN^2[\frac{1}{2}(\frac{a}{R})^2+\frac{1}{8}(\frac{a}{R})^4+\frac{1}{16}(\frac{a}{R})^6\cdots]
 \end{equation}
@@ -4621,24 +4601,23 @@ L=\mu_0RN^2[\frac{1}{2}(\frac{a}{R})^2+\frac{1}{8}(\frac{a}{R})^4+\frac{1}{16}(\
 L=\frac{\mu_0a^2N^2}{2R}[1+\frac{1}{4}(\frac{a}{R})^2+\frac{1}{8}(\frac{a}{R})^4\cdots]
 \end{equation}
 
-g) The field within the rectangular section of this ideal toroid is the same as that
-in the circular section of the toroid studied above. Thus:
+g) 本理想矩形截面环线圈内部的磁场与上面研究过的圆截面环线圈是一样的，即：
  \begin{equation}% S18.21
 N\Phi=\frac{\mu_0N^2I}{2\pi}\int_{R-a}^{R+a}\int_{z=-b}^{z=+b}\frac{1}{r}dzdr
 =\frac{\mu_0N^2bI}{\pi}\ln(\frac{R+a}{R-a})
 \end{equation}
 
-Combining Eqs. 3.78 and S18.21, we obtain:
+联立3.78和S18.21，我们有：
  \begin{equation}% 3.90a
 L=\frac{\mu_0bN^2}{\pi}\ln(\frac{R+a}{R-a})
 \end{equation}
 
-h) For a  R, we may expand ln(1±a/R) as:
+h) 对$a\ll R$，我们可以展开$\ln(1\pm a/R)$：
  \begin{equation}% S18.22
 \ln(1\pm\frac{a}{R})=\pm\frac{a}{R}-\frac{1}{2}(\frac{a}{R})^2\pm\frac{1}{3}(\frac{a}{R})^3-\frac{1}{4}(\frac{a}{R})^4\pm\frac{1}{5}(\frac{a}{R})^5\cdots
 \end{equation}
 
-Combining Eqs. 3.90a and S18.22, we obtain:
+联立3.90a和S18.22，我们得到：
  \begin{eqnarray}% 3.90b
 L&=\frac{\mu_0bN^2}{\pi}\left[2(\frac{a}{R})+\frac{2}{3}(\frac{a}{R})^3+\frac{2}{5}(\frac{a}{R})^5\cdots\right]\\
 L&=\frac{2\mu_0abN^2}{\pi R}\left[1+\frac{1}{3}(\frac{a}{R})^2+\frac{1}{5}(\frac{a}{R})^4\cdots\right]
