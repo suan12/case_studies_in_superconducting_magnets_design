@@ -1376,7 +1376,7 @@ B_z(0,0)=\frac{\mu_0\lambda J}{2}\int_{a_1}^{a_2}\int_{-b}^{b}\frac{r^2dzdr}{\sq
 \begin{split}
 B_z(0,0)&=\mu_0\lambda J\int_{a_1}^{a_2}\frac{r^2bdr}{r^2\sqrt{r^2+b^2}}=\mu_0\lambda Jb[\ln({r+\sqrt{r^2+b^2}})]_{a_1}^{a_2}\\
 &=\mu_0\lambda Jb[\ln(a_2+\sqrt{a_2^2+b^2})-\ln(a_1+\sqrt{a_1^2+b^2})]\\
-&=\mu_0\lambda Ja_1(\frac{b}{a_1})\ln[\frac{\frac{a_2}{a_1}+\sqrt{(\frac{a_2}{a_1})^2+(\frac{b}{a_1})^2}}{(\frac{a_1}{a_2})+\sqrt{(\frac{a_1}{a_1})^2+(\frac{b}{a_1})^2}}]\\%page119
+&=\mu_0\lambda Ja_1\left(\frac{b}{a_1}\right)\ln\left[\frac{\frac{a_2}{a_1}+\sqrt{(\frac{a_2}{a_1})^2+(\frac{b}{a_1})^2}}{(\frac{a_1}{a_2})+\sqrt{(\frac{a_1}{a_1})^2+(\frac{b}{a_1})^2}}\right]\\%page119
 \end{split}
 \end{equation}
 
@@ -1389,7 +1389,7 @@ B_z(0,0)=\mu_0\lambda J\alpha_1\beta\ln\left[\frac{\alpha+\sqrt{\alpha^2+\beta^2
 \begin{eqnarray}
 % \nonumber % Remove numbering (before each equation)
 B_z(0,0)&=&\mu_0\lambda J_{a_1}F(\alpha,\beta)\\ %page119
-F(\alpha,\beta)&=&\beta \ln(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}})%page119
+F(\alpha,\beta)&=&\beta \ln\left(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}\right)%page119
 \end{eqnarray}
 
 b）\textbf{“环”线圈}。对于环线圈（$\alpha\rightarrow 1; \beta\rightarrow 0$），3.110中右侧的对数项成为：
@@ -1423,7 +1423,7 @@ B_z(0,0)&=&\mu_0 \lambda Ja_1(\alpha-1)\frac{\beta}{\sqrt{1+\beta^2}}%page120
 
 使用“环”线圈中相同的近似方法，得到：
 \begin{equation}
-\lim_{\beta\gg\alpha}\ln(\frac{\frac{\alpha}{\beta}+1}{\frac{1}{\beta}+1})\simeq\frac{\alpha}{\beta}-\frac{1}{\beta}=\frac{\alpha-1}{\beta}%page120
+\lim_{\beta\gg\alpha}\ln\left(\frac{\frac{\alpha}{\beta}+1}{\frac{1}{\beta}+1}\right)\simeq\frac{\alpha}{\beta}-\frac{1}{\beta}=\frac{\alpha-1}{\beta}%page120
 \end{equation}
 
 于是在极限$\beta\gg\alpha$下，我们得到：
@@ -1441,8 +1441,8 @@ B_z(0,0)=\mu_0\lambda Ja_1(\alpha-1)%page120
 
 \textbf{饼式线圈。}对于饼式线圈，近似极限是$\beta\rightarrow 0$：
 \begin{eqnarray}
-\lim_{\beta\rightarrow 0}\ln\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}=\ln(\frac{2\alpha}{2})=\ln\alpha\\%page120
-B_z(0,0)=\frac{\mu_0NI}{2a_1}(\frac{\ln\alpha}{\alpha-1})%page120
+\lim_{\beta\rightarrow 0}\ln\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}=\ln\left(\frac{2\alpha}{2}\right)=\ln\alpha\\%page120
+B_z(0,0)=\frac{\mu_0NI}{2a_1}\left(\frac{\ln\alpha}{\alpha-1}\right)%page120
 \end{eqnarray}
 
 注意到，饼式线圈的中心场等于环线圈的中心场乘一个系数$\ln \alpha/(\alpha-1)$。在$\alpha\rightarrow 1$时，上式退化为环线圈的表达式。
@@ -1555,7 +1555,7 @@ Bitter的设计（$J\propto 1/r$）是一个近似实现上述目标的有效方
 
 我们通过在整个线圈区域内积分功率密度$\rho_{Cu} [J_\theta]_B^2(r)$推导出$[H_z(0,0)]_B$和Bitter磁体总功率$P_B$的关系式。这里继续采用无量纲参数，有：
 \begin{equation}
-P_B=a_1^3\int_{1}^{\alpha}\int_{-\beta}^{\beta}\rho_{cu}\lambda_B(\frac{J_0}{\eta})^2 2\pi\eta d\zeta d\eta=J_0^2\rho_{cu}\lambda_B a_1^3(4\pi\beta\ln\alpha)%page124
+P_B=a_1^3\int_{1}^{\alpha}\int_{-\beta}^{\beta}\rho_{cu}\lambda_B\left(\frac{J_0}{\eta}\right)^2 2\pi\eta d\zeta d\eta=J_0^2\rho_{cu}\lambda_B a_1^3(4\pi\beta\ln\alpha)%page124
 \end{equation}
 
 通过上面的表达式，我们将$J_0$和$P_B$联系起来：
@@ -1593,7 +1593,7 @@ $[G(\alpha,\beta)]_B$在$\alpha\simeq 6.42$和$\beta\simeq 2.5$时取得最大�
 \begin{equation}
 \begin{split}
 P_B&=\frac{\rho_{cu}a_1[B_z(0.0)]_B^2}{\mu_0^2\lambda_B[G(\alpha,\beta)]_B^2}\\
-&=\frac{(2\times 10^{-8}\Omega m)(3\times 10^{-2}m)(20T)^2}{(4\pi\times 10^{-7}\frac{H}{m})^2(0.8)(0.159)^2}\\
+&=\frac{(2\times 10^{-8}\ \Omega m)(3\times 10^{-2}\ \mathrm{m})(20\ \mathrm{T})^2}{(4\pi\times 10^{-7}\ \mathrm{\frac{H}{m}})^2(0.8)(0.159)^2}\\
 &\simeq 7.5\ \mathrm{MW}%page124
 \end{split}
 \end{equation}
@@ -1774,11 +1774,11 @@ H(b)=H(\alpha,\beta)|_{z=b}=\frac{1}{2}H(\alpha,2\beta)|_{z=0}=\frac{1}{2}\lambd
 图3.21给出了各实例应用叠加技术的过程。
 于是，我们有：
 \begin{equation}
-(case 1:z<b)\quad H(z)=\frac{1}{2}\lambda J\alpha_{1}[F(\alpha,\beta=\frac{b+z}{a_{1}})+F(\alpha,\beta=\frac{b-z}{a_{1}})]\\%(3.120a)
+(case\ 1:z<b)\quad H(z)=\frac{1}{2}\lambda J\alpha_{1}[F(\alpha,\beta=\frac{b+z}{a_{1}})+F(\alpha,\beta=\frac{b-z}{a_{1}})]%(3.120a)
 \end{equation}
 
 \begin{equation}
-(case 2:z<b)\quad H(z)=\frac{1}{2}\lambda Ja_{1}[F(\alpha,\beta=\frac{b+z}{a_{1}})-F(\alpha,\beta=\frac{z-b}{a_{1}})]\\%(3.120b)
+(case\ 2:z<b)\quad H(z)=\frac{1}{2}\lambda Ja_{1}[F(\alpha,\beta=\frac{b+z}{a_{1}})-F(\alpha,\beta=\frac{z-b}{a_{1}})]%(3.120b)
 \end{equation}
 
 \begin{figure}
@@ -1983,13 +1983,13 @@ H_z(0,z)=\frac{a^2I}{2[a^2+(z+\frac{d}{2})^2]^\frac{3}{2}}
 加上位于上面$z=d/2$处的线圈的磁场，有：
 %S3.1
 \begin{equation}% S3.1
-H_z(0,z)=\frac{a^2I}{2}\{\frac{1}{[a^2+(z+\frac{d}{2})^2]^\frac{3}{2}}+\frac{1}{[a^2+(z-\frac{d}{2})^2]^\frac{3}{2}}\}
+H_z(0,z)=\frac{a^2I}{2}\left\{\frac{1}{[a^2+(z+\frac{d}{2})^2]^\frac{3}{2}}+\frac{1}{[a^2+(z-\frac{d}{2})^2]^\frac{3}{2}}\right\}
 \end{equation}
 
 将S3.1给出的方程$H_z(z)$对$z$微分，有：
 % 方程
 \begin{equation}
-\frac{d^2H_z(0,z)}{dz}=\frac{3a^2I}{2}\{{-\frac{(z+\frac{d}{2})}{[a^2+(z+\frac{d}{2})^2]^\frac{5}{2}}-\frac{(z-\frac{d}{2})}{[a^2+(z-\frac{d}{2})^2]^\frac{5}{2}}}\}
+\frac{d^2H_z(0,z)}{dz}=\frac{3a^2I}{2}\left\{{-\frac{(z+\frac{d}{2})}{[a^2+(z+\frac{d}{2})^2]^\frac{5}{2}}-\frac{(z-\frac{d}{2})}{[a^2+(z-\frac{d}{2})^2]^\frac{5}{2}}}\right\}
 \end{equation}
 
 注意，由于对称性，$dH_z(0,z)/dz=0$在$z=0$处对任意$a$成立。
@@ -1997,8 +1997,8 @@ H_z(0,z)=\frac{a^2I}{2}\{\frac{1}{[a^2+(z+\frac{d}{2})^2]^\frac{3}{2}}+\frac{1}{
 对S3.1二次微分有：
 % 方程
 \begin{equation}
-\frac{d^2H_z(0,z)}{dz^2}=\frac{3a^2I}{2}\{{-\frac{a^2-4(z+\frac{d}{2})^2}{[a^2+(z+\frac{d}{2})^2]^\frac{7}{2}}}
--\frac{a^2-4(z-\frac{d}{2})^2}{[a^2+(z-\frac{d}{2})^2]^\frac{7}{2}}\}
+\frac{d^2H_z(0,z)}{dz^2}=\frac{3a^2I}{2}\left\{{-\frac{a^2-4(z+\frac{d}{2})^2}{[a^2+(z+\frac{d}{2})^2]^\frac{7}{2}}}
+-\frac{a^2-4(z-\frac{d}{2})^2}{[a^2+(z-\frac{d}{2})^2]^\frac{7}{2}}\right\}
 \end{equation}
 
 如果$d = a$，在$z = 0$处二阶导数为零。
@@ -2008,13 +2008,13 @@ H_z(0,z)=\frac{a^2I}{2}\{\frac{1}{[a^2+(z+\frac{d}{2})^2]^\frac{3}{2}}+\frac{1}{
 b) 对这个系统，下方线圈的电流极性反转，有：
 % s3.2
 \begin{equation}% S3.2
-H_z(0,z)=\frac{a^2I}{2}\{{-\frac{1}{[a^2+(z+\frac{d}{2})^2]^\frac{3}{2}}+\frac{1}{[a^2+(z-\frac{d}{2})^2]^\frac{3}{2}}}\}
+H_z(0,z)=\frac{a^2I}{2}\left\{{-\frac{1}{[a^2+(z+\frac{d}{2})^2]^\frac{3}{2}}+\frac{1}{[a^2+(z-\frac{d}{2})^2]^\frac{3}{2}}}\right\}
 \end{equation}
 
 根据对称性，$H_z(z=0)=0$。对S3.2依$z$求导，有：
 %s3.3
 \begin{equation}% S3.3
-\frac{dH_z(0,z)}{dz}=\frac{3a^2I}{2}\{{\frac{(z+\frac{d}{2})}{[a^2+(z+\frac{d}{2})^2]^\frac{5}{2}}-\frac{(z-\frac{d}{2})}{[a^2+(z-\frac{d}{2})^2]^\frac{5}{2}}}\}
+\frac{dH_z(0,z)}{dz}=\frac{3a^2I}{2}\left\{{\frac{(z+\frac{d}{2})}{[a^2+(z+\frac{d}{2})^2]^\frac{5}{2}}-\frac{(z-\frac{d}{2})}{[a^2+(z-\frac{d}{2})^2]^\frac{5}{2}}}\right\}
 \end{equation}
 
 在$z=0$处计算S3.3，有：
@@ -2100,16 +2100,16 @@ E_{20}(1,0)=\frac{969969}{262144}=\frac{3\cdot7\cdot11\cdot13\cdot17\cdot19}{10^
 随着项数增加，我们计算方程S4.2：
 %方程
 \begin{eqnarray}
-\frac{d^2h_z(0)}{d\zeta^2}\mid_{\frac{1}{2}}&=-6(only E_2)\\
-&=5.25   (through E_4)\\
-&\simeq -2.9531   (through E_6)\\
-&\simeq 1.3535 (through E_8)\\
-&\simeq -0.5499   (through E_{10})\\
-&\simeq 0.2062   (through E_{12})\\
-&\simeq -0.0730   (through E_{14})\\
-&\simeq 0.0248   (through E_{16})\\
-&\simeq-0.0081   (through E_{18})\\
-&\simeq 0.0026   (through E_{20})
+\frac{d^2h_z(0)}{d\zeta^2}\mid_{\frac{1}{2}}&=&-6\ (only E_2)\\
+&=&5.25  \ (through\ E_4)\\
+&\simeq& -2.9531\   (through\ E_6)\\
+&\simeq& 1.3535\ (through\ E_8)\\
+&\simeq& -0.5499\   (through\ E_{10})\\
+&\simeq& 0.2062 \  (through\ E_{12})\\
+&\simeq& -0.0730\   (through\ E_{14})\\
+&\simeq& 0.0248 \  (through\ E_{16})\\
+&\simeq&-0.0081\   (through\ E_{18})\\
+&\simeq& 0.0026 \  (through\ E_{20})
 \end{eqnarray}
 
 
@@ -2168,19 +2168,21 @@ F_C(\alpha,\beta)&=0.11053327
 a)从方程3.125，我们有：
 %%
 \begin{equation}% page144
-B_0=(4\pi\times 10^{-7}H/m)(2.5147\times 10^8 A/m^2)(5\times 10^{-2}m)\times(0.12094421+0.05287933-0.11053327)=1.000 T
+\begin{split}
+B_0=&(4\pi\times 10^{-7}H/m)(2.5147\times 10^8 A/m^2)(5\times 10^{-2}m)\\
+&\times(0.12094421+0.05287933-0.11053327)=1.000 T
+\end{split}
 \end{equation}
 
 b)将$\alpha$和$\beta$代入方程3.14a和3.14b1，我们有：
 %%
- \begin{equation}% page144
+ \begin{eqnarray}% page144
 F(\alpha,\beta)E_2(\alpha,\beta)_A=-0.002277367;F(\alpha,\beta)E_4(\alpha,\beta)_A=-0.000315757\\
 F(\alpha,\beta)E_2(\alpha,\beta)_B=-0.007938543;F(\alpha,\beta)E_4(\alpha,\beta)_B=-0.001737981\\
-F(\alpha,\beta)E_2(\alpha,\beta)_C=-0.010216278;F(\alpha,\beta)E_4(\alpha,\beta)_C=-0.002133593\\
-\end{equation}
+F(\alpha,\beta)E_2(\alpha,\beta)_C=-0.010216278;F(\alpha,\beta)E_4(\alpha,\beta)_C=-0.002133593
+\end{eqnarray}
 
 当所有线圈都有相同的$a_1$和$\lambda J a_1$时，方程3.18成为：
-%%S5.1
 \begin{equation}% S5.1
 h_\zeta(\zeta)=1+\frac{\sum_{k}^{j=1}F(\alpha_j,\beta_j)E_2(\alpha_j,\beta_j)}{\sum_{k}^{j=1}F(\alpha_j,\beta_j)}\zeta^2+\cdots
 \end{equation}
@@ -2192,11 +2194,10 @@ E_4(\alpha,\beta)=\frac{-0.000315757-0.001737981+0.002132363}{0.6329027}=0.00126
 \end{equation}
 
 于是我们有：
-%%%
- \begin{equation}% page144
-\frac{d^2B}{dz^2}\mid0=2E_2(\frac{B_0}{a_{1}^{2}})=2(0.000005822)\frac{1.000T}{(5 cm)^2}=0.4658\times10^{-6}T/cm^2
+\begin{eqnarray}% page144
+\frac{d^2B}{dz^2}\mid0=2E_2(\frac{B_0}{a_{1}^{2}})=2(0.000005822)\frac{1.000T}{(5 cm)^2}=0.4658\times10^{-6}T/cm^2\\
 \frac{d^4B}{dz^4}\mid0=24E_4(\frac{B_0}{a_{1}^{4}})=24(0.001261725)(\frac{(1.000T)}{(5 cm)^4})=4.8453\times10^{-5}T/cm^4
-\end{equation}
+\end{eqnarray}
 
 这些数值与表3.4给出的事实上是一致的，尽管需要我们勤奋的计算至第九位小数。
 
@@ -2212,49 +2213,56 @@ E_4(\alpha,\beta)=\frac{-0.000315757-0.001737981+0.002132363}{0.6329027}=0.00126
 证明，笛卡尔坐标系下$H_z(r, \theta,\phi)$的表达式$H_z(x, y, z)$在$n=0, 1, 2$分别为：
 %%3.126
 \begin{equation}% 3.126a
-n=0 H_z(x,y,z)=A_{0}^{0}\\
-n=1 H_z(x,y,z)=A_{0}^{0}+2zA_{1}^{0}+3(A_{1}^{1}x+B_{1}^{1}y)
-\\n=2 H_z(x,y,z)=A_{0}^{0}+2zA_{1}^{0}+3(A_{1}^{1}x+B_{1}^{1}y)+\frac{3}{2}A_{2}^{0}(2z^2-x^2-y^2)+12z(A_{2}^{1}x+B_{2}^{1}y)+15[A_{2}^{2}(x^2-y^2)+2B_{2}^{2}xy]
+n=0\ H_z(x,y,z)=A_{0}^{0}
 \end{equation}
+\begin{equation}
+n=1\ H_z(x,y,z)=A_{0}^{0}+2zA_{1}^{0}+3(A_{1}^{1}x+B_{1}^{1}y)
+\end{equation}
+\begin{equation}
+\begin{split}
+n=2\ H_z(x,y,z)=&A_{0}^{0}+2zA_{1}^{0}+3(A_{1}^{1}x+B_{1}^{1}y)\\
+&+\frac{3}{2}A_{2}^{0}(2z^2-x^2-y^2)+12z(A_{2}^{1}x+B_{2}^{1}y)\\
+&+15[A_{2}^{2}(x^2-y^2)+2B_{2}^{2}xy]
+\end{split}
+\end{equation}
+
 
 \subsubsection{问题3.6之解}
 球坐标参数$r, u = \cos\theta, s = \sin\theta, \sin\phi,\cos\phi$用$x,y,z$表示为：
 
 %%S6.1
- \begin{equation}% S6.1a
-r=\sqrt{x^2+y^2+z^2}
-\end{equation}
-\begin{equation}% S6.1b
-u=cos\theta=\frac{z}{\sqrt{x^2+y^2+z^2}}
-\end{equation}
-\begin{equation}% S6.1c
-s=sin\theta=\frac{\sqrt{x^2+y^2}}{\sqrt{x^2+y^2+z^2}}
-\end{equation}
-\begin{equation}% S6.1d
-sin\varphi=\frac{y}{\sqrt{x^2+y^2}}
-\end{equation}
-\begin{equation}% S6.1e
-cos\varphi=\frac{x}{\sqrt{x^2+y^2}}
-\end{equation}
+ \begin{eqnarray}% S6.1a
+r=\sqrt{x^2+y^2+z^2}\\
+u=\cos\theta=\frac{z}{\sqrt{x^2+y^2+z^2}}\\
+s=\sin\theta=\frac{\sqrt{x^2+y^2}}{\sqrt{x^2+y^2+z^2}}\\
+\sin\varphi=\frac{y}{\sqrt{x^2+y^2}}\\
+\cos\varphi=\frac{x}{\sqrt{x^2+y^2}}
+\end{eqnarray}
 
 方程3.9与S6.1a-S6.1e分别对$n=0,1,2$联立，有：
-%%S6.2
 \begin{equation}% S6.2a
-H_z(x,y,z)=\sum_{0}^{m=0}r^0(1+0)P_{0}^{0}(u)(A_{0}^{0}cos0+B_{0}^{0}sin0)=(1)(1)(1)(A_{0}^{0})
+\begin{split}
+H_z(x,y,z)=&\sum_{0}^{m=0}r^0(1+0)P_{0}^{0}(u)(A_{0}^{0}\cos0 +B_{0}^{0}\sin 0)\\
+=&(1)(1)(1)(A_{0}^{0})
+\end{split}
 \end{equation}
 
 对$n=0$，我们有：
-%%S3.126a
  \begin{equation}% 3.126a
 H_z(x,y,z)=A_{0}^{0}
 \end{equation}
 
 注意到，$A_0^0$表示磁体中心场$H_z(0, 0, 0)$。
-%%S6.3
 \begin{equation}% s6.3a
-H_z(x,y,z)=\sum_{1}^{m=0}r^1(2+m)P_{1}^{m}(A_{1}^{m}cosm\varphi+B_{1}^{m}sinm\varphi)=r^1(2+0)P_{1}^{0}(A_{1}^{0})+r^1(2+1)
-P_{1}^{1}(A_{1}^{1}cos\varphi+B_{1}^{1}sin\varphi)=2ruA_{1}^{0}+3rs(A_{1}^{1}cos\varphi+B_{1}^{1}sin\varphi)=2\sqrt{x^2+y^2+z^2}\frac{z}{\sqrt{x^2+y^2+z^2}}A_{1}^{0}
-+3\sqrt{x^2+y^2+z^2}\frac{\sqrt{x^2+y^2}}{\sqrt{x^2+y^2+z^2}}(\frac{A_{1}^{1}x+B_{1}^{1}y}{\sqrt{x^2+y^2}})=2zA_{1}^{0}+3(A_{1}^{1}x+B_{1}^{1}y)
+\begin{split}
+H_z(x,y,z)=&\sum_{1}^{m=0}r^1(2+m)P_{1}^{m}(A_{1}^{m}\cos m\varphi+B_{1}^{m}\sin m\varphi)\\
+=&r^1(2+0)P_{1}^{0}(A_{1}^{0})+r^1(2+1)
+P_{1}^{1}(A_{1}^{1}\cos\varphi+B_{1}^{1}\sin\varphi)\\
+=&2ruA_{1}^{0}+3rs(A_{1}^{1}\cos\varphi+B_{1}^{1}\sin\varphi)\\
+=&2\sqrt{x^2+y^2+z^2}\frac{z}{\sqrt{x^2+y^2+z^2}}A_{1}^{0}\\
+&+3\sqrt{x^2+y^2+z^2}\frac{\sqrt{x^2+y^2}}{\sqrt{x^2+y^2+z^2}}\left(\frac{A_{1}^{1}x+B_{1}^{1}y}{\sqrt{x^2+y^2}}\right)\\
+=&2zA_{1}^{0}+3(A_{1}^{1}x+B_{1}^{1}y)
+\end{split}
 \end{equation}
 
 于是，对最大为1的$n$值，我们有：
@@ -2267,20 +2275,32 @@ H_z(x,y,z)=A_{0}^{0}+zA_{1}^{0}+3(A_{1}^{1}x+B_{1}^{1}y)
 
 %%S6.4
  \begin{equation}% S6.4
-H_z(x,y,z)=\sum_{2}^{m=0}r^2(3+m)P_{2}^{m}(A_{2}^{m}cosm\varphi+B_{2}^{m}sinm\varphi)=r^2(3+0)P_{2}^{0}(A_{2}^{0})+r^2(3+1)P_{2}^{1}
-(A_{2}^{1}cos\varphi+B_{2}^{1}sin\varphi)+r^2(3+2)P_{2}^{2}(A_{2}^{2}cos2\varphi+B_{2}^{2}sin2\varphi)
+ \begin{split}
+H_z(x,y,z)=&\sum_{2}^{m=0}r^2(3+m)P_{2}^{m}(A_{2}^{m}\cos m\varphi+B_{2}^{m}\sin m\varphi)\\
+=&r^2(3+0)P_{2}^{0}(A_{2}^{0})+r^2(3+1)P_{2}^{1}
+(A_{2}^{1}\cos\varphi+B_{2}^{1}\sin\varphi)\\
+&+r^2(3+2)P_{2}^{2}(A_{2}^{2}\cos 2\varphi+B_{2}^{2}\sin 2\varphi)
+ \end{split}
 \end{equation}
+
 \begin{equation}% S6.4b
-H_z(x,y,z)=3(x^2+y^2+z^2)\frac{1}{2}(\frac{2z^2-x^2-y^2}{x^2+y^2+z^2})A_{2}^{0}+4(x^2+y^2+z^2)\frac{3z\sqrt{x^2+y^2}}{x^2+y^2+z^2}
-(A_{2}^{1}\frac{x}{\sqrt{x^2+y^2}}+B_{2}^{1}\frac{y}{\sqrt{x^2+y^2}})+5(x^2+y^2+z^2)\frac{3(x^2+y^2)}{x^2+y^2+z^2}[A_{2}^{2}(\frac{2x^2}{x^2+y^2}-1)+B_{2}^{2}\frac{2xy}{x^2+y^2}]
-=\frac{3}{2}A_{2}^{0}(2z^2-x^2-y^2)+12z(A_{2}^{1}x+B_{2}^{1}y)+15[A_{2}^{2}(x^2-y^2)+2B_{2}^{2}xy]
+\begin{split}
+H_z(x,y,z)=&3(x^2+y^2+z^2)\frac{1}{2}\left(\frac{2z^2-x^2-y^2}{x^2+y^2+z^2}\right)A_{2}^{0}\\
+&+4(x^2+y^2+z^2)\frac{3z\sqrt{x^2+y^2}}{x^2+y^2+z^2}
+\left(A_{2}^{1}\frac{x}{\sqrt{x^2+y^2}}+B_{2}^{1}\frac{y}{\sqrt{x^2+y^2}}\right)\\
+&+5(x^2+y^2+z^2)\frac{3(x^2+y^2)}{x^2+y^2+z^2}\left[A_{2}^{2}(\frac{2x^2}{x^2+y^2}-1)+B_{2}^{2}\frac{2xy}{x^2+y^2}\right]\\
+=&\frac{3}{2}A_{2}^{0}(2z^2-x^2-y^2)\\
+&+12z(A_{2}^{1}x+B_{2}^{1}y)+15[A_{2}^{2}(x^2-y^2)+2B_{2}^{2}xy]
+\end{split}
 \end{equation}
 
 累加方程S6.2b, S6.3b和S6.4b，我们得到对最大为2的$n$值情况：
-%%3.126c
- \begin{equation}% 3.126c
-H_z(x,y,z)=A_{0}^{0}+2zA_{1}^{0}+3(A_{1}^{1}x+B_{1}^{1}y)+\frac{3}{2}A_{2}^{0}(2z^2-x^2-y^2)+12z(A_{2}^{1}x+B_{2}^{1}y)
-+15[A_{2}^{2}(x^2-y^2)+2B_{2}^{2}xy]
+\begin{equation}% 3.126c
+\begin{split}
+H_z(x,y,z)=&A_{0}^{0}+2zA_{1}^{0}+3(A_{1}^{1}x+B_{1}^{1}y)\\
+&+\frac{3}{2}A_{2}^{0}(2z^2-x^2-y^2)+12z(A_{2}^{1}x+B_{2}^{1}y)\\
+&+15[A_{2}^{2}(x^2-y^2)+2B_{2}^{2}xy]
+\end{split}
 \end{equation}
 
 注意到，当对$n=0,1,2$计算$H_z(x, y, z)$时，它包含随$x, y, z, z^2, x^2, y^2, zx, zy$和$xy$变化的项。
@@ -2297,15 +2317,18 @@ Helmholtz线圈的准则——关于螺管中心对称放置载流元以在中�
 H_0=\lambda Ja_1F(\alpha,\beta)
 \end{equation}
 \begin{equation}% 3.13b
-F(\alpha,\beta)=\beta\ln(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}})
+F(\alpha,\beta)=\beta\ln\left(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}\right)
 \end{equation}
 
 考虑到对称性以及前面讨论3.4给出的叠加技术，证明
 如图3.27所示的具有均匀电流密度$\lambda J$的notched螺管的$H_z(0, z_1)$的表达式为：
 %%3.127
 \begin{equation}% 3.127
-H_z(0,z_1)=\frac{1}{2}\lambda a_1[F(\alpha_1,\beta_1+\gamma_1)+F(\alpha_1,\beta_1-\gamma_1)]-\frac{1}{2}\lambda Ja_3
-[F(\alpha_2,\beta_2+\gamma_2)+F(\alpha_2,\beta_2-\gamma_2)]
+\begin{split}
+H_z(0,z_1)=&\frac{1}{2}\lambda a_1\left[F(\alpha_1,\beta_1+\gamma_1)+F(\alpha_1,\beta_1-\gamma_1)\right]\\
+&-\frac{1}{2}\lambda Ja_3
+\left[F(\alpha_2,\beta_2+\gamma_2)+F(\alpha_2,\beta_2-\gamma_2)\right]
+\end{split}
 \end{equation}
 
 式中，$\alpha_1=a_2/a_1,\beta_1=b_1/a_1,\gamma_1=z_1/a_1,\alpha_2=a_2/a_3,\beta_2=b_2/a_3,\gamma_2=z_1/a_3$。螺管参数$a_1, a_2, a_3, b_1, b_2$如图3.27的定义。
@@ -2335,27 +2358,27 @@ $\beta=b_1/a_1,\gamma=z_1/a_1$；
 这从一个长为$2b$的非notched螺管的中心场$H_z(0, 0)$是两部分螺管产生的场(一部分从$z=−b$到$0$，另一部分
 从$0$到$z=b$)之和这里看的更清楚。
 也即，螺管的每一半产生总场$H_z(0, 0)$的一半。 于是：
-$$
+\begin{equation}
 H_{z}(0,z_{1})|_{1}=\frac{1}{2}\lambda Ja_{1}F(\alpha,\beta+\gamma)\\%(S7.1)
-$$
+\end{equation}
 
 \textbf{螺管2的磁场}：在$(0, z_1)$，$H_z$中来自长度$2_b = b_1−z_1$的螺管2的部分是具有相同$a_1, a_2,\lambda J$而长度为
 $2_b = 2(b_1−z_1)$的螺管的中心场的一半。
-$$
+\begin{equation}
 H_{z}(0,z_{1})|_{2}=\frac{1}{2}\lambda Ja_{1}F(\alpha,\beta-\gamma)\\%(S7.2)
-$$
+\end{equation}
 
 \textbf{螺管3的磁场}：在$(0, z_1)$，$H_z$中来自长$2_b=b_2+z_1$的螺管3的部分四具有相同$a_3, a_2,\lambda J$
 而长度为$2_b=2(b_2+z_1)$的螺管的中心场的一半。
 因为$J$是反向的，我们有：
-$$
+\begin{equation}
 H_{Z}(0,z_{1})|_{3}=-\frac{1}{2}\lambda Ja_{3}F(\alpha',\beta'+\gamma')\\%(s7.3)
-$$
+\end{equation}
 
 \textbf{螺管4的磁场}：在$(0, z_1)$，$H_z$来自长$2_b = b_2−z_1$的螺管4的部分是除长为$2_b = 2(b_2−z_1)$而其他参数相同的螺管的中心场的一半。
-$$
+\begin{equation}
 H_{z}(0,z_{1})|_{4}=-\frac{1}{2}\lambda Ja_{3}F(\alpha',\beta'-\gamma')\\%(s7.4)
-$$
+\end{equation}
 
 \textbf{Notched螺管的磁场}
 
@@ -2380,12 +2403,12 @@ Bi2223和YBCO是带形式的，由高温超导带绕制的饼式线圈组成的�
 
 在推导场方程时，所有的饼都对磁体原点居中。我们采用下面的简化记法。将$F(\alpha,\beta)/{\beta}$简记为：
 \begin{equation}
-\frac{F(\alpha,\beta)}{\beta}\equiv \ln(\alpha,\beta)=\ln[\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}]\\%(3.128)
+\frac{F(\alpha,\beta)}{\beta}\equiv \ln(\alpha,\beta)=\ln\left[\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}\right]\\%(3.128)
 \end{equation}
 
 我们定义一个无量纲轴向磁场参数，$\eta(\zeta)\equiv H(z)/(\lambda J a_1)$，其中$\zeta\equiv z/a_1$。有：
 \begin{equation}
-\eta(\varsigma)\equiv \frac{H(Z)}{\lambda Ja_{1}}=\beta \ln(\alpha,\beta)[1+\sum_{j=1}^{n} E_{2j}(\alpha,\beta)\varsigma^{2j}]\\%(3.128b)
+\eta(\varsigma)\equiv \frac{H(Z)}{\lambda Ja_{1}}=\beta \ln(\alpha,\beta)\left[1+\sum_{j=1}^{n} E_{2j}(\alpha,\beta)\varsigma^{2j}\right]\\%(3.128b)
 \end{equation}
 
 因为使用了$\ln(\alpha,\beta)$，方程3.128b是一个无量纲场的表达式，与3.13a形式略有不同。
@@ -2416,18 +2439,18 @@ Bi2223和YBCO是带形式的，由高温超导带绕制的饼式线圈组成的�
 \end{equation}
 
 从3.128b式，我们有：
-$$
-{[\eta(\varsigma)_{2}]}=\beta_{2}\ln(\alpha,\beta_{2})[1+\sum_{j=1}^{n}E_{2j}(\alpha,\beta_{2})\varsigma_{2j}]\\%(3.130a)
-$$
-$$
-{[\eta'(\varsigma)]}_{2}=\beta'_{2}\ln(\alpha,\beta'_{2}[1+\sum_{j=1}^{n}E_{2j}(\alpha,\beta'_{2})\varsigma^{2j}]\\%3.130b
-$$
+\begin{eqnarray}
+{[\eta(\varsigma)_{2}]}=\beta_{2}\ln(\alpha,\beta_{2})\left[1+\sum_{j=1}^{n}E_{2j}(\alpha,\beta_{2})\varsigma_{2j}\right]\\
+{[\eta'(\varsigma)]}_{2}=\beta'_{2}\ln(\alpha,\beta'_{2}\left[1+\sum_{j=1}^{n}E_{2j}(\alpha,\beta'_{2})\varsigma^{2j}\right]%3.130b
+\end{eqnarray}
 
 组合3.129和3.130，我们有：
-$$
-\eta_{2}(\varsigma)=[\beta_{2}ln(\alpha,\beta_{2})-\beta'_{2}\ln(\alpha,\beta'_{2})]\\
-+\sum_{j=1}^{n}[\beta_{2}\ln(\alpha,\beta_{2})E_{2j}(\alpha,\beta_{2})-\beta'_{2}ln(\alpha,\beta'_{2})]\varsigma^{2j}%(3.131)
-$$
+\begin{equation}
+\begin{split}
+\eta_{2}(\varsigma)=&[\beta_{2}\ln(\alpha,\beta_{2})-\beta'_{2}\ln(\alpha,\beta'_{2})]\\
+&+\sum_{j=1}^{n}[\beta_{2}\ln(\alpha,\beta_{2})E_{2j}(\alpha,\beta_{2})-\beta'_{2}\ln(\alpha,\beta'_{2})]\varsigma^{2j}%(3.131)
+\end{split}
+\end{equation}
 
 \textbf{第二步：四饼磁体——再加上饼3和饼4}
 
@@ -2443,24 +2466,27 @@ $2_b=2w+3\delta$的线圈$4^\prime$。于是，线圈4有$\beta_4=(4w+3\delta)/2
 \end{figure}
 
 来自所有四个线圈的总的无量纲轴向磁场$\eta_4(z)$为：
-$$
+\begin{equation}
 \eta_{4}(z)=[\eta(\varsigma)]_{2}-[\eta'(\varsigma)]_{2}+[\eta(\varsigma)]_{4}-[\eta'(z)]_{4}\\%(3.132)
-$$
-其中，
-$$
-{[\eta(\varsigma)]}_{4}=\beta_{4}\ln(\alpha,\beta_{4})[1+\sum_{j=1}^{n}E_{2j}(\alpha,\beta_{4})\varsigma^{2j}]\\%(3.133a)
-$$
+\end{equation}
 
-$$
+其中，
+\begin{equation}
+{[\eta(\varsigma)]}_{4}=\beta_{4}\ln(\alpha,\beta_{4})[1+\sum_{j=1}^{n}E_{2j}(\alpha,\beta_{4})\varsigma^{2j}]\\%(3.133a)
+\end{equation}
+
+\begin{equation}
 {[\eta'(\varsigma)]}_{4}=\beta'_{4}\ln(\alpha,\beta'_{4})[1+\sum_{j=1}^{n}E_{2j}(\alpha,\beta'_{4})\varsigma^{2j}]\\%(3.133b)
-$$
+\end{equation}
 
 组合3.130和3.133，我们得到：
-$$
-\eta_{4}(\varsigma)=[\beta_{2}\ln(\alpha,\beta_{2})+\beta_{4}\ln(\alpha,\beta_{4})]-[\beta'_{2}\ln(\alpha,\beta'_{2})+\beta'_{4}\ln(\alpha,\beta'_{4})]\\
-+\sum_{j=1}^{n}\{[\beta_{2}\ln(\alpha,\beta_{2})E_{2j}(\alpha,\beta_{2})+\beta_{4}\ln(\alpha,\beta_{4})E_{2j}(\alpha,\beta_{4})]\\
--[\beta'_{2}\ln(\alpha,\beta'_{2})E_{2j}(\alpha,\beta'_{2})+\beta'_{4}\ln(\alpha,\beta'_{4})E_{2j}(\alpha,\beta'_{4})]\}\varsigma^{2j}\\%(3.134)
-$$
+\begin{equation}
+\begin{split}
+\eta_{4}(\varsigma)=&[\beta_{2}\ln(\alpha,\beta_{2})+\beta_{4}\ln(\alpha,\beta_{4})]-[\beta'_{2}\ln(\alpha,\beta'_{2})+\beta'_{4}\ln(\alpha,\beta'_{4})]\\
+&+\sum_{j=1}^{n}\{[\beta_{2}\ln(\alpha,\beta_{2})E_{2j}(\alpha,\beta_{2})+\beta_{4}\ln(\alpha,\beta_{4})E_{2j}(\alpha,\beta_{4})]\\
+&-[\beta'_{2}\ln(\alpha,\beta'_{2})E_{2j}(\alpha,\beta'_{2})+\beta'_{4}\ln(\alpha,\beta'_{4})E_{2j}(\alpha,\beta'_{4})]\}\varsigma^{2j}%(3.134)
+\end{split}
+\end{equation}
 
 \textbf{第三步：2N饼磁体——加上最后两个饼}
 
@@ -2481,15 +2507,17 @@ $$
 \end{figure}
 
 我们可以将3.135用和3.134类似的形式表达：
-$$
-\eta_{2N}(\varsigma)=\sum_{k=1}^{N}\{[\beta_{2k}ln(\alpha,\beta_{2k})-\beta'_{2k}ln(\alpha,\beta'_{2k})]\\
-+\sum_{j=1}^{n}[\beta_{2k}ln(\alpha,\beta_{2k})E_{2j}(\alpha,\beta_{2k})-\beta'_{2k}ln(\alpha,\beta'_{2k})E_{2j}(\alpha,\beta'_{2k})]\}\varsigma^{2j}\\%(3.136)
-$$
+\begin{equation}
+\begin{split}
+\eta_{2N}(\varsigma)=&\sum_{k=1}^{N}\{\left[\beta_{2k}ln(\alpha,\beta_{2k})-\beta'_{2k}ln(\alpha,\beta'_{2k})\right]\\
+&+\sum_{j=1}^{n}[\beta_{2k}ln(\alpha,\beta_{2k})E_{2j}(\alpha,\beta_{2k})-\beta'_{2k}ln(\alpha,\beta'_{2k})E_{2j}(\alpha,\beta'_{2k})]\}\varsigma^{2j}%(3.136)
+\end{split}
+\end{equation}
 
 式中，
-$$
+\begin{equation}
 \beta_{2k}=\frac{2k\omega+(sk-1)\delta}{2a_1}\\ \beta'_{2k}=\frac{2(k-1)\omega+(2k-1)\delta}{2a_{1}}\\
-$$
+\end{equation}
 
 式3.136也可以写作：
 \begin{equation}
@@ -2498,203 +2526,193 @@ $$
 
 式中，$\eta_{2N}(0)$是无量纲中心场。$[E_{2n}]_{2N}$是第n阶总体误差系数。
 $\eta_{2N}(\zeta=0)$和$[E_{2n}]_{2N}$为：
-$$
+\begin{equation}
 \eta_{2N}(0)=\sum_{k=1}^{N}[\beta_{2k}ln(\alpha,\beta_{2k})-\beta'_{2k}ln(\alpha,\beta'_{2k})]\\%3.138a)
-$$
+\end{equation}
 
-$$
-{[E_{2n}]}_{2N}=\frac{\sum_{k=1}^{N}[\beta_{2k}ln(\alpha,\beta_{2k})E_{2n}(\alpha,\beta_{2k})-\beta'_{2k}ln(\alpha,\beta'{2k})E_{2n}(\alpha,\beta'_{2k})]}{\sum_{k=1}^{N}[\beta_{2k}ln(\alpha,\beta_{2k})-\beta'_{2k}ln(\alpha,\beta'_{2k})]}\\%(3.138b)
-$$
+\begin{equation}
+{[E_{2n}]}_{2N}=\frac{\sum_{k=1}^{N}[\beta_{2k}\ln(\alpha,\beta_{2k})E_{2n}(\alpha,\beta_{2k})-\beta'_{2k}\ln(\alpha,\beta'{2k})E_{2n}(\alpha,\beta'_{2k})]}{\sum_{k=1}^{N}[\beta_{2k}\ln(\alpha,\beta_{2k})-\beta'_{2k}\ln(\alpha,\beta'_{2k})]}\\%(3.138b)
+\end{equation}
 
 于是，方程3.138b给出了一个计算由2N个一致饼式线圈(各磁体有相同的$2a_1,2b=w,\alpha,\beta$，相邻间距$\delta$)组成的磁体第n阶误差系数的表达式。
 \newpage
 
 
 \subsection{问题3.8：理想双极磁体}
+本问题研究理想双极磁体。此磁体无限长(从而无边缘效应)、绕组厚度为零、磁场由纵向表面电流产生、
+磁场方向与双极磁体的轴垂直。
+实际双极磁体的磁场和力的计算远比理想双极磁体复杂；
+不过，除了在端部的复杂情况，理想双极磁体给出了双极磁体的大多关键特征。
+双极磁体用于要求与磁体轴向垂直方向的磁场均匀的系统，例如高能粒子加速器[3.35–3.40]和发电机[3.41–3.43]。
 
-This problem studies an ideal dipole magnet, which is infinitely long (no end effects) and whose fields, directed normal to the dipole axis, are generated by a
-longitudinal surface current having zero winding thickness. Field and force solutions for real dipole magnets are more complex than those in the ideal dipole;
-nevertheless, except for complications at the ends, the ideal dipole illustrates most
-of the key aspects. Dipole magnets are used in systems that require a uniform
-field directed transverse to the magnet axis, such as in high-energy particle accelerators [3.35–3.40] and electric generators [3.41–3.43].
+一个半径为$R$、零绕组厚度的长(二维)双极磁体由双极壳($r=R$)上的$z$向的表面电流励磁。
+室温孔内($r<R$)的磁场$\vec{H}_{d1}$以及壳外的磁场$\vec{H}_{d2}$为：
+\begin{eqnarray}
+\vec{H}_{d1}&=&H_{0}(sin\theta\vec{\imath}_{r}+cos\theta\vec{\imath}_{\theta})\\%3.139a)
+\vec{H}_{d2}&=&H_{0}(\frac{R}{r})^2(sin\theta\vec{\imath}_{r}-cos\theta\vec{\imath}_{\theta})%(3.139b)
+\end{eqnarray}
 
-A long (two-dimensional) dipole magnet of radius R and “zero” winding thickness
-is energized by a surface current flowing in the z-direction at the dipole shell
-(r = R). The magnetic field within the bore (r < R), Hd1, and that outside the
-shell (r>R), Hd2, are given by:
-$$
-\vec{H}_{d1}=H_{0}(sin\theta\vec{\imath}_{r}+cos\theta\vec{\imath}_{\theta})\\%3.139a)
-$$
-$$
-\vec{H}_{d2}=H_{0}(\frac{R}{r})^2(sin\theta\vec{\imath}_{r}-cos\theta\vec{\imath}_{\theta})\\%(3.139b)
-$$
+二维坐标的定义如图3.32。$+z$方向指向纸面外。在解答下面的问题时，忽略边缘效应。
 
-The 2-D coordinates are defined in Fig. 3.32. The +z-direction is out of the paper.
-In answering the following questions, neglect end effects.
+a) 画出双极磁体$r<R$和$r>R$两个区域的场线。
 
-a) Draw neatly the field profile of the dipole for both regions, r<R and r>R.
-
-b) Show that an expression for the surface current Kf at r=R is given by:
-$$
+b) 证明$r=R$处的表面电流的表达式为：
+\begin{equation}
 \vec{K}_{f}=-2H_{0}cos\theta\vec{\imath}_{z}\\%(3.140)
-$$
-Indicate on a sketch its direction, with circles (o) where Kf is +z-directed
-(out of the paper) and with crosses (×) where Kf is −z-directed.
+\end{equation}
 
-c) Show that an expression for the Lorentz force density per unit length, fL
-[N/m2], acting on a current-carrying element of the shell, is given by:
-$$
+画出方向草图，$\vec{K}_f$如果是$+z$方向，画圈(o)；反之，画叉(×)。
+
+c) 证明作用在载流壳单单元上的单位长度的Lorentz力密度表达式$\vec{f}_L$[$\mathrm{N/m^2}$]为：
+\begin{equation}
 \vec{f}_{L}=-\mu_{0}H_{0}^{2}sin2\theta\vec{\imath}_{\theta}\\%(3.141)
-$$
+\end{equation}
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.5]{chpt3/figs/fig3.32.eps}
 	\caption{圆柱坐标系；$+z$朝向纸面外。}
 \end{figure}
 
-d) Show that the net x-directed Lorentz force (per unit dipole length), FLx
-[N/m], acting on the right-hand sector (−90◦<θ<90◦) is given by:
-$$
+d) 证明施于右半部分($−90^\circ<\theta<90^\circ$)的净$x$向单位长度
+Lorentz力$\vec{F}_{Lx}[\mathrm{N/m}]$为：
+\begin{equation}
 F_{Lx}=\frac{4R\mu_{0}H_{0}^{2}}{3}\\%(3.142)
-$$
+\end{equation}
 
-e) Show that an expression for the total magnetic energy stored (per unit dipole
-length), Em [J/m], is given by:
-$$
+e) 证明单位长度储存的总磁能表达式$E_m[\mathrm{J/m}]$为：
+\begin{equation}
 E_{m}=\frac{\pi R^{2}B_{0}^{2}}{\mu_{0}}\\%(3.143)
-$$
+\end{equation}
 
-Compute Em for B0 = 5 T and R = 20 mm. Also, from Em, compute the
-inductance, L, of a 10-m long dipole with an operating current, Iop, of 5000 A.
+在$B_0=5\ \mathrm{T},R=20\ \mathrm{mm}$时计算$E_m$。
+同时，由$E_m$计算一个长为$10\ \mathrm{m}$、载流$I_{op}=5000\ \mathrm{A}$的双极磁体的电感L。
 
-To reduce the field outside the dipole, an iron yoke (μ=∞) of radial thickness d
-is placed outside the dipole, as shown in Fig. 3.33
+为了减少双极磁体外部的磁场，在双极外装设一个厚度$d$的铁扼($\mu=\infty$)，如图3.33所示。
 
-f) Show that the new Kf1 needed to generate the same H field inside the dipole
-is exactly one-half that given by Eq. 3.140. Explain this current reduction.
+f) 证明，在双极内部产生同样的磁场$\vec{H}$，需要的$\vec{K}_{f1}$恰为方程3.140的一半。
+解释为什么电流减小了。
 
-g) In reality, the iron yoke cannot maintain its high μ for an unlimited value of
-H0. Show that an expression for the minimum dm to keep the yoke unsaturated is given by:
-$$
+g) 实际中，铁扼不可能在无限的$H_0$下保持高$\mu$值。证明，为了保持铁扼不饱和，
+最小的$d_m$表达式：
+\begin{equation}
 d_{m}=R(\frac{H_{0}}{M_{sa}})\\%(3.144)
-$$
-where Msa is the yoke material’s saturation magnetization. Compute dm for
-the following set: μ◦H◦=5 T; μ◦Msa=1.2 T; R=20 mm.
+\end{equation}
+
+式中，$M_{sa}$是铁扼材料的饱和磁化。在以下条件下计算$d_m$：$\mu_0 H_0=5 T;\mu_0 M_{sa}=1.2\ \mathrm{T}; R=20\ \mathrm{mm}$。
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.5]{chpt3/figs/fig3.33.eps}
-	\caption{Ideal dipole with an iron yoke of thickness d}
+	\includegraphics[scale=0.4]{chpt3/figs/fig3.33.eps}
+	\caption{理想双极磁体外置厚度为$d$的铁扼}
 \end{figure}
 
 \subsubsection{问题3.8之解}
-a) The field lines are sketched in Fig. 3.34a for both regions. The normal (rdirected) component of the field is continuous at the boundary (r=R).
+a) 场线示意图如图3.34a。磁场的法向($r$向)分量在边界处($r=R$)处是连续的。
 
-b) The discontinuity in the tangential (θ-directed) component of the field at
-r=R is equal to the surface current density (Kf) flowing there. From Eq. 2.6:
-$$
-\vec{K}_{f}=\vec{\imath}_{r}\times(\vec{H}_{d2}-\vec{H}_{d1})=\vec{\imath}_{r}\times-2H_{0}cos\theta\vec{\imath}_{\theta}\\
-=-2H_{0}cos\theta\vec{\imath}_{z}\\%(3.140)
-$$
+b) 磁场的切向方向($\theta$向)在$r=R$处不连续，差值为该处的表面电流密度$\vec{K}_f$，
+根据方程2.6，有：
+\begin{equation}
+\vec{K}_{f}=\vec{\imath}_{r}\times(\vec{H}_{d2}-\vec{H}_{d1})=\vec{\imath}_{r}\times-2H_{0}\cos\theta\vec{\imath}_{\theta}\\
+=-2H_{0}\cos\theta\vec{\imath}_{z}\\%(3.140)
+\end{equation}
 
-As indicated in Fig. 3.34b, Kf in the −90◦ < θ < 90◦ segment points in the −zdirection, while that in the 90◦<θ<270◦ segment points in the +z-direction
+如图3.34b指出的，$\vec{K}_f$在$-90^\circ<\theta<90^\circ$部分是指向$-z$向的，在
+$90^\circ<\theta270^\circ$部分是指向$+z$向的。
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.5]{chpt3/figs/fig3.34.eps}
-	\caption{Ideal dipole. a) inside and outside fields;b) surface current density vectors; c) force vectors.}
+	\caption{理想双极磁体。a) 内外场；b)表面电流密度矢量；c)力矢量。}
 \end{figure}
 
-c) fL is given by Kf ×μ◦Hd, where μ◦Hd=μ◦(Hd1+Hd2)/2:
-$$
-\vec{f}_{L}\quad is\quad given\quad by\quad\vec{K}_{f}\times\mu_{0}\vec{H}_{d},where\quad\mu \vec{H}_{d}=\mu_{0}(\vec{H}_{d1}+\vec{H}_{d2})/2:\\
-\vec{f}_{L}=\vec{K}_{f}\times\mu_{0}H_{0}sin\theta\vec{\imath}_{r}\\%(S8.1)
-=-2\mu_{0}H_{0}^{2}cos\theta sin\theta\vec{\imath}_{\theta}\\
-=-\mu_{0}H_{0}^{2}sin2\theta\vec{\imath}_{\theta}\\%(3.141)
-$$
+c) $\vec{f}_L$由$\vec{K}_f\times\mu_0 \vec{H}_d$给出，其中$\mu_0 \vec{H}_d=\mu_0(\vec{H}_{d1}+\vec{H}_{d2})/2$：
+\begin{eqnarray}
+\vec{f}_{L}&=&\vec{K}_{f}\times\mu_{0}H_{0}\sin\theta\vec{\imath}_{r}%(S8.1)
+=-2\mu_{0}H_{0}^{2}\cos\theta \sin\theta\vec{\imath}_{\theta}\\
+&=&-\mu_{0}H_{0}^{2}\sin 2\theta\vec{\imath}_{\theta}%(3.141)
+\end{eqnarray}
 
-Note that $\vec{f_L}$ has no r-component; it has only a θ-component (Fig. 3.34c). Also
-the force density is maximum at $\theta=\pi/4+n\pi/2$ and zero at$\theta=0+n\pi/2$, where
-$n=0, 1, 2, 3$. The cumulative force, $\propto\int f_L(\theta)d\theta$, is maximum at $\theta=0$和$180^\circ$.
+注意到，$\vec{f_L}$无$r$分量；它仅有$\theta$分量(图3.34c)。
+同时，力密度在$\theta=\pi/4+n\pi/2$处最大，而在$\theta=0+n\pi/2$时为零，式中$n=0, 1, 2, 3$。
+累计力$\propto\int f_L(\theta)d\theta$在$\theta=0$和$180^\circ$时取最大值。
 
-d) It is clear from Fig. 3.34c that the net Lorentz force per unit length [N/m]
-acting on the right-hand segment of the shell is +x-directed. Thus:
-$$
-F_{Ldx}=\int\vec{f}_{L}\cdot\vec{\imath}_{x}dx=-R\int_{\frac{-\pi}{2}}^{\frac{\pi}{2}}f_{L\theta}sin\theta d\theta\\%(S8.2a)
-=-2R\int_{0}^{\frac{\pi}{2}}f_{L\theta}sin\theta d\theta=4R\mu_{0}H_{0}^{2}\int_{0}^{\frac{\pi}{2}}cos\theta sin^{2}\theta d\theta\\%(S8.2b)
-$$
+d) 从图3.34c明显可见，施于右半部分的单位长度Lorentz力是$+x$方向的：
+\begin{eqnarray}
+F_{Ldx}&=&\int\vec{f}_{L}\cdot\vec{\imath}_{x}dx=-R\int_{\frac{-\pi}{2}}^{\frac{\pi}{2}}f_{L\theta}\sin\theta d\theta\\%(S8.2a)
+&=&-2R\int_{0}^{\frac{\pi}{2}}f_{L\theta}\sin\theta d\theta=4R\mu_{0}H_{0}^{2}\int_{0}^{\frac{\pi}{2}}\cos\theta \sin^{2}\theta d\theta%(S8.2b)
+\end{eqnarray}
 
-From Eq. S8.2b, we obtain:
-$$
-F_{Lx}=\frac{4R\mu_{0}H_{0}^{2}}{3}\\%(3.142)
-$$
+从方程S8.2b，我们得：
+\begin{equation}
+F_{Lx}=\frac{4R\mu_{0}H_{0}^{2}}{3}%(3.142)
+\end{equation}
 
-The net Lorentz force on the left-hand segment has the same magnitude as that
-on the right-hand segment but is −x-directed. That is, there is a large force trying
-to push the two halves of the dipole apart. In fact structural support to withstand
-these forces is a key design issue for dipole magnets.
+施于左半部分的净Lorentz力和施于右半部分的Lorentz力的幅值相同，而指向$-x$向。
+也就是说，存在一个很大的力试图将双极磁体的两部分拉开。
+实际上，用于承受这个力的支撑结构的设计是双极磁体设计的关键点之一。
 
-e) Em [J/m] may be computed by integrating μ◦|H(r, θ)|2/2, the magnetic energy density, over the entire surface, from r=0 to r=∞ and from θ=0 to θ=2π,
-transverse to the dipole axis.
-$$
-E_{m}=\frac{\mu_{0}}{2}\int_{0}^{R}|H_{d1}|^{2}2\pi rdr+\frac{\mu_{0}}{2}\int_{R}^{\infty}|H_{d2}|^{2}2\pi rdr\\%(S8.3a)
-=\frac{\mu_{0}}{2}H_{0}^{2}\pi R^{2}+\frac{\mu_{0}}{2}H_{0}^{2}\pi R^{2}\\%(S8.3b)
-=\mu_{0}\pi R^{2}H_{0}^{2}=\frac{\pi R^{2}B_{0}^{2}}{\mu_{0}}\\%(3.143)
-$$
+e) $E_m [J/m]$可以通过对磁能密度$\mu_0|H(r,\theta)|2/2$在垂直于双极轴的整个表面
+(从$r=0$到$r=\infty$；从$\theta=0$到$\theta=2\pi$)积分获得。
+\begin{eqnarray}
+E_{m}&=&\frac{\mu_{0}}{2}\int_{0}^{R}|H_{d1}|^{2}2\pi rdr+\frac{\mu_{0}}{2}\int_{R}^{\infty}|H_{d2}|^{2}2\pi rdr\\%(S8.3a)
+&=&\frac{\mu_{0}}{2}H_{0}^{2}\pi R^{2}+\frac{\mu_{0}}{2}H_{0}^{2}\pi R^{2}\\%(S8.3b)
+&=&\mu_{0}\pi R^{2}H_{0}^{2}=\frac{\pi R^{2}B_{0}^{2}}{\mu_{0}}%(3.143)
+\end{eqnarray}
 
-From Eq. S8.3b it is clear that the total stored magnetic energy is divided equally
-inside and outside the dipole shell. We may imagine that one-half of the current
-flowing in the dipole is used to create Hd1 and the other half is used to create Hd2.
-Inserting μ◦H0=B0=5 T and R=0.02 m into the above expression, we obtain:
-$$
-E_{m}=\frac{\pi(2\times 10^{-2}m)^{2}(5T)^{2}}{4\pi\times10^{-7}H/m}=25kJ/m\\
-$$
+从方程S8.3b可知，存储的总磁能可以分为双极壳内外的两个部分。
+我们可以想象，双极内流动电流的一半用来产生$H_{d1}$而另一半用来产生$H_{d2}$。
+代入$\mu_0 H_0=B_0=5\ \mathrm{T},R=20\ \mathrm{mm}$，有：
+\begin{equation*}
+E_{m}=\frac{\pi(2\times 10^{-2}m)^{2}(5T)^{2}}{4\pi\times10^{-7}H/m}=25kJ/m
+\end{equation*}
 
-For a 5-T dipole, 10-m long, the total magnetic energy becomes 250 kJ. This total
-energy may be equated to the dipole’s total inductive energy:
-$$
-\frac{1}{2}LI_{op}^{2}=250kJ\\%(S8.4)
-$$
+对于一个5T双极磁体，如果长10 m，总存储磁能变为250 kJ。
+总存储磁能等于双极磁体的总电感能。
+\begin{equation}
+\frac{1}{2}LI_{op}^{2}=250\ \mathrm{kJ}%(S8.4)
+\end{equation}
 
-Solving Eq. S8.4 for L with Iop=5000 A, we have:
-$$
-L=\frac{2(250\times10^{3}J)}{(5000A)^{2}}\\=20mH\\
-$$
+代入$I_{op}=5000\ \mathrm{A}$解出L，有：
+\begin{equation*}
+L=\frac{2(250\times10^{3}\ \mathrm{J})}{(5000\ \mathrm{A})^{2}}=20\ \mathrm{mH}
+\end{equation*}
 
-In 3.7.3 the inductance per unit length of an ideal dipole is given by:
-$$
-L_{\ell}=\frac{1}{8}\mu_{0}\pi N^{2}\\%(3.87)
-$$
+在3.7.3节已给出，理想双极磁体单位长度的自感为： 
+\begin{equation}
+L_{\ell}=\frac{1}{8}\mu_{0}\pi N^{2}%(3.87)
+\end{equation}
 
-Equating this $L_{\ell}(=2\ \mathrm{mH/m})$ with 20 mH and solving for $N$, we find $N\simeq 64$ for
-$I_{op} = 5000\ \mathrm{A}$. Note that if the dipole’s operating current is, for example, 1000 A,
-then the dipole must have an inductance of 0.5 H; it must have five times more
-winding turns than the 20-mH dipole: $N\simeq 318$.
+代入$L_{\ell}(=2\ \mathrm{mH/m})$以及$20\ \mathrm{mH}$，解出$N$，我们发现在$I_{op} = 5000\ \mathrm{A}$时$N\simeq 64$。
+如果双极磁体的运行电流是$1000A$，那么磁体的电感必须是$0.5H$；它必须有5倍于$20\ \mathrm{mH}$双极
+的绕组匝数： $N\simeq 318$。
 
-f) Because $\mu=\infty$, $\vec{H}_{d2}=0$ for R< r< R+d and, if the shield is thick enough to
-avoid saturation, Hd2=0 also for r>R+d. We still have Hd1 as before. Clearly:
-$$
-\vec{K}_{f1}=-H_{0}cos\theta\vec{\imath}_{\theta}\\%(S8.5)
-$$
-which is exactly one-half of Kf given by Eq. 3.140. Considering the surface current
-requirements for both cases, we may interpret that of the total surface current
-needed to generate the bore field, −2H◦ cos θ, one half comes from the “surface
-current” of the iron magnetization
+f) 因为$\mu=\infty$，以及在$R< r< R+d$时$\vec{H}_{d2}=0$，如果屏蔽足够厚以避免饱和，
+那么对$r>R+d$也有$\vec{H}_{d2}=0$。明显：
+\begin{equation}
+\vec{K}_{f1}=-H_{0}\cos\theta\vec{\imath}_{\theta}%(S8.5)
+\end{equation}
 
-g) All the flux per unit length [Wb/m] entering the yoke of radial thickness d
-between 0 and θ=90◦ must be equal to or less than μ◦Msad. That is:
-$$
-R\mu_{0}H_{0}\int_{0}^{\frac{\pi}{2}}sin\theta d\theta=R\mu_{0}H_{0}\leq\mu_{0}M_{sa}d\\%(S8.6)
-$$
+这恰好是方程3.140中给出$\vec{K}_f$的一半。
+考虑两种情况下都要求表面电流，我们可以作如下解释：全部用于产生室温孔场$-2H_0\cos\theta$的
+表面电流，其中一半来自铁芯磁化的“表面电流”、
 
-The minimum yoke thickness dm is thus given by:
-$$
-d_{m}=R(\frac{H_{0}}{M_{sa}})\\%(3.144)
-$$
+g) 单位长度的磁通$[Wb/m]$进入径向厚度为$d$的铁扼的0至$\theta=90^\circ$部分，必须等于或小于
+$\mu_0 M_{sa}d$
+\begin{equation}
+R\mu_{0}H_{0}\int_{0}^{\frac{\pi}{2}}\sin\theta d\theta=R\mu_{0}H_{0}\leq\mu_{0}M_{sa}d%(S8.6)
+\end{equation}
 
-With R=20 mm, μ◦H0=5 T, and μ◦Msa=1.2 T, we obtain:
-$$d_{m}=(20mm)\frac{5T}{1.2T}=83mm\\$$
-Note that from Table 2.5 (p. 50), at μ◦M = 1.25 T for as-cast steel, the material
-has a permeability of 180μ◦ which, though not ∞, is still large enough for our
-simple approach based on the assumption that μ=∞.
+于是，铁扼的最小厚度为：
+\begin{equation}
+d_{m}=R(\frac{H_{0}}{M_{sa}})%(3.144)
+\end{equation}
+
+代入$R=20\ \mathrm{mm}, \mu_0 H_0=5\ \mathrm{T}, \mu_0 M_{sa}=1.2\ \mathrm{T}$，我们有：
+\begin{equation*}
+d_{m}=(20\ \mathrm{mm})\frac{5T}{1.2T}=83\ \mathrm{mm}
+\end{equation*}
+
+从表2.5可知，在$\mu_0 M=1.25\ \mathrm{T}$时，as-cast钢的磁导率为$180\mu_0$。尽管不是无限大，
+但对于满足我们的无限大假设是足够用了。
 \newpage
 
 \subsection{问题3.9：理想四极磁体}
@@ -3306,28 +3324,26 @@ Thus: 1) χ 1.56 km if Iχ=1000 A; or 2) χ=15.6 km if Iχ=100 A
 
 
 \subsection{讨论3.11：粒子加速器}
-The simple principle that an electric field ($\vec{E}$) accelerates charged particles is the
-basis for particle accelerators. Early machines of Cockroft-Walton (1928) and Van
-de Graaff (1930) were linear, accelerating particles along a straight path over a
-potential($\int\vec{E}\cdot\vec{s}$). A large potential is always required to produce highly energetic
-particles. A linear accelerator thus requires either a large $\vec{E}$ field, a long distance,
-or a combination of both. The Stanford Linear Accelerator (∼20 GeV) has a beam
-distance of 2 miles (3.2 km).
-In the 1930s E.O. Lawrence developed the cyclotron, a circular accelerator. Modern circular accelerators are variations of Lawrence’s cyclotron. In a circular accelerator, charged particles are accelerated by a modest potential each time they
-circulate around the machine; by circulating them many times it is possible to accelerate them to energy levels well beyond those achievable by linear accelerators.
-One essential component of a circular accelerator is a set of magnets that supplies
-a magnetic field (usually in the vertical direction) to bend the particles into a
-circular trajectory; modern machines use dipole magnets, while Lawrence’s first
-1.2-MeV cyclotron used magnet polepieces, which sandwiched the beam trajectory.
-As studied in PROBLEM 3.12 below, the particle energy (Ep) in circular accelerators is proportional to the beam trajectory’s radius (Ra), beam velocity, and
-vertical magnetic induction (Bz). For a particle energy of 7 TeV of the newest
-particle accelerator, Large Hadron Collider (LHC), at CERN, it means a machine
-radius of nearly 3 km! Compare this with ∼0.1 m, the radius of Lawrence’s first
-cyclotron. If the LHC were to use ∼1 T, the strength of Bz in Lawrence’s first
-cyclotron, the factor of ∼3×104 increase in radius (and increase in beam energy)
-would still bring Ep to only ∼0.8 TeV. In LHC, the additional factor of ∼8 needed
-to reach the energy level of 7 TeV is achieved through increased field strength, a
-goal feasible only with superconducting dipole magnets.
+电场($\vec{E}$)加速带电粒子的简单原理是粒子加速器的基础。
+Cockroft-Walton (1928)和Van de Graaff (1930)的早期及其是线性的：沿一条直线以电势($\int\vec{E}\cdot\vec{s}$)加速粒子。
+线性加速器需要很大的势能才能产生高能量粒子。因此，线性加速器需要大的电场$\vec{E}$或者长距离，
+或两者兼有。斯坦福直线加速器($\sim 20 GeV$)的距离为2英里(3.2km)。
+
+1930年代，Lawrence开发了一种圆形的回旋加速器。
+现代圆形加速器是Lawrence斯回旋加速器的变种。
+在圆形加速器中，带电粒子每次回旋时都以适度的电势加速；
+通过多次回旋，可以将粒子加速到远远超过线性加速器可实现的能量水平。
+
+圆形加速器的一个重要组件是一组用于产生磁场(通常为垂直方向)以使粒子沿圆周轨道运动的磁体。
+现代加速器使用双极磁体，而Lawrence的首台$1.2\ \mathrm{MeV}$回旋加速器使用的是磁极片。
+
+问题3.12将研究，圆形加速器中的粒子能量$E_p$正比于回旋半径$R_a$、粒子束速度和垂直磁场密度$B_z$。
+CERN的强子对撞机(LHC)产生的最新的粒子能量为$7\ \mathrm{TeV}$，它意味着机器半径将近$3\ \mathrm{km}$！
+作为对比，Lawrence的首台回旋加速器的半径是$\sim 0.1\ \mathrm{m}$。
+如果LHC使用和Lawrence首台加速器一样的$\sim 1\ \mathrm{T}$的磁场$B_z$，那么半径需要增加
+$\sim 3\times 10^4$仅能令$E_p$达到$\sim 0.8\ \mathrm{TeV}$。
+在LHC中，通过增加磁场强度，扩大了$\sim 8$倍半径，实现了$7\ \mathrm{TeV}$。如此大的磁场，
+仅超导双极磁体可以实现。
 \newpage
 
 
@@ -3979,10 +3995,11 @@ through 3.14.
 %%表格3.11
 
 a)我们得到3.41a：
-$$
+\begin{equation}
 F_{z}(0)=-\frac{\mu_{o}}{2}(\frac{NI}{2b})^{2}\{2b\sqrt{4a^{2}+b^{2}}[K(k_{b})-E(k_{b})]\\
 -2b\sqrt{4a^{2}+4b^{2}}[K(k_{2b})-E(k_{2b})]\}\\%(3.41a)
-$$
+\end{equation}
+
 where kb and k2b are the moduli determined by a and b. For this case, in which
 a=39.1 mm and b=203.3 mm, we have:
 %%缺公式
@@ -3999,19 +4016,20 @@ This computation underestimates the code value by 28%
 %%表格3.12
 
 b)式3.41b得到：
-$$
+\begin{equation}
 F_{z}(0)\simeq-\frac{\mu_{o}}{2}(\frac{NI}{2b})^{2}\pi a^{2}\\%(3.41b)
 \simeq-\frac{(4\pi\times10^{-7}H/m)}{2}[\frac{(5.91\times10^{5}A)}{0.4066m}]^{2}\pi(0.0391m)^{2}\\
 =-6.4kN\\
-$$
+\end{equation}
 
 This is 74% of the code value. The average radius of 51.2 mm instead of 39.1 mm
 results in a force of 10.9 kN, 27% greater than the code value.
 c) If the magnet is modeled by two “thin-walled” and “long” solenoids, Eq. 3.55
 applies:
-$$
+\begin{equation}
 F_{zT}(0)\simeq-\mu_{o}(\frac{NI}{4b})^{2}\pi(a_{A}^{2}+a_{B}^{2}){1-\frac{(a_{A}-a_{B})^{2}}{\pi(a_{A}^{2}+a_{B}^{2})}[2\prod(c^{2},k_{b})-\prod(c^{2},k_{2b})]}\\%(3.55)
-$$
+\end{equation}
+
 The moduli, kb, k2b, and c2, with aT = aA+aB, aA = 39.1 mm, aB = 51.2 mm, b =
 203.3 mm, aT=90.3 mm, are given by:
 %%缺公式
@@ -4023,10 +4041,10 @@ This underestimates the code by 15%
 %%表格3.13
 
 d)式3.57a下式给出：
-$$
+\begin{equation}
 F_{zA}(0)\simeq-\frac{\mu_{o}}{2}\{(\frac{N_{A}I_{A}}{2b_{A}})^{2}\pi a_{A}^{2}+(\frac{N_{B}I_{B}}{2b_{B}})(\frac{N_{A}I_{A}}{2b_{A}})\times\\
 (a_{A}-a_{B})^{2}[\prod(c^{2},k_{D})+\prod(c^{2},k_{T})-2\prod(c^{2},k_{B})]\}\\%(3.57a)
-$$
+\end{equation}
 
 Parameter values other than those given in question d) are: aT=aA+aB=242.5 mm;
 bT=bA+bB=540.8 mm; bD=bA−bB=−134.2 mm; and
@@ -4186,32 +4204,26 @@ We may compute the total field on the sphere and see if the sphere is indeed uns
 
 
 \subsection{讨论3.13：两线圈磁体的径向力}
-Figure 3.47 shows an arrangement of a two-coil magnet, in which the axis of Coil
-1 (inner) is displaced radially in the plane normal to the z-axis—+Δx in the xdirection in the figure—with respect to Coil 2 (outer). The axial field of each coil
-points upward (+z direction) and the midplane of each coil is at z=0.
-When Coils 1 and 2 are concentric, i.e., Δx=0 and Δy=0, the Jθ×Bz interaction
-force on a unit winding volume is r-directed and from symmetry it cancels out:
-the net radial force is zero. If Coil 1 is displaced, as shown in the figure, by +Δx,
-then Bz2 on one half (180◦ arc on the +x side of the x-y plane) of its winding
-volume is on average greater than Bz2 on the other half (180◦ arc mostly on the
-−x side of the x-y plane) of the winding volume. The resulting net unbalanced
-force, Fx1, may be given approximately by:
+图3.47给出了两线圈磁体的一种布局，其中内线圈1的轴垂直于$z$轴，但相对于外线圈2的轴偏移$\Delta x$。
+两个线圈的轴向场都是指向$+z$方向，中平面都位于$z=0$。
+
+当线圈1和线圈2同心，也即$\Delta x=0,\Delta y=0$时，单位绕组体积上的作用力$J_\theta \times B_z$
+是$r$向的；根据对称性，可被消除：净轴向力为零。如果线圈1失配$+\Delta x$，如图所示，
+那么施加于绕组体积的一半(xy平面上$+x$侧的$180^\circ$弧度)上的$B_{z2}$
+平均起来要大于另一半上的$B_{z2}$。最终的净不平衡力$F_{x1}$可以近似表示为：
 \begin{equation}%(3.179)
 F_{x1}\simeq4\pi\triangle x\int_{0}^{b}\int_{a_{1}}^{a_{2}}J_{\theta1}\frac{\partial B_{z2}(r,z)}{\partial r}r\ dr\ dz\\
 \end{equation}
 
-where Bz2 is the axial field generated by Coil 2. As indicated by Eq. 3.12b and also
-by Eqs. 3.117a–3.117c (PROBLEM 3.2), Bz2 increases with displacement in the xy plane, i.e., ∂Bz2/∂r>0. Thus, Fx1 is positive and increasing in the x-direction;
-Coil 1’s displacement gets even greater: the system is unstable.
-Another way of looking at this is to recognize that an energized coil is always
-attracted to the highest field region. Thus, if Coil 1 is displaced radially, it continues to move radially towards Coil 2 because, as noted above, Bz2 increases with
-displacement in the x-y plane; Bz2 is maximum at the innermost winding radius
-of Coil 2. The same argument may be used to explain why displacement in the zdirection, on the other hand, is stable: if Coil 1 is displaced axially by Δz, because
-the axial field of each coil is maximum at the midplane (z = 0), Coil 1 seeks to
-align its maximum field region with that of Coil 2, resulting in a stable condition
-for displacement in the z-direction.
+式中，$B_{z2}$是由线圈2产生的轴向力。
+如方程3.12b以及3.117a–3.117c(问题3.2)所指出的，$B_{z2}$随着在xy平面上的失配增加而增大，也即
+$\partial B_{z2}/\partial r>0$。于是，$F_{x1}$是正的，并且在$x$方向增大；进而线圈1的失配继续扩大：
+系统不稳定。
 
-\begin{figure}[htbp]A
+另一种看待这种情况的方法是认识到励磁线圈1总是被吸引到最高场区域。
+因此，如果线圈1径向移位，则它继续沿径向朝线圈2移动。原因如上所述：$B_{z2}$随着xy平面中的位移而增加； $B_{z2}$在线圈2的绕组最内圈半径处最大。
+相同的理由可用于解释为什么$z$方向上的位移是稳定的：如果线圈1轴向移位$\Delta z$，因为每个线圈的轴向场在中平面($z = 0$)处最大，线圈1试图将其最大场区域与线圈2的区域对齐，从而在$z$方向的失配是稳定的。
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.5]{chpt3/figs/fig3.47.eps}
 	\caption{Two nested solenoidal coils, one displaced radially from the other}
@@ -4230,9 +4242,8 @@ for displacement in the z-direction.
 	\item 分析在以下基础上进行：获取45T电阻内插磁体的尺寸，每个子线圈在峰值时具有均匀电流密度，
 	调节每个子线圈中的电流水平调节至50T。该分析给出了一种插入磁体，与具有$1 / r$电流分布的线圈相比，该插入磁体相对于SCM具有固有的更高的磁能和更高的失配力。
 	
-	\item 基于这种配置，假设最坏情况的故障，即每个子线圈的中平面突然短路，导致电流加倍(恒定电压假设)和每个子线圈的磁中心的轴向移位$b_i$(第i个线圈的半高)。对于假设的子线圈几何结构，这个假设的故障分别导致线圈A，B和C中的力为$\sim 1.7 MN，\sim 1.8 MN$和$\sim 2.5 MN$，即SCM上的力总共约6 MN 。
-	精心选择支撑柱的壁厚以确保故障期间的平均应力不超过其2/3屈服。按照1.8-20 K，20-80 K和80-300 K对壁厚进行分级以匹配奥氏体钢屈服应力的温度依赖性。由此产生的传导热输入是系统总低温负荷的一小部分。由此产生的支撑柱设计具有额外的优点，即对轴向和横向载荷都非常坚硬。因此，对于典型的不失配力，插入磁体
-	和和插入磁体之间的相对偏移非常小。
+	\item 基于这种配置，假设最坏情况的故障，即每个子线圈的中平面突然短路，导致电流加倍(恒定电压假设)和每个子线圈的磁中心的轴向移位$b_i$(第i个线圈的半高)。对于假设的子线圈几何结构，这个假设的故障分别导致线圈A，B和C中的力为$\sim 1.7 MN，\sim 1.8 MN$和$\sim 2.5 MN$，即SCM上的力总共约$6 MN$ 。
+	精心选择支撑柱的壁厚以确保故障期间的平均应力不超过其$2/3$屈服。按照$1.8-20 K，20-80 K$和$80-300 K$对壁厚进行分级以匹配奥氏体钢屈服应力的温度依赖性。由此产生的传导热输入是系统总低温负荷的一小部分。由此产生的支撑柱设计具有额外的优点，即对轴向和横向载荷都非常坚硬。因此，对于典型的失配力，插入磁体和插入磁体之间的相对偏移非常小。
 \end{enumerate}
 \newpage
 
