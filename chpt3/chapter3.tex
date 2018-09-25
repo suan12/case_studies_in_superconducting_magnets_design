@@ -4221,54 +4221,40 @@ for displacement in the z-direction.
 
 
 \subsection{讨论3.14：45 T混合磁体的结构支撑}
-The 45-T Hybrid was designed with potential for upgrade later to 50-T operation
-with higher power resistive inserts—35 MW vs. 24 MW. A key element in the
-design is the structure for transmitting fault forces between the insert and the
-SCM. Especially critical is the structural component that provides thermal standoff inside the cryostat. In the 45-T Hybrid, this component is a single cylindrical
-steel column, coaxial to the SCM, with heat intercepts at ∼80 K and ∼20 K. To
-compute an upper bound on the potential fault load on the support column during
-an insert failure, the analysis described below was carried out for a 50-T upgrade.
-1. This analysis was performed by taking the dimensions of the 45-T resistive
-insert, with uniform current density in each sub-coil at the peak value, and
-adjusting the current level in each sub-coil to the 50 T field. The analysis gives
-an insert that has inherently higher magnetic energy and higher misalignment
-forces relative to the SCM than coils with 1/r current distribution.
-2. Based on this configuration, a worst-case fault was postulated corresponding
-to a short suddenly appearing at the midplane of each sub-coil, resulting in
-doubling the current (constant voltage assumption) and an axial shift of each
-sub-coil’s magnetic center by a distance bi (the half-height of the ith coil). For
-the sub-coil geometries assumed, this hypothetical fault resulted in forces in
-Coils A, B, and C, respectively, of ∼1.7 MN, ∼1.8 MN, and ∼2.5 MN, i.e., a
-total of ∼6 MN on the SCM. The wall thickness of the support column was
-chosen so that the mean stress during a fault would not exceed 2/3 yield. The
-wall thicknesses of the 1.8–20 K, 20–80 K, and 80–300 K sections were graded
-to match the temperature-dependance of the yield stress of austenitic steel.
-The resultant conduction heat input is a small portion of the system’s total
-cryogenic load. The resultant support-column design has the added advantage
-of being very stiff against both axial and transverse loads. Consequently,
-relative deflection between insert and outsert for typical misalignment forces
-are quite minimal.
+45T混合磁体的设计具有后续通过将24MW内插电阻磁体提至35MW从而可在50T运行的潜力。
+设计中的一个关键要点是插入磁体和SCM之间传递故障力的结构。
+特别关键的是在低温恒温器内部提供热间隙的结构部件。
+在45T混合磁体中，该部件是单个圆柱形钢柱，与SCM同轴，with heat intercepts at ∼80K and ∼20 K。
+为了计算在插入磁体失效时支撑结构上的潜在故障负荷上限，我们对升级50T进行了下面的分析。
+\begin{enumerate}
+	\item 分析在以下基础上进行：获取45T电阻内插磁体的尺寸，每个子线圈在峰值时具有均匀电流密度，
+	调节每个子线圈中的电流水平调节至50T。该分析给出了一种插入磁体，与具有$1 / r$电流分布的线圈相比，该插入磁体相对于SCM具有固有的更高的磁能和更高的失配力。
+	
+	\item 基于这种配置，假设最坏情况的故障，即每个子线圈的中平面突然短路，导致电流加倍(恒定电压假设)和每个子线圈的磁中心的轴向移位$b_i$(第i个线圈的半高)。对于假设的子线圈几何结构，这个假设的故障分别导致线圈A，B和C中的力为$\sim 1.7 MN，\sim 1.8 MN$和$\sim 2.5 MN$，即SCM上的力总共约6 MN 。
+	精心选择支撑柱的壁厚以确保故障期间的平均应力不超过其2/3屈服。按照1.8-20 K，20-80 K和80-300 K对壁厚进行分级以匹配奥氏体钢屈服应力的温度依赖性。由此产生的传导热输入是系统总低温负荷的一小部分。由此产生的支撑柱设计具有额外的优点，即对轴向和横向载荷都非常坚硬。因此，对于典型的不失配力，插入磁体
+	和和插入磁体之间的相对偏移非常小。
+\end{enumerate}
 \newpage
 
 
 
 \subsection{讨论3.15：Nb3Sn导体上的应力}
-Here we shall discuss the stress state in a composite Nb3Sn conductor, focusing on
-the stress relationships among bronze, copper, and Nb3Sn—the three major constituents of the composite [3.60]. Because the critical current densities of superconductors (LTS and HTS), are degraded when strained, particularly in tension, the
-maximum strain level on the superconductor is a key magnet design specification.
-Effects of strain, particularly on Nb-Ti and Nb3Sn composite superconductors, are
-quite well documented [3.61, 3.62]; data are now also available for HTS [3.63, 3.64].
-When a Nb3Sn composite is cooled to 4.2 K, each constituent experiences a temperature reduction of ∼1000 K, from the reaction temperature of ∼1000 K to the
-operating temperature of 4.2 K. Because each constituent has a different coefficient
-of thermal contraction, residual stress arises in each constituent.
-Figure 3.48 shows, schematically, strain states for three cases of interest: a) the
-composite at a reaction temperature ∼1000 K, b) at 4.2 K if the three constituents
-can contract individually, c) the composite at 4.2 K. Though exaggerated, the figure indicates the relative sizes of the individual thermal contractions of bronze,
-copper, and Nb3Sn, given respectively by br0, cu0, s0, after cooldown from
-∼1000 K to 4.2 K. Correspondingly, their residual strains, brr, cur, sr, in the
-composite at 4.2 K are as shown in the figure. That is, both bronze and copper
-will be in tension, while Nb3Sn will be in compression. In the figure E and A refer, respectively, to Young’s modulus and cross section, with subscripts indicating
-constituents. Here, these strains as drawn in Fig. 3.48 are scalar quantities.
+这里我们将讨论$Nb_3Sn$导体的应力问题，主要考虑这种复合导体的青铜、紫铜和$Nb_3Sn$三种材料的应力关系[3.60]。
+因为超导体的临界电流密度会因应变而退降——在拉伸时尤甚，所以，超导体的最大应变水平是磁体设计的关键参数。
+应变的效果，特别是$NbTi$和$Nb_3Sn$复合超导体，已获得全面的研究[3.61, 3.62]；
+高温超导体的数据也已成形[3.63, 3.64]。
+
+当$Nb_3Sn$被冷却到$4.2\ \mathrm{K}$，各组分都经历了一个$\sim 1000\ \mathrm{K}$的温度下降：从
+$\sim 1000\ \mathrm{K}$的反应温度到$4.2\ \mathrm{K}$的运行温度。
+因为各组分的热缩系数不同，各组分中将出现参与残余应力。
+
+图3.48示意了三种应变状态：a)复合物处理反应温度$\sim 1000\ \mathrm{K}$；
+b)如果三种组分可以独立收缩时的$4.2\ \mathrm{K}$状态；c)复合物处于$4.2\ \mathrm{K}$。
+尽管有所放大，示意图指出了三种组分各自热缩系数从反应温度到运行温度的相对大小，分别记为$\epsilon_{br_0},\epsilon_{cu_0}, \epsilon_{s_0}$。
+与此同时，复合物在$4.2\ \mathrm{K}$的残余应变$\epsilon_{br_r},\epsilon_{cu_r}, \epsilon_{s_r}$
+也在图中给出。可以看出，青铜和紫铜都将处于拉伸状态，而$Nb_3Sn$处于压缩状态。
+图中的$E$和$A$分别代表杨氏模量和截面积，下标指示了组分。
+另外，图中的各应变是按照标量处理的。
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.5]{chpt3/figs/fig3.48.eps}
@@ -4285,9 +4271,9 @@ constituents. Here, these strains as drawn in Fig. 3.48 are scalar quantities.
 -\epsilon_{cu_r}+\epsilon_{br_r}&=&\epsilon_{cu_0}-\epsilon_{br_0}
 \end{eqnarray}
 
-Equation 3.180a states that the net internal force is zero. Equations 3.180b –3.180d
-give the strain compatibilities for, respectively, the bronze/Nb3Sn, copper/Nb3Sn,
-and copper/bronze. Be aware that Eq. 3.180 implicitly assumes that each constituent is in its elastic range, which usually is not the case.
+方程3.180a表明净内力为零。
+方程3.180b –3.180d给出了青铜/$Nb_3Sn$、紫铜/$Nb_3Sn$、青铜/紫铜各自的应变相容性。
+注意方程3.180隐含假定了各组分都处于塑性范围，而事实并不总是这样。
 
 \textbf{B. 残余应变}
 
@@ -4302,8 +4288,7 @@ and copper/bronze. Be aware that Eq. 3.180 implicitly assumes that each constitu
 \epsilon_{br_r}A_{br}E_{br}+(\epsilon_{br_r}-\epsilon_{br_0}+\epsilon_{cu_0})A_{cu}E_{cu}+(\epsilon_{br_r}-\epsilon_{br_0}+\epsilon_{s_0})A_sE_s=0
 \end{equation*}
 
-Solving the above equation for brr, we have:
-%%3.181
+从上面的方程解出$\epsilon_{br_r}$，有：
  \begin{equation}% 3.181a
 \epsilon_{br_r}=\frac{(\epsilon_{br_0}-\epsilon_{cu_0})A_{cu}E_{cu}+(\epsilon_{br_0}-\epsilon_{s_0})A_sE_s}{A_{cu}E_{cu}+A_{br}E_{br}+A_{s}E_{s}}
 \end{equation}
@@ -4340,40 +4325,37 @@ Solving the above equation for brr, we have:
 \epsilon_{s_r}=\frac{(\epsilon_{cu_0}-\epsilon_{s_0})A_{cu}E_{cu}+(\epsilon_{br_0}-\epsilon_{s_0})A_{br}E_{br}}{A_{cu}E_{cu}+A_{br}E_{br}+A_{s}E_{s}}
 \end{equation}
 
-Numerical Values By using Eqs. 3.181a — 3.181c and the values given in Table
-3.16 for each constituent, we may compute values of brr, cur, and sr.
-%%缺公式
+\textbf{数值解}\ 使用方程3.181a — 3.181c，以及表3.16给出的各组分数值，我们可以计算
+$\epsilon_{br_r},\epsilon_{cu_r}, \epsilon_{s_r}$：
 \begin{eqnarray*}% page207
 \begin{split}
-\epsilon_{br_r}&=\frac{(1.66-1.62)(0.62)(100GPa)+(1.66-0.72)(0.14)(165GPa)}{(0.24)(100GPa)+(0.62)(100GPa)+(0.14)(165GPa)}\\
-&=(\frac{22.19GPa}{109.1GPa})\% \simeq0.22\% \\
-\epsilon_{cu_r}&=\frac{(1.62-1.66)(0.24)(100GPa)+(1.62-0.72)(0.14)(165GPa)}{62.9GPa}\\
-&=(\frac{19.83GPa}{109.1GPa}\%)\simeq0.18\% \\
-\epsilon_{s_r}&=\frac{(1.62-0.72)(0.62)(100GPa)+(1.66-0.72)(0.24)(100GPa)}{62.9GPa}\\
-&=(\frac{78.36GPa}{109.1GPa}\%)\simeq0.72\% 
+\epsilon_{br_r}&=\frac{(1.66-1.62)(0.62)(100\ \mathrm{GPa})+(1.66-0.72)(0.14)(165\ \mathrm{GPa})}{(0.24)(100\ \mathrm{GPa})+(0.62)(100\ \mathrm{GPa})+(0.14)(165\ \mathrm{GPa})}\\
+&=(\frac{22.19\ \mathrm{GPa}}{109.1\ \mathrm{GPa}})\% \simeq0.22\% \\
+\epsilon_{cu_r}&=\frac{(1.62-1.66)(0.24)(100\ \mathrm{GPa})+(1.62-0.72)(0.14)(165\ \mathrm{GPa})}{62.9\ \mathrm{GPa}}\\
+&=(\frac{19.83\ \mathrm{GPa}}{109.1\ \mathrm{GPa}}\%)\simeq0.18\% \\
+\epsilon_{s_r}&=\frac{(1.62-0.72)(0.62)(100\ \mathrm{GPa})+(1.66-0.72)(0.24)(100\ \mathrm{GPa})}{62.9\ \mathrm{GPa}}\\
+&=(\frac{78.36\ \mathrm{GPa}}{109.1\ \mathrm{GPa}}\%)\simeq0.72\% 
 \end{split}
 \end{eqnarray*}
 
-Note that both matrix materials are in tension, while Nb3Sn is in compression; sr
-of 0.72\% is too severe and would certainly damage the conductor. However, when
-the magnet is energized, the conductor is subjected mostly to a tensile stress, which
-tends to place sr towards zero strain; usually, the Lorentz stresses are sufficient
-to put Nb3Sn in tensile strain when the magnet is energized.
+注意到两种基底材料都处于拉伸状态，而$Nb_3Sn$处于压缩状态；
+0.72\%的$\epsilon_{s_r}$还是太大了，几乎可以肯定会破坏导体。
+不过，当磁体励磁后，导体基本处于拉伸张力状态，这会令$\epsilon_{s_r}$有零应变的倾向；
+通常，磁体励磁后，Lorentz应力足以让$Nb_3Sn$处于拉伸应变状态了。
 
-\textbf{C. Stresses in Bronze and Copper}
+\textbf{C.青铜和紫铜中的应力}
 
-From brr and cur computed above, we may compute the corresponding stresses
-in the bronze and copper. We have:
+从上文计算的$\epsilon_{br_r},\epsilon_{cu_r}$，我们可以计算响应的应力：
  \begin{eqnarray*}
-\sigma_{br_r}&=\epsilon_{br_r}E_{br}\simeq(2.2\times10^{-3})(100\times10^9Pa)\simeq220MPa\\
-\sigma_{cr_r}&=\epsilon_{cr_r}E_{cr}\simeq(1.8\times10^{-3})(100\times10^9Pa)\simeq180MPa
+\sigma_{br_r}&=\epsilon_{br_r}E_{br}\simeq(2.2\times10^{-3})(100\times10^9Pa)\simeq220\ \mathrm{MPa}\\
+\sigma_{cr_r}&=\epsilon_{cr_r}E_{cr}\simeq(1.8\times10^{-3})(100\times10^9Pa)\simeq180\ \mathrm{MPa}
 \end{eqnarray*}
 
-%%缺公式
-The yield stresses of annealed bronze, σbry, and annealed copper, σcuy, are both
-only ∼100 MPa; both bronze and copper thus yield plastically during cooldown.
+退火青铜的屈服应力$\sigma_{br_y}$，退火紫铜的屈服应力$\sigma_{cu_y}$仅
+$\sim 100\ \mathrm{MPa}$；青铜和紫铜在冷却过程中都是塑性屈服的。
 
 %%表3.16
+\colorbox{red}{表格3.16}
 
 \newpage
 
