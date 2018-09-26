@@ -3276,10 +3276,10 @@ N_{\chi}=\frac{\lambda J_{\chi}(2\beta a_{\chi})a_{\chi}(\alpha-1)}{I_{\chi}}%(3
 
 磁体所需的总导体长度，$\ell_\chi$，有两种选项：
 \begin{equation}
-(for I_{\chi}=\chi I_{o}) \ell_{\chi}=N_{\chi} \pi （\alpha a_\chi+a_\chi)=N_{o}\chi \pi a_0(\alpha+1)=\chi \ell_{o}%(3.169a)
+(\mbox{对于}\ I_{\chi}=\chi I_{o})\quad \ell_{\chi}=N_{\chi} \pi (\alpha a_\chi+a_\chi)=N_{o}\chi \pi a_0(\alpha+1)=\chi \ell_{o}%(3.169a)
 \end{equation}
 \begin{equation}
-(for I_{\chi}=I_0) \ell_{\chi}=\chi N_0 \chi \pi a_0 (\alpha+1)=\chi^2 \ell_{o}%(3.169b)
+(\mbox{对于}\ I_{\chi}=I_0)\quad \ell_{\chi}=\chi N_0 \chi \pi a_0 (\alpha+1)=\chi^2 \ell_{o}%(3.169b)
 \end{equation}
 
 总的安·米数，$I_\chi \ell_\chi$，是导体费用的一个很好的指标，在两种情况下都是按$\chi^2$缩放：
@@ -3307,7 +3307,7 @@ $E_{m\chi}=x^3E_{mo}$
 \begin{equation}
 \begin{split}
 \ell_{o}=&N_{o}\frac{a_{o}(\alpha+1)}{2}\\
-=&(2976)\frac{(0.04\ \mathrm{m})(1.625+1)}{2}\simeq 156\ \mathrm{m}\\
+=&(2976)\frac{(0.04)(1.625+1)}{2}\simeq 156\ \mathrm{m}\\
 \end{split}
 \end{equation}
 
@@ -3417,7 +3417,7 @@ N =8900$和$I =65\ \mathrm{A}$。
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.5]{chpt3/figs/fig3.42.eps}
+	\includegraphics[scale=0.7]{chpt3/figs/fig3.42.eps}
 	\caption{一个线圈未励磁，另一个线圈在$I=65A$时的(a)$B_z(r, z)$和(b) $B_r(r, z)$}
 \end{figure}
 
@@ -3479,7 +3479,6 @@ $I\vec{i_\theta}\times-B_r(r,z)\vec{i_r}$，线圈B施于线圈A的轴向力是$
 这个力是引力。
 
 g) $F_{zA}(\rho)$是Lorentz力，可由下式计算： 
-%%%计算式
 \begin{equation}
 F_{zA}(\rho)\simeq (average\ winding\ circumference)\times(NI)\times(B_r)=\pi(1.8)(8900\times 65)(0.06)=196\ \mathrm{kN}
 \end{equation}
@@ -3584,8 +3583,8 @@ h) 对一个长螺管($\beta\gg 1$)，解释为什么在它的长度方向从中
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.5]{chpt3/figs/fig3.43.eps}
-	\caption{(a) Solenoid with 2a1=10cm; 2a2=14cm; 2b=25cm. (b) Solenoid subdivided
-		into subsolenoids A and B, with 2aA=10cm; 2aB=12cm; 2b=25cm.}
+	\caption{(a)参数为$2a_1=10cm; 2a_2=14cm; 2b=25cm$的螺管。
+		(b)螺管分为两个子螺管A和B，参数为$2a_A=10cm; 2a_B=12cm; 2b=25cm$。}
 \end{figure}
 \textcolor{red}{表3.7}
 
@@ -4069,12 +4068,12 @@ F_{zA}(0)\simeq&-\frac{\mu_{o}}{2}\{(\frac{N_{A}I_{A}}{2b_{A}})^{2}\pi a_{A}^{2}
 \end{equation}
 
 不同的参数为：$a_T=a_A+a_B=242.5 mm;b_T=b_A+b_B=540.8 mm; b_D=b_A−b_B=−134.2 mm$；以及：
-\begin{eqnarray}
-c^2=\frac{4a_A a_B)}{a_T^2}=0.666266\\
-k_D^2=\frac{4a_A a_B}{a_T^2+b_D^2}=0.510028\ \Rightarrow k_D=0.0.714162\\
-k_{T}^2=\frac{4a_A a_B}{a_T^2+b_T^2}=0.111533\ \Rightarrow k_{2b}=0.333965\\
-k_B^2=\frac{4a_A a_B}{a_T^2+b_B^2}=0.226841\ \Rightarrow k_{B}=0.476278
-\end{eqnarray}
+\begin{eqnarray*}
+c^2&=&\frac{4a_A a_B)}{a_T^2}=0.666266\\
+k_D^2&=&\frac{4a_A a_B}{a_T^2+b_D^2}=0.510028\ \Rightarrow k_D=0.0.714162\\
+k_{T}^2&=&\frac{4a_A a_B}{a_T^2+b_T^2}=0.111533\ \Rightarrow k_{2b}=0.333965\\
+k_B^2&=&\frac{4a_A a_B}{a_T^2+b_B^2}=0.226841\ \Rightarrow k_{B}=0.476278
+\end{eqnarray*}
 
 将这些值代入方程3.57a，有：
 \begin{equation}
@@ -4121,13 +4120,11 @@ $$
 
 
 \subsection{讨论3.12：铁球上的磁力}
-出于安全考虑，将铁磁物体远离大型磁体放置时很重要的，For safety considerations, it is very important to keep ferromagnetic objects away
-from a large magnet. Using the 45-T hybrid as an example, we derive here magnetic
-force expressions for an iron sphere (Fig. 3.46) “far” from the hybrid. The fringing
-(far) field of a solenoid, as discussed in PROBLEM 3.11, is given by a dipole field:
-
-\begin{equation}
-\vec{H}_{f}=H_{0}(\frac{R_{e}}{r})^{3}(\cos\theta\vec{\imath}_{r}+\frac{1}{2}\sin\theta\vec{\imath}_{\theta})%(3.163)
+出于安全考虑，将铁磁物体远离大型磁体放置时很重要的。
+举45T混合磁体为例，我们在这里推导“远离”磁体的铁球(图3.46)受到的磁力。
+螺管的边缘场(远场)已在问题311论及，可由双极场给出：
+\begin{equation}%(3.163)
+\vec{H}_{f}=H_{0}(\frac{R_{e}}{r})^{3}(\cos\theta\vec{\imath}_{r}+\frac{1}{2}\sin\theta\vec{\imath}_{\theta})
 \end{equation}
 
 当一个磁性物体，比如铁球，处于空间变化的磁场中时，它会受到一个磁场力$\vec{f}_m$：
@@ -4135,56 +4132,59 @@ force expressions for an iron sphere (Fig. 3.46) “far” from the hybrid. The 
 \vec{f}_{m}(r,\theta)=\nabla e_{m}\\%(3.173)
 \end{equation}
 
-where ∇ is the grad operator in spherical coordinates and em is the magnetic
-energy density stored in the iron due to its magnetization. For a ferromagnetic
-sphere with μ/μ◦  1, the magnetic induction inside the sphere, Bsp, is three times
-the “uniform” applied magnetic induction: Bsp  3μ◦H f = 3Bf (PROBLEM 2.1).
-For a sphere of a diameter much smaller than the distance from the magnet center
-to the sphere, Bf may be assumed uniform over the sphere. Thus:
+式中，$\nabla$是球坐标下的梯度算符，$e_m$是铁球因磁化而存储的磁能密度。
+对于一个$\mu/\mu_0\gg 1$的铁磁球，球内的磁场$\vec{B}_{sp}$是外加“均匀”磁场的
+三倍：$\vec{B}_{sp}\simeq 3\mu_0 \vec{H}_f= 3\vec{B}_f$ (问题2.1)。
+对于一个直径远小于其到磁体中心的距离的球，$\vec{B}_f$可以认为在球上各处是一致的：
 \begin{equation}
 e_{m}=\frac{\vec{B}_{sp}\cdot\vec{B}_{f}}{2\mu_{o}}=\frac{3|\vec{B}_{f}|^{2}}{2\mu_{o}}%(3.174)
 \end{equation}
 
-When the iron is saturated with magnetization M sa, its magnetic induction is
-approximately equal to Bsa (= μ◦M sa), which is constant and aligned with Bf.
-Its energy density ems is thus given by:
+当铁球在磁化$M_{sa}$下饱和时，它的磁场近似为$\vec{B}_{sa} (= \mu_{0}) M_{sa})$，该值是一个常数且与
+$\vec{B}_f$同向。磁能密度于是可以写为：
 \begin{equation}
 e_{ms}\simeq\frac{\vec{B}_{sa}\cdot\vec{B}_{f}}{2\mu_{o}}%(3.17)
 \end{equation}
 
-In Eqs. 3.174 and 3.175, it is assumed that the impinging field is “uniform” for
-energy density computation, but nonuniform for force density computation.
-
+在方程3.174和3.175中，我们假定在计算能量密度时边缘场是均匀的，但是在计算力密度时是不均匀的。
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.5]{chpt3/figs/fig3.46.eps}
-	\caption{Iron sphere on the 45-T hybrid platform.}
+	\caption{处于45T混合磁体平台中的铁球。}
 \end{figure}
 
-A.不饱和球上的力
+\textbf{A.不饱和球上的力}
 
-To derive an expression of fm(r, θ) for an unsaturated iron sphere, we first compute
-|Bf|2 from Eq. 3.163:
-%%缺公式
+为了推导不饱和铁球上的$\vec{f}_{m}(r,\theta)$表达式，我们首先从方程3.163中计算$|\vec{B}_f|^2$。
+\begin{equation}
+|\vec{B}_f|^2=\mu_0^2 H_0^2\left(\frac{R_e}{r}\right)^6(\cos^2\theta+\frac{1}{4}\sin^2\theta)
+\end{equation}
 
-Combining the above expression with Eq. 3.174 and using the grad operator in
-spherical coordinates (Eq. 2.36a) on Eq. 3.173, we obtain:
-%%缺公式
+联立上式和方程3.174，对3.173使用球坐标中的梯度算符，我们得到：
+\begin{equation}
+\begin{split}
+\vec{f}_{m}(r,\theta)=&\frac{3\mu_0 H_0^2}{2}\bigg[(\cos^2\theta+\frac{1}{4}\sin^2\theta\frac{\partial}{\partial r}(\frac{R_e}{r})^6)\vec{\imath}_r\\
+&+\frac{1}{r}(\frac{R_e}{r})^6\frac{\partial}{\partial \theta}(\cos^2\theta+\frac{1}{4}\sin^2\theta)\vec{\imath}_\theta\bigg]\\
+=&\frac{3\mu_0 H_0^2}{2R_e}(\frac{R_e}{r})^7\left[-6(\cos^2\theta+\frac{1}{4}\sin^2\theta)\vec{\imath}_i-\frac{3}{2}\sin\theta\cos\theta\vec{\imath}_\theta\right]
+\end{split}
+\end{equation}
 
-which may be simplified to:
+我们可以简化为：
 \begin{equation}
 \vec{f}_{m}(r,\theta)=-\frac{9\mu_{o}H_{0}^{2}}{4R_{e}}(\frac{R_{e}}{r})^{2}[(1+3\cos^{2}\theta)\vec{\imath}_{r}+\sin\theta\cos\theta\vec{\imath}_{\theta}]\\%(3.176a)
 \end{equation}
 
-Note that fm(r, θ) varies as 1/r7 and, as expected for any ferromagnetic object,
-the r-component of fm(r, θ) is directed towards the magnet center.
+可见，$\vec{f}_{m}(r,\theta)$随$1/r^7$变化。如我们所期的，对于任何铁磁物体，
+$\vec{f}_{m}(r,\theta)$的$r$分量指向磁体中心。
 
-B.饱和球上的力
+\textbf{B.饱和球上的力}
 
-The magnetic energy density of Eq. 3.175 is given by:
-%%缺公式
+方程3.175给出的磁能密度为：
+\begin{equation}
+e_{ms}=\mu_0 M_{sa}H_0(\frac{R_e}{r})^3\sqrt{\cos^2\theta+\frac{1}{4}\sin^2\theta}
+\end{equation}
 
-Performing a similar grad operation on em, we obtain:
+类似的，对磁能密度求梯度，我们得到：
 \begin{equation}
 \begin{split}
 \vec{f}_{ms}(r\theta)=&-\frac{3\mu_{o}M_{sa}H_{0}}{2R_{e}}(\frac{R_{e}}{r})^{4}\\
@@ -4192,21 +4192,18 @@ Performing a similar grad operation on em, we obtain:
 \end{split}
 \end{equation}
 
-The magnetic force thus varies as 1/r4 when the iron sphere is saturated. Note
-also that because it is −r-directed, as in the unsaturated case, the iron sphere is
-attracted to the magnet center.
+可见，当铁球饱和时，磁力随$1/r^4$变化。
+因为它和不饱和球中一样，是$-r$向的，铁球被磁体中心所吸引。
 
-Illustration For the 45-T hybrid magnet (only the SCM field is considered), for
-which B0 = 14 T and Re = 0.67 m (see PROBLEM 3.11), we may compute y0.1g,
-the y-axis distance from the magnet center on the platform (z=2.75 m) at which
-fmy, the y-component of the magnetic force density on an unsaturated iron sphere
-of density , is 0.1g (an acceleration of 0.1 that of gravity) fmy is given by:
+\textbf{演示}\quad 就45T混合磁体(仅考虑超导磁体的磁场)而言，其$B_0 = 14 T,R_e = 0.67 m$ (问题3.11)，我们可以
+计算$y_{0.1g}$。该点位于磁体平台中心($z=2.75 m$)为起点的y轴上，该处施于密度为$\rho$的非饱和铁球磁力密度上的磁力恰为
+$f_{my}=0.1\rho g$(0.1倍重力加速度)。$f_{my}$为：
 \begin{equation}
-f_{my}=f_{mr}\sin\theta+f_{m\theta}\cos\theta\\%(3.177)
+f_{my}=f_{mr}\sin\theta+f_{m\theta}\cos\theta%(3.177)
 \end{equation}
 
-where fmr and fmθ are, respectively, the r- and θ-components of the magnetic
-force. Combining Eqs. 3.176a and 3.177, we have:
+式中，$f_{mr}$和$f_{m\theta}$分别是磁力的$r$分量和$\theta$分量。联立
+方程3.176a和3.177，我们得到：
 \begin{equation}
 \begin{split}
 f_{my}&=\frac{9\mu_{o}H_{0}^{2}}{4R_{e}}(\frac{R_{e}}{r})^{7}[-(1+3\cos^{2}\theta)\sin\theta-\sin\theta\cos^{2}\theta]\\
@@ -4214,24 +4211,33 @@ f_{my}&=\frac{9\mu_{o}H_{0}^{2}}{4R_{e}}(\frac{R_{e}}{r})^{7}[-(1+3\cos^{2}\thet
 \end{split}
 \end{equation}
 
-where fmr and fmθ are, respectively, the r- and θ-components of the magnetic
-force. Combining Eqs. 3.176a and 3.177, we have:
-%%缺公式
+方程3.178中的符号表示$f_{my}$实际上指向图3.46中所示的相反方向。在$x=0$时的$r,\sin\theta,\cos\theta$分别为：
+\begin{equation*}
+r=\sqrt{y_{0.1g}^2+z^2};\qquad \sin\theta=\frac{y_{0.1g}}{\sqrt{y_{0.1g}^2+z^2}};\qquad \cos\theta=\frac{z}{\sqrt{y_{0.1g}^2+z^2}}
+\end{equation*}
 
-Combining the above expressions and Eq. 3.178, and with fmy =0.1g we have:
-%%缺公式
+联立上面的表达式和方程3.178，代入$f_{my}=0.1\rho g$，得到：
+\begin{equation*}
+0.1\rho g=\frac{9(\mu_0 H_0)^2R_e^6}{4\mu_0}(\frac{1}{y_{0.1g}^2+z^2})^{3.5}(1+\frac{4z^2}{y_{0.1g}^2+z^2})\frac{y_{0.1g}}{y_{0.1g}^2+z^2}
+\end{equation*}
 
-By inserting appropriate values in the above expression, with z=2.75 m, we have:
-%%缺公式
+代入上面表达式的合适值，并代入$z=2.75 m$，我们得到：
+\begin{equation*}
+0.1(8000)(9.81)=\frac{9(14)^2(0.67)^6}{4(4\pi\times 10^{-7})}[\frac{1}{y_{0.1g}^2+2.75^2}]^{3.5}\times[1+\frac{4(2.75)}{y_{0.1g}^2+2.75^2}]\frac{y_{0.1g}}{\sqrt{y_{0.1g}^+2.75^2}}
+\end{equation*}
 
-Solving the above equation for y0.1g, we find: y0.1g  2.42 m.
-We may compute the total field on the sphere and see if the sphere is indeed unsaturated as assumed in the computation. With r0.1g =(2.42 m)2+(2.75 m)2 
-3.66 m and θ = tan−1(2.42 m/2.75 m) = 41.3◦ substituted into Eq. 3.163, we have:
-%%缺公式
+解得，$y_{0.1g}\simeq 2.42\ \mathrm{m}$
 
+我们可以算出球上的总场，然后看球是否如计算时假设的那样非饱和。
+已知$r_{0.1g} =\sqrt{(2.42 m)^2+(2.75 m)^2}\simeq 3.66 m$以及$\theta = \tan^{−1}(2.42 m/2.75 m) = 41.3^\circ$，
+代入方程3.163，有：
+\begin{equation*}
+\begin{split}
+|\mu_0 \vec{H}_f|&=(14.0)(\frac{0.67}{3.66})\sqrt{\cos^2 41.3^\circ+\frac{1}{4}\sin^2 41.3^\circ}\\
+&=(14.0)(6.1\times 10^{-3})(0.82)=0.070\ \mathrm{T}\qquad(\vec{M}=3\mu_0\vec{H}_f=0.21\ \mathrm{T})
+\end{split}
+\end{equation*}
 \newpage
-
-
 
 
 \subsection{讨论3.13：两线圈磁体的径向力}
