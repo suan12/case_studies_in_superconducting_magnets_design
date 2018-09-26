@@ -3399,336 +3399,341 @@ M_{p}=\frac{M_{po}}{\sqrt{1-(\frac{v}{c})^{2}}}=\frac{E_{p}}{c^{2}}%(S12.3)
 
 
 \subsection{问题3.13：两线圈磁体}
-Figure 3.41 shows a cross sectional view of a magnet consisting of two axially
-aligned identical coils, A and B, energized in the same polarity. The axial field,
-Bz, is in the horizontal direction. As remarked in PROBLEM 3.3 (Helmholtz coil),
-the antisymmetric system (Maxwell coil) generates a “linear” axial field (Bz) at
-the midpoint (z = 0). The axial interaction force between coils in the symmetric
-system is attractive; in the split-pair antisymmetric configuration, repulsive, of
-identical magnitude.
+图3.41给出了一个由两个轴向对齐、完全相同的线圈A和B组成的磁体的剖面。两线圈的励磁极性相同。
+轴向场$B_z$沿水平方向。如问题3.3指出的，反对称系统(Maxwell线圈)在中点($z=0$)产生线性的轴向场。
+对称系统的线圈间的轴向作用力是引力；反对称系统配置下是大小相同的斥力。
 
-The winding parameters of each coil are: 2a1 = 1.5 m; 2a2 = 2.1 m; 2b = 0.1 m;
-N =8900; and I =65 A. The left coil is axially centered at z=0.5 m, while the right
-coil is at z = 0.5 m—the center-to-center distance is 1 m (ρ in 3.5). Each heavy
-horizontal bar schematically represents a room-temperature structural element
-that supports the interactive force between the two coils.
-Figures 3.42a and 3.42b show, respectively, Bz(r, z) and Br(r, z) plots for one coil
-at I =65 A. Note that here z=0 coincides with the axial midpoint of the coil.
+两个绕组参数均为：$2a_1 = 1.5\ \mathrm{m}; 2a_2 = 2.1\ \mathrm{m}; 2b = 0.1\ \mathrm{m};
+N =8900$和$I =65\ \mathrm{A}$。
+左侧线圈轴中心位于$z=0.5 m$，右侧线圈位于$z = 0.5 m$——两线圈的中心距为$1 m$ (3.5节中的$\rho$)。
+水平的黑色条代表两个线圈之间的室温结构支撑件。
+图3.42a和3.42b分别给出了$B_z(r, z)$和$B_r(r, z)$在$I =65 A$的图。
+注意，这里的$z=0$恰好与线圈轴向中点重合。
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.5]{chpt3/figs/fig3.41.eps}
-	\caption{Cross sectional view of a 2-coil magnet consisting of two identical coils,
-		A and B, energized in the same polarity. Dimension in meters.}
+	\caption{有两个相同线圈A和B在相同极性励磁下组成的磁体的剖面，尺寸以m为单位}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.5]{chpt3/figs/fig3.42.eps}
-	\caption{(a) Bz(r, z) and (b) Br(r, z) plots for one coil, A or B, at I =65 A,
-		with the other coil unenergized, at axial (z) locations of the energized coil}
+	\caption{一个线圈未励磁，另一个线圈在$I=65A$时的(a)$B_z(r, z)$和(b) $B_r(r, z)$}
 \end{figure}
 
-a) Compute the overall current density of Coil A at I =65 A.
+a) 计算$I=65 A$时，线圈A的总体电流密度。
 
-b) Compute the total conductor length in the winding of Coil A.
+b) 计算线圈A绕组的总导体长度。
 
-c) Using an appropriate analytical expression, show that Bz at the axial midpoint of Coil A at 65 A, with Coil B not energized, is approximately 0.4 T, as
-given by Fig. 3.42a.
+c) 使用恰当的解析表达，证明线圈A在$65A$、线圈B不励磁时的轴向中点处的$B_z$近似为0.4T，如图3.42a所示。
 
-d) Using L(α, β) given by Fig. 3.14 for solenoidal coils and Eq. 3.81, compute
-the self inductance L of Coil A; a code gives 216.8 H.
+d) 使用图3.14中给出的螺管的$L(\alpha,\beta)$和方程3.81，计算线圈A的自感。某程序给出的数值是216.8 H。
 
-f) Show, qualitatively, that the axial force on Coil A, FzA(ρ), studied in 3.5.1,
-when Coil B is energized at 65 A, is +z-directed, i.e., the axial force between
-Coils A and B is attractive.
+f) 定量的证明，3.5.1中研究过的线圈A上的轴向力$F_{zA}(\rho)$在线圈B以$65A$励磁时是$+z$向的，即
+线圈A和B之间的轴向力是引力。
 
-g) Using appropriate field data of Figs. 3.42a and 3.42b, compute the magnitude
-of this interactive force, when each coil is energized with a current of 65 A,
-to within ±20% of ∼2×105 N. (A code value is −193 kN, the minus sign
-indicating that the force is attractive.)
+g) 使用图3.42a和3.42b中合适的场数据，计算上述引力的幅值：两个线圈均以$65A$励磁。
+结果应该在$2\times 10^5 N$的±20\%以内。(某程序计算值为−193 kN，负号表示引力。)
 
-h) Approximating each coil as a “ring coil” (see Fig. 3.5) and using Eq. 3.34,
-compute the axial force exerted on Coil A, FzA(ρ), by Coil B. Use K(k) =
-2.10000 and E(k)=1.2000 with k=0.874157. Note that here aA=aB=0.9 m
-and ρ=1.0 m.
+h) 将每个线圈近似为“环” (如图3.5)，使用方程3.34计算线圈B施于线圈A上的轴向力$F_{zA}(\rho)$
+使用$K(k) =2.10000,E(k)=1.2000,k=0.874157$。这里$a_A=a_B=0.9 m,\rho=1.0 m$。
 
-i) Compute FzA(ρ) for ρ=5 m.
-Table 3.6 gives computed mutual inductance vs. center-to-center distance data,
-MAB(ρ), for this 2-coil system.
+i) 在$\rho=5 m$时计算$F_{zA}(\rho)$。
 
-j) Show that the total stored magnetic energy of the system, Em, for ρ=1.0 m
-at an operating current of 65 A is approximately 1 MJ. Use L=216.8 H.
+表3.6给出了这个两线圈系统的计算得到的互感 vs. 中心距数据，$M_{AB}(\rho)$。
 
-k) By applying Eq. 3.105b on the system, compute FzA(ρ) from the MAB(ρ) data.
+j) 证明，系统存储的总能量$E_m$在运行电流$65A$、$\rho=1.0 m$时，近似为$1 MJ$。
+使用$L=216.8 H$。
 
+k) 在系统上应用方程3.105b，由$M_{AB}(\rho)$数据计算$F_{zA}(\rho)$。
+
+\colorbox{red}{表3.6}
 
 \subsubsection{问题3.13之解}
 a)根据3.108a，有：
-1$$
+\begin{equation}
 \lambda J=\frac{NI}{2b(a_{2}-a_{1})}\\%(3.108a)
-=\frac{(4\pi\times10^{-7}H/m)(8900)(65A)}{(1.5m)}(\frac{0.336}{0.4})=0.4T\\
-$$
+=\frac{(4\pi\times 10^{-7}H/m)(8900)(65A)}{(1.5m)}(\frac{0.336}{0.4})=0.4T
+\end{equation}
 
-b) Total conductor length, , is given by: =Nπ(a2+a1)50.3 km. This 2-coil
-magnet thus contains a total conductor length of ∼100 km.
+b) 导体总长度$\ell$为：$\ell=N\pi(a_2+a_1)\simeq 50.3 km$。于是这个两线圈系统的总导体长度
+为$\sim 100\ \mathrm{km}$。
 
-c) We may approximate Coil A (or Coil B) as a “pancake” coil with α=1.4. By
-applying Eq. 3.111f, we obtain BzA, the center axial field of Coil A:
-$$
+c) 我们可以将其中的一个线圈近似为$\alpha=1.4$的饼式线圈。通过应用3.111f，
+我们得到线圈A的轴向中心场$B_{zA}$：
+\begin{equation}
 B_{zA}\simeq B_{z}(0,0)=\frac{\mu_{o}NI}{2a_{1}}(\frac{\ln\alpha}{\alpha-1})\\%(3.111f)
-=\frac{(4\pi\times10^{-7}H/m)(8900)(65A)}{(105m)}(\frac{0.336}{0.4})=0.4T\\
-$$
+=\frac{(4\pi\times 10^{-7}H/m)(8900)(65A)}{(105m)}(\frac{0.336}{0.4})=0.4T
+\end{equation}
 
-d) From Fig. 3.14, we have L(α=1.4, β=0.067)2.8. From Eq. 3.81:
-$$
+d) 从图3.14，我们得到$L(\alpha=1.4, \beta=0.067)\simeq 2.8$。根据方程3.81，有：
+\begin{equation}
 L=\mu_{o}a_{1}N^{2}\mathcal{L}(\alpha,\beta)\\%(3.81)
-=(4\pi\times10^{-7}H/m)(0.75m)(8900)^{2}(2.8)=2.9H\\
-$$
+=(4\pi\times 10^{-7}H/m)(0.75m)(8900)^{2}(2.8)=2.9H
+\end{equation}
 
-f) Br(r, z) of Fig. 3.42b is valid for z≥0, indicating Br(r, z) is positive, pointing
-radially outward. When Br(r, z) generated by Coil B is applied to Coil A, however,
-because Coil A is located at z<0 relative to the axial midpoint of Coil B, Br(r, z)
-of Coil B on Coil A is directed radially inward. If we apply the $I\vec{i_\theta}\times-B_r(r,z)\vec{i_r}$
-product to the top winding cross section of Coil A in Fig. 3.41, the axial force on
-Coil A by Coil B is +z-directed, indicating the force, as expected, is attractive.
+f)图3.42b中的$B_r(r, z)$在$z\ge 0$时成立，表明$B_r(r, z)$是正的，沿半径向外。
+不过，当线圈B产生的$B_r(r, z)$施于线圈A时，因为线圈A相对于线圈B的轴向中点处于$z<0$，
+线圈B施于线圈A的$B_r(r, z)$是沿半径向内的。如果对图3.41中的线圈A的顶部绕组截面应用
+$I\vec{i_\theta}\times-B_r(r,z)\vec{i_r}$，线圈B施于线圈A的轴向力是$+z$向的，表明
+这个力是引力。
 
-g) FzA(ρ) is the Lorentz interaction force, here given by:
+g) $F_{zA}(\rho)$是Lorentz力，可由下式计算： 
 %%%计算式
+\begin{equation}
+F_{zA}(\rho)\simeq (average\ winding\ circumference)\times(NI)\times(B_r)=\pi(1.8)(8900\times 65)(0.06)=196\ \mathrm{kN}
+\end{equation}
 
-h)FzA(ρ) on Coil A due to Coil B is given by:
-$$
-F_{zA}(\rho)=\frac{\mu_{o}}{2}(N_{A}I_{A})(N_{B}I_{B})\frac{\rho\sqrt{(a_{A}+a_{B})^{2}+\rho^{2}}}{(a_{A}-a_{B})^{2}+\rho^{2}}\\
-\times{k^{2}K(k)+(k^{2}-2)[K(k)-E(k)]}\\%(3.34)
-$$
+h)线圈B施于线圈A的力$F_{zA}(\rho)$为：
+\begin{equation}
+\begin{split}
+F_{zA}(\rho)=&\frac{\mu_{o}}{2}(N_{A}I_{A})(N_{B}I_{B})\frac{\rho\sqrt{(a_{A}+a_{B})^{2}+\rho^{2}}}{(a_{A}-a_{B})^{2}+\rho^{2}}\\
+&\times{k^{2}K(k)+(k^{2}-2)[K(k)-E(k)]}%(3.34)
+\end{split}
+\end{equation}
 
-式中K(k) and E(k) are, respectively, the complete elliptic integrals of the first
-and second kinds
-$$
+式中$K(k)$和$E(k)$分别是第一类和第二类完全椭圆积分：
+\begin{equation*}
 k^{2}=\frac{4a_{A}a_{B}}{(a_{A}+a_{B})^{2}+\rho^{2}}\\%(3.36)
-$$
+\end{equation*}
 
-Here, we have: NA=NB=N =8900; aA=aB=(a1+a2)/2=0.9 m; and ρ=1 m
+这里，我们有$N_A=N_B=N =8900; a_A=a_B=(a_1+a_2)/2=0.9 m; \rho=1 m$：
 %%公式
+\begin{equation*}
+k^2=\frac{4(0.9)(0.9)}{(0.9+0.9)^2+(1.0)^2}=0.764151\ \Rightarrow\ k=0.874157 
+\end{equation*}
 
-We have: K(k)=2.100000 and E(k)=1.200000. Thus:
+我们有$K(k)=2.100000$和$E(k)=1.200000$，于是：
+\begin{equation*}
+F_{zA}(1\ \mathrm{m})=long\ numbers\simeq -213.2\ \mathrm{kN}
+\end{equation*}
 
-%%公式
 
-
-i)In the limit $ρ^2\gg(a_A+a_B)^2$, Eq. 3.34 is simplified to:
-$$
+i)在极限$ρ^2\gg(a_A+a_B)^2$下，方程3.34简化为：
+\begin{equation}
 F_{zA}(\rho)=\frac{3\mu_{o}}{2\pi}(\frac{\pi a_{A}^{2}N_{A}I_{A}}{\rho^{2}})(\frac{\pi a_{B}^{2}N_{B}I_{B}}{\rho^{2}})\\%(3.39c)
-$$
-With $ρ^2=25.0 m^2$ and $(a_A+a_B)^2=3.24 m^2$, the condition $ρ^2\gg(a_A+a_B)^2$ is satisfied.
-Because NA=NB=N =8900, IA=IB=65 A, aA=bB=0.9 m, Eq. 3.39c becomes:
+\end{equation}
 
+$ρ^2=25.0 m^2$以及$(a_A+a_B)^2=3.24 m^2$，可知$ρ^2\gg(a_A+a_B)^2$是满足的。
+因为$N_A=N_B=N =8900, I_A=I_B=65 A, a_A=b_B=0.9 m$，方程3.39c成为：
+\begin{equation}
+F_{zA}(\rho)=\frac{3(4\pi\times 10^{-7}\ \mathrm{H/m})}{2\pi}\left[\frac{\pi(0.9)^2(8900)(65)}{(5)^2}\right]^2=2.08\ \mathrm{kN}
+\end{equation}
+
+一个2 kN ($\sim 200$ kg)的力仅大约相当于单个线圈重量的13\%。
+
+j)系统总磁能$E_m$可以由方程3.92给出：
+\begin{equation}
+E_{m}=\frac{1}{2}L_{1}I_{1}^{2}+\frac{1}{2}L_{2}I_{2}^{2}+M_{12}I_{1}I_{2}%(3.92)
+\end{equation}
+
+已知$L_1 = L_A = L_2 = L_B\equiv  L = 216.8 H, I_1 = I_A = I_2 = I_B\equiv I = 65 A$，从表中
+可知$M_{AB}\simeq 29.8 H$，我们有：
 %%公式
-A force of 2 kN (∼200 kg) is only about 13% the weight of each coil.
-
-j) The total stored magnetic energy of the system, Em, is given by Eq. 3.92:
-$$
-E_{m}=\frac{1}{2}L_{1}I_{1}^{2}+\frac{1}{2}L_{2}I_{2}^{2}+M_{12}I_{1}I_{2}\\%(3.92)
-$$
-
-With L1 = LA = L2 = LB ≡ L = 216.8 H, I1 = IA = I2 = IB ≡ I = 65 A, and from the
-table MAB29.8 H, thus:
-%%公式
-
+\begin{equation*}
+	E_m=LI^2+M_{AB}I^2=(L+M_{AB})I^2=1.04\ \mathrm{MJ}
+\end{equation*}
 
 k)式3.105b如下给出：
-$$
+\begin{equation}
 F_{zR}(\rho)=\frac{\partial E_{AB}}{\partial \rho}=I_{A}I_{B}\frac{\partial M_{AB}(\rho)}{\partial\rho}\\%(3.105b)
-$$
+\end{equation}
 
-From the table, MAB(ρ=0.9 m)=34.873 H and MAB(ρ=1.1 m)=25.650 H. Thus:
-$$
-\frac{\partial M_{AB}(\rho)}{\partial\rho}\simeq\frac{(25.650H-34.875H)}{(1.1m-0.9m)}=-46.115H/m\\%(S17.1)
-$$
-Inserting Eq. S17.1 into Eq. 3.105b with IA=IB=I =65 A, we have:
+从表中可知，$M_{AB}(\rho=0.9 m)=34.873 H$以及$M_{AB}(\rho=1.1 m)=25.650 H$。于是：
+\begin{equation}
+\frac{\partial M_{AB}(\rho)}{\partial\rho}\simeq\frac{(25.650H-34.875H)}{(1.1m-0.9m)}=-46.115\ \mathrm{H/m}\\%(S17.1)
+\end{equation}
+
+将S17.1代入3.105b，并取$I_A=I_B=I =65 A$，有：
 %%公式
+\begin{equation*}
+F_{zR}(\rho)\simeq (65)^2(-46.115)=-194.8\ \mathrm{kN}
+\end{equation*}
 
-Not surprisingly, this agrees quite well with the −193 kN computed by a code.
+毫不奇怪，这个数值和程序计算的−193 kN很接近。
 \newpage
 
-
 \subsection{问题3.14：螺管中平面上的轴向力}
-In this problem, we shall apply some of the expressions derived in Sec. 3.5 for
-a solenoid of 2a1 = 10 cm; 2a2 = 14 cm; 2b = 25 cm; NI = 1.5×106 A, shown in
-Fig. 3.43a.
+本题我们使用3.5部分对$2a_1 = 10 cm; 2a_2 = 14 cm; 2b = 25 cm; NI = 1.5×10^6 A$(见图3.43a)的一个螺管中
+推导出来的表达式。
 
-a) Although this solenoid (α = 1.4, β = 2.5) is really neither “thin-walled” nor
-“long,” use Eq. 3.111d to compute Bz(0, 0).
+a) 尽管这个螺管 ($\alpha = 1.4,\beta = 2.5$)实际上是既不“薄壁”也不“长”，
+用方程3.111d计算$B_z(0, 0)$。
 
-b) Treating the solenoid as “thin-walled,” apply Eq. 3.41a to compute the axial
-midplane force, Fz(0), which by a code is −187.8 kN. Use 2a=10 cm.
+b) 将这个螺管视为“薄壁”，应用方程3.41a计算轴向中平面力$F_z(0)$。某程序计算结果是−187.8 kN。
+使用$2a=10 cm$。
 
-c) Use Eq. 3.41b, valid for a “long” coil, to compute Fz(0). Choose: 1) 2a =
-10 cm; 2) 2a=12 cm, the solenoid average diameter.
+c) 使用对“长”螺管有效的方程3.41b，计算$F_z(0)$。选择螺管平均直径：1) $2a =10 cm$； 2) $2a=12 cm$。
 
-d) Now, divide the solenoid into two subsolenoids, A and B, as illustrated in
-Fig. 3.43b, each of an equal radial build of 1 cm, with 2aA=10 cm, 2aB=12 cm,
-and NI =0.75×106 A. Compute Bz(0, 0).
+d) 现在，将螺管分为两个子螺管A和B，如图3.43b所示。子线圈具有相同的半径1 cm，同时$2a_A=10 cm, 2a_B=12 cm,
+NI =0.75\times10^6 A$。计算$B_z(0, 0)$。
 
-e) Apply Eq. 3.54 and compare with FzT(0)=−187.8 kN, computed by a code.
+e) 应用方程3.54计算，并与某程序的计算值$F_{zT}(0)=−187.8 kN$对比。
 
-f) Apply Eq. 3.55, valid for a “long” coil, and compute FzT(0).
+f) 应用对“长”螺管成立的方程3.55计算$F_{zT}(0)$。
 
-g) Applying the condition $\nabla\cdot B=0$ over the surfaces of one half of a “thin-wall”
-and “long” coil (2a, 2b) having a uniform surface current density NI/2b,
-derive Eq. 3.41b. Note that the surfaces to be considered are the coil’s x-yplane cross-sectional areas at z =0 (midplane) and z =b, each πa2, and the
-cylindrical surface area at r=a from z=0 to z=b, i.e., 2πab.
+g) 在“薄壁”且“长”的、有均匀表面电流密度$NI/2b$的螺管的一半的整个表面应用$\nabla\cdot B=0$。
+需要考虑的表面是线圈的x-y平面上的$z=0$和$z=b$截面区域，分别为$\pi a^2$；以及在$r=a$时，从$z=0$
+到$z=b$的圆柱表面区域，$2\pi ab$。
 
-h) For a long (β1) coil, explain why its axial force over most of its length, from
-the midplane to near its end, is constant and given by that corresponding to
-the midplane value. Try estimating the z location over one half of this long
-solenoid at which Bz begins to plummet from Bz(0, 0).
+h) 对一个长螺管($\beta\gg 1$)，解释为什么在它的长度方向从中平面到近末端的大部分区域的轴向力
+是常数，并可由相应的中平面值给出。试着评估长螺管一半结构上$z$的位置，在该位置$B_z$开始
+从$B_z(0,0)$显著下降。
 
-Table 3.7 on the next page gives values of appropriate complete elliptic integrals
-
+表3.7给出了部分完全椭圆积分的值。
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.5]{chpt3/figs/fig3.43.eps}
 	\caption{(a) Solenoid with 2a1=10cm; 2a2=14cm; 2b=25cm. (b) Solenoid subdivided
 		into subsolenoids A and B, with 2aA=10cm; 2aB=12cm; 2b=25cm.}
 \end{figure}
-
+\textcolor{red}{表3.7}
 
 \subsubsection{问题3.14之解}
-%%表格3.7
-
-
 a)应用3.111d，我们有：
-$$
+\begin{equation}
 B_{z}(0,0)=\frac{\mu_{o}NI}{2b}\\%(3.111d)
 =\frac{(4\pi\times10^{-7}H/m)(1.5\times10^{6}A)}{(0.25m)}=7.5T\\
-$$
+\end{equation}
 
-Equation 3.109 for this solenoid of α = 1.4 and β = 2.5, gives Bz(0,0) = 6.8 T.
-Equation 3.111d thus errs by ∼10%, not too bad considering its simplicity.
+方程3.109对这个$\alpha=1.4,\ \beta=2.5$的螺管给出的值时$B_z(0,0) = 6.8 T$。可知方程3.111d的误差
+大约是10\%，考虑到它的简单性，这个结果不算太坏。
 
 b)再次给出3.41a式：
-$$
+\begin{equation}
 F_{z}(0)=-\frac{\mu_{o}}{2}(\frac{NI}{2b})^{2}\{2b\sqrt{4a^{2}+b^{2}}[K(k_{b})-E(k_{b})]\\
 -2b\sqrt{4a^{2}+4b^{2}}[K(k_{2b})-E(k_{2b})]\}\\%(3.41a)
-$$
+\end{equation}
+
 式中的模为：
-%%%缺公式
+\begin{eqnarray}
+k_b^2=\frac{4a^2}{4a^2+b^2}=\frac{4(5)^2}{4(5)^2+(12.5)^2}\simeq 0.390244\\
+k_{2b}^2=\frac{4a^2}{4a^2+(2b)^2}=\frac{4(5)^2}{4(5)^2+(25)^2}\simeq 0.137931
+\end{eqnarray}
 
-With values of appropriate K(k) and E(k) given in Table 3.7:
+使用表3.7中给出的$K(k)$和$E(k)$合适值：
+\begin{equation*}
+F_z(0)= xxxxxxx \simeq -157.8\ \mathrm{kN}
+\end{equation*}
 
-%%缺公式
-
+上面这个值时某程序给出的值-187.8kN的84\%。
 
 c)式3.41b如下给出：
-$$
+\begin{equation}
 F_{z}(0)\simeq-\frac{\mu_{o}}{2}(\frac{NI}{2b})^{2}\pi a^{2}\\%(3.41b)
-$$
+\end{equation}
 
-Applying Eq. 3.41b with a=5 cm and a=6 cm, we obtain:
+将$a=5 cm$和$a=6 cm$代入，有：
 %%缺公式
+\begin{eqnarray}
+1)\qquad F_z(0)\simeq XXXXXX =-177.7\ \mathrm{kN}\\
+2)\qquad F_z(0)\simeq YYYYYY = -255.8\ \mathrm{kN}
+\end{eqnarray}
 
-Equation 3.41b underestimates the code value by ∼5% with a = 5 cm, while it
-overestimates the code value by 36% with a = 6 cm. These results appear to
-suggest that it is better to equate 2a with the solenoid i.d. However, this may not
-be valid for other values of α.
+方程3.41b在$a=5 cm$时相比于程序值低估了大约5\%；在$a=6 cm$时高估了大约36\%。
 
-d) Apply Eq. 3.111d to each subsolenoid; we find that Bz(0,0) remains the same.
-Bz(0,0) = BzA(0,0) + BzB(0,0)
-%%缺公式
-
+d) 对每个子螺管应用方程2.111d；我们得到$B_z(0,0)$不变。
+$$B_z(0,0) = B_{zA}(0,0) + B_{zB}(0,0)$$
 
 e)再次给出式3.54：
-$$
-F_{zT}(0)=-\frac{\mu_{o}}{2}(\frac{NI}{4b})^{2}\times\\
-(2b\sqrt{4a_{A}^{2}+b^{2}}[K(k_{bA})-E(k_{bA})]-2b\sqrt{4a_{A}^{2}+4b^{2}}[K(k_{2bA})-E(k_{2bA})]\\
-+2b\sqrt{4a_{B}^{2}+b^{2}}[K(k_{bB})-E(k_{bB})]-2b\sqrt{4a_{B}^{2}+4b^{2}}[K(k_{2bB})-E(k_{2bB})]\\
--\frac{4b}{\sqrt{a_{T}^{2}+b^{2}}}\{(a_{T}^{2}+b^{2})[K(k_{b})-E(k_{b})]-\Upsilon(c^{2},k_{b})\}\\
-+\frac{4b}{\sqrt{a_{T}^{2}+4b^{2}}}\{(a_{T}^{2}+4b^{2})[K(k_{2b})-E(k_{2b})]-\Upsilon(c^{2},k_{2b})\})\\%(3.54)
-$$
-式中的模为：
-%%缺公式
+\begin{equation}
+\begin{split}
+F_{zT}(0)=&-\frac{\mu_{o}}{2}(\frac{NI}{4b})^{2}\times\\
+&(2b\sqrt{4a_{A}^{2}+b^{2}}[K(k_{bA})-E(k_{bA})]-2b\sqrt{4a_{A}^{2}+4b^{2}}[K(k_{2bA})-E(k_{2bA})]\\
+&+2b\sqrt{4a_{B}^{2}+b^{2}}[K(k_{bB})-E(k_{bB})]-2b\sqrt{4a_{B}^{2}+4b^{2}}[K(k_{2bB})-E(k_{2bB})]\\
+&-\frac{4b}{\sqrt{a_{T}^{2}+b^{2}}}\{(a_{T}^{2}+b^{2})[K(k_{b})-E(k_{b})]-\Upsilon(c^{2},k_{b})\}\\
+&+\frac{4b}{\sqrt{a_{T}^{2}+4b^{2}}}\{(a_{T}^{2}+4b^{2})[K(k_{2b})-E(k_{2b})]-\Upsilon(c^{2},k_{2b})\})%(3.54)
+\end{split}
+\end{equation}
 
-Inserting these and other appropriate values into Eq. 3.54, we obtain:
-%%缺公式
+式中的$c^2$和其他模为：
+\begin{eqnarray}
+c^2&=&\frac{4a_A a_B}{(a_A+a_B)^2}\simeq 0.991736\\
+k_{b_A}^2&=&\frac{4a_A^2}{4a_A^2+b^2}\simeq 0.390244\\
+k_{2b_A}^2&=&\frac{4a_A^2}{4a_A^2+(2b)^2}\simeq 0.137931\\
+k_{b_B}^2&=&\frac{4a_B^2}{4a_B^2+b^2}\simeq 0.479600\\
+k_{2b_B}^2&=&\frac{4a_B^2}{4a_B^2+(2b)^2}\simeq 0.187256\\
+k_{b}^2&=&\frac{4a_A a_B}{(a_A+a_B)^2+b^2}\simeq 0.432822\Rightarrow k_b\simeq 0.657892\\
+k_{2b}^2&=&\frac{4a_A a_B}{(a_A+a_B)^2+(2b)^2}\simeq 0.160858\Rightarrow k_b\simeq 0.401071
+\end{eqnarray}
 
-The computation still underestimates the code value (−187.8 kN), but now it is
-90%. Although Eq. 3.54 gives a value more accurate than Eq. 3.41a, as seen
-here, it is extremely tedious and thus not recommended as a means to make a
-quick estimate of the force. Clearly, dividing a solenoid into two subsolenoids and
-applying Eq. 3.54 is the limit of manual computation with a pocket calculator.
-Note that the remarkable result of Eq. 3.41b with a = 5 cm seen above is most
-likely coincidental rather than a general rule.
+将这些值和其他必要的值代入方程3.54，有：
+\begin{equation}
+F_z(0)= XXXXXX \simeq -168.9\ \mathrm{kN}
+\end{equation}
 
-f)Applying Eq. 3.55 with aA=5 cm and aB=6 cm, we obtain:
-%%缺公式
+计算值仍然相比程序值(−187.8 kN)有所低估，但是现在它是90\%。
+尽管方程3.54给出的值相比3.41a要准确，但它相当繁琐，并不推荐用来作为快速估算力的方法。
+很明显，将螺管分为两部分，应用方程3.54是口袋计算器手算的极限了。
+方程3.41b在$a=5cm$时的良好结果更像是巧合，而不是一般规律。
 
-Equation 3.55, which is much simpler to compute than Eq. 3.54, also turns out to
-give, at least in this particular example, a better result than Eq. 3.54.
+f)在$a_A=5cm$和$a_B=6cm$时应用3.55，有：
+\begin{equation}
+F_z(0)\simeq XXXXXXX = -187.3\ \mathrm{kN}
+\end{equation}
 
-g) The differential force acting on one complete turn at z ≥0 carrying a differential current of dI is given by:
-%%缺公式
+方程3.55相比于方程3.54更为简单，同样给出了至少对这个特殊的例子而言比3.54更好的结果。
 
-The negative sign indicates this force is directed towards the midplane. Substituting dI = (NI/2b) dz and integrating over the entire half length of the solenoid,
-from z=0 to z=b, we have:
-$$
-F_{z}(0)=-\int_{0}^{b}2\pi aB_{r}(r)\frac{NI}{2}dz=-\frac{NI}{2b}\int_{0}^{b}2\pi aB_{r}(z)dz\\%(S14.1)
-$$
+g) 施加于$z\ge 0$部分所有匝上载流微元$dI$的力微元为：
+\begin{equation*}
+dF_z(z\ge 0)=-2\pi a B_r(z)d I
+\end{equation*}
 
-The integral 0b 2πaBr(z)dz is the total radial flux leaving this half of the solenoid.
-From ∇·B =0 this is equal to the difference between the total axial flux entering
-into this half of the solenoid over the circular plane at the midplane (z = 0) and
-that leaving the solenoid over the circular plane at z=b.也即：
-$$
-\int_{0}^{b}2\pi aB_{r}(z)dz=\pi a^{2}[B_{z}(0)-B_{z}(b)]\\%(S14.2)
-$$
+符号表示这个力是指向中平面的。做替换$dI = (NI/2b) dz$并在螺管的整个半区从$z=0$到$z=b$积分： 
+\begin{equation}
+F_{z}(0)=-\int_{0}^{b}2\pi aB_{r}(r)\frac{NI}{2}dz=-\frac{NI}{2b}\int_{0}^{b}2\pi aB_{r}(z)dz%(S14.1)
+\end{equation}
 
-Note that it is assumed that for a “long” coil (k2  1 or β   1), for which
-Eq. 3.41b is valid, Bz(0, 0) and Bz(0, b) may be assumed constant over the circular
-plane of area πa2. For this long solenoid, it is also true that Bz(0, b)  0.5Bz(0,0)
-(see DISCUSSION 3.4), thus Eq. S14.2 may be given by:
-$$
+积分$\int_0^b 2\pi a B_r(z)dz$是离开这半个螺管的总径向磁通。
+根据$\nabla\cdot \vec{B}=0$，这等于从中平面($z=0$)圆面区域进入这一半螺管的总轴向磁通与在$z=b$处圆面区域离开
+的磁通之差，也即：
+\begin{equation}
+\int_{0}^{b}2\pi aB_{r}(z)dz=\pi a^{2}[B_{z}(0)-B_{z}(b)]%(S14.2)
+\end{equation}
+
+方程3.41b的有效性是在假定螺管是“长”的($k^2\ll 1$或者$\beta\gg 1$)而得到的。
+$B_z(0, 0),B_z(0, b)$可以假定在圆平面区域$\pi a^2$上保持不变。
+对于长螺管，同时还有$B_z(0, b)\simeq 0.5 B_z(0,0)$(讨论3.4)，于是S14.2可如下给出：
+\begin{equation}
 \int_{0}^{b}2\pi aB_{r}(z)dz\simeq\frac{\pi a^{2}}{2}B_{z}(0)\\%(S14.3)
-$$
+\end{equation}
 
-For a long coil, Bz(0, 0)=μ◦NI/2b (Eq. 3.111), thus:
-$$
-\int_{0}^{b}2\pi aB_{r}(z)dz\simeq\frac{\pi a^{2}}{2}\times\frac{\mu_{o}NI}{2b}\\%%(S14.4)
-$$
+对长螺管，$B_z(0, 0)=\mu_0 NI/2b$ (方程3.111)，于是：
+\begin{equation}
+\int_{0}^{b}2\pi aB_{r}(z)dz\simeq\frac{\pi a^{2}}{2}\times\frac{\mu_{o}NI}{2b}%%(S14.4)
+\end{equation}
 
 联立S14.1和S14.4，有：
-$$
-F_{z}(0)\simeq-\frac{NI}{2b}\times\frac{\pi a^{2}}{2}\times\frac{\mu_{o}NI}{2b}\simeq-\frac{\mu_{o}}{2}(\frac{NI}{2B})^{2}\pi a^{2}\\%(3.41b)
-$$
+\begin{equation}
+F_{z}(0)\simeq-\frac{NI}{2b}\times\frac{\pi a^{2}}{2}\times\frac{\mu_{o}NI}{2b}\simeq-\frac{\mu_{o}}{2}(\frac{NI}{2B})^{2}\pi a^{2}%(3.41b)
+\end{equation}
 
-h）For a “long” solenoid, Bz(z) is constant with z, and from the requirement of
-∇·B =0 the radial component Br(z) is virtually zero. Because Fz(z) is generated
-by Br(z) (Eq. S14.1), dFz(z)=0 over most of the coil length. Fz(z) thus remains
-constant until z approaches z =b, at which point flux lines begin to diverge away
-from the magnet axis, giving rise to Br(z), which generates Fz(z). For 4b2 4a2
-and (b+z)2 4a2, it can be shown that the 2nd and 3rd lines within the braces in
-Eq. 3.40 cancel out, leaving only the first term for Fz(zb), given by:
-$$
-F_{z}(z\simeq b)\simeq-\frac{\mu_{o}}{2}(\frac{NI}{2b}^{2}\{(b-z)\sqrt{4a^{2}+(b-z)^{2}}[K(k_{b-})-E(k_{b-})]\}\\%(S14.5)
-$$
+h) 对一个“长”螺管，$B_z(z)$不随$z$变化。$\nabla\cdot \vec{B}=0$要求径向分量$B_r(z)$总是零。
+因为$F_z(z)$是由$B_r(z)$产生的(方程S14.1)，$dF_z(z)=0$在线圈长度的大部分成立。
+从而$F_z(z)$在$z=b$范围内保持常数，到了$z =b$，磁通线开始偏离磁场轴线，产生了$B_r(z)$，从而
+产生$F_z(z)$。
+对于$4b^2\gg 4a^2$和$(b+z)^2\gg 4a^2$，可以证明方程3.40中括号内的2阶和3阶线抵消了，仅剩一阶项，如下：
+\begin{equation}
+F_{z}(z\simeq b)\simeq-\frac{\mu_{o}}{2}(\frac{NI}{2b}^{2}\{(b-z)\sqrt{4a^{2}+(b-z)^{2}}[K(k_{b-})-E(k_{b-})]\}%(S14.5)
+\end{equation}
 
-Because z is close to b, kb2− = 4a2/[4a2+(b−z)2]/ 1 and thus K(kb−)−E(kb−)
-cannot be approximated in kb2−. Let us simply guess the location of z near b at
-which point Fz(z∼b) is close to that given by Eq. 3.41b. If we guess z=b−2a, then:
-$$
-F_{z}(z=b-2a)\simeq-\frac{\mu_{o}}{2}(\frac{NI}{2b})^{2}\{2a\sqrt{4a^{2}+4a_{2}}[K(k_{b-})-E(k_{b-})]\}\\%(S14.6)
-$$
+因为$z$接近$b$，$k_{b−}^2 = 4a^2/[4a^2+(b−z)^2]$不满足$\ll 1$。于是，$K(k_{b−})−E(k_{b−})$不能由
+$k_{b-}^2$近似。我们简单的猜想$z$在$b$附近的位置，此处$F_z(z\sim b)$与方程3.41b给出的近似。
+如果我们猜$z=b-2a$，然后：
+\begin{equation}
+F_{z}(z=b-2a)\simeq-\frac{\mu_{o}}{2}(\frac{NI}{2b})^{2}\{2a\sqrt{4a^{2}+4a_{2}}[K(k_{b-})-E(k_{b-})]\}%(S14.6)
+\end{equation}
 
-where k2
-b− =4a2/8a2 =0.5, which gives, from Table 3.1, K(kb− =0.7071)=1.8541
-and E(kb−)=1.3506. Inserting these values into Eq. S14.6, we obtain:
-$$
+式中，$k^2_{b-}=4a^2/8a^2 =0.5$，可由表3.1查到，$K(k_{b−} =0.7071)=1.8541,E(k_{b−})=1.3506$。
+将这些值代入S14.6，有：
+\begin{equation}
 F_{z}(z=b-2a)\simeq-\frac{\mu_{o}}{2}(\frac{NI}{2b})^{2}4a^{2}\sqrt{2}(0.5035)\\
-=-\frac{\mu_{o}}{2}(\frac{NI}{2b})^{2}2.85a^{2}\\%(S14.7)
-$$
-Because 2.85 is ∼ 90% of π, Fz(z) indeed approaches the midplane force at a
-distance within ∼ 2a from each end of a long solenoid. This constant Fz(z) over
-most of the axial length of a long solenoid also implies that Bz(z) remains nearly
-Bz(0, 0) over the same axial length, ∼(2b−4a), of the solenoid.
+=-\frac{\mu_{o}}{2}(\frac{NI}{2b})^{2}2.85a^{2}%(S14.7)
+\end{equation}
+
+因为2.85大约是$\pi$的90\%，$F_z(z)$实际上是长螺管两端向内大约$2a$处的中平面力。
+这个在长螺管轴向大部分区域的$F_z(z)$不变性也暗示了$B_z(z)$在轴向的同样长度区间内($2b-4a$)
+差不多保持$B_z(0,0)$。
 \newpage
 
 
@@ -3768,289 +3773,320 @@ f) 解释为什么螺管B绕组内的最大场$B_{TB}=\sqrt{B_{zB}^2 + B_{rB}^2}
 		螺管A有$2a_A=10\ \mathrm{cm};2b_A = 50\ \mathrm{cm}$。
 		螺管B有$2a_B = 14\ \mathrm{cm}; 2b_B = 100\ \mathrm{cm}$。}
 \end{figure}
+\colorbox{red}{表3.8}
+
 
 \subsubsection{问题3.15之解}
-%%表格3.8
-a) From Bz(0,0)=μ◦Hz(0, 0) and Eq. 3.111d, we have:
-%缺公式
-As noted in the question statement, the exact central field value is 17.32 T.
+a) 根据$B_z(0,0)=\mu_0H_z(0, 0)$以及方程3.111d，我们有：
+\begin{eqnarray}
+B_{zA}(0,0)=XXX\simeq 7.5\ \mathrm{T}\\
+B_{zb}(0,0)=XXX\simeq 10.0\ \mathrm{T}\\
+B_{z}(0,0)=XXX\simeq 17.5\ \mathrm{T}\\
+\end{eqnarray}
 
-b）式3.57b由下式给出：
-$$
-F_{zA}(0)\simeq F_{zAA}(0)\simeq-\frac{\mu_{0}}{2}(\frac{N_{A}I_{A}}{2b_{A}})^{2}\pi a_{A}^{2}\\(3.57b)
-$$
+如问题中给出的，准确的中心场值为17.32 T。
+
+b) 式3.57b由下式给出：
+\begin{equation}
+F_{zA}(0)\simeq F_{zAA}(0)\simeq-\frac{\mu_{0}}{2}(\frac{N_{A}I_{A}}{2b_{A}})^{2}\pi a_{A}^{2}%(3.57b)
+\end{equation}
+
 代入合适的值，我们有：
-%%缺公式
-Thus Eq. 3.57b gives a value that is 88\% of that computed by a code; some of the
-discrepancy is because Eq. 3.57b does not include the FzAB(0) contribution.
+\begin{equation}
+F_{zA}\simeq -177.7\ \mathrm{kN}
+\end{equation}
+
+可见，方程3.57b的结果是程序计算值的88\%；两者的区别的部分原因是方程3.57b没有涵盖$F_{zAB}(0)$的贡献。 
 
 c)式3.57a由下式给出：
-$$
-F_{zA}(0)\simeq-\frac{\mu_{o}}{2}\{(\frac{N_{A}I_{A}}{2b_{A}})^{2}\pi a_{A}^{2}+(\frac{N_{B}I_{B}}{2b_{B}})(\frac{N_{A}I_{A}}{2b_{A}})\times\\
-(a_{A}-a_{B})^{2}[\Pi(c^{2},k_{D})+\Pi(c^{2},k_{r})-2\Pi(c^{2},k_{B})]\}\\(3.57a)
-$$
+\begin{equation}
+\begin{split}
+F_{zA}(0)\simeq&-\frac{\mu_{o}}{2}\{(\frac{N_{A}I_{A}}{2b_{A}})^{2}\pi a_{A}^{2}+(\frac{N_{B}I_{B}}{2b_{B}})(\frac{N_{A}I_{A}}{2b_{A}})\times\\
+&(a_{A}-a_{B})^{2}[\Pi(c^{2},k_{D})+\Pi(c^{2},k_{r})-2\Pi(c^{2},k_{B})]\}\\(3.57a)
+\end{split}
+\end{equation}
+
 式中，
-%%缺公式
-Inserting appropriate values into Eq. 3.57a, we have:
-%%缺公式
-This is 91\% of −200.9 kN; as expected, an improvement from b), though not
-enough to justify the increased complexity.
+\begin{eqnarray}
+c^2= \\
+k_B^2=\\
+k_D^2=\\
+k_T^2=
+\end{eqnarray}
+
+向方程3.57a中代入必要的值：
+\begin{equation}
+F_{zA}\simeq -183.7\ \mathrm{kN}
+\end{equation}
+
+这个值是 −200.9 kN的91\%；如我们所料，相对于b)有所提升，尽管不足以抵消增加的复杂性。 
 
 d)式3.59a由下式给出：
-$$
-F_{zA}(0)\simeq-\frac{\mu_{o}}{2}\{(\frac{N_{B}I_{B}}{2b_{B}})^{2}\pi a_{B}^{2}+(\frac{N_{B}I_{B}}{2b_{B}})(\frac{N_{A}I_{A}}{2b_{A}})[\pi(a_{A}^{2}+a_{B}^{2})\\
--(a_{A}-a_{B})^{2}[2\prod(c^{2},k_{A})+\prod(c^{2},k_{D})-\prod(c^{2},k_{T})]]\}\\%(3.59a)
-$$
-式中，where c2, kD2, and kT2 are given above; for this case, because bA=bD, kA2=kD2. Thus:
+\begin{equation}
+\begin{split}
+F_{zA}(0)\simeq&-\frac{\mu_{o}}{2}\{(\frac{N_{B}I_{B}}{2b_{B}})^{2}\pi a_{B}^{2}+(\frac{N_{B}I_{B}}{2b_{B}})(\frac{N_{A}I_{A}}{2b_{A}})[\pi(a_{A}^{2}+a_{B}^{2})\\
+&-(a_{A}-a_{B})^{2}[2\prod(c^{2},k_{A})+\prod(c^{2},k_{D})-\prod(c^{2},k_{T})]]\}\\%(3.59a)
+\end{split}
+\end{equation}
 
-%%缺公式
-This is 88\% of the code value.
+式中，$c^2, k_D^2,k_T^2$已在上面给出；本例中，因为$b_A=b_D, k_A^2=k_D^2$，有：
+\begin{equation}
+F_{zB}\simeq -1063.4\ \mathrm{kN}
+\end{equation}
 
-e) Because (2bB)2   (2bA)2, within the bore of Solenoid A the fields generated
-by Solenoid B and Solenoid A are both uniform and point only axially. Thus the
-maximum field within Solenoid A, close to 17.5 T, occurs at its innermost radius at
-z=0. According to the same code, a maximum field of 17.32 T occurs at (r=5 cm,
-z=0).
+这是程序值的88\%。
 
-f) Again because (2bB)2   (2bA)2, the radial field component of Solenoid A impinges on Solenoid B away from its center point where the axial field of Solenoid
-B is still essentially the same as that at its midplane. Therefore, it is quite likely
-that the field maximum in Solenoid B can exceed 10.0 T, the midplane field of
-Solenoid B (9.94 T by code), and occur at an axial distance ∼±bA from the center.
-The code shows that the maximum field in Solenoid B is 9.96 T (Br = ±1.70 T;
-Bz =9.81 T) and it occurs at (r=7 cm, z=±25 cm). Note that bA=25 cm.
+e) 因为$(2b_B)^2\gg (2b_A)^2$，在螺管A的室温孔内，螺管B产生的磁场和螺管A产生的磁场都是均匀的且仅有轴向。
+所以，螺管A内部的最大场，大约17.5 T，出现在$z=0$处的最内侧半径上。
+根据同一个程序的计算结果，最大场17.32 T出现在($r=5 cm,z=0$)。
+
+f) 再次，因为$(2b_B)^2\gg (2b_A)^2$，the radial field component of Solenoid A impinges on Solenoid B away from its center point where the axial field of Solenoid B is still essentially the same as that at its midplane. 因此，很可能螺管B的最大场可能超过10.0 T，螺管B的中平面场(程序给出为9.94 T)，出现在轴向距离中心$\sim \pm b_A$的地方。
+程序给出的螺管B中的最大场是9.96 T ($B_r = \pm 1.70 T;B_z =9.81 T$)，出现在($r=7 cm, z=\pm 25 cm$)。注意，
+$b_A=25 cm$。
 \newpage
-\subsection{问题3.16：环氧浸渍螺管的应力}
-This problem deals with simple but approximate stress computations applicable for
-epoxy-impregnated magnets. We will use a 500-MHz (12 T) NMR superconducting magnet built in the late 1970s at FBNML as an example [3.57]. The magnet
-consists of a high-field insert, a main coil, and several correction and shim coils.
-The main coil’s winding inner radius (a1) is 72.6 mm, the winding outer radius
-(a2) is 102 mm, and the winding length (2b) is 488 mm. The main coil is wound
-with a Nb-Ti multifilamentary conductor; the volumetric ratio of copper to Nb-Ti
-is 2.1. The composite wire has diameters of 0.63 mm bare (Dcd) and 0.71 mm insulated (Dov). The winding has a close-packed hexagonal configuration. The space
-between the wires is filled with epoxy resin. Figure 3.45 shows three neighboring
-wires in a close-packed hexagonal winding configuration.
-When all the coils are energized, the axial (z) component of the magnetic induction, Bz, decreases linearly with radial distance (r) through the build of the main
-coil. At the midplane (z = 0) of the main coil, Bz varies from 8.22 T at r = a1
-to −0.21 T at r = a2. This linear decrease of Bz is quite accurate at z = 0. The
-overall operating current density (λJ) in the main coil is 248 MA/m2.
-The analytic solution for an anisotropic cylinder loaded with body forces was used
-to calculate the stresses at the midplane of the main coil. The hoop stresses at
-the inner and outer radii were found to be, respectively, 105 MPa and 65 MPa; the
-hoop stress decreases roughly linearly from the inner radius to the outer radius.
-a) Using simple force equilibrium considerations, show that these stress values
-are consistent with the loading situation.
-b) Assuming the winding pattern is a close-packed (wires touching) hexagonal
-configuration, compute the area fraction for each of the three constituents,
-Nb-Ti, copper, and organic materials (epoxy plus insulation).
-c) Based on these area fractions and approximate Young’s moduli for these
-materials at 4.2 K (Esc = 85 GPa; Ecu = 100 GPa; Ein = 30 GPa), find the
-hoop stresses in the Nb-Ti and copper at the innermost layer of the winding.
 
+
+\subsection{问题3.16：环氧浸渍螺管的应力}
+本例简单的近似处理环氧浸渍磁体的应力计算。
+我们使用一个FBNML制造于1970年代的500-MHz (12 T) NMR超导磁体作为实例[3.57]。
+该磁体有一个高场内插磁体，一个主线圈和多个矫正补偿线圈。
+主磁体绕组的内半径$a_1$为72.6 mm，绕组的外半径($a_2$)为102 mm，绕组长度($2b$)是488 mm。
+主线圈由Nb-Ti导体绕成；铜和NiTi的体积比是2.1。
+这种复合导线的直径是裸线0.63 mm ($D_{cd}$)，绝缘后0.71 mm($D_{ov}$)。
+绕组是紧凑的六边形配置。导线之间的间隙填充了环氧树脂。
+图3.45给出了该配置下的三条相邻导线。
+
+当所有线圈都励磁后，磁场$B_z$的轴向($z$)分量在主线圈范围内随径向距离$r$线性减小。
+在主线圈的中平面($z = 0$)上，当$r = a_1$时$B_z=8.22T$，当$r = a_2$时$B_z=-0.21T$。
+$B_z$的线性降低在$z=0$是相当准确。
+主线圈的总运行电流密度为$248 MA/m^2$。.
+
+承受体力负荷的各向异性圆柱的解析方法用来计算主线圈的中平面的应力。
+内半径和外半径上的环箍应力计算得到的分别为105 MPa和65 MPa；
+环箍力大致上是从内半径到外半径线性减小。
+
+a) 从简单的力平衡考虑，证明这些应力值与负荷条件是一致的。
+
+b) 假定绕组模式是紧绕(线挨线)六边形配置，计算NbTi，铜，有机材料(环氧+绝缘)三种材料的面积占比。
+
+c) 基于上述面积占比和三种材料在4.2 K时的近似杨氏模量($E_{sc} = 85 GPa; E_{cu} = 100 GPa; E_{in} = 30 GPa$)，
+计算绕组最内层的NbTi和铜的环箍力。
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.5]{chpt3/figs/fig3.45.eps}
-	\caption{Three neighboring conductors in a close-packed hexagonal winding}
+	\caption{紧绕六边形配置下的三根相邻导线。}
 \end{figure}
 
 
 \subsubsection{问题3.16之解}
-a)The average hoop stress in the winding is given by:
-$$
-\tilde{\sigma}=\frac{\sigma_{i}+\sigma_{o}}{2}=\frac{105MPa+65MPa}{2}\\%(S16.1)
+a)绕组中的平均环箍力为：
+\begin{equation}
+\tilde{\sigma}=\frac{\sigma_{i}+\sigma_{o}}{2}=\frac{105MPa+65MPa}{2}%(S16.1)
 =85MPa\\
-$$
+\end{equation}
 
-The mean winding radius, R˜ = (a1 + a2)/2 is 87.3 mm; the mean magnetic induction, B˜z = (Bi + Bo)/2, is 4.0 T. The mean hoop stress in the winding may thus
-be given by:
-$$
-\tilde{\sigma}=\tilde{R}(\lambda J)\tilde{B}_{z}=(87.3\times10^{-3}m)(248\times10^{6}A/m^{2})(4.0T)\\%(S16.2)
-=86.6MPa\\
-$$
+平均绕组半径$\tilde{R}= (a_1 + a_2)/2=87.3 mm$；平均磁场$\tilde{B}_z = (B_i + B_o)/2=4.0 T$。于是，
+绕组中的平均环箍力为：
+\begin{equation}
+\tilde{\sigma}=\tilde{R}(\lambda J)\tilde{B}_{z}=(87.3\times 10^{-3}m)(248\times 10^{6}A/m^{2})(4.0T)%(S16.2)
+=86.6 MPa
+\end{equation}
 
-which is nearly identical to ˜ σ, the mean of σi and σo, computed above (Eq. S16.1).
-b) See Fig. 3.45 for the close-packed hexagonal configuration. The triangular
-area, Atr, defined by the dotted lines is given in terms of the overall conductor
-diameter, Dov, by: Atr = √3Dov 2 /4. The conductor area, Acd, within the triangle
-is given by: Acd = πDcd 2 /8, of which 2.1/3.1 is copper area, Acu, and 1/3.1 is
-Nb-Ti area, Asc. The epoxy and insulation area, Ain, within the triangle is given
-by: Ain = Atr − Acd. Thus:
-$$
-f_{cu}=\frac{A_{cu}}{A_{ir}}=\frac{\frac{2.1}{3.1}\frac{\pi D_{cd}^{2}}{8}}{\frac{\sqrt{3}}{4}D_{ov}^{2}}=\frac{(2.1)(\pi)(4)(0.63mm)^{2}}{(3.1)(\sqrt{3})(8)(0.71mm)^{2}}=0.484\\%(S16.3a)
-$$
-$$
-f_{sc}=\frac{A_{sc}}{A_{tr}}=\frac{1}{2.1}\frac{A_{cu}}{A_{tr}}=0.230\\%(S16.3b)
-$$
-$$
-f_{in}=\frac{A_{in}}{A_{tr}}=1-\frac{A_{cu}+A_{sc}}{A_{tr}}=1-0.484-0.230=0.286\\%(S16.3c)
-$$
+这和上文(方程S16.1)计算的$\tilde{\sigma}=(\sigma_i+\sigma_o)/2$几乎一致。
 
-c)The Young’s modulus for the composite, E˜, may be given from the parallel
-mixture rule:
-$$
+b) 看图3.45中由虚线连城的三角形区域$A_{tr}$，它可由总体导体直径定义：$A_{tr} =\sqrt{3} D_{ov}^2/4$。
+三角形内的导体面积$A_{cd}= \pi D_{cd}^2/8$，其中$2.1/3.1$是铜的面积$A_{cu}$，$1/3.1$
+是NbTi的面积$A_{sc}$。环氧和绝缘的面积$A_{in}= A_{tr} − A_{cd}$。于是：
+\begin{equation}
+f_{cu}=\frac{A_{cu}}{A_{ir}}=\frac{\frac{2.1}{3.1}\frac{\pi D_{cd}^{2}}{8}}{\frac{\sqrt{3}}{4}D_{ov}^{2}}=\frac{(2.1)(\pi)(4)(0.63mm)^{2}}{(3.1)(\sqrt{3})(8)(0.71mm)^{2}}=0.484%(S16.3a)
+\end{equation}
+\begin{equation}
+f_{sc}=\frac{A_{sc}}{A_{tr}}=\frac{1}{2.1}\frac{A_{cu}}{A_{tr}}=0.230 %(S16.3b)
+\end{equation}
+\begin{equation}
+f_{in}=\frac{A_{in}}{A_{tr}}=1-\frac{A_{cu}+A_{sc}}{A_{tr}}=1-0.484-0.230=0.286 %(S16.3c)
+\end{equation}
+
+c)复合材料的杨氏模量$\tilde{E}$由平行混合法则给出：
+\begin{equation}
 \tilde{E}=f_{cu}E_{cu}+f_{sc}E_{sc}+f_{in}E_{in}\\%(S16.4)
-=(0.48)(100GPa)+(0.23)(85GPa)+(0.29)(30GPa)\\
-\simeq76GPa
-$$
+=(0.48)(100 GPa)+(0.23)(85 GPa)+(0.29)(30 GPa)\\
+\simeq 76 GPa
+\end{equation}
 
-我们可以……We may calculate the stress of each component at the innermost winding radius:
-$$
-\sigma_{cu}=\sigma_{i}\frac{E_{cu}}{\tilde{E}}=(105MPa)\frac{100GPa}{76GPa}\simeq137MPa\\%(S16.5a)
-$$
-$$
-\sigma_{sc}=\sigma_{i}\frac{E_{sc}}{\tilde{E}}=(105MPa)\frac{85GPa}{76GPa}\simeq117MPa\\%(S16.5b)
-$$
-$$
-\sigma_{in}=\sigma_{i}\frac{E_{sc}}{\tilde{E}}=(105MPa)\frac{30GPa}{76GPa}\simeq41MPa\\%(S16.5b)
-$$
+我们可以计算绕组各组分最内侧半径处的应力：
+\begin{eqnarray}
+\sigma_{cu}=\sigma_{i}\frac{E_{cu}}{\tilde{E}}=(105MPa)\frac{100GPa}{76GPa}\simeq 137MPa \\%(S16.5a)
+\sigma_{sc}=\sigma_{i}\frac{E_{sc}}{\tilde{E}}=(105MPa)\frac{85GPa}{76GPa}\simeq 117MPa \\%(S16.5b)
+\sigma_{in}=\sigma_{i}\frac{E_{sc}}{\tilde{E}}=(105MPa)\frac{30GPa}{76GPa}\simeq 41MPa %(S16.5b)
+\end{eqnarray}
+
 这些值都忽略了残余应力，而实际上这个力可能很大。
 \newpage
 
 
-
 \subsection{问题3.17：HTS磁体中的应力和轴向力}
-We present here a stress analysis performed on an 1.75-T (75 MHz) HTS “insert”
-solenoid, a stack of 48 double-pancake (DP) coils [3.58], each DP coil wound with
-high-strength HTS tape. The HTS insert, operated at 86.7 A, is combined with a
-14.1-T (600 MHz) all-LTS background NMR magnet to form a 675 MHz LTS/HTS
-NMR magnet—later the insert was operated at 115.95 A to achieve a combined
-field of 16.26 T (692.2 MHz) [3.59]. Table 3.9 gives key parameters of the insert
-and the HTS tape, a composite of Bi2223/Ag and two stainless steel strips. The
-mixture rules used are based on the mechanical properties of silver and stainless
-steel. The axial field values, Bz and Br, in the table are for the DP coils, flanking
-the midplane (z=0), that experience the largest stresses and hoop strains.
+这里我们演示对1.75-T (75 MHz)高温超导内插螺管磁体(由48个双饼线圈堆叠组成)的应力分析[3.58]。
+每一个双饼都是由高强度HTS带材绕成的。
+HTS内插磁体，运行电流86.7 A，与一个14.1-T (600 MHz)低温超导背景NMR磁体共同组成了675 MHz LTS/HTS
+NMR磁体——以后内插磁体将运行电流提高到115.95 A以实现组合磁场16.26 T (692.2 MHz) [3.59]。
+表3.9给出了内插磁体和HTS带材(Bi2223/Ag和两层不锈钢层复合材料)的关键参数。 
+本例使用的混合法则基于银和不锈钢的机械性能。
+表中给出的是双饼线圈的轴向场在中平面外侧的数值$B_z$和$B_r$，这里有最大的应力和应变。
 
 \textbf{应力应变方程}
 
-The stresses, radial, σr(r, z); hoop, σθ(r, z); axial, σz(r, z); and shear, τrz(r, z) in
-the winding of a solenoid are found from the equilibrium equations of Eq. 3.62:
-$$
+螺管绕组的径向应力$\sigma_r(r, z)$；环向应力$\sigma_\theta(r, z)$；轴向应力$\sigma_z(r, z)$；
+剪切应力$\tau_{rz}$满足的平衡方程已有3.62给出。
+\begin{equation}
 \frac{\partial\sigma_{r}}{\partial r}+\frac{\sigma_{r}-\sigma_{\theta}}{r}+\frac{\partial\tau_{rz}}{\partial z}=-\lambda JB_{z}(r,z)\\%(3.62a)
-$$
-$$
+\end{equation}
+\begin{equation}
 \frac{\partial\tau_{rz}}{\partial r}-\frac{\tau_{rz}}{r}+\frac{\partial\sigma_{z}}{\partial z}=-\lambda JB_{r}(r,z)\\%(3.62b)
-$$
+\end{equation}
 
-with boundary conditions: σr(r = a1, z) = 0; σr(a2, z) = 0; σz(r, z = ± b) = 0;
-τrz(r, ± b)=0; τrz(a2,± b)=0. The HTS composite may be considered orthotropic,
-and Hooke’s law, with no thermal strains included, is given by:
-$$
+边界条件为：$\sigma_r(r = a_1, z) = 0; \sigma_r(a_2, z) = 0; \sigma_z(r, z = \pm b) = 0;
+\tau_{rz}(r, \pm b)=0; \tau_{rz}(a_2,\pm b)=0$，
+HTS复合材料可以视为正交各向异性的，可以使用Hook定律。当不考虑热应变时，有：
+\begin{equation}
 \epsilon_{r}=\frac{1}{E_{r}}\sigma_{r}-\frac{v_{rh}}{E_{h}}\sigma_{\theta}-\frac{v_{rz}}{E_{z}}\sigma_{z}\\%(3.171a)
-$$
-$$
+\end{equation}
+\begin{equation}
 \epsilon_{\theta}=-\frac{v_{hr}}{E_{r}}\sigma_{r}+\frac{1}{E_{h}}\sigma_{\theta}-\frac{v_{hz}}{E_{z}}\sigma_{z}\\%(3.171b)
-$$
-$$
+\end{equation}
+\begin{equation}
 \epsilon_{z}=-\frac{v_{zr}}{E_{r}}\sigma_{r}-\frac{v_{zh}}{E_{h}}\sigma_{\theta}+\frac{1}{E_{z}}\sigma_{z}\\%(3.171c)
-$$
-where νξη is the Poisson’s ratio that gives ξ due to ση, where ξ and η can be,
-respectively, θ- (hoop-), r-, or z-direction.
+\end{equation}
 
-%%表格3.9
+式中，$\nu_{\xi\eta}$是给定$\epsilon_\xi$和$\sigma_\eta$的Poisson比。
 
-%表格3.10
-Table 3.10 gives values of stresses and hoop strains at three radial locations, innermost, midpoint, and outermost, in one of the midplane pancakes [3.32]. The
-midplane axial force is −16 kN. Note that the highest stresses occur at the innermost (a1 =39.10 mm) winding. The maximum combined stress, Tresca stress,
-σT (= σθ −σz), in silver is 56.4 MPa, which is less than the allowable stress,
-σallow =2σ/3 (0.2%): for silver at 77 K, σallow  120 MPa.
-Stresses and strains may be computed by solving Eqs. 3.62 and 3.171. However,
-some of the equations derived in 3.5 may be applied to estimate the midplane axial
-force. As noted above, the HTS magnet at its midplane will have a computed axial
-force of −16.2 kN (i.e., compressive), which as discussed in 3.5, arises from the
-self field of the HTS magnet and from the interaction of the HTS and the LTS
-magnet. Here, we compute approximate values of the midplane force in the HTS
-magnet by its own field alone. The above analysis gives a value of −8.6 kN [3.32].
-a) Treating the HTS magnet as “thin-walled,” apply Eq. 3.41a to compute
-Fz
-(0). Choose a=39.1 mm, b=203.3 mm, and NI =5.91×106 A.
-b) Apply Eq. 3.41b to compute Fz(0) with 1) a=39.1 mm, the “a1” of the HTS
-magnet and 2) a=51.2 mm, which is the average winding radius.
-c) Now treat the HTS magnet as two “thin-walled” and “long” subsolenoids, A
-and B, of the same winding thickness, and apply Eq. 3.55 to compute FzT(0).
-Choose aA=39.1 mm and aB=51.2 mm.
-d) The 14.1-T LTS magnet that surrounds this HTS insert consists of nested
-coils. Model the LTS magnet as a thin-walled solenoid of aB = 191.3 mm;
-bB
-= 337.5 mm; NBIB = 7.535 MA; the HTS insert as a thin-walled solenoid
-of aA = 51.2 mm; bA = 203.3 mm; NAIA = 0.591 MA. By applying Eq. 3.57a,
-compute the total midplane axial force for the HTS insert magnet: FzA(0),
-which is −16.2 kN. Explain why Eq. 3.57a does not give the correct value.
-e) Using the same models for both magnets and applying Eq. 3.60, compute
-an axial restoring force on the HTS insert when it is off-center by 5 mm
-(ρ=5 mm in Eq. 3.60). A code gives a value of −2.1 kN.
-In the following pages, appropriate elliptic integral values are given, Tables 3.11
-through 3.14.
+\colorbox{red}{表格3.9}
 
+\colorbox{red}{表格3.10}
+
+表3.10给出了一个饼的忠平面上最内、中点、最外三个点处的应力和环箍应变的数值[3.32]。
+中平面轴向力是 −16 kN。
+注意到，最大应力出现在绕组最内侧($a_1 =39.10 mm$)。
+银的最大组合应力，即Tresca应力 ($\sigma_T= \sigma_{\theta} −\sigma_z$)是56.4 MPa，
+这比允许应力($\sigma_{allow}=2\sigma/3(0.2\%)$)要小：银在77K时的允许应力为$\sigma_{allow}\simeq 120 MPa$。
+
+通过解方程3.62和3.171可以得到应力和应变。
+但是，3.5部分推导的方程可以用来估计中平面的轴向力。
+如上面讨论3.5指出的，HTS磁体在它的中平面上的轴向力计算数值为−16.2 kN (即压缩力)，
+来自HTS磁体磁场以及HTS和LTS磁体的相互作用。
+此处，我们计算HTS磁体的仅由自身磁场贡献的中平面力的近似值。
+上面的分析给出的数值是−8.6 kN [3.32]。
+
+a) 将HTS磁体视为“薄壁”的，使用方程3.41a计算$F_z(0)$。选择$a=39.1 mm, b=203.3 mm, NI =5.91\times 10^6 A$。
+
+b) 使用方程3.41b计算$F_z(0)$。分两种情况：1)取HTS磁体的$a_1$，$a=39.1 mm$；2)HTS磁体的绕组平均半，径$a=51.2 mm$。
+
+c) 将HTS磁体视为两个“薄壁”且“长”的子螺管A和B，两者具有相同的绕组厚度。使用方程3.55
+计算$F_{zT}(0)$。取$a_A=39.1 mm , a_B=51.2 mm$。
+
+d) 围绕HTS磁体的是一个14.1 T LTS嵌套磁体。将这个LTS磁体建模为薄壁螺管，参数为：$a_B = 191.3 mm;
+b_B= 337.5 mm; N_BI_B = 7.535 MA$；HTS内插磁体为薄壁螺管，参数为：$a_A = 51.2 mm; b_A = 203.3 mm;
+ N_A I_A = 0.591 MA$。使用方程3.57a，计算HTS内插磁体的总平面轴向力$F_{zA}(0)$。
+ 这个值是−16.2 kN。解释为什么方程3.57a没有给出正确的值。
+
+e) 两个磁体采用相同的模型，使用方程3.60来计算当HTS内插磁体偏心5mm后其上承受的轴向恢复力。
+某程序给出的数值是−2.1 kN。
+
+下面的表3.11-3.14给出了需要的椭圆积分值。
 
 \subsubsection{问题3.17之解}
-%%表格3.11
+\colorbox{red}{表3.11}
 
 a)我们得到3.41a：
 \begin{equation}
-F_{z}(0)=-\frac{\mu_{o}}{2}(\frac{NI}{2b})^{2}\{2b\sqrt{4a^{2}+b^{2}}[K(k_{b})-E(k_{b})]\\
--2b\sqrt{4a^{2}+4b^{2}}[K(k_{2b})-E(k_{2b})]\}\\%(3.41a)
+\begin{split}
+F_{z}(0)=&-\frac{\mu_{o}}{2}(\frac{NI}{2b})^{2}\{2b\sqrt{4a^{2}+b^{2}}[K(k_{b})-E(k_{b})]\\
+&-2b\sqrt{4a^{2}+4b^{2}}[K(k_{2b})-E(k_{2b})]\}%(3.41a)
+\end{split}
 \end{equation}
 
-where kb and k2b are the moduli determined by a and b. For this case, in which
-a=39.1 mm and b=203.3 mm, we have:
-%%缺公式
+式中，$k_b,k_{2b}$是由$a$和$b$决定的模量。本例下，$a=39.1 mm,b=203.3 mm$，我们有：
+\begin{eqnarray}
+k_b^2=\frac{4a^2}{4a^2+b^2}=0.128888\\
+k_{2b}^2=\frac{4a^2}{4a^2+(2b)^2}=0.035670
+\end{eqnarray}
 
-Appropriate complete elliptic integral values are given in Table 3.11. By applying
-Eq. 3.38c up to the k6 term, we may compute K(k)−E(k) for k21. Thus:
-%%缺公式
-which is essentially identical (0.04% error) to the K(k)−E(k)=0.106557, computed
-from values of K(k) and E(k) given in Table 3.11.
-With NI =0.591×106 A, and other values inserted in Eq. 3.41a, we have:
-%%缺公式
-
-This computation underestimates the code value by 28%
-%%表格3.12
-
-b)式3.41b得到：
+所需的完全椭圆积分参数见表3.11。如果应用方程3.38c到$k^6$项，
+我们可以在$k^2\ll 1$条件下计算$ K(k)−E(k)$：
 \begin{equation}
-F_{z}(0)\simeq-\frac{\mu_{o}}{2}(\frac{NI}{2b})^{2}\pi a^{2}\\%(3.41b)
-\simeq-\frac{(4\pi\times10^{-7}H/m)}{2}[\frac{(5.91\times10^{5}A)}{0.4066m}]^{2}\pi(0.0391m)^{2}\\
-=-6.4kN\\
+K(k_{2b})-E(k_{2b})\simeq XXXX=0.106515
 \end{equation}
 
-This is 74% of the code value. The average radius of 51.2 mm instead of 39.1 mm
-results in a force of 10.9 kN, 27% greater than the code value.
-c) If the magnet is modeled by two “thin-walled” and “long” solenoids, Eq. 3.55
-applies:
+这大致上和表3.11中的计算值$K(k)−E(k)=0.106557$是一致的。
+
+代入$NI =0.591\times 10^6 A$和其他值到方程3.41a，有：
+\begin{equation*}
+F_z(0)=XXXXXX=-6.2\ \mathrm{kN}
+\end{equation*}
+
+这个计算值相比程序值低估了28\%。
+
+\colorbox{red}{表3.12}
+
+b) 方程3.41b得到：
+\begin{equation}
+\begin{split}
+F_{z}(0)&\simeq-\frac{\mu_{o}}{2}(\frac{NI}{2b})^{2}\pi a^{2}\\%(3.41b)
+&\simeq-\frac{(4\pi\times 10^{-7}H/m)}{2}[\frac{(5.91\times 10^{5}A)}{0.4066m}]^{2}\pi(0.0391m)^{2}\\
+&=-6.4kN
+\end{split}
+\end{equation}
+
+这是程序值的74\%。用平均半径51.2mm替代 39.1mm得到的力为10.9 kN，比程序值大 27\%。 
+
+c) 如果磁体建模为两个“薄壁”且“长”的螺管，应用方程3.55：
 \begin{equation}
 F_{zT}(0)\simeq-\mu_{o}(\frac{NI}{4b})^{2}\pi(a_{A}^{2}+a_{B}^{2}){1-\frac{(a_{A}-a_{B})^{2}}{\pi(a_{A}^{2}+a_{B}^{2})}[2\prod(c^{2},k_{b})-\prod(c^{2},k_{2b})]}\\%(3.55)
 \end{equation}
 
-The moduli, kb, k2b, and c2, with aT = aA+aB, aA = 39.1 mm, aB = 51.2 mm, b =
-203.3 mm, aT=90.3 mm, are given by:
-%%缺公式
-Thus:
-%%缺公式
+对模量$k_b, k_{2b},c^2$，已知$a_T = a_A+a_B, a_A = 39.1 mm, a_B = 51.2 mm, b =203.3 mm, a_T=90.3 mm$。有：
+\begin{eqnarray}
+c^2=\frac{4a_A a_B)}{a_T^2}=0.982045\\
+k_b^2=\frac{4a_A a_B}{a_T^2+b^2}=0.161820\ \Rightarrow k_b=0.402269\\
+k_{2b}^2=\frac{4a_A a_B}{a_T^2+4b^2}=0.046160\ \Rightarrow k_{2b}=0.214848
+\end{eqnarray}
 
-This underestimates the code by 15%
+于是：
+$$
+F_z(0)=-7.4\ \mathrm{kN}
+$$
 
-%%表格3.13
+相比于程序值，低估了15\%。
+
+\colorbox{red}{表3.13}
 
 d)式3.57a下式给出：
 \begin{equation}
-F_{zA}(0)\simeq-\frac{\mu_{o}}{2}\{(\frac{N_{A}I_{A}}{2b_{A}})^{2}\pi a_{A}^{2}+(\frac{N_{B}I_{B}}{2b_{B}})(\frac{N_{A}I_{A}}{2b_{A}})\times\\
-(a_{A}-a_{B})^{2}[\prod(c^{2},k_{D})+\prod(c^{2},k_{T})-2\prod(c^{2},k_{B})]\}\\%(3.57a)
+\begin{split}
+F_{zA}(0)\simeq&-\frac{\mu_{o}}{2}\{(\frac{N_{A}I_{A}}{2b_{A}})^{2}\pi a_{A}^{2}+(\frac{N_{B}I_{B}}{2b_{B}})(\frac{N_{A}I_{A}}{2b_{A}})\times\\
+&(a_{A}-a_{B})^{2}[\prod(c^{2},k_{D})+\prod(c^{2},k_{T})-2\prod(c^{2},k_{B})]\}%(3.57a)
+\end{split}
 \end{equation}
 
-Parameter values other than those given in question d) are: aT=aA+aB=242.5 mm;
-bT=bA+bB=540.8 mm; bD=bA−bB=−134.2 mm; and
-%%缺公式
+不同的参数为：$a_T=a_A+a_B=242.5 mm;b_T=b_A+b_B=540.8 mm; b_D=b_A−b_B=−134.2 mm$；以及：
+\begin{eqnarray}
+c^2=\frac{4a_A a_B)}{a_T^2}=0.666266\\
+k_D^2=\frac{4a_A a_B}{a_T^2+b_D^2}=0.510028\ \Rightarrow k_D=0.0.714162\\
+k_{T}^2=\frac{4a_A a_B}{a_T^2+b_T^2}=0.111533\ \Rightarrow k_{2b}=0.333965\\
+k_B^2=\frac{4a_A a_B}{a_T^2+b_B^2}=0.226841\ \Rightarrow k_{B}=0.476278
+\end{eqnarray}
 
-Inserting appropriate values into Eq. 3.57a, we have:
-%%缺公式
+将这些值代入方程3.57a，有：
+\begin{equation}
+F_{zA}(0)\simeq XXXXX =-43.3\ \mathrm{kN}
+\end{equation}
 
-This is 2.7 times the code value of 16.2 kN. The major source of error comes from
-the approximation of Eq. 3.57a involving the interaction force, FzAB. In order
-for Eq. 3.57a to be valid, as remarked in its derivation, the conditions bA2   4aA2,
-b2B  aT2, bD2 aT2, must be satisfied. In this particular case, we have: bA2/4aT2=0.176;
-b2B/aT2 = 1.94; and bD2/aT2 = 0.306. That is, none of the conditions necessary for
-Eq. 3.57a to be valid is satisfied in this particular case.
+这是程序值16.2 kN的2.7倍。主要的错误来自方程3.57a的近似涉及到了相互作用力$F_{zAB}$。
+为了让方程3.57a可用，正如在推导时指出的，条件$b_A^2\gg  4a_A^2,b^2_B\gg  a_T^2, b_D^2\gg a_T^2$必须要满足。
+在这个特殊的粒子中，我们有$b_A^2/4a_T^2=0.176;b^2_B/a_T^2 = 1.94; b_D^2/a_T^2 = 0.306$，也就是说，
+没有一个条件满足。
 
-%%表格3.14
+\colorbox{red}{表3.14}
 
 e)式3.60由下式给出：
 \begin{equation}
@@ -4063,19 +4099,24 @@ F_{zR}(\rho)=&-\frac{\mu_{o}}{2}(\frac{N_{A}I_{A}}{2b_{A}})(\frac{N_{B}I_{B}}{2b
 \end{split}
 \end{equation}
 
-Parameter values other than those given in question e) are: aT=aA+aB=242.5 mm;
-bT=bA+bB=540.8 mm; bD=bA−bB=−134.2 mm; and
-%%缺公式
+不同的参数为：$a_T=a_A+a_B=242.5 mm;b_T=b_A+b_B=540.8 mm; b_D=b_A−b_B=−134.2 mm$；以及
+\begin{eqnarray}
+c^2=\frac{4a_A a_B)}{a_T^2}=0.666266\\
+k_{T+}^2=\frac{4a_A a_B}{a_T^2+(b_T+\rho)^2}=0.109834\ \Rightarrow k_{T+}=0.331412\\
+k_{T-}^2=\frac{4a_A a_B}{a_T^2+(b_T-\rho)^2}=0.0.113269\ \Rightarrow k_{T-}=0.336554\\
+k_{D+}^2=\frac{4a_A a_B}{a_T^2+(b_D+\rho)^2}=0.0.518925\ \Rightarrow k_{D+}=0.720364\\
+k_{D-}^2=\frac{4a_A a_B}{a_T^2+(b_D-\rho)^2}=0.501110\ \Rightarrow k_{D-}=0.707891
+\end{eqnarray}
 
-%%%表格3.15
+\colorbox{red}{表3.15}
 
-Applying these values in Table 3.15 into Eq. 3.60, we compute:
+应用表3.15中的数值到方程3.60，我们计算：
 $$
-a_{2}-a_{1}=[1+\frac{\sqrt{3}}{2}(N_{\ell}-1)]D_{ov}\\%(3.172)
+a_{2}-a_{1}=[1+\frac{\sqrt{3}}{2}(N_{\ell}-1)]D_{ov}%(3.172)
 $$
 
-This overestimates the code value (2.1 N) by ∼4%; the − sign implies that the
-force is restoring. The “spring constant” between the magnets is ∼400 kN/m.
+相比程序值(2.1 N)，这个计算值高估了大约4\%；负号表示这个力是恢复力。
+磁体间的“弹性常数”大约$400\ \mathrm{kN/m}$。
 \newpage
 
 
@@ -4086,7 +4127,7 @@ force expressions for an iron sphere (Fig. 3.46) “far” from the hybrid. The 
 (far) field of a solenoid, as discussed in PROBLEM 3.11, is given by a dipole field:
 
 \begin{equation}
-\vec{H}_{f}=H_{0}(\frac{R_{e}}{r})^{3}(\cos\theta\vec{\imath}_{r}+\frac{1}{2}\sin\theta\vec{\imath}_{\theta})\\%(3.163)
+\vec{H}_{f}=H_{0}(\frac{R_{e}}{r})^{3}(\cos\theta\vec{\imath}_{r}+\frac{1}{2}\sin\theta\vec{\imath}_{\theta})%(3.163)
 \end{equation}
 
 当一个磁性物体，比如铁球，处于空间变化的磁场中时，它会受到一个磁场力$\vec{f}_m$：
@@ -4101,14 +4142,14 @@ the “uniform” applied magnetic induction: Bsp  3μ◦H f = 3Bf (PROBLEM 2.1)
 For a sphere of a diameter much smaller than the distance from the magnet center
 to the sphere, Bf may be assumed uniform over the sphere. Thus:
 \begin{equation}
-e_{m}=\frac{\vec{B}_{sp}\cdot\vec{B}_{f}}{2\mu_{o}}=\frac{3|\vec{B}_{f}|^{2}}{2\mu_{o}}\\%(3.174)
+e_{m}=\frac{\vec{B}_{sp}\cdot\vec{B}_{f}}{2\mu_{o}}=\frac{3|\vec{B}_{f}|^{2}}{2\mu_{o}}%(3.174)
 \end{equation}
 
 When the iron is saturated with magnetization M sa, its magnetic induction is
 approximately equal to Bsa (= μ◦M sa), which is constant and aligned with Bf.
 Its energy density ems is thus given by:
 \begin{equation}
-e_{ms}\simeq\frac{\vec{B}_{sa}\cdot\vec{B}_{f}}{2\mu_{o}}\\%(3.17)
+e_{ms}\simeq\frac{\vec{B}_{sa}\cdot\vec{B}_{f}}{2\mu_{o}}%(3.17)
 \end{equation}
 
 In Eqs. 3.174 and 3.175, it is assumed that the impinging field is “uniform” for
