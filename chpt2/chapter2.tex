@@ -378,16 +378,17 @@ P_n^{m+2}(u)-\frac{2(m+1)u}{\sqrt{(1-u^2)}}P_n^{m+1}+(n-m)(n+m-1)P_n^m(u)=&0
 
 如图2.1所示，磁性球的半径是R，磁导率是$\mu$，外磁场为
 \begin{equation}\label{eqn:2.40}
-  \vec{H}_\infty = H_0 (-\cos \theta_{\vec{i_r}}+\sin\theta_{\vec{i_\theta}})
+  \vec{H}_\infty = H_0 (-\cos \theta\vec{i_r}+\sin\theta\vec{i_\theta})
 \end{equation}
 
-a) 证明磁性球内（$B_2$）、外（$B_1$）的磁感应强度分别为：
-\begin{eqnarray}
-% \nonumber % Remove numbering (before each equation)
-  B_1 =& \mu_0 H_0 (-\cos\theta_{\vec{i_r}}+\sin\theta_{\vec{i_\theta}})\\ \nonumber
-          &+\mu_0 \left(\frac{\mu_0-\mu}{2\mu_0+\mu}\right)H_0 \left(\frac{R}{r}\right)^3 (2\cos\theta_{\vec{i_r}}+\sin\theta_{\vec{i_\theta}})\\ \nonumber
+a) 证明磁性球内($B_2$)、外($B_1$)的磁感应强度分别为：
+\begin{subequations}
+	\begin{align}
+  B_1 =& \mu_0 H_0 (-\cos\theta\vec{i_r}+\sin\theta\vec{i_\theta})\notag\\ 
+          &+\mu_0 \left(\frac{\mu_0-\mu}{2\mu_0+\mu}\right)H_0 \left(\frac{R}{r}\right)^3 (2\cos\theta\vec{i_r}+\sin\theta\vec{i_\theta})\\ 
   B_2=& \frac{3\mu_0\mu H_0}{2\mu_0+\mu} (-\cos\theta_{\vec{i_r}}+\sin\theta_{\vec{i_\theta}})
-\end{eqnarray}
+  	\end{align}
+\end{subequations}
 
 考虑以下极限情况：$\mu/\mu_0=0, \mu/\mu_0=1,\mu/\mu_0=\infty$。确认结果表达式在球内是有物理意义的。
 
@@ -408,13 +409,17 @@ $$\vec{B}=\mu \vec{H} \eqno (S1.2)$$
 
 问题可以分为两个区域：区域1（$r\ge R$）和区域2（$r\le R$）。因为在$r=\infty$时，$H_\infty=H_0$，
 在$r=0$时，$H\neq \pm \infty$，每个区域的标量势可选为：
-$$\phi_1=H_0 r\cos\theta+\frac{A}{r^2}\cos\theta$$
-$$\phi_2=C r \cos\theta \eqno (S1.3)$$
+	\begin{align}
+\phi_1&=H_0 r\cos\theta+\frac{A}{r^2}\cos\theta \tag{S1.3a}\\
+\phi_2&=C r \cos\theta \tag{S1.3b}
+  	\end{align}
 
 注意到，在$r\rightarrow \infty$时，$\phi_1\rightarrow H_0 r \cos\theta$；在$r=0$时，$\phi_2$是有限的。
 应用$\nabla$算符，有：
-$$\vec{H}_1= H_0(−\cos\theta\vec{i_r} + \sin\theta\vec{i}_\theta) + \frac{A}{r^3}(2 \cos\theta\vec{i_r} + \sin\theta\vec{i_\theta})$$
-$$\vec{H}_2=C(-\cos\theta\vec{i_r} + \sin\theta\vec{i}_\theta) \eqno (S1.4)$$
+	\begin{align}
+\vec{H}_1&= H_0(−\cos\theta\vec{i_r} + \sin\theta\vec{i}_\theta) + \frac{A}{r^3}(2 \cos\theta\vec{i_r} + \sin\theta\vec{i_\theta})\tag{S1.4a}\\
+\vec{H}_2&=C(-\cos\theta\vec{i_r} + \sin\theta\vec{i}_\theta) \tag{S1.4b}
+  	\end{align}
 
 \textbf{边界条件}
 
@@ -429,18 +434,23 @@ $$C =\frac{3H_0\mu_0}{2\mu_0+\mu}\eqno (S1.7)$$
 $$A=(C-H_0)R^3=H_0\left(\frac{\mu_0-\mu}{2\mu_0+\mu}\right)R^3 \eqno (S1.8)$$
 
 于是，$\vec{B}_1$和$\vec{B}_2$可写为：
-$$\vec{B}_1= \mu_0 H_0(−\cos\theta\vec{i_r} + \sin\theta\vec{i_\theta}) +
-\mu_0\left(\frac{\mu_0-\mu}{2\mu_0+\mu}\right)H_0(\frac{R}{r})^3(2 \cos\theta\vec{i_r} + \sin\theta\vec{i_\theta})$$
-$$\vec{B}_2=\frac{3\mu_0\mu H_0}{2\mu_0+\mu}(-\cos\theta\vec{i_r} + \sin\theta\vec{i_\theta}))$$
+	\begin{align}
+\vec{B}_1=& \mu_0 H_0(−\cos\theta\vec{i_r} + \sin\theta\vec{i_\theta}) \notag\\
+&+\mu_0\left(\frac{\mu_0-\mu}{2\mu_0+\mu}\right)H_0\left(\frac{R}{r}\right)^3(2 \cos\theta\vec{i_r} + \sin\theta\vec{i_\theta})\tag{2.41a}\\
+\vec{B}_2=&\frac{3\mu_0\mu H_0}{2\mu_0+\mu}(-\cos\theta\vec{i_r} + \sin\theta\vec{i_\theta}))\tag{2.41b}
+  	\end{align}
 
 下面，我们考虑三种$\mu/mu_0$的三种特例。
 
 \textbf{特例1：$\mu/\mu_0=0$}
 
 将$\mu=0$代入2.41式，可得
-$$\vec{B}_1= \mu_0 H_0(−\cos\theta\vec{i_r} + \sin\theta\vec{i_\theta}) +
-\frac{\mu_0 H_0}{2}(\frac{R}{r})^3 (2 \cos\theta\vec{i_r} + \sin\theta\vec{i_\theta})$$
-$$\vec{B}_2=0 \eqno (S1.9)$$
+
+	\begin{align}
+\vec{B}_1&= \mu_0 H_0(−\cos\theta\vec{i_r} + \sin\theta\vec{i_\theta}) +
+\frac{\mu_0 H_0}{2}\left(\frac{R}{r}\right)^3 (2 \cos\theta\vec{i_r} + \sin\theta\vec{i_\theta})\tag{S1.9a}\\
+\vec{B}_2&=0 \tag{S1.9b}
+  	\end{align}
 
 这个球像第I类超导体。球内不允许有磁通密度存在（Meissner效应）。问题2.2将会讨论到，$\vec{H}$在
 $r=R$处的$\theta$分量不连续将要求存在表面电流（被限制在一个薄层内）。因为这个电流一旦建立起来，
@@ -449,161 +459,188 @@ $r=R$处的$\theta$分量不连续将要求存在表面电流（被限制在一�
 
 \textbf{特例2：$\mu/\mu_0=1$}
 
-这时问题退化为平凡解，即等价于没有球的存在。代入2.41，两个方程将变成同一个。
+这时问题退化为平凡解，即等价于没有球的存在。代入方程2.41，两个方程将变成同一个。
 
 \textbf{特例3：$\mu/\mu_0=\infty$}
 
 这时表示的是一个理想铁磁材料。软铁的性质与此接近。磁场被“吸”如球内，代入2.41中，有
-$$\vec{B}_1= \mu_0 H_0(−\cos\theta\vec{i_r} + \sin\theta\vec{i_theta}) -
-\mu_0 H_0\frac{R}{r})^3 (2 \cos\theta\vec{i_r} + \sin\theta\vec{i_theta})$$
-$$\vec{B}_2=3\mu_0 H_0(−\cos\theta\vec{i_r} + \sin\theta\vec{i_theta}) \eqno (S1.10)$$
+	\begin{align}
+\vec{B}_1&= \mu_0 H_0(−\cos\theta\vec{i_r} + \sin\theta\vec{i_\theta}) -
+\mu_0 H_0\left(\frac{R}{r}\right)^3 (2 \cos\theta\vec{i_r} + \sin\theta\vec{i_\theta})\tag{S1.10a}\\
+\vec{B}_2&=3\mu_0 H_0(−\cos\theta\vec{i_r} + \sin\theta\vec{i_\theta})\tag{S1.10b}
+  	\end{align}
+
 
 可见，球内的磁感应强度是外施磁场的3倍。注意到，如果球存在磁化饱和，则$\mu$不再是$\infty$。所有磁性
 材料都存在的磁场饱和效应将在问题4中讨论。
 
 b) 图2.2给出了$\mu/\mu_0=0.1$和$\mu/\mu_0=100$两种情况下的磁场线。
 
-\begin{figure}
+\begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.4]{chpt2/figs/fig2.2.eps}
   \caption{两种特例下球内和球附近的磁场线。上球在无穷远处的磁场线密度是球内的2.6倍；下球仅为1.7倍}
 \end{figure}
+\newpage
+
 
 \subsection{问题2.2：均匀场中的第I类超导棒}
 本题处理第I代超导体的Meissner效应，并用London超导理论对结果进行解释。
-图2.3给出了无限长、圆截面（半径R）的Pb棒，置于垂直于轴向的均匀外磁场中。
+图2.3给出了无限长、圆截面(半径$R$)的Pb棒，置于垂直于轴向的均匀外磁场中。
 \begin{equation*}\label{eqn:2.40}
-  \vec{H}_\infty = H_0 (-\cos \theta_{\vec{i_r}}+\sin\theta_{\vec{i_\theta}})
+  \vec{H}_\infty = H_0 (-\cos \theta\vec{i_r}+\sin\theta\vec{i_\theta}) \tag{2.40}
 \end{equation*}
 
-式中，$\mu_0H_0=0.08 T$。初始状态，棒处于正常态，于是磁场在棒的内外是处处相同的。棒逐步冷却至超导态。
+式中，$\mu_0H_0=0.08\ \mathrm{T}$。初始状态，棒处于正常态，于是磁场在棒的内外是处处相同的。棒逐步冷却至超导态。
 
 a)证明在外磁场暂态效应消失后，棒外场的表达式为
 \begin{equation}
-  \vec{H}_1=H_0(-\cos\theta\vec{i_r}+\sin\theta\vec{i_\theta})+H_0(\frac{R}{r})^2 (\cos\theta\vec{i_r}+\sin\theta\vec{i_\theta})
+  \vec{H}_1=H_0(-\cos\theta\vec{i_r}+\sin\theta\vec{i_\theta})+H_0\left(\frac{R}{r}\right)^2 (\cos\theta\vec{i_r}+\sin\theta\vec{i_\theta})
 \end{equation}
 
-b) 证明在穿透深度$\lambda\\ll R$内的电流密度$K_f [A/m]$的表达式为
+b) 证明在穿透深度$\lambda\ll R$内的电流密度$K_f [\mathrm{A/m}]$的表达式为
 \begin{equation}
   \vec{K}_f=2H_0 \sin\theta\vec{i_z}
 \end{equation}
 
-c)将表面电流密度幅值转换为（体）电流密度$J_f [A/m^2]$。证明用London超导理论导出的电流密度值和这个值是一致的。
+c)将表面电流密度幅值转换为（体）电流密度$J_f [\mathrm{A/m^2}]$。证明用London超导理论导出的电流密度值和这个值是一致的。
 
-\begin{figure}
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.4]{chpt2/figs/fig2.3.eps}
-	\caption{无限长、圆截面超导棒置于均匀磁场中}
+	\caption{无限长、圆截面超导棒置于均匀磁场中。}
 \end{figure}
 
 \subsubsection*{问题2.2之解答}
-a) 问题可以分为两个区域：区域1（$r\ge R$）和区域2（$r\le R$）。因为我们处理的是第I类超导体，也即圆棒超导时有$\vec{B}_2=0 (\phi_2=0)$。
+a) 问题可以分为两个区域：区域1($r\ge R$)和区域2($r\le R$)。因为我们处理的是第I类超导体，也即圆棒超导时有$\vec{B}_2=0 (\phi_2=0)$。
 区域1的场可由势函数导出：
 $$  \phi_2=H_0 r \cos \theta +\frac{A}{r} \cos \theta \eqno(S2.1)$$
 注意到，当$r\rightarrow \infty $时，$\phi_1\rightarrow H_0 r \cos\theta$。
 
 在圆柱坐标系下使用$\nabla$算符，可以得到$\vec{H}$：
-$$\vec{H}_1=-\frac{\partial}{\partial r}(H_0 r \cos\theta +\frac{A}{r}\cos\theta)\vec{i}_r-\frac{1}{r}\frac{\partial}{\partial \theta}(H_0 r \cos\theta +\frac{A}{r}\cos\theta)\vec{i}_\theta \eqno(S2.2)$$
-$$=-(H_0 \cos\theta +\frac{A}{r^2}\cos\theta)\vec{i}_r-(-H_0 \sin\theta -\frac{A}{r^2}\sin\theta)\vec{i}_\theta (S2.3)$$
+\begin{align}
+\vec{H}_1=&-\frac{\partial}{\partial r}(H_0 r \cos\theta +\frac{A}{r}\cos\theta)\vec{i}_r-\frac{1}{r}\frac{\partial}{\partial \theta}(H_0 r \cos\theta +\frac{A}{r}\cos\theta)\vec{i}_\theta \tag{S2.2}\\
+=&-(H_0 \cos\theta +\frac{A}{r^2}\cos\theta)\vec{i}_r-(-H_0 \sin\theta -\frac{A}{r^2}\sin\theta)\vec{i}_\theta \tag{S2.3}
+\end{align}
+
 整理S2.3式，可得
-$$\vec{H}_1=H_0(-\cos \theta \vec{i}_r+\sin \theta \vec{i}_\theta) +\frac{A}{r^2}(\cos\theta \vec{i}_r+\sin\theta \vec{i}_\theta ) (S2.4)$$
-B法向分量的连续性要求S2.3中$\vec{i}_r$的系数在$r=R$处为零：
-$$-H_0+\frac{A}{R^2}=0  (S2.5)$$
+\begin{equation*}
+\vec{H}_1=H_0(-\cos \theta \vec{i}_r+\sin \theta \vec{i}_\theta) +\frac{A}{r^2}(\cos\theta \vec{i}_r+\sin\theta \vec{i}_\theta )\tag{S2.4}
+\end{equation*}
+
+$B$法向分量的连续性要求S2.3中$\vec{i}_r$的系数在$r=R$处为零：
+\begin{equation*}
+-H_0+\frac{A}{R^2}=0  \tag{S2.5}
+\end{equation*}
+
 解出上式，得
-$$A=R^2 H_0 (S2.6)$$
-于是，超导圆棒外的场（区域1）可以写为：
-$$\vec{H}_1=H_0(-\cos \theta \vec{i}_r+\sin \theta \vec{i}_\theta) +H_0 (\frac{R}{r})^2(\cos\theta \vec{i}_r+\sin\theta \vec{i}_\theta ) (2.42)$$
+\begin{equation*}
+A=R^2 H_0 \tag{S2.6}
+\end{equation*}
+
+于是，超导圆棒外的场(区域1)可以写为：
+\begin{equation*}
+\vec{H}_1=H_0(-\cos \theta \vec{i}_r+\sin \theta \vec{i}_\theta) +H_0 \left(\frac{R}{r}\right)^2(\cos\theta \vec{i}_r+\sin\theta \vec{i}_\theta ) \tag{2.42}
+\end{equation*}
 
 注意到，在$r=R,\theta=90^\circ$时，$|\vec{H}_1|=2H_0$；也即此处的幅值是远场的两倍。物理上看，圆棒处于正常态时场本是在其内部的，进入超导态后，场被“推”出，挤压在$\theta=90^\circ$附近。
 
 
 b) 因为$2H_0\sin \theta$中的$\vec{H}$在$r=R$处的切向分量不连续，所以肯定存在表面电流密度$\vec{K}_f$流过超导棒。我们有：
 
-\begin{equation}
-  \vec{K}_f=\vec{i}_r \times 2H_0\sin\theta \vec{i}_\theta=2H_0\sin\theta\vec{i}_z
-\end{equation}
+\begin{equation*}
+  \vec{K}_f=\vec{i}_r \times 2H_0\sin\theta \vec{i}_\theta=2H_0\sin\theta\vec{i}_z\tag{2.43}
+\end{equation*}
 
 这个正弦电流分布式高能物理设施中被称为“核粒子加速器”内所用的大多数双极磁体的基础。
 
 
-c) 根据超导电性的London理论，第I类超导体的超导电流密度$J_s$由$J_s=en_{se}v$给出。其中，$e$是电荷量（$e=1.6\times 10^{-19}C$），$n_{se}$是超导电子的密度，$v$是超导电子的漂移速度。
+c) 根据超导电性的London理论，第I类超导体的超导电流密度$J_s$由$J_s=en_{se}v$给出。其中，$e$是电荷量($e=1.6\times 10^{-19}\ \mathrm{C}$)，$n_{se}$是超导电子的密度，$v$是超导电子的漂移速度。
 超导电子的密度\textbf{大致}上等于自由电子的密度：
 
-\begin{equation}
-n_{se}\simeq n_{fe}=\frac{\rho N_A}{W_A}
-\end{equation}
+\begin{equation*}
+n_{se}\simeq n_{fe}=\frac{\rho N_A}{W_A} \tag{1.2}
+\end{equation*}
 
-对于铅，$\rho=11.4 g/cm^3，N_A=6.023\times 10^{23}，W_A=207.2 g/mole$，我们得到单位体积的电子数量：
+对于铅，$\rho=11.4\ \mathrm{g/cm^3};N_A=6.023\times 10^{23};W_A=207.2\ \mathrm{g/mole}$，我们得到单位体积的电子数量：
+\begin{equation*}
+n_{se}=\frac{11.4\times 6.023\times 10^{23}}{207.2} \simeq 3.3\times 10^{28}\ \mathrm{electron/m^3} \tag{S2.7}
+\end{equation*}
+
+超导电子的漂移速度约为$200\ \mathrm{m/s}$，于是我们可以得到$J_s$的量级：
 $$
-n_{se}=\frac{11.4\times 6.023\times 10^{23}}{207.2} \simeq 3.3\times 10^{28}
+J_s=e n_{se} v\sim 1.6\times 10^{-19} \times 3.3\times 10^{28} \times 200 \sim 1\times 10^{12}\ \mathrm{A/m^2} 
 $$
-超导电子的漂移速度约为$200m/s$，于是我们可以得到$J_s$的量级：
-$$
-J_s=e n_{se} v\sim 1.6\times 10^{-19} \times 3.3\times 10^{28} \times 200 \sim 1\times 10^{12} A/m^2
-$$
-在上述铅圆柱棒所要求的表面电流密度（$K_f=J_f \lambda$）下，$J_f$应\textbf{大致}上与$J_s$相等，也即与上面所计算的$J_s$在同一个量级上。
+
+在上述铅圆柱棒所要求的表面电流密度($K_f=J_f \lambda$)下，$J_f$应\textbf{大致}上与$J_s$相等，也即与上面所计算的$J_s$在同一个量级上。
 London理论给出了供超导电流流过的超导体表面穿透深度$\lambda$的表达式：
-$$
-\lambda=\sqrt{\frac{m}{\mu_0 e^2 n_{se}}}
-$$
-其中，$n_{se}$上面已经给出，$m=9.1\times 10^{-31} kg$，则：
+\begin{equation*}
+\lambda=\sqrt{\frac{m}{\mu_0 e^2 n_{se}}} \tag{1.1}
+\end{equation*}
+
+其中，$n_{se}$上面已经给出，$m=9.1\times 10^{-31}\ \mathrm{kg}$，则：
 $$
 \lambda=\sqrt{\frac{9.1\times 10^{-31}}{4\pi \times 10^{-7}\times 1.6\times 10^{-19}\times 3.3\times 10^{28}}}\simeq 3\times 10^{-8} m
 $$
+
 由于$K_f=J_f\lambda$，则
-$$
-J_f=\frac{2H_0}{\lambda}=\frac{2\mu_0 H_0}{\mu_0 \lambda}\simeq 4\times 10^{12} A/m^2
-$$
+\begin{equation*}
+J_f=\frac{2H_0}{\lambda}=\frac{2\mu_0 H_0}{\mu_0 \lambda}\simeq 4\times 10^{12} \ \mathrm{A/m^2}  \tag{S2.9}
+\end{equation*}
+
 也即，$J_f$与$J_s$\textbf{大致}上相等。
+\newpage
+
 
 
 \subsection{讨论2.1：均匀场中的理想导体球}
 本题我们推导理想导体（$\rho=0$）球置于磁场中的定量磁场表达。特别是针对图 1.1c中的$C\Rightarrow D$转变过程。
 点C处，包括球内的整个空间处于均匀外场中（问题1，eq. 2.40）。外施场合问题1中的图 2.1相同。
 
-当均匀外场降至$0$（图1.1c中的D点），由于球内的磁感应无法改变，其磁场$\vec{H_2}$必保持不变。
-$$
-\vec{H_2}=H_0 (-\cos\theta \vec{i_r}+\sin\theta \vec{i_\theta})  (r\le R)
-$$
-
-远离球中心（$r\rightarrow \infty$）处的外场$\vec{H_1}$为0。靠近球处的磁场可由标量势$\phi_1=(A/r^2)\cos\theta$导出。
-在$\phi_1$上应用$\nabla$算符，可得到球坐标下的偶极场：
-$$
-\vec{H_1}=\frac{A}{r^3}(2\cos\theta \vec{i_r}+\sin\theta \vec{i_\theta})  (r\ge R)
-$$
+当均匀外场降至$0$（图1.1c中的D点），由于球内的磁感应无法改变，其磁场$\vec{H_2}$必保持不变。远离球中心（$r\rightarrow \infty$）处的外场$\vec{H_1}$为0。靠近球处的磁场可由标量势$\phi_1=(A/r^2)\cos\theta$导出。
+在$\phi_1$上应用$\nabla$算符，可得到球坐标下的偶极场。
+\begin{subequations}
+	\begin{align}
+\vec{H_2}=&H_0 (-\cos\theta \vec{i_r}+\sin\theta \vec{i_\theta})  \qquad(r\le R) \\
+\vec{H_1}=&\frac{A}{r^3}(2\cos\theta \vec{i_r}+\sin\theta \vec{i_\theta})\qquad  (r\ge R)
+	\end{align}
+\end{subequations}
 
 在$r=R$处，$B$的法向分量应连续。由于在$\theta=0$处球内外的磁场均仅有法向分量，故：
 $$
 -H_0=2\frac{A}{R^3}
 $$
 
-于是，$A=-\frac{H_0 R^3}{2}$，进而
-$$
-\vec{H_1}=-H_0(\frac{R}{r})^3 (\cos\theta \vec{i_r}+\frac{1}{2}\sin\theta \vec{i_\theta})
-$$
+于是，$A=-H_0 R^3/2$，进而：
+\begin{equation*}
+\vec{H_1}=-H_0\left(\frac{R}{r}\right)^3 (\cos\theta \vec{i_r}+\frac{1}{2}\sin\theta \vec{i_\theta}) \tag{2.44c}
+\end{equation*}
+
 
 上式即磁场分布的定量表达。不同的是，图1.1c的外场是自下向上的，而图2.1的磁场是自右向左的。
 
-在$r=R$处，磁场切向分量的不连续等于在$r=R$处球表面电流密度$\vec{K_f}$。联立方程2.6以及上面3式，有
+在$r=R$处，磁场切向分量的不连续等于在$r=R$处球表面电流密度$\vec{K}_f$。联立方程2.6、2.44a和2.44c，有：
 \begin{equation}
-  \vec{K_f}=\vec{i_r}\times [H_0 \sin\theta \vec{i_\theta}-(-\frac{1}{2}H_0 \sin\theta \vec{i_\theta})]=\frac{3}{2}H_0\sin\theta\vec{i_\theta}
+  \vec{K}_f=\vec{i_r}\times \left[H_0 \sin\theta \vec{i_\theta}-(-\frac{1}{2}H_0 \sin\theta \vec{i_\theta})\right]=\frac{3}{2}H_0\sin\theta\vec{i_\theta}
 \end{equation}
 
-值得一提的是，这个$\sin\theta$分布，可以用一个绕在球上的在z轴均匀匝密度的“薄”线圈来近似。
+值得一提的是，这个$\sin\theta$分布，可以用一个绕在球上的在$z$轴均匀匝密度的“薄”线圈来近似。
+\newpage
+
 
 
 \subsection{问题2.3：球壳的磁屏蔽}
 本问题处理被动磁屏蔽。在MRI、磁悬浮等一些人和磁场敏感设备必须暴露于磁场外缘的高场系统中磁屏蔽是非常重要的课题。
-美国食药局（FDA）规定，MRI中的最大外缘磁场为5高斯（$0.5mT$）。
+美国食药局（FDA）规定，MRI中的最大外缘磁场为5高斯($0.5\ \mathrm{mT}$)。
 
 在空间中的球星区域，屏蔽一个均匀磁场$\vec{H}_\infty$：
-$$
-\vec{H}_\infty=H_0 (-\cos\theta \vec{i_r}+\sin\theta \vec{i_\theta})
-$$
+\begin{equation*}
+\vec{H}_\infty=H_0 (-\cos\theta \vec{i_r}+\sin\theta \vec{i_\theta})\tag{2.40}
+\end{equation*}
 
-为了形成屏蔽，可以用一个外径为$2R$、壁厚$d/R\ll 1$、高磁导率材料（$\mu/\mu_0 \gg 1$）的球壳，如图2.4所示。
+为了形成屏蔽，可以用一个外径为$2R$、壁厚$d/R\ll 1$、高磁导率材料($\mu/\mu_0 \gg 1$)的球壳，如图2.4所示。
 
-a) 将本问题视为均匀外磁场中的磁性球壳。证明$H_{ss}/H_0$有如下表达式。其中，$H_{ss}$为球壳内（$r\le R-d$）的磁场幅值
+a) 将本问题视为均匀外磁场中的磁性球壳。证明$H_{ss}/H_0$有如下表达式。其中，$H_{ss}$为球壳内($r\le R-d$)的磁场幅值
 \begin{equation}
 \frac{H_{ss}}{H_0}=\frac{9\mu_0 \mu}{9\mu_0 \mu+2(\mu-\mu_0)^2\left[1-\left(1-\frac{d}{R}\right)^3\right]}
 \end{equation}
@@ -622,30 +659,29 @@ d)实践中，屏蔽材料中的磁通必须控制在材料的饱和磁通（$\m
 
 e)画出$\mu/\mu_0 \gg 1$情况下的场线。
 
-\begin{figure}
+\begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.9]{chpt2/figs/fig2.4.eps}
   \caption{均匀磁场中的磁性球壳}
 \end{figure}
 
 \subsubsection*{问题2.3之解答}
-a)问题可以分为三个区域：区域1（$r\ge R$）；区域2（球壳）；区域3（$r\le R-d$）。相应的势函数为：
-\begin{eqnarray*}
-% \nonumber % Remove numbering (before each equation)
-  \phi_1 &=& H_0 r\cos\theta+\frac{A}{r^2}\cos\theta \\
-  \phi_2 &=& C r \cos\theta+\frac{D}{r^2}\cos\theta \\
-  \phi_3 &=& H_{ss} r\cos\theta
-\end{eqnarray*}
+a)问题可以分为三个区域：区域1($r\ge R$)；区域2(球壳)；区域3($r\le R-d$)。相应的势函数为：
+\begin{align}
+  \phi_1 =& H_0 r\cos\theta+\frac{A}{r^2}\cos\theta \tag{S3.1a} \\
+  \phi_2 =& C r \cos\theta+\frac{D}{r^2}\cos\theta\tag{S3.1b} \\
+  \phi_3 =& H_{ss} r\cos\theta  \tag{S3.1c}
+\end{align}
 
 注意到，在$r\rightarrow \infty$时，$\phi_1 \rightarrow H_0 r\cos\theta$以及在$r\rightarrow 0$时，$\phi_3$为有限值。应用球坐标下的$\nabla$算符，得到
-\begin{eqnarray*}
-% \nonumber % Remove numbering (before each equation)
-  \vec{H}_1 &=& H_0 (-\cos\theta\vec{i_r}+\sin\theta\vec{i}_\theta)+\frac{A}{r^3} (2\cos\theta\vec{i_r}+\sin\theta\vec{i}_\theta)\\
-  \vec{H}_2 &=& C(-\cos\theta\vec{i_r}+\sin\theta\vec{i}_\theta)+\frac{D}{r^3} (2\cos\theta\vec{i_r}+\sin\theta\vec{i}_\theta)\\
-   \vec{H}_3 &=& H_{ss}  (-\cos\theta\vec{i_r}+\sin\theta\vec{i}_\theta)
-\end{eqnarray*}
+\begin{align}
+  \vec{H}_1 =& H_0 (-\cos\theta\vec{i_r}+\sin\theta\vec{i}_\theta)+\frac{A}{r^3} (2\cos\theta\vec{i_r}+\sin\theta\vec{i}_\theta) \tag{S3.2a}\\
+  \vec{H}_2 =& C(-\cos\theta\vec{i_r}+\sin\theta\vec{i}_\theta)+\frac{D}{r^3} (2\cos\theta\vec{i_r}+\sin\theta\vec{i}_\theta)  \tag{S3.2b}\\
+   \vec{H}_3 =& H_{ss}  (-\cos\theta\vec{i_r}+\sin\theta\vec{i}_\theta)  \tag{S3.2c}
+\end{align}
 
-边界条件为：
+\textbf{边界条件：}
+
 \begin{enumerate}
   \item $r=R$处，$\vec{H}$的切向分量$H_\theta$连续：$\phi_1=\phi_2   $
   \item 类似的，在$r=R-d$处，$H_\theta$连续：$\phi_2=\phi_3  $
@@ -654,107 +690,119 @@ a)问题可以分为三个区域：区域1（$r\ge R$）；区域2（球壳）�
 \end{enumerate}
 
 由上述边界条件，可导出下面的四个方程：
-\begin{eqnarray*}
-% \nonumber % Remove numbering (before each equation)
-  H_0+\frac{A}{R^3}&=& C+\frac{D}{R^3} \\
-  C+\frac{D}{(R-d)^3}&=& H_{ss}\\
-  \mu_0(-H_0+\frac{2A}{R^3})&=& \mu(-C+\frac{2D}{R^3})\\
-  \mu[-C+\frac{2D}{(R-d)^3}&=& -\mu_0 H_{ss}
-\end{eqnarray*}
+\begin{align}
+  H_0+\frac{A}{R^3}=& C+\frac{D}{R^3} \nonumber \tag{S3.3a}\\
+  C+\frac{D}{(R-d)^3}=& H_{ss} \nonumber \tag{S3.3b}\\
+  \mu_0(-H_0+\frac{2A}{R^3})=& \mu\left(-C+\frac{2D}{R^3}\right)\nonumber \tag{S3.3c} \\
+  \mu\left[-C+\frac{2D}{(R-d)^3}\right]=& -\mu_0 H_{ss} \nonumber\tag{S3.3d}
+\end{align}
 
-联立1、2式，消去C：
-$$
-\frac{A}{R^3}+D[\frac{1}{(R-d)^3}-\frac{1}{R^3}]-H_ss =-H_0
-$$
-
-联立2、4式，解出D：
-$$
-D=\frac{\mu-\mu_0}{2\mu} (R-d)^3 H_ss
-$$
-
-于是，可以$H_{ss}$表示$A/R^3$：
-$$
-\frac{A}{R^3}=H_{ss}\{1-\frac{\mu-\mu_0}{3\mu}[1-(1-\frac{d}{R})^3]\}-H_0
-$$
-
-联立3、4式，得到：
-$$
-\frac{2A}{R^3}+2\frac{\mu}{\mu_0}D[\frac{1}{(R-d)^3}-\frac{1}{R^3}]+H_ss =H_0
-$$
-
-于是，可以得到
+联立S3.3a和S3.3b，消去$C$：
 \begin{equation*}
-\frac{H_{ss}}{H_0}=\frac{9\mu_0 \mu}{9\mu_0 \mu+2(\mu-\mu_0)^2\left[1-\left(1-\frac{d}{R}\right)^3\right]}
+\frac{A}{R^3}+D\left[\frac{1}{(R-d)^3}-\frac{1}{R^3}\right]-H_{ss} =-H_0 \tag{S3.4}
 \end{equation*}
 
-b) 方程右侧的分子分母同除$\mu_0^2$，应用极限$\mu/\mu_0)\gg 1$和$d/R\ll 1$：
-$$\frac{H_{ss}}{H_0}\simeq \frac{9\mu/mu_0}{9\frac{\mu}{\mu_0}+2(\frac{\mu}{\mu_0})^2[1-(1-3\frac{d}{R})]}$$
-$$\simeq\frac{3}{3+2(\frac{\mu}{\mu_0})(\frac{d}{R})}$$
 
-在$\mu d/\mu_0 R \gg 1$的特殊情况下，上式可以进一步简化为：
-$$\frac{H_{ss}}{H_0}\simeq \frac{2}{3}(\frac{\mu_0}{\mu})(\frac{R}{d})$$
+联立S3.3b和S3.3d，解出$D$：
+\begin{equation*}
+D=\frac{\mu-\mu_0}{2\mu} (R-d)^3 H_{ss}  \tag{S3.5}
+\end{equation*}
+
+于是，可以$H_{ss}$表示$A/R^3$：
+\begin{equation*}
+\frac{A}{R^3}=H_{ss}\left\{1-\frac{\mu-\mu_0}{3\mu}\left[1-\left(1-\frac{d}{R}\right)^3\right]\right\}-H_0   \tag{S3.6}
+\end{equation*}
+
+联立S3.3c和S3.3d，得到：
+\begin{equation*}
+\frac{2A}{R^3}+2\frac{\mu}{\mu_0}D\left[\frac{1}{(R-d)^3}-\frac{1}{R^3}\right]+H_ss =H_0  \tag{S3.7}
+\end{equation*}
+
+联立S3.3-S3.7，用$H_0$表达$H_{ss}$，可以得到：
+\begin{equation*}
+\frac{H_{ss}}{H_0}=\frac{9\mu_0 \mu}{9\mu_0 \mu+2(\mu-\mu_0)^2\left[1-\left(1-\frac{d}{R}\right)^3\right]}  \tag{2.46}
+\end{equation*}
+
+b) 方程右侧的分子分母同除$\mu_0^2$，应用极限$\mu/\mu_0\gg 1$和$d/R\ll 1$：
+\begin{align}
+\frac{H_{ss}}{H_0}\simeq& \frac{9\mu/\mu_0}{9\frac{\mu}{\mu_0}+2(\frac{\mu}{\mu_0})^2\left[1-(1-3\frac{d}{R})\right]} \nonumber\tag{S3.8}\\
+\simeq&\frac{3}{3+2(\frac{\mu}{\mu_0})(\frac{d}{R})}\nonumber \tag{S3.9}
+\end{align}
+
+在$\mu d/\mu_0 R \gg 1$的特殊情况下，S3.9可以简化为：
+\begin{equation*}
+\frac{H_{ss}}{H_0}\simeq \frac{2}{3}(\frac{\mu_0}{\mu})(\frac{R}{d})  \tag{2.47}
+\end{equation*}
 
 c)我们假设$\mu$为无限大。这要求B线在$r=R$处垂直于球壳。这是因为在$r=R$处，$\vec{H}_1$仅有径向分量。由于壳内$H=0$，故在$r=R$处$H_\theta$必须连续。
 注意到，当$\mu=\infty$时，$C=D=0$。这样，$A=-R^3 H_0$，于是在$r=R$处
-$$\vec{H}_1=-3 H_0 \cos\theta \vec{i_r}$$
+\begin{equation*}
+\vec{H}_1=-3 H_0 \cos\theta \vec{i_r} \tag{S3.10}
+\end{equation*}
 
-\begin{figure}
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.7]{chpt2/figs/fig2.5.eps}
-	\caption{通过球壳$\pm \theta$边界内区域进入壳的磁通}
+	\caption{通过球壳$\pm \theta$边界内区域进入壳的磁通。}
 \end{figure}
 
-B线局限在壳内，不会“逸”至区域3。也即，壳内的B仅有$\vec{i}_\theta$分量。应用磁通连续性（$\nabla \cdot \vec{B}=0$）并在$\mu=\infty$条件下解$B_2$。解出$B_2$
+B线局限在壳内，不会“逸”至区域3。也即，壳内的B仅有$\vec{i}_\theta$分量。应用磁通连续性($\nabla \cdot \vec{B}=0$)并在$\mu=\infty$条件下解$B_2$。解出$B_2$
 后，可以得到$\mu \neq \infty$但$\mu/\mu_0 \gg 1$时$\vec{H}_3$的近似表达式。
 
-首先，计算通过表面区域$\pm \theta$边界内进入壳的总磁通（图2.5）。根据图中的微元积分
-$$
-\Phi=\mu_0\int_{0}^{\theta} \vec{H}_1 \cdot d\vec{A}=\mu_0\int_{0}^{\theta} 3H_0\cos\theta 2\pi R^2 \sin\theta d\theta=3\pi\mu_0 R^2 H_0 \sin^2 \theta
-$$
+首先，计算通过表面区域$\pm \theta$边界内进入壳的总磁通(图2.5)。根据图中的微元积分
+\begin{align}
+\Phi=&\mu_0\int_{0}^{\theta} \vec{H}_1 \cdot d\vec{A}=\mu_0\int_{0}^{\theta} 3H_0\cos\theta 2\pi R^2 \sin\theta d\theta\nonumber\\
+=&3\pi\mu_0 R^2 H_0 \sin^2 \theta\nonumber \tag{S3.11}
+\end{align}
+
 
 这个$\Phi$一定等于在球壳$\theta$处$\theta$方向的磁通量。
 在$d\ll R$条件下，壳在$\theta$处的截面区域$A_2$可由下式给出
-$$
-A_2\simeq d\cdot 2\pi R\sin\theta
-$$
+\begin{equation*}
+A_2\simeq d\cdot 2\pi R\sin\theta \tag{S3.12}
+\end{equation*}
 
 我们有
-$$\Phi=3\pi\mu_0 R^2 H_0 \sin^2 \theta\simeq B_2 A_2=B_2 d 2 \pi R \sin\theta$$
+\begin{align}
+\Phi=&3\pi\mu_0 R^2 H_0 \sin^2 \theta\nonumber\\
+\simeq& B_2 A_2=B_2 d 2 \pi R \sin\theta \tag{S3.13}
+\end{align}
 
 解出$B_2$，得
-$$
-\vec{B}_2\simeq \frac{3}{2}\mu_0 (\frac{R}{d}) H_0\sin\theta\vec{i}_\theta
-$$
+\begin{equation*}
+\vec{B}_2\simeq \frac{3}{2}\mu_0 \left(\frac{R}{d}\right) H_0\sin\theta\vec{i}_\theta \tag{S3.14}
+\end{equation*}
 
 注意到上式的$\vec{B}_2$是在$\mu=\infty$条件下得到的。现在我们可以导出$\vec{H}_3$的近似表达。
 由于$\vec{H}$的$\vec{i}_\theta$分量在$r=R-d$处必须连续，于是
-$$
-H_{\theta 3}\simeq \frac{B_{\theta 2}}{\mu}=\frac{3}{2}(\frac{\mu_0}{\mu})(\frac{R}{d})H_0\sin\theta
-$$
+\begin{equation*}
+H_{\theta 3}\simeq \frac{B_{\theta 2}}{\mu}=\frac{3}{2}\left(\frac{\mu_0}{\mu}\right)\left(\frac{R}{d}\right)H_0\sin\theta \tag{S3.15}
+\end{equation*}
 
 得到了$H_{\theta 3}$，我们就可以给出$\vec{H}_3$的完整表达式了：
-$$
-\vec{H}_3\simeq \frac{B_{\theta 2}}{\mu}=\frac{3}{2}(\frac{\mu_0}{\mu})(\frac{R}{d})H_0(-\cos\theta\vec{i_r}+\sin\theta\vec{i}_\theta)
-$$
+\begin{align}
+\vec{H}_3\simeq \frac{B_{\theta 2}}{\mu}=&\frac{3}{2}\left(\frac{\mu_0}{\mu}\right)\left(\frac{R}{d}\right)H_0(-\cos\theta\vec{i_r}+\sin\theta\vec{i}_\theta) \nonumber\tag{S3.16a}\\
+\left|\frac{\vec{H}_3}{H_0}\right|\simeq& \frac{3}{2}\left(\frac{\mu_0}{\mu}\right)\left(\frac{R}{d}\right) \nonumber\tag{S3.16b}
+\end{align}
 
-于是
-$$\left|\frac{\vec{H}_3}{H_0}\right|\simeq \frac{3}{2}(\frac{\mu_0}{\mu})(\frac{R}{d})$$
-
+方程S3.16b给出的比值与方程2.47给出的$H_{ss}/H_0$是一致的。
 注意：此处的微扰法需要$\mu=\infty$和$d\ll R$条件，但无需$\mu d/\mu_0 R \gg 1$条件。
 
-d)应当明确，不能为了满足$d/R \ll 1$而将d选的特别小。事实上，下面的分析仅在下式条件满足时有效：
-$$
-\frac{\mu_0}{\mu} \ll \frac{d}{R} \ll 1
-$$
+d)应当明确，不能为了满足$d/R \ll 1$而将$d$选的特别小。事实上，下面的分析仅在下式条件满足时有效：
+\begin{equation*}
+\frac{\mu_0}{\mu} \ll \frac{d}{R} \ll 1 \tag{S3.17}
+\end{equation*}
 
-实际的$\mu$不可能无限大。屏蔽材料会随着外场的增大最终饱和。因此，壳内的最大磁通（在$\theta=90\circ C$时取得）必须小于屏蔽壳材料的饱和磁通$\mu_0 M_{sa}$。
+实际的$\mu$不可能无限大。屏蔽材料会随着外场的增大最终饱和。因此，壳内的最大磁通($\theta=90^\circ$时取得)必须小于屏蔽壳材料的饱和磁通$\mu_0 M_{sa}$。
 于是
-$$
-\frac{3}{2}(\frac{R}{d})\mu_0 H_0 \le \mu_0 M_{sa}
-$$
+\begin{equation*}
+\frac{3}{2}\left(\frac{R}{d}\right)\mu_0 H_0 \le \mu_0 M_{sa}  \tag{S3.18}
+\end{equation*}
 
-解出$d/R$，有
-$$\frac{d}{R}\gg \frac{3H_0}{2M_{sa}}$$
+在S3.18中解出$d/R$，有
+\begin{equation*}
+\frac{d}{R}\gg \frac{3H_0}{2M_{sa}}  \tag{2.48}
+\end{equation*}
 
 表\ref{my-label} 给出了三种材料的微分$\mu/\mu_0$和$\mu_0M(H_0)$的近似值。其中，$(\mu/\mu_0)_{dif}\equiv \Delta M/ \Delta H_0 |_{\mu_0 H_0}$，$\mu_0 H_0$的范围为$0\sim 1000$高斯。
 后面还给出了这三种材料的饱和磁通值。这几种材料常用来屏蔽$\sim 100$高斯下的磁场。
@@ -766,7 +814,7 @@ $$\frac{d}{R}\gg \frac{3H_0}{2M_{sa}}$$
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
 \multirow{2}{*}{$\mu_0 H_0$[gauss]} & \multicolumn{2}{c|}{annealed ingot iron} & \multicolumn{2}{c|}{As-Cast Steel} & \multicolumn{2}{c|}{Vanadium Permendur} \\ \cline{2-7}
-                                  &$ (\mu/mu_0)_{dif} $      & $\mu_0 $M[T]  & $(\mu/mu_0)_{dif}   $ &$ \mu_0 M$[T]   &$ (\mu/mu_0)_{dif}    $  & $\mu_0 M$[T]      \\ \hline
+                                  &$ (\mu/\mu_0)_{dif} $      & $\mu_0 $M[T]  & $(\mu/\mu_0)_{dif}   $ &$ \mu_0 M$[T]   &$ (\mu/\mu_0)_{dif}    $  & $\mu_0 M$[T]      \\ \hline
 1                                 & 7710                   & 0.375           & na                  & na           & na                    & na              \\ \hline
 3                                 & 3850                   & 0.91            & 1660                & 0.25         & 4845                  & 0.65            \\ \hline
 5                                 & 500                    & 1.42            & 1155                & 0.51         & 1875                  & 1.25            \\ \hline
@@ -788,13 +836,16 @@ e) $\mu/\mu_0=100$磁性球壳置于均匀场中的磁场分布如图2.6所示�
  \includegraphics[scale=0.7]{chpt2/figs/fig2.6.eps}
   \caption{$\mu/\mu_0=100$磁性球壳置于均匀场中的磁场分布。注意到进出球壳的磁场线是近乎垂直于壳的。}
 \end{figure}
+\newpage
+
 
 \subsection{讨论2.2：用圆柱壳屏蔽}
-我们用类似于问题4中所用的微扰技术推导$H_{cs}/H_0$的表达式。式中，$H_{cs}$是置于均匀外场采用高磁导率（$\mu/\mu_0 \gg 1$）材料的圆柱壳（$d/R\ll 1$）内部（$r\le R-d$）的磁场的幅值。
+我们用类似于问题4中所用的微扰技术推导$H_{cs}/H_0$的表达式。式中，$H_{cs}$是置于均匀外场采用高磁导率($\mu/\mu_0 \gg 1$)材料的圆柱壳($d/R\ll 1$)内部($r\le R-d$)的磁场的幅值。
 在二维柱坐标系下，外场有如下形式：
-$$
-\vec{H}_\infty =H_0 (-\cos\theta \vec{i_r}+\sin\theta\vec{i}_\theta)
-$$
+\begin{equation*}
+\vec{H}_\infty =H_0 (-\cos\theta \vec{i_r}+\sin\theta\vec{i}_\theta) \tag{2.40}
+\end{equation*}
+
 
 我们假定圆柱材料的$\mu$是无限大的，这样B线在$r=R$处必须垂直于圆柱。于是，在$r=R$处，有
 $$\vec{H}_1 =-2 H_0 \cos\theta \vec{i_r}$$
@@ -812,26 +863,35 @@ $$\vec{H}_2= \frac{\vec{B}_2}{\mu}\simeq 2(\frac{\mu_0}{\mu}) (\frac{R}{d})H_0 \
 $$H_{\theta 3}=H_{\theta 2}\simeq 2(\frac{\mu_0}{\mu}) (\frac{R}{d})H_0 \sin\theta$$
 
 从上面的表达式，可以得出：
-$$\vec{H}_3 \simeq 2(\frac{\mu_0}{\mu}) (\frac{R}{d})H_0 (-\cos\theta \vec{i_r}+\sin\theta\vec{i}_\theta)$$
-$$\left|\frac{\vec{H}_3}{H_0}\right|\equiv\frac{H_{cs}}{H_0}\simeq 2(\frac{\mu_0}{\mu}) (\frac{R}{d})$$
+\begin{align}
+\vec{H}_3 \simeq& 2(\frac{\mu_0}{\mu}) (\frac{R}{d})H_0 (-\cos\theta \vec{i_r}+\sin\theta\vec{i}_\theta)\nonumber\\
+\left|\frac{\vec{H}_3}{H_0}\right|\equiv&\frac{H_{cs}}{H_0}\simeq 2(\frac{\mu_0}{\mu}) (\frac{R}{d})
+\end{align}
 
-如问题4中的球壳一样，圆柱壳的厚度也不能无线薄。它必须有保持足够的厚度以防止饱和：
+如问题2.3中的球壳一样，圆柱壳的厚度也不能无线薄。它必须有保持足够的厚度以防止饱和：
 $$\mu H_{cs}=2\mu_0 H_0 \frac{R}{d}\le \mu_0 M_{sa}$$
 
-也即
-$$\frac{d}{R}\ge \frac{2H_0}{M_{sa}}$$
+根据上面的推导，我们得到：
+\begin{equation}
+\frac{d}{R}\ge \frac{2H_0}{M_{sa}}
+\end{equation}
+\newpage
 
 
 \subsection{问题2.4：四个偶极子簇的远场}
-本题讨论如下图布置的四个理想偶极子簇的远场。各偶极子的方向如图箭头所示。两个相反偶极子的中心距为$2\delta_d$。各偶极子j均为零绕组厚度，直径均为$2r_d$，在y向的总长度为$l_d$，距离偶极子径向（$r_j$）位置的远场（$r_j \gg l_d$）可建模为球偶极子场$\vec{B}_j$：
-$$\vec{B}_j=\frac{r_d^2 l_d B_0}{2r_j^3}(\cos\theta_j \vec{i}_{r_j}+\frac{1}{2} \sin\theta_j \vec{i}_{\theta_j})$$
+本题讨论如下图布置的四个理想偶极子簇的远场。各偶极子的方向如图箭头所示。两个相反偶极子的中心距为$2\delta_d$。各偶极子j均为零绕组厚度，直径均为$2r_d$，在y向的总长度为$l_d$，距离偶极子径向($r_j$)位置的远场($r_j \gg l_d$)可建模为球偶极子场$\vec{B}_j$：
+\begin{equation}
+\vec{B}_j=\frac{r_d^2 l_d B_0}{2r_j^3}(\cos\theta_j \vec{i}_{r_j}+\frac{1}{2} \sin\theta_j \vec{i}_{\theta_j})
+\end{equation}
 
-式中，$r_j$is measured from the center of each dipole and $\theta_j$ in each dipole is defined such that the field inside the winding points in the $r_j$-direction when $\theta_j=0$。图2.7给出了各偶极子内场的方向，还定义了对所有偶极子共同的$r-\theta$坐标系和$z-x$坐标系。注意到，$r\gg \delta_d$，我们有$\mathscr{\theta}_1=\theta+180^\circ,\theta_2=\theta-90^\circ,\theta_3=\theta,\theta_4=\theta + 90^\circ$。
+式中，$r_j$是分别到各偶极子中心的距离；$\theta_j$的定义确保$\theta_j=0^\circ$时，各偶极子的绕组内场指向$r_j$方向。图2.7给出了各偶极子内场的方向，还定义了对所有偶极子共同的$r-\theta$坐标系和$z-x$坐标系。注意到，$r\gg \delta_d$，我们有$\mathscr{\theta}_1=\theta+180^\circ,\theta_2=\theta-90^\circ,\theta_3=\theta,\theta_4=\theta + 90^\circ$。
 
-证明，忽略各偶极子的末端效应，仅考虑$y=0$平面，本组合系统的远场（$r/\delta_d \gg 1$）近似表达式为：
-$$ \vec{B}\simeq \frac{3r_d^2 l_d B_0 \delta_d}{r^4}(-\sin 2\theta \vec{i}_r+\frac{1}{2}\cos 2\theta \vec{i}_\theta)$$
+证明，忽略各偶极子的末端效应，仅考虑$y=0$平面，本组合系统的远场($r/\delta_d \gg 1$)近似表达式为：
+\begin{equation}
+\vec{B}\simeq \frac{3r_d^2 l_d B_0 \delta_d}{r^4}(-\sin 2\theta \vec{i}_r+\frac{1}{2}\cos 2\theta \vec{i}_\theta)
+\end{equation}
 
-\begin{figure}
+\begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.8]{chpt2/figs/fig2.7.eps}
   \caption{四个偶极子布置的横截面。每个偶极子的箭头指示线圈内场的方向。}
@@ -840,64 +900,82 @@ $$ \vec{B}\simeq \frac{3r_d^2 l_d B_0 \delta_d}{r^4}(-\sin 2\theta \vec{i}_r+\fr
 
 \subsubsection*{问题2.4之解}
 对于$r\gg \delta_d$，每个偶极子的$r_j$可以用$r$和$\theta$表示：
-$$r_1\simeq r-\delta_d \sin\theta$$
-$$r_2\simeq r+\delta_d \cos\theta$$
-$$r_3\simeq r+\delta_d \sin\theta$$
-$$r_4\simeq r-\delta_d \cos\theta$$
+\begin{align}
+r_1\simeq& r-\delta_d \sin\theta \nonumber\tag{S4.1a}\\
+r_2\simeq& r+\delta_d \cos\theta\nonumber\tag{S4.1b}\\
+r_3\simeq& r+\delta_d \sin\theta\nonumber\tag{S4.1c}\\
+r_4\simeq& r-\delta_d \cos\theta\nonumber\tag{S4.1d}
+\end{align}
 
 由此，可以得到各偶极子采用$\theta$表示的场：
-$$ \vec{B}_1 \simeq \frac{r_d^2 l_d B_0}{2(r-\delta_d\sin\theta)^3}(-\cos\theta \vec{i}_r-\frac{1}{2}\sin\theta \vec{i}_\theta)$$
-$$ \vec{B}_2 \simeq \frac{r_d^2 l_d B_0}{2(r+\delta_d\cos\theta)^3}(\sin\theta \vec{i}_r-\frac{1}{2}\cos\theta \vec{i}_\theta)$$
-$$ \vec{B}_3 \simeq \frac{r_d^2 l_d B_0}{2(r+\delta_d\sin\theta)^3}(\cos\theta \vec{i}_r+\frac{1}{2}\sin\theta \vec{i}_\theta)$$
-$$ \vec{B}_4 \simeq \frac{r_d^2 l_d B_0}{2(r-\delta_d\cos\theta)^3}(-\sin\theta \vec{i}_r+\frac{1}{2}\cos\theta \vec{i}_\theta)$$
+\begin{align}
+\vec{B}_1 \simeq& \frac{r_d^2 l_d B_0}{2(r-\delta_d\sin\theta)^3}(-\cos\theta \vec{i}_r-\frac{1}{2}\sin\theta \vec{i}_\theta) \nonumber\tag{S4.2a}\\
+\vec{B}_2 \simeq& \frac{r_d^2 l_d B_0}{2(r+\delta_d\cos\theta)^3}(\sin\theta \vec{i}_r-\frac{1}{2}\cos\theta \vec{i}_\theta)  \nonumber\tag{S4.2b}\\
+\vec{B}_3 \simeq& \frac{r_d^2 l_d B_0}{2(r+\delta_d\sin\theta)^3}(\cos\theta \vec{i}_r+\frac{1}{2}\sin\theta \vec{i}_\theta) \nonumber\tag{S4.2c}\\
+\vec{B}_4 \simeq& \frac{r_d^2 l_d B_0}{2(r-\delta_d\cos\theta)^3}(-\sin\theta \vec{i}_r+\frac{1}{2}\cos\theta \vec{i}_\theta)  \nonumber\tag{S4.2d}
+\end{align}
 
 对于$r\gg \delta_d$，各项的分母可对$\delta_d/r$作一阶展开，成为：
-$$ \vec{B}_1 \simeq \frac{r_d^2 l_d B_0}{2 r^3}\left[1+3(\frac{\delta_d}{r})\sin\theta \right](-\cos\theta \vec{i}_r-\frac{1}{2}\sin\theta \vec{i}_\theta)$$
-$$ \vec{B}_2 \simeq \frac{r_d^2 l_d B_0}{2 r^3}\left[1-3(\frac{\delta_d}{r})\cos\theta \right](\sin\theta \vec{i}_r-\frac{1}{2}\cos\theta \vec{i}_\theta)$$
-$$ \vec{B}_3 \simeq \frac{r_d^2 l_d B_0}{2 r^3}\left[1-3(\frac{\delta_d}{r})\sin\theta \right](\cos\theta \vec{i}_r+\frac{1}{2}\sin\theta \vec{i}_\theta)$$
-$$ \vec{B}_4 \simeq \frac{r_d^2 l_d B_0}{2 r^3}\left[1+3(\frac{\delta_d}{r})\sin\theta \right](-\sin\theta \vec{i}_r+\frac{1}{2}\cos\theta \vec{i}_\theta)$$
+\begin{align}
+\vec{B}_1 \simeq& \frac{r_d^2 l_d B_0}{2 r^3}\left[1+3(\frac{\delta_d}{r})\sin\theta \right](-\cos\theta \vec{i}_r-\frac{1}{2}\sin\theta \vec{i}_\theta)\nonumber\tag{S4.3a}\\
+\vec{B}_2 \simeq& \frac{r_d^2 l_d B_0}{2 r^3}\left[1-3(\frac{\delta_d}{r})\cos\theta \right](\sin\theta \vec{i}_r-\frac{1}{2}\cos\theta \vec{i}_\theta)\nonumber\tag{S4.3b}\\
+\vec{B}_3 \simeq& \frac{r_d^2 l_d B_0}{2 r^3}\left[1-3(\frac{\delta_d}{r})\sin\theta \right](\cos\theta \vec{i}_r+\frac{1}{2}\sin\theta \vec{i}_\theta)\nonumber\tag{S4.3c}\\
+\vec{B}_4 \simeq& \frac{r_d^2 l_d B_0}{2 r^3}\left[1+3(\frac{\delta_d}{r})\sin\theta \right](-\sin\theta \vec{i}_r+\frac{1}{2}\cos\theta \vec{i}_\theta)\nonumber\tag{S4.3d}
+\end{align}
 
 组合上面几式，可以得到
-$$ \vec{B}=\vec{B}_1+\vec{B}_2+\vec{B}_3+\vec{B}_4\simeq \frac{3r_d^2 l_d B_0 \delta_d}{r^4}(-\sin 2\theta \vec{i}_r+\frac{1}{2}\cos 2\theta \vec{i}_\theta)$$
+\begin{equation*}
+\vec{B}=\vec{B}_1+\vec{B}_2+\vec{B}_3+\vec{B}_4\simeq \frac{3r_d^2 l_d B_0 \delta_d}{r^4}(-\sin 2\theta \vec{i}_r+\frac{1}{2}\cos 2\theta \vec{i}_\theta) \tag{2.52}
+\end{equation*}
 
-注意到，$|B|$按$\propto 1/r^4$衰减而不是像单个偶极子一样的$\propto 1/r^3$衰减。
+注意到，四偶极子簇的$|B|$按$\propto 1/r^4$衰减而不是像单个偶极子一样的依照$\propto 1/r^3$衰减。
+\newpage
+
 
 
 \subsection{问题2.5：铁电磁体的磁极形状}
-图2.8给出了铁制电磁铁的剖面。两个铁磁材料制成的圆柱形磁极相对放置，圆柱尖端倒角成锥形（图中的阴影部分）。
-磁极上的线圈（图中未画出）通电后，两极间的间隙内将产生一个相对均匀的磁场。
+图2.8给出了铁制电磁铁的剖面。两个铁磁材料制成的圆柱形磁极相对放置，圆柱尖端倒角成锥形(图中的阴影部分)。
+磁极上的线圈(图中未画出)通电后，两极间的间隙内将产生一个相对均匀的磁场。
 中心场理论上没有上限，因为它是$\propto \ln(R_2/R_1)$增长的。其中，$R_1$和$R_2$分别是锥体顶部和基部的直径。
-由于随着$R_2$增加，磁体的质量会变得很大，所以实践中的中心场上限$\sim 7$T（Bellevue, Paris; Uppsala Uni.,Sweden）。
+由于随着$R_2$增加，磁体的质量会变得很大，所以实践中的中心场上限$\sim 7\ \mathrm{T}$(巴黎Bellevue；瑞典Uppsala Uni.)。
 由于尖端部分的磁矩产生的场对中心的z向场有一个负的贡献，所以，尖角能够加强中心场。
 
 证明：若铁芯在与系统z轴平行方向励磁，$\theta_{tp}=54^\circ 44^\prime$是这种简单磁极几何的最优角度。
-假定中心场是均匀分布于磁极件上的磁矩产生的场的叠加。z向励磁的磁矩$\vec{m_A}[A\cdot m^2]$产生的偶极场为：
-$$\vec{H}_{m_A}=\frac{\vec{m_A}}{r^3}(\cos\theta \vec{i}_r+\frac{1}{2}\sin\theta\vec{i}_\theta)$$
+假定中心场是均匀分布于磁极件上的磁矩产生的场的叠加。$z$向励磁的磁矩$\vec{m}_A [\mathrm{A\cdot m^2}]$产生的偶极场为：
+\begin{equation}
+\vec{H}_{m_A}=\frac{\vec{m_A}}{r^3}(\cos\theta \vec{i}_r+\frac{1}{2}\sin\theta\vec{i}_\theta)
+\end{equation}
 
 $\vec{H}_{m_A}(r,\theta)$关于z轴对称，可以从标量势$\cos\theta/r^2$导出。
 
-提示：解出位于磁极倒角基部边缘上（图示）的单个磁矩$m_A \uparrow$在z轴中心的场。
+提示：解出位于磁极倒角基部边缘上(图示)的单个磁矩$m_A \uparrow$在z轴中心的场。
 
 \subsubsection*{问题2.5的解}
-
 $m_A$产生的在中心的场的z向分量$H_{m_A z}$为：
-$$H_{m_A z}=\frac{\vec{m_A}}{r^3}(\cos^2\theta-\frac{1}{2}\sin^2\theta)$$
+\begin{equation*}
+H_{m_A z}=\frac{\vec{m_A}}{r^3}(\cos^2\theta-\frac{1}{2}\sin^2\theta) \tag{S5.1}
+\end{equation*}
 
 式中，$r_A$是$m_A$距中心的距离。在$\theta=\theta_{tp}$时，上述方程的右侧为0。于是
-$$\cos^2\theta_{tp}-\frac{1}{2}\sin^2\theta_{tp}=0$$
+\begin{equation*}
+\cos^2\theta_{tp}-\frac{1}{2}\sin^2\theta_{tp}=0 \tag{S5.2}
+\end{equation*}
 
 于是有$\cos\theta_{tp}=1/\sqrt{3}$或$\tan\theta_{tp}=\sqrt{2}$，也即$\theta_{tp}\simeq 54.736^\circ\simeq54^\circ 44^\prime$。
 
 我们注意到，对阴影区中基线之上的磁矩均有$\theta_{tp}>54^\circ 44^\prime$。由于随$\theta$值的增加，$\cos\theta$递减而$\sin\theta$递增，
 在$\theta_{tp}>54^\circ 44^\prime$时，$H_{m_A z}$为负。以$\theta_{tp}=54^\circ 44^\prime$倒角磁极可以消除这种负的贡献，最大化中心场。
 
-值得一提的是，NMR质谱仪中的“神奇角”（magic angle）也是$54^\circ 44^\prime$。通常，NMR样品以这个“神奇角”与主轴场取向放置以减少各向异性的作用。
+值得一提的是，NMR质谱仪中的“神奇角”(magic angle)也是$54^\circ 44^\prime$。通常，NMR样品以这个“神奇角”与主轴场取向放置以减少各向异性的作用。
 
-\begin{figure}
+\begin{figure}[htbp]
   \centering
- \includegraphics[scale=0.4]{chpt2/figs/fig2.8.eps}
+ \includegraphics[scale=0.3]{chpt2/figs/fig2.8.eps}
   \caption{电极对，倒角为$\theta_{tp}$。图中$\bullet$指示了磁矩$\vec{m_A}\uparrow$的位置。}
 \end{figure}
+\newpage
+
+
 
 \subsection{讨论2.3：永磁体}
 永磁磁体是日常生活中大量设备如汽车、电视、电脑、手机、冰箱等的关键部件。实际上，如果没有永磁体，今日的现代生活将难以存续。
@@ -906,16 +984,16 @@ $$\cos^2\theta_{tp}-\frac{1}{2}\sin^2\theta_{tp}=0$$
 表2.6给出了90年（1910s-1990s）间永磁体和超导体的发展。永磁体性能以最大磁能$BH|_{mx}$表示，而超导体以最高临界温度$T_c|_{mx}$表示。
 这期间，$BH|_{mx}$提高了约30倍，$T_c|_{mx}$提高了约20倍。
 
-永磁体照这个步调发展下去，在不久的将来，永磁体MRI将能达到$\sim 1$T。
+永磁体照这个步调发展下去，在不久的将来，永磁体MRI将能达到$\sim 1\ $T。
 在这个磁场之上，还是超导的天下。
 
-\begin{table}[]
+\begin{table}[htbp]
 \centering
 \caption{永磁体和超导体的发展历程}
 \label{磁体和超导体的发展}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-年代        & 永磁体 & $BH|_{mx}$[$kJ/m^3$] & 超导体 & $T_c|_{mx}$[K]   \\ \hline
+年代        & 永磁体 & $BH|_{mx}$[$\mathrm{kJ/m^3}$] & 超导体 & $T_c|_{mx}$[K]   \\ \hline
 1910      &  特种钢   & 11       &  Pb   & 7.2 \\ \hline
 1920-1940 &  Alnico 1-4   & 15       &   NbN  & 16  \\ \hline
 1950      &   Alnico 5  & 35       &    $Nb_3 Sn$ & 18  \\ \hline
@@ -925,27 +1003,31 @@ $$\cos^2\theta_{tp}-\frac{1}{2}\sin^2\theta_{tp}=0$$
 1990      &  $Nd_2Fe_{14}B$   & 350      & $(Hg, Pb) Sr_2 Ca_2 Cu_3 O_x$    & 133 \\ \hline
 \end{tabular}
 \end{table}
-
+\newpage
 
 
 \subsection{问题2.6：圆柱中的准静态场}
-半径为R的长薄圆柱由理想导体（$\rho=\infty$，非超导）薄板制成，侧面开有宽$\delta$的窄缝（如图）。
+半径为R的长薄圆柱由理想导体($\rho=\infty$，非超导)薄板制成，侧面开有宽$\delta$的窄缝(如图)。
 圆柱置于正弦时变磁场中：
-$$\vec{H}_\infty(t)=Re[H_0 e^{j\omega t}] \vec{i}_z$$
+\begin{equation}
+\vec{H}_\infty(t)=Re[H_0 e^{j\omega t}] \vec{i}_z
+\end{equation}
 
 式中，$H_0$是复幅值。忽略端部效应。
 
 a)忽略$\delta/R$阶项。证明：跨窄缝短边的一阶复电压幅值为：
-$$V_{1|0}\equiv V_{1|\theta=0}=-j\omega \pi R^2 \mu_0 H_0$$
+\begin{equation}
+V_{1|0}\equiv V_{1|\theta=0}=-j\omega \pi R^2 \mu_0 H_0
+\end{equation}
 
-b)一个电阻率为$\rho[\Omega\cdot m]$的正常金属板置于窄缝将圆柱开缝恰好连接起来。推导通过该板的一阶复电流密度（轴向单位长度）$J_1 [A/m]$的表达式。
-假定：驱动频率（$\omega/2\pi$）足够小，磁场仍保持原准静态形式；电流在板截面上均匀流过。
+b)一个电阻率为$\rho[\Omega\cdot m]$的正常金属板置于窄缝将圆柱开缝恰好连接起来。推导通过该板的一阶复电流密度（轴向单位长度）$J_1 [\mathrm{A/m}]$的表达式。
+假定：驱动频率($\omega/2\pi$)足够小，磁场仍保持原准静态形式；电流在板截面上均匀流过。
 
-c)在无金属板存在（或$\rho_s=\infty$）条件下，在圆柱腔内画出6条一阶复电场矢量（$\vec{E}_1$）线，指明电场的重要特征。
+c)在无金属板存在(或$\rho_s=\infty$)条件下，在圆柱腔内画出6条一阶复电场矢量($\vec{E}_1$)线，指明电场的重要特征。
 
 d)在无金属板存在条件下，推导两点间的一阶电压的线积分$V_1 |_{\theta=-\pi/2}^{\theta=+\pi/2}$的表达式，即一点位于$\theta=+\pi/2$，另一点位于$\theta=-\pi/2$。
 
-\begin{figure}
+\begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.4]{chpt2/figs/fig2.9.eps}
   \caption{置于z向正弦时变磁场的在$\theta=0$处有窄缝的半径为R的理想导体长薄圆柱体的轴向视图。}
@@ -954,46 +1036,56 @@ d)在无金属板存在条件下，推导两点间的一阶电压的线积分$V_
 \subsubsection*{问题2.6之解}
 a)对一阶电场$\vec{E}_1(t)$应用积分形式的Faraday定律：
 \begin{equation*}
-\CMcal{V}_1(t) \equiv \int_{C} \vec{E}_1 (t) \cdot d\vec{s}=-\pi R^2 \mu_0 \frac{d\CMcal{H}_0(t)}{dt}
+\CMcal{V}_1(t) \equiv \int_{C} \vec{E}_1 (t) \cdot d\vec{s}=-\pi R^2 \mu_0 \frac{d\CMcal{H}_0(t)}{dt} \tag{S6.1}
 \end{equation*}
 
-
-线积分沿着圆柱逆时针进行（含窄缝）。上式右侧包括圆柱（$\pi R^2$）所定义的整个区域。
+线积分沿着圆柱逆时针进行(含窄缝)。上式右侧包括圆柱($\pi R^2$)所定义的整个区域。
 因为圆柱是理想导体，故在材料内有$\vec{\mathcal{E}}_1(t)=0$。对线积分，仅有的非零贡献来自窄缝。以复幅值表示，有
-$$V_{1|0}=-j\omega \pi R^2 \mu_0 H_0$$
+\begin{equation*}
+V_{1|0}=-j\omega \pi R^2 \mu_0 H_0 \tag{2.55}
+\end{equation*}
 
-b)应用Ohm定律，得到$J_1$（单位长度）：
-$$J_1=\frac{V_{1|0}}{\rho_s}$$
+b)应用Ohm定律，得到$J_1$(单位长度)：
+\begin{equation*}
+J_1=\frac{V_{1|0}}{\rho_s} \tag{S6.2}
+\end{equation*}
 
 c)因为圆柱是理想导体。圆柱面上$\vec{E}_1$的切向分量必须为零。$\vec{E}_1$以直角离开或进入圆柱。
 跨越圆柱的积分移动至窄缝左侧，积分区域减少，这令$|E_1|$变小。场线如图2.10所示。
 
 d)这是c)的特例。从对称角度，可以准确计算出线积分。积分区域等于$\pi R^2/2$，即
-$$V_1 |_{\theta=-\pi/2}^{\theta=+\pi/2}=-\frac{1}{2}j\omega \pi R^2 \mu_0 H_0$$
+\begin{equation*}
+V_1 |_{\theta=-\pi/2}^{\theta=+\pi/2}=-\frac{1}{2}j\omega \pi R^2 \mu_0 H_0   \tag{S6.3}
+\end{equation*}
 
-上式和a)表明，在同一轴向距离点，跨过圆柱的电压与电压触头方位有关。记住这一点，这在存在时变磁场（外施磁场，如本例；系统中电流产生的）条件下测电压时非常重要。
+上式和a)表明，在同一轴向距离点，跨过圆柱的电压与电压触头方位有关。记住这一点，这在存在时变磁场(外施磁场，如本例；系统中电流产生的)条件下测电压时非常重要。
 超导体交流损耗的电测法就是一个非常好的例子。
 
-\begin{figure}
+\begin{figure}[htbp]
   \centering
- \includegraphics[scale=0.4]{chpt2/figs/fig2.10.eps}
+ \includegraphics[scale=0.3]{chpt2/figs/fig2.10.eps}
   \caption{$\vec{E}_1$线垂直于理想导体圆柱。注意到，从$x=R$到$x=-R$，$|E_1|$是减小的。}
 \end{figure}
+\newpage
+
 
 
 \subsection{问题2.7：圆柱壳的感应加热}
-本问题处理金属（非超导）圆柱壳的感应加热。它是一个同时涉及时谐电磁场、能流（Poynting矢量）、能量耗散的好例子。
+本问题处理金属(非超导)圆柱壳的感应加热。它是一个同时涉及时谐电磁场、能流(Poynting矢量)、能量耗散的好例子。
 本体和下一题是交流损耗，特别是涡流损耗的实例，本课题将在第七章进一步讨论。
 感应加热在电炉中广泛使用，用以在导体材料内获得高温。有时，也用来作为研究超导线圈热行为的研究工具。
 在超导磁体技术研究中，感应加热最常以脉冲场形式在其他超导线圈中产生小的正常区域，模拟暂态扰动。
 
 图2.11给出一个“长”金属圆柱壳，其电导率为$\rho_e$，外径为$2R$，厚度$d\ll R$，置于正弦时变磁场中。磁场的0阶分量在z向均匀。即
-$$\vec{\mathcal{H}}_\infty(t)=Re[H_0 e^{j\omega t}] \vec{i}_z$$
+\begin{equation*}
+\vec{\mathcal{H}}_\infty(t)=Re[H_0 e^{j\omega t}] \vec{i}_z \tag{2.54}
+\end{equation*}
+
 式中，$H_0$是复磁场幅值。
 
 我们首先用两种方法解出相应的场量。接下来，用两种方法解出援助内的能量耗散。
 
-\begin{figure}
+\begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.3]{chpt2/figs/fig2.11.eps}
   \caption{圆柱金属壳置于均匀正弦时变磁场之中。}
@@ -1005,14 +1097,20 @@ $$\vec{\mathcal{H}}_\infty(t)=Re[H_0 e^{j\omega t}] \vec{i}_z$$
 \textbf{方法一}
 
 a)使用积分形式的Maxwell方程，忽略端部效应。证明在$r\le R$区域内给出一阶电场$\vec{E}_1$，在$r\simeq R$的壳内给出一阶电流密度$\vec{J}_1$的表达式为：
-$$\vec{E}_1=-\frac{j\omega \mu_0 r H_0}{2} \vec{i}_\theta$$
-$$\vec{J}_1=-\frac{j\omega \mu_0 R H_0}{2\rho_e} \vec{i}_\theta$$
+\begin{align}
+\vec{E}_1=&-\frac{j\omega \mu_0 r H_0}{2} \vec{i}_\theta\\
+\vec{J}_1=&-\frac{j\omega \mu_0 R H_0}{2\rho_e} \vec{i}_\theta
+\end{align}
 
 b)证明：在$r\le R-d$区域，一阶磁场$\vec{H}_1$可以表示为
-$$\vec{H}_1=-\frac{j\omega \mu_0 R d H_0}{2\rho_e} \vec{i}_z$$
+\begin{equation}
+\vec{H}_1=-\frac{j\omega \mu_0 R d H_0}{2\rho_e}\vec{i}_z
+\end{equation} 
 
 c)上面三式，在准静态近似条件下得出，仅在“低”频下成立，或者说仅在频率远小于“趋肤深度”频率$f_{sk}$下成立。证明：
-$$f_{sk}=\frac{\rho_e}{\pi \mu_0 R d}$$
+\begin{equation}
+f_{sk}=\frac{\rho_e}{\pi \mu_0 R d}
+\end{equation}
 
 \textbf{方法二}
 
@@ -1022,60 +1120,93 @@ $$f_{sk}=\frac{\rho_e}{\pi \mu_0 R d}$$
 本方法中，首先将$\vec{H}_T=\vec{H}_0+\vec{H}_r$视为零阶场，解出作为一阶磁场响应的$\vec{H}_R$。
 
 d)证明在$d\ll R$条件下壳内的$\vec{H}_R$、$\vec{H}_T$和$\vec{J}$为：
-$$\vec{H}_R=-\frac{j\omega \mu_0 R d H_0}{2\rho_e+j\omega \mu_0 R d} \vec{i}_z$$
-$$\vec{H}_T=\frac{2\rho_e H_0}{2\rho_e+j\omega \mu_0 R d} \vec{i}_z$$
-$$\vec{J}=-\frac{j\omega \mu_0 R H_0}{2\rho_e+j\omega \mu_0 R d} \vec{i}_\theta$$
+\begin{align}
+\vec{H}_R=&-\frac{j\omega \mu_0 R d H_0}{2\rho_e+j\omega \mu_0 R d} \vec{i}_z\\
+\vec{H}_T=&\frac{2\rho_e H_0}{2\rho_e+j\omega \mu_0 R d} \vec{i}_z\\
+\vec{J}=&-\frac{j\omega \mu_0 R H_0}{2\rho_e+j\omega \mu_0 R d} \vec{i}_\theta
+\end{align}
 
 \subsubsection*{第一部分：感应加热场的问题之解}
 根据$\theta$方向的对称性，$\vec{E}_1$和$\vec{J}_1$在$\theta$方向为常量，两个量均为$\theta$向，且仅依赖于r。这样，Faraday感应定律可在r的边线$\mathcal{C}$
 上进行，围城的面积为$\mathcal{S}$：
-$$\oint_{\mathcal{C}} \vec{E}_1 \cdot d\vec{s}=-j\omega \mu_0 \int_{\mathcal{S}} \vec{H}_0 \cdot d\vec{\mathcal{A}}$$
-$$\int_{0}^{2\pi} r E_{1\theta} d\theta=-j\omega \mu_0 \int_{0}^{r} 2\pi r H_0 dr$$
-$$E_{1\theta}\int_{0}^{2\pi} r d\theta=-j\omega \mu_0 H_0\int_{0}^{r} 2\pi r dr$$
+\begin{align}
+\oint_{\mathcal{C}} \vec{E}_1 \cdot d\vec{s}=-j\omega \mu_0 \int_{\mathcal{S}} \vec{H}_0 \cdot d\vec{\mathcal{A}}\nonumber\\
+\int_{0}^{2\pi} r E_{1\theta} d\theta=-j\omega \mu_0 \int_{0}^{r} 2\pi r H_0 dr\nonumber\\
+E_{1\theta}\int_{0}^{2\pi} r d\theta=-j\omega \mu_0 H_0\int_{0}^{r} 2\pi r dr\nonumber\tag{S7.1}
+\end{align}
 
 在$r\le R$时
-$$E_{1\theta} 2\pi r = -j\omega \mu_0 H_0 \pi r^2$$
+\begin{equation*}
+E_{1\theta} 2\pi r = -j\omega \mu_0 H_0 \pi r^2 \tag{S7.2}
+\end{equation*}
 
 上式两侧同除$2\pi r$，有
-$$E_{1\theta} = -\frac{j\omega \mu_0 r H_0}{2}$$
+\begin{equation*}
+E_{1\theta} = -\frac{j\omega \mu_0 r H_0}{2} \tag{S7.3}
+\end{equation*}
 
 于是
-$$\vec{E_{1}} = -\frac{j\omega \mu_0 r H_0}{2}\vec{i}_\theta$$
+\begin{equation*}
+\vec{E_{1}} = -\frac{j\omega \mu_0 r H_0}{2}\vec{i}_\theta \tag{2.56}
+\end{equation*}
 
-一阶电流仅在壳内（$r\simeq R$）流动
-$$\vec{J}_1=\frac{\vec{E_{1}}(r\simeq R)}{\rho_e} = -\frac{j\omega \mu_0 R H_0}{2\rho_e}\vec{i}_\theta$$
+一阶电流仅在壳内($r\simeq R$)流动:
+\begin{equation*}
+\vec{J}_1=\frac{\vec{E_{1}}(r\simeq R)}{\rho_e} = -\frac{j\omega \mu_0 R H_0}{2\rho_e}\vec{i}_\theta \tag{2.57}
+\end{equation*}
 
 在$d\ll R$时，我们可以将电流处理为一阶表面电流$\vec{K}_1$：
-$$\vec{K}_1=\vec{J}_1 \cdot d= -\frac{j\omega \mu_0 R d H_0}{2\rho_e}\vec{i}_\theta$$
+\begin{equation*}
+\vec{K}_1=\vec{J}_1 \cdot d= -\frac{j\omega \mu_0 R d H_0}{2\rho_e}\vec{i}_\theta \tag{S7.4}
+\end{equation*}
 
 b)对$r>R$，$\vec{H}_1=0$；我们可以将上述面电流等效为在$r=R$处$\vec{H}$的不连续：壳内壁$\vec{H}_0+\vec{H}_1$，壳外$\vec{H}_0$。于是
-$$\vec{K}_1=\vec{i}_r \times [\vec{H}_0-(\vec{H}_0+\vec{H}_1)]=-\frac{j\omega \mu_0 R d H_0}{2\rho_e}\vec{i}_\theta$$
+\begin{align}
+\vec{K}_1=&\vec{i}_r \times [\vec{H}_0-(\vec{H}_0+\vec{H}_1)]=-\frac{j\omega \mu_0 R d H_0}{2\rho_e}\vec{i}_\theta\nonumber\\
+=&\vec{i}_r\times-\vec{H}_1=-\frac{j\omega \mu_0 R d H_0}{2\rho_e}\vec{i}_\theta\nonumber\tag{S7.5}
+\end{align}
 
 在$d\ll R$条件下解出$\vec{H}_1(r\le R-d)$
-$$\vec{H}_1=-\frac{j\omega \mu_0 R d H_0}{2\rho_e}\vec{i}_z$$
+\begin{equation*}
+\vec{H}_1=-\frac{j\omega \mu_0 R d H_0}{2\rho_e}\vec{i}_z \tag{2.58}
+\end{equation*}
 
 c)前已表明，$\vec{J}_1$、$\vec{K}_1$和$\vec{H}_1$的幅值均随着频率单调增长。这意味着它不可能在所有$\omega$下成立。
 事实上，那些解仅在准静态近似可以应用的低频下有效。特别的，仅在$|\vec{H}_1|\ll |\vec{H}_0|$时有效：
-$$|\vec{H}_1|=\frac{\omega \mu_0 R d |H_0|}{2\rho_e}\ll |\vec{H}_0|$$
+\begin{equation*}
+|\vec{H}_1|=\frac{\omega \mu_0 R d |H_0|}{2\rho_e}\ll |\vec{H}_0|\tag{S7.6}
+\end{equation*}
 
 由上式，可以得到频率极限，即通常所谓的趋肤深度频率$f_{sk}$。在此频率下，准静态近似是有效的
-$$f_{sk}=\frac{\rho_e}{\pi \mu_0 R d}$$
+\begin{equation*}
+f_{sk}=\frac{\rho_e}{\pi \mu_0 R d} \tag{2.59}
+\end{equation*}
 
 注意，$f_{sk}$不仅与材料的电阻率有关，还与处于正弦时变磁场中的物体的尺寸有关。
 
 d)在计算反应场时，设定$\vec{H}_1\equiv \vec{H}_R$。在$\vec{H}_1$的表达式中，用$\vec{H}_0+\vec{H}_R$代换$\vec{H}_0$
-$$\vec{H}_R=-\frac{j\omega \mu_0 R d (\vec{H}_0+\vec{H}_R)}{2\rho_e}$$
+\begin{equation*}
+\vec{H}_R=-\frac{j\omega \mu_0 R d (\vec{H}_0+\vec{H}_R)}{2\rho_e} \tag{S7.7}
+\end{equation*}
 
 解出$\vec{H}_R$，得到
-$$\vec{H}_R=-\frac{j\omega \mu_0 R d \vec{H}_0}{2\rho_e+j\omega \mu_0 R d}\vec{i}_z$$
+\begin{equation*}
+\vec{H}_R=-\frac{j\omega \mu_0 R d \vec{H}_0}{2\rho_e+j\omega \mu_0 R d}\vec{i}_z \tag{2.60}
+\end{equation*}
 
-于是，可以得到
-$$\vec{H}_T=\vec{H}_0+\vec{H}_R=\frac{2\rho_e H_0}{2\rho_e+j\omega \mu_0 R d}\vec{i}_z$$
+联立方程2.60和$\vec{H}_T=\vec{H}_0+\vec{H}_R$，可以得到
+\begin{align}
+\vec{H}_T=\vec{H}_0+\vec{H}_R=H_0\left(1-\frac{j\omega\mu_0 R d}{2\rho_e+j\omega\mu_0 Rd}\right)\vec{i}_z\nonumber\\
+=\frac{2\rho_e H_0}{2\rho_e+j\omega \mu_0 R d}\vec{i}_z\nonumber\tag{2.61}
+\end{align}
 
 $\vec{J}$和$\vec{H}_R$通过$\nabla\times \vec{H}=\vec{J}$相联系，又$\vec{K}=\vec{J}d$，于是
-$$\vec{J}=\frac{1}{d}H_R \vec{i}_\theta=-\frac{j\omega \mu_0 R H_0)}{2\rho_e+j\omega \mu_0 R d}\vec{i}_\theta$$
+\begin{align}
+\vec{J}=&\frac{1}{d}H_R \vec{i}_\theta \nonumber\tag{S7.8}\\
+=&-\frac{j\omega \mu_0 R H_0)}{2\rho_e+j\omega \mu_0 R d}\vec{i}_\theta\nonumber\tag{2.62}
+\end{align}
 
-注意到，在低频下，$\vec{H}_R$退化为$\vec{H}_1$；高频下，$\vec{H}_R$退化为$-\vec{H}_0$而$\vec{H}_T$变为0。$\vec{J}$存在类似的行为。
+注意到，在低频下，$\vec{H}_R$退化为$\vec{H}_1$；高频下，$\vec{H}_R$退化为$-\vec{H}_0$而$\vec{H}_T$变为$0$。$\vec{J}$存在类似的行为。
 
 \subsubsection*{第二部分：感应加热的能量耗散}
 我们用两种方法解出圆柱内的能量耗散。
@@ -1084,207 +1215,293 @@ $$\vec{J}=\frac{1}{d}H_R \vec{i}_\theta=-\frac{j\omega \mu_0 R H_0)}{2\rho_e+j\o
 
 e)我们可以直接计算$<p>=\vec{E}\cdot \vec{J}^* /2=\rho_e |J|^2 /2$而得到圆柱壳的电阻功率损耗。式中的$\vec{J}$已在前文求出。
 证明：在$d\ll R$条件下，壳内的时均总损耗（单位长度）的表达式为
-$$<P>=2\pi R d<p>=\frac{\pi \rho_e \omega^2 \mu_0^2 R^3 d}{4\rho_e^2+\omega^2\mu_)^2 R^2 d^2} |H_0|^2$$
+\begin{equation}
+<P>=2\pi R d<p>=\frac{\pi \rho_e \omega^2 \mu_0^2 R^3 d}{4\rho_e^2+\omega^2\mu_)^2 R^2 d^2} |H_0|^2
+\end{equation}
 
 \textbf{方法二}
 
 相同的施于圆柱的复功率也可以视为从$r>R$处的源在$r=R$处进入圆柱内的Poynting能流。
 
 f)证明：在$r=R$处，进入圆柱的一阶复Poynting矢量$\vec{S}_1$的面积分（单位长度）为：
-$$-\oint_{\mathcal{S}}\vec{S}_1 \cdot d\mathcal{A}=\frac{1}{2}(2\pi P)E_{1\theta} H_)^*$$
+\begin{equation}
+-\oint_{\mathcal{S}}\vec{S}_1 \cdot d\mathcal{A}=\frac{1}{2}(2\pi P)E_{1\theta} H_)^*=\frac{j\pi\rho_e\omega\mu_0 R^2}{2\rho_e+j\omega\mu_0 R d}|H_0|^2
+\end{equation}
 
 提示：$E_{1\theta}=\rho_e J_\theta$，$J_\theta$已在上文求出。
 
 g)证明：上式的等号右侧的实部与e)中给出的$<P>$是一致的。
 
-h)画出$<P>$与$\rho_e$的关系。由于理想导体（$\rho_e=0$）和理想绝缘体（$\rho_e=\infty$）均不产生损耗，图像应从$<P>=0$开始，并在$\rho_e \rightarrow \infty$时趋于0。
+h)画出$<P>$与$\rho_e$的关系。由于理想导体($\rho_e=0$)和理想绝缘体($\rho_e=\infty$)均不产生损耗，图像应从$<P>=0$开始，并在$\rho_e \rightarrow \infty$时趋于0。
 
 i)从$<P>$与$\rho_e$的关系可以得到一个结论，即存在临界电阻率$\rho_{e_c}$，在该点$<P>$最大。证明
-$$\rho_{e_c}=\frac{\omega \mu_0 R d}{2}$$
+\begin{equation}
+\rho_{e_c}=\frac{\omega \mu_0 R d}{2}
+\end{equation}
 
-从上式可知，对一个电阻率（$\rho_e$）和样品尺寸（$R,d$）组合，存在一个可以令加热最大化的最优频率。这个频率就是前面提到的趋肤深度频率$f_{sk}$。
+从上式可知，对一个电阻率($\rho_e$)和样品尺寸($R,d$)组合，存在一个可以令加热最大化的最优频率。这个频率就是前面提到的趋肤深度频率$f_{sk}$。
 
-j)计算一个半径$R=10mm$，壁厚$d=0.5mm$，电阻率$\rho_e=2\times 10^{-10} \Omega\cdot m$（大致为液氦温度下铜的电阻率）的铜管的$f_{sk}$。
+j)计算一个半径$R=10\ \mathrm{mm}$，壁厚$d=0.5\ \mathrm{mm}$，电阻率$\rho_e=2\times 10^{-10}\ \mathrm{\Omega\cdot m} $(大致为液氦温度下铜的电阻率)的铜管的$f_{sk}$。
 
 \subsubsection*{第二部分：感应加热的能量耗散之解}
-e)正弦情况下，时均能耗（单位长度）功率可以表示为$<p>=\vec{E}\cdot \vec{J}^* /2=\rho_e |J|^2 /2$，也即
-$$<p>=\rho_e |J|^2 /2=\frac{\rho_e}{2}(\frac{\omega^2 \mu_0^2 R^2}{4\rho_e^2+\omega^2 \mu_0^2 R^2 d^2})|H_0|^2$$
+e)正弦情况下，时均能耗(单位长度)功率可以表示为$<p>=\vec{E}\cdot \vec{J}^* /2=\rho_e |J|^2 /2$，也即
+\begin{equation*}
+<p>=\rho_e |J|^2 /2=\frac{\rho_e}{2}(\frac{\omega^2 \mu_0^2 R^2}{4\rho_e^2+\omega^2 \mu_0^2 R^2 d^2})|H_0|^2 \tag{S7.9}
+\end{equation*}
 
 于是，壳内总的能耗（单位长度）可以能耗功率乘以截面积得到
-$$<P>=2\pi R d<P>=\frac{\pi \rho_e \omega^2 \mu_0^2 R^3 d}{4\rho_e^2+\omega^2 \mu_0^2 R^2 d^2}|H_0|^2$$
+\begin{equation*}
+<P>=2\pi R d<P>=\frac{\pi \rho_e \omega^2 \mu_0^2 R^3 d}{4\rho_e^2+\omega^2 \mu_0^2 R^2 d^2}|H_0|^2 \tag{2.63}
+\end{equation*}
 
 下面检查一下上式在$\rho_e$两个极限下的情况：
-\begin{itemize}
-  \item $\rho_e \ll \omega \mu_0 R d$（良导体）时：$<P>\simeq \frac{\pi \rho_e R}{d}|H_0|^2\propto \rho_e$
-  \item $\rho_e \gg \omega \mu_0 R d$（不良导体）时：$<P>\simeq \frac{\pi \omega^2 \mu_0^2 R^3 d}{4\rho_e}|H_0|^2\propto \frac{1}{\rho_e}$
-\end{itemize}
+\begin{align}
+&\rho_e \ll \omega \mu_0 R d\mbox{(良导体)时：}<P>\simeq \frac{\pi \rho_e R}{d}|H_0|^2\propto \rho_e\nonumber\tag{S7.10a}\\
+&\rho_e \gg \omega \mu_0 R d\mbox{(不良导体)时：}<P>\simeq \frac{\pi \omega^2 \mu_0^2 R^3 d}{4\rho_e}|H_0|^2\propto \frac{1}{\rho_e}\nonumber\tag{S7.10b}
+\end{align}
 
 正如我们所期望的，在上面两种极限情况下，都有$<P>\rightarrow 0$。
 
 f)复Poynting矢量$\vec{S}$的一阶展开为：
-$$\vec{S}_1=\frac{1}{2}(\vec{E}_0 \times \vec{H}_0^*+\vec{E}_0 \times \vec{H}_1^*+\vec{E}_1 \times \vec{H}_0^*)$$
+\begin{equation*}
+\vec{S}_1=\frac{1}{2}(\vec{E}_0 \times \vec{H}_0^*+\vec{E}_0 \times \vec{H}_1^*+\vec{E}_1 \times \vec{H}_0^*) \tag{S7.11}
+\end{equation*}
 
-计算一阶Poynting矢量时，E和H场的下表均不大于1。在本例下，我们有$\vec{E}_)=0$，于是上式化简为：
-$$\vec{S}_1=\frac{1}{2}(\vec{E}_1 \times \vec{H}_0^*)$$
+计算一阶Poynting矢量时，$E$和$H$场的下表均不大于1。在本例下，我们有$\vec{E}_0=0$，于是上式化简为：
+\begin{equation*}
+\vec{S}_1=\frac{1}{2}(\vec{E}_1 \times \vec{H}_0^*) \tag{S7.12}
+\end{equation*}
 
 对于$\vec{E}_1$我们有：
-$$\vec{E}_1=\rho_e \vec{J}=-\frac{j\rho_e \omega \mu_0 R H_0)}{2\rho_e+j\omega \mu_0 R d}\vec{i}_\theta$$
+\begin{equation*}
+\vec{E}_1=\rho_e \vec{J}=-\frac{j\rho_e \omega \mu_0 R H_0)}{2\rho_e+j\omega \mu_0 R d}\vec{i}_\theta \tag{S7.13}
+\end{equation*}
 
 于是，
-$$-\oint_{\mathcal{S}}\vec{S}_1 \cdot d\mathcal{A}=\frac{1}{2}(2\pi R)E_{1\theta} H_0^*=\frac{j\pi\rho_e \omega \mu_0 R^2}{2\rho_e+j\omega \mu_0 R d} |H_0|^2$$
+\begin{equation*}
+-\oint_{\mathcal{S}}\vec{S}_1 \cdot d\mathcal{A}=\frac{1}{2}(2\pi R)E_{1\theta} H_0^*=\frac{j\pi\rho_e \omega \mu_0 R^2}{2\rho_e+j\omega \mu_0 R d} |H_0|^2 \tag{2.64}
+\end{equation*}
 
 g)根据复数的基本运算法则，取f)最后结果的实部，易得。可以看到，这和方法一得到的结果是一致的。
+\begin{equation*}
+<P>=\frac{\pi \rho_e \omega^2 \mu_0^2 R^3 d}{4\rho_e^2+\omega^2 \mu_0^2 R^2 d^2}|H_0|^2 \tag{S7.14}
+\end{equation*}
 
 h)如图2.12所示。
 
 i)将$<P>$对$\rho_e$求导，并令之为零，有：
-$$\frac{d<P>}{d\rho_e} |_{\rho_{e_c}}=[**]=0$$
+\begin{equation*}
+\frac{d<P>}{d\rho_e} |_{\rho_{e_c}}=[**]=0 \tag{S7.15}
+\end{equation*}
 
 解出上式，有
-$$\rho_{e_c}=\frac{\omega \mu_0 R d}{2}$$
+\begin{equation*}
+\rho_{e_c}=\frac{\omega \mu_0 R d}{2} \tag{2.65}
+\end{equation*}
 
 上式在均匀正弦时变磁场施加于导体样品的感应加热应用中非常重要。样品被样品中感应的涡流加热。在趋肤深度频率$f_{sk}$下，感应加热最大。
 
-j)将数值$R=1cm, d=0.5mm,\rho_e=2\times 10^{-10}\Omega m$（4K时铜的电阻率）代入公式，有
-$$f_{sk}=\frac{\rho_{e_c}}{\pi\mu_0 R d}\simeq 10Hz$$
+j)将数值$R=1\ \mathrm{cm}, d=0.5\ \mathrm{mm},\rho_e=2\times 10^{-10}\ \mathrm{\Omega m}$(4K时铜的电阻率)代入公式，有
+\begin{equation*}
+f_{sk}=\frac{\rho_{e_c}}{\pi\mu_0 R d}\simeq 10Hz \tag{2.59}
+\end{equation*}
 
-\begin{figure}
+\begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.3]{chpt2/figs/fig2.12.eps}
   \caption{感应加热圆柱壳的功率耗散和电阻率的关系。}
 \end{figure}
+\newpage
+
 
 
 \subsection{问题2.8：金属窄带中的涡流损耗}
-本题推导置于时变磁场中的金属窄带的涡流损耗。这可以用于计算铜基超导带中涡流损耗的计算。（感应电流有用时叫感应加热，有害时就叫涡流损耗。）
+本题推导置于时变磁场中的金属窄带的涡流损耗。这可以用于计算铜基超导带中涡流损耗的计算。(感应电流有用时叫感应加热，有害时就叫涡流损耗。)
 
-图2.13给出了电导率为$\rho_e$、y向宽为b、厚度（z向）为a的长（x向）金属窄带。窄带置于时变外磁场中。外场满足$dB_0/dt=\dot{B_0}$，即零阶、均匀、z向。
+图2.13给出了电导率为$\rho_e$、$y$向宽为$b$、厚度($z$向)为$a$的长($x$向)金属窄带。窄带置于时变外磁场中。外场满足$dB_0/dt=\dot{B_0}$，即零阶、均匀、$z$向。
 
 a)证明一阶电场$\vec{E}_1$为
-$$E_{1x}=y\dot{B_0}$$
+\begin{equation}
+E_{1x}=y\dot{B_0}
+\end{equation}
 
 b)证明空间平均能耗密度$\tilde{p}$（单位体积）为：
-$$\tilde{p}=\frac{(b\dot{B_0})^2}{12\rho_e}$$
+\begin{equation}
+\tilde{p}=\frac{(b\dot{B_0})^2}{12\rho_e}
+\end{equation}
 
 c)外场以角频率$\omega$正弦变化，即$B(t)=B_0 \sin\omega t$时，证明：时均能耗密度为：
-$$<\tilde{p}>=\frac{(b\omega\dot{B_0})^2}{24\rho_e}$$
+\begin{equation}
+<\tilde{p}>=\frac{(b\omega\dot{B_0})^2}{24\rho_e}
+\end{equation}
 
-\begin{figure}
+\begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.4]{chpt2/figs/fig2.13.eps}
   \caption{宽度为b的金属窄带置于时变磁场中。}
 \end{figure}
 
 \subsubsection{问题2.8之解}
-a)由于$\vec{B}_0$时均匀分布的且系统不依赖于x，所以$\vec{E}_1$只能指向x方向并且仅依赖于y。于是$\nabla\times \vec{E}_1=\partial \vec{B}_0/\partial t$可以化简为
-$$-\frac{dE_{1x}}{dy}=-\frac{B_0}{dt}=-\dot{B}_0$$
+a)由于$\vec{B}_0$时均匀分布的且系统不依赖于$x$，所以$\vec{E}_1$只能指向$x$方向并且仅依赖于$y$。于是$\nabla\times \vec{E}_1=\partial \vec{B}_0/\partial t$可以化简为
+\begin{equation*}
+-\frac{dE_{1x}}{dy}=-\frac{B_0}{dt}=-\dot{B}_0 \tag{S8.1}
+\end{equation*}
 
 根据对称性，$E_{1x}(y=0)=0$，于是，我们有
-$$E_{1x}=y\dot{B_0}$$
+\begin{equation*}
+E_{1x}=y\dot{B_0}  \tag{2.66}
+\end{equation*}
 
-b)窄带中的局部能量损耗密度$p(y)$由$\vec{E}_1\cdot\vec{J}_1$给出。总的损耗（单位长度）为
-$$P=a\int_{-b/2}^{b/2}p(y)dy=\frac{2a(\dot{B}_0)^2}{\rho_e}\int_{0}^{b/2}y^2dy=\frac{ab(b\dot{B_0})^2}{12\rho_e}$$
+b)窄带中的局部能量损耗密度$p(y)$由$\vec{E}_1\cdot\vec{J}_1$给出。总的损耗(单位长度)为
+\begin{equation*}
+P=a\int_{-b/2}^{b/2}p(y)dy=\frac{2a(\dot{B}_0)^2}{\rho_e}\int_{0}^{b/2}y^2dy=\frac{ab(b\dot{B_0})^2}{12\rho_e}  \tag{S8.2}
+\end{equation*}
 
 上式仅在$\vec{J}_1$感应出来的一阶感应磁场相比$\vec{B}_0$很小时才有效。
 
-空间平均能耗密度$\tilde{p}$（单位体积）可以由P除以截面得到：
-$$\tilde{p}=\frac{P}{ab}\frac{(b\dot{B_0})^2}{12\rho_e}$$
+空间平均能耗密度$\tilde{p}$(单位体积)可以由$P$除以截面得到：
+\begin{equation*}
+\tilde{p}=\frac{P}{ab}\frac{(b\dot{B_0})^2}{12\rho_e}  \tag{2.67}
+\end{equation*}
 
 c)在外场正弦变化时，时均能耗密度为：
-$$<\tilde{p}>=\frac{1}{2}E_{1x} J_{1x}^*$$
+\begin{equation*}
+<\tilde{p}>=\frac{1}{2}E_{1x} J_{1x}^*  \tag{S8.3}
+\end{equation*}
 
 由于$E_{1x}=j\omega y B_0$，$J_{1x}=E_{1x}/\rho_e$，于是可以得到
-$$<\tilde{p}>=\frac{2a(\omega B_0)^2}{2\rho_e (ab)}\int_{0}^{b/2} y^2 dy=\frac{(b\omega\dot{B_0})^2}{24\rho_e}$$
+\begin{equation*}
+<\tilde{p}>=\frac{2a(\omega B_0)^2}{2\rho_e (ab)}\int_{0}^{b/2} y^2 dy=\frac{(b\omega\dot{B_0})^2}{24\rho_e}  \tag{2.68}
+\end{equation*}
 
-我们注意到，$\tilde{p}$和$<\tilde{p}>$分别正比于$（b\dot{B_0}）^2$和$（b\omega \dot{B_0}）^2$。也就是说，两者对感应磁场和导体宽度均为平方依赖关系。
+我们注意到，$\tilde{p}$和$<\tilde{p}>$分别正比于$(b\dot{B_0})^2$和$(b\omega \dot{B_0})^2$。也就是说，两者对感应磁场和导体宽度均为平方依赖关系。
+\newpage
+
+
 
 \subsection{讨论2.4：分层以减少涡流损耗}
 假设将薄板劈为两条，每一条宽度为$b/2$，由上面的分析可以知道，损耗将变为原来的$1/4$。因此，可以通过将窄带细分的方法降低涡流损耗。这种切分技术在电力变压器中广泛使用。类似的，我们将在第5章和第7章中看到，超导体也能从切分中获益。
+\newpage
 
 
 \subsection{问题9：Rogowski线圈}
-Rogowski线圈是时变电流的安培计。它是一种环形拾磁线圈，其积分输出电压正比于被线圈包围的截面内通过的总电流。图2.14a给出了一个Rogowski线圈，待测电流$I(t)$置于其中央。如图所示，Rogowski线圈包括N个串联的小圆环（一匝）。每一个半径为c的圆环的中心位于电流中心的径向R处。
-图2.14b定义了一匝的x-y坐标。
+Rogowski线圈是时变电流的安培计。它是一种环形拾磁线圈，其积分输出电压正比于被线圈包围的截面内通过的总电流。图2.14a给出了一个Rogowski线圈，待测电流$I(t)$置于其中央。如图所示，Rogowski线圈包括$N$个串联的小圆环(一匝)。每一个半径为$c$的圆环的中心位于电流中心的径向$R$处。
+图2.14b定义了一匝的$xy$坐标。
 
-a) 证明在$c\ll R$条件下，N匝的Rogowski线圈的总磁链$\Phi(t)=N\Phi_1(t)$为：
-$$\Phi(t)\simeq\frac{\mu_0 N c^2}{2R}I(t)$$
+a) 证明在$c\ll R$条件下，$N$匝的Rogowski线圈的总磁链$\Phi(t)=N\Phi_1(t)$为：
+\begin{equation}
+\Phi(t)\simeq\frac{\mu_0 N c^2}{2R}I(t)
+\end{equation}
+
 式中，$\Phi_1(t)$是与一匝交链的总磁通。
 
 b) 证明$\Phi(t)$的准确表达式为：
-$$\Phi(t)=\mu_0 N (R-\sqrt{R^2-c^2})I(t)$$
+\begin{equation}
+\Phi(t)=\mu_0 N (R-\sqrt{R^2-c^2})I(t)
+\end{equation}
 
-将N匝中的一个放在x-y坐标系的中心来计算$\Phi(t)$。
+将$N$匝中的一个放在$xy$坐标系的中心来计算$\Phi(t)$。
 
 c) 证明在极限$(c/R)^4\ll 1$下，b)退化为a)。
 
 d)证明b)中的公式在Rogowski线圈的轴线偏离电流的中心时也有效。
 
-e)计算一个N = 3600; c = 3 mm; R = 0.5 m的Rogowski线圈在$\Delta I(t)=1MA$时两端产生的伏秒。
+e)计算一个$N = 3600; c = 3\ \mathrm{mm}; R = 0.5\ \mathrm{m}$的Rogowski线圈在$\Delta I(t)=1\ \mathrm{MA}$时两端产生的伏秒。
 
-\begin{figure}
+\begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.4]{chpt2/figs/fig2.14.eps}
-  \caption{（a）N匝Rogowski线圈，每匝直径为2c，环绕在待测的时变电流$I(t)$外围。（b）一匝（半径为$r$）的截面视图。圆环距离电流中心的距离为$R$。}
+  \caption{(a)$N$匝Rogowski线圈，每匝直径为$2c$，环绕在待测的时变电流$I(t)$外围。(b)一匝(半径为$r$)的截面视图。圆环距离电流中心的距离为$R$。}
 \end{figure}
 
 \subsubsection{问题13之解}
-a)电流$I(t)$产生的磁场相对于电流方向是方位角向的。距电流中心距离R处的$H_\phi(t)$表示为：
-$$H_\phi (t)=\frac{I(t)}{2\pi R}$$
+a)电流$I(t)$产生的磁场相对于电流方向是方位角向的。距电流中心距离$R$处的$H_\phi(t)$表示为：
+\begin{equation*}
+H_\phi (t)=\frac{I(t)}{2\pi R} \tag{S9.1}
+\end{equation*}
 
 对于$c\ll R$，上式给出的$H_\phi(t)$在每一匝的横截面$\pi c^2$上几乎都是成立的。由于Rogowski线圈有$N$个这样的回路，我们有：
-$$\Phi(t)\simeq \frac{\mu_0 N c^2}{2R}I(t)$$
+\begin{equation*}
+\Phi(t)\simeq \frac{\mu_0 N c^2}{2R}I(t)  \tag{2.69}
+\end{equation*}
 
 Rogowski线圈输出电压$V(t)$于是可以写为：
-$$V(t)=\frac{d\Phi(t0}{dt}=\frac{\mu_0 N c^2}{2R}\frac{dI(t)}{dt}$$
+\begin{equation*}
+V(t)=\frac{d\Phi(t0}{dt}=\frac{\mu_0 N c^2}{2R}\frac{dI(t)}{dt}  \tag{S9.2}
+\end{equation*}
 
 b)因为$H_\phi (t)$在每一个环上并非常数，每一匝包围的总磁通$\Phi_1(t)$应由沿回路围成的区域的积分得到。
 注意到$x^2+y^2=c^2$，定回路中心坐标为$(0,0)$，$\Phi_1(t)$表示为：
-$$\Phi (t)=\frac{\mu_0 I(t)}{2\pi}\int_{-c}^{c}\int_{-\sqrt{c^2-y^2}}^{\sqrt{c^2-y^2}}\frac{1}{R+y}dxdy=\frac{\mu_0 I(t)}{\pi}\int_{-c}^{c}\frac{\sqrt{c^2-y^2}}{R+y}dy$$
+\begin{align}
+\Phi (t)=&\frac{\mu_0 I(t)}{2\pi}\int_{-c}^{c}\int_{-\sqrt{c^2-y^2}}^{\sqrt{c^2-y^2}}\frac{1}{R+y}dxdy\nonumber\\
+=&\frac{\mu_0 I(t)}{\pi}\int_{-c}^{c}\frac{\sqrt{c^2-y^2}}{R+y}dy\nonumber\tag{S9.3}
+\end{align}
 
 上式可以使用新变量$\xi\equiv R+y$得到闭式解（注意：$d\xi=dy$）。于是，有：
-$$\Phi_1 (t)=\frac{\mu_0 I(t)}{\pi} \int_{R-c}^{R+c}\frac{\sqrt{c^2-R^2+2R\xi-\xi^2}}{\xi}d\xi=\mu_0(R-\sqrt{R^2-c^2})I(t)$$
+\begin{align}
+\Phi_1 (t)=&\frac{\mu_0 I(t)}{\pi} \int_{R-c}^{R+c}\frac{\sqrt{c^2-R^2+2R\xi-\xi^2}}{\xi}d\xi\nonumber\\
+=&\mu_0(R-\sqrt{R^2-c^2})I(t)\nonumber\tag{S9.4}
+\end{align}
 
 $N$匝的Rogowski线圈交链的总磁通$\Phi(t)=N\Phi_1(t)$：
-$$\Phi (t)=\mu_0 N(R-\sqrt{R^2-c^2})I(t)$$
+\begin{equation*}
+\Phi (t)=\mu_0 N(R-\sqrt{R^2-c^2})I(t) \tag{2.70}
+\end{equation*}
 
 c)上式可以写为：
-$$\Phi (t)=\mu_0 NI(t)(R-R\sqrt{1-\frac{c^2}{R^2}})$$
+\begin{equation*}
+\Phi (t)=\mu_0 NI(t)(R-R\sqrt{1-\frac{c^2}{R^2}}) \tag{S9.5}
+\end{equation*}
 
 由于对$x\ll 1$，$\sqrt{1-x}\simeq 1-(1/2)x+(1/8)x^2-...$，截取到二阶，所以
-$$\Phi (t)\simeq \frac{\mu_0 Nc^2}{2R} I(t)\eqno{(2.69)}$$
+\begin{align}
+\Phi(t)\simeq\mu_0 N\left[R-R\left(1-\frac{1}{2}\frac{c^2}{R^2}+\cdots\right)\right]\nonumber\tag{S9.6}\\
+\Phi (t)\simeq \frac{\mu_0 Nc^2}{2R} I(t)\nonumber\tag{2.69}
+\end{align}
 
-\begin{figure}
+\begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.4]{chpt2/figs/fig2.15.eps}
-	\caption{$(x,y)$面上的横截面视图}
+	\includegraphics[scale=0.3]{chpt2/figs/fig2.15.eps}
+	\caption{$(x,y)$面上的横截面视图。}
 \end{figure}
 
-d)图2.15给出正交于电流/Rogowski线圈组方向的横截面$(x,y)$，其中Rogowski中心位于$(0,0)$，电流中心在Rogowski线圈中心向下偏离$\delta_i$。关键参数如图中定义：$r$，Rogowski中心$(0,0)$到一匝线圈上的点A的径向距离；$\theta$是$y$轴和$r$之间的夹角；$s$是电流中心到点A的距离；$\epsilon$是$r$与$s$之间形成的角。$s^2$写为：
-$$s^2=(r\cos\theta+\delta_i)^2+r^2\sin^2\theta=r^2+\delta_i^2+2r\delta_i\cos\theta$$
+d)图2.15给出正交于电流/Rogowski线圈组方向的横截面$(x,y)$，其中Rogowski中心位于$(0,0)$，电流中心在Rogowski线圈中心向下偏离$\delta_i$。关键参数如图中定义：$r$为Rogowski中心$(0,0)$到一匝线圈上的点$A$的径向距离；$\theta$是$y$轴和$r$之间的夹角；$s$是电流中心到点$A$的距离；$\epsilon$是$r$与$s$之间形成的角。$s^2$写为：
+\begin{equation*}
+s^2=(r\cos\theta+\delta_i)^2+r^2\sin^2\theta=r^2+\delta_i^2+2r\delta_i\cos\theta \tag{S9.7}
+\end{equation*}
 
 将$r$延长$\delta_i \cos\theta$形成一个直角，我们有：
-$$\cos\epsilon=\frac{r+\delta_i \cos\theta}{s}$$
+\begin{equation*}
+\cos\epsilon=\frac{r+\delta_i \cos\theta}{s} \tag{S9.8}
+\end{equation*}
 
-点A处的磁场由$H_A(t)=I(t)/2\pi s$给出；它在Rogowski线圈回路上点A处的法向分量为：
-$$H_{A\bot}=\frac{I(t)}{2\pi s}\cos\epsilon=\frac{I(t)}{2\pi s}(\frac{r+\delta_i \cos\theta}{s})$$
+点$A$处的磁场由$H_A(t)=I(t)/2\pi s$给出；它在Rogowski线圈回路上点$A$处的法向分量为：
+\begin{equation*}
+H_{A\bot}=\frac{I(t)}{2\pi s}\cos\epsilon=\frac{I(t)}{2\pi s}(\frac{r+\delta_i \cos\theta}{s}) \tag{S9.9}
+\end{equation*}
 
 将上式与$s^2$的表达式联立，得到：
-$$H_{A\bot}=\frac{I(t)}{2\pi}\left(\frac{r+\delta_i \cos\theta}{r^2+\delta_i^2+2r\delta_i\cos\theta}\right)\eqno{(S9.10)}$$
+\begin{equation*}
+H_{A\bot}=\frac{I(t)}{2\pi}\left(\frac{r+\delta_i \cos\theta}{r^2+\delta_i^2+2r\delta_i\cos\theta}\right) \tag{S9.10}
+\end{equation*}
 
-为了计算$\Phi(t)$，$S9.10$乘上$(N/2\pi)2\sqrt{c^2−(r−R)^2}$必须积分两次：第一次对$\theta$从$0$至$2\pi$积分，视径向距离$r$为常数，计及$N$匝；第二次对$R$从$R-c$到$R+c$积分。注意到$2\sqrt{c^2−(r−R)^2}$是每一匝直径为$c$的线圈在$r$处总的弦距离（z向），它位于距离回路中心的$r-R$处。
-$$\Phi(t)=\frac{N I(t)}{2\pi^2}\int_{R-c}^{R+c}\int_{0}^{1\pi}\left[ \frac{(r+\delta_i \cos\theta)\sqrt{c^2-(r-R)^2}}{r^2+\delta_i^2+2r\delta_i \cos\theta}\right]d\theta dr\eqno{(S9.11a)}$$
-
-$$=\frac{N I(t)}{\pi}\int_{R-c}^{R+c} \left[ 0+\frac{\sqrt{c^2-(r-R)^2}}{r}\right]dr\eqno{(S9.11b)}$$
+为了计算$\Phi(t)$，$S9.10$乘上$(N/2\pi)2\sqrt{c^2−(r−R)^2}$必须积分两次：第一次对$\theta$从$0$至$2\pi$积分，视径向距离$r$为常数，计及$N$匝；第二次对$R$从$R-c$到$R+c$积分。注意到$2\sqrt{c^2−(r−R)^2}$是每一匝直径为$c$的线圈在$r$处总的弦距离($z$向)，它位于距离回路中心的$r-R$处。
+\begin{align}
+\Phi(t)&=\frac{N I(t)}{2\pi^2}\int_{R-c}^{R+c}\int_{0}^{1\pi}\left[ \frac{(r+\delta_i \cos\theta)\sqrt{c^2-(r-R)^2}}{r^2+\delta_i^2+2r\delta_i \cos\theta}\right]d\theta dr\nonumber\tag{S9.11a}\\
+&=\frac{N I(t)}{\pi}\int_{R-c}^{R+c} \left[ 0+\frac{\sqrt{c^2-(r-R)^2}}{r}\right]dr\nonumber\tag{S9.11b}
+\end{align}
 
 注意到积分中完全没有$\delta_i$。下面，$S9.11b$沿着一匝的径向从$r=R-c$到$r=R+c$积分，有：
-$$\Phi(t)=\frac{N I(t)}{\pi}\left[ \pi(R-\sqrt{R^2-c^2})\right]$$
+\begin{equation*}
+\Phi(t)=\frac{N I(t)}{\pi}\left[ \pi(R-\sqrt{R^2-c^2})\right] \tag{S9.11c}
+\end{equation*}
 
 可见，Rogowski线圈可以精确的测量电流$I(t)$，不管它与其套入的电流是否同心。
 
-e) 对于$N = 3600, c = 3 mm; R = 0.5 m; \Delta I = 1 MA$，公式2.69可以应用，因为$(c/R)^4 = 1.3×10^{−9}\ll 1$。这样，由$S9.2$得：
-$$\int V(t)dt=\frac{\mu_0 N c^2 \Delta I}{2R}\simeq 41 mVs$$
+e) 对于$N = 3600, c = 3\ \mathrm{mm}; R = 0.5\ \mathrm{m}; \Delta I = 1\ \mathrm{MA}$，公式2.69可以应用，因为$(c/R)^4 = 1.3×10^{−9}\ll 1$。这样，由$S9.2$得：
+$$\int V(t)dt=\frac{\mu_0 N c^2 \Delta I}{2R}\simeq 41\ \mathrm{mVs}$$
 
-在一个噪音环境中，比如典型的试验聚变机器中，测到$40 mVs$级别的信号水平并不简单，但也不是完全得不到。
+在一个噪音环境中，比如典型的试验聚变机器中，测到$40\ \mathrm{mVs}$级别的信号水平并不简单，但也不是完全得不到。
 
 \begin{quotation}
 \kaishu 正如我们所知，有已知的已知，他们是我们知道我们知道的；我们也知道有些是已知的未知。这就是说我们知道有些事情我们是不知道的。但是还有未知的未知——这些事我们不知道我们不知道。——Donald Rumsfeld，2002
