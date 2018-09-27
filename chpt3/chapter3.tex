@@ -19,20 +19,22 @@ $\sin\theta$变化，$\theta$是矢量$\vec{s}$和$\vec{r}$的夹角。下面，
 可知，$\vec{H}$的r分量，$H_r$在$z$轴上的任何位置都是抵消的，仅剩下z分量，$dH_z=|d\vec{H}|\cos\theta$。在这个特例下，方程\ref{eqn:bs law}中的右侧部分可简化为
 $(Id\vec{s}\times \vec{r})=(Id\vec{s}\times \vec{r})_z=Iar\cos\theta d\phi$，于是
 \begin{equation}\label{eqn:bs law z1}
-  H_z=\int_{0}^{2\pi}\frac{Iar\cos\theta}{4\pi r^3}d\phi=\frac{Ia\cos\theta}{2\r^2}
+  H_z=\int_{0}^{2\pi}\frac{Iar\cos\theta}{4\pi r^3}d\phi=\frac{Ia\cos\theta}{2r^2}
 \end{equation}
 %%
 \begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.7]{chpt3/figs/fig3.1.eps}
-  \caption{半径为a的闭合回路通过电流I}
+  \caption{半径为a的闭合回路通过电流$I$。}
 \end{figure}
 
 式中，$\cos\theta=a/r$，$r^2=a^2+z^2$，于是$H_z(z,\rho)$在z轴上（$\rho=0$）成为：
-\begin{eqnarray}\label{eqn:bs law z2}
-H_z(z,0)&=&\frac{a^2I}{2r^3}=\frac{a^2I}{2(a^2+z^2)^{3/2}} \nonumber \\
-H_z(z,0)&=&\frac{H_z(0,0)}{(1+(z/z)^2)^{3/2}} \mbox{（\quad 以中心处磁场$H_z(0,0)$表示）}
-\end{eqnarray}
+\begin{subequations}\label{eqn:bs law z2}
+	\begin{align}
+H_z(z,0)&=\frac{a^2I}{2r^3}=\frac{a^2I}{2(a^2+z^2)^{3/2}} \\
+H_z(z,0)&=\frac{H_z(0,0)}{(1+(z/z)^2)^{3/2}} \qquad\mbox{(\quad 以中心处磁场$H_z(0,0)$表示)}
+\end{align}
+\end{subequations}
 专题1将以实例进行进一步的讨论。
 
 \section{Lorentz力和磁压}
@@ -41,20 +43,22 @@ $\vec{F}_L=q\vec{v}\times \vec{B}$。对于一个电流密度为$J$的导体，�
 \begin{equation}\label{eqn:lorentz force}
   \vec{f}_L=\vec{J}\times \vec{B}
 \end{equation}
-方程\ref{eqn:lorentz force}是磁体中电磁力和应力的基本表达式。如第一章开始提到的，不管是以超导运行于1.8-80K，还是以有阻态运行于室温，产生相同磁场的磁体所需要处理的应力水平基本是一样的。磁体
-的极限磁场为结构部件和载流导体的强度所限。这样看，一个50T的超导磁体——如果可能的话——和一个
+
+方程\ref{eqn:lorentz force}是磁体中电磁力和应力的基本表达式。如第一章开始提到的，不管是以超导运行于1.8-80 K，还是以有阻态运行于室温，产生相同磁场的磁体所需要处理的应力水平基本是一样的。磁体
+的极限磁场为结构部件和载流导体的强度所限。这样看，一个50 T的超导磁体——如果可能的话——和一个
 50T有电阻磁体都必须承受巨大的Lorentz应力。下文将说明，一个50T磁体的等效磁压约为
 1GPa（10000atm）。
 
 考虑一个无限长的薄壁螺线管，半径为$2a$，通以均匀分布的电流（为了简化为面电流密度
-$K_\theta [A/m]$计算）。$(0,0)$处的磁感应强度的z分量为
+$K_\theta [\mathrm{A/m}]$计算）。$(0,0)$处的磁感应强度的z分量为
 \begin{equation}\label{eqn:inf solenoid}
-  B_z=\frac{\mu_0 a^2 K_\theta}{2}\int_{-\infty}^{\infty}\frac{dz}{(a^2+z^2)^{3/2}=\mu_0 K_\theta}\equiv B_0
+  B_z=\frac{\mu_0 a^2 K_\theta}{2}\int_{-\infty}^{\infty}\frac{dz}{(a^2+z^2)^{3/2}}=\mu_0 K_\theta\equiv B_0
 \end{equation}
-由于电流环的分布是从$z=-\inf$到$z=\inf$的，积分包括整个z轴。应用Ampere定律，可知对于无限长
-螺管，螺管外（$r>a$）的$\vec{B}$为零；螺管内在z和r两个方向都是均匀的$B_0$。也就是说，无限长螺管的室温孔内的磁场时完全均匀的，并且仅在z向。
 
-绕组内部的$B_z$是$B_0$，外部是0，在管壁厚度$\delta$方向线性正比于$r$衰减。所以，平均磁感应强度$\bar{H}_z$是$B_0/2$。因而，r方向施于线圈上的平均Lorentz力密度为
+由于电流环的分布是从$z=-\infty$到$z=\infty$的，积分包括整个$z$轴。应用Ampere定律，可知对于无限长
+螺管，螺管外($r>a$)的$\vec{B}$为零；螺管内在$z$和$r$两个方向都是均匀的$B_0$。也就是说，无限长螺管的室温孔内的磁场时完全均匀的，并且仅在$z$向。
+
+绕组内部的$B_z$是$B_0$，外部是$0$，在管壁厚度$\delta$方向线性正比于$r$衰减。所以，平均磁感应强度$\bar{H}_z$是$B_0/2$。因而，r方向施于线圈上的平均Lorentz力密度为
 \begin{equation}\label{eqn:inf solenoid fl}
   f_{L_r}\vec{i}_r=\frac{K_\theta}{\delta}B_z \vec{i}_r=\frac{K_\theta B_0}{2\delta}\vec{i}_r
 \end{equation}
@@ -73,11 +77,11 @@ $K_\theta [A/m]$计算）。$(0,0)$处的磁感应强度的z分量为
 \begin{equation}\label{eqn:mag press}
   p_m=\frac{B_0^2}{2\mu_0}
 \end{equation}
-也即，磁压等于磁能密度。如果磁感应强度$B_0=1 T$ ，可算得磁压为$3.98\times 10^5 Pa$或者
-$~4 atm$。容易算出如果$B_0=50 T$，磁压将达到$~1 GPa$。
+也即，磁压等于磁能密度。如果磁感应强度$B_0=1\ \mathrm{T}$ ，可算得磁压为$3.98\times 10^5 \ \mathrm{Pa}$或者
+$~4  \ \mathrm{atm}$。容易算出如果$B_0=50 \ \mathrm{T}$，磁压将达到$~1 \ \mathrm{GPa}$。
 
 \section{螺管线圈的场分析}
-本节，我们将推导出对分析高空间场均匀性的MRI和NMR磁体有用的闭式场表达式以及简单线圈（“长”、“薄”）的表达式。
+本节，我们将推导出对分析高空间场均匀性的MRI和NMR磁体有用的闭式场表达式以及简单线圈(“长”、“薄”)的表达式。
 在螺管线圈设计的开始阶段，可以用这些表达式来对场的均匀性“找找感觉”。
 
 图3.3给出的是一个内径、外径和长度分别为$2a_1, 2a_2, 2b$的螺管线圈的剖面图。从磁力线可以看出，线圈产生的磁场在室温孔内
@@ -91,8 +95,9 @@ $\alpha\equiv 2a_2/2a_1=a_2/a_1$和$\beta\equiv 2b/2a_1=b/a_1$。外径和长度
 
 在球坐标系$(r,\theta,\phi)$下，任何电流体系和/或磁性材料产生的z向磁场$H_z(r,\theta,\phi)$在除源以外空间可以写为：
 \begin{equation}\label{eqn:solenoid coil hz}
-  H_z (r,\theta,\phi)=\Sigma_{n=0}^\infty \Sigma_{m=0}^n r^n (n+m+1) P_n^m(u)(A_n^m\cos m\phi+B_n^m\sin m\phi)
+  H_z (r,\theta,\phi)=\sum_{n=0}^\infty \sum_{m=0}^n r^n (n+m+1) P_n^m(u)(A_n^m\cos m\phi+B_n^m\sin m\phi)
 \end{equation}
+
 式中，$P$是Legendre多项式。
 
 $A_n^m$和$B_n^m$是常数，通常除了$A_0^0$和$B_0^0$都是要被最小化的，因为它们是引起不均匀性的项。$A_n^m$和$B_n^m$
@@ -101,127 +106,146 @@ $A_n^m$和$B_n^m$是常数，通常除了$A_0^0$和$B_0^0$都是要被最小化�
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.5]{chpt3/figs/fig3.4.eps}
-	\caption{圆柱坐标}
+	\caption{圆柱坐标系。}
 \end{figure}
 
-螺管系统中，所有的电流密度与$\phi$无关，即存在轴对称性。此时，仅$m=0$的项保留。沿着z轴（$r=z,\theta=0$）和沿着中平面上的
+螺管系统中，所有的电流密度与$\phi$无关，即存在轴对称性。此时，仅$m=0$的项保留。沿着$z$轴($r=z,\theta=0$)和沿着中平面上的
 x(或y)轴（$x,\theta=90^\circ$），磁场化简：
-\begin{eqnarray}\label{eqn:solenoid coil hz1}
-H_z(z)&=&\Sigma_{n=0}^\infty z^n(n+1)A_n^0 \nonumber \\
-H_z(x)&=&\Sigma_{n=0}^\infty \Sigma_{m=0}^n x^n(n+m+1)P_n^m(0)A_n^m\
-\end{eqnarray}
-上式第一式不含Legendre函数，因为$P_n^0(1)=P_n(1)=1$。第二式中，注意到当n=偶数且m=奇数时，$ P_n^m(0)=0$。代入n和m的0,2,4三个值，
+\begin{subequations}\label{eqn:solenoid coil hz1}
+\begin{align}
+H_z(z)&=\sum_{n=0}^\infty z^n(n+1)A_n^0 \\
+H_z(x)&=\sum_{n=0}^\infty \sum_{m=0}^n x^n(n+m+1)P_n^m(0)A_n^m
+\end{align}
+\end{subequations}
+
+上式第一式不含Legendre函数，因为$P_n^0(1)=P_n(1)=1$。第二式中，注意到当$n=$偶数且$m=$奇数时，$ P_n^m(0)=0$。代入$n$和$m$的$0,2,4$三个值，
 我们可以写出笛卡尔坐标系下的$H_z(x)$
-\begin{eqnarray}\label{eqn:solenoid coil hz2}
-H_z(z)&=&A_0^0+3A_2^0z^2+5A_4^0z^4+\cdots \nonumber \\
-H_z(x)&=&A_0^0-(3/2A_2^0-15A_2^2)x^2+(15/8 A_4^0-105/2 A_4^2\nonumber\\
-&& +945A_4^4)x^4+\cdots
-\end{eqnarray}
+\begin{subequations}\label{eqn:solenoid coil hz2}
+	\begin{align}
+H_z(z)&=A_0^0+3A_2^0z^2+5A_4^0z^4+\cdots\\
+H_z(x)&=A_0^0-(3/2A_2^0-15A_2^2)x^2+(15/8 A_4^0-105/2 A_4^2+945A_4^4)x^4+\cdots
+\end{align}
+\end{subequations}
+
 式中，$A_0^0$是磁体中心$(0,0,0)$的场：$A_0^0\equiv H_)$。理想螺管中，对于$m>0$时，系数为0：$A_0^0=0$。对于$n>0, m=0$时，$A_n^0$
 是线圈参数$\alpha, \beta$的函数。引入$h_z(\zeta)\equiv H_z(z)/H_0$，此处$\zeta \equiv z/a_1, h_z(\xi)\equiv H_z(x)/H_0, \xi\equiv x/a_1$，我们
 得到
-\begin{eqnarray}\label{eqn:solenoid coil hz2}
-h_z(\zeta)&=&1+E_2(\alpha,\beta)\xi^2+E_4(\alpha,\beta)\zeta^4+E_6(\alpha,\beta)\zeta^6+\cdots \nonumber \\
-h_z(\xi) &=&1-\frac{1}{2}E_2(\alpha,\beta)\xi^2+\frac{3}{8}E_4(\alpha,\beta)\xi^4-\frac{5}{16}E_6(\alpha,\beta)\xi^6+\cdots
-\end{eqnarray}
-注意到$\xi^2$的系数仅为$\zeta^2$系数异号的一半,$\xi^4$的系数为$\zeta^4$同号的$\frac{3}{8}$。实际上，平面方向的任何系数在数值上都小于z向。
-所以，x和y方向的场的不均匀性要比z向小。
+\begin{subequations}\label{eqn:solenoid coil hz2}
+	\begin{align}
+h_z(\zeta)=&1+E_2(\alpha,\beta)\xi^2+E_4(\alpha,\beta)\zeta^4\notag\\
+&+E_6(\alpha,\beta)\zeta^6+\cdots \\
+h_z(\xi) =&1-\frac{1}{2}E_2(\alpha,\beta)\xi^2+\frac{3}{8}E_4(\alpha,\beta)\xi^4\notag\\
+&-\frac{5}{16}E_6(\alpha,\beta)\xi^6+\cdots
+	\end{align}
+\end{subequations}
+
+注意到$\xi^2$的系数仅为$\zeta^2$系数异号的一半,$\xi^4$的系数为$\zeta^4$同号的$3/8$。实际上，平面方向的任何系数在数值上都小于$z$向。
+所以，$x$和$y$方向的场的不均匀性要比z向小。
 
 中心场$H_0(\equiv A_0^0)$由下式给出：
-\begin{eqnarray}\label{eqn:h0}
-  H_0&=&\lambda J a_1 F(\alpha,\beta)=\lambda J a_1 \beta \ln [\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}]  \nonumber \\
-  F(\alpha,\beta)&=&\beta \ln [\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}]
-\end{eqnarray}
+\begin{subequations}\label{eqn:h0}
+	\begin{align}
+  H_0=&\lambda J a_1 F(\alpha,\beta)=\lambda J a_1 \beta \ln [\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}] \\
+  F(\alpha,\beta)=&\beta \ln \left[\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}\right]
+  	\end{align}
+\end{subequations}
+
 式中，$F(\alpha,\beta)$是均匀电流密度线圈的”磁场因子“。上式的衍生问题在专题3.1进行讨论。$E_n (\alpha,\beta)$在$n=2,4,6,8,10$时的表达式
-在下面以$F(\alpha,\beta)$和$E_n(\alpha,\beta)$的乘积的形式给出：
-\begin{eqnarray}
- F(\alpha,\beta) E_2(\alpha,\beta)&=& \frac{1}{2\beta}[\frac{1}{(1+\beta^2)^{1.5}} - \frac{\alpha^3}{(\alpha^2+\beta^2)^{1.5}}]
-\end{eqnarray}
-\begin{eqnarray}
- F(\alpha,\beta) E_4(\alpha,\beta)&=& -\frac{r^3}{24\beta^3}[\frac{2+7\beta^2+20\beta^4}{(1+\beta^2)^{3.5}} - \frac{2\alpha^7+7\alpha^5 \beta^2+20\alpha^3\beta^4}{(\alpha^2+\beta^2)^{3.5}}] \nonumber
-\end{eqnarray}
-上式还可写为更简洁的形式：
-$$F(\alpha,\beta) E_4(\alpha,\beta)=-\frac{r^3}{24\beta^3}\left[\frac{2r^4+7r^2\beta^2+20\beta^4}{(\alpha^2+\beta^2)^{3.5}}\right]|_{r=1}^{r=\alpha}$$
+在下面以$F(\alpha,\beta)$和$E_n(\alpha,\beta)$的乘积的形式给出[3.3]。除了2阶外，
+高阶的表达式都使用积分上下限的简洁表达形式。
+\begin{subequations}
+	\begin{align}
+F(\alpha,\beta) E_2(\alpha,\beta)=& \frac{1}{2\beta}[\frac{1}{(1+\beta^2)^{1.5}}-\frac{\alpha^3}{(\alpha^2+\beta^2)^{1.5}}]\\
+F(\alpha,\beta)E_4(\alpha,\beta)=&-\frac{r^3}{24\beta^3}\left[\frac{2r^4+7r^2\beta^2+20\beta^4}{(\alpha^2+\beta^2)^{3.5}}\right]\bigg|_{r=1}^{r=\alpha}\\
+F(\alpha,\beta)E_6(\alpha,\beta)=&-\frac{r^3}{240\beta^5}\left[\frac{8r^8+44 r^6\beta^2+99 r^4\beta^4+28 r^2 \beta^6+280 \beta^8}{(\alpha^2+\beta^2)^{5.5}}\right]\bigg|_{r=1}^{r=\alpha}\\
+F(\alpha,\beta)E_8(\alpha,\beta)=&-\frac{r^3}{896\beta^7}\left[\frac{16 r^{12}+120 r^{10}\beta^2+390r^8\beta^4+715r^6\beta^6+1080r^4\beta^8-1008r^2\beta^{10}+1344\beta^{12}}{(\alpha^2+\beta^2)^{7.5}}\right]\bigg|_{r=1}^{r=\alpha}
+\end{align}
+\end{subequations}
 
-以下分别为6阶、8阶的形式：
-$$F(\alpha,\beta) E_6(\alpha,\beta)=-\frac{r^3}{240\beta^5}\left[\frac{8r^8+44 r^6\beta^2+99 r^4\beta^4+28 r^2 \beta^6+280 \beta^8}{(\alpha^2+\beta^2)^{5.5}}\right]_{r=1}^{r=\alpha}$$
-$$F(\alpha,\beta) E_8(\alpha,\beta)=-\frac{r^3}{896\beta^7}\left[\frac{16 r^{12}+120 r^{10}\beta^2+390..+715..+1080..-1008..+1344..}{(\alpha^2+\beta^2)^{7.5}}\right]_{r=1}^{r=\alpha}$$
+$F(\alpha,\beta)E_{n}(\alpha,\beta)$是一个递归式，第$n$阶项从下式第一式导出。第二式
+是$F(\alpha,\beta) E_{n}(\alpha,\beta)$的另一种表达形式。
+\begin{subequations}
+	\begin{align}
+F(\alpha,\beta)E_{n}(\alpha,\beta)&=\frac{1}{n} \frac{\partial}{\partial \beta}\left[F(\alpha=1,\beta)E_{n-1}(\alpha=1,\beta)-F(\alpha,\beta)E_{n-1}(\alpha,\beta)\right]\\
+F(\alpha,\beta) E_{n}(\alpha,\beta)&=\frac{1}{M_n \beta^{n-1}}\left[\frac{f_n(\alpha=1,\beta)}{(1+\beta^2)^{n-0.5}}-\frac{\alpha^3 f_n(\alpha,\beta)}{(\alpha^2+\beta^2)^{n-0.5}}\right]
+\end{align}
+\end{subequations}
 
+式中，$M_n$是一个常数。附录给出了$n=2,3,4,...20$时的$M_n$和$f_n(\alpha,\beta)$的值。$20$之下的偶数$f_n$用来求解磁场问题。
 
-$F(\alpha,\beta) E_{n}(\alpha,\beta)$是一个递归式，第$n$阶项可以写为：
-\begin{equation}
-  F(\alpha,\beta) E_{n}(\alpha,\beta)=\frac{1}{n} \frac{\partial}{\partial \beta}\left[F(\alpha=1,\beta)E_{n-1}(\alpha=1,\beta)-F(\alpha,\beta)E_{n-1}(\alpha,\beta)\right]
-\end{equation}
-或者写为
-$$ F(\alpha,\beta) E_{n}(\alpha,\beta)=\frac{1}{M_n \beta^{n-1}}\left[\frac{f_n(\alpha=1,\beta)}{(1+\beta^2)^{n-0.5}}-\frac{\alpha^3 f_n(\alpha,\beta)}{(\alpha^2+\beta^2)^{n-0.5}}\right]$$
-式中，$M_n$是一个常数。附录给出了$n=2,3,4,...20$时的$M_n$和$f_n(\alpha,\beta)$的值。20之下的偶数$f_n$用来求解磁场问题。
-
-一般来说（但也不全是），z轴向磁场$H_z(z)$的均匀性要比z轴法平面上的均匀性更好。故，我们仅考虑z轴向磁场
-$$\frac{\partial^2 h_z(\zeta)}{\partial \zeta^2}=[2 E_2(\alpha,\beta)+(4)(3)E_4(\alpha,\beta)\zeta^2+...]=\Sigma_{n=1}^{\infty} (2n)(2n-1)E_{2n}(\alpha,\beta)\zeta^{2(n-1)}$$
-
-一般有，
-\begin{equation}
- \frac{\partial^{2k} h_z(\zeta)}{\partial \zeta^{2k}}=\Sigma_{n=k}^{\infty} (2n)(2n-1)(\cdots)(2n-2k+1)E_{2n}(\alpha,\beta)\zeta^{2(n-k)}
-\end{equation}
+一般来说(但也不全是)，$z$轴向磁场$H_z(z)$的均匀性要比z轴法平面上的均匀性更好。故，我们仅考虑z轴向磁场，并给出其一般形式：
+\begin{subequations}
+	\begin{align}
+\frac{\partial^2 h_z(\zeta)}{\partial \zeta^2}=&[2 E_2(\alpha,\beta)+(4)(3)E_4(\alpha,\beta)\zeta^2+...]\nonumber\\
+&=\sum_{n=1}^{\infty} (2n)(2n-1)E_{2n}(\alpha,\beta)\zeta^{2(n-1)}\\
+ \frac{\partial^{2k} h_z(\zeta)}{\partial \zeta^{2k}}=&\sum_{n=k}^{\infty} (2n)(2n-1)(\cdots)(2n-2k+1)E_{2n}(\alpha,\beta)\zeta^{2(n-k)}
+	\end{align}
+\end{subequations}
 
 在原点处，$\zeta=0$。上两式由于仅第一项非零，可以化为更简单的形式
-$$\frac{\partial^2 h_z(\zeta)}{\partial \zeta^2}|_{0}=2 E_{2}(\alpha,\beta)$$
-\begin{equation}
- \frac{\partial^{2k} h_z(\zeta)}{\partial \zeta^{2k}}|_{0}=(2k)! E_{2k}(\alpha,\beta)
- \end{equation}
+\begin{subequations}
+	\begin{align}
+\frac{\partial^2 h_z(\zeta)}{\partial \zeta^2}\bigg|_{0}&=2 E_{2}(\alpha,\beta)
+\frac{\partial^{2k} h_z(\zeta)}{\partial \zeta^{2k}}\bigg|_{0}&=(2k)! E_{2k}(\alpha,\beta)
+	\end{align}
+\end{subequations}
 
 \textbf{嵌套线圈磁体}
 
 由$\ell$个线圈同心同轴嵌套的磁体，3.12a式仅给出$\zeta^2$项，对每一组$\lambda J, a_1, \alpha, \beta$，有通用表达式
 \begin{equation}
-  h_z(\zeta)=1+\frac{\Sigma_{j=1}^{\ell} (\lambda J)_l a_{1_j}F(\alpha_j,\beta_j)E_2(\alpha_j,\beta_j)}{\Sigma_{j=1}^{\ell}(\lambda J)_j a_{1_j} F(\alpha_j,\beta_j)}\zeta^2+\cdots
+  h_z(\zeta)=1+\frac{\sum_{j=1}^{\ell} (\lambda J)_l a_{1_j}F(\alpha_j,\beta_j)E_2(\alpha_j,\beta_j)}{\sum_{j=1}^{\ell}(\lambda J)_j a_{1_j} F(\alpha_j,\beta_j)}\zeta^2+\cdots
 \end{equation}
 
 \subsection{简单线圈}
-本节我们推导“简单”线圈的$E_n(\alpha,\beta)$和$h_z(\zeta)$在10阶以下的表达式。各$h_z(\zeta)$的表达式可以给设计者在不依赖于磁场分析专家时，对考虑线圈尺寸（即$\alpha, \beta$）的线圈的场
+本节我们推导“简单”线圈的$E_n(\alpha,\beta)$和$h_z(\zeta)$在10阶以下的表达式。各$h_z(\zeta)$的表达式可以给设计者在不依赖于磁场分析专家时，对考虑线圈尺寸(即$\alpha, \beta$)的线圈的场
 的均匀性有一个“感觉”。
 \subsubsection{“短”线圈}
-短线圈（$\beta\rightarrow 0 $），如饼式线圈，其$F(\alpha,\beta)$简化为
+短线圈($\beta\rightarrow 0 $)，如饼式线圈，其$F(\alpha,\beta)$简化为
 \begin{equation}
   F(\alpha,\beta\rightarrow 0)=\beta \ln\alpha
 \end{equation}
 
 通过枯燥的推导，从3.14可以得出$E_2,\cdots,E_{10}$。在$\beta\rightarrow 0$极限下，$f_n(\alpha,\beta)$分母$(1+\beta^2)^{n-0.5}$可以展开
-为$\beta^{2k}$的级数，取前n项。整数k取遍1至n/2.
+为$\beta^{2k}$的级数，取前$n$项。整数$k$取遍$1$至$n/2$。
 \begin{equation}
- \frac{1}{(1+\beta^2)^{n-0.5}}=1+...+(-1)^k (n-0.5)\cdots(n+k-1.5)\frac{\beta^{2k}}{k!}
+ \frac{1}{(1+\beta^2)^{n-0.5}}=1-...+(-1)^k (n-0.5)\cdots(n+k-1.5)\frac{\beta^{2k}}{k!}
 \end{equation}
 
 在$\beta\rightarrow 0$极限下，上式右侧高于$\beta^n$的项为高阶小，可以忽略。同时，所有小于$\beta^n$的项都被约掉，仅剩下$\beta^n$项。
-\begin{eqnarray}
-% \nonumber % Remove numbering (before each equation)
-  E_2(\alpha,0) &=& -\frac{3}{2^2}\frac{(\alpha^2-1)}{\alpha^2 \ln \alpha}=-\frac{3(\alpha^2-1)}{4\alpha^2 \ln \alpha} \\ \nonumber
-  E_4(\alpha,0) &=& \frac{15(\alpha^4-1)}{32\alpha^4 \ln \alpha} \\ \nonumber
-  E_6(\alpha,0) &=& -\frac{35(\alpha^6-1)}{96\alpha^6\ln \alpha} \\ \nonumber
-  E_8(\alpha,0) &=& \frac{315(\alpha^8-1)}{1024\alpha^8 \ln \alpha} \\ \nonumber
-    E_{10}(\alpha,0) &=& -\frac{693(\alpha^{10}-1)}{2560\alpha^{10} \ln \alpha}
-\end{eqnarray}
+\begin{subequations}
+	\begin{align}
+  E_2(\alpha,0) &= -\frac{3}{2^2}\frac{(\alpha^2-1)}{\alpha^2 \ln \alpha}=-\frac{3(\alpha^2-1)}{4\alpha^2 \ln \alpha} \\ 
+  E_4(\alpha,0) &= \frac{15(\alpha^4-1)}{32\alpha^4 \ln \alpha} \\ 
+  E_6(\alpha,0) &= -\frac{35(\alpha^6-1)}{96\alpha^6\ln \alpha} \\ 
+  E_8(\alpha,0) &= \frac{315(\alpha^8-1)}{1024\alpha^8 \ln \alpha} \\
+    E_{10}(\alpha,0) &= -\frac{693(\alpha^{10}-1)}{2560\alpha^{10} \ln \alpha}
+    \end{align}
+\end{subequations}
 
-3.12a于是成为
+方程3.12a于是成为
 \begin{equation}
   h_z(\zeta)=1-\frac{3(\alpha^2-1)}{4\alpha^2 \ln \alpha}+\frac{15(\alpha^4-1)}{32\alpha^4 \ln \alpha} -\frac{35(\alpha^6-1)}{96\alpha^6\ln \alpha}+\cdots
 \end{equation}
 
 \subsubsection{“薄壁”线圈}
 对于薄壁线圈（$\alpha=1$），$F(\alpha,\beta)$成为
-\begin{equation}
-  \lim_{\alpha\rightarrow 1} F(\alpha,\beta)=\beta\frac{\epsilon}{\sqrt{1+\beta^2}}=\frac{\beta(\alpha-1)}{\sqrt{1+\beta^2}}
-\end{equation}
+\begin{subequations}
+\begin{align}
+  \lim_{\alpha\rightarrow 1} F(\alpha,\beta)&=\beta\frac{\epsilon}{\sqrt{1+\beta^2}}\\
+  &=\frac{\beta(\alpha-1)}{\sqrt{1+\beta^2}}
+\end{align}
+\end{subequations}
 
 联立3.13和上式，得到：
-\begin{eqnarray}
-% \nonumber % Remove numbering (before each equation)
-  E_2(1,\beta) &=& -\frac{3}{2(1+\beta^2)^2} \\ \nonumber
-  E_4(1,\beta) &=& \frac{5(3-4\beta^2)}{2^3(1+\beta^2)^4} \\ \nonumber
-    E_6(1,\beta) &=& -\frac{7(5-20\beta^2+8\beta^4)}{2^4 (1+\beta^2)^6} \\ \nonumber
-      E_8(1,\beta) &=& \frac{9(35-280\beta^2+336\beta^4-64\beta^6)}{2^7(1+\beta^2)^8} \\ \nonumber
-        E_{10}(1,\beta) &=& -\frac{11(63-840\beta^2+2016\beta^4-1152\beta^6+128\beta^8)}{2^8(1+\beta^2)^{10}}
-\end{eqnarray}
+\begin{subequations}
+\begin{align}
+E_2(1,\beta) &=-\frac{3}{2(1+\beta^2)^2} \\ 
+E_4(1,\beta) &= \frac{5(3-4\beta^2)}{2^3(1+\beta^2)^4} \\ 
+E_6(1,\beta) &= -\frac{7(5-20\beta^2+8\beta^4)}{2^4 (1+\beta^2)^6} \\
+E_8(1,\beta) &= \frac{9(35-280\beta^2+336\beta^4-64\beta^6)}{2^7(1+\beta^2)^8} \\ E_{10}(1,\beta) &= -\frac{11(63-840\beta^2+2016\beta^4-1152\beta^6+128\beta^8)}{2^8(1+\beta^2)^{10}}
+\end{align}
+\end{subequations}
 
 于是，对于薄壁线圈，我们有：
 \begin{equation}
@@ -243,21 +267,22 @@ $$\frac{\partial^2 h_z(\zeta)}{\partial \zeta^2}|_{0}=2 E_{2}(\alpha,\beta)$$
 \end{equation}
 
 联立3.21和上式，或者简单的在3.24式中令$\beta=0$，可以得到同样的结果：
-\begin{eqnarray}
-% \nonumber % Remove numbering (before each equation)
-  E_2(1,0) &=& -\frac{3}{2}=-1.5 \\ \nonumber
-  E_4(1,0) &=& \frac{3\cdot 5}{2^3}=1.875 \\ \nonumber
-    E_6(1,0) &=& -\frac{3\cdot 5 \cdot 7}{2\cdot 4\cdot 6}\simeq-2.188 \\ \nonumber
-      E_8(1,0) &=&\frac{3\cdot 5 \cdot 7\cdot 9}{2\cdot 4\cdot 6\cdot 8}\simeq 2.461 \\ \nonumber
-        E_{10}(1,0) &=-&\frac{3\cdot 5 \cdot 7\cdot 9\cdot 11}{2\cdot 4\cdot 6\cdot 8\cdot 10}\simeq -2.707
-\end{eqnarray}
+\begin{subequations}
+\begin{align}
+E_2(1,0) =& -\frac{3}{2}=-1.5 \\ 
+E_4(1,0) =& \frac{3\cdot 5}{2^3}=1.875 \\ 
+E_6(1,0) =& -\frac{3\cdot 5 \cdot 7}{2\cdot 4\cdot 6}\simeq-2.188 \\ 
+E_8(1,0) =&\frac{3\cdot 5 \cdot 7\cdot 9}{2\cdot 4\cdot 6\cdot 8}\simeq 2.461 \\ 
+E_{10}(1,0) =-&\frac{3\cdot 5 \cdot 7\cdot 9\cdot 11}{2\cdot 4\cdot 6\cdot 8\cdot 10}\simeq -2.707
+\end{align}
+\end{subequations}
 
 于是
 \begin{equation}
   h_z(\zeta)=1-1.5\zeta^2+1.875\zeta^4-2.188\zeta^6+\cdots
 \end{equation}
 
-\subsection{失谐—嵌套双线圈磁体}
+\subsection{失配误差—嵌套双线圈磁体}
 方程3.12表明，$h_z(\zeta)$和$h_z(\xi)$(其中，$h_z(\zeta)\equiv H_z/H_0,\zeta\equiv z/a_1,\xi\equiv x/a_1$)都仅与$\zeta$或$\xi$的偶次幂有关。也即，两个方程都表达了“理想”螺线管或者此种“理想”嵌套螺管的轴向场的空间变化。在这里，“理想”指的是空间对称性、均匀性以及电流密度的不变性。
 
 哪怕对一个单螺管，现实也是很不同的：线圈形状的瑕疵；导体尺寸和形状；导体的放置导致不仅与偶次幂有关。如果一个磁体是由嵌套线圈组成的，可能的瑕疵就更多了，会出现很多“不希望”的项。下面，我们将展示嵌套双线圈磁体失谐的起源。
@@ -266,22 +291,27 @@ $$\frac{\partial^2 h_z(\zeta)}{\partial \zeta^2}|_{0}=2 E_{2}(\alpha,\beta)$$
 \begin{equation}
 H_z(z)=[H_z(z)]_1+[H_z(z)]_2
 \end{equation}
+
 式中，$[H_z(z)]_1$和$[H_z(z)]_2$由下式给出：
-\begin{eqnarray}
-  [H_z(z)]_1 &=& [A_0^0]_1 +3[A_2^0]_1 z^2+5[A_4^0]_1 z^4+... \\ \nonumber
-  [H_z(z)]_2 &=& [A_0^0]_2 +3[A_2^0]_2 z^2+5[A_4^0]_2 z^4+...
-\end{eqnarray}
+\begin{subequations}
+	\begin{align}
+  [H_z(z)]_1 &= [A_0^0]_1 +3[A_2^0]_1 z^2+5[A_4^0]_1 z^4+... \\ 
+  [H_z(z)]_2 &= [A_0^0]_2 +3[A_2^0]_2 z^2+5[A_4^0]_2 z^4+...
+  \end{align}
+\end{subequations}
 
 注意到，中心的总轴向场有：$H_z(0)=[A_0^0]_1+[A_0^0]_2\equiv H_0$
 
 \subsubsection{线圈轴向失配}
-如果线圈1和线圈2在径向是对齐的，即同轴。但是两个线圈的中心面未对齐，分别在$z=0$和$z=\delta_z$。这样，3.31中的$H_z(z)$成为：
-\begin{equation}
-  H_z(z)=H_0+3\{ [A_2^0]_1 z^2+[A_2^0]_2(Z-\delta_z)^2\}+5\{[A_4^0]_1 z^4+[A_4^0]_2(z-\delta)^4\}+\cdots
-\end{equation}
-
-展开上式中的乘方项，有：
-$$H_z(z)=\{H_0+3[A_2^0]_2 \delta_z^2+5[A_4^0]_2\delta_z^4+\cdots\}-\{6[A_2^0]_2\delta_z+20[A_4^0]_2\delta_z^3+\cdots\}+\cdots$$
+如果线圈1和线圈2在径向是对齐的，即同轴。但是两个线圈的中心面未对齐，分别在$z=0$和$z=\delta_z$。这样，3.31中的$H_z(z)$成为下式。第二式是第一式按幂次展开的情形。
+\begin{subequations}
+	\begin{align}
+  H_z(z)=&H_0+3\{ [A_2^0]_1 z^2+[A_2^0]_2(z-\delta_z)^2\}\nonumber\\
+  &+5\{[A_4^0]_1 z^4+[A_4^0]_2(z-\delta)^4\}+\cdots\\
+H_z(z)=&\{H_0+3[A_2^0]_2 \delta_z^2+5[A_4^0]_2\delta_z^4+\cdots\}\nonumber\\
+&-\{6[A_2^0]_2\delta_z+20[A_4^0]_2\delta_z^3+\cdots\}+\cdots
+\end{align}
+\end{subequations}
 
 从上式可以看出，线圈1和线圈2的轴向失配$\delta_z$不仅影响了各含$z$项的系数，更重要的，还增加了z的奇次幂项，这导致$H_z(z)$在轴向不在对称。
 
@@ -299,9 +329,9 @@ $$H_z(z)=\{H_0+3[A_2^0]_2 \delta_z^2+5[A_4^0]_2\delta_z^4+\cdots\}-\{6[A_2^0]_2\
 \end{equation}
 
 当线圈2相对于线圈1在径向失配，在x方向失配$\delta_x$，在y方向失配$\delta_y$。我们将上式中的x和y分别用$x-\delta_x$和$y-\delta_y$替换，有：
-$$
-H_z(x,y,z)=H_0+3()+5()+[A_4^0]_2()
-$$
+\begin{equation*}
+H_z(x,y,z)=H_0+3()+5()+[A_4^0]_2() \tag{3.33'}
+\end{equation*}
 
 上面的展开式包含很多项，包括$x,x^2,x^3,x^4,y,y^2,y^3,y^4,xy,xy^2,z^2,z^2x...$等等。
 
@@ -322,16 +352,21 @@ $$
 \end{figure}
 
 \begin{equation}
-  F_{ZA}(\rho)=\frac{\mu_0}{2}(N_A I_A)(N_B I_B)\frac{\rho\sqrt{(a_A+a_B)^2+\rho^2}}{(a_A-a_B)^2+\rho^2}\times\{k^2 K(k)+(k^2-2)[K(k)-E(k)]\}
+\begin{split}
+  F_{zA}(\rho)=&\frac{\mu_0}{2}(N_A I_A)(N_B I_B)\frac{\rho\sqrt{(a_A+a_B)^2+\rho^2}}{(a_A-a_B)^2+\rho^2}\\
+  &\times\{k^2 K(k)+(k^2-2)[K(k)-E(k)]\}
+\end{split}
 \end{equation}
 
-$F_{zA}(\rho)$是+z向或者说是指向线圈B的；也即，$F_{zA}(\rho)$是吸引力。如果两个电流的方向相反，符号变为-，力变成斥力。上式中，$K(k)$和$E(k)$分别是第一类和第二类完全椭圆积分，定义为：
-\begin{eqnarray}
-% \nonumber % Remove numbering (before each equation)
-  K(k) &=& \int_{0}^{\pi/2} \frac{d\theta}{\sqrt{1-k^2\sin^2\theta}} \\ \nonumber
-  E(k)&=& \int_{0}^{\pi/2}\sqrt{1-k^2 \sin^2\theta}d\theta
-\end{eqnarray}
-本系统椭圆积分的模量k由下式决定：
+$F_{zA}(\rho)$是$+z$向或者说是指向线圈B的；也即，$F_{zA}(\rho)$是吸引力。如果两个电流的方向相反，符号变为-，力变成斥力。上式中，$K(k)$和$E(k)$分别是第一类和第二类完全椭圆积分，定义为：
+\begin{subequations}
+	\begin{align}
+  K(k) &= \int_{0}^{\pi/2} \frac{d\theta}{\sqrt{1-k^2\sin^2\theta}} \\
+  E(k)&= \int_{0}^{\pi/2}\sqrt{1-k^2 \sin^2\theta}d\theta
+  \end{align}
+\end{subequations}
+
+本系统椭圆积分的模量$k$由下式决定：
 \begin{equation}
   k^2=\frac{4a_A a_B}{(a_A+a_B)^2+\rho^2}
 \end{equation}
@@ -346,7 +381,7 @@ $F_{zA}(\rho)$是+z向或者说是指向线圈B的；也即，$F_{zA}(\rho)$是�
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
 $k^2$    & $k$  & $K(k)$ &$E(k)$  &$k^2$  & $k$ &$K(k)$  &$E(k)$  \\ \hline
-0   & 0 &$pi/2$  & $pi/2$ &0.7&0.8367  &2.0754  & 1.2417 \\ \hline
+0   & 0 &$\pi/2$  & $\pi/2$ &0.7&0.8367  &2.0754  & 1.2417 \\ \hline
 0.1 & 0.3162  & 1.6124 &1.5308  &0.8& 0.8944 & 2.2572 & 1.1785 \\ \hline
 0.2 & 0.4472  & 1.6596 &1.4890  &0.9&0.9487  & 2.5781 & 1.1048 \\ \hline
 0.3 & 0.5477  & 1.7139 & 1.4454 &0.95&0.9747  &2.9083  & 1.0605 \\ \hline
@@ -358,48 +393,65 @@ $k^2$    & $k$  & $K(k)$ &$E(k)$  &$k^2$  & $k$ &$K(k)$  &$E(k)$  \\ \hline
 
 表3.1给出了部分$k$和$k^2$值下的$K(k)$和$E(k)$。注意到，$K(0)=E(0)=\pi/2$；还注意到，$K(1)=\infty$以及$E(1)=1$，也即$K(k)$是随k增加而增加的，$E(k)$随k增加而减小。
 $K(k)$和$E(k)$可以展开为$k^2$的级数：
-\begin{eqnarray}
-% \nonumber % Remove numbering (before each equation)
-  K(k) &=& \frac{\pi}{2}[1+(\frac{1}{2})^2 k^2+(\frac{1\cdot 3}{2\cdot 4})^2 k^4+(\frac{1\cdot 3\cdot 5}{2\cdot 4\cdot 6})^2 k^6+\cdots] \\ \nonumber
-  E(k) &=& \frac{\pi}{2}[1-(\frac{1}{2})^2 k^2-(\frac{1\cdot 3}{2\cdot 4})^2 \frac{k^4}{3}-(\frac{1\cdot 3\cdot 5}{2\cdot 4\cdot 6})^2 \frac{k^6}{5}-\cdots]
-  \end{eqnarray}
+\begin{subequations}
+	\begin{align}
+  K(k) =& \frac{\pi}{2}[1+(\frac{1}{2})^2 k^2+(\frac{1\cdot 3}{2\cdot 4})^2 k^4+(\frac{1\cdot 3\cdot 5}{2\cdot 4\cdot 6})^2 k^6+\cdots] \\
+  E(k) =& \frac{\pi}{2}[1-(\frac{1}{2})^2 k^2-(\frac{1\cdot 3}{2\cdot 4})^2 \frac{k^4}{3}-(\frac{1\cdot 3\cdot 5}{2\cdot 4\cdot 6})^2 \frac{k^6}{5}-\cdots]
+ 	\end{align}
+  \end{subequations}
 
 在$k^2\ll 1$时，两个积分和他们的差可以近似为
-\begin{eqnarray}
-% \nonumber % Remove numbering (before each equation)
-  K(k) &\simeq&  \frac{\pi}{2}(1+\frac{1}{4}k^2+\frac{9}{64}k^4+\frac{25}{256}k^6+\frac{1225}{16384}k^8)\\ \nonumber
-  E(k) &\simeq&  \frac{\pi}{2}(1-\frac{1}{4}k^2-\frac{3}{64}k^4-\frac{5}{256}k^6-\frac{175}{16384}k^8)\\ \nonumber
-  K(k)-E(k) &\simeq& \frac{\pi}{4}(k^2+\frac{3}{8}k^4+\frac{15}{64}k^6+\frac{175}{1024}k^8) 
-\end{eqnarray}
+\begin{subequations}
+	\begin{align}
+  K(k) \simeq&  \frac{\pi}{2}(1+\frac{1}{4}k^2+\frac{9}{64}k^4+\frac{25}{256}k^6+\frac{1225}{16384}k^8)\\
+  E(k) \simeq&  \frac{\pi}{2}(1-\frac{1}{4}k^2-\frac{3}{64}k^4-\frac{5}{256}k^6-\frac{175}{16384}k^8)\\ 
+  K(k)-E(k) \simeq& \frac{\pi}{4}(k^2+\frac{3}{8}k^4+\frac{15}{64}k^6+\frac{175}{1024}k^8) 
+  	\end{align}
+\end{subequations}
 
 \subsubsection{特例1：两个远离的“环”线圈}
 当两个线圈相距足够远，也即$\rho^2 \gg (a_A+a_B)^2$时，有$k^2\ll 1$。此时，可以用方程3.38化简3.34。方程3.34首先被简化为：
-$$
+\begin{equation}
   F_{zA}(\rho)\simeq \frac{\mu_0}{2}(N_A I_A)(N_B I_B)\{ k^2K(k)+(k^2-2)[K(k)-E(k)]\}
-\eqno{(3.39a)}$$
+\end{equation}
 
 应用3.38第一式和第三式，仅考虑$k^4$及以下项。尽管$k^2\ll 1$，我们展开$K(k)-E(k)$时必须将$k^4$项包括进来，因为它的系数还有一个$-2$：
-$$
-F_{zA}(\rho)\simeq \frac{\mu_0}{2}(N_A I_A)(N_B I_B)(\frac{3\pi}{16}k^4) \eqno{(3.39b)}
-$$
+\begin{equation*}
+F_{zA}(\rho)\simeq \frac{\mu_0}{2}(N_A I_A)(N_B I_B)(\frac{3\pi}{16}k^4) \tag{3.39'}
+\end{equation*}
 
 在第二步近似时，$k^6$项被略去了。最后，我们得到了极限$\rho^2 \gg (a_A+a_B)^2$时的一个简单表达式：
-$$F_{zA}(\rho)= \frac{3\mu_0}{2\pi}(\frac{\pi a_A^2 N_A I_A}{\rho^2})(\frac{\pi a_B^2 N_B I_B}{\rho^2}) \eqno{(3.39c)}$$
+\begin{equation*}
+F_{zA}(\rho)= \frac{3\mu_0}{2\pi}(\frac{\pi a_A^2 N_A I_A}{\rho^2})(\frac{\pi a_B^2 N_B I_B}{\rho^2}) \tag{3.39''}
+\end{equation*}
 
 \subsubsection{特例2：两个紧邻的相同直径的“环”线圈}
 如果两个环线圈的直径相同并相互紧邻放置，即$a_A=a_B=a$以及$\rho\ll 2a$。此时，$k^2\mapsto 1,K(k)\mapsto\infty,E(k)\mapsto 1$。方程3.34可以简化为：
-$$F_{zA}(\rho)\simeq \mu_0(N_A I_A)(N_B I_B)(\frac{a}{\rho})\eqno{(3.39d)}$$
+\begin{equation*}
+F_{zA}(\rho)\simeq \mu_0(N_A I_A)(N_B I_B)(\frac{a}{\rho}) \tag{3.39'''}
+\end{equation*}
 
-我们可以将上式表示为“环”A直径($2\pi a$)，“环”A安匝($N_A I_A$)和轴向相距$\rho$处的“环”B在“环”A上的场的径向分量($B_r$，由于$rho\ll a$，可简史表示为$\mu_0 N_B I_B/(2\pi\rho)$)的乘积。于是：
-$$F_{zA}(\rho)\simeq (2\pi a)\times(N_A I_A)\times(\frac{\mu_0 N_B I_B}{2\pi\rho})=\mu_0(N_A I_A)(N_B I_B)(\frac{a}{\rho})$$
+我们可以将上式表示为“环”A直径($2\pi a$)，“环”A安匝($N_A I_A$)和轴向相距$\rho$处的“环”B在“环”A上的场的径向分量($B_r$，由于$rho\ll a$，可简单表示为$\mu_0 N_B I_B/(2\pi\rho)$)的乘积。于是：
+\begin{equation*}
+\begin{split}
+F_{zA}(\rho)&\simeq (2\pi a)\times(N_A I_A)\times(\frac{\mu_0 N_B I_B}{2\pi\rho})\\
+&=\mu_0(N_A I_A)(N_B I_B)(\frac{a}{\rho}) 
+\end{split}\tag{3.39'''}
+\end{equation*}
+
 
 \subsection{“薄壁”螺管内的轴向力}
 考虑一个直径为$2a$，长度为$2b$，中平面位于$z=0$，通过均匀表面电流$NI/2b$的薄壁($\alpha=1$)螺管线圈。对于这个螺管线圈，距离中平面$z\ge 0$处的轴向力可以表示为：
 \begin{equation}
-F_z(z)=-\frac{\mu_0}{2}(\frac{NI}{2b})^2\{(b-z)\sqrt{4a^2+(b-z)^2}[K(k_{b_-})-E(k_{b_-})]+(b+z)\sqrt{4a^2+(b+z)^2}[K(k_{b_+})-E(k_{b_+})]-2b\sqrt{4a^2+4b^2}[K(k_{2b})-E(k_{2b})]\}
+\begin{split}
+F_z(z)=&-\frac{\mu_0}{2}(\frac{NI}{2b})^2\{(b-z)\sqrt{4a^2+(b-z)^2}[K(k_{b_-})-E(k_{b_-})]\\
+&+(b+z)\sqrt{4a^2+(b+z)^2}[K(k_{b_+})-E(k_{b_+})]\\
+&-2b\sqrt{4a^2+4b^2}[K(k_{2b})-E(k_{2b})]\}
+\end{split}
 \end{equation}
+
 椭圆积分模量分别为：
-$$k_{b_-}^2=\frac{4a^2}{4a^2+(b-z)^2} ; k_{b_+}^2=\frac{4a^2}{4a^2+(b+z)^2} ;k_{2b}^2=\frac{4a^2}{4a^2+4 b^2}$$
+$$k_{b_-}^2=\frac{4a^2}{4a^2+(b-z)^2} ; \quad k_{b_+}^2=\frac{4a^2}{4a^2+(b+z)^2} ;\quad k_{2b}^2=\frac{4a^2}{4a^2+4 b^2}$$
 
 \subsubsection{特例3：端部力}
 在$z=b$处，因为有$k_{b_+}=k_{2b}$，所以有$F_z(b)=0$。也即，正如我们所预料到的，一个孤立螺线管端部的轴向力是零。
@@ -407,8 +459,12 @@ $$k_{b_-}^2=\frac{4a^2}{4a^2+(b-z)^2} ; k_{b_+}^2=\frac{4a^2}{4a^2+(b+z)^2} ;k_{
 \subsubsection{特例4：中平面的力}
 将$z=0$代入3.40式，我们可以得到中平面($z=0$)处的轴向力$F_z(0)$：
 \begin{equation}
-  F_z(0)=-\frac{\mu_0}{2}(\frac{NI}{2b})^2\{2b\sqrt{4a^2+b^2}[K(k_{b})-E(k_{b})]-2b\sqrt{4a^2+4b^2}[K(k_{2b})-E(k_{2b})]\}
+\begin{split}
+  F_z(0)=&-\frac{\mu_0}{2}(\frac{NI}{2b})^2\{2b\sqrt{4a^2+b^2}[K(k_{b})-E(k_{b})]\\
+  &-2b\sqrt{4a^2+4b^2}[K(k_{2b})-E(k_{2b})]\}
+\end{split}
 \end{equation}
+
 式中，$k_{2b}$由下式给出：
 $$k_{b}^2=\frac{4a^2}{4a^2+b^2}$$
 
@@ -416,21 +472,29 @@ $$k_{b}^2=\frac{4a^2}{4a^2+b^2}$$
 
 \subsubsection{特例5：长薄壁螺管的中平面的力}
 对于一个“长”($\beta\gg 1$或者$k^2\ll 1$)的薄壁螺线管，利用方程3.38，可以将方程3.41a简化为：
-$$F_z(0)\simeq-\frac{\mu_0}{2}(\frac{NI}{2b})\pi a^2$$
+\begin{equation*}
+F_z(0)\simeq-\frac{\mu_0}{2}(\frac{NI}{2b})\pi a^2 \tag{3.41'}
+\end{equation*}
+
 上式表明，$F_z(0)$在给定表面电流密度值$NI/2b$后，与线圈长度无关。因为长螺管的轴向中心场(问题3.1)有$NI/2b=H_z(0,0)$，我们可以得到：
-$$F_z(0)\simeq -\frac{1}{2}\mu_0 H_z^2(0,0)\times\pi a^2$$
+\begin{equation*}
+F_z(0)\simeq -\frac{1}{2}\mu_0 H_z^2(0,0)\times\pi a^2  \tag{3.41''}
+\end{equation*}
 
 这样，$F_z(0)$就等于磁压乘上线圈室温孔的面积。实际上，下面我们将看到，每一个轴向力的表达式都有一个磁压项($\mu_0(NI/2b)^2$)或其等价形式。
 
 \subsection{薄壁螺管和环形线圈间的轴向力}
 图3.6给出了一个薄壁螺线管($2a_s,2b_s,N_s I_s/2b_s$)与一个环线圈($2a_R,N_R I_R$)同轴放置的情况。螺管右侧距离环线圈距离$\rho$。各线圈产生的轴向场指向同一方向。螺线管受到的轴向力可以表示为：
 \begin{equation}
-F_{zS}(\rho)=-\frac{\mu_0}{2}(N_R I_R)(\frac{N_S I_S}{2b_s})\times\\
-\left(\sqrt{(a_R+a_S)^2+(\rho+2b_s)^2}\{2[K(k_s)-E(k_s)]-k_s^2K(k_s)\}\\
--\sqrt{(a_R+a_s)^2+\rho^2}\{2[K(k_R)-E(k_R)-k_R^2K(k_R)]\}\right)
+\begin{split}
+F_{zS}(\rho)=&-\frac{\mu_0}{2}(N_R I_R)(\frac{N_S I_S}{2b_s})\times\\
+&\big(\sqrt{(a_R+a_S)^2+(\rho+2b_s)^2}\{2[K(k_s)-E(k_s)]-k_s^2K(k_s)\}\\
+&-\sqrt{(a_R+a_s)^2+\rho^2}\{2[K(k_R)-E(k_R)-k_R^2K(k_R)]\}\big)
+\end{split}
 \end{equation}
+
 式中，模量为：
-$$k_{S}^2=\frac{4a_S a_R}{(a_S+a_R)^2+(2b_S+\rho)^2} ; k_{R}^2=\frac{4a_S a_R}{(a_S+a_R)^2+\rho^2} $$
+$$k_{S}^2=\frac{4a_S a_R}{(a_S+a_R)^2+(2b_S+\rho)^2} ;\qquad k_{R}^2=\frac{4a_S a_R}{(a_S+a_R)^2+\rho^2} $$
 
 在方程3.42的等号右侧项中，第二项大于第三项，所以$F_{zS}(\rho)$是正值，也即轴向作用力是吸引力。
 \begin{figure}[htbp]
@@ -442,17 +506,19 @@ $$k_{S}^2=\frac{4a_S a_R}{(a_S+a_R)^2+(2b_S+\rho)^2} ; k_{R}^2=\frac{4a_S a_R}{(
 \subsubsection{特例6：相距很远的薄壁螺管和环形线圈}
 当两个线圈相距很远，也即$k_s^2\ll 1$和$k_R^2\ll 1$时，可以得到：
 \begin{equation}
-F_{zS}(\rho)=\frac{\mu_0}{2\pi}(\pi a_R^2N_R I_R)(\frac{\pi a_S^2 N_S I_S}{2 b_s})[\frac{1}{\rho^3}-\frac{1}{(\rho+2b_S)^3}]
+F_{zS}(\rho)=\frac{\mu_0}{2\pi}(\pi a_R^2N_R I_R)(\frac{\pi a_S^2 N_S I_S}{2 b_s})\left[\frac{1}{\rho^3}-\frac{1}{(\rho+2b_S)^3}\right]
 \end{equation}
+
 按照上述处理方式，我们可以看到力是向着+z方向的，正比于两个线圈磁矩的乘积。
 
 \subsubsection{特例7：相距极远的薄壁螺管和环形线圈}
 当两个线圈的相距足够远，以至于$\rho \gg 2b_s$时，方程3.43a中的大括号中的第二项可以展开后略去高次项，有：
-\begin{equation}
-F_{zS}(\rho)=\frac{\mu_0}{2\pi}(\pi a_R^2 N_R I_R)(\frac{\pi a_S^2 N_S I_S}{2 b_s})\frac{6b_s}{\rho^4}
-\end{equation}
+\begin{equation*}
+F_{zS}(\rho)=\frac{\mu_0}{2\pi}(\pi a_R^2 N_R I_R)(\frac{\pi a_S^2 N_S I_S}{2 b_s})\frac{6b_s}{\rho^4} \tag{3.43'}
+\end{equation*}
 
 正如我们所料，3.43b和3.39c是等价的。
+
 \subsection{两个薄壁螺管间的轴向力}
 本节，我们推导两个薄壁螺管之间的轴向力方程。方程是基于Garrett [3.5]的方程推导出来的。
 这个方程将成为一般的非薄壁螺线圈的轴向力的基础(3.5.5节)。
@@ -463,44 +529,50 @@ N_B I_B/2b_B$)。如图3.7所示，螺管A的右端距离螺管B的左端距离�
 \begin{equation}
 \begin{split}
 F_{zAB}(\rho)=&\frac{\mu_0}{2}(\frac{N_A I_A}{2b_A})(\frac{N_B I_B}{2b_B})\times \\
-&(\frac{2b_A+\rho}{\sqrt{a_T^2+(2B_a+\rho)^2}} \{[a_T^2+(2b_A+\rho)^2][K(k_{A})-E(k_{A})]-\Upsilon(c^2,k_A)\}\\
+&\bigg(\frac{2b_A+\rho}{\sqrt{a_T^2+(2B_a+\rho)^2}} \{[a_T^2+(2b_A+\rho)^2][K(k_{A})-E(k_{A})]-\Upsilon(c^2,k_A)\}\\
 &+\frac{2b_B+\rho}{\sqrt{a_T^2+(2B_B+\rho)^2}} \{[a_T^2+(2b_B+\rho)^2][K(k_{B})-E(k_{B})]-\Upsilon(c^2,k_B) \}\\
 &-\frac{2b_T+\rho}{\sqrt{a_T^2+(2B_T+\rho)^2}} \{[a_T^2+(2b_T+\rho)^2][K(k_{T})-E(k_{T})]-\Upsilon(c^2,k_T) \}\\
-&-\frac{\rho}{\sqrt{a_T^2+\rho^2}}\{(a_T^2+\rho^2)[K(k_\rho)-E(k_\rho)]-\Upsilon(c^2,k_\rho)\})
+&-\frac{\rho}{\sqrt{a_T^2+\rho^2}}\{(a_T^2+\rho^2)[K(k_\rho)-E(k_\rho)]-\Upsilon(c^2,k_\rho)\}\bigg)
 \end{split}
 \end{equation}
+
 式中，$a_T=a_A+a_B$，$b_T=b_A+b_B$，模量分别为：
-$$k_{A}^2=\frac{4a_A a_B}{a_T^2+(2b_A+\rho)^2} ; k_{B}^2=\frac{4a_A a_B}{a_T^2+(2b_B+\rho)^2} $$
-$$k_{T}^2=\frac{4a_A a_B}{a_T^2+(2b_T+\rho)^2} ; k_{\rho}^2=\frac{4a_A a_B}{a_T^2+\rho^2} $$
+$$k_{A}^2=\frac{4a_A a_B}{a_T^2+(2b_A+\rho)^2} ;\qquad k_{B}^2=\frac{4a_A a_B}{a_T^2+(2b_B+\rho)^2} $$
+$$k_{T}^2=\frac{4a_A a_B}{a_T^2+(2b_T+\rho)^2} ;\qquad k_{\rho}^2=\frac{4a_A a_B}{a_T^2+\rho^2} $$
 
 \begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.4]{chpt3/figs/fig3.7.eps}
-  \caption{薄壁螺管A和B，相距$\rho$}
+  \caption{薄壁螺管A和B，相距$\rho$。}
 \end{figure}
 
 上式中，$\Upsilon(c^2,k)$定义为
 \begin{equation}
   \Upsilon(c^2,k)\equiv(a_A-a_B)^2[\prod(c^2,k)-K(k)]
 \end{equation}
+
 其中，$\prod(c^2,k)$是第三类完全椭圆积分，定义为
 \begin{equation}
 \prod(c^2,k)=\int_{0}^{\pi/2}\frac{d\theta}{(1-c^2\sin^2\theta)\sqrt{1-k^2\sin^2\theta}}
 \end{equation}
+
 从上式明显可以看出，该积分有两个模量：$c^2\le 1$和$k\le 1$。模量$c^2$由下式给出
 \begin{equation}
 c^2=\frac{4a_A a_B}{a_T^2}=\frac{4a_A a_B}{(a_A+a_B)^2}
 \end{equation}
+
 $\prod(0,k)=K(k)$，$\prod(1,k)=\infty$。$\prod(c^2,k)$可用$c^2$和$k^2$的级数表示：
 \begin{equation}
-\prod(c^2,k)=\frac{\pi}{2}\Sigma_{m=0}^{\infty} \Sigma_{j=0}^{m} \frac{(2m)!(2j)!k^{2j}c^{2(m-j)}}{4^m 4^j (m!)^2(j!)^2}
+\prod(c^2,k)=\frac{\pi}{2}\sum_{m=0}^{\infty} \sum_{j=0}^{m} \frac{(2m)!(2j)!k^{2j}c^{2(m-j)}}{4^m 4^j (m!)^2(j!)^2}
 \end{equation}
+
 低阶项为：
-\begin{eqnarray}
-% \nonumber % Remove numbering (before each equation)
-  \prod(c^2,k) &=& \frac{\pi}{2}(...) \\ \nonumber
-  \prod(c^2,0) &=& \frac{\pi}{2}(....)
-\end{eqnarray}
+\begin{subequations}
+	\begin{align}
+\prod(c^2,k) &= \frac{\pi}{2}(...) \\ 
+\prod(c^2,0) &= \frac{\pi}{2}(....)
+	\end{align}
+\end{subequations}
 
 注意到，当$c^2=0$时，3.49a退化为3.38a，因为$\prod(0,k)=K(k)$。不过，对于大部分问题，$c^2$通常是接近于1的，这种条件下，由于快速收敛要求$c^2\ll 1$，3.49的任一种展开都不好使。后面，在讨论互感的时候，我们将使用3.49b。表3.2给出了一些$c^2$和$k^2$下的$\prod(c^2,k)$。可以使用Mathcad等软件计算$K(k),E(k),\prod(c^2,k)$。
 
@@ -508,13 +580,13 @@ $\prod(0,k)=K(k)$，$\prod(1,k)=\infty$。$\prod(c^2,k)$可用$c^2$和$k^2$的�
 我们首先考虑两个螺管A和螺管B具有相同的长度($2b$)、相同的表面电流密度($NI/2b$)，但具有不同的直径的情况。对3.44做代换$2b_A = 2b_B = 2b, N_A I_A/2b_A = N_B I_B/2b_B = N I/2b,\rho=0$(线圈相邻端之间无间隙)，我们得到线圈A的中平面上的总受力的表达式。这个表达式对于我们探讨非薄壁线圈很有用。
 \begin{equation}
 \begin{split}
-F_{zA}(0)=&\frac{\mu_0}{2}(\frac{NI}{2b})^2\times(  \\
-&\frac{4b}{\sqrt{a_T^2+4b^2}} \{[a_T^2+4b^2][K(k_{2b})-E(k_{2b})]-\Upsilon(c^2,k_{2b}) \}\\
-&-\frac{4b}{\sqrt{a_T^2+16b^2}} \{[a_T^2+16b^2][K(k_{4b})-E(k_{4b})]-\Upsilon(c^2,k_{4b}) \} )
+F_{zA}(0)=&\frac{\mu_0}{2}(\frac{NI}{2b})^2\times\bigg(\frac{4b}{\sqrt{a_T^2+4b^2}} \{[a_T^2+4b^2][K(k_{2b})-E(k_{2b})]-\Upsilon(c^2,k_{2b}) \}\\
+&-\frac{4b}{\sqrt{a_T^2+16b^2}} \{[a_T^2+16b^2][K(k_{4b})-E(k_{4b})]-\Upsilon(c^2,k_{4b}) \}\bigg)
 \end{split}
 \end{equation}
+
 式中，$a_T=a_A+a_B$，模量表示为：
-$$k_{2b}^2=\frac{4a_A a_B}{a_T^2+4b^2} ; k_{4b}^2=\frac{4a_A a_B}{a_T^2+16b^2} $$
+$$k_{2b}^2=\frac{4a_A a_B}{a_T^2+4b^2} ; \qquad k_{4b}^2=\frac{4a_A a_B}{a_T^2+16b^2} $$
 
 尽管$c^2<1$总是成立的，但$c^2\simeq 1$。对于我们感兴趣的大部分问题，方程3.50不能近似为长螺管线圈($\beta\gg 1$)。
 
@@ -527,24 +599,26 @@ $$k_{2b}^2=\frac{4a_A a_B}{a_T^2+4b^2} ; k_{4b}^2=\frac{4a_A a_B}{a_T^2+16b^2} $
 \begin{equation}
 \begin{split}
 F_{zAB}(0)=&-\frac{\mu_0}{2}(\frac{N_A I_A}{4b})\times \\
-&( \frac{2b}{\sqrt{a_T^2+b^2}} \{[a_T^2+b^2][K(k_{b})-E(k_{b})]-\Upsilon(c^2,k_b)\}\\
-&-\frac{2b}{\sqrt{a_T^2+4b^2}} \{[a_T^2+4b^2][K(k_{2b})-E(k_{2b})]-\Upsilon(c^2,k_{2b}) \})
+&\bigg(\frac{2b}{\sqrt{a_T^2+b^2}} \{[a_T^2+b^2][K(k_{b})-E(k_{b})]-\Upsilon(c^2,k_b)\}\\
+&-\frac{2b}{\sqrt{a_T^2+4b^2}} \{[a_T^2+4b^2][K(k_{2b})-E(k_{2b})]-\Upsilon(c^2,k_{2b}) \}\bigg)
 \end{split}
 \end{equation}
+
 式中，$a_T=a_A+a_B$，模量写为
-$$k_{b}^2=\frac{4a_A a_B}{a_T^2+b^2} ; k_{2b}^2=\frac{4a_A a_B}{a_T^2+4b^2} $$
+$$k_{b}^2=\frac{4a_A a_B}{a_T^2+b^2} ;\qquad k_{2b}^2=\frac{4a_A a_B}{a_T^2+4b^2} $$
 
 子螺管A施加在自身的中平面轴向力$F_{zAA}(0)$已由方程3.41a给出，需要用$NI/4b$代替$NI/2b$。类似的，子螺管B受到的总中平面力$F_{zB}(0)$由$F_{zBB}(0)$和$F_{zBA}(0)$组成:
-\begin{eqnarray}
-% \nonumber % Remove numbering (before each equation)
-  F_{zA}(0) &=& F_{zAA}(0)+F_{zAB}(0) \\ \nonumber
-  F_{zB}(0) &=& F_{zBB}(0)+F_{zBA}(0)
-\end{eqnarray}
+\begin{subequations}
+	\begin{align}
+F_{zA}(0) =& F_{zAA}(0)+F_{zAB}(0) \\
+F_{zB}(0) =& F_{zBB}(0)+F_{zBA}(0)
+	\end{align}
+\end{subequations}
 
 \begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.4]{chpt3/figs/fig3.8.eps}
-  \caption{螺管线圈A和B的布置，用以计算线圈A上的中心面轴向力}
+  \caption{螺管线圈A和B的布置，用以计算线圈A上的中心面轴向力。}
 \end{figure}
 
 于是，
@@ -556,9 +630,10 @@ F_{zA}(0)=&-\frac{\mu_0}{2}(\frac{N I}{4b})\times \\
 &-\frac{2b}{\sqrt{a_T^2+4b^2}} \{[a_T^2+4b^2][K(k_{2b})-E(k_{2b})]-\Upsilon(c^2,k_{2b}) \})
 \end{split}
 \end{equation}
+
 其中，$c^2$已在3.47给出，模量为：
-$$k_{b_A}^2=\frac{4a_A^2}{4a_A^2+b^2} ; k_{2b_A}^2=\frac{4a^2_A}{4a_A^2+4b^2} $$
-$$k_{b_B}^2=\frac{4a_B^2}{4a_B^2+b^2} ; k_{2b_B}^2=\frac{4a^2_B}{4a_B^2+4b^2} $$
+$$k_{b_A}^2=\frac{4a_A^2}{4a_A^2+b^2} ;\quad k_{2b_A}^2=\frac{4a^2_A}{4a_A^2+4b^2};\quad
+k_{b_B}^2=\frac{4a_B^2}{4a_B^2+b^2} ;\quad k_{2b_B}^2=\frac{4a^2_B}{4a_B^2+4b^2} $$
 
 本例中，由于$2b_A=2b_B=2b$，$N_A I_A=N_B I_B$以及$F_{zAB}(0)=F_{zBA}(0)$，于是有：
 \begin{equation*}
@@ -567,7 +642,7 @@ F_{zB}(0)=&-\frac{\mu_0}{2}(\frac{N I}{4b})\times \\
 &( \{2b\sqrt{4a_B^2+b^2}[K(k_{b_B})-E(k_{b_B})]-2b\sqrt{4a_B^2+4b^2}[K(k_{2b_B})-E(k_{2b_B})]\}\\
 &+\frac{2b}{\sqrt{a_T^2+b^2}} \{[a_T^2+b^2][K(k_{b})-E(k_{b})]-\Upsilon(c^2,k_b)\}\\
 &-\frac{2b}{\sqrt{a_T^2+4b^2}} \{[a_T^2+4b^2][K(k_{2b})-E(k_{2b})]-\Upsilon(c^2,k_{2b}) \})
-\end{split}
+\end{split}\tag{3.53'}
 \end{equation*}
 
 螺管的总的中平面轴向力$F_{zT}(0)$分为两个薄壁线圈的各自受力$F_{zA}(0)$和$F_{zB}(0)$之和。于是我们得到：
@@ -595,6 +670,7 @@ F_{zT}(0)\simeq& -\mu_0 (\frac{N I}{4b})^2\{ \pi(a_A^2+a_B^2)-(a_A^2-a_B^2)^2[2\
 \simeq& -\mu_0 (\frac{N I}{4b})^2 \pi(a_A^2+a_B^2) \{ 1-\frac{(a_A^2-a_B^2)^2}{\pi(a_A^2+a_B^2)}[2\prod(c^2,k_b)-\prod(c^2,k_{2b})]\}
 \end{split}
 \end{equation}
+
 可知，上式当$a_A=a_B$时，约化为3.41b式。在上式的第二行的形式中，大括号内的项可以视为修正项。
 
 \subsection{嵌套双线圈磁体的轴向力}
@@ -603,9 +679,7 @@ F_{zT}(0)\simeq& -\mu_0 (\frac{N I}{4b})^2\{ \pi(a_A^2+a_B^2)-(a_A^2-a_B^2)^2[2\
 施于螺线管A右半部分的总中平面轴向力$F_{zA}(0)$是$F_{zAA}(0)$和$F_{zAB}(0)$之和。$F_{zAA}(0)$是其自身左半部分的中平面轴向力；$F_{zAB}(0)$来自螺线管B。$F_{zAA}(0)$可由方程3.41a替换下标A给出。 $F_{zAB}(0)$可由方程3.44采取如下替代得到： $b_A$替$2b_A$，$−(b_A+b_B)$替$\rho$，$2b_B$不变，$c^2$仍由3.47给出。
 \begin{equation}
 \begin{split}
-F_{zA}(0)=&\frac{\mu_0}{2}[(\frac{N_A I_A}{2b_A})^2\times \\
-&\{{2b_A\sqrt{4a_A^2+b_A^2}[K(k_{bA})-E(k_{bA})}]\\
-&-2b_A\sqrt{4a_A^2+4b_A^2}[K(k_{2bA}-E(k_{2bA}]\}\\
+F_{zA}(0)=&\frac{\mu_0}{2}[(\frac{N_A I_A}{2b_A})^2\times \{{2b_A\sqrt{4a_A^2+b_A^2}[K(k_{bA})-E(k_{bA})}]-2b_A\sqrt{4a_A^2+4b_A^2}[K(k_{2bA}-E(k_{2bA}]\}\\
 &+(\frac{N_AI_A}{2b_A})(\frac{N_BI_B}{2b_B})(\frac{2b_B}{\sqrt{a_T^2+b_B^2}}\{[a_T^2+b_B^2][K(k_B)-E(k_{B})]-\Upsilon(c^2,k_B)\}\\
 &-\frac{b_D}{\sqrt{a_T^2+b_D^2}}\{{[a_T^2+b_D^2][K(k_D)-E(k_D)]-\Upsilon(c^2,k_D)}\}\\
 &-\frac{b_T}{\sqrt{a_T^2+b_T^2}}\{[a_T^2+b_T^2][K(k_T)-E(k_T)]-\Upsilon(c^2,k_T^2)\})]
@@ -613,8 +687,7 @@ F_{zA}(0)=&\frac{\mu_0}{2}[(\frac{N_A I_A}{2b_A})^2\times \\
 \end{equation}
 
 由$a_T=a_A+a_B$，$b_D=b_B-b_A$以及$b_T=b_A+b_B$，给出$k_{b_A}, k_{2b_A}, k_A,k_B, k_{AB}$：
-$$ k_{bA}^2=\frac{4a_A^2}{4a_A^2+b_A^2}; k_{2bA}^2=\frac{4a_A^2}{4a_A^2+4b_A^2}; k_B^2=\frac{4a_Aa_B}{a_T^2+b_B^2};$$
-$$k_D^2=\frac{4a_Aa_B}{a_T^2+b_D^2}; k_T^2=\frac{4a_Aa_b}{a_T^2+b_T^2}$$
+$$ k_{bA}^2=\frac{4a_A^2}{4a_A^2+b_A^2}; k_{2bA}^2=\frac{4a_A^2}{4a_A^2+4b_A^2}; k_B^2=\frac{4a_Aa_B}{a_T^2+b_B^2};k_D^2=\frac{4a_Aa_B}{a_T^2+b_D^2}; k_T^2=\frac{4a_Aa_b}{a_T^2+b_T^2}$$
 
 \begin{figure}[htbp]
   \centering
@@ -634,9 +707,9 @@ F_{zA}(0)\simeq& -\frac{\mu_0}{2}\{(\frac{N_AI_A}{2b_A})^2\pi a_A^2+(\frac{N_AI_
 方程3.57a等号右侧的第二项代表$F_{zAB}$。物理上，这是由于螺线管B的磁场在螺线管A的接近螺线管B末端的轴向位置上的径向分量$B_r$引起的。注意到，当$b_A\rightarrow \infty$以及 $b_B\rightarrow \infty$时，第二项趋于。
 \subsubsection{特例11：施于A的中平面轴向力——A和B均“长”但B比A更长}
 当两个螺线管都如特例10中一样是“长”的，且B比A更长一些，也即$b_D\rightarrow b_B$以及$b_T\rightarrow b_B$时，方程3.57a可进一步化简为：
-\begin{equation}
-F_{zA}(0)\simeq F_{zAA}(0)\simeq -\frac{\mu_0}{2}(\frac{N_AI_A}{2b_A})^2\pi a_A^2
-\end{equation}
+\begin{equation*}
+F_{zA}(0)\simeq F_{zAA}(0)\simeq -\frac{\mu_0}{2}(\frac{N_AI_A}{2b_A})^2\pi a_A^2 \tag{3.57'}
+\end{equation*}
 
 物理上很容易理解，当$b_A/b_B\rightarrow 0$时有$F_{zAB}(0)\rightarrow 0$，因为螺管B比螺管A更长。作为$F_{zAB}(0)$中关键要素的螺管B的$B_r$在其室温孔内是0，而此处正式螺管A放置的位置。
 
@@ -651,10 +724,12 @@ F_{zB}(0)=&-\frac{\mu_0}{2}[(\frac{N_BI_B}{2b_B})^2\times\\
 &-\frac{b_T}{\sqrt{a_T^2+b_T^2}}\{[a_T^2+b_T^2][K(k_T)-E(k_T)]-\Upsilon(c^2,k_T)\})]
 \end{split}
 \end{equation}
+
 式中的$c^2$同样有方程3.47给出，模量$k_{2b_B},k_A$如下给出：
-\begin{equation}
+\begin{equation*}
 k_{2bB}^2=\frac{a_B^2}{4a_B^2+4b_B^2};\quad \quad k_A^2=\frac{4a_Aa_B}{a_T^2+b_A^2}
-\end{equation}
+\end{equation*}
+
 其他模量与方程3.56相同。
 
 \subsubsection{特例12：施于B的中平面轴向力——A和B均“长”但B比A更长}
@@ -665,13 +740,14 @@ F_{zB}(0)\simeq&-\frac{\mu_0}{2}\{(\frac{N_BI_B}{2b_B})^2\pi a_B^2+(\frac {N_BI_
 &-(a_A-a_B)^2[2\Pi(c^2,k_A)+\Pi(c^2,k_D)-\Pi(c^2,k_T)]]\}
 \end{split}
 \end{equation}
+
 如特例11中，方程3.59a中的第二项表示的$F_{zBA}$是可以忽略的，这是由于螺管A的$B_r$影响螺管A两端附近位置轴线上的螺管B。
 
 \subsubsection{特例13：施于B的中平面轴向力——A和B均“长”但B比A短很多}
 当两个螺管都是“长”的，但螺管B比螺管A短很多($b_D^2\rightarrow b_A^2\gg a_T^2$)时，方程3.58简化为：
-\begin{equation}
-F_{zB}(0)\simeq-\frac{\mu_0}{2}(\frac{N_BI_B}{2b_B})^2\pi a_B^2
-\end{equation}
+\begin{equation*}
+F_{zB}(0)\simeq-\frac{\mu_0}{2}(\frac{N_BI_B}{2b_B})^2\pi a_B^2 \tag{3.59'}
+\end{equation*}
 
 方程3.59b可以类比为特例11中的3.57b。也可以用相同的物理原因解释这个结果。
 
@@ -686,11 +762,12 @@ F_{zR}(\rho)=&-\frac{\mu_0}{2}(\frac{N_AI_A}{2b_A})(\frac{N_BI_B}{2b_B})\times\\
 &-\frac{b_D-\rho}{\sqrt{a_T^2+(b_D-\rho)^2}}\{[a_T^2+(b_D-\rho)^2][K(k_{D-})-E(k_{D-})]-\Upsilon(c^2,k_{D-})\})
 \end{split}
 \end{equation}
+
 式中，$a_T=a_A+a_B, b_T=b_A+b_B, b_D=b_A−b_B$。模量：
-\begin{eqnarray}
-k_{T+}^2&=&\frac{4a_Aa_B}{a_T^2+(b_T+\rho)^2}; k_{T-}^2=\frac{4a_Aa_B}{a_T^2+(b_T-\rho)^2}\\ \nonumber
-k_{D+}^2&=&\frac{4a_Aa_B}{a_T^2+(b_D+\rho)^2};  k_{D-}^2=\frac{4a_Aa_B}{a_T^2+(b_D-\rho)^2}
-\end{eqnarray}
+$$
+k_{T+}^2=\frac{4a_Aa_B}{a_T^2+(b_T+\rho)^2}; k_{T-}^2=\frac{4a_Aa_B}{a_T^2+(b_T-\rho)^2};$$
+$$k_{D+}^2=\frac{4a_Aa_B}{a_T^2+(b_D+\rho)^2};  k_{D-}^2=\frac{4a_Aa_B}{a_T^2+(b_D-\rho)^2}$$
+
 
 \subsubsection{特例14：不存在轴向失配}
 当$\rho=0, k_{T+}^2=k_{T-}^2, k_{D+}^2=k_{D-}^2$时，有$F_{zR}(\rho)=0$。这和物理上的预期是一致的。
@@ -711,53 +788,55 @@ F_{zR}(\rho)\propto-(\frac{N_AI_A}{2b_A})(\frac{N_BI_B}{2b_B})\rho
 
 \subsection{应力应变方程}
 处于由轴向磁场$B_z(r,z)$和电流$\lambda J$相互作用产生的磁场力下的螺管绕组的应力(径向$\sigma_r(r,z)$，环向$\sigma_\theta(r,z)$，轴向$\sigma_z(r,z)$，剪切$\tau_{rz}(r,z)$)满足以下平衡方程：
-\begin{eqnarray}
-\frac{\partial\sigma_{r}}{\partial_r}+\frac{\sigma_{r}-\sigma_{\theta}}{r}+\frac{\partial \tau_{rz}}{\partial z}&=&-\lambda JB_z(r,z)\\
-\frac{\partial \tau_{rz}}{\partial r}-\frac{\tau_{rz}}{r}+\frac{\partial \sigma_z}{\partial_z}&=&-\lambda JB_r(r,z)
-\end{eqnarray}
+\begin{subequations}
+	\begin{align}
+\frac{\partial\sigma_{r}}{\partial_r}+\frac{\sigma_{r}-\sigma_{\theta}}{r}+\frac{\partial \tau_{rz}}{\partial z}=&-\lambda JB_z(r,z)\\
+\frac{\partial \tau_{rz}}{\partial r}-\frac{\tau_{rz}}{r}+\frac{\partial \sigma_z}{\partial_z}=&-\lambda JB_r(r,z)
+	\end{align}
+\end{subequations}
 
 边界条件为：$\sigma_r(r=a_1,z);\sigma_r(r=a_2,z);\sigma_z(r,z=\pm b)=0;\tau_{rz}(r=a_1,z)=0;\tau_{rz}(r=a_2,z)=0;\tau_{rz}(r,z=\pm b)=0$。
 注意到剪切力是方程3.62a和3.62b中唯一的变量。大多数复合超导体，包括LTS和HTS，都可以视为正交各向异性：可以应用Hooke定律。正交各向异性材料具有以下机械性质：Young模量，Poisson比。它们在三个正交方向不同，但都关于正交方向对称。应变$\epsilon_r,\epsilon_\theta,\epsilon_z$分别为$r,\theta,z$向，剪切应变$\gamma_{rz}$位于$r-z$平面。应变关系：
-\begin{eqnarray}
-\epsilon_r&=&\frac{1}{E_r}\sigma_r-\frac{\nu_{\theta r}}{E_{\theta}}\sigma_{\theta}-\frac{\nu_{zr}}{E_z}\sigma_z+\epsilon_{Tz}\\
-\epsilon_\theta&=&-\frac{\nu_{r\theta}}{E_r}\sigma_r+\frac{1}{E_{\theta}}\sigma_{\theta}-\frac{\nu_{z\theta}}{E_z}\sigma_z+\epsilon_{T\theta}\\
-\epsilon_z&=&-\frac{\nu_{rz}}{E_r}\sigma_r-\frac{\nu_{\theta z}}{E_{\theta}}\sigma_{\theta}+\frac{1}{E_z}\sigma_z+\epsilon_{Tz}\\
-\gamma_{rz}&=&\frac{1}{G_{{rz}}}\tau_{rz}
-\end{eqnarray}
+\begin{subequations}
+	\begin{align}
+\epsilon_r=&\frac{1}{E_r}\sigma_r-\frac{\nu_{\theta r}}{E_{\theta}}\sigma_{\theta}-\frac{\nu_{zr}}{E_z}\sigma_z+\epsilon_{Tz}\\
+\epsilon_\theta=&-\frac{\nu_{r\theta}}{E_r}\sigma_r+\frac{1}{E_{\theta}}\sigma_{\theta}-\frac{\nu_{z\theta}}{E_z}\sigma_z+\epsilon_{T\theta}\\
+\epsilon_z=&-\frac{\nu_{rz}}{E_r}\sigma_r-\frac{\nu_{\theta z}}{E_{\theta}}\sigma_{\theta}+\frac{1}{E_z}\sigma_z+\epsilon_{Tz}\\
+\gamma_{rz}=&\frac{1}{G_{{rz}}}\tau_{rz}
+	\end{align}
+\end{subequations}
 
 $E_r, E_\theta, E_z$分别是各向的Young模量。$\mu_{12}\equiv -\epsilon_2/\epsilon_1$，当材料应力加在1方向时($\sigma_1;\sigma_2=\sigma_3=0$)两个正交方向的横向应变的Poisson比。$G_{rz}$是剪切模量。 
 $\epsilon_{Tr},\epsilon_{T\theta},\epsilon_{Tz}$分别为从室温$300\ \mathrm{K}$到运行温度$T_{op}$的热膨胀积分系数。
-\begin{eqnarray}
-\epsilon_{T_r}&=&\int_{300K}^{T_{op}}\alpha_{Tr}(T)dT;\\ \nonumber
-\epsilon_{T_\theta}&=&\int_{300K}^{T_{op}}\alpha_{T_\theta}(T)dT;\\ \nonumber
- \epsilon_{T_Z}&=&\int_{300k}^{T_{op}}\alpha_{Tz}(T)dT
-\end{eqnarray}
+\begin{equation*}
+\epsilon_{T_r}=\int_{300K}^{T_{op}}\alpha_{Tr}(T)dT;\quad
+\epsilon_{T_\theta}=\int_{300K}^{T_{op}}\alpha_{T_\theta}(T)dT;\quad
+ \epsilon_{T_Z}=\int_{300k}^{T_{op}}\alpha_{Tz}(T)dT \tag{3.63e}
+\end{equation*}
 
 $\alpha_{Tr}(T),\alpha_{T\theta}(T),\alpha_{Tz}(T)$分别为平行于各自主轴的热膨胀系数，与温度有关。
 注意到这些系数是正的，并且因为是从$300\ \mathrm{K}$到度$T_{op}<300\ \mathrm{K}$积分，方程3.63a-3.63c中的热应变是负的，也即压缩力。
 
 应用下列$\nu$和$E$的关系：
-\begin{equation}
-\frac{\nu_{r\theta}}{E_\theta}=\frac{\nu_{\theta r}}{E_r};\quad \frac{\nu_{\theta z}}{E_z}=\frac{\nu_{z\theta}}{E_\theta};\quad \frac{\nu_{zr}}{E_r}=\frac{\nu_{rz}}{E_z}
-\end{equation}
+\begin{equation*}
+\frac{\nu_{r\theta}}{E_\theta}=\frac{\nu_{\theta r}}{E_r};\quad \frac{\nu_{\theta z}}{E_z}=\frac{\nu_{z\theta}}{E_\theta};\quad \frac{\nu_{zr}}{E_r}=\frac{\nu_{rz}}{E_z} \tag{3.63f}
+\end{equation*}
 
 在轴对称体情况下，例如理想螺线管，在r和z方向的应变$u_r$和位移$u_z$分别为：
-\begin{equation}
-\epsilon_r=\frac{\partial_{u_r}}{\partial_r};\quad \epsilon_\theta=\frac{u_r}{r};\quad \epsilon_z=\frac{\partial_{u_z}}{\partial_z};\quad \gamma_{rz}=\frac{\partial_{u_r}}{\partial_z}+\frac{\partial_{u_z}}{\partial_r}
-\end{equation}
+\begin{equation*}
+\epsilon_r=\frac{\partial_{u_r}}{\partial_r};\quad \epsilon_\theta=\frac{u_r}{r};\quad \epsilon_z=\frac{\partial_{u_z}}{\partial_z};\quad \gamma_{rz}=\frac{\partial_{u_r}}{\partial_z}+\frac{\partial_{u_z}}{\partial_r} \tag{3.63g}
+\end{equation*}
 
 由于轴对称，方程3.62中的所有变量都与$\theta$无关，且有$u_\theta=0$。一般的，不同时存在$\sigma_r$和$\sigma_z$的闭式解。在一个“长”螺管中，例如多用于空间高磁场均匀性NMR磁体的螺管中，$B_z(r, z)$在z方向至少是在螺管以中平面为起点的很大长度内的变化都是很小的。剪切应力$\tau_{rz}$是由$B_z(r,z)$在线圈上产生的径向载荷的变化导致的。因此，在一个长螺管中，我们可以假设所有变量不依赖于z(包括$u_r$，有$\partial u_r/\partial z=0$)来化简3.62a。因为在高磁场均匀性磁体中有$\partial B_r(r,z).\partial z\simeq 0$，我们可以放心的假设在磁体轴向的大部分长度上有$\partial u_r/\partial z=0$成立。加上$\partial u_z/\partial r=0$，我们发现$\gamma_{rz}=\tau_{rz}=0$。反过来，这个结果 有会解耦3.62a和3.62b。
 
 联立方程3.62和3.63，假设$\tau_{rz}=0$，用$u_r$解出$\sigma_r$和$\sigma_{\theta}$，我们得到以下微分方程：
-\begin{equation}
-\frac{d^2u_r}{d_r^2}+\frac{1}{r}\frac{du_r}{dr}-\zeta^2\frac{u_r}{r^2}=-\frac{1-\nu_{r\theta}\nu_{\theta r}}{E_r}\lambda JB_z(r)+\frac{F}{r}
-\end{equation}
-
-式中，
-\begin{equation}
-\zeta=\sqrt{\frac{E_\theta}{E_r}};\quad F=
+\begin{subequations}
+	\begin{align}
+&\frac{d^2u_r}{d_r^2}+\frac{1}{r}\frac{du_r}{dr}-\zeta^2\frac{u_r}{r^2}=-\frac{1-\nu_{r\theta}\nu_{\theta r}}{E_r}\lambda JB_z(r)+\frac{F}{r}\\
+&\zeta=\sqrt{\frac{E_\theta}{E_r}};\quad F=
 -(\zeta^2-\nu_{r \theta})\epsilon_{T_\theta}+(1-\nu_{\theta r}\zeta^2)\epsilon_{Tr}
-\end{equation}
+	\end{align}
+\end{subequations}
 
 方程3.64a的解的一般形式：
 \begin{equation}
@@ -796,27 +875,31 @@ u_r^T=\frac{1-\nu_{r\theta}\nu_{\theta r}}{E_r}\lambda J\sum_{k=0}^{n}\frac{b_k 
 \end{equation}
 
 对于各向同性材料，考虑热应变$\epsilon_T$的应变为：
-\begin{eqnarray}
-\epsilon_\rho&=&\frac{1}{E}(\sigma_\rho-\nu\sigma_\theta)+\epsilon_T\\
-\epsilon_\theta&=&\frac{1}{E}(\sigma_\theta-\nu\sigma_\rho)+\epsilon_T
-\end{eqnarray}
+\begin{subequations}
+	\begin{align}
+\epsilon_\rho=&\frac{1}{E}(\sigma_\rho-\nu\sigma_\theta)+\epsilon_T\\
+\epsilon_\theta=&\frac{1}{E}(\sigma_\theta-\nu\sigma_\rho)+\epsilon_T
+	\end{align}
+\end{subequations}
 
 从上式中解出$\sigma_\rho,\sigma_{\theta}$：
-\begin{eqnarray}
-\sigma_\rho&=&\frac{E}{1-\nu^2}[\epsilon_\rho+\nu\epsilon_\theta-(1+\nu)\epsilon_T]\\
-\sigma_\theta&=&\frac{E}{1-\nu^2}[\epsilon_\theta+\nu\epsilon_\rho-(1+\nu)\epsilon_T]
-\end{eqnarray}
+\begin{subequations}
+	\begin{align}
+\sigma_\rho=&\frac{E}{1-\nu^2}[\epsilon_\rho+\nu\epsilon_\theta-(1+\nu)\epsilon_T]\\
+\sigma_\theta=&\frac{E}{1-\nu^2}[\epsilon_\theta+\nu\epsilon_\rho-(1+\nu)\epsilon_T]
+	\end{align}
+\end{subequations}
 
 应变是和位移$u$有关的：
-\begin{equation}
-\epsilon_\rho=\frac{1}{a_1}\frac{du}{d\rho};\quad \epsilon_\theta=\frac{1}{a_1}\frac{u}{\rho}
-\end{equation}
+\begin{equation*}
+\epsilon_\rho=\frac{1}{a_1}\frac{du}{d\rho};\quad \epsilon_\theta=\frac{1}{a_1}\frac{u}{\rho} \tag{3.72c}
+\end{equation*}
 
 联立3.72a-3.72c，我们得到：
-\begin{eqnarray}
-\sigma_\rho&=&\frac{E}{(1-\nu^2)a_1}[\frac{du}{d\rho}+\nu\frac{u}{\rho}-a_1(1+\nu)\epsilon_T]\\
-\sigma_\theta&=&\frac{E}{(1-\nu^2)a_1}[\frac{u}{\rho}+\nu\frac{du}{d\rho}-a_1(1+\nu)\epsilon_T]
-\end{eqnarray}
+\begin{align*}
+\sigma_\rho=&\frac{E}{(1-\nu^2)a_1}[\frac{du}{d\rho}+\nu\frac{u}{\rho}-a_1(1+\nu)\epsilon_T]\tag{3.72d}\\ 
+\sigma_\theta=&\frac{E}{(1-\nu^2)a_1}[\frac{u}{\rho}+\nu\frac{du}{d\rho}-a_1(1+\nu)\epsilon_T] \tag{3.72e}
+\end{align*}
 
 联立3.70和方程3.92d，3.72e，得到：
 \begin{equation}
@@ -829,36 +912,42 @@ u=C_1\rho+\frac{C_2}{\rho}-(\frac{1-\nu^2}{E})(\frac{\lambda JB_1a_1^2}{\alpha-1
 \end{equation}
 
 式中，$C_1,C_2$是由$\rho=1$和$\rho=\alpha$处的边界条件确定的常数；最后一项是特解。联立3.74,3.72d和3.72e，我们得到：
-\begin{eqnarray}
-\sigma_\rho&=&\frac{E}{(1-\nu^2)a_1}\left[(1+\nu)C_1-(1-\nu)\frac{C_2}{\rho^2}\right] \\ \nonumber
-&-&\left\{\frac{\lambda JB_1a_1}{\alpha-1}[\frac{2+\nu}{3}(\alpha-\kappa)\rho-\frac{3+\nu}{8}(1-\kappa)\rho^2]\right\}-\frac{E\epsilon_T}{1-\nu}\\
-\sigma_\theta&=&\frac{E}{(1-\nu^2)a_1}\left[(1+\nu)C_1+(1-\nu)\frac{C_2}{\rho^2}\right]\\ \nonumber
-&-&\left\{\frac{\lambda JB_1\alpha_1}{\alpha-1}[\frac{1+2\nu}{3}(\alpha-\kappa)\rho-\frac{1+3\nu}{8}(1-\kappa)\rho^2]\right\}-\frac{E\epsilon_T}{1-\nu}
-\end{eqnarray}
+\begin{subequations}
+	\begin{align}
+\sigma_\rho=&\frac{E}{(1-\nu^2)a_1}\left[(1+\nu)C_1-(1-\nu)\frac{C_2}{\rho^2}\right] \\ \nonumber
+&-\left\{\frac{\lambda JB_1a_1}{\alpha-1}[\frac{2+\nu}{3}(\alpha-\kappa)\rho-\frac{3+\nu}{8}(1-\kappa)\rho^2]\right\}-\frac{E\epsilon_T}{1-\nu}\\
+\sigma_\theta=&\frac{E}{(1-\nu^2)a_1}\left[(1+\nu)C_1+(1-\nu)\frac{C_2}{\rho^2}\right]\\ \nonumber
+&-\left\{\frac{\lambda JB_1\alpha_1}{\alpha-1}[\frac{1+2\nu}{3}(\alpha-\kappa)\rho-\frac{1+3\nu}{8}(1-\kappa)\rho^2]\right\}-\frac{E\epsilon_T}{1-\nu}
+	\end{align}
+\end{subequations}
 
 代入$\sigma_{\rho}(1)=0$和$\sigma_{\rho}(\alpha)=0$，我们得到$C_1,C_2$的表达式：
-\begin{eqnarray}
-{[(1+\nu)C_1-(1-\nu)C_2]}&=&\frac{1-\nu^2}{E}(\frac{\lambda JB_1a_1^2}{\alpha-1})  \\ \nonumber
-&\times&\left[\frac{2+\nu}{3}(\alpha-\kappa)-\frac{3+\nu}{8}(1-\kappa)\right]+a_1(1+\nu)\epsilon_T\\
-{[(1+\nu)C_1-(1-\nu)\frac{C_2}{\alpha^2}]}&=&\frac{1-\nu^2}{E}(\frac{\lambda JB_1a_1^2}{\alpha-1})  \\ \nonumber
-&\times&\left[\frac{2+\nu}{3}(\alpha-\kappa)\alpha-\frac{3+\nu}{8}(1-\kappa)\alpha^2\right] +a_1(1+\nu)\epsilon_T %3.76a 3.76b
-\end{eqnarray}
+\begin{subequations}
+	\begin{align}
+{[(1+\nu)C_1-(1-\nu)C_2]}=&\frac{1-\nu^2}{E}(\frac{\lambda JB_1a_1^2}{\alpha-1})\notag\\
+&\times\left[\frac{2+\nu}{3}(\alpha-\kappa)-\frac{3+\nu}{8}(1-\kappa)\right]+a_1(1+\nu)\epsilon_T\\
+{[(1+\nu)C_1-(1-\nu)\frac{C_2}{\alpha^2}]}=&\frac{1-\nu^2}{E}(\frac{\lambda JB_1a_1^2}{\alpha-1})\times\left[\frac{2+\nu}{3}(\alpha-\kappa)\alpha-\frac{3+\nu}{8}(1-\kappa)\alpha^2\right]   \notag\\ 
+&+a_1(1+\nu)\epsilon_T
+	\end{align}
+\end{subequations}
 
 解出$C_1,C_2$：
-\begin{eqnarray}
-C_1&=&\frac{1-\nu}{E}(\frac{\lambda JB_1a_1^2}{\alpha^2-1}) \\ \nonumber
-&\times&\left[\frac{2+\nu}{3}(\alpha-\kappa)(\alpha^2+\alpha+1)-\frac{3+\nu}{8}(1-\kappa)(\alpha+1)(\alpha^2+1)\right] +a_1\epsilon_T\\
-C_2&=&\frac{1+\nu}{E}(\frac{\lambda JB_1a_1\alpha^2}{\alpha^2-1})\\ \nonumber
-&\times &\left[\frac{2+\nu}{3}(\alpha-\kappa)-\frac{3+\nu}{8}(1-\kappa)(\alpha+1)\right]
-\end{eqnarray}
+\begin{align*}
+C_1=&\frac{1-\nu}{E}(\frac{\lambda JB_1a_1^2}{\alpha^2-1}) 
+\times\left[\frac{2+\nu}{3}(\alpha-\kappa)(\alpha^2+\alpha+1)-\frac{3+\nu}{8}(1-\kappa)(\alpha+1)(\alpha^2+1)\right]\notag\\
++a_1\epsilon_T\tag{3.76c}\\
+C_2=&\frac{1+\nu}{E}(\frac{\lambda JB_1a_1\alpha^2}{\alpha^2-1})\times \left[\frac{2+\nu}{3}(\alpha-\kappa)-\frac{3+\nu}{8}(1-\kappa)(\alpha+1)\right]\tag{3.76d}
+\end{align*}
 
 将方程3.76c和3.76d代入3.75，我们可以得到：
-\begin{eqnarray}
-\sigma_\rho&=&\frac{\lambda JB_1a_1}{\alpha-1}[\frac{2+\nu}{3}(\alpha-\kappa)(\frac{\alpha^2+\alpha+1-\frac{\alpha^2}{\rho^2}}{\alpha+1}-\rho) \\ \nonumber
-&-&\frac{3+\nu}{8}(1+\kappa)(\alpha^2+1-\frac{\alpha^2}{\rho^2}-\rho^2)]\\
-\sigma_\theta&=&\frac{\lambda JB_1a_1}{\alpha-1}\{(\alpha-\kappa)[\frac{2+\nu}{3}(\frac{\alpha^2+\alpha+1+{\frac{\alpha^2}{\rho^2}}}{\alpha+1})-\frac{1+2\nu}{3}\rho] \\ \nonumber
-&-&(1-\kappa)[\frac{3+\nu}{8}(\alpha^2+1+\frac{\alpha^2}{\rho^2})-\frac{1+3\nu}{8}\rho^2]\}
-\end{eqnarray}
+\begin{subequations}
+	\begin{align}
+\sigma_\rho=&\frac{\lambda JB_1a_1}{\alpha-1}[\frac{2+\nu}{3}(\alpha-\kappa)(\frac{\alpha^2+\alpha+1-\frac{\alpha^2}{\rho^2}}{\alpha+1}-\rho) \\ \nonumber
+&-\frac{3+\nu}{8}(1+\kappa)(\alpha^2+1-\frac{\alpha^2}{\rho^2}-\rho^2)]\\
+\sigma_\theta=&\frac{\lambda JB_1a_1}{\alpha-1}\{(\alpha-\kappa)[\frac{2+\nu}{3}(\frac{\alpha^2+\alpha+1+{\frac{\alpha^2}{\rho^2}}}{\alpha+1})-\frac{1+2\nu}{3}\rho] \\ \nonumber
+&-(1-\kappa)[\frac{3+\nu}{8}(\alpha^2+1+\frac{\alpha^2}{\rho^2})-\frac{1+3\nu}{8}\rho^2]\}
+	\end{align}
+\end{subequations}
 
 \subsubsection{薄壁线圈}
 图3.10a和3.10b分别画出了薄壁线圈(这里$\alpha=1.2$)的归一化方位角向应力($\varsigma_\theta\equiv \sigma_{\theta}/(\lambda J B_1 a_1)$)和径向应力($\varsigma_r\equiv \sigma_{\rho}/(\lambda J B_1 a_1)$)与归一化径向距离($\rho\equiv r/a_1$ )在几个特定的“场比率”($\kappa\equiv B_2/B_1$)下的关系。
@@ -899,9 +988,12 @@ C_2&=&\frac{1+\nu}{E}(\frac{\lambda JB_1a_1\alpha^2}{\alpha^2-1})\\ \nonumber
 
 考虑一个放置于高场背景磁体室温孔内的线圈。插入线圈的参数为内径$2a_1=87 mm$，外径$2a_2=156.6 mm$，即$\alpha = 1.8$：这是一个中等厚度磁体。我们假设线圈是“长”的。插入线圈的其他参数包括：
 $B_z(r=a_1)\equiv B_1 =28.1 T; B_z(r=a_2)\equiv B_2 =24.3 T;\kappa\equiv B_2/B_1 = 0.865; \lambda J =8.26×10^7 A/m^2$。从图3.11的$\varsigma_r(\rho)$在$\alpha=1.8$时的曲线，我们找到归一化径向应力的最大值时0.11，在$\rho=r/a_1=1.3$时取得。于是，最大径向应力为：
-\begin{equation}
-  [\sigma_r]_{mx}=0.11\lambda JB_1\alpha_1  =0.11(8.26\times 10^7 A/m^2)(28.1T)(43.5\times10^{-3}m)=11.1MPa%page105
-\end{equation}
+\begin{equation*}
+\begin{split}
+  [\sigma_r]_{mx}=&0.11\lambda JB_1\alpha_1 \\
+   =&0.11(8.26\times 10^7 \ \mathrm{A/m^2})(28.1\ \mathrm{T})(43.5\times 10^{-3}m)=11.1\ \mathrm{MPa}%page105
+\end{split}
+\end{equation*}
 
 11.1MPa的径向应力在内插线圈内是难以承受的。图3.13给出了在几个给定绕制张力下(从0到最大$200 N\simeq 20 kg$)的$\sigma_{r}$和r的关系。本图说明，绕制张力至少要求160 N才能保证$\sigma_{r}$为0或为负值。
 实践中，可能应用大到200N的张力来绕线圈。对于这个特别的内插磁体，绕制张力80N时，最大应力减小至大约5MPa。当线圈是用环氧浸渍时，正的径向5MPa应力是可以承受的。
@@ -931,10 +1023,12 @@ $B_z(r=a_1)\equiv B_1 =28.1 T; B_z(r=a_2)\equiv B_2 =24.3 T;\kappa\equiv B_2/B_1
 
 \subsection{圆形闭合回路的自感}
 一根半径为$a$、磁导率为$\mu$的导线围成的半径为$R$的圆环的$L$公式可由Maxwell方程导出：
-\begin{eqnarray}
-L&=&\mu_0R[ln(\frac{8R}{a}-2)]+\frac{1}{4}\mu R \\
-&\simeq & \mu_0R[ln(\frac{R}{a})+0.079]+\frac{1}{4}\mu R%page106
-\end{eqnarray}
+\begin{subequations}
+	\begin{align}
+L=&\mu_0R[ln(\frac{8R}{a}-2)]+\frac{1}{4}\mu R \\
+\simeq & \mu_0R[ln(\frac{R}{a})+0.079]+\frac{1}{4}\mu R%page106
+	\end{align}
+\end{subequations}
 
 上述方程的等号右侧，第一项是由圆环内部区域$(0\le r \le R-a)$磁通贡献的自感；第二项由是$2\pi R$长的导线内部贡献的自感圆环自感(问题3.18)。因为导线外部的磁链与频率无关，第一项对所有频率都成立，而第二项是频率相关的。$(1/4)\mu R$仅对低频成立；第二项在高频时趋向于零。第一项的推导是非常复杂的，涉及到椭圆积分等高等数学。
 
@@ -946,10 +1040,12 @@ L=\mu_0a_1N^2L(\alpha,\beta)%page107
 
 式中，$L(\alpha,\beta)$是一个无量纲电感参数，仅与由$\alpha,\beta$表示的线圈形状有关。图3.14画出了我们感兴趣的$\alpha=1$至$\alpha=5$，$\beta=0.04$至$\beta=10$范围内的$L(\alpha,\beta)$。
 $\beta>1$涵盖了大部分螺管线圈，但“环”和“饼”是重要的例外。如图中所示，$L(\alpha,\beta)$大致上正比于$\alpha$。事实上，当一个粗略的("ball-park")$L$值足够时，例如在“first-cut”设计阶段，我们可以使用：
-\begin{eqnarray}
-\mathcal{L}(\alpha,\beta)&\sim&\frac{\pi\alpha}{2(\beta+0.5)} (for \beta\rightarrow 1 from \beta>1)\\ %\text{(for\rightarrow1 from\beta>1)}\\%page107
-\mathcal{L}(\alpha,\beta)&\sim&\frac{\pi\alpha}{2\beta} (for \beta\rightarrow \infty)%\text{(for\beta\rightarrow\infty)}%page107
-\end{eqnarray}
+\begin{subequations}
+	\begin{align}
+\mathcal{L}(\alpha,\beta)\sim&\frac{\pi\alpha}{2(\beta+0.5)} \qquad(\mbox{for } \beta\rightarrow 1 from \beta>1)\\ 
+\mathcal{L}(\alpha,\beta)\sim&\frac{\pi\alpha}{2\beta}\qquad (\mbox{for } \beta\rightarrow \infty)
+	\end{align}
+\end{subequations}
 
 \begin{figure}[htbp]
   \centering
@@ -975,19 +1071,19 @@ $\beta>1$涵盖了大部分螺管线圈，但“环”和“饼”是重要的�
 \textbf{“长”线圈} 
   
   a. 一个“长”$(β>0.75)$、“薄”($2a_1$)、$N$匝的线圈：
-  \begin{equation}
+\begin{equation}
   L=\mu_0a_1N^2[\frac{\pi(1+\alpha)^2}{8\beta}][1-\frac{2}{3\pi\beta}+\frac{(1+\alpha)^2}{32\beta^2}...]%page108
 \end{equation}
 
 在$(\alpha−1)/(\alpha+1)\ll 1$时，化简为：
-\begin{equation}
-  L=\mu_0a_1N^2(\frac{\pi}{2\beta})[1-\frac{2}{3\pi\beta}+\frac{1}{8\beta^2}...]%page108
-\end{equation}
+\begin{equation*}
+  L=\mu_0a_1N^2(\frac{\pi}{2\beta})[1-\frac{2}{3\pi\beta}+\frac{1}{8\beta^2}...] \tag{3.84'}%page108
+\end{equation*}
 
 b.一个“很长”($\beta\gg 1$)、“薄”($\alpha \simeq 1$)，方程3.84b成为：
-\begin{equation}
-  L=\mu_0a_1N^2(\frac{\pi}{2\beta})%page108
-\end{equation}
+\begin{equation*}
+  L=\mu_0a_1N^2(\frac{\pi}{2\beta}) \tag{3.84''}%page108
+\end{equation*}
 
 可见，对一个非常长且薄壁的线圈，有$L(\alpha,\beta)=\pi/2\beta$。
 
@@ -1002,9 +1098,9 @@ L\simeq&\mu_0a_1N^2(\frac{\alpha+1}{2})(ln\{[\frac{2(\alpha+1)}{\beta}][1+\frac{
   \end{equation}
   
   如果$\beta \ll 1$，变为：
-  \begin{equation}
-L\simeq\mu_0a_1N^2(\frac{\alpha+1}{2})\{ln[\frac{2(\alpha+1)}{\beta}]-0.5\}%page108
-\end{equation}
+  \begin{equation*}
+L\simeq\mu_0a_1N^2(\frac{\alpha+1}{2})\{ln[\frac{2(\alpha+1)}{\beta}]-0.5\} \tag{3.85'}%page108
+\end{equation*}
 
 \textbf{饼式线圈}
 
@@ -1017,21 +1113,19 @@ L\simeq & \mu_0a_1N^2(\frac{\alpha+1}{2})\{ln[\frac{4(\alpha+1)}{\alpha-1}][1+\f
 \end{equation}
 
 对于$(\alpha-1)/(\alpha+1)\ll 1$，上式进一步简化为：
-\begin{equation}
-L\simeq\mu_0a_1N^2(\frac{\alpha+1}{2})\{ln[\frac{4(\alpha+1)}{\alpha-1}]-0.5\}%page109
-\end{equation}
+\begin{equation*}
+L\simeq\mu_0a_1N^2(\frac{\alpha+1}{2})\{ln[\frac{4(\alpha+1)}{\alpha-1}]-0.5\} \tag{3.86'}%page109
+\end{equation*}
 
 注意到，对于一个“环”($N=1$)，有$a_1(\alpha+1)=2R,2a_1\beta=2a,a_1(\alpha-1)=2a$，方程3.85b和3.86b都将简化为：
-\begin{equation}
-L\simeq\mu_0R[ln(\frac{4R}{\alpha})-0.5]=\mu_0R[ln(\frac{R}{a})+0.886]%page109
-\end{equation}
+\begin{equation*}
+L\simeq\mu_0R[ln(\frac{4R}{\alpha})-0.5]=\mu_0R[ln(\frac{R}{a})+0.886] \tag{3.86''}%page109
+\end{equation*}
 
 方程3.86c应用于具有长方形横截面的环，而3.80a用于圆形截面的环。对一个实际很平($\alpha\gg 1$)的饼，3.86a进一步可以简化为：
-\begin{eqnarray}
-% \nonumber % Remove numbering (before each equation)
-L & \simeq & 0.5\mu_0a_1\alpha N^2\{ln(\frac{25}{6})-\frac{101}{288}\}=0.538\mu_0a_1\alpha N^2\\%page109
-L & \approx &0.5\mu_0a_2N^2%page109
-\end{eqnarray}
+\begin{equation*}
+L  \simeq  0.5\mu_0a_1\alpha N^2\{ln(\frac{25}{6})-\frac{101}{288}\}=0.538\mu_0a_1\alpha N^2\approx 0.5\mu_0a_2N^2 \tag{3.86'''}%page109
+\end{equation*}
 
 注意到，3.86d中出现的是$a_2$而不是通常出现的$a_1$。
 
@@ -1059,9 +1153,9 @@ L_l=\frac{1}{16}\mu_0\pi N^2%page109
 \end{equation}
 
 在极限$a\ll R$下，$L$近似为：
-\begin{equation}
- L=\mu_0aN^2(\frac{a}{2R})[1+\frac{1}{4}(\frac{a}{R})^2+\frac{1}{8}(\frac{a}{R})^4+...]\simeq\mu_0aN^2(\frac{a}{2R})%page110
-\end{equation}
+\begin{equation*}
+ L=\mu_0aN^2(\frac{a}{2R})[1+\frac{1}{4}(\frac{a}{R})^2+\frac{1}{8}(\frac{a}{R})^4+...]\simeq\mu_0aN^2(\frac{a}{2R}) \tag{3.89'}%page110
+\end{equation*}
 
 \textbf{“理想”矩形截面的环形磁体体}
 
@@ -1071,9 +1165,9 @@ L=\mu_0bN^2[\frac{1}{\pi}ln(\frac{R+a}{R-a})]%page110
 \end{equation}
 
 在极限$a\ll R$下，$L$近似为：
-\begin{equation}
-L=\mu_0bN^2(\frac{2a}{\pi R})[1+\frac{1}{3}(\frac{a}{R})^2+\frac{1}{5}(\frac{a}{R})^4+...]\simeq\mu_0bN^2(\frac{2a}{\pi R})%page110
-\end{equation}
+\begin{equation*}
+L=\mu_0bN^2(\frac{2a}{\pi R})[1+\frac{1}{3}(\frac{a}{R})^2+\frac{1}{5}(\frac{a}{R})^4+...]\simeq\mu_0bN^2(\frac{2a}{\pi R}) \tag{3.90'}%page110
+\end{equation*}
 
 
 
@@ -1115,10 +1209,12 @@ L_p=\frac{L_1 L_2-M_{12}^2}{L_1+L_2 \mp 2M_{12}}%page111
 \textbf{互感系数} 
 
   与$L_1,L_2$有关的互感系数$M_{12}$为：
-\begin{eqnarray}
-M_{12}&=&k\sqrt{L_1L_2}\\%page111
-k&=&\frac{M_{12}}{\sqrt{L_1L_2}}%page111
-\end{eqnarray}
+\begin{subequations}
+	\begin{align}
+M_{12}=&k\sqrt{L_1L_2}\\%page111
+k=&\frac{M_{12}}{\sqrt{L_1L_2}}%page111
+	\end{align}
+\end{subequations}
 
 其中，$k$称为耦合系数.$k=0$表示线圈之间是无耦合的，$k=1$表示全耦合。对于一个紧密嵌入的螺管对，即一个线圈同轴、同心位于另一个线圈的室温孔内，$k$一般在$0.3-0.6$。当他们的$\alpha$和$\beta$相近时，趋向于0.6；否则，趋向于0.3。
 
@@ -1134,15 +1230,15 @@ k&=&\frac{M_{12}}{\sqrt{L_1L_2}}%page111
 M_{AB}=\frac{\mu_0}{2}(N_AN_B)\sqrt{(a_A+a_B)^2+\rho^2}\{2[K(k)-E(k)]-k^2K(k)\}%page112
 \end{equation}
 
-式中，……where the modulus, k2 for this system is given by
-  \begin{equation}
+本系统的模量$k^2$为：
+\begin{equation*}
 k^2=\frac{4a_Aa_B}{(a_A+a_B)^2+\rho^2}%page112
-\end{equation}
+\end{equation*}
 
 \textbf{特例1：相距很远的两个环形线圈} 
 
   当两个环线圈相距很远时，即$\rho^2\gg(a_A+a_B)^2$或$k^2\ll 1$时，方程3.38c和3.38a可用来简化方程3.96：
- \begin{equation}
+\begin{equation}
 M_{AB}\simeq\frac{\mu_0}{2\pi}[\frac{(\pi a_A^2N_A)(\pi a_B^2N_B)}{\rho^3}]\\%page112
 \end{equation}
 
@@ -1162,11 +1258,9 @@ M_{RS}(\rho&)=-\frac{\mu_0}{2}(\frac{N_RN_S}{2b_S})\times\\
 \end{equation}
 
 式中的参数为：
-\begin{eqnarray}
-k_R^2&=&\frac{4a_Ra_S}{(a_R+a_S)^2+\rho^2};\\
-k_S^2&=&\frac{4a_Ra_S}{(a_R+a_S)^2+(2b_S+\rho)^2};\\
-c^2&=&\frac{4a_Ra_S}{(a_R+a_S)^2}%page112
-\end{eqnarray}
+\begin{equation*}
+k_R^2=\frac{4a_Ra_S}{(a_R+a_S)^2+\rho^2};k_S^2=\frac{4a_Ra_S}{(a_R+a_S)^2+(2b_S+\rho)^2};c^2=\frac{4a_Ra_S}{(a_R+a_S)^2}%page112
+\end{equation*}
 
 \textbf{特例2：相距很远的薄壁线圈和环线圈} 
 
@@ -1206,9 +1300,9 @@ M_{RS}(\rho=&-b_S)\simeq\frac{\mu_0}{2}(\frac{N_R N_S}{2b_S})\times\frac{2b_S}{\
 \end{equation}
 
   式中，$k$为：
-  \begin{equation}
+  \begin{equation*}
 \kappa^2=\frac{4a_Ra_S}{(4a_R+a_S)^2+b_S}%page113
-\end{equation}
+\end{equation*}
 
 \textbf{特例4：长薄壁螺管和环线圈} 
 
@@ -1270,12 +1364,12 @@ dB_z(0,0)=\frac{\mu_0r^2\lambda JdA}{2(r^2+z^2)^\frac{3}{2}}%page115
 \end{equation}
 
 式中，$\lambda J\mathrm{[A/m^2]}$是微分截面内部的总电流密度。无量纲数$\lambda$称为空间因子，这刻画了绕组截面并非完全由载流导体占据这一事实。注意到在这个模型中，$\lambda J$在整个绕组截面上是均匀的，且有：
-\begin{equation}
-\begin{split}
+\begin{subequations}
+\begin{align}
 \lambda J&=\frac{NI}{2b(a_2-a_1)}\\
 &=\frac{NI}{2a_1^2\beta(\alpha-1)}%page115
-\end{split}
-\end{equation}
+\end{align}
+\end{subequations}
 
 式中，$\alpha=a_2/a_1,\beta=b/a_1$。$N$是总匝数，$NI$称为总安匝数。
 \begin{figure}[htbp]
@@ -1286,21 +1380,17 @@ dB_z(0,0)=\frac{\mu_0r^2\lambda JdA}{2(r^2+z^2)^\frac{3}{2}}%page115
 
 对3.107式从$r=a_1$到$r=a_2$以及$z=-b$到$z=b$积分，
 我们得到螺管的$B_z(0,0)$和$F(\alpha,\beta)$的表达式：
-\begin{eqnarray}
+\begin{equation}
 B_z(0,0)=\mu_0\lambda J_{a_1}F(\alpha,\beta)\\ %page116
-F(\alpha,\beta)=\beta \ln\left(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}\right)
-\end{eqnarray}
+\end{equation}
+\begin{equation*}
+F(\alpha,\beta)=\beta \ln\left(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}\right) \tag{3.13b}
+\end{equation*}
 
 前面已经提及，$F(\alpha,\beta)$是均匀电流密度线圈的“场因子”。和电感参数$L(\alpha,\beta)$类似，它也是仅依赖于螺管线圈的截面形状的。图3.17给出了三组关系：3.17a给出的是在$\beta$为常数时，$F(\alpha,\beta)$与$\alpha$的关系；3.17b给出的是在$\alpha$为常数时，$F(\alpha,\beta)$与$\beta$的关系；3.17a给出的是在$F(\alpha,\beta)$为常数时，$\beta$与$\alpha$的关系。
 
 与$F(\alpha,\beta)$类似，螺管总体积$V_{cd}=\lambda 2\pi a_1^3(\alpha^2-1)\beta$在给定的$\lambda,a_1$条件下仅依赖于$\alpha,\beta$：每一幅图中的实线上的点都是给定$F(\alpha,\beta)$下的最小体积。$F(\alpha,\beta)$与某些特殊线圈相关的显著特征将在问题3.1中论及。
 
-%%% 3个图自动编号？？？？
-%\begin{figure}
-%  \centering
-% \includegraphics[scale=0.7]{figures/fig.3.14.png}
-%  \caption{参数$\alpha,\beta$下的$\mathcal{L}(\alpha,\beta)$}
-%\end{figure}
 \begin{figure}
 	\centering
 	\subfigure[在$\beta$为常数时，$F(\alpha,\beta)$与$\alpha$的关系(虚线)。实线表示给定$F(\alpha,\beta)$下的最小导体体积。]
@@ -1326,160 +1416,165 @@ a）从3.107开始，推导得到3.109和3.13b。
 
 b）通过联立3.108b和3.109，可以得到$B_z(0,0)$：
 \begin{equation}
-B_z(0,0)=\frac{\mu_0NI}{2a_1(\alpha-1)}\ln\left(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}\right)\\%page118
+B_z(0,0)=\frac{\mu_0NI}{2a_1(\alpha-1)}\ln\left(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}\right)%page118
 \end{equation}
+
 \begin{description}
   \item[“环”线圈] 化简上式为一个半径$a_1$、载流$NI$的环线圈（$\alpha=1$），得到：
   \begin{equation}
     B_z(0,0)=\frac{\mu_0NI}{2a_1}%page118
   \end{equation}
  \item[“薄壁”螺管] 对于薄壁螺管（$\alpha \rightarrow 1$），可以简化为：
- \begin{eqnarray}
-   B_z(0,0)&=&\frac{\mu_0NI}{2a_1}\left(\frac{1}{\sqrt{1+\beta^2}}\right)\\ %page118
-   B_z(0,0)&=&\mu_0 \lambda Ja_1(\alpha-1)\frac{\beta}{\sqrt{1+\beta^2}}%page118
- \end{eqnarray}
+ \begin{align*}
+   B_z(0,0)=&\frac{\mu_0NI}{2a_1}\left(\frac{1}{\sqrt{1+\beta^2}}\right)\tag{3.111b}\\ %page118
+   B_z(0,0)=&\mu_0 \lambda Ja_1(\alpha-1)\frac{\beta}{\sqrt{1+\beta^2}}\tag{3.111c}%page118
+ \end{align*}
   \item[“长”螺管] 对于长度远大于外直径的螺管（$\beta \gg \alpha$），可以简化为：
-\begin{equation}
-B_z(0,0)=\frac{\mu_0NI}{2b}%page118
-\end{equation}
+\begin{equation*}
+B_z(0,0)=\frac{\mu_0NI}{2b} \tag{3.111d}%page118
+\end{equation*}
 考虑到$NI/2b=K_\theta$，上式等价于3.5，于是
-\begin{equation}
-B_z(0,0)=\mu_0\lambda Ja_1(\alpha-1)%page118
-\end{equation}
+\begin{equation*}
+B_z(0,0)=\mu_0\lambda Ja_1(\alpha-1) \tag{3.111e}%page118
+\end{equation*}
   \item[“饼式”线圈] 对于长度比外直径小很多的饼式线圈，简化为：
-  \begin{equation}1
-B_z(0,0)=\frac{\mu_0NI}{2a_1}(\frac{\ln\alpha}{\alpha-1})%page118
-  \end{equation}
+  \begin{equation*}
+B_z(0,0)=\frac{\mu_0NI}{2a_1}(\frac{\ln\alpha}{\alpha-1}) \tag{3.111f}%page118
+  \end{equation*}
 \end{description}
 
 c）\textbf{场 vs. 能量}：证明电阻性螺管（比如铜螺管）线圈的中心场表达$B_z(0,0)$与其所需功率$P$的关系为：
-\begin{eqnarray}
-B_z(0,0)&=&\mu_0G(\alpha,\beta)\sqrt{\frac{\lambda P}{\rho_{cd}a_1}}\\ %page118
-G(\alpha,\beta)&=&\sqrt{\frac{\beta}{2\pi(\alpha^2-1)}}\ln(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}})%page118
-\end{eqnarray}
+\begin{subequations}
+	\begin{align}
+B_z(0,0)=&\mu_0G(\alpha,\beta)\sqrt{\frac{\lambda P}{\rho_{cd}a_1}}\\ %page118
+G(\alpha,\beta)=&\sqrt{\frac{\beta}{2\pi(\alpha^2-1)}}\ln(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}})%page118
+	\end{align}
+\end{subequations}
 式中，$\rho_{cd}$是导体电导率。$G(\alpha,\beta)$被称为均匀电流密度线圈的“G因子”。
 
 \subsubsection{问题3.1之解}
 
 a）对3.107在$z$和$r$的合适区间积分，得到：
-\begin{equation}
+\begin{equation*}
 B_z(0,0)=\frac{\mu_0\lambda J}{2}\int_{a_1}^{a_2}\int_{-b}^{b}\frac{r^2dzdr}{\sqrt[3]{r^2+z^2}}=\mu_0\lambda J\int_{a_1}^{a_2}\int_{0}^{b}\frac{r^2dzdr}{\sqrt[3]{r^2+z^2}}%page119
-\end{equation}
+\end{equation*}
 
 查积分表，得到：
-\begin{equation}
+\begin{equation*}
 \int_{0}^{b}\frac{dz}{\sqrt[3]{r^2+z^2}}=\left[\frac{z}{r^2\sqrt{r^2+z^2}}\right]_{0}^{b}=\frac{b}{r^2\sqrt{r^2+b^2}}%page119
-\end{equation}
+\end{equation*}
 
 于是：
-\begin{equation}
+\begin{equation*}
 \begin{split}
 B_z(0,0)&=\mu_0\lambda J\int_{a_1}^{a_2}\frac{r^2bdr}{r^2\sqrt{r^2+b^2}}=\mu_0\lambda Jb[\ln({r+\sqrt{r^2+b^2}})]_{a_1}^{a_2}\\
 &=\mu_0\lambda Jb[\ln(a_2+\sqrt{a_2^2+b^2})-\ln(a_1+\sqrt{a_1^2+b^2})]\\
 &=\mu_0\lambda Ja_1\left(\frac{b}{a_1}\right)\ln\left[\frac{\frac{a_2}{a_1}+\sqrt{(\frac{a_2}{a_1})^2+(\frac{b}{a_1})^2}}{(\frac{a_1}{a_2})+\sqrt{(\frac{a_1}{a_1})^2+(\frac{b}{a_1})^2}}\right]\\%page119
-\end{split}
-\end{equation}
+\end{split} \tag{S1.1}
+\end{equation*}
 
 考虑到$a_2/a_1=\alpha$和$b/a_1=\beta$，上式变为：
-\begin{equation}
-B_z(0,0)=\mu_0\lambda J\alpha_1\beta\ln\left[\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}\right]%page119
-\end{equation}
+\begin{equation*}
+B_z(0,0)=\mu_0\lambda J\alpha_1\beta\ln\left[\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}\right]\tag{S1.2}
+\end{equation*}
 
 于是：
-\begin{eqnarray}
-% \nonumber % Remove numbering (before each equation)
-B_z(0,0)&=&\mu_0\lambda J_{a_1}F(\alpha,\beta)\\ %page119
-F(\alpha,\beta)&=&\beta \ln\left(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}\right)%page119
-\end{eqnarray}
+\begin{align*}
+B_z(0,0)=&\mu_0\lambda J_{a_1}F(\alpha,\beta)\tag{3.109}\\ %page119
+F(\alpha,\beta)=&\beta \ln\left(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}\right)\tag{3.13b}%page119
+\end{align*}
 
 b）\textbf{“环”线圈}。对于环线圈（$\alpha\rightarrow 1; \beta\rightarrow 0$），3.110中右侧的对数项成为：
-\begin{equation}
+\begin{equation*}
 \lim_{\beta\rightarrow 0}\ln\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}=\ln\alpha%page119
-\end{equation}
+\end{equation*}
 
 因为当$|\epsilon|\ll 1$时，$\ln (1+\epsilon)\simeq \epsilon$。故有$\alpha\rightarrow 1$时，$\ln \alpha\rightarrow \alpha-1$。于是：
-\begin{equation}
-B_z(0,0)=\frac{\mu_0NI}{2a_1(\alpha-1)}(\alpha-1)=\frac{\mu_0NI}{2a_1}%page119
-\end{equation}
+\begin{equation*}
+B_z(0,0)=\frac{\mu_0NI}{2a_1(\alpha-1)}(\alpha-1)=\frac{\mu_0NI}{2a_1}\tag{3.111}%page119
+\end{equation*}
+
 注意到，方程3.111a和方程3.3a的关系。
 
 \textbf{薄壁螺管。}对于薄壁螺管（$\alpha\rightarrow 1$），通过联立3.13b和3.23b，可得：
-\begin{equation}
-\lim_{\alpha\rightarrow 1}\ln\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}=\frac{\alpha-1}{\sqrt{1+\beta^2}}%page120
-\end{equation}
+\begin{equation*}
+\lim_{\alpha\rightarrow 1}\ln\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}=\frac{\alpha-1}{\sqrt{1+\beta^2}} \tag{S1.3}%page120
+\end{equation*}
 
 联立3.110和S1.3，我们得到3.111b。从方程3.109,3.13b和S1.3，我们得到3.111c：
-\begin{eqnarray}
-B_z(0,0)&=&\frac{\mu_0 NI}{2a_1}(\frac{1}{1+\beta^2})\\ %page120
-B_z(0,0)&=&\mu_0 \lambda Ja_1(\alpha-1)\frac{\beta}{\sqrt{1+\beta^2}}%page120
-\end{eqnarray}
+\begin{align*}
+B_z(0,0)&=&\frac{\mu_0 NI}{2a_1}(\frac{1}{1+\beta^2})\tag{3.111b}\\ %page120
+B_z(0,0)&=&\mu_0 \lambda Ja_1(\alpha-1)\frac{\beta}{\sqrt{1+\beta^2}}\tag{3.111c}%page120
+\end{align*}
 
 注意到，对于长螺管$\beta\gg 1$，3.111c变成3.111e。
 
 \textbf{长螺管。}对于$\beta\gg \alpha$，有：
-\begin{equation}
+\begin{equation*}
 \lim_{\beta\gg\alpha}\ln\left(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}\right)=\ln\left(\frac{\alpha+\beta}{1+\beta}\right)=\ln\left(\frac{\frac{\alpha}{\beta}+1}{\frac{1}{\beta}+1}\right)%page120
-\end{equation}
+\end{equation*}
 
 使用“环”线圈中相同的近似方法，得到：
-\begin{equation}
+\begin{equation*}
 \lim_{\beta\gg\alpha}\ln\left(\frac{\frac{\alpha}{\beta}+1}{\frac{1}{\beta}+1}\right)\simeq\frac{\alpha}{\beta}-\frac{1}{\beta}=\frac{\alpha-1}{\beta}%page120
-\end{equation}
+\end{equation*}
 
 于是在极限$\beta\gg\alpha$下，我们得到：
-\begin{equation}
-B_z(0,0)=\frac{\mu_0NI}{2b}%page120
-\end{equation}
+\begin{equation*}
+B_z(0,0)=\frac{\mu_0NI}{2b} \tag{3.111d}%page120
+\end{equation*}
 
 上文已经提及，$NI/2b$可以视为表面电流密度。从式3.108中，有$NI/(2b)=\lambda J (a_2-a_1)$。于是上式又可以写为：
-\begin{equation}
-B_z(0,0)=\mu_0\lambda Ja_1(\alpha-1)%page120
-\end{equation}
+\begin{equation*}
+B_z(0,0)=\mu_0\lambda Ja_1(\alpha-1) \tag{3.111e}%page120
+\end{equation*}
 
 对于一个长螺管，它的中心场和它的长度是无关的。$B_z(0,0)$独立性在大$\beta(>\sim 3)$和中等$\alpha(<\beta)$情况下是明显的（图3.17b）。
 同样，$B_z(0,0)$在大$\beta(>\sim 3)$和中等$\alpha(<\beta)$情况下正比于线圈的$a_2-a_1$。这是因为该值越大，对应的单位长度总安匝数越大（图3.17a）。
 
 \textbf{饼式线圈。}对于饼式线圈，近似极限是$\beta\rightarrow 0$：
-\begin{eqnarray}
-\lim_{\beta\rightarrow 0}\ln\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}=\ln\left(\frac{2\alpha}{2}\right)=\ln\alpha\\%page120
-B_z(0,0)=\frac{\mu_0NI}{2a_1}\left(\frac{\ln\alpha}{\alpha-1}\right)%page120
-\end{eqnarray}
+\begin{align*}
+&\lim_{\beta\rightarrow 0}\ln\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}=\ln\left(\frac{2\alpha}{2}\right)=\ln\alpha\notag \\%page120
+&B_z(0,0)=\frac{\mu_0NI}{2a_1}\left(\frac{\ln\alpha}{\alpha-1}\right) \tag{3.111f}%page120
+\end{align*}
 
 注意到，饼式线圈的中心场等于环线圈的中心场乘一个系数$\ln \alpha/(\alpha-1)$。在$\alpha\rightarrow 1$时，上式退化为环线圈的表达式。
 
 c）全部导体体积等于$\lambda\times$<绕组体积(winding volume, wv)>：
-\begin{equation}
+\begin{equation*}
 <wv>=2b\pi(a_2^2-a_1^2)=a_1^32\pi\beta(\alpha^2-1)%page121
-\end{equation}
+\end{equation*}
 
 于是：
-\begin{equation}
-P=\rho_{cd}J^2\lambda a_1^32\pi\beta(\alpha^2-1)%page121
-\end{equation}
+\begin{equation*}
+P=\rho_{cd}J^2\lambda a_1^32\pi\beta(\alpha^2-1) \tag{3.112}%page121
+\end{equation*}
 
 这里，$J$仅是导体中的电流密度。从3.112中，我们用$P$和其他参数解出$J$：
-\begin{equation}
-J=\sqrt{\frac{P}{\rho_{cd}\lambda a_1}}\left[\frac{1}{a_1\sqrt{2\pi\beta(\alpha^2-1)}}\right]%page121
-\end{equation}
+\begin{equation*}
+J=\sqrt{\frac{P}{\rho_{cd}\lambda a_1}}\left[\frac{1}{a_1\sqrt{2\pi\beta(\alpha^2-1)}}\right]\tag{S1.4}%page121
+\end{equation*}
 
 联立S1.2和S1.4，得到：
-\begin{equation}
+\begin{equation*}
 \begin{split}
 B_z(0,0)&=\mu_0\lambda\sqrt{\frac{P}{\rho_{cd}\lambda a_1}}\left[\frac{1}{a_1\sqrt{2\pi\beta(\alpha^2-1)}}\right]a_1\beta\ln(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}})\\
 &=\mu_0\sqrt{\frac{\lambda P}{\rho_{cd}a_1}}\sqrt{\frac{\beta}{2\pi(\alpha^2-1)}}\ln\left(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}\right)%page121
 \end{split}
-\end{equation}
+\end{equation*}
 
 于是：
-\begin{eqnarray}
+\begin{subequations}
+\begin{align}
 B_z(0,0)&=&\mu_0G(\alpha,\beta)\sqrt{\frac{\lambda P}{\rho_{cd}a_1}}\\ %page121
 G(\alpha,\beta)&=&\sqrt{\frac{\beta}{2\pi(\alpha^2-1)}}\ln\left(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}\right)%page121
-\end{eqnarray}
+\end{align}
+\end{subequations}
 
 上式表明，对给定参数$\alpha$和$\beta$的电阻性螺管线圈所需的功率P和它的中心场是平方关系：
-\begin{equation}
-P=\frac{\rho_{cu}a_1B_z^2(0,0)}{\mu_0^2\lambda G^2(\alpha,\beta)}%page121
-\end{equation}
+\begin{equation*}
+P=\frac{\rho_{cu}a_1B_z^2(0,0)}{\mu_0^2\lambda G^2(\alpha,\beta)}\tag{3.113c}%page121
+\end{equation*}
 
 \newpage
 \subsection{讨论3.2：Bitter磁体}
@@ -1521,57 +1616,56 @@ Bitter的设计（$J\propto 1/r$）是一个近似实现上述目标的有效方
 \textbf{场}
 
 我们用上式给出的$J_\theta$替换3.107式中的$\lambda J$。选择合适的上下限，积分得：
-\begin{equation}
+\begin{equation*}
 \begin{split}
 {[B_z(0,0)]}_B&=\mu_0\lambda_B J_0a_1\int_{a_1}^{a_2}\int_{0}^{b}\frac{r dr dz}{\sqrt[3]{r^2+z^2}}\\
 &=\mu_0\lambda_B J_0 a_1\int_{1}^{\alpha}\int_{0}^{\beta}\frac{\eta d\eta d\zeta}{\sqrt[3]{\eta^2+\zeta^2}}%page123
 \end{split}
-\end{equation}
+\end{equation*}
 
 式中，$r/a_1=\eta$，$z/a_1=\zeta$，查积分表，得到：
-\begin{equation}
+\begin{equation*}
 \int_{0}^{\beta}\frac{d\zeta}{\sqrt[3]{\eta^2+\zeta^2}}=\left[\frac{\zeta}{\eta^2\sqrt{\eta^2+\zeta^2}}\right]_0^{\beta}=\frac{\beta}{\eta^2\sqrt{\eta^2+\beta^2}}%page123
-\end{equation}
+\end{equation*}
 
 联立上面两式，得到：
-\begin{equation}
+\begin{equation*}
 \begin{split}
 {[B_z(0,0)]}_B&=\mu_0\lambda_B J_0a_1\beta\int_{1}^{\alpha}\frac{\eta d\eta}{\eta^2\sqrt{\eta^2+\beta^2}}\\
 &=\mu_0\lambda_B J_0a_1\beta\left[-\frac{1}{\beta}\ln(\frac{\beta+\sqrt{\beta^2+\eta^2}}{\eta})\right]_1^{\alpha}\\ %page123
 &=\mu_0\lambda_B J_0a_1\ln\left(\alpha\frac{\beta+\sqrt{1+\beta^2}}{\beta+\sqrt{\alpha^2+\beta^2}}\right)%page123
 \end{split}
-\end{equation}
+\end{equation*}
 
 上面的表达式可以写为：
-\begin{eqnarray}
-% \nonumber % Remove numbering (before each equation)
-{[B_z(0,0)]}_B&=&\mu_0\lambda_B J_0a_1[F(\alpha,\beta)]_B\\ %page123
-{[F(\alpha,\beta)]}_B&=&\ln\left(\alpha\frac{\beta+\sqrt{1+\beta^2}}{\beta+\sqrt{\alpha^2+\beta^2}}\right)%page123
-\end{eqnarray}
+\begin{subequations}
+	\begin{align}
+{[B_z(0,0)]}_B=&\mu_0\lambda_B J_0a_1[F(\alpha,\beta)]_B\\ %page123
+{[F(\alpha,\beta)]}_B=&\ln\left(\alpha\frac{\beta+\sqrt{1+\beta^2}}{\beta+\sqrt{\alpha^2+\beta^2}}\right)%page123
+	\end{align}
+\end{subequations}
 
 注意3.115b和3.15b两式的区别。
 
 \textbf{场和能量}
 
 我们通过在整个线圈区域内积分功率密度$\rho_{Cu} [J_\theta]_B^2(r)$推导出$[H_z(0,0)]_B$和Bitter磁体总功率$P_B$的关系式。这里继续采用无量纲参数，有：
-\begin{equation}
+\begin{equation*}
 P_B=a_1^3\int_{1}^{\alpha}\int_{-\beta}^{\beta}\rho_{cu}\lambda_B\left(\frac{J_0}{\eta}\right)^2 2\pi\eta d\zeta d\eta=J_0^2\rho_{cu}\lambda_B a_1^3(4\pi\beta\ln\alpha)%page124
-\end{equation}
+\end{equation*}
 
 通过上面的表达式，我们将$J_0$和$P_B$联系起来：
-\begin{equation}
+\begin{equation*}
 J_0=\frac{1}{a_1\sqrt{4\pi\beta\ln\alpha}}\sqrt{\frac{P_B}{\rho_{cu}\lambda_B a_1}}%page124
-\end{equation}
+\end{equation*}
 
 上式和3.115联立，得到：
-\begin{equation}
-{[B_z(0,0)]}_B=\mu_0[G(\alpha,\beta)]_B\sqrt{\frac{\lambda_B P_B}{\rho_{cu}a_1}}%page124
-\end{equation}
-
-式中，
-\begin{equation}
-{[G(\alpha,\beta)]}_B=\frac{1}{\sqrt{4\pi\beta\ln\alpha}}[F(\alpha,\beta)]_B%page124
-\end{equation}
+\begin{subequations}
+	\begin{align}
+{[B_z(0,0)]}_B&=\mu_0[G(\alpha,\beta)]_B\sqrt{\frac{\lambda_B P_B}{\rho_{cu}a_1}}\\%page124
+{[G(\alpha,\beta)]}_B&=\frac{1}{\sqrt{4\pi\beta\ln\alpha}}[F(\alpha,\beta)]_B%page124
+	\end{align}
+\end{subequations}
 
 在均匀电流密度螺管线圈中，$[B_z(0,0)]_B$按$P_B$的平方根增加；$P_B$是磁场的二次函数。
 $[G(\alpha,\beta)]_B$在$\alpha\simeq 6.42$和$\beta\simeq 2.5$时取得最大值，此时$[G(\alpha,\beta)]_B\simeq 0.166$。在$5\leq \alpha \leq 9$和$1.8\leq\beta\leq 2.6$范围内，$[G(\alpha,\beta)]_B$的值
@@ -1582,21 +1676,21 @@ $[G(\alpha,\beta)]_B$在$\alpha\simeq 6.42$和$\beta\simeq 2.5$时取得最大�
 
 我们用上面的关系式计算一个Bitter磁体。磁体参数$2a_1=6\ \mathrm{cm}, 2a_2=40\ \mathrm{cm}, 2b=22 \ \mathrm{cm},\lambda_B=0.8, \rho_{Cu}=2\times10^{-6}\ \mathrm{\Omega cm}$，产生的磁场$[B_z(0,0)]_B=20\ \mathrm{T}$。
 此时，$\alpha=40/6=6.67;\beta=22/6=3.67$。
-\begin{equation}
+\begin{equation*}
 \begin{split}
 {[G(6.67,3.67)]}_B&=\frac{1}{\sqrt{4\pi3.67\ln(6.67)}}\ln\left[6.67\frac{3.67+\sqrt{1+(3.67)^2}}{3.67+\sqrt{(6,67)^2+(3.67)^2}}\right]\\
 &\simeq 0.159 %page124
 \end{split}
-\end{equation}
+\end{equation*}
 
 类似的，
-\begin{equation}
+\begin{equation*}
 \begin{split}
 P_B&=\frac{\rho_{cu}a_1[B_z(0.0)]_B^2}{\mu_0^2\lambda_B[G(\alpha,\beta)]_B^2}\\
 &=\frac{(2\times 10^{-8}\ \Omega m)(3\times 10^{-2}\ \mathrm{m})(20\ \mathrm{T})^2}{(4\pi\times 10^{-7}\ \mathrm{\frac{H}{m}})^2(0.8)(0.159)^2}\\
 &\simeq 7.5\ \mathrm{MW}%page124
 \end{split}
-\end{equation}
+\end{equation*}
 
 这个功率是运行于Francis Bitter国家磁体实验室$20\ \mathrm{T}$ Bitter磁体的典型值。
 
@@ -1611,9 +1705,9 @@ $a_1$和$\rho_{Cu}$。
 \textbf{Kelvin线圈}
 
 给出最高磁场效率的电流密度分布被称为Kelvin分布：
-\begin{equation}
+\begin{equation*}
 J_K(r,z)\propto\frac{r}{(r^2+z^2)^\frac{3}{2}}%page125
-\end{equation}
+\end{equation*}
 
 Kelvin线圈的独有性质是每一个部分的单位功率都产生相同的磁场。
 作为对比，总功率相同的均匀电流密度线圈的中心场仅为Kelvin线圈的66\%；Bitter线圈的这个比值是77\%。不过，制成具有Kelvin电流分布的线圈并不具可行性。
@@ -1621,9 +1715,9 @@ Kelvin线圈的独有性质是每一个部分的单位功率都产生相同的�
 \textbf{Gaume}
 
 Gaume分布同样给出很好的磁场效率：
-\begin{equation}
+\begin{equation*}
 J_G(r,z)\propto\frac{1}{r}\left(\frac{1}{\sqrt{a_1^2+z^2}}-\frac{1}{\sqrt{a_2^2+z^2}}\right)%page125
-\end{equation}
+\end{equation*}
 
 Gaume线圈的每一匝在单位功率下产生相同的磁场。Gaume线圈的磁场是Kelvin的85\%。Bitter线圈的电流分布在某种程度上是近似于Gaume线圈的。这可以通过以下方法实现：
 更厚的Bitter板，轴向远离中心平面。$J_b(r,z)\propto 1/r\delta(z)$，此处$\delta(z)$是依赖于z的板的厚度。
@@ -1631,9 +1725,9 @@ Gaume线圈的每一匝在单位功率下产生相同的磁场。Gaume线圈的�
 \textbf{Polyhelix}
 
 多螺旋线圈由多个嵌套的单层线圈组成，每一层的电流密度被调整以最大化磁场效率和/或匹配每一层的与其导体强度匹配的应力：
-\begin{equation}
+\begin{equation*}
 J_P(r,z)\propto f(r)%page125
-\end{equation}
+\end{equation*}
 
 最高效率的多螺旋线圈，其$J_P(r,z)\propto 1/r^2$，可以产生92\%的Kelvin磁场。实践中，由于两端需要多个电极，多螺旋线圈被认为比Bitter线圈更难于制造。
 \newpage
@@ -1659,17 +1753,17 @@ h_z(\xi)&=1+\frac{3}{4(1+\beta^2)^2}\xi^2+\frac{15(3-4\beta^2)}{64(1+\beta^2)^4}
 \end{equation}
 
 b）此外，证明对“短”线圈($\beta=0$)，$h_z(\xi)$的表达式为：
-\begin{equation}
+\begin{equation*}
 \begin{split}
 h_z(\xi)&=1+\frac{3(\alpha^2-1)}{8\alpha^2\ln\alpha^2}\xi^2+\frac{45(\alpha^4-1)}{256\alpha^4\ln\alpha}\xi^4+\frac{175(\alpha^6-1)}{1536\alpha^6\ln\alpha}\xi^6\\
 &+\frac{11025(\alpha^8-1)}{131027\alpha^8\ln\alpha}\xi^8+\frac{43659(\alpha^10-1)}{655360\alpha\ln\alpha}\xi^{10}\cdots%page126
-\end{split}
-\end{equation}
+\end{split}\tag{3.117b}
+\end{equation*}
 
 c）类似的，证明对“薄壁且长”线圈，$h_z(\xi)$为：
-\begin{equation}
-h_z(\xi)\propto1+\frac{3}{4\beta^4}\xi^2-\frac{15}{16\beta^6}\xi^4+\frac{35}{32\beta^8}\xi^6-\frac{315}{256\beta^{10}}\xi^8+\cdots%page126
-\end{equation}
+\begin{equation*}
+h_z(\xi)\propto1+\frac{3}{4\beta^4}\xi^2-\frac{15}{16\beta^6}\xi^4+\frac{35}{32\beta^8}\xi^6-\frac{315}{256\beta^{10}}\xi^8+\cdots\tag{3.117c}%page126
+\end{equation*}
 
 d)对“薄壁”线圈($\alpha=1$)和相对“短”线圈($\beta=0.4$)计算$H_m/H_z(0, 0)\equiv h_m$的近似值。
 
@@ -1773,13 +1867,12 @@ H(b)=H(\alpha,\beta)|_{z=b}=\frac{1}{2}H(\alpha,2\beta)|_{z=0}=\frac{1}{2}\lambd
 这里考虑两个非中心轴向场的实例：1)$0<z<b$，即位于螺管室温孔内；2) $z > b$，即位于螺管室温孔外。
 图3.21给出了各实例应用叠加技术的过程。
 于是，我们有：
-\begin{equation}
-(case\ 1:z<b)\quad H(z)=\frac{1}{2}\lambda J\alpha_{1}[F(\alpha,\beta=\frac{b+z}{a_{1}})+F(\alpha,\beta=\frac{b-z}{a_{1}})]%(3.120a)
-\end{equation}
-
-\begin{equation}
-(case\ 2:z<b)\quad H(z)=\frac{1}{2}\lambda Ja_{1}[F(\alpha,\beta=\frac{b+z}{a_{1}})-F(\alpha,\beta=\frac{z-b}{a_{1}})]%(3.120b)
-\end{equation}
+\begin{subequations}
+	\begin{align}
+(\mbox{情况1：}z<b)\quad H(z)&=\frac{1}{2}\lambda J\alpha_{1}[F(\alpha,\beta=\frac{b+z}{a_{1}})+F(\alpha,\beta=\frac{b-z}{a_{1}})]\\%(3.120a)
+(\mbox{情况2：}:z<b)\quad H(z)&=\frac{1}{2}\lambda Ja_{1}[F(\alpha,\beta=\frac{b+z}{a_{1}})-F(\alpha,\beta=\frac{z-b}{a_{1}})]%(3.120b)
+	\end{align}
+\end{subequations}
 
 \begin{figure}
 	\centering
