@@ -132,61 +132,355 @@ LTS和HTS磁体都得以发展。一方面，干式低温系统在运行、维�
 \end{description}
 
 \section{专题}
-\subsection{题1：制冷机性能}
+\subsection{问题4.1：Carnot制冷机}
 
-\newpage
-\subsection{题2：湿式磁体的冷却模式}
 
-\newpage
-\subsection{题3：制冷高温超导磁体}
+\begin{equation}% 4.1
+W_{ca}=Q(\frac{T_{wm}}{T_{op}}-1)
+\end{equation}
 
-\newpage
-\subsection{题4：超流}
 
-\newpage
-\subsection{题5：1.8K过冷}
+\begin{equation*}% S1.1
+Q_{wm}=Q+W_{ca}=0
+\end{equation*}
 
-\newpage
-\subsection{题6：焦耳-汤姆森过程}
 
-\newpage
-\subsection{题7：制冷机 vs. 制冷循环机}
+\begin{align*}% S1.2a
+S_{wm}-S_{cl}&=\frac{Q}{T_{op}}\\
+S_{wm}-S_{cl}&=\frac{Q_{wm}}{T_{wm}}
+\end{align*}
 
-\newpage
-\subsection{题8：辐射传热}
 
-\newpage
-\subsection{题9：残余气体的对流传热}
+\begin{equation}% S1.3
+\frac{Q}{T_{op}}=\frac{Q_{wm}}{T_{wm}}
+\end{equation}
 
-\newpage
-\subsection{题10：真空泵系统}
 
-\newpage
-\subsection{题11：冷却固体工质/磁体}
+\begin{equation*}% S1.4
+\frac{Q}{T_{op}}=\frac{Q+W_{ca}}{T_{wm}}
+\end{equation*}
 
-\newpage
-\subsection{题12：温升 vs. 场均匀性}
 
-\newpage
-\subsection{题13：低温量热计}
+\begin{equation*}% 4.1
+W_{ca}=Q(\frac{T_{wm}}{T_{op}}-1) \tag{4.1}
+\end{equation*}
 
-\newpage
-\subsection{题14：蒸汽冷却的铜电流引线}
 
-\newpage
-\subsection{题15：干式引线：正常金属和HTS}
 
-\newpage
-\subsection{题16：电流引线保护}
+\subsection{讨论4.1：制冷机性能}
 
-\newpage
-\subsection{题17：HTS电流引线}
 
-\newpage
-\subsection{题18：优化的CSV引线}
+\subsection{讨论4.2：浸泡磁体的冷却模式}
+\begin{equation}% 4.2
+\frac{M_{be}}{M_{mg}}=\int_{4.2K}^{T_i}\frac{c_{cu}(T)dT}{h_{he}(T)-h_{he}(4.2K,liq.)}
+\end{equation}
+\begin{equation}% 4.3
+[\frac{M_{be}}{M_{mg}}]_{dk}=\frac{[h_{cu}(T_i)-h_{cu}(4.2K)]}{h_L}
+\end{equation}
 
-\newpage
-\subsection{题19：气冷支撑棒}
 
-\newpage
-\subsection{题20：低温结构材料}
+\subsection{讨论4.3：“冷却”HTS磁体}
+\begin{equation}% 4.4
+-Q_r(T)=(\frac{M_{cu}}{\varrho_{cu}})C_{cu}(T)\frac{dT}{dt}
+\end{equation}
+
+\begin{subequations}% 4.5
+\begin{align}
+\tau_{cn}&=\frac{M_{cu}}{\varrho_{cu}}\int_{T_{op}}^{T_i}\frac{C_{cu}(T)}{Q_r(T)}dT=\frac{M_{cu}}{\varrho_{cu}}\int_{T_{op}}^{T_i}\kappa(T)dT\\
+M_{cu}&=\frac{\varrho_{cu}\tau_{cn}}{\int_{T_{op}}^{T_i}\kappa(T)dT}
+\end{align}
+\end{subequations}
+
+
+
+\subsection{讨论4.4：超流}
+
+
+\begin{equation}% 4.6a
+X(T_{cl})-X(T_{wm})=q^{3.4}L
+\end{equation}
+\begin{equation}% 4.6b
+X(T_b)=q_{c}^{3.4}L
+\end{equation}
+\begin{equation}% 4.6c
+X(T_b)=\frac{q_{c}^{3.4}}{4.4}L
+\end{equation}
+\begin{equation}% 4.7
+q_k=a_k(T_{cd}^{nk}-T_{b}^{nk})
+\end{equation}
+
+\subsection{讨论4.5：1.8 K过冷低温容器}
+
+\begin{equation}% 4.8
+Q_{out}-Q_{in}=Q_{1.8}
+\end{equation}
+\begin{equation}% 4.9
+Q_{1.8}=\dot{m}_h(h_3-h_2)
+\end{equation}
+
+\begin{equation*}% 4.9
+Q_{1.8}=\dot{m}_h(24.02J/g-5.64J/g)=20W
+\end{equation*}
+
+\begin{equation}% 4.10
+P_s=Q_{1.8}=\dot{m}_h(\frac{\gamma}{\gamma-1})(P_4\nu_4)[(\frac{P_5}{P_4})^{\frac{\gamma-1}{\gamma}}-1]
+\end{equation}
+
+\begin{equation}% 4.11
+T(z)=-\frac{\tilde{\rho}I_{t}^{2}}{2A^2\tilde{k}}z^2+[\frac{(T_\ell-T_0)}{\ell}+\frac{\tilde{p}I_{t}^2\ell}{2A^2\tilde{k}}]z+T_0
+\end{equation}
+
+\begin{equation}% 4.12
+(\frac{I_0\ell}{A})_{dr}=\sqrt{\frac{2\tilde{k}(T_\ell-T_0)}{\dot{\rho}}}
+\end{equation}
+
+\begin{equation}% 4.13
+T(\xi)=-(T_\ell-T_0)\xi^2+2(T_\ell-T_0)\xi+T_0
+\end{equation}
+
+\subsection{讨论4.6：J-T过程}
+
+\begin{equation}% 4.14
+h_g(6K,10atm)=x_\ell h_\ell(4.2K,1atm)+(1-x_\ell)h_g(4.2K,1atm)
+\end{equation}
+
+\subsection{问题4.2：基于制冷机的小型氦液化器}
+
+
+\subsubsection{问题4.2之解}
+
+\begin{equation*}% S2.1
+h_{he}(7K,10atm)=x_\ell h_\ell(4.22K,1atm)+(1-x_\ell)h_v(4.22K,1atm)
+\end{equation*}
+
+\begin{equation*}% s2.2
+x_\ell=\frac{h_{he}(7K,10atm)-h_v(4.22K,1atm)}{h_\ell(4.22K,1atm)-h_v(4.22K,1atm)}
+=\frac{(26.00J/g-30.13J/g)}{(9.71J/g-30.13J/g)}=0.202
+\end{equation*}
+
+\begin{equation*}% S2.3
+\dot{m}_{he}h_{he}(8K,10atm)=Q_2+\dot{e}_{he}h_{he}(7K,10atm)
+\end{equation*}
+
+\begin{equation*}% s2.3
+Q_2=\dot{m}_{he}[h_{he}(8K,10atm)-h_{he}(7K,10atm)]
+=(1g/s)(33.44J/g-26.00J/g)=7.44W
+\end{equation*}
+
+\begin{equation*}% 2.4
+\dot{m}_{he}h_{he}(46K,10atm=Q_1+\dot{m}_{he}h_{he}(30K,10atm)
+\end{equation*}
+
+\begin{equation*}% S2.4
+Q_1=\dot{m}[h_{he}(46K,10atm)-h_{he}(30K,10atm)]
+=(1g/s)(252J/g-168J/g)\simeq84W
+\end{equation*}
+
+\begin{equation*}% S2.5
+\dot{m}[h_{he}(30K,10atm)-h_{he}(8K,10atm)]
+=(\dot{m}_v+\dot{m}_{\ell r})h_v(30K,1atm)-[\dot{m}_vh_v(4.22K,1atm)+\dot{m}_{\ell r}h_l(4.22K,1atm)]
+\end{equation*}
+
+\begin{equation*}% page 246
+\dot{m}_{\ell r}=\frac{\{\dot{m}_{he}[h_{he}(30K,10atm)-h_{he}(8K,10atm)]-\dot{m}_v[h_v(30K,1atm)-h_{v}(4.22K,1atm)]\}}{h_v(30K,1atm)-h_{l}(4.22K,1atm)}
+=\frac{(1g/s)(168.4J/g-33.44J/g)-(0.798g/s)(170.2J/g-30.13J/g)}{(170.2J/g-9.71J/g)}\simeq0.144g/s
+\end{equation*}
+\begin{equation*}% S2.6
+\dot{m}_{\ell r}[h_{he}(295K,10atm)-h_{he}(46K,10atm)]
+=(\dot{m}_v+\dot{m}_{\ell r})[h_v(295K,1atm)-h_{v}(30K,1atm)]
+\end{equation*}
+\begin{equation*}% S2.7a
+\dot{m}_{he}[h_{he}(295K,10atm)-h_{he}(46K,10atm)]=(1g/s)(1550.0J/g-253.9J/g)
+\simeq1296W
+\end{equation*}
+\begin{equation*}% 2.7b
+(\dot{m}_v+\dot{m}_{\ell r})[h_{he}(295K,1atm)-h_{he}(30K,1atm)]
+\simeq(0.798g/s+0.144g/s)(1547.0J/g-170.2J/g)
+\simeq1297W/s
+\end{equation*}
+\begin{equation*}% s2.8
+P_s=\dot{m}_h(\frac{\gamma}{\gamma-1})(P_jv_j)[(\frac{P_a}{P_j})^{\frac{\gamma-1}{\gamma}}-1]
+\end{equation*}
+
+
+\subsection{讨论4.7：制冷机 vs. 制冷回环器}
+
+
+\subsection{讨论4.8：辐射传热}
+\begin{equation}% 4.15
+q_r=\epsilon_r\sigma T^4
+\end{equation}
+\begin{equation}% 4.16
+\epsilon_r=\frac{\epsilon_{cl}\epsilon_{wm}}{\epsilon_{cl}+\epsilon_{wm}-\epsilon_{cl}\epsilon_{wm}}
+\end{equation}
+\begin{equation}% 4.17
+q_r=\epsilon_r\sigma(T_{wm}^4-T_{cl}^4)
+\end{equation}
+\begin{equation}% 4.18
+q_r=\frac{\epsilon_r}{N_i+1}\sigma(T_{wm}^4-T_{cl}^4)
+\end{equation}
+
+
+
+\subsection{讨论4.9：残余气体的对流传热}
+
+\begin{equation}% 4.19
+q_g=\eta_gP_g(T_{wm}-T_{cl})
+\end{equation}
+
+
+
+\subsection{讨论4.10：真空泵系统}
+
+
+
+\subsection{讨论4.11：固态制冷工质/磁体}
+\begin{equation}% 4.20
+D_{th}=\frac{k}{\varrho c_p}
+\end{equation}
+\begin{equation}% 4.21
+T_{sd}=\frac{1}{D_{th}}(\frac{\delta_{sd}}{\pi})^2
+\end{equation}
+
+
+\subsection{问题4.3：固态制冷剂冷却的磁体}
+
+\begin{equation*}% page260
+h(15K)-h(10K)\simeq\frac{C_p(10K)+C_p(15K)}{2}(15K-10K)
+\simeq\frac{(0.175J/cm^3K+0.475J/cm^3K)}{2}(5K)
+\simeq1.625J/cm^3
+\end{equation*}
+\begin{equation*}% page260
+[\Delta(10K \rightarrow15K)]_{15liter}^{0.25W}=\frac{(15000cm^3)(1.625J/cm^3)}{(0.25W)(3600s/h)}\simeq27.1h~30h
+\end{equation*}
+
+
+\begin{equation*}% S3.1
+\nu_{N2}=\pi D\ell\Delta r_{N2}
+\Delta r_{N2}=\frac{\mu_{N2}}{\pi D\ell}=\frac{(15000cm^3)}{\pi(90cm)(30cm)}=1.8cm
+\end{equation*}
+\begin{equation}% 4.21
+\tau_{sd}=\frac{1}{D_{th}}(\frac{\delta_{sd}}{\pi})^2
+=\frac{1}{(55\times10^{-2}cm^2/s)}(\frac{1.8cm}{\pi})^2~0.6s
+\end{equation}
+\begin{equation*}% page260
+h(15K)-h(10K)\simeq\frac{C_p(10K)+C_p(15K)}{2}(15K-10K)
+\simeq\frac{(0.400J/cm^3K+0.875J/cm^3K)}{2}(5K)
+\simeq3.2J/cm^3
+\end{equation*}
+\begin{equation*}% page261
+V_{Ne}(10K \rightarrow 15K)=\frac{(27.1h)(3600s/h)(2.5W)}{(3.2J/cm^3)(1000cm^3/liter)}
+\simeq7.6liter~\frac{1}{2}\times15liter
+\end{equation*}
+\begin{equation*}% page261
+V_{Ne}(10K \rightarrow 15K)=\frac{(0.486h)}{0.89h}(15liter)\simeq8.2liter\simeq\frac{1}{2}\times(15liter)
+\end{equation*}
+\begin{equation*}% page261
+[\Delta t(15K \rightarrow 60K)]_{15liter}^{3.3W}=(\frac{15liter}{1liter})(\frac{1W}{3.3W})[\Delta t(15K\rightarrow60K)]_{1liter}^{1W}
+\simeq(15)(0.303)(17.15h)
+=78h~80h
+\end{equation*}
+\begin{equation*}% S3.2
+\int_{20K}^{T_i}[C_p(T)]_{cu}dT=5J/cm^3
+\end{equation*}
+\begin{equation*}% page261
+h(35K)-h(30K)\simeq\frac{C_p(30K)+C_p(35K)}{2}(35K-30K)
+\simeq\frac{(1.24J/cm^3K+1.55J/cm^3K)}{2}(5K)
+\simeq7.0J/cm^3
+\end{equation*}
+\begin{equation*}% page262
+[\Delta t(30K \rightarrow 35K)]_{15liter}^{10W}=\frac{(15000cm^3)(7.0J/cm^3)}{(10W)(3,600s/h)}
+\simeq2.9h~3h
+\end{equation*}
+\begin{equation*}% page262
+h(40K)-h(35K)\simeq\frac{C_p(35K)+C_p(35.61K)}{2}(35.61K-35K)
++\Delta h(35.61K)+\frac{C_p(35.61K)+C_p(40K)}{2}(40K-35.61K)
+\simeq\frac{(1.60J/cm^3K+1.62J/cm^3K)}{2}(0.6K)
++8.2J/cm^3+\frac{(1.29J/cm^3K+1.33J/cm^3K)}{2}(4.39K)
+\simeq0.98J/cm^3+8.2J/cm^3+5.75J/cm^3\simeq14.9J/cm^3
+[\Delta t(30K \rightarrow 35K)]_{15liter}^{10W}=\frac{(15,000 cm^3)(14.9J/cm^3)}{(10W)(3,600s/h)}
+\simeq6.2h~6h
+\end{equation*}
+\begin{equation}% 4.21
+\tau_{sd}=\frac{1}{D_{th}}(\frac{\delta_{sd}}{\pi})^2
+\end{equation}
+\begin{equation*}% page 262
+p_{sd}=[h(35K)-h(30K)]\frac{\delta_{sd}}{\tau_{sd}}
+=(7.0J/cm^3)\frac{(0.04 cm)}{(0.067s)}=4.2W/cm^2
+\end{equation*}
+
+
+
+\subsection{讨论4.12：温升和场均匀性}
+\begin{equation}% 4.22
+\alpha(T)=\frac{1}{L_o}(\frac{\partial L}{\partial T})_P
+\end{equation}
+\begin{equation}% 4.23
+\alpha(T)=aT+bT^3
+\end{equation}
+\begin{equation}% 4.24
+(\frac{\Delta L}{L_o}_{cu})=\int_{10K}^{15K}(5\times10^{-9}T+3\times10^{-11}T^3)dT=0.62\times10^{-6}
+\end{equation}
+
+
+
+\subsection{讨论4.13：低温热测}
+
+
+
+
+\subsection{讨论4.14：气冷铜电流引线}
+\begin{equation}% 4.25
+Q_{in}=[Ak(T)\frac{dT}{dz}]_{z+\Delta z}+\dot{m}_Ic_p(T)T+\frac{\rho(T)I_{o}^{2}}{A}\Delta z
+\end{equation}
+\begin{equation}% 4.26
+Q_{out}=[Ak(T)\frac{dT}{dz}]_z+\dot{m}_Ic_p(T)(T+\Delta T)
+\end{equation}
+\begin{equation}% 4.27
+[Ak(T)\frac{dT}{dz}]_{z+\Delta z}-[Ak(T)\frac{dT}{dz}]_z-\dot{m}_Ic_p(T)\Delta T+\frac{\rho(T)I_{o}^{2}}{A}\Delta z=0
+\end{equation}
+\begin{equation}% 4.28
+\frac{d[Ak(T)\frac{dT}{dz}]}{dz}-\dot{m}_Ic_p(T)\frac{dT}{dz}+\frac{\rho(T)I_{o}^{2}}{A}=0
+\end{equation}
+\begin{equation}% 4.29a
+-\dot{m}_Ic_{p0}\frac{dT}{dz}\mid_{z=0}+\frac{\rho(T)I_{o}^{2}}{A}\simeq0
+\end{equation}
+\begin{equation}% 4.29b
+\frac{dT}{dz}\mid_{z=0}\simeq\frac{\rho_0I_{o}^{2}}{A\dot{m}_Ic_{p0}}
+\end{equation}
+\begin{equation}% 4.30
+Q_{I_o}=Ak(T_0)\frac{dT}{dz}\mid_{z=0}=\frac{k_0\rho_0I_{0}^{2}}{\dot{m}_Ic_{p0}}
+\end{equation}
+\begin{equation}% 4.31a
+\dot{m}_I=\frac{Q_{I_o}}{h_L}
+\end{equation}
+\begin{equation}% 4.31b
+\dot{m}_I=I_o\sqrt{\frac{k_0\rho_0}{c_{p0}h_L}}
+\end{equation}
+\begin{equation}% 4.32a
+\frac{Q_{I_o}}{I_o}=\sqrt{\frac{h_Lk_0\rho_0}{c_{p0}}}
+\end{equation}
+\begin{equation}% 4.32b
+\frac{Q_{I_o}}{I_o}\simeq\sqrt{\frac{(20.7\times10^3J/kg)(600W/mK)(2.5\times10^{-10}\Omega m)}{5.26\times10^3J/kgK}}
+=7.7\times10^{-4}W/A=0.77mW/A~1mW/A
+\end{equation}
+\begin{equation}% 4.33
+\dot{m}_Ic_p(T)\frac{dT}{dz}+\frac{\rho(T)I_{o}^{2}}{A}=0
+\end{equation}
+\begin{equation}% 4.34a
+\int_{T_o}^{T_i}\frac{dT}{\rho(T)}=\int_{0}^{\ell}\frac{I_{o}^{2}dz}{A\dot{m}_I\tilde{c}_p}=\frac{I_{o}^{2}\ell}{A\dot{m}_I\tilde{c}_p}
+\end{equation}
+\begin{equation}% 4.34b
+\int_{T_o}^{T_i}\frac{dT}{\rho(T)}\simeq1.2\times10^{11}K\Omega m
+\end{equation}
+\begin{equation}% 4.34c
+\int_{T_o}^{T_i}\frac{dT}{\rho(T)}\simeq(\frac{I_{o}^{2}\ell}{Ac_{p0}})\frac{1}{I_0}\sqrt{\frac{c_{p0}h_L}{k_0\rho_0}}
+\end{equation}
+\begin{equation}% 4.35a
+(\frac{I_o\ell}{A})_{ot} \equiv \zeta_o\simeq[\int_{T_0}^{T_i}\frac{dT}{\rho_(T)}]\sqrt{\frac{c_{p0}k_0 \rho_0}{h_L}}
+\end{equation}
+
+
+
+
+
