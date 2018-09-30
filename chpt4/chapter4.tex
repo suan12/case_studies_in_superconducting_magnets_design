@@ -148,38 +148,65 @@ W_{ca}=Q(\frac{T_{wm}}{T_{op}}-1)
 
 c)证明，高温热源为$T_{wm}=300\ \mathrm{K}$的Carnot制冷机，在$T_{op}=4.2\ \mathrm{K}$时，$W_{ca}/Q\simeq 70$；
 在$T_{op}=77\ \mathrm{K}$时，$W_{ca}/Q\simeq 3$。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.5]{chpt4/figs/fig4.3.eps}
+	\caption{工作于两个热源之间的Carnot制冷机。}
+\end{figure}
 
 \subsubsection{问题4.1之解}
+a) Carnot制冷机工作于两个热源之间，从低温热源$T_{op}$中提取热量$Q$，然后向高温热源$T_{wm}$释放热量$Q_{wm}$。
+如图4.3所示，制冷机的运行需要功$W_{ca}$。
 
+Carnot制冷循环由工质的四个可逆过程组成，如图4.4的$T$ vs. $S$图所示：
+\begin{itemize}
+	\item 工质的等熵压缩，开始于状态1($S_{wm}，T_{op}$)；
+	\item 等温压缩，开始于状态2($S_{wm}，T_{wm}$)；
+	\item 等熵膨胀，开始于状态3($S_{cl}，T_{wm}$)；
+	\item 等温膨胀，开始于状态4($S_{cl}，T_{op}$)，结束于状态1。
+\end{itemize}
 
-
-
+b)热力学第一定律：
 \begin{equation*}% S1.1
-Q_{wm}=Q+W_{ca}=0
+Q_{wm}=Q+W_{ca}=0 \tag{S1.1}
 \end{equation*}
 
-
+式中，$W_{ca}$是制冷机的输入功，等于$T$ vs. $S$图上的闭合面积(当图4.3中的$W_{ca}; Q; Q_{wm}$方向相反时，
+Carnot循环代表理想做功机，$T$ vs. $S$图上的闭合面积表示输出功)。
+因为每个过程都是可逆的，有$Q=T_{op}(S_{wm}-S_{cl})$和$Q_{wm}=T_{wm}(S_{wm}-S_{cl})$。有：
 \begin{align*}% S1.2a
-S_{wm}-S_{cl}&=\frac{Q}{T_{op}}\\
-S_{wm}-S_{cl}&=\frac{Q_{wm}}{T_{wm}}
+S_{wm}-S_{cl}&=\frac{Q}{T_{op}}\tag{S1.2a}\\
+S_{wm}-S_{cl}&=\frac{Q_{wm}}{T_{wm}}\tag{S1.2b}
 \end{align*}
 
-
+令上面两个式子相等，有：
 \begin{equation}% S1.3
-\frac{Q}{T_{op}}=\frac{Q_{wm}}{T_{wm}}
+\frac{Q}{T_{op}}=\frac{Q_{wm}}{T_{wm}} \tag{S1.3}
 \end{equation}
 
-
+联立S1.1和S1.3，有：
 \begin{equation*}% S1.4
-\frac{Q}{T_{op}}=\frac{Q+W_{ca}}{T_{wm}}
+\frac{Q}{T_{op}}=\frac{Q+W_{ca}}{T_{wm}} \tag{S1.4}
 \end{equation*}
 
-
+解出S1.4中的$W_{ca}$，得到：
 \begin{equation*}% 4.1
 W_{ca}=Q(\frac{T_{wm}}{T_{op}}-1) \tag{4.1}
 \end{equation*}
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.5]{chpt4/figs/fig4.4.eps}
+	\caption{Carnot制冷机的$T$ vs. $S$图。}
+\end{figure}
 
+c)\textbf{$4.2–300\ \mathrm{K}$温区}：在$T_{op} = 4.2\ \mathrm{K}, T_{wm} = 300\ \mathrm{K}$
+时，从方程4.1可得$W_{ca}/Q\simeq 70$；也就是说，4.2 K的1 W制冷量，需要制冷机70 W的输入功。
+实际制冷机中，性能比定义为$W_{ca}/Q$($W_{cp}$是压缩功)随着$Q$增大而提高。
+小单元($Q=1\ \mathrm{W}$)大概$\sim 10,000$，大单元($Q\sim 100\ \mathrm{kW}$)在$\sim 300$。
+
+\textbf{$7.7–300\ \mathrm{K}$温区}：将$T_{op} = 77\ \mathrm{K}, T_{wm} = 300\ \mathrm{K}$
+代入方程4.1，可得$W_{ca}/Q\simeq 3$；实际制冷机性能比在$\sim 50$(小单元，$1\ \mathrm{W}$)到$\sim 10$(大单元,$\sim 100\ \mathrm{kW}$)之间。
 
 \subsection{讨论4.1：制冷机性能}
 
