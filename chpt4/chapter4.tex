@@ -196,7 +196,7 @@ W_{ca}=Q(\frac{T_{wm}}{T_{op}}-1) \tag{4.1}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.5]{chpt4/figs/fig4.4.eps}
+	\includegraphics[scale=0.4]{chpt4/figs/fig4.4.eps}
 	\caption{Carnot制冷机的$T$ vs. $S$图。}
 \end{figure}
 
@@ -209,6 +209,44 @@ c)\textbf{$4.2–300\ \mathrm{K}$温区}：在$T_{op} = 4.2\ \mathrm{K}, T_{wm} 
 代入方程4.1，可得$W_{ca}/Q\simeq 3$；实际制冷机性能比在$\sim 50$(小单元，$1\ \mathrm{W}$)到$\sim 10$(大单元,$\sim 100\ \mathrm{kW}$)之间。
 
 \subsection{讨论4.1：制冷机性能}
+这里，我们简要从两个不同的角度看一下制冷机的性能：
+1) 单一额定功率下的制冷机在不同运行温度下($Q/T_{op}$)；
+2) 组合额定功率下和运行温度，但运行在不同温度下。
+
+\textbf{A. 特定温度下的特定制冷功率}
+
+图4.5给出的是特定制冷功率$Q$($\mathrm{W}$)下的$W_{cp}/Q$vs. $T_{op}$关系曲线[4.19]。
+图中的$\otimes$符号表示Carnot循环。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.4]{chpt4/figs/fig4.5.eps}
+	\caption{特定制冷功率$Q$($\mathrm{W}$)下的$W_{cp}/Q$vs. $T_{op}$关系曲线。$\otimes$符号表示选定温度下的Carnot循环，计算时取$T_{wm}=300\ \mathrm{K}$。}
+\end{figure}
+
+这样，对一个设计运行温度$T_{op}=4.2\ \mathrm{K}$的1 W制冷机(实心圈)的$W_{cp}/Q$是7500；
+对运行温度$T_{op}=20\ \mathrm{K}$的1 W制冷机，$W_{cp}/Q$是600。
+下面将论及，在特定温度4.2 K和20 K下优化的制冷机在不同温度区间$T_{op}$下的$W_{cp}/Q$是不同的。
+
+\textbf{B.在非设计温度下的运行}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.5]{chpt4/figs/fig4.6.eps}
+	\caption{二级制冷机的性能数据。}
+\end{figure}
+
+图4.6给出了一台二级制冷机(住友重工Model RDK-408D2)的性能(一、二级制冷功率)数据，
+性能是作为第一级和第二级运行温度的函数给出的。
+它的标称最低二级运行温度是4.2 K，此时的制冷功率$Q=1\ \mathrm{W}$需要压缩功率$W_{cp}=7.5\ \mathrm{kW}$，
+也即$W_{cp}/Q = 7500$。数据给出了制冷机在同样的压缩功率下的二级功率/温度比：从3 K时的0W，即$W_{cp}/Q = \infty$，到
+20 K时的15 W，即$W_{cp}/Q = 500$。 (图4.5表明，一个15 W/20 K单元在20 K优化后的$W_{cp}/Q$大约是350。)
+那些在给定二级温度为大约20 K时近乎水平的二级制冷线表明，在一级温度处于$\sim 25-\sim 60\ \mathrm{K}$区间时二级制冷功率几乎与之无关。
+
+因为制冷机的压缩功率7.5 kW与一二级负荷无关，为了维持二级温度在一个理想水平，
+总的热负荷，至少是二级的热负荷，必须匹配其制冷功率。
+这样，如果二级运行温度希望是20 K——一级运行条件为 40 W/42 K——如果二级的实际热负荷是5 W，
+那必须给二级提供额外的10 W的热负荷。因为如图4.6所示，二级在20 K提供15 W的制冷功率。
+这个额外的10 W热负荷一般由附属于二级冷头的加热器产生，这会导致系统效率的降低。
 
 
 \subsection{讨论4.2：浸泡磁体的冷却模式}
