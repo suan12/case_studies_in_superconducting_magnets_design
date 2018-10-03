@@ -293,11 +293,33 @@ $T_{op}$。我们用两步来满足这个需求：1) 如果$T_{op}<27\ \mathrm{K
 
 
 
-\subsection{讨论4.3：“冷却”HTS磁体}
+\subsection{讨论4.3：“制冷机冷却”HTS磁体}
+本节我们研究一个干式HTS磁体，它由制冷机将其从初始温度$T_i$经过一个总的冷却时间$\tau_{cu}$冷却至运行温度$T_{op}$。
+这个制冷机的二级冷却功率$Q_r(T)$与其温度$T$的关系见图4.7。
+我们看到，这台制冷剂的制冷功率额定值是10 W@10 K(它的一级用来冷却磁体周围的辐射屏)。
+
+为了简化讨论，我们考虑一个仅由磁体和制冷机组成的绝热控制体，系统冷却期间无额外热输入。
+同时，我们假定磁体由铜块$M_{cu}$代表。
+铜的热容$C_{cu}[\mathrm{kJ/m^3}]$图见附录III，该图基于铜密度为常数，即$\rho_{cu}=8960\ \mathrm{kg/m^3}$。
+进一步我们假定冷却速率足够缓慢，在整个冷却期间，铜(磁体)的温度$T_{cu}$在整个绕组总是均匀的，并且总是等于制冷机的温度$T$，即$T_{cu}=T$。
+
+在这个包含制冷机和质量为$M_{cu}$的铜(磁体)的控制体上应用热力学第一定律，并注意到$T_{cu}=T$，有：
 \begin{equation}% 4.4
--Q_r(T)=(\frac{M_{cu}}{\varrho_{cu}})C_{cu}(T)\frac{dT}{dt}
+-Q_r(T)=\left(\frac{M_{cu}}{\varrho_{cu}}\right)C_{cu}(T)\frac{dT}{dt}
 \end{equation}
 
+方程4.4中$Q_r(T)$的符号表示制冷机提供的是制冷：磁体(铜块)正在冷却，即$dT/dt<0$。
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.5]{chpt4/figs/fig4.7.eps}
+	\caption{磁体制冷机的$Q_r(T)$曲线。}
+\end{figure}
+	
+\colorbox{red}{表4.4}
+
+表4.4列出了$Q_r(T)$，$C_{cu}(T)$和$\kappa(T)\equiv C_{cu}(T)/Q_{r}(T)$在给定温度下的值。
+我们可以通过积分方程4.4，在特定的$T_i,T_{op}，Q_r(T),M_{cu}$组合下解出$\tau_{cu}$：	
 \begin{subequations}% 4.5
 \begin{align}
 \tau_{cn}&=\frac{M_{cu}}{\varrho_{cu}}\int_{T_{op}}^{T_i}\frac{C_{cu}(T)}{Q_r(T)}dT=\frac{M_{cu}}{\varrho_{cu}}\int_{T_{op}}^{T_i}\kappa(T)dT\\
@@ -305,6 +327,15 @@ M_{cu}&=\frac{\varrho_{cu}\tau_{cn}}{\int_{T_{op}}^{T_i}\kappa(T)dT}
 \end{align}
 \end{subequations}
 
+在一些应用中，$\tau_{cu}$是主要的设计要求。可以看出，方程4.5b限制了在$\tau_{cu}$内可以冷却下来的铜的质量$\~{M}_{cu}$(这里代表磁体质量)。
+对于给定的$T_i$和$T_o$组合，$\~{M}_{cu}$正比于$\tau_{cu}$。
+表4.5给出了以图4.7中给出的$Q_r(T)$为基准的$T_i$，$T_o$和$\tau_{cu}$组合下的$\~{M}_{cu}$。
+这样，如果磁体经4个小时从300 K冷却至30 K，受限的冷却质量是11.6 kg。
+
+表4.5给出的结果清晰的指出了对于给定的$\tau_{cu}$，如果我们首先将磁体冷却至77 K，将可以极大的增加$\~{M}_{cu}$。
+表4.3可以用于估计实现这个过程的所需LN2量。
+
+\colorbox{red}{表4.5}
 
 
 \subsection{讨论4.4：超流}
