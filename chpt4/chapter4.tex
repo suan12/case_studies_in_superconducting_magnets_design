@@ -339,17 +339,57 @@ M_{cu}&=\frac{\varrho_{cu}\tau_{cn}}{\int_{T_{op}}^{T_i}\kappa(T)dT}
 
 
 \subsection{讨论4.4：超流}
+图4.8是常规氦($He^4$)的相图，其中给出了两种流体形式He I和He II[4.20]。
+因为He II有独特的超高热导($k$)和超低黏性($\nu$)的独特性质，它被称为超流氦。
+我们从相图中可以看出，沸点为4.22 K的常规氦 (He I)通过简单的加压即可变为He II。
+当达到饱和压力5 kPa (37.8 torr)后，液体在2.18 K称为超流。
+2.18 K被称为$\lambda$点，记为$T_\lambda$。
+根据二流体模型，超流的比分在$T_\lambda$时为零，而随温度降低单调增加。
+通过对比He II和常见物质的物性，我们可以看到超流氦的热导和黏性的独特性(表4.6)。
 
+\textbf{传输性质}
 
+因为超流氦的超高热导率，它常被用作超导磁体的制冷工质，通常运行于$\sim 1.8\ \mathrm{K}(<T_\lambda)$。
+(尽管我们这里使用热导率的经典定义，即热导$\propto$温差。
+在He II中，温差越小，等效热导率越大。等效热导率同样依赖于热通量。)
+He II的搞热导率不允许液体中存在足以引起汽化的温度梯度。
+这样，不像运行于4.2 K的He I冷却的磁体绕组，1.8 K的He II冷却的“无气泡”绕组不需要通道。
+不过，这并不意味着He II可以在窄通道内无限制的传输热流。
+类比于超导体中的临界电流，He II有一个临界热流密度。
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.5]{chpt4/figs/fig4.8.eps}
+	\caption{常规氦($He^4$)的相图。}
+\end{figure}
+
+\colorbox{red}{表4.6}
+
+Bon Mardion、Claudet和Seyfert研究了He II通过窄通道的热流密度[4.21]。
+图4.9以参数$X(T)$的形式给出了他们的结果：
 \begin{equation}% 4.6a
 X(T_{cl})-X(T_{wm})=q^{3.4}L
 \end{equation}
-\begin{equation}% 4.6b
-X(T_b)=q_{c}^{3.4}L
-\end{equation}
-\begin{equation}% 4.6c
-X(T_b)=\frac{q_{c}^{3.4}}{4.4}L
-\end{equation}
+
+式中，
+
+\begin{equation*}% 4.6b
+X(T_b)=q_{c}^{3.4}L \tag{4.6b}
+\end{equation*}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.5]{chpt4/figs/fig4.9.eps}
+	\caption{Bon Mardion、Claudet和Seyfert的研究结果。}
+\end{figure}
+
+
+\begin{equation*}% 4.6c
+X(T_b)=\frac{q_{c}^{3.4}}{4.4}L \tag{4.6c}
+\end{equation*}
+
+
+
 \begin{equation}% 4.7
 q_k=a_k(T_{cd}^{nk}-T_{b}^{nk})
 \end{equation}
