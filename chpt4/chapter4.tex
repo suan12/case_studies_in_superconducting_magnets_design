@@ -371,8 +371,10 @@ Bon Mardion、Claudet和Seyfert研究了He II通过窄通道的热流密度[4.21
 X(T_{cl})-X(T_{wm})=q^{3.4}L
 \end{equation}
 
-式中，
-
+式中，$T_{cl}$[K]是冷端温度，$T_{wm}$[K]是热端温度。$q[\mathrm{W/cm^2}]$是通过跨上述冷热两端
+通道L [cm]的热流密度。方程4.6可用于通道自身不存在向液氮的额外热量输入的情况。
+正常运行时，$T_{cl} = T_b$，其中$T_{b}$是容器温度；$T_{wm}$是绕组内部紧邻发热区域的液体问题，
+不允许超过$T_\lambda$。当$T_{wm}=T_\lambda$时，从图4.9可以看出，$X(T_{wm})=0$，我们可将4.6简化为：
 \begin{equation*}% 4.6b
 X(T_b)=q_{c}^{3.4}L \tag{4.6b}
 \end{equation*}
@@ -383,18 +385,49 @@ X(T_b)=q_{c}^{3.4}L \tag{4.6b}
 	\caption{Bon Mardion、Claudet和Seyfert的研究结果。}
 \end{figure}
 
+对于$T_{wm} > T_\lambda$，从发热区域表面流出的热流被$q_{pk}$限定。
+如图4.2所示，He I对应的值$\sim 1 \mathrm{W/cm^2}$。
+方程4.6b指出，如果$T_b<2\ \mathrm{K}$，在磁体的尺度小于1 m时，极限将超过$1 \mathrm{W/cm^2}$。
+在设计通道配置和尺度时，我们必须确保运行热流密度$q_{op}$不能超过方程4.6b给出的$q_c$。
 
+\textbf{受热的通道}
+
+当热量在通道的整个长度L上是均匀的而不是像上文讨论的仅在热端的时候，方程4.6b改为：
 \begin{equation*}% 4.6c
 X(T_b)=\frac{q_{c}^{3.4}}{4.4}L \tag{4.6c}
 \end{equation*}
 
+\textbf{B. 热传递——Kapitza热阻}
 
-
+金属或其他热导材料与He II之间的热传递收到Kapitza热阻的限制。表面温度为$T_{cd}$[K]和处于温度为$T_b$[K]
+之间的热传递通量$q_k[\mathrm{W/cm^2}]$为：
 \begin{equation}% 4.7
 q_k=a_k(T_{cd}^{nk}-T_{b}^{nk})
 \end{equation}
 
+表4.7给出了$a_k$和$n_k$的典型值。
+
+\textcolor{red}{表4.7}
+
+
+
 \subsection{讨论4.5：1.8 K过冷低温容器}
+这里我们讨论一个浸泡于1 atm和1.8 K过冷潮流氦的超导磁体的低温容器。
+随着运行温度从4.2 K降到1.8 K，磁体的性能显著提高，特别是浸泡冷却的NbTi磁体[4.25]，因为
+它在以下方面都有了显著提高：1)临界电流密度；2)导体和制冷剂之间的传热。
+
+图4.10给出了用于混合III磁体系统的过冷1.8 K低温容器的示意图[4.26]。
+位于容器外部的泵驱动液氦以质量流量$\.{m}_h$流动，这是由位于磁体腔内的1.8 K蒸发器决定的。
+1.8 K/1 atm磁体腔通过管路连接至4.2 K/1 atm热源，热源位于窄通道上，一方面维持磁体腔在1 atm(过冷)，
+另一个方面降低从热源到磁体腔的液氦传导热输入。
+电流引线穿过4.2 K热源，进入磁体腔，为两个液体腔提供电流连接。诸如支撑件等非直接与制冷循环有关的组件未在图中画出。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.5]{chpt4/figs/fig4.10.eps}
+	\caption{1.8 K过冷低温容器结构示意。}
+\end{figure}
+
+热源外部的点1
 
 \begin{equation}% 4.8
 Q_{out}-Q_{in}=Q_{1.8}
