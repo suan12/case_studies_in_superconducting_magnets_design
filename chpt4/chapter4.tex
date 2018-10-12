@@ -894,6 +894,11 @@ T(t)=Ke^{t/\tau_\ell}-\frac{\rho_o}{\gamma_{cu}}
 \begin{equation}
 \tau_\ell=\frac{(3.5\times10^6\ \mathrm{J/m^3K})(1\ \mathrm{m})^2}{(68\times10^{-12}\ \mathrm{\Omega m/K})(2.5\times10^7\ \mathrm{A/m})^2}\sim90\ \mathrm{s}
 \end{equation}
+
+
+
+\subsection{讨论4.15：干式引线——正常金属和高温超导体}
+
 \begin{equation}% 4.52
 A\tilde{k}\frac{d^2T}{dz^2}+\frac{\tilde{\rho}I_{o}^{2}}{A}=0
 \end{equation}
@@ -909,6 +914,12 @@ Q_{I_o}=A\tilde{k}\frac{dT}{dz}\mid_{z=0}=\tilde{k}(T_\ell-T_0)(\frac{A}{\ell})+
 \begin{equation}% 4.55
 [Q_{I_hts}]_{dr}=k_{hts}A_{hts}\frac{(T_{\omega_{hts}}-T_0)}{\ell_{hts}}
 \end{equation}
+
+
+
+
+\subsection{问题4.4：气冷HTS电流引线——全超导型(FSV)}
+
 \begin{equation}% 4.56
 \frac{d}{dz}\left[[A_m]_{fs}k_m(T)\frac{dT}{dz}\right]-[\dot{m}_h]_{fs}c_p(T)\frac{dT}{dz}=0
 \end{equation}
@@ -954,6 +965,11 @@ e^{[\alpha]_{fs}}=\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1
 \begin{equation}% 4.61
 [Q_\ell]_{fs}-[Q_{in}]_{fs}=[\dot{m}_h]_{fs}\tilde{c}_p(T_\ell-T_0v)
 \end{equation}
+
+
+
+
+\subsection{问题4.5：气冷HTS引线——电流分配型(CSV)}
 \begin{equation}% 4.62
 T(\xi)=(\frac{T_{cs}-T_0}{e^{[\alpha_\ell]_{cs}\xi_{cs}}-1})(e^{[\alpha_\ell]_{cs}\xi}+\frac{e^{[\alpha_\ell]_{cs}\xi_{cs}T_0-T_{cs}}}{T_{cs}-T_0})
 \end{equation}
@@ -998,3 +1014,75 @@ e^{\frac{[\alpha_\ell]_{cs}\xi_{cs}}{2}}=\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_
 \end{equation}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{讨论4.16：FSV和CSV电流引线的保护}
+
+
+
+
+
+
+
+
+
+\subsection{讨论4.17：HTS电流引线——铜膨胀}
+
+
+
+
+
+
+
+\subsection{问题4.6：6 kA气冷HTS电流引线}
+
+
+
+
+
+
+
+
+
+\subsection{讨论4.18：“最优”CSV引线}
+
+
+
+
+
+
+
+
+\subsection{问题4.7：气冷铜电流引线}
+
+
+
+
+
+\subsection{讨论4.19：气冷支撑棒}
+
+
+
+
+
+\subsection{讨论4.20：低温下的结构材料}
+低温应用的结构材料必须承受大的应力，同时在大温区内传递很少的热流。
+一个可以用于检验材料适合低温应用的性质是$\tilde{k}/\sigma_U$，
+这是温度平均热导率(特定温度区间)和极限拉伸强度的比值。
+$Q_{\bar{vp}}$和$Q_{vp}$都正比于$\tilde{k}$。
+
+表4.18给出了G-10、304不锈钢、黄铜、红铜作为结构材料的相关参数值；列入红铜是为了展示它的不适合。
+基于$\tilde{k}/\sigma_U$，G-10要比不锈钢好；不过，不锈钢更适宜焊接。
+
+\textcolor{red}{表4.18}
