@@ -579,20 +579,80 @@ h_g(6\ \mathrm{K},10\ \mathrm{atm})=x_\ell h_\ell(4.2\ \mathrm{K},1\ \mathrm{atm
 如图4.12可见，磁体的主要冷源可以由安装在距离磁体大约1 m的静态制冷机提供。 
 系统中的标示数字的组件，在图注中都给出了名称。
 
-简单来说，Stated briefly, the system permits the magnet/cryostat assembly (component 2
-in Fig. 4.12) to be spun as a flow of liquid helium is continuously transferred to
-the magnet cryostat, through the spinning shaft, at a mass flow rate of m˙ he from
-a “mini” helium liquefier, whose primary source of refrigeration is a cryocooler
-housed in the second cryostat (14). The thermodynamics of this cryocooler-based
-mini liquefier is the focus of this problem.
-
-
+简单来说，系统容许磁体/低温容器组合体(图4.12中的组件2)旋转，液氦流源源不断的以流量$\.{m}_h$
+由小型液氦液化器中经旋转轴输送到磁体低温容器内。小型液化器的初级冷源来自第二低温容器(14)内的制冷机。
+基于制冷机的小型液化器的热力学过程是本问题的核心。
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.5]{chpt4/figs/fig4.12.eps}
-	\caption{配合一个基于制冷机的小型氦液化器的超导磁体系统示意图。}
+	\caption{配合一个基于制冷机的小型氦液化器的超导磁体系统示意图，它应用于慢MAS NMR系统。其中，
+	运行于持续模式的超导磁体由来自基于制冷机的小型液化器的液氦冷却，
+	产生一个与旋转轴为$54.73\circ$的磁场。1：地磁补偿线圈(静止)；2：磁体/低温容器组合体；3：驱动电机；
+4：轴承；5：旋转轴；6：旋转关节；7：滑环；8：支撑三脚架；9：液氦输运管；10：氦恢复管；11：热氦回流管；
+12：压缩器；13：冷阱；14：基于制冷机的小型液化器。}
 \end{figure}
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.5]{chpt4/figs/fig4.13.eps}
+	\caption{基于制冷机的小型氦液化器示意图。}
+\end{figure}
+
+图4.13给出了小型液化器的细节。它由热-冷流(质量流量$\.{m}_{he}$，压力10 atm)和冷-热氦气流($\.{m}_v$，1 atm)
+和作为冷源的制冷机的一二级冷头组成。
+整个过程假设为理想的，也就是无压降；两个流之间是无温差的理想热交换。
+
+\textbf{热-冷氦流}——图4.13中的实箭头
+
+点$a$：小型液化器的入口，来自冷阱(图4.12中的13)：$T_a=295\ \mathrm{K}; P_a=10\ \mathrm{atm}$。
+
+点$a^\prime$：热交换器1的入口：热力学等同于点a。
+
+点$b$：热交换器1的出口(一级冷头入口)：$T_b$。
+
+点$c$：热交换器2的入口(一级冷头出口)：$T_c$。点b和点c之间，一级冷头从氦流中带走热量$Q_1$。
+
+点$d$：热交换器2的出口(二级冷头入口)：$T_d$。
+
+点$e$：二级冷头出口(J-T阀入口)：$T_e$。点d和点e之间，二级冷头从氦流中带走热量$Q_2$。
+
+点$f$：J-T阀出口：$T_f=4.22\ \mathrm{K};P_f=1\ \mathrm{atm};\.{m}_v;\.{m}_{\ell p}$(液化质量流量)。
+LHe到点g，由点箭头标识。
+
+\textbf{冷-热氦流}——图4.13中的虚线箭头
+
+点$g$：到LHe输运管(图4.12中的9)：$T_g=4.22\ \mathrm{K};P_g=1\ \mathrm{atm};\.{m}_{\ell}$。
+
+点$h$：热交换器2入口：$T_h=4.22\ \mathrm{K};P_h=1\ \mathrm{atm};\.{m}_v;\.{m}_{\ell r}=\.{m}_{\ell p}-\.{m}_{\ell}$(LHe回流质量流量)。
+
+点$i$：热交换器2出口：$T_i=T_c;P_i=1\ \mathrm{atm}$。
+
+点$i^\prime$：热交换器1入口：热力学上等同于点i。
+
+点$j$：热交换器1出口：$T_j=295\ \mathrm{K};P_j=1\ \mathrm{atm}$。
+
+点$j^\prime$：到热氦出管(图4.12中的10)。
+
+a) Show that to achieve a helium liquefaction rate, ˙ mp 0.202 g/s with ˙ mhe =
+1.0 g/s through the J-T process, Te=7 K (and Pe=10 atm) at Point e.
+
+b) For Td =8 K (and Pd =10 atm), compute Q2 (at 7 K), the 2nd stage refrigeration power of the cryocooler. Note that Te=7 K (and Pe=10 atm).
+
+c) For a cryocooler with Q2 (at 7 K), what would its Q2 at 4.22 K be?
+
+d) For Tb = 46 K and Tc = 30 K (and Pb = Pc = 10 atm), compute Q1 (at 30 K),
+the 1st stage refrigeration power.
+
+e) Assuming that Heat Exchanger 2 is “ideal,” i.e., no heat loss to its environment and the heat transfer between the warm-to-cold stream (of ˙ mhe =
+1.0 g/s) and the cold-to-warm stream (of ˙ mv and ˙ mr) is perfect, show that
+m˙ r =0.158 g/s and hence ˙ m=0.044 g/s. Assume Tc=Td=30 K.
+
+f) Similarly, show that the perfect heat transfer in Heat Exchanger 1 between
+the two streams is consistent with ˙ mr = 0.158 g/s. Assume that Tb = 46 K,
+Ti =30 K, and Ta =Tj =295 K.
+
+g) Applying Eq. 4.10, compute the isentropic (constant entropy) power requirement, Ps, of Compressor (12, Fig. 4.12) to boost the warm helium flow of
+m˙ he=1.0 g/s from Pj =1 atm to Pa=10 atm.
 
 \subsubsection{问题4.2之解}
 
