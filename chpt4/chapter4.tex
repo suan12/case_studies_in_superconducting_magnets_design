@@ -633,37 +633,39 @@ LHe到点g，由点箭头标识。
 
 点$j^\prime$：到热氦出管(图4.12中的10)。
 
-a) Show that to achieve a helium liquefaction rate, ˙ mp 0.202 g/s with ˙ mhe =
-1.0 g/s through the J-T process, Te=7 K (and Pe=10 atm) at Point e.
+a) 证明在J-T过程实现氦液化速率$\.{m}_{\ell p}\simeq0.202\ \mathrm{g/s}$和$\.{m}_{he}=1.0\ \mathrm{g/s}$，点e的温度$T_e=7\ \mathrm{K}(P_e=10\ \mathrm{atm})$。
 
-b) For Td =8 K (and Pd =10 atm), compute Q2 (at 7 K), the 2nd stage refrigeration power of the cryocooler. Note that Te=7 K (and Pe=10 atm).
+b) 在$T_d$=8 K (和$P_d$ =10 atm)时，计算7 K时的制冷机二级冷头功率$Q_2$。注意应用$T_e=7\ \mathrm{K}(P_e=10\ \mathrm{atm})$。
 
-c) For a cryocooler with Q2 (at 7 K), what would its Q2 at 4.22 K be?
+c) 对一台有二级冷头的制冷机，4.22 K时它的$Q_2$是多少？
 
-d) For Tb = 46 K and Tc = 30 K (and Pb = Pc = 10 atm), compute Q1 (at 30 K),
-the 1st stage refrigeration power.
+d) 在$T_b$ = 46 K和$T_c$ = 30 K ($P_b = P_c =$ 10 atm)时，计算30 K时一级冷头的制冷功率$Q_1$。
 
-e) Assuming that Heat Exchanger 2 is “ideal,” i.e., no heat loss to its environment and the heat transfer between the warm-to-cold stream (of ˙ mhe =
-1.0 g/s) and the cold-to-warm stream (of ˙ mv and ˙ mr) is perfect, show that
-m˙ r =0.158 g/s and hence ˙ m=0.044 g/s. Assume Tc=Td=30 K.
+e) 假设热交换器2是理想的，即对环境无热损耗，热-冷流($\.{m}_{he}$=1.0 kg/s)和冷-热流($\.{m}_{v}$和$\.{m}_{\ell r}$)之间的热交换是完全的，证明
+$\.{m}_{\ell r}$=0.158 g/s，从而$\.{m}_{\ell}$=0.044 g/s。假设$T_c=T_d$=30 K。
 
-f) Similarly, show that the perfect heat transfer in Heat Exchanger 1 between
-the two streams is consistent with ˙ mr = 0.158 g/s. Assume that Tb = 46 K,
-Ti =30 K, and Ta =Tj =295 K.
+f) 类似的，证明两个流之间的热交换器1的完全热交换与$\.{m}_{\ell r}$=0.158 g/s一致。
+假设$T_b$=46 K，$T_{i^\prime}$=30 K，$T_{a^\prime}=T_j$=295 K。
 
-g) Applying Eq. 4.10, compute the isentropic (constant entropy) power requirement, Ps, of Compressor (12, Fig. 4.12) to boost the warm helium flow of
-m˙ he=1.0 g/s from Pj =1 atm to Pa=10 atm.
+g) 应用方程4.10，计算压缩机(图4.12中的12)为了驱动$\.{m}_{he}$=1.0 kg/s的热氦流从$P_j$=1 atm到
+$P_a$=10 atm所需的等熵功率。
 
 \subsubsection{问题4.2之解}
-
+a) 因为J-T过程焓不变，下面的焓等式关系保持：
 \begin{equation*}% S2.1
-h_{he}(7K,10atm)=x_\ell h_\ell(4.22K,1atm)+(1-x_\ell)h_v(4.22K,1atm)
+h_{he}(7\ \mathrm{K},10\ \mathrm{atm})=x_\ell h_\ell(4.22\ \mathrm{K},1\ \mathrm{atm})+(1-x_\ell)h_v(4.22\ \mathrm{K},1\ \mathrm{atm}) \tag{S2.1}
 \end{equation*}
 
-\begin{equation*}% s2.2
-x_\ell=\frac{h_{he}(7K,10atm)-h_v(4.22K,1atm)}{h_\ell(4.22K,1atm)-h_v(4.22K,1atm)}
-=\frac{(26.00J/g-30.13J/g)}{(9.71J/g-30.13J/g)}=0.202
-\end{equation*}
+式中，$h_{he}(7\ \mathrm{K},10\ \mathrm{atm})$=26.00 J/g，是氦在7 K和10 atm下的焓；
+$x_\ell$是4.22 K和1 atm时的液体质量占比；$h_\ell(4.22\ \mathrm{K},1\ \mathrm{atm})$=9.71 J/g，
+是液氦在4.22 K和1 atm时的焓；$h_v(4.22\ \mathrm{K},1\ \mathrm{atm})$=30.13 J/g，是气氦在4.22 K和1 atm
+时的焓。解方程S2.1，我们有：
+\begin{align*}% s2.2
+x_\ell&=\frac{h_{he}(7\ \mathrm{K},10\ \mathrm{atm})-h_v(4.22\ \mathrm{K},1\ \mathrm{atm})}{h_\ell(4.22\ \mathrm{K},1\ \mathrm{atm})-h_v(4.22\ \mathrm{K},1\ \mathrm{atm})}\\ \notag
+&=\frac{(26.00\ \mathrm{J/g}-30.13\ \mathrm{J/g})}{(9.71\ \mathrm{J/g}-30.13\ \mathrm{J/g})}=0.202  \tag{S2.2}
+\end{align*}
+
+在$\.{m}_{he}$=1.0 g/s时，有$x_\ell$=0.202，$\.{m}_{\ell p}$=0.202 g/s，$\.{m}_{v}$=0.798 g/s。
 
 \begin{equation*}% S2.3
 \dot{m}_{he}h_{he}(8K,10atm)=Q_2+\dot{e}_{he}h_{he}(7K,10atm)
