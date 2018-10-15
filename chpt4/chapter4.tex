@@ -584,7 +584,7 @@ h_g(6\ \mathrm{K},10\ \mathrm{atm})=x_\ell h_\ell(4.2\ \mathrm{K},1\ \mathrm{atm
 基于制冷机的小型液化器的热力学过程是本问题的核心。
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.5]{chpt4/figs/fig4.12.eps}
+	\includegraphics[scale=0.6]{chpt4/figs/fig4.12.eps}
 	\caption{配合一个基于制冷机的小型氦液化器的超导磁体系统示意图，它应用于慢MAS NMR系统。其中，
 	运行于持续模式的超导磁体由来自基于制冷机的小型液化器的液氦冷却，
 	产生一个与旋转轴为$54.73\circ$的磁场。1：地磁补偿线圈(静止)；2：磁体/低温容器组合体；3：驱动电机；
@@ -594,7 +594,7 @@ h_g(6\ \mathrm{K},10\ \mathrm{atm})=x_\ell h_\ell(4.2\ \mathrm{K},1\ \mathrm{atm
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.5]{chpt4/figs/fig4.13.eps}
+	\includegraphics[scale=0.6]{chpt4/figs/fig4.13.eps}
 	\caption{基于制冷机的小型氦液化器示意图。}
 \end{figure}
 
@@ -667,46 +667,74 @@ x_\ell&=\frac{h_{he}(7\ \mathrm{K},10\ \mathrm{atm})-h_v(4.22\ \mathrm{K},1\ \ma
 
 在$\.{m}_{he}$=1.0 g/s时，有$x_\ell$=0.202，$\.{m}_{\ell p}$=0.202 g/s，$\.{m}_{v}$=0.798 g/s。
 
+b) 在点d和点e之间应用下面的功率方程：
 \begin{equation*}% S2.3
-\dot{m}_{he}h_{he}(8K,10atm)=Q_2+\dot{e}_{he}h_{he}(7K,10atm)
+\dot{m}_{he}h_{he}(8\ \mathrm{K},10\ \mathrm{atm})=Q_2+\dot{e}_{he}h_{he}(7\ \mathrm{K},10\ \mathrm{atm})
 \end{equation*}
 
-\begin{equation*}% s2.3
-Q_2=\dot{m}_{he}[h_{he}(8K,10atm)-h_{he}(7K,10atm)]
-=(1g/s)(33.44J/g-26.00J/g)=7.44W
-\end{equation*}
+从S2.3中解出$Q_2$，有：
+\begin{align*}% s2.3
+Q_2&=\dot{m}_{he}[h_{he}(8\ \mathrm{K},10\ \mathrm{atm})-h_{he}(7\ \mathrm{K},10\ \mathrm{atm})]\\\notag
+&=(1\ \mathrm{g/s})(33.44\ \mathrm{J/g}-26.00\ \mathrm{J/g})=7.44\ \mathrm{W}
+\end{align*}
 
+c) 图4.6给出的二级冷头的性能数据表明该制冷机在4.2 K时的制冷容量1 W可已在7 K时提供4 W冷量。
+于是，一台7 K时容量为7.44 W的制冷机大概在4.2 K可以提供2 W冷量。
+4.22 K时具有冷量$\sim 2$ W的制冷机有望在2010年前后可以商业化。
+
+d) 类似于S2.3的方程可以应用在点b和点c之间：
 \begin{equation*}% 2.4
-\dot{m}_{he}h_{he}(46K,10atm=Q_1+\dot{m}_{he}h_{he}(30K,10atm)
+\dot{m}_{he}h_{he}(46\ \mathrm{K},10\ \mathrm{atm})=Q_1+\dot{m}_{he}h_{he}(30\ \mathrm{K},10\ \mathrm{atm})
 \end{equation*}
 
+从S2.4中，我们可以得到：
 \begin{equation*}% S2.4
-Q_1=\dot{m}[h_{he}(46K,10atm)-h_{he}(30K,10atm)]
-=(1g/s)(252J/g-168J/g)\simeq84W
+Q_1=\dot{m}[h_{he}(46\ \mathrm{K},10\ \mathrm{atm})-h_{he}(30\ \mathrm{K},10\ \mathrm{atm})]
+=(1\ \mathrm{g/s})(252\ \mathrm{J/g}-168\ \mathrm{J/g})\simeq 84\ \mathrm{W}
 \end{equation*}
 
-\begin{equation*}% S2.5
-\dot{m}[h_{he}(30K,10atm)-h_{he}(8K,10atm)]
-=(\dot{m}_v+\dot{m}_{\ell r})h_v(30K,1atm)-[\dot{m}_vh_v(4.22K,1atm)+\dot{m}_{\ell r}h_l(4.22K,1atm)]
-\end{equation*}
+图4.6给出的性能数据表明，尽管一台制冷机在4.22 K时可以提高到2 W，也不能实现$Q_1\simeq 84$ W。
+这时要求一台具有增强二级制冷功率的制冷机。
 
-\begin{equation*}% page 246
-\dot{m}_{\ell r}=\frac{\{\dot{m}_{he}[h_{he}(30K,10atm)-h_{he}(8K,10atm)]-\dot{m}_v[h_v(30K,1atm)-h_{v}(4.22K,1atm)]\}}{h_v(30K,1atm)-h_{l}(4.22K,1atm)}
-=\frac{(1g/s)(168.4J/g-33.44J/g)-(0.798g/s)(170.2J/g-30.13J/g)}{(170.2J/g-9.71J/g)}\simeq0.144g/s
-\end{equation*}
-\begin{equation*}% S2.6
-\dot{m}_{\ell r}[h_{he}(295K,10atm)-h_{he}(46K,10atm)]
-=(\dot{m}_v+\dot{m}_{\ell r})[h_v(295K,1atm)-h_{v}(30K,1atm)]
-\end{equation*}
-\begin{equation*}% S2.7a
-\dot{m}_{he}[h_{he}(295K,10atm)-h_{he}(46K,10atm)]=(1g/s)(1550.0J/g-253.9J/g)
-\simeq1296W
-\end{equation*}
-\begin{equation*}% 2.7b
-(\dot{m}_v+\dot{m}_{\ell r})[h_{he}(295K,1atm)-h_{he}(30K,1atm)]
-\simeq(0.798g/s+0.144g/s)(1547.0J/g-170.2J/g)
-\simeq1297W/s
-\end{equation*}
+e) 从点$c$到点$d$的热-冷流的总焓减必须等于从点$h$到点$i$的冷-热流的总焓增：
+\begin{align*}% S2.5
+&\dot{m}[h_{he}(30\ \mathrm{K},10\ \mathrm{atm})-h_{he}(8\ \mathrm{K},10\ \mathrm{atm})]\\\notag
+&=(\dot{m}_v+\dot{m}_{\ell r})h_v(30\ \mathrm{K},1\ \mathrm{atm})-[\dot{m}_vh_v(4.22\ \mathrm{K},1\ \mathrm{atm})+\dot{m}_{\ell r}h_l(4.22\ \mathrm{K},1\ \mathrm{atm})] \tag{S2.5}
+\end{align*}
+
+从S2.5中解出$\dot{m}_{\ell r}$：
+\begin{align*}% page 246
+\dot{m}_{\ell r}&=\frac{\{\dot{m}_{he}[h_{he}(30\ \mathrm{K},10\ \mathrm{atm})-h_{he}(8\ \mathrm{K},10\ \mathrm{atm})]-\dot{m}_v[h_v(30\ \mathrm{K},1\ \mathrm{atm})-h_{v}(4.22\ \mathrm{K},1\ \mathrm{atm})]\}}{h_v(30\ \mathrm{K},1\ \mathrm{atm})-h_{l}(4.22\ \mathrm{K},1\ \mathrm{atm})}\\\notag
+&=\frac{(1\ \mathrm{g/s})(168.4\ \mathrm{J/g}-33.44\ \mathrm{J/g})-(0.798 \ \mathrm{g/s})(170.2J\ \mathrm{J/g}-30.13\ \mathrm{J/g})}{(170.2\ \mathrm{J/g}-9.71\ \mathrm{J/g})}\\\notag
+&\simeq 0.144 \ \mathrm{g/s}
+\end{align*}
+
+因为$\dot{m}_{\ell}=\dot{m}_{\ell p}-\dot{m}_{\ell r}$，我们得到$\dot{m}_{\ell}\simeq 0.202-0.144=0.058\ \mathrm{g/s}$，这对应液体体积流量$\sim$ 1.7 L/h以及制冷功率1.2 W。
+
+f) 从点$a^\prime$到点$b$的热-冷流热损耗等于从点$i^\prime$到点$j$的冷-热流热增：
+\begin{align*}% S2.6
+\dot{m}_{\ell r}[&h_{he}(295\ \mathrm{K},10\ \mathrm{atm})-h_{he}(46\ \mathrm{K},10\ \mathrm{atm})]\\\notag
+&=(\dot{m}_v+\dot{m}_{\ell r})[h_v(295\ \mathrm{K},1\ \mathrm{atm})-h_{v}(30\ \mathrm{K},1\ \mathrm{atm})] \tag{S2.6}
+\end{align*}
+
+方程S2.6等式左侧：
+\begin{align*}% S2.7a
+\dot{m}_{he}[h_{he}(295\ \mathrm{K},10\ \mathrm{atm})-h_{he}(46\ \mathrm{K},10\ \mathrm{atm})]
+&=(1\ \mathrm{g/s})(1550.0\ \mathrm{J/g}-253.9\ \mathrm{J/g})\\\notag
+&\simeq 1296\ \mathrm{W} \tag{S2.7a}
+\end{align*}
+
+类似的，方程S2.6等号右侧：
+\begin{align*}% 2.7b
+(\dot{m}_v+\dot{m}_{\ell r})&[h_{he}(295\ \mathrm{K},1\ \mathrm{atm})-h_{he}(30\ \mathrm{K},1\ \mathrm{atm})]\\\notag
+&\simeq(0.798\ \mathrm{g/s}+0.144\ \mathrm{g/s})(1547.0\ \mathrm{J/g}-170.2\ \mathrm{J/g})\\\notag
+&\simeq 1297\ \mathrm{W/s} \tag{S2.7b}
+\end{align*}
+
+事实上，方程S2.7a和S2.7b是相等的，舍入误差在$\sim 0.1\%$以内。
+
+g)
+
 \begin{equation*}% s2.8
 P_s=\dot{m}_h(\frac{\gamma}{\gamma-1})(P_jv_j)[(\frac{P_a}{P_j})^{\frac{\gamma-1}{\gamma}}-1]
 \end{equation*}
