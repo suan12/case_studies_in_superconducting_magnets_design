@@ -1105,7 +1105,73 @@ e^{\frac{[\alpha_\ell]_{cs}\xi_{cs}}{2}}=\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_
 
 
 
-
+\begin{equation}% 4.72
+[Q_{\ell_{cs}}]_{cs}-[Q_{in}]_{cs}=[\dot{m}_h]_{cs}\tilde{c}_p(T_{cs}-T_0)
+\end{equation}
+\begin{equation}% 4.73
+[Q_\ell]_{cs}+Q_j-[Q_{\ell_{cs}}]_{cs}=[\dot{m}_h]_{cs}\tilde{c}_p(T_\ell-T_{cs})
+\end{equation}
+\begin{equation}% 4.74
+[Q_\ell]_{cs}+Q_j-[Q_{in}]_{cs}=[\dot{m}_h]_{cs}\tilde{c}_p(T_\ell-T_0)
+\end{equation}
+\begin{equation}
+T(0)=(\frac{T_{cs}-T_0}{e^{[\alpha_\ell]_{cs}\xi_{cs}}-1})(1+\frac{e^{[\alpha_\ell]_{cs}\xi_{cs}}T_0-T_{cs}}{T_{cs}-T_0}) =(\frac{T_{cs}-T_0}{e^{[\alpha_\ell]_{cs}\xi_{cs}}-1})[\frac{T_0(e^{[\alpha_\ell]_{cs}\xi_{cs}}-1)}{T_{cs}-T_0}]=T_0
+\end{equation}
+\begin{equation}
+T(\xi_{cs})=(\frac{T_{cs}-T_0}{e^{[\alpha_\ell]_{cs}\xi_{cs}}-1})(e^{[\alpha_\ell]_{cs}\xi_{cs}}+\frac{e^{[\alpha_\ell]_{cs}\xi_{cs}}T_0-T_{cs}}{T_{cs}-T_0}) =(\frac{T_{cs}-T_0}{e^{[\alpha_\ell]_{cs}\xi_{cs}}-1})[\frac{T_{cs}(e^{[\alpha_\ell]_{cs}\xi_{cs}}-1)}{T_{cs}-T_0}]=T_{cs}
+\end{equation}
+\begin{equation}
+[Q_{in}]_{cs}=\frac{\tilde{k}[A_m]_{cs}}{\ell}\frac{dT}{d\xi}\mid_{\xi=0}
+\end{equation}
+\begin{equation}
+[Q_{in}]_{cs}=\frac{\tilde{k}[A_m]_{cs}}{\ell}(\frac{T_{cs}-T_0}{e^{[\alpha_\ell]_{cs}\xi_{cs}}-1})[\alpha_\ell]_{cs}\ell_{cs}=[\dot{m}_h]_{cs}h_L
+\end{equation}
+\begin{equation}% 4.65a
+e^{[\alpha_\ell]_{cs}\xi_{cs}}=\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1
+\end{equation}
+\begin{equation}% 4.65b
+[\alpha_\ell]_{cs}=\frac{1}{\xi_{cs}}\ln[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1]
+\end{equation}
+\begin{equation}% 4.64
+[Q_{in}]_{cs}=\frac{\tilde{k}[A_m]_{cs}h_L}{\tilde{c}_p\ell_{cs}}\ln[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1]
+\end{equation}
+\begin{equation}
+\frac{dT}{d\xi}\mid_{\ell_{cs}}=\frac{[\alpha_\ell]_{cs}e^{[\alpha_\ell]_{cs}\xi_{cs}}(T_{cs}-T_0)}{(e^{[\alpha_\ell]_{cs}\xi_{cs}}-1)}
+\end{equation}
+\begin{equation}
+\frac{dT}{d\xi}\mid_{\ell_{cs}}=\frac{\beta_{cs}e^{\frac{[\alpha_\ell]{cs}}{2}}(T_\ell-T_{cs})}{e^{\frac{[\alpha_\ell]_{cs}}{2}}\sin\beta_{cs}(1-\xi_{cs})}
+\end{equation}
+\begin{equation}
+\frac{[\alpha_\ell]_{cs}e^{[\alpha_\ell]_{cs}\xi_{cs}}(T_\ell-T_{cs})}{(e^{[\alpha_\ell]_{cs}\xi_{cs}}-1)}=\frac{\beta_{cs}e^{\frac{[\alpha_\ell]_{cs}\xi_{cs}}{2}(T_\ell-T_{cs})}{e^{\frac{[\alpha_\ell]_{cs}}{2}}\sin\beta_{cs}(1-\xi_{cs})}
+\end{equation}
+\begin{equation}
+	[Q_{\ell_{cs}}]_{cs}=\frac{\tilde{k}[A_m]_{cs}}{\ell}\frac{dT}{d\xi}\mid_{\ell_{cs}} 
+	=\tilde{k}[A_m]_{cs}\frac{[\alpha_\ell]_{cs}e^{[\alpha_\ell]_{cs}\xi_{cs}}(T_{cs}-T_0)}{\ell(e^{[\alpha_\ell]_{cs}\xi_{cs}}-1)}
+\end{equation}
+\begin{equation}
+	[Q_{\ell_{cs}}]_{cs}=\tilde{k}[A_m]_{cs}\frac{[\dot{m}_h]_{cs}\tilde{c}_p\ell}{\tilde{k}[A_m]_{cs}}\times\frac{\left[ \frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right] (T_{cs}-T_0)}{\ell\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}\right]} 
+	=[\dot{m}_h]_{cs}h_L\left[ \frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]
+\end{equation}
+\begin{equation}% 4.72
+	[Q_{\ell_{cs}}]_{cs}-[Q_{in}]_{cs}=[\dot{m}]_{cs}\tilde{c}_p(T_{cs}-T_0)
+\end{equation}
+\begin{equation}
+	[Q_\ell]_{cs}=\frac{\tilde{k}[A_m]_{cs}}{\ell}\frac{dT}{d\xi}\mid_\ell=\frac{\tilde{c}[A_m]_{cs}(T_\ell-T_{cs})}{\ell e^{[\alpha_\ell]_{cs}}\sin\beta_{cs}(1-\xi_{cs})} 
+	\times e^{[\alpha_\ell]_{cs}}[\frac{1}{2}[\alpha_\ell]_{cs}\sin\beta_{cs}(1-\beta_{cs})+\beta_{cs}\cos\beta_{cs}(1-\xi_{cs})] 
+	=\frac{\tilde{c}[A_m]_{cs}(T_\ell-T_{cs})}{\ell}[\frac{1}{2}[\alpha_\ell]_{cs}+\beta_{cs}\cot\beta_{cs}(1-\xi_{cs})]
+\end{equation}
+\begin{equation}
+	[Q_{\ell_{cs}}]_{cs}=\frac{\tilde{k}[A_m]_{cs}}{\ell}\frac{dT}{d\xi}\mid_{\ell_{cs}}=\frac{\tilde{c}[A_m]_{cs}(T_\ell-T_{cs})}{\ell}\left[\beta_{cs}\frac{e^{\frac{[\alpha_\ell]_{cs}\xi_{cs}}{2}}}{e^{\frac{[\alpha_\ell]_{cs}}{2}}\sin\beta_{cs}(1-\xi_{cs})}\right]
+\end{equation}
+\begin{equation}
+	Q_j=\frac{\tilde{\rho}_xI_o(I_o-I_{c\ell})\ell}{[A_m]_{cs}e^{\frac{[\alpha_\ell]_{cs}}{2}\sin\beta_{cs}(1-\xi_{cs})}\int_{xi_{cs}}^{1}e^{[\alpha_\ell]_{cs}\xi}\sin\beta_{cs}(\xi-\xi_{cs})d\xi
+\end{equation}
+\begin{equation}
+Q_j=\frac{4\tilde{\rho}_xI_o(I_o-I_{c\ell})\ell e^{\frac{[\alpha_\ell]_{cs}\xi_{cs}}{2}}{[A_m]_{cs}e^{\frac{[\alpha_\ell]_{cs}}{2}\sin\beta_{cs}(1-\xi_{cs})([\alpha_\ell]_{cs}^{2}+4\beta_{cs}^{2})} 
+\times\mid e^{\frac{[\alpha_\ell]_{cs}}{2}x}(\frac{[\alpha_\ell]_{cs}}{2}\sin\beta_{cs}x-\beta_{cs}\cos\beta_{cs}x)\mid_{0}^{1-\xi_{cs}} 
+=\frac{4\tilde{\rho}_xI_o(I_o-I_{c\ell})\ell}{[A_m]_{cs}e^{\frac{[\alpha_\ell]_{cs}}{2}\sin\beta_{cs}(1-\xi_{cs})([\alpha_\ell]_{cs}^{2}+4\beta_{cs}^{2})} 
+\times[\frac{[\alpha_\ell]_{cs}}{2}e^{\frac{[\alpha_\ell]_{cs}}{2}}\sin\beta_{cs}(1-\xi_{cs})-\beta_{cs}e^{\frac{[\alpha_\ell]_{cs}}{2}\cos\beta_{cs}(1-\xi_{cs})+\beta_{cs}e^{\frac{[\alpha_\ell]_{cs}\xi_{cs}}{2}}}]
+\end{equation}
 
 
 
