@@ -688,10 +688,10 @@ d) 类似于S2.3的方程可以应用在点b和点c之间：
 \end{equation*}
 
 从S2.4中，我们可以得到：
-\begin{equation*}% S2.4
-Q_1=\dot{m}[h_{he}(46\ \mathrm{K},10\ \mathrm{atm})-h_{he}(30\ \mathrm{K},10\ \mathrm{atm})]
-=(1\ \mathrm{g/s})(252\ \mathrm{J/g}-168\ \mathrm{J/g})\simeq 84\ \mathrm{W}
-\end{equation*}
+\begin{align*}% S2.4
+Q_1&=\dot{m}[h_{he}(46\ \mathrm{K},10\ \mathrm{atm})-h_{he}(30\ \mathrm{K},10\ \mathrm{atm})]\\\notag
+&=(1\ \mathrm{g/s})(252\ \mathrm{J/g}-168\ \mathrm{J/g})\simeq 84\ \mathrm{W}
+\end{align*}
 
 图4.6给出的性能数据表明，尽管一台制冷机在4.22 K时可以提高到2 W，也不能实现$Q_1\simeq 84$ W。
 这时要求一台具有增强二级制冷功率的制冷机。
@@ -733,14 +733,48 @@ f) 从点$a^\prime$到点$b$的热-冷流热损耗等于从点$i^\prime$到点$j
 
 事实上，方程S2.7a和S2.7b是相等的，舍入误差在$\sim 0.1\%$以内。
 
-g)
-
+g) 应用方程4.10，我们可以得到理想压缩功率：
 \begin{equation*}% s2.8
-P_s=\dot{m}_h(\frac{\gamma}{\gamma-1})(P_jv_j)[(\frac{P_a}{P_j})^{\frac{\gamma-1}{\gamma}}-1]
+P_s=\dot{m}_h\left(\frac{\gamma}{\gamma-1}\right)(P_jv_j)[\left(\frac{P_a}{P_j}\right)^{\frac{\gamma-1}{\gamma}}-1]\tag{S2.8}
 \end{equation*}
+
+式中，理想气体的$\gamma=C_p/C_v$是5/3；$v_i$是压缩机入口在$P_j$=1 atm时的比体积，对295 K的氦，
+该值$\simeq 6\ \mathrm{m^3/kg}$。代入$P_j$=1 atm$\simeq 1\times 10^5$ Pa，$P_a/P_j$=10，$\.{m}_h$=0.001 kg/s，
+我们得到$P_s$=2.3 kW(或3马力)。
+上面的计算是针对理想气体的，实际的泵功率大概要到7 kW。
+
+当然，实际的小型氦液化器中，由于热交换的“不完全”以及热-冷流和冷-热流的压降，产液量必然小于理想液化器情况：
+$\.{m}_{\ell p}$以及$\.{m}_{\ell}$仅能达到理想情况的1/2。
 
 
 \subsection{讨论4.7：制冷机 vs. 制冷回环器}
+本节讨论两种干式磁体(无制冷剂)的冷源。
+
+\textbf{制冷机}\qquad 当前，所有的干式(无制冷剂)磁体，不论LTS还是HTS，都是由制冷机制冷的。制冷机的冷头连接于
+作为磁体一部分的低温恒温器的一端。图4.14给出了制冷机制冷干式磁体的示意图：
+一级冷头连接于热辐射屏，二级冷头连接于磁体腔。对于大型的干式LTS磁体，满足LTS磁体的稳定性是个挑战，即满足
+$\Delta T_{op}/T_{op}\simeq 0$。其中，$\Delta T_{op}$是最冷点(接近二级冷头)和最热点(据二级冷头最远处)的温差。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt4/figs/fig4.14.eps}
+	\caption{制冷机制冷的干式磁体示意图。}
+\end{figure}
+
+\textbf{制冷回环器}\qquad 为了保持磁体温度的均匀，即$\Delta T_{op}/T_{op}\simeq 0$，为制冷机配套制冷回环器
+是有利于干式超导磁体的。如图4.15所示，制冷回环器是二级均配套了冷氦回环器的二级制冷机。
+辐射屏壁面或磁体腔壁面装有冷却绕组，回环器迫使高压冷液氦通过上述绕组。
+制冷回环器相比制冷机有两个优势：1) 它可实现对磁体腔体表面大部分区域的冷却，这样磁体不论大小，都可以满足$\Delta T_{op}/T_{op}\simeq 0$的条件。尽管对HTS磁体，$\Delta T_{op}$很容易超过1 K；2) 冷源和磁体恒温器通过柔性液氦管连接，
+可以简单的解耦。
+
+制冷回环器的一个早期应用是混合III磁体[3.14]。低温容器的辐射屏维持于其运行温度，一个回环器保持一组辐射屏为90 K，另一组
+回环器保持另一组——用于1.8 K磁体恒温器的——在20 K。
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt4/figs/fig4.15.eps}
+	\caption{制冷回环器冷却磁体示意图。}
+\end{figure}
+
 
 
 \subsection{讨论4.8：辐射传热}
@@ -759,683 +793,766 @@ q_r=\frac{\epsilon_r}{N_i+1}\sigma(T_{wm}^4-T_{cl}^4)
 
 
 
-\subsection{讨论4.9：残余气体的对流传热}
-
-\begin{equation}% 4.19
-q_g=\eta_gP_g(T_{wm}-T_{cl})
-\end{equation}
-
-
-
-\subsection{讨论4.10：真空泵系统}
-
-
-
-\subsection{讨论4.11：固态制冷工质/磁体}
-\begin{equation}% 4.20
-D_{th}=\frac{k}{\varrho c_p}
-\end{equation}
-\begin{equation}% 4.21
-T_{sd}=\frac{1}{D_{th}}(\frac{\delta_{sd}}{\pi})^2
-\end{equation}
-
-
-\subsection{问题4.3：固态制冷剂冷却的磁体}
-
-\begin{equation*}% page260
-h(15K)-h(10K)\simeq\frac{C_p(10K)+C_p(15K)}{2}(15K-10K)
-\simeq\frac{(0.175J/cm^3K+0.475J/cm^3K)}{2}(5K)
-\simeq1.625J/cm^3
-\end{equation*}
-\begin{equation*}% page260
-[\Delta(10K \rightarrow15K)]_{15liter}^{0.25W}=\frac{(15000cm^3)(1.625J/cm^3)}{(0.25W)(3600s/h)}\simeq27.1h~30h
-\end{equation*}
-
-
-\begin{equation*}% S3.1
-\nu_{N2}=\pi D\ell\Delta r_{N2}
-\Delta r_{N2}=\frac{\mu_{N2}}{\pi D\ell}=\frac{(15000cm^3)}{\pi(90cm)(30cm)}=1.8cm
-\end{equation*}
-\begin{equation}% 4.21
-\tau_{sd}=\frac{1}{D_{th}}(\frac{\delta_{sd}}{\pi})^2
-=\frac{1}{(55\times10^{-2}cm^2/s)}(\frac{1.8cm}{\pi})^2~0.6s
-\end{equation}
-\begin{equation*}% page260
-h(15K)-h(10K)\simeq\frac{C_p(10K)+C_p(15K)}{2}(15K-10K)
-\simeq\frac{(0.400J/cm^3K+0.875J/cm^3K)}{2}(5K)
-\simeq3.2J/cm^3
-\end{equation*}
-\begin{equation*}% page261
-V_{Ne}(10K \rightarrow 15K)=\frac{(27.1h)(3600s/h)(2.5W)}{(3.2J/cm^3)(1000cm^3/liter)}
-\simeq7.6liter~\frac{1}{2}\times15liter
-\end{equation*}
-\begin{equation*}% page261
-V_{Ne}(10K \rightarrow 15K)=\frac{(0.486h)}{0.89h}(15liter)\simeq8.2liter\simeq\frac{1}{2}\times(15liter)
-\end{equation*}
-\begin{equation*}% page261
-[\Delta t(15K \rightarrow 60K)]_{15liter}^{3.3W}=(\frac{15liter}{1liter})(\frac{1W}{3.3W})[\Delta t(15K\rightarrow60K)]_{1liter}^{1W}
-\simeq(15)(0.303)(17.15h)
-=78h~80h
-\end{equation*}
-\begin{equation*}% S3.2
-\int_{20K}^{T_i}[C_p(T)]_{cu}dT=5J/cm^3
-\end{equation*}
-\begin{equation*}% page261
-h(35K)-h(30K)\simeq\frac{C_p(30K)+C_p(35K)}{2}(35K-30K)
-\simeq\frac{(1.24J/cm^3K+1.55J/cm^3K)}{2}(5K)
-\simeq7.0J/cm^3
-\end{equation*}
-\begin{equation*}% page262
-[\Delta t(30K \rightarrow 35K)]_{15liter}^{10W}=\frac{(15000cm^3)(7.0J/cm^3)}{(10W)(3,600s/h)}
-\simeq2.9h~3h
-\end{equation*}
-\begin{equation*}% page262
-h(40K)-h(35K)\simeq\frac{C_p(35K)+C_p(35.61K)}{2}(35.61K-35K)
-+\Delta h(35.61K)+\frac{C_p(35.61K)+C_p(40K)}{2}(40K-35.61K)
-\simeq\frac{(1.60J/cm^3K+1.62J/cm^3K)}{2}(0.6K)
-+8.2J/cm^3+\frac{(1.29J/cm^3K+1.33J/cm^3K)}{2}(4.39K)
-\simeq0.98J/cm^3+8.2J/cm^3+5.75J/cm^3\simeq14.9J/cm^3
-[\Delta t(30K \rightarrow 35K)]_{15liter}^{10W}=\frac{(15,000 cm^3)(14.9J/cm^3)}{(10W)(3,600s/h)}
-\simeq6.2h~6h
-\end{equation*}
-\begin{equation}% 4.21
-\tau_{sd}=\frac{1}{D_{th}}(\frac{\delta_{sd}}{\pi})^2
-\end{equation}
-\begin{equation*}% page 262
-p_{sd}=[h(35K)-h(30K)]\frac{\delta_{sd}}{\tau_{sd}}
-=(7.0J/cm^3)\frac{(0.04 cm)}{(0.067s)}=4.2W/cm^2
-\end{equation*}
-
-
-
-\subsection{讨论4.12：温升和场均匀性}
-\begin{equation}% 4.22
-\alpha(T)=\frac{1}{L_o}(\frac{\partial L}{\partial T})_P
-\end{equation}
-\begin{equation}% 4.23
-\alpha(T)=aT+bT^3
-\end{equation}
-\begin{equation}% 4.24
-(\frac{\Delta L}{L_o}_{cu})=\int_{10K}^{15K}(5\times10^{-9}T+3\times10^{-11}T^3)dT=0.62\times10^{-6}
-\end{equation}
-
-
-
-\subsection{讨论4.13：低温热测}
-
-
-
-
-\subsection{讨论4.14：气冷铜电流引线}
-\begin{equation}% 4.25
-Q_{in}=[Ak(T)\frac{dT}{dz}]_{z+\Delta z}+\dot{m}_Ic_p(T)T+\frac{\rho(T)I_{o}^{2}}{A}\Delta z
-\end{equation}
-\begin{equation}% 4.26
-Q_{out}=[Ak(T)\frac{dT}{dz}]_z+\dot{m}_Ic_p(T)(T+\Delta T)
-\end{equation}
-\begin{equation}% 4.27
-[Ak(T)\frac{dT}{dz}]_{z+\Delta z}-[Ak(T)\frac{dT}{dz}]_z-\dot{m}_Ic_p(T)\Delta T+\frac{\rho(T)I_{o}^{2}}{A}\Delta z=0
-\end{equation}
-\begin{equation}% 4.28
-\frac{d[Ak(T)\frac{dT}{dz}]}{dz}-\dot{m}_Ic_p(T)\frac{dT}{dz}+\frac{\rho(T)I_{o}^{2}}{A}=0
-\end{equation}
-\begin{equation}% 4.29a
--\dot{m}_Ic_{p0}\frac{dT}{dz}\mid_{z=0}+\frac{\rho(T)I_{o}^{2}}{A}\simeq0
-\end{equation}
-\begin{equation}% 4.29b
-\frac{dT}{dz}\mid_{z=0}\simeq\frac{\rho_0I_{o}^{2}}{A\dot{m}_Ic_{p0}}
-\end{equation}
-\begin{equation}% 4.30
-Q_{I_o}=Ak(T_0)\frac{dT}{dz}\mid_{z=0}=\frac{k_0\rho_0I_{0}^{2}}{\dot{m}_Ic_{p0}}
-\end{equation}
-\begin{equation}% 4.31a
-\dot{m}_I=\frac{Q_{I_o}}{h_L}
-\end{equation}
-\begin{equation}% 4.31b
-\dot{m}_I=I_o\sqrt{\frac{k_0\rho_0}{c_{p0}h_L}}
-\end{equation}
-\begin{equation}% 4.32a
-\frac{Q_{I_o}}{I_o}=\sqrt{\frac{h_Lk_0\rho_0}{c_{p0}}}
-\end{equation}
-\begin{equation}% 4.32b
-\frac{Q_{I_o}}{I_o}\simeq\sqrt{\frac{(20.7\times10^3J/kg)(600W/mK)(2.5\times10^{-10}\Omega m)}{5.26\times10^3J/kgK}}
-=7.7\times10^{-4}W/A=0.77mW/A~1mW/A
-\end{equation}
-\begin{equation}% 4.33
-\dot{m}_Ic_p(T)\frac{dT}{dz}+\frac{\rho(T)I_{o}^{2}}{A}=0
-\end{equation}
-\begin{equation}% 4.34a
-\int_{T_o}^{T_i}\frac{dT}{\rho(T)}=\int_{0}^{\ell}\frac{I_{o}^{2}dz}{A\dot{m}_I\tilde{c}_p}=\frac{I_{o}^{2}\ell}{A\dot{m}_I\tilde{c}_p}
-\end{equation}
-\begin{equation}% 4.34b
-\int_{T_o}^{T_i}\frac{dT}{\rho(T)}\simeq1.2\times10^{11}K\Omega m
-\end{equation}
-\begin{equation}% 4.34c
-\int_{T_o}^{T_i}\frac{dT}{\rho(T)}\simeq(\frac{I_{o}^{2}\ell}{Ac_{p0}})\frac{1}{I_0}\sqrt{\frac{c_{p0}h_L}{k_0\rho_0}}
-\end{equation}
-\begin{equation}% 4.35a
-(\frac{I_o\ell}{A})_{ot} \equiv \zeta_o\simeq[\int_{T_0}^{T_i}\frac{dT}{\rho_(T)}]\sqrt{\frac{c_{p0}k_0 \rho_0}{h_L}}
-\end{equation}
-
-
-\begin{equation}% 4.35b
-(\frac{I_o\ell}{A}_{ot})\simeq2.3\times10^7\ \mathrm{A/m}
-\end{equation}
-\begin{equation}% 4.36
-A\tilde{k}\frac{d^2T}{dz^2}-\dot{m}_0\tilde{c}_p\frac{dT}{dz}=0
-\end{equation}
-\begin{equation}% 4.37
-\tilde{k}=\frac{1}{T_\ell-T_0}\int_{T_0}^{T_\ell}k(T)dT
-\end{equation}
-\begin{equation}% 4.38a
-T(z)=T_0+\frac{h_L}{\tilde{c}_p}[\exp(\frac{\dot{m}_0\tilde{c}_pz}{A\tilde{k}})-1]
-\end{equation}
-\begin{equation}% 4.38b
-T(\ell)\equiv T_\ell=T_0+\frac{h_L}{\tilde{c}_p}[\exp(\frac{\dot{m}_0\tilde{c}_p\ell}{A\tilde{k}})-1]
-\end{equation}
-\begin{equation}% 4.39a
-\frac{\dot{m}_0\tilde{c}_p\ell}{A\tilde{k}}=\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]
-\end{equation}
-\begin{equation}% 4.39b
-\dot{m}_0=\frac{\tilde{k}}{\tilde{c}_p}(\frac{A}{\ell})\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]
-\end{equation}
-\begin{equation}% 4.40a
-Q_0=\frac{\tilde{k}h_L}{\tilde{c}_p}(\frac{A}{\ell})\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]
-\end{equation}
-\begin{equation}% 4.40b
-Q_0=\frac{\tilde{k}h_L}{\tilde{c}_p}(\frac{I_o}{\zeta_o})\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]
-\end{equation}
-\begin{equation}% 4.41
-\frac{Q_0}{Q_{I_o}}\frac{\tilde{k}}{\tilde{c}_p\zeta_o}\sqrt{\frac{h_Lc_{p0}}{k_0p_0}}\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]
-\end{equation}
-\begin{equation}% 4.42
-\frac{Q_0}{Q_{I_o}}\simeq0.69
-\end{equation}
-\begin{equation}% 4.43a
-V_o=\frac{I_o}{A}\int_{0}^{\ell}\rho_{cu}dz
-\end{equation}
-\begin{equation}% 4.43b
-V_o=\tilde{\rho}_{cu}(\frac{I_o\ell}{A})_{ot}=\tilde{\rho}_{cu}\zeta_o
-\end{equation}
-\begin{equation}% 4.44
-\tilde{\rho}_{cu}=\frac{1}{\ell}\int_{0}^{\ell}\rho_{cu}dz\simeq\frac{1}{T_\ell-T_0}\int_{T_0}^{T_\ell}\rho_{cu}(T)dT
-\end{equation}
-\begin{equation}% 4.45
-V_o\simeq2.3\times10^7\tilde{\rho}_{cu}\ \mathrm{V}
-\end{equation}
-\begin{equation}% 4.46
-AC_{cu}(T)\frac{dT}{dt}=\frac{d}{dz}[Ak(T)\frac{dT}{dz}]-\dot{m}_Ic_p(T)\frac{dT}{dz}+\frac{\rho_{cu}(T)}{A}I_{o}^{2}
-\end{equation}
-\begin{equation}% 4.47
-AC_{cu}(T)\frac{dT}{dt}=\frac{\rho_{cu}(T)}{A}I_{o}^{2}
-\end{equation}
-\begin{equation}% 4.48
-C_{cu}(T)\frac{dT}{dt}\frac{\rho_{cu}(T)\zeta_{o}^{2}}{\ell^2}
-\end{equation}
-\begin{equation}% 4.49
-\frac{dT}{dt}=\frac{\rho_o\zeta_{o}^{2}}{C_o\ell^2}+\frac{\gamma_{cu}\zeta_{o}^{2}}{C_o\ell^2}T=\frac{\rho_o}{\gamma_{cu}\tau_\ell}+\frac{T}{\tau_\ell}
-\end{equation}
-\begin{equation}% 4.50
-\tau_\ell=\frac{C_o\ell^2}{\gamma_{cu}\zeta_{o}^{2}}
-\end{equation}
-\begin{equation}% 4.51
-T(t)=Ke^{t/\tau_\ell}-\frac{\rho_o}{\gamma_{cu}}
-\end{equation}
-\begin{equation}
-\tau_\ell=\frac{(3.5\times10^6\ \mathrm{J/m^3K})(1\ \mathrm{m})^2}{(68\times10^{-12}\ \mathrm{\Omega m/K})(2.5\times10^7\ \mathrm{A/m})^2}\sim90\ \mathrm{s}
-\end{equation}
-
-
-
-\subsection{讨论4.15：干式引线——正常金属和高温超导体}
-
-\begin{equation}% 4.52
-A\tilde{k}\frac{d^2T}{dz^2}+\frac{\tilde{\rho}I_{o}^{2}}{A}=0
-\end{equation}
-\begin{equation}% 4.53
-Q_{I_o}=A\tilde{k}\frac{dT}{dz}\mid_{z=0}=\tilde{k}(T_\ell-T_0)(\frac{A}{\ell})+\frac{\tilde{\rho}I_{o}^{2}}{2}(\frac{\ell}{A})
-\end{equation}
-\begin{equation}% 4.12
-(\frac{I_o\ell}{A})_{dr}=\sqrt{\frac{2\tilde{k}(T_\ell-T_0)}{\tilde{\rho}}}
-\end{equation}
-\begin{equation}% 4.54
-[Q_{I_o}]_{dr}=I_o\sqrt{2\tilde{k}\tilde{\rho}(T_\ell-T_0)}
-\end{equation}
-\begin{equation}% 4.55
-[Q_{I_hts}]_{dr}=k_{hts}A_{hts}\frac{(T_{\omega_{hts}}-T_0)}{\ell_{hts}}
-\end{equation}
-
-
-
-
-\subsection{问题4.4：气冷HTS电流引线——全超导型(FSV)}
-
-\begin{equation}% 4.56
-\frac{d}{dz}\left[[A_m]_{fs}k_m(T)\frac{dT}{dz}\right]-[\dot{m}_h]_{fs}c_p(T)\frac{dT}{dz}=0
-\end{equation}
-\begin{equation}% 4.57
-[A_m]_{fs}\tilde{k}\frac{d^2T}{dz^2}-[\tilde{m}_h]_{fs}\tilde{c}_p\frac{dT}{dz}=0
-\end{equation}
-\begin{equation}% 4.58
-T(z)=T_0+(\frac{T_\ell-T_0}{e^{[\alpha]_{fs}}-1})[e^{[\alpha]_{fs}(z/\ell)}-1]
-\end{equation}
-\begin{equation}% 4.59
-[\alpha]_{fs}=\frac{[\dot{m}_h]_{fs}\tilde{c}_p\ell}{\tilde{k}[A_m]_{fs}}
-\end{equation}
-\begin{equation}% 4.60
-[Q_{in}]_{fs}=\frac{\tilde{k}[A_m]_{fs}h_L}{\tilde{c}_p\ell}\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
-\end{equation}
-\begin{equation}% 4.61
-[Q_\ell]_{fs}-[Q_{in}]_{fs}=[\dot{m}_h]_{fs}\tilde{c}_p(T_\ell-T_0)
-\end{equation}
-\begin{equation}
-[Q_{in}]_{fs}=\tilde{k}[A_m]_{fs}\frac{dT}{dz}\mid_0=[\dot{m}_h]_{fs}h_L
-\end{equation}
-\begin{equation}
-\tilde{k}[A_m]_{fs}\frac{dT}{dz}\mid_0=\tilde{k}[A_m]_{fs}(\frac{T_\ell-T_0}{e^{[\alpha]_{fs}-1}})\frac{[\alpha]_{fs}}{\ell}
-=(\frac{T_\ell-T_0}{e^{[\alpha]_{fs}}-1})[\dot{m}_h]_{fs}\tilde{c}_p=[\dot{m}_h]_{fs}h_L
-\end{equation}
-\begin{equation}
-e^{[\alpha]_{fs}}=\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1
-\end{equation}
-\begin{equation}
-[\alpha]_{fs}=\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
-\end{equation}
-\begin{equation}
-[\dot{m}_h]_{fs}=\frac{\tilde{k}[A_m]_{fs}}{\tilde{c}_p\ell}\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
-\end{equation}
-\begin{equation}% 4.60
-[Q_{in}]_{fs}=\frac{\tilde{k}[A_m]_{fs}h_L}{\tilde{c}_p\ell}\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
-\end{equation}
-\begin{equation}
-[Q_\ell]_{fs}=\tilde{k}[A_m]_{fs}\frac{dT}{dz}\mid_\ell=[\dot{m}_h]_{fs}\tilde{c}_p(\frac{T_\ell-T_0}{e^{[\alpha]_{fs}-1}})e^{[\alpha]_{fs}}
-=[\dot{m}_h]_{fs}h_L\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
-=[\dot{m}_h]_{fs}\tilde{c}_p(T_\ell-T_0)+[\dot{m}_h]_{fs}h_L
-\end{equation}
-\begin{equation}% 4.61
-[Q_\ell]_{fs}-[Q_{in}]_{fs}=[\dot{m}_h]_{fs}\tilde{c}_p(T_\ell-T_0v)
-\end{equation}
-
-
-
-
-\subsection{问题4.5：气冷HTS引线——电流分配型(CSV)}
-\begin{equation}% 4.62
-T(\xi)=(\frac{T_{cs}-T_0}{e^{[\alpha_\ell]_{cs}\xi_{cs}}-1})(e^{[\alpha_\ell]_{cs}\xi}+\frac{e^{[\alpha_\ell]_{cs}\xi_{cs}T_0-T_{cs}}}{T_{cs}-T_0})
-\end{equation}
-\begin{equation}% 4.63
-[\alpha_\ell]_{cs}\equiv\frac{[\dot{m}_h]_{cs}\tilde{c}_p\ell}{\tilde{k}[A_m]_{cs}}
-\end{equation}
-\begin{equation}% 4.64
-[Q_{in}]_{cs}=\frac{\tilde{k}[A_m]_{cs}h_L}{\tilde{c}_p\ell_{cs}}\ln\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]
-\end{equation}
-\begin{equation}% 4.65a
-e^{[\alpha_\ell]_{cs}\xi_{cs}}=\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1
-\end{equation}
-\begin{equation}% 4.65b
-[\alpha_\ell]_{cs}=\frac{1}{\xi_{cs}}\ln\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]
-\end{equation}
-\begin{equation}% 4.66
-\tilde{k}[A_m]_{cs}\frac{d^2T}{dz^2}-[\dot{m}_h]_{cs}\tilde{c}_p\frac{dT}{dz}+\frac{\tilde{\rho}_xI_o(I_o-I_{c\ell})}{[A_m]_{cs}(T_\ell-T_{cs})}(T-T_{cs})=0
-\end{equation}
-\begin{equation}% 4.67
-T(\xi)=T_{cs}+\frac{(T_\ell-T_{cs})}{e^{\frac{[\alpha_\ell]_{cs}}{2}}\sin\beta_{cs}(1-\xi_{cs})}
-\end{equation}
-\begin{equation}% 4.68a
-\beta_{cs}=\sqrt{\frac{\tilde{\rho}_xI_o(I_o-I_{c\ell})\ell^2}{\tilde{k}[A_m]_{cs}^{2}(T_\ell-T_{cs})}-\frac{1}{4}(\frac{[\dot{m}_h]_{cs}\tilde{c}_p\ell}{\tilde{k}[A_m]_{cs}})^2}
-\end{equation}
-\begin{equation}% 4.68b
-\beta_{cs}=\sqrt{\frac{\tilde{\rho}_xI_o(I_o-I_{c\ell})\ell^2}{\tilde{k}[A_m]_{cs}^{2}(T_\ell-T_{cs})}-\frac{1}{4}[\alpha_\ell]_{cs}^{2}}
-\end{equation}
-\begin{equation}% 4.68c
-\beta_{cs}=\sqrt{\frac{\tilde{\rho}_xI_o(I_o-I_{c\ell})\ell^2}{\tilde{k}[A_m]_{cs}^{2}(T_\ell-T_{cs})}-\frac{1}{4}\{\frac{1}{\xi_{cs}}\ln\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]\}^2}
-\end{equation}
-\begin{equation}% 4.69
-[\alpha_\ell]_{cs}e^{\frac{[\alpha_\ell]_{cs}(1+\xi_{cs})}{2}}=\frac{\beta_{cs}}{\sin\beta_{cs}(1-\xi_{cs})}\left[\frac{\tilde{c}_p(T_\ell-T_{cs})}{h_L}\right]
-\end{equation}
-\begin{equation}% 4.70a
-e^{\frac{[\alpha_\ell]_{cs}}{2}}=\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]^{1/(2\xi_{cs})}
-\end{equation}
-\begin{equation}% 4.70b
-e^{\frac{[\alpha_\ell]_{cs}\xi_{cs}}{2}}=\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]^{1/2)}
-\end{equation}
-\begin{equation}% 4.71
-\frac{1}{\xi_{cs}}\left[\frac{h_L}{\tilde{c}_p(T_\ell-T_{cs})}\right]\ln\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]right]
-\end{equation}
-
-
-<<<<<<< HEAD
-\begin{equation}
-[\alpha_\ell]_{cs}^{2}+4\beta_{cs}^{2}=\frac{d\tilde{\rho}_xI_o(I_o-I_{c\ell})\ell^2}{\tilde{k}[A_m]_{cs}(T_\ell-T_{cs})}
-\end{equation}
-\begin{equation}
-Q_j=\frac{\tilde{k}[A_m]_{cs}(T_\ell-T_{cs})}{\ell}
-\times\left[\frac{1}{2}[\alpha_\ell]_{cs}-\beta_{cs}\cot\beta_{cs}(1-\xi_{cs})+\beta_{cs}\frac{e^{\frac{[\alpha_\ell]_{cs}\xi_{cs}}{2}}}{e^{\frac{[\alpha_\ell]_{cs}}{2}}\sin\beta_{cs}(1-\xi_{cs})}\right]
-\end{equation}
-\begin{equation}
-[Q_\ell]_{cs}+Q_j-[Q_{\ell_{cs}}]_{cs}=\frac{\tilde{k}[A_m]_{cs}(T_\ell-T_{cs})}{\ell}[\alpha_\ell]_{cs}
-=======
-
-\begin{equation}% 4.72
-[Q_{\ell_{cs}}]_{cs}-[Q_{in}]_{cs}=[\dot{m}_h]_{cs}\tilde{c}_p(T_{cs}-T_0)
->>>>>>> e22c8f556c8eae444b4ec02aeeac95c94655abbe
-\end{equation}
-\begin{equation}% 4.73
-[Q_\ell]_{cs}+Q_j-[Q_{\ell_{cs}}]_{cs}=[\dot{m}_h]_{cs}\tilde{c}_p(T_\ell-T_{cs})
-\end{equation}
-\begin{equation}% 4.74
-<<<<<<< HEAD
-[Q_\ell]_{cs}+Q_j-[Q_{\ell_{cs}}]_{cs}=[\dot{m}_h]_{cs}\tilde{c}_p(T_\ell-T_0)
-\end{equation}
-\begin{equation}% 4.75
-[Q_{in}]_{fs}^{n}=\frac{[\tilde{kA}]_{fs}^{n}h_L}{\tilde{c}_p\ell}\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
-\end{equation}
-\begin{equation}% 4.76
-[\tilde{kA}]_{fs}^{n}=\tilde{k}[A_m]_{fs}+\tilde{k}[A_n]_{fs}
-\end{equation}
-\begin{equation}% 4.77a 4.77b
-[\alpha_\ell]_{fs}^{n}=\frac{[\dot{m}_h]_{fs}^{n}\tilde{c}_p\ell}{\tilde{kA}_{fs}^{n}} 
-=\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
-\end{equation}
-\begin{equation}% 4.74
-[Q_\ell]_{cs}+Q_j-[Q_{in}]_{cs}=\dot{m}_h\tilde{c}_p(T_\ell-T_0)
-\end{equation}
-\begin{equation}% 4.78
-[Q_{in}]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}h_L}{\tilde{c}_p\ell_{cs}}\ln\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]
-\end{equation}
-\begin{equation}% 4.79
-[\tilde{kA}]_{cs}^{n}=\tilde{k}[A_m]_{cs}+\tilde{k}[A_n]_{cs}
-\end{equation}
-\begin{equation}% 4.80a 4.80b
-[\alpha_\ell]_{cs}^{n}=\frac{[\dot{m}_h]_{cs}^{n}\tilde{c}_p\ell}{\tilde{kA}_{cs}^{n}} 
-=\frac{1}{\xi_{cs}}\ln\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]
-\end{equation}
-\begin{equation}% 4.81
-\beta_{cs}^{n}=\sqrt{\frac{\tilde{\rho}_x\tilde{\rho}_nI_o(I_o-I_{c\ell})\ell^2}{[\tilde{kA}]_{cs}^{n}\tilde{\rho A}_{cs}^{n}(T_\ell-T_{cs})}-\frac{1}{4}([\alpha_\ell]_{cs}^{n})^2}
-\end{equation}
-\begin{equation}% 4.82
-[\tilde{\rho A}]_{cs}^{n}=\tilde{\rho}_x[A_n]_{cs}+\tilde{\rho}_n[A_m]_{cs}
-\end{equation}
-\begin{equation}% 4.83
-\frac{1}{\xi_{cs}}\left[\frac{h_L}{\tilde{c}_p(T_\ell-T_{cs})}\right]\ln\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]^{\frac{1+\xi_{cs}}{2\xi_{cs}}}=\frac{\beta_{cs}^{n}}{\sin\beta_{cs}^{n}(1-\xi_{cs})}
-\end{equation}
-\begin{equation}% 4.84
-\frac{\tilde{k}_{cu}A_{cu}}{\ell_{cu}^{2}}\frac{d^2T}{d\zeta^2}-\frac{\dot{m}_{fl}\tilde{c}_{fl}}{\ell_{cu}}\frac{dT}{d\zeta}+\frac{T_{o}^{2}\gamma_{cu}}{A_{cu}}(T-T_o)+\frac{I_{o}^{2}\rho_o}{A_{cu}}=0
-\end{equation}
-\begin{equation}% 4.85
-\frac{d^2T}{d\zeta^2}-\left(\frac{\dot{m}_{fl}\tilde{c}_{fl}\ell_{cu}}{\tilde{k}_{cu}A_{cu}}\right)\frac{dT}{d\zeta}+\left(\frac{I_{o}^{2}\gamma_{cu}\ell_{cu}^{2}}{\tilde{k}_{cu}A_{cu}^{2}}\right)(T-T_o)=0
-\end{equation}
-\begin{equation}% 4.86
-\theta(\zeta)=\frac{T_{\ell_{cu}}-T_o}{e^{\alpha_{cu}}\sin\beta_{cu}}e^{\alpha_{cu}\zeta}\sin\beta_{cu}\zeta
-\end{equation}
-\begin{equation}% 4.87a
-\alpha_{cu}=\frac{\dot{m}_{fl}\tilde{c}_{fl}\ell_{cu}}{2\tilde{k}_{cu}A_{cu}}
-\end{equation}
-\begin{equation}% 4.87b 4.87c
-\beta_{cu}=\sqrt{\frac{T_{o}^{2}\gamma_{cu}\ell_{cu}^{2}}{\tilde{k}_{cu}A_{cu}^{2}}-\left(\frac{\dot{m}_{fl}\tilde{c}_{fl}\ell_{cu}}{2\tilde{k}_{cu}A_{cu}}\right)^2}
-=\sqrt{\frac{T_{o}^{2}\gamma_{cu}\ell_{cu}^{2}}{\tilde{k}_{cu}A_{cu}^{2}}-\alpha_{cu}^{2}}
-\end{equation}
-\begin{equation}% 4.88a
-\alpha_{cu}\sin\beta_{cu}+\beta_{cu}\cos\beta_{cu}=0
-\end{equation}
-\begin{equation}% 4.88b
-\alpha_{cu}+\beta_{cu}\cot\beta_{cu}=0
-\end{equation}
-\begin{equation}% 4.89
-Q_o=\frac{\tilde{k}_{cu}A_{cu}}{\ell_{cu}}\frac{d\theta(\zeta)}{d\zeta}\mid_0=\frac{\tilde{k}_{cu}A_{cu}\theta_{\ell_{cu}}\beta_{cu}}{\ell_{cu}e^{\alpha_{cu}}\sin\beta_{cu}}\simeq 0
-\end{equation}
-\begin{equation}% 4.90
-Q_j=\frac{I_{o}^{2}\gamma_{cu}}{A_{cu}}\int_{0}^{\ell_{cu}}\theta(z)dz 
-=\frac{I_{o}^{2}\gamma_{cu}\ell_{cu}}{A_{cu}}\int_{0}^{1}\theta(\zeta)d\zeta
-\end{equation}
-\begin{equation}% 4.91a
-Q_j=\frac{I_{o}^{2}\gamma_{cu}\ell_{cu}(T_{\ell_{cu}}-T_o)}{A_{cu}e^{\alpha_{cu}}\sin\beta_{cu}}\int_{0}^{1}e^{\alpha_{cu}\zeta}\sin\beta_{cu}\zeta d\zeta 
-=\frac{I_{o}^{2}\gamma_{cu}\ell_{cu}(T_{\ell_{cu}}-T_o)}{A_{cu}(\alpha_{cu}^{2}+\beta_{cu}^{2})}(\alpha_{cu}-\beta_{cu}\cot\beta_{cu}) 
-+(terms containing e^{-\alpha_{cu}}) 
-\simeq\frac{\tilde{k}_{cu}A_{cu}}{\ell_{cu}}(T_{\ell_{cu}}-T_o)(\alpha_{cu}-\beta_{cu}\cot\beta_{cu})
-\end{equation}
-\begin{equation}% 4.91b
-Q_j=\frac{\tilde{k}_{cu}A_{cu}}{\ell_{cu}}(T_{\ell_{cu}}-T_o)(\alpha_{cu}+\alpha_{cu})
-\end{equation}
-\begin{equation}% 4.92
-Q_j=\dot{m}_{fl}\tilde{c}_{fl}(T_{\ell_{cu}}-T_o)
-\end{equation}
-\begin{equation}% 4.93
-Q_{j_{\ell q}}=\frac{\rho_oI_{o}^{2}\ell_{\ell q}}{A_{cu}}=\dot{m}_{fl}h_{n2}
-\end{equation}
-\begin{equation}% 4.94
-\alpha_{cu}^{\prime}+\beta_{cu}^{\prime}\cot\beta_{cu}^{\prime}=0
-\end{equation}
-\begin{equation}% 4.95a
-\alpha_{cu}^{\prime}=\frac{\dot{m}_{fl}\tilde{c}_{fl}(\ell_{cu}-\ell_{\ell q})}{2\tilde{k}_{cu}A_{cu}}
-\end{equation}
-\begin{equation}% 4.95b
-\beta_{cu}^{\prime}=\sqrt{\frac{I_{o}^{2}\gamma_{cu}(\ell_{cu}-\ell_{\ell q})^2}{\tilde{k}_{cu}A_{cu}^{2}}-(\alpha_{cu}^{\prime})^2}
-\end{equation}
-\begin{equation}
-X_{at}\%B=\frac{100X_{wt}\%B\times W_A}{(100-X_{wt}\%B)\times W_B+X_{wt}\%B\times W_A}
-\end{equation}
-\begin{equation}% 4.60
-[Q_{in}]_{fs}=\frac{\tilde{k}[A_m]_{fs}h_L}{\tilde{c}_p\ell}\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right] 
-=\frac{(0.327\ \mathrm{W/cmK})(0.461\ \mathrm{cm^2})(20.7\ \mathrm{J/g})}{(5.28\ \mathrm{J/gK})(20\ \mathrm{cm})} 
-\times\ln\left[\frac{(5.28\ \mathrm{J/gK})(77.3\ \mathrm{K}-4.2\ \mathrm{K})}{(20.4\ \mathrm{J/g})}+1\right] 
-=0.0798\ \mathrm{W}
-\end{equation}
-\begin{equation}
-[Q_\ell]_{fs}=[\dot{m}_h]_{fs}h_L\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right] 
-=(0.00385\ \mathrm{g/s})(20.7\ \mathrm{J/g})\left[\frac{(5.28\ \mathrm{J/gK})(77.3\ \mathrm{K}-4.2\ \mathrm{K})}{(20.7\ \mathrm{J/g})}+1\right] 
-=1.556\ \mathrm{W}
-\end{equation}
-\begin{equation}
-[\tilde{kA}]_{fs}^{n}=(0.327\ \mathrm{W/cm K})(0.416\ \mathrm{cm^2})+(0.350\ \mathrm{W/cmK})(1.735\ \mathrm{cm^2}) 
-=0.136\ \mathrm{W cm/K}+0.607\ \mathrm{W cm/K}=0.743\ \mathrm{W cm/K}
-\end{equation}
-\begin{equation}% 4.75
-[Q_{in}]_{fs}^{n}=\frac{\tilde{kA}_{fs}^{n}h_L}{\tilde{c}_p\ell}\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right] 
-=\frac{(0.743\ \mathrm{W cm/K})(20.7\ \mathrm{J/g})}{(5.28\ \mathrm{J/gK})(20\ \mathrm{cm})} 
-\times\ln\left[\frac{(5.28\ \mathrm{J/gk})(77.3\ \mathrm{K}-4.2\ \mathrm{K})}{(20.7\ \mathrm{J/g})}+1\right]=0.4337\ \mathrm{W}
-\end{equation}
-\begin{equation}
-[Q_\ell]_{fs}^{n}=[\dot{m}_h]_{fs}^{n}h_L\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right] 
-\simeq"(0.021\ \mathrm{g/s})(20.7\ \mathrm{J/g})\left[\frac{(5.28\ \mathrm{J/gk})(77.3\ \mathrm{K}-4.2\ \mathrm{K})}{(20.7\ \mathrm{J/g})}+1\right]=8.540\ \mathrm{W}
-\end{equation}
-\begin{equation}% 4.96a
-\sin\beta_{cs}^{n}(1-\xi)=1
-\end{equation}
-\begin{equation}% 4.96b
-\beta_{cs}^{n}(1-\xi_{cs})=\pi/2
-\end{equation}
-\begin{equation}% 4.97
-[Q_\ell]_{cs}^{n}+[Q_j]_{cs}^{n}-[Q_{in}]_{cs}^{n}=[\dot{m}_h]_{cs}^{n}\tilde{c}_p(T_\ell-T_0)
-\end{equation}
-\begin{equation}% 4.98
-[Q_\ell]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}[\frac{1}{2}[\alpha_\ell]_{cs}^{n}+\beta_{cs}^{n}\cot\beta_{cs}^{n}(1-\xi_{cs})]
-\end{equation}
-\begin{equation}% 4.99
-[Q_j]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\left[\frac{1}{2}[\alpha_\ell]_{cs}^{n}+\beta_{cs}^{n}\cot\beta_{cs}^{n}(1-\xi_{cs}) 
-+\beta_{cs}^{n}\frac{e^{\frac{[\alpha_\ell]_{cs}^{n}\xi_{cs}}{2}}}{e^{\frac{[\alpha_\ell]_{cs}^{n}}{2}}\sin\beta_{cs}^{n}(1-\xi_{cs})}\right]
-\end{equation}
-\begin{equation}% 4.100
-[Q_\ell]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\times\frac{1}{2}[\alpha_\ell]_{cs}^{n}
-\end{equation}
-\begin{equation}% 4.101
-[Q_j]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\left[\frac{1}{2}[\alpha_\ell]_{cs}^{n}+\beta_{cs}^{n}e^{\frac{[\alpha_\ell]_{cs}^{n}(\xi_{cs}-1)}{2}}\right]
-\end{equation}
-\begin{equation}
-I_c(T)=23,325-250T[\ \mathrm{A}]
-\end{equation}
-\begin{equation}% 4.79
-[\tilde{kA}]_{cs}^{n}=\tilde{k}[A_m]_{cs}+\tilde{k}[A_n]_{cs} 
-=(0.327\ \mathrm{W/cmK})(0.2775\ \mathrm{cm^2})+(0.350\ \mathrm{W/cmK})(1.735\ \mathrm{cm^2}) 
-=0.0907\ \mathrm{W cm/K}+0.607\ \mathrm{W cm/K}=0.698\ \mathrm{W cm/K}
-\end{equation}
-\begin{equation}% 4.82
-[\tilde{\rho A}]_{cs}^{n}=\tilde{\rho}_x[A_m]_{cs}+\tilde{\rho}_n[A_n]_{cs} 
-=(1\mu\Omega\ \mathrm{cm})(1.735\ \mathrm{cm^2})+(2.25\mu\Omega\ \mathrm{cm})(0.2775\ \mathrm{cm^2}) 
-=1.735\mu\Omega\ \mathrm{cm^3}+0.624\mu\Omega\ \mathrm{cm^3}=2.359\mu\Omega\ \mathrm{cm^3}
-\end{equation}
-\begin{equation}% 4.80b
-[\alpha_\ell]_{cs}^{n}=\frac{1}{\xi_{cs}^{n}}\ln\left[\frac{\tilde{c}_p(T_{cs}-Y_0)}{h_L}+1\right] 
-=\frac{1}{0.94505}\ln\left[\frac{(5.28\ \mathrm{J/gK})(69.3\ \mathrm{K}-4.2\ \mathrm{K})}{(20.7\ \mathrm{J/g})}+1\right] 
-=\frac{1}{0.94505}\ln(17.605)=3.035
-\end{equation}
-\begin{equation}
-\frac{1}{4}([\alpha_\ell]_{cs}^{n})^2=2.303
-\end{equation}
-\begin{equation}% 4.81
-\beta_{cs}^{n}=\sqrt{\frac{\tilde{\rho}_x\tilde{\rho}_nI_o(I_o-I_{c\ell})\ell^2}{[\tilde{kA}]_{cs}^{n}[\tilde{\rho A}]_{cs}^{n}(T_\ell-T_{cs})}-\frac{1}{4}([\alpha_\ell]_{cs}^{n})^2}
-28.586=\sqrt{\frac{(1\mu\Omega\ \mathrm{cm})(2.25\mu\Omega\ \mathrm{cm})(6\ \mathrm{kA})(6\ \mathrm{kA}-4\ \mathrm{kA})(20\ \mathrm{cm})^2}{(0.698\ \mathrm{W cm/K})(2.359\mu\Omega\ \mathrm{cm^3})(77.3\ \mathrm{K}-69.3\ \mathrm{K})}-2.303}
-28.586\simeq\sqrt{817.58}=28.593
-\end{equation}
-\begin{equation}% 4.78
-[Q_{in}]_{cs}^{n}=\frac{\tilde{kA}_{cs}^{n}h_L}{\tilde{c}_p\ell_{cs}}\ln\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right] 
-=\frac{(0.698\ \mathrm{W cm/K})(20.7\ \mathrm{J/g})}{(5.28\ \mathrm{J/gK})(18.9\ \mathrm{cm})}\ln\left[\frac{(5.28\ \mathrm{J/gK})(69.3\ \mathrm{K}-4.2\ \mathrm{K})}{(20.7\ \mathrm{J/g})}+1\right] 
-=(0.1448\ \mathrm{W})(2.868)=0.4153\ \mathrm{W}
-\end{equation}
-\begin{equation}% 4.100
-[Q_\ell]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\left(\frac{[\alpha_\ell]_{cs}^{n}}{2}\right) 
-=\frac{(0.698\ \mathrm{W cm/K})(77.3\ \mathrm{K}-69.3\ \mathrm{K})}{(20\ \mathrm{cm})}\left(\frac{3.035}{2}\right)=0.4237\ \mathrm{W}
-\end{equation}
-\begin{equation}% 4.101
-[Q_j]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\left[\frac{[\alpha_\ell]_{cs}^{n}}{2}+\beta_{cs}^{n}+\beta_{cs}^{n}e^{\frac{[\alpha_\ell]_{cs}^{n}(\xi_{cs}-1)}{2}}\right] 
-=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\left[\left(\frac{3.035}{2}\right)+(28.586)e^{\frac{3.035(0.645-1)}{2}}\right] 
-=\frac{(0.698\ \mathrm{W cm/K})(77.3\ \mathrm{K}-69.3\ \mathrm{K})}{(20\ \mathrm{cm})}\left[\left(\frac{3.035}{2}\right)+26.30\right]=7.7743\ \mathrm{W}
-\end{equation}
-\begin{equation}% 4.97
-[Q_\ell]_{cs}^{n}+[Q_f]_{cs}^{n}-[Q_{in}]_{cs}^{n}=[\dot{m}_h]_{cs}^{n}\tilde{c}_p(T_\ell-T_0)
-0.4237\ \mathrm{W}+7.7658-0.4153=7.7742\ \mathrm{W} 
-\simeq 7.7743\ \mathrm{W}             
-\end{equation}
-
-=======
-[Q_\ell]_{cs}+Q_j-[Q_{in}]_{cs}=[\dot{m}_h]_{cs}\tilde{c}_p(T_\ell-T_0)
-\end{equation}
-\begin{equation}
-T(0)=(\frac{T_{cs}-T_0}{e^{[\alpha_\ell]_{cs}\xi_{cs}}-1})(1+\frac{e^{[\alpha_\ell]_{cs}\xi_{cs}}T_0-T_{cs}}{T_{cs}-T_0}) =(\frac{T_{cs}-T_0}{e^{[\alpha_\ell]_{cs}\xi_{cs}}-1})[\frac{T_0(e^{[\alpha_\ell]_{cs}\xi_{cs}}-1)}{T_{cs}-T_0}]=T_0
-\end{equation}
-\begin{equation}
-T(\xi_{cs})=(\frac{T_{cs}-T_0}{e^{[\alpha_\ell]_{cs}\xi_{cs}}-1})(e^{[\alpha_\ell]_{cs}\xi_{cs}}+\frac{e^{[\alpha_\ell]_{cs}\xi_{cs}}T_0-T_{cs}}{T_{cs}-T_0}) =(\frac{T_{cs}-T_0}{e^{[\alpha_\ell]_{cs}\xi_{cs}}-1})[\frac{T_{cs}(e^{[\alpha_\ell]_{cs}\xi_{cs}}-1)}{T_{cs}-T_0}]=T_{cs}
-\end{equation}
-\begin{equation}
-[Q_{in}]_{cs}=\frac{\tilde{k}[A_m]_{cs}}{\ell}\frac{dT}{d\xi}\mid_{\xi=0}
-\end{equation}
-\begin{equation}
-[Q_{in}]_{cs}=\frac{\tilde{k}[A_m]_{cs}}{\ell}(\frac{T_{cs}-T_0}{e^{[\alpha_\ell]_{cs}\xi_{cs}}-1})[\alpha_\ell]_{cs}\ell_{cs}=[\dot{m}_h]_{cs}h_L
-\end{equation}
-\begin{equation}% 4.65a
-e^{[\alpha_\ell]_{cs}\xi_{cs}}=\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1
-\end{equation}
-\begin{equation}% 4.65b
-[\alpha_\ell]_{cs}=\frac{1}{\xi_{cs}}\ln[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1]
-\end{equation}
-\begin{equation}% 4.64
-[Q_{in}]_{cs}=\frac{\tilde{k}[A_m]_{cs}h_L}{\tilde{c}_p\ell_{cs}}\ln[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1]
-\end{equation}
-\begin{equation}
-\frac{dT}{d\xi}\mid_{\ell_{cs}}=\frac{[\alpha_\ell]_{cs}e^{[\alpha_\ell]_{cs}\xi_{cs}}(T_{cs}-T_0)}{(e^{[\alpha_\ell]_{cs}\xi_{cs}}-1)}
-\end{equation}
-\begin{equation}
-\frac{dT}{d\xi}\mid_{\ell_{cs}}=\frac{\beta_{cs}e^{\frac{[\alpha_\ell]{cs}}{2}}(T_\ell-T_{cs})}{e^{\frac{[\alpha_\ell]_{cs}}{2}}\sin\beta_{cs}(1-\xi_{cs})}
-\end{equation}
-\begin{equation}
-\frac{[\alpha_\ell]_{cs}e^{[\alpha_\ell]_{cs}\xi_{cs}}(T_\ell-T_{cs})}{(e^{[\alpha_\ell]_{cs}\xi_{cs}}-1)}=\frac{\beta_{cs}e^{\frac{[\alpha_\ell]_{cs}\xi_{cs}}{2}(T_\ell-T_{cs})}{e^{\frac{[\alpha_\ell]_{cs}}{2}}\sin\beta_{cs}(1-\xi_{cs})}
-\end{equation}
-\begin{equation}
-	[Q_{\ell_{cs}}]_{cs}=\frac{\tilde{k}[A_m]_{cs}}{\ell}\frac{dT}{d\xi}\mid_{\ell_{cs}} 
-	=\tilde{k}[A_m]_{cs}\frac{[\alpha_\ell]_{cs}e^{[\alpha_\ell]_{cs}\xi_{cs}}(T_{cs}-T_0)}{\ell(e^{[\alpha_\ell]_{cs}\xi_{cs}}-1)}
-\end{equation}
-\begin{equation}
-	[Q_{\ell_{cs}}]_{cs}=\tilde{k}[A_m]_{cs}\frac{[\dot{m}_h]_{cs}\tilde{c}_p\ell}{\tilde{k}[A_m]_{cs}}\times\frac{\left[ \frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right] (T_{cs}-T_0)}{\ell\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}\right]} 
-	=[\dot{m}_h]_{cs}h_L\left[ \frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]
-\end{equation}
-\begin{equation}% 4.72
-	[Q_{\ell_{cs}}]_{cs}-[Q_{in}]_{cs}=[\dot{m}]_{cs}\tilde{c}_p(T_{cs}-T_0)
-\end{equation}
-\begin{equation}
-	[Q_\ell]_{cs}=\frac{\tilde{k}[A_m]_{cs}}{\ell}\frac{dT}{d\xi}\mid_\ell=\frac{\tilde{c}[A_m]_{cs}(T_\ell-T_{cs})}{\ell e^{[\alpha_\ell]_{cs}}\sin\beta_{cs}(1-\xi_{cs})} 
-	\times e^{[\alpha_\ell]_{cs}}[\frac{1}{2}[\alpha_\ell]_{cs}\sin\beta_{cs}(1-\beta_{cs})+\beta_{cs}\cos\beta_{cs}(1-\xi_{cs})] 
-	=\frac{\tilde{c}[A_m]_{cs}(T_\ell-T_{cs})}{\ell}[\frac{1}{2}[\alpha_\ell]_{cs}+\beta_{cs}\cot\beta_{cs}(1-\xi_{cs})]
-\end{equation}
-\begin{equation}
-	[Q_{\ell_{cs}}]_{cs}=\frac{\tilde{k}[A_m]_{cs}}{\ell}\frac{dT}{d\xi}\mid_{\ell_{cs}}=\frac{\tilde{c}[A_m]_{cs}(T_\ell-T_{cs})}{\ell}\left[\beta_{cs}\frac{e^{\frac{[\alpha_\ell]_{cs}\xi_{cs}}{2}}}{e^{\frac{[\alpha_\ell]_{cs}}{2}}\sin\beta_{cs}(1-\xi_{cs})}\right]
-\end{equation}
-\begin{equation}
-	Q_j=\frac{\tilde{\rho}_xI_o(I_o-I_{c\ell})\ell}{[A_m]_{cs}e^{\frac{[\alpha_\ell]_{cs}}{2}\sin\beta_{cs}(1-\xi_{cs})}\int_{xi_{cs}}^{1}e^{[\alpha_\ell]_{cs}\xi}\sin\beta_{cs}(\xi-\xi_{cs})d\xi
-\end{equation}
-\begin{equation}
-Q_j=\frac{4\tilde{\rho}_xI_o(I_o-I_{c\ell})\ell e^{\frac{[\alpha_\ell]_{cs}\xi_{cs}}{2}}{[A_m]_{cs}e^{\frac{[\alpha_\ell]_{cs}}{2}\sin\beta_{cs}(1-\xi_{cs})([\alpha_\ell]_{cs}^{2}+4\beta_{cs}^{2})} 
-\times\mid e^{\frac{[\alpha_\ell]_{cs}}{2}x}(\frac{[\alpha_\ell]_{cs}}{2}\sin\beta_{cs}x-\beta_{cs}\cos\beta_{cs}x)\mid_{0}^{1-\xi_{cs}} 
-=\frac{4\tilde{\rho}_xI_o(I_o-I_{c\ell})\ell}{[A_m]_{cs}e^{\frac{[\alpha_\ell]_{cs}}{2}\sin\beta_{cs}(1-\xi_{cs})([\alpha_\ell]_{cs}^{2}+4\beta_{cs}^{2})} 
-\times[\frac{[\alpha_\ell]_{cs}}{2}e^{\frac{[\alpha_\ell]_{cs}}{2}}\sin\beta_{cs}(1-\xi_{cs})-\beta_{cs}e^{\frac{[\alpha_\ell]_{cs}}{2}\cos\beta_{cs}(1-\xi_{cs})+\beta_{cs}e^{\frac{[\alpha_\ell]_{cs}\xi_{cs}}{2}}}]
-\end{equation}
->>>>>>> e22c8f556c8eae444b4ec02aeeac95c94655abbe
-
-
-
-
-
-
-
-
-
-
-
-\subsection{讨论4.16：FSV和CSV电流引线的保护}
-
-
-
-
-
-
-
-
-
-\subsection{讨论4.17：HTS电流引线——铜膨胀}
-
-
-
-
-
-
-
-\subsection{问题4.6：6 kA气冷HTS电流引线}
-
-
-
-
-
-
-
-
-
-\subsection{讨论4.18：“最优”CSV引线}
-
-
-
-
-
-
-
-
-\subsection{问题4.7：气冷铜电流引线}
-
-
-
-
-
-\subsection{讨论4.19：气冷支撑棒}
-
-
-
-
-
-\subsection{讨论4.20：低温下的结构材料}
-低温应用的结构材料必须承受大的应力，同时在大温区内传递很少的热流。
-一个可以用于检验材料适合低温应用的性质是$\tilde{k}/\sigma_U$，
-这是温度平均热导率(特定温度区间)和极限拉伸强度的比值。
-$Q_{\bar{vp}}$和$Q_{vp}$都正比于$\tilde{k}$。
-
-表4.18给出了G-10、304不锈钢、黄铜、红铜作为结构材料的相关参数值；列入红铜是为了展示它的不适合。
-基于$\tilde{k}/\sigma_U$，G-10要比不锈钢好；不过，不锈钢更适宜焊接。
-
-\textcolor{red}{表4.18}
+%\subsection{讨论4.9：残余气体的对流传热}
+%
+%\begin{equation}% 4.19
+%q_g=\eta_gP_g(T_{wm}-T_{cl})
+%\end{equation}
+%
+%
+%
+%\subsection{讨论4.10：真空泵系统}
+%
+%
+%
+%\subsection{讨论4.11：固态制冷工质/磁体}
+%\begin{equation}% 4.20
+%D_{th}=\frac{k}{\varrho c_p}
+%\end{equation}
+%\begin{equation}% 4.21
+%T_{sd}=\frac{1}{D_{th}}(\frac{\delta_{sd}}{\pi})^2
+%\end{equation}
+%
+%
+%\subsection{问题4.3：固态制冷剂冷却的磁体}
+%
+%\begin{equation*}% page260
+%h(15K)-h(10K)\simeq\frac{C_p(10K)+C_p(15K)}{2}(15K-10K)
+%\simeq\frac{(0.175J/cm^3K+0.475J/cm^3K)}{2}(5K)
+%\simeq1.625J/cm^3
+%\end{equation*}
+%\begin{equation*}% page260
+%[\Delta(10K \rightarrow15K)]_{15liter}^{0.25W}=\frac{(15000cm^3)(1.625J/cm^3)}{(0.25W)(3600s/h)}\simeq27.1h~30h
+%\end{equation*}
+%
+%
+%\begin{equation*}% S3.1
+%\nu_{N2}=\pi D\ell\Delta r_{N2}
+%\Delta r_{N2}=\frac{\mu_{N2}}{\pi D\ell}=\frac{(15000cm^3)}{\pi(90cm)(30cm)}=1.8cm
+%\end{equation*}
+%\begin{equation}% 4.21
+%\tau_{sd}=\frac{1}{D_{th}}(\frac{\delta_{sd}}{\pi})^2
+%=\frac{1}{(55\times10^{-2}cm^2/s)}(\frac{1.8cm}{\pi})^2~0.6s
+%\end{equation}
+%\begin{equation*}% page260
+%h(15K)-h(10K)\simeq\frac{C_p(10K)+C_p(15K)}{2}(15K-10K)
+%\simeq\frac{(0.400J/cm^3K+0.875J/cm^3K)}{2}(5K)
+%\simeq3.2J/cm^3
+%\end{equation*}
+%\begin{equation*}% page261
+%V_{Ne}(10K \rightarrow 15K)=\frac{(27.1h)(3600s/h)(2.5W)}{(3.2J/cm^3)(1000cm^3/liter)}
+%\simeq7.6liter~\frac{1}{2}\times15liter
+%\end{equation*}
+%\begin{equation*}% page261
+%V_{Ne}(10K \rightarrow 15K)=\frac{(0.486h)}{0.89h}(15liter)\simeq8.2liter\simeq\frac{1}{2}\times(15liter)
+%\end{equation*}
+%\begin{equation*}% page261
+%[\Delta t(15K \rightarrow 60K)]_{15liter}^{3.3W}=(\frac{15liter}{1liter})(\frac{1W}{3.3W})[\Delta t(15K\rightarrow60K)]_{1liter}^{1W}
+%\simeq(15)(0.303)(17.15h)
+%=78h~80h
+%\end{equation*}
+%\begin{equation*}% S3.2
+%\int_{20K}^{T_i}[C_p(T)]_{cu}dT=5J/cm^3
+%\end{equation*}
+%\begin{equation*}% page261
+%h(35K)-h(30K)\simeq\frac{C_p(30K)+C_p(35K)}{2}(35K-30K)
+%\simeq\frac{(1.24J/cm^3K+1.55J/cm^3K)}{2}(5K)
+%\simeq7.0J/cm^3
+%\end{equation*}
+%\begin{equation*}% page262
+%[\Delta t(30K \rightarrow 35K)]_{15liter}^{10W}=\frac{(15000cm^3)(7.0J/cm^3)}{(10W)(3,600s/h)}
+%\simeq2.9h~3h
+%\end{equation*}
+%\begin{equation*}% page262
+%h(40K)-h(35K)\simeq\frac{C_p(35K)+C_p(35.61K)}{2}(35.61K-35K)
+%+\Delta h(35.61K)+\frac{C_p(35.61K)+C_p(40K)}{2}(40K-35.61K)
+%\simeq\frac{(1.60J/cm^3K+1.62J/cm^3K)}{2}(0.6K)
+%+8.2J/cm^3+\frac{(1.29J/cm^3K+1.33J/cm^3K)}{2}(4.39K)
+%\simeq0.98J/cm^3+8.2J/cm^3+5.75J/cm^3\simeq14.9J/cm^3
+%[\Delta t(30K \rightarrow 35K)]_{15liter}^{10W}=\frac{(15,000 cm^3)(14.9J/cm^3)}{(10W)(3,600s/h)}
+%\simeq6.2h~6h
+%\end{equation*}
+%\begin{equation}% 4.21
+%\tau_{sd}=\frac{1}{D_{th}}(\frac{\delta_{sd}}{\pi})^2
+%\end{equation}
+%\begin{equation*}% page 262
+%p_{sd}=[h(35K)-h(30K)]\frac{\delta_{sd}}{\tau_{sd}}
+%=(7.0J/cm^3)\frac{(0.04 cm)}{(0.067s)}=4.2W/cm^2
+%\end{equation*}
+%
+%
+%
+%\subsection{讨论4.12：温升和场均匀性}
+%\begin{equation}% 4.22
+%\alpha(T)=\frac{1}{L_o}(\frac{\partial L}{\partial T})_P
+%\end{equation}
+%\begin{equation}% 4.23
+%\alpha(T)=aT+bT^3
+%\end{equation}
+%\begin{equation}% 4.24
+%(\frac{\Delta L}{L_o}_{cu})=\int_{10K}^{15K}(5\times10^{-9}T+3\times10^{-11}T^3)dT=0.62\times10^{-6}
+%\end{equation}
+%
+%
+%
+%\subsection{讨论4.13：低温热测}
+%
+%
+%
+%
+%\subsection{讨论4.14：气冷铜电流引线}
+%\begin{equation}% 4.25
+%Q_{in}=[Ak(T)\frac{dT}{dz}]_{z+\Delta z}+\dot{m}_Ic_p(T)T+\frac{\rho(T)I_{o}^{2}}{A}\Delta z
+%\end{equation}
+%\begin{equation}% 4.26
+%Q_{out}=[Ak(T)\frac{dT}{dz}]_z+\dot{m}_Ic_p(T)(T+\Delta T)
+%\end{equation}
+%\begin{equation}% 4.27
+%[Ak(T)\frac{dT}{dz}]_{z+\Delta z}-[Ak(T)\frac{dT}{dz}]_z-\dot{m}_Ic_p(T)\Delta T+\frac{\rho(T)I_{o}^{2}}{A}\Delta z=0
+%\end{equation}
+%\begin{equation}% 4.28
+%\frac{d[Ak(T)\frac{dT}{dz}]}{dz}-\dot{m}_Ic_p(T)\frac{dT}{dz}+\frac{\rho(T)I_{o}^{2}}{A}=0
+%\end{equation}
+%\begin{equation}% 4.29a
+%-\dot{m}_Ic_{p0}\frac{dT}{dz}\mid_{z=0}+\frac{\rho(T)I_{o}^{2}}{A}\simeq0
+%\end{equation}
+%\begin{equation}% 4.29b
+%\frac{dT}{dz}\mid_{z=0}\simeq\frac{\rho_0I_{o}^{2}}{A\dot{m}_Ic_{p0}}
+%\end{equation}
+%\begin{equation}% 4.30
+%Q_{I_o}=Ak(T_0)\frac{dT}{dz}\mid_{z=0}=\frac{k_0\rho_0I_{0}^{2}}{\dot{m}_Ic_{p0}}
+%\end{equation}
+%\begin{equation}% 4.31a
+%\dot{m}_I=\frac{Q_{I_o}}{h_L}
+%\end{equation}
+%\begin{equation}% 4.31b
+%\dot{m}_I=I_o\sqrt{\frac{k_0\rho_0}{c_{p0}h_L}}
+%\end{equation}
+%\begin{equation}% 4.32a
+%\frac{Q_{I_o}}{I_o}=\sqrt{\frac{h_Lk_0\rho_0}{c_{p0}}}
+%\end{equation}
+%\begin{equation}% 4.32b
+%\frac{Q_{I_o}}{I_o}\simeq\sqrt{\frac{(20.7\times10^3J/kg)(600W/mK)(2.5\times10^{-10}\Omega m)}{5.26\times10^3J/kgK}}
+%=7.7\times10^{-4}W/A=0.77mW/A~1mW/A
+%\end{equation}
+%\begin{equation}% 4.33
+%\dot{m}_Ic_p(T)\frac{dT}{dz}+\frac{\rho(T)I_{o}^{2}}{A}=0
+%\end{equation}
+%\begin{equation}% 4.34a
+%\int_{T_o}^{T_i}\frac{dT}{\rho(T)}=\int_{0}^{\ell}\frac{I_{o}^{2}dz}{A\dot{m}_I\tilde{c}_p}=\frac{I_{o}^{2}\ell}{A\dot{m}_I\tilde{c}_p}
+%\end{equation}
+%\begin{equation}% 4.34b
+%\int_{T_o}^{T_i}\frac{dT}{\rho(T)}\simeq1.2\times10^{11}K\Omega m
+%\end{equation}
+%\begin{equation}% 4.34c
+%\int_{T_o}^{T_i}\frac{dT}{\rho(T)}\simeq(\frac{I_{o}^{2}\ell}{Ac_{p0}})\frac{1}{I_0}\sqrt{\frac{c_{p0}h_L}{k_0\rho_0}}
+%\end{equation}
+%\begin{equation}% 4.35a
+%(\frac{I_o\ell}{A})_{ot} \equiv \zeta_o\simeq[\int_{T_0}^{T_i}\frac{dT}{\rho_(T)}]\sqrt{\frac{c_{p0}k_0 \rho_0}{h_L}}
+%\end{equation}
+%
+%
+%\begin{equation}% 4.35b
+%(\frac{I_o\ell}{A}_{ot})\simeq2.3\times10^7\ \mathrm{A/m}
+%\end{equation}
+%\begin{equation}% 4.36
+%A\tilde{k}\frac{d^2T}{dz^2}-\dot{m}_0\tilde{c}_p\frac{dT}{dz}=0
+%\end{equation}
+%\begin{equation}% 4.37
+%\tilde{k}=\frac{1}{T_\ell-T_0}\int_{T_0}^{T_\ell}k(T)dT
+%\end{equation}
+%\begin{equation}% 4.38a
+%T(z)=T_0+\frac{h_L}{\tilde{c}_p}[\exp(\frac{\dot{m}_0\tilde{c}_pz}{A\tilde{k}})-1]
+%\end{equation}
+%\begin{equation}% 4.38b
+%T(\ell)\equiv T_\ell=T_0+\frac{h_L}{\tilde{c}_p}[\exp(\frac{\dot{m}_0\tilde{c}_p\ell}{A\tilde{k}})-1]
+%\end{equation}
+%\begin{equation}% 4.39a
+%\frac{\dot{m}_0\tilde{c}_p\ell}{A\tilde{k}}=\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]
+%\end{equation}
+%\begin{equation}% 4.39b
+%\dot{m}_0=\frac{\tilde{k}}{\tilde{c}_p}(\frac{A}{\ell})\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]
+%\end{equation}
+%\begin{equation}% 4.40a
+%Q_0=\frac{\tilde{k}h_L}{\tilde{c}_p}(\frac{A}{\ell})\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]
+%\end{equation}
+%\begin{equation}% 4.40b
+%Q_0=\frac{\tilde{k}h_L}{\tilde{c}_p}(\frac{I_o}{\zeta_o})\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]
+%\end{equation}
+%\begin{equation}% 4.41
+%\frac{Q_0}{Q_{I_o}}\frac{\tilde{k}}{\tilde{c}_p\zeta_o}\sqrt{\frac{h_Lc_{p0}}{k_0p_0}}\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]
+%\end{equation}
+%\begin{equation}% 4.42
+%\frac{Q_0}{Q_{I_o}}\simeq0.69
+%\end{equation}
+%\begin{equation}% 4.43a
+%V_o=\frac{I_o}{A}\int_{0}^{\ell}\rho_{cu}dz
+%\end{equation}
+%\begin{equation}% 4.43b
+%V_o=\tilde{\rho}_{cu}(\frac{I_o\ell}{A})_{ot}=\tilde{\rho}_{cu}\zeta_o
+%\end{equation}
+%\begin{equation}% 4.44
+%\tilde{\rho}_{cu}=\frac{1}{\ell}\int_{0}^{\ell}\rho_{cu}dz\simeq\frac{1}{T_\ell-T_0}\int_{T_0}^{T_\ell}\rho_{cu}(T)dT
+%\end{equation}
+%\begin{equation}% 4.45
+%V_o\simeq2.3\times10^7\tilde{\rho}_{cu}\ \mathrm{V}
+%\end{equation}
+%\begin{equation}% 4.46
+%AC_{cu}(T)\frac{dT}{dt}=\frac{d}{dz}[Ak(T)\frac{dT}{dz}]-\dot{m}_Ic_p(T)\frac{dT}{dz}+\frac{\rho_{cu}(T)}{A}I_{o}^{2}
+%\end{equation}
+%\begin{equation}% 4.47
+%AC_{cu}(T)\frac{dT}{dt}=\frac{\rho_{cu}(T)}{A}I_{o}^{2}
+%\end{equation}
+%\begin{equation}% 4.48
+%C_{cu}(T)\frac{dT}{dt}\frac{\rho_{cu}(T)\zeta_{o}^{2}}{\ell^2}
+%\end{equation}
+%\begin{equation}% 4.49
+%\frac{dT}{dt}=\frac{\rho_o\zeta_{o}^{2}}{C_o\ell^2}+\frac{\gamma_{cu}\zeta_{o}^{2}}{C_o\ell^2}T=\frac{\rho_o}{\gamma_{cu}\tau_\ell}+\frac{T}{\tau_\ell}
+%\end{equation}
+%\begin{equation}% 4.50
+%\tau_\ell=\frac{C_o\ell^2}{\gamma_{cu}\zeta_{o}^{2}}
+%\end{equation}
+%\begin{equation}% 4.51
+%T(t)=Ke^{t/\tau_\ell}-\frac{\rho_o}{\gamma_{cu}}
+%\end{equation}
+%\begin{equation}
+%\tau_\ell=\frac{(3.5\times10^6\ \mathrm{J/m^3K})(1\ \mathrm{m})^2}{(68\times10^{-12}\ \mathrm{\Omega m/K})(2.5\times10^7\ \mathrm{A/m})^2}\sim90\ \mathrm{s}
+%\end{equation}
+%
+%
+%
+%\subsection{讨论4.15：干式引线——正常金属和高温超导体}
+%
+%\begin{equation}% 4.52
+%A\tilde{k}\frac{d^2T}{dz^2}+\frac{\tilde{\rho}I_{o}^{2}}{A}=0
+%\end{equation}
+%\begin{equation}% 4.53
+%Q_{I_o}=A\tilde{k}\frac{dT}{dz}\mid_{z=0}=\tilde{k}(T_\ell-T_0)(\frac{A}{\ell})+\frac{\tilde{\rho}I_{o}^{2}}{2}(\frac{\ell}{A})
+%\end{equation}
+%\begin{equation}% 4.12
+%(\frac{I_o\ell}{A})_{dr}=\sqrt{\frac{2\tilde{k}(T_\ell-T_0)}{\tilde{\rho}}}
+%\end{equation}
+%\begin{equation}% 4.54
+%[Q_{I_o}]_{dr}=I_o\sqrt{2\tilde{k}\tilde{\rho}(T_\ell-T_0)}
+%\end{equation}
+%\begin{equation}% 4.55
+%[Q_{I_hts}]_{dr}=k_{hts}A_{hts}\frac{(T_{\omega_{hts}}-T_0)}{\ell_{hts}}
+%\end{equation}
+%
+%
+%
+%
+%\subsection{问题4.4：气冷HTS电流引线——全超导型(FSV)}
+%
+%\begin{equation}% 4.56
+%\frac{d}{dz}\left[[A_m]_{fs}k_m(T)\frac{dT}{dz}\right]-[\dot{m}_h]_{fs}c_p(T)\frac{dT}{dz}=0
+%\end{equation}
+%
+%\begin{equation}% 4.57
+%[A_m]_{fs}\tilde{k}\frac{d^2T}{dz^2}-[\tilde{m}_h]_{fs}\tilde{c}_p\frac{dT}{dz}=0
+%\end{equation}
+%
+%\begin{equation}% 4.58
+%T(z)=T_0+(\frac{T_\ell-T_0}{e^{[\alpha]_{fs}}-1})[e^{[\alpha]_{fs}(z/\ell)}-1]
+%\end{equation}
+%
+%\begin{equation}% 4.59
+%[\alpha]_{fs}=\frac{[\dot{m}_h]_{fs}\tilde{c}_p\ell}{\tilde{k}[A_m]_{fs}}
+%\end{equation}
+%
+%\begin{equation}% 4.60
+%[Q_{in}]_{fs}=\frac{\tilde{k}[A_m]_{fs}h_L}{\tilde{c}_p\ell}\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
+%\end{equation}
+%
+%\begin{equation}% 4.61
+%[Q_\ell]_{fs}-[Q_{in}]_{fs}=[\dot{m}_h]_{fs}\tilde{c}_p(T_\ell-T_0)
+%\end{equation}
+%
+%\begin{equation}
+%[Q_{in}]_{fs}=\tilde{k}[A_m]_{fs}\frac{dT}{dz}\mid_0=[\dot{m}_h]_{fs}h_L
+%\end{equation}
+%
+%\begin{equation}
+%\tilde{k}[A_m]_{fs}\frac{dT}{dz}\mid_0=\tilde{k}[A_m]_{fs}(\frac{T_\ell-T_0}{e^{[\alpha]_{fs}-1}})\frac{[\alpha]_{fs}}{\ell}
+%=(\frac{T_\ell-T_0}{e^{[\alpha]_{fs}}-1})[\dot{m}_h]_{fs}\tilde{c}_p=[\dot{m}_h]_{fs}h_L
+%\end{equation}
+%
+%\begin{equation}
+%e^{[\alpha]_{fs}}=\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1
+%\end{equation}
+%
+%\begin{equation}
+%[\alpha]_{fs}=\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
+%\end{equation}
+%
+%\begin{equation}
+%[\dot{m}_h]_{fs}=\frac{\tilde{k}[A_m]_{fs}}{\tilde{c}_p\ell}\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
+%\end{equation}
+%
+%\begin{equation}% 4.60
+%[Q_{in}]_{fs}=\frac{\tilde{k}[A_m]_{fs}h_L}{\tilde{c}_p\ell}\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
+%\end{equation}
+%
+%\begin{equation}
+%[Q_\ell]_{fs}=\tilde{k}[A_m]_{fs}\frac{dT}{dz}\mid_\ell=[\dot{m}_h]_{fs}\tilde{c}_p(\frac{T_\ell-T_0}{e^{[\alpha]_{fs}-1}})e^{[\alpha]_{fs}}
+%=[\dot{m}_h]_{fs}h_L\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
+%=[\dot{m}_h]_{fs}\tilde{c}_p(T_\ell-T_0)+[\dot{m}_h]_{fs}h_L
+%\end{equation}
+%
+%\begin{equation}% 4.61
+%[Q_\ell]_{fs}-[Q_{in}]_{fs}=[\dot{m}_h]_{fs}\tilde{c}_p(T_\ell-T_0v)
+%\end{equation}
+%
+%
+%
+%
+%\subsection{问题4.5：气冷HTS引线——电流分配型(CSV)}
+%\begin{equation}% 4.62
+%T(\xi)=(\frac{T_{cs}-T_0}{e^{[\alpha_\ell]_{cs}\xi_{cs}}-1})(e^{[\alpha_\ell]_{cs}\xi}+\frac{e^{[\alpha_\ell]_{cs}\xi_{cs}T_0-T_{cs}}}{T_{cs}-T_0})
+%\end{equation}
+%
+%\begin{equation}% 4.63
+%[\alpha_\ell]_{cs}\equiv\frac{[\dot{m}_h]_{cs}\tilde{c}_p\ell}{\tilde{k}[A_m]_{cs}}
+%\end{equation}
+%
+%\begin{equation}% 4.64
+%[Q_{in}]_{cs}=\frac{\tilde{k}[A_m]_{cs}h_L}{\tilde{c}_p\ell_{cs}}\ln\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]
+%\end{equation}
+%
+%\begin{equation}% 4.65a
+%e^{[\alpha_\ell]_{cs}\xi_{cs}}=\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1
+%\end{equation}
+%
+%\begin{equation}% 4.65b
+%[\alpha_\ell]_{cs}=\frac{1}{\xi_{cs}}\ln\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]
+%\end{equation}
+%
+%\begin{equation}% 4.66
+%\tilde{k}[A_m]_{cs}\frac{d^2T}{dz^2}-[\dot{m}_h]_{cs}\tilde{c}_p\frac{dT}{dz}+\frac{\tilde{\rho}_xI_o(I_o-I_{c\ell})}{[A_m]_{cs}(T_\ell-T_{cs})}(T-T_{cs})=0
+%\end{equation}
+%
+%\begin{equation}% 4.67
+%T(\xi)=T_{cs}+\frac{(T_\ell-T_{cs})}{e^{\frac{[\alpha_\ell]_{cs}}{2}}\sin\beta_{cs}(1-\xi_{cs})}
+%\end{equation}
+%
+%\begin{equation}% 4.68a
+%\beta_{cs}=\sqrt{\frac{\tilde{\rho}_xI_o(I_o-I_{c\ell})\ell^2}{\tilde{k}[A_m]_{cs}^{2}(T_\ell-T_{cs})}-\frac{1}{4}(\frac{[\dot{m}_h]_{cs}\tilde{c}_p\ell}{\tilde{k}[A_m]_{cs}})^2}
+%\end{equation}
+%
+%\begin{equation}% 4.68b
+%\beta_{cs}=\sqrt{\frac{\tilde{\rho}_xI_o(I_o-I_{c\ell})\ell^2}{\tilde{k}[A_m]_{cs}^{2}(T_\ell-T_{cs})}-\frac{1}{4}[\alpha_\ell]_{cs}^{2}}
+%\end{equation}
+%
+%\begin{equation}% 4.68c
+%\beta_{cs}=\sqrt{\frac{\tilde{\rho}_xI_o(I_o-I_{c\ell})\ell^2}{\tilde{k}[A_m]_{cs}^{2}(T_\ell-T_{cs})}-\frac{1}{4}\{\frac{1}{\xi_{cs}}\ln\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]\}^2}
+%\end{equation}
+%
+%\begin{equation}% 4.69
+%[\alpha_\ell]_{cs}e^{\frac{[\alpha_\ell]_{cs}(1+\xi_{cs})}{2}}=\frac{\beta_{cs}}{\sin\beta_{cs}(1-\xi_{cs})}\left[\frac{\tilde{c}_p(T_\ell-T_{cs})}{h_L}\right]
+%\end{equation}
+%
+%\begin{equation}% 4.70a
+%e^{\frac{[\alpha_\ell]_{cs}}{2}}=\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]^{1/(2\xi_{cs})}
+%\end{equation}
+%
+%\begin{equation}% 4.70b
+%e^{\frac{[\alpha_\ell]_{cs}\xi_{cs}}{2}}=\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]^{1/2)}
+%\end{equation}
+%
+%\begin{equation}% 4.71
+%\frac{1}{\xi_{cs}}\left[\frac{h_L}{\tilde{c}_p(T_\ell-T_{cs})}\right]\ln\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]right]
+%\end{equation}
+%
+%
+%
+%\begin{equation}
+%[\alpha_\ell]_{cs}^{2}+4\beta_{cs}^{2}=\frac{d\tilde{\rho}_xI_o(I_o-I_{c\ell})\ell^2}{\tilde{k}[A_m]_{cs}(T_\ell-T_{cs})}
+%\end{equation}
+%
+%\begin{equation}
+%Q_j=\frac{\tilde{k}[A_m]_{cs}(T_\ell-T_{cs})}{\ell}
+%\times\left[\frac{1}{2}[\alpha_\ell]_{cs}-\beta_{cs}\cot\beta_{cs}(1-\xi_{cs})+\beta_{cs}\frac{e^{\frac{[\alpha_\ell]_{cs}\xi_{cs}}{2}}}{e^{\frac{[\alpha_\ell]_{cs}}{2}}\sin\beta_{cs}(1-\xi_{cs})}\right]
+%\end{equation}
+%
+%\begin{equation}
+%[Q_\ell]_{cs}+Q_j-[Q_{\ell_{cs}}]_{cs}=\frac{\tilde{k}[A_m]_{cs}(T_\ell-T_{cs})}{\ell}[\alpha_\ell]_{cs}
+%\end{equation}
+%
+%\begin{equation}% 4.72
+%[Q_{\ell_{cs}}]_{cs}-[Q_{in}]_{cs}=[\dot{m}_h]_{cs}\tilde{c}_p(T_{cs}-T_0)
+%\end{equation}
+%
+%\begin{equation}% 4.73
+%[Q_\ell]_{cs}+Q_j-[Q_{\ell_{cs}}]_{cs}=[\dot{m}_h]_{cs}\tilde{c}_p(T_\ell-T_{cs})
+%\end{equation}
+%
+%\begin{equation}% 4.74
+%[Q_\ell]_{cs}+Q_j-[Q_{\ell_{cs}}]_{cs}=[\dot{m}_h]_{cs}\tilde{c}_p(T_\ell-T_0)
+%\end{equation}
+%
+%\begin{equation}% 4.75
+%[Q_{in}]_{fs}^{n}=\frac{[\tilde{kA}]_{fs}^{n}h_L}{\tilde{c}_p\ell}\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
+%\end{equation}
+%
+%\begin{equation}% 4.76
+%[\tilde{kA}]_{fs}^{n}=\tilde{k}[A_m]_{fs}+\tilde{k}[A_n]_{fs}
+%\end{equation}
+%
+%\begin{equation}% 4.77a 4.77b
+%[\alpha_\ell]_{fs}^{n}=\frac{[\dot{m}_h]_{fs}^{n}\tilde{c}_p\ell}{\tilde{kA}_{fs}^{n}} 
+%=\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
+%\end{equation}
+%
+%\begin{equation}% 4.74
+%[Q_\ell]_{cs}+Q_j-[Q_{in}]_{cs}=\dot{m}_h\tilde{c}_p(T_\ell-T_0)
+%\end{equation}
+%\begin{equation}% 4.78
+%[Q_{in}]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}h_L}{\tilde{c}_p\ell_{cs}}\ln\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]
+%\end{equation}
+%\begin{equation}% 4.79
+%[\tilde{kA}]_{cs}^{n}=\tilde{k}[A_m]_{cs}+\tilde{k}[A_n]_{cs}
+%\end{equation}
+%\begin{equation}% 4.80a 4.80b
+%[\alpha_\ell]_{cs}^{n}=\frac{[\dot{m}_h]_{cs}^{n}\tilde{c}_p\ell}{\tilde{kA}_{cs}^{n}} 
+%=\frac{1}{\xi_{cs}}\ln\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]
+%\end{equation}
+%\begin{equation}% 4.81
+%\beta_{cs}^{n}=\sqrt{\frac{\tilde{\rho}_x\tilde{\rho}_nI_o(I_o-I_{c\ell})\ell^2}{[\tilde{kA}]_{cs}^{n}\tilde{\rho A}_{cs}^{n}(T_\ell-T_{cs})}-\frac{1}{4}([\alpha_\ell]_{cs}^{n})^2}
+%\end{equation}
+%\begin{equation}% 4.82
+%[\tilde{\rho A}]_{cs}^{n}=\tilde{\rho}_x[A_n]_{cs}+\tilde{\rho}_n[A_m]_{cs}
+%\end{equation}
+%\begin{equation}% 4.83
+%\frac{1}{\xi_{cs}}\left[\frac{h_L}{\tilde{c}_p(T_\ell-T_{cs})}\right]\ln\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]^{\frac{1+\xi_{cs}}{2\xi_{cs}}}=\frac{\beta_{cs}^{n}}{\sin\beta_{cs}^{n}(1-\xi_{cs})}
+%\end{equation}
+%\begin{equation}% 4.84
+%\frac{\tilde{k}_{cu}A_{cu}}{\ell_{cu}^{2}}\frac{d^2T}{d\zeta^2}-\frac{\dot{m}_{fl}\tilde{c}_{fl}}{\ell_{cu}}\frac{dT}{d\zeta}+\frac{T_{o}^{2}\gamma_{cu}}{A_{cu}}(T-T_o)+\frac{I_{o}^{2}\rho_o}{A_{cu}}=0
+%\end{equation}
+%
+%\begin{equation}% 4.85
+%\frac{d^2T}{d\zeta^2}-\left(\frac{\dot{m}_{fl}\tilde{c}_{fl}\ell_{cu}}{\tilde{k}_{cu}A_{cu}}\right)\frac{dT}{d\zeta}+\left(\frac{I_{o}^{2}\gamma_{cu}\ell_{cu}^{2}}{\tilde{k}_{cu}A_{cu}^{2}}\right)(T-T_o)=0
+%\end{equation}
+%
+%\begin{equation}% 4.86
+%\theta(\zeta)=\frac{T_{\ell_{cu}}-T_o}{e^{\alpha_{cu}}\sin\beta_{cu}}e^{\alpha_{cu}\zeta}\sin\beta_{cu}\zeta
+%\end{equation}
+%
+%\begin{equation}% 4.87a
+%\alpha_{cu}=\frac{\dot{m}_{fl}\tilde{c}_{fl}\ell_{cu}}{2\tilde{k}_{cu}A_{cu}}
+%\end{equation}
+%
+%\begin{equation}% 4.87b 4.87c
+%\beta_{cu}=\sqrt{\frac{T_{o}^{2}\gamma_{cu}\ell_{cu}^{2}}{\tilde{k}_{cu}A_{cu}^{2}}-\left(\frac{\dot{m}_{fl}\tilde{c}_{fl}\ell_{cu}}{2\tilde{k}_{cu}A_{cu}}\right)^2}
+%=\sqrt{\frac{T_{o}^{2}\gamma_{cu}\ell_{cu}^{2}}{\tilde{k}_{cu}A_{cu}^{2}}-\alpha_{cu}^{2}}
+%\end{equation}
+%
+%\begin{equation}% 4.88a
+%\alpha_{cu}\sin\beta_{cu}+\beta_{cu}\cos\beta_{cu}=0
+%\end{equation}
+%
+%\begin{equation}% 4.88b
+%\alpha_{cu}+\beta_{cu}\cot\beta_{cu}=0
+%\end{equation}
+%
+%\begin{equation}% 4.89
+%Q_o=\frac{\tilde{k}_{cu}A_{cu}}{\ell_{cu}}\frac{d\theta(\zeta)}{d\zeta}\mid_0=\frac{\tilde{k}_{cu}A_{cu}\theta_{\ell_{cu}}\beta_{cu}}{\ell_{cu}e^{\alpha_{cu}}\sin\beta_{cu}}\simeq 0
+%\end{equation}
+%
+%\begin{equation}% 4.90
+%Q_j=\frac{I_{o}^{2}\gamma_{cu}}{A_{cu}}\int_{0}^{\ell_{cu}}\theta(z)dz 
+%=\frac{I_{o}^{2}\gamma_{cu}\ell_{cu}}{A_{cu}}\int_{0}^{1}\theta(\zeta)d\zeta
+%\end{equation}
+%
+%\begin{equation}% 4.91a
+%Q_j=\frac{I_{o}^{2}\gamma_{cu}\ell_{cu}(T_{\ell_{cu}}-T_o)}{A_{cu}e^{\alpha_{cu}}\sin\beta_{cu}}\int_{0}^{1}e^{\alpha_{cu}\zeta}\sin\beta_{cu}\zeta d\zeta 
+%=\frac{I_{o}^{2}\gamma_{cu}\ell_{cu}(T_{\ell_{cu}}-T_o)}{A_{cu}(\alpha_{cu}^{2}+\beta_{cu}^{2})}(\alpha_{cu}-\beta_{cu}\cot\beta_{cu}) 
+%+(terms containing e^{-\alpha_{cu}}) 
+%\simeq\frac{\tilde{k}_{cu}A_{cu}}{\ell_{cu}}(T_{\ell_{cu}}-T_o)(\alpha_{cu}-\beta_{cu}\cot\beta_{cu})
+%\end{equation}
+%
+%\begin{equation}% 4.91b
+%Q_j=\frac{\tilde{k}_{cu}A_{cu}}{\ell_{cu}}(T_{\ell_{cu}}-T_o)(\alpha_{cu}+\alpha_{cu})
+%\end{equation}
+%
+%\begin{equation}% 4.92
+%Q_j=\dot{m}_{fl}\tilde{c}_{fl}(T_{\ell_{cu}}-T_o)
+%\end{equation}
+%
+%\begin{equation}% 4.93
+%Q_{j_{\ell q}}=\frac{\rho_oI_{o}^{2}\ell_{\ell q}}{A_{cu}}=\dot{m}_{fl}h_{n2}
+%\end{equation}
+%
+%\begin{equation}% 4.94
+%\alpha_{cu}^{\prime}+\beta_{cu}^{\prime}\cot\beta_{cu}^{\prime}=0
+%\end{equation}
+%
+%\begin{equation}% 4.95a
+%\alpha_{cu}^{\prime}=\frac{\dot{m}_{fl}\tilde{c}_{fl}(\ell_{cu}-\ell_{\ell q})}{2\tilde{k}_{cu}A_{cu}}
+%\end{equation}
+%
+%\begin{equation}% 4.95b
+%\beta_{cu}^{\prime}=\sqrt{\frac{I_{o}^{2}\gamma_{cu}(\ell_{cu}-\ell_{\ell q})^2}{\tilde{k}_{cu}A_{cu}^{2}}-(\alpha_{cu}^{\prime})^2}
+%\end{equation}
+%
+%\begin{equation}
+%X_{at}\%B=\frac{100X_{wt}\%B\times W_A}{(100-X_{wt}\%B)\times W_B+X_{wt}\%B\times W_A}
+%\end{equation}
+%
+%\begin{equation}% 4.60
+%[Q_{in}]_{fs}=\frac{\tilde{k}[A_m]_{fs}h_L}{\tilde{c}_p\ell}\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right] 
+%=\frac{(0.327\ \mathrm{W/cmK})(0.461\ \mathrm{cm^2})(20.7\ \mathrm{J/g})}{(5.28\ \mathrm{J/gK})(20\ \mathrm{cm})} 
+%\times\ln\left[\frac{(5.28\ \mathrm{J/gK})(77.3\ \mathrm{K}-4.2\ \mathrm{K})}{(20.4\ \mathrm{J/g})}+1\right] 
+%=0.0798\ \mathrm{W}
+%\end{equation}
+%
+%\begin{equation}
+%[Q_\ell]_{fs}=[\dot{m}_h]_{fs}h_L\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right] 
+%=(0.00385\ \mathrm{g/s})(20.7\ \mathrm{J/g})\left[\frac{(5.28\ \mathrm{J/gK})(77.3\ \mathrm{K}-4.2\ \mathrm{K})}{(20.7\ \mathrm{J/g})}+1\right] 
+%=1.556\ \mathrm{W}
+%\end{equation}
+%
+%\begin{equation}
+%[\tilde{kA}]_{fs}^{n}=(0.327\ \mathrm{W/cm K})(0.416\ \mathrm{cm^2})+(0.350\ \mathrm{W/cmK})(1.735\ \mathrm{cm^2}) 
+%=0.136\ \mathrm{W cm/K}+0.607\ \mathrm{W cm/K}=0.743\ \mathrm{W cm/K}
+%\end{equation}
+%
+%\begin{equation}% 4.75
+%[Q_{in}]_{fs}^{n}=\frac{\tilde{kA}_{fs}^{n}h_L}{\tilde{c}_p\ell}\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right] 
+%=\frac{(0.743\ \mathrm{W cm/K})(20.7\ \mathrm{J/g})}{(5.28\ \mathrm{J/gK})(20\ \mathrm{cm})} 
+%\times\ln\left[\frac{(5.28\ \mathrm{J/gk})(77.3\ \mathrm{K}-4.2\ \mathrm{K})}{(20.7\ \mathrm{J/g})}+1\right]=0.4337\ \mathrm{W}
+%\end{equation}
+%
+%\begin{equation}
+%[Q_\ell]_{fs}^{n}=[\dot{m}_h]_{fs}^{n}h_L\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right] 
+%\simeq"(0.021\ \mathrm{g/s})(20.7\ \mathrm{J/g})\left[\frac{(5.28\ \mathrm{J/gk})(77.3\ \mathrm{K}-4.2\ \mathrm{K})}{(20.7\ \mathrm{J/g})}+1\right]=8.540\ \mathrm{W}
+%\end{equation}
+%
+%\begin{equation}% 4.96a
+%\sin\beta_{cs}^{n}(1-\xi)=1
+%\end{equation}
+%
+%\begin{equation}% 4.96b
+%\beta_{cs}^{n}(1-\xi_{cs})=\pi/2
+%\end{equation}
+%
+%\begin{equation}% 4.97
+%[Q_\ell]_{cs}^{n}+[Q_j]_{cs}^{n}-[Q_{in}]_{cs}^{n}=[\dot{m}_h]_{cs}^{n}\tilde{c}_p(T_\ell-T_0)
+%\end{equation}
+%
+%\begin{equation}% 4.98
+%[Q_\ell]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}[\frac{1}{2}[\alpha_\ell]_{cs}^{n}+\beta_{cs}^{n}\cot\beta_{cs}^{n}(1-\xi_{cs})]
+%\end{equation}
+%
+%\begin{equation}% 4.99
+%[Q_j]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\left[\frac{1}{2}[\alpha_\ell]_{cs}^{n}+\beta_{cs}^{n}\cot\beta_{cs}^{n}(1-\xi_{cs}) 
+%+\beta_{cs}^{n}\frac{e^{\frac{[\alpha_\ell]_{cs}^{n}\xi_{cs}}{2}}}{e^{\frac{[\alpha_\ell]_{cs}^{n}}{2}}\sin\beta_{cs}^{n}(1-\xi_{cs})}\right]
+%\end{equation}
+%
+%\begin{equation}% 4.100
+%[Q_\ell]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\times\frac{1}{2}[\alpha_\ell]_{cs}^{n}
+%\end{equation}
+%
+%\begin{equation}% 4.101
+%[Q_j]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\left[\frac{1}{2}[\alpha_\ell]_{cs}^{n}+\beta_{cs}^{n}e^{\frac{[\alpha_\ell]_{cs}^{n}(\xi_{cs}-1)}{2}}\right]
+%\end{equation}
+%
+%\begin{equation}
+%I_c(T)=23,325-250T[\ \mathrm{A}]
+%\end{equation}
+%
+%\begin{equation}% 4.79
+%[\tilde{kA}]_{cs}^{n}=\tilde{k}[A_m]_{cs}+\tilde{k}[A_n]_{cs} 
+%=(0.327\ \mathrm{W/cmK})(0.2775\ \mathrm{cm^2})+(0.350\ \mathrm{W/cmK})(1.735\ \mathrm{cm^2}) 
+%=0.0907\ \mathrm{W cm/K}+0.607\ \mathrm{W cm/K}=0.698\ \mathrm{W cm/K}
+%\end{equation}
+%
+%\begin{equation}% 4.82
+%[\tilde{\rho A}]_{cs}^{n}=\tilde{\rho}_x[A_m]_{cs}+\tilde{\rho}_n[A_n]_{cs} 
+%=(1\mu\Omega\ \mathrm{cm})(1.735\ \mathrm{cm^2})+(2.25\mu\Omega\ \mathrm{cm})(0.2775\ \mathrm{cm^2}) 
+%=1.735\mu\Omega\ \mathrm{cm^3}+0.624\mu\Omega\ \mathrm{cm^3}=2.359\mu\Omega\ \mathrm{cm^3}
+%\end{equation}
+%
+%\begin{equation}% 4.80b
+%[\alpha_\ell]_{cs}^{n}=\frac{1}{\xi_{cs}^{n}}\ln\left[\frac{\tilde{c}_p(T_{cs}-Y_0)}{h_L}+1\right] 
+%=\frac{1}{0.94505}\ln\left[\frac{(5.28\ \mathrm{J/gK})(69.3\ \mathrm{K}-4.2\ \mathrm{K})}{(20.7\ \mathrm{J/g})}+1\right] 
+%=\frac{1}{0.94505}\ln(17.605)=3.035
+%\end{equation}
+%
+%\begin{equation}
+%\frac{1}{4}([\alpha_\ell]_{cs}^{n})^2=2.303
+%\end{equation}
+%
+%\begin{equation}% 4.81
+%\beta_{cs}^{n}=\sqrt{\frac{\tilde{\rho}_x\tilde{\rho}_nI_o(I_o-I_{c\ell})\ell^2}{[\tilde{kA}]_{cs}^{n}[\tilde{\rho A}]_{cs}^{n}(T_\ell-T_{cs})}-\frac{1}{4}([\alpha_\ell]_{cs}^{n})^2}
+%28.586=\sqrt{\frac{(1\mu\Omega\ \mathrm{cm})(2.25\mu\Omega\ \mathrm{cm})(6\ \mathrm{kA})(6\ \mathrm{kA}-4\ \mathrm{kA})(20\ \mathrm{cm})^2}{(0.698\ \mathrm{W cm/K})(2.359\mu\Omega\ \mathrm{cm^3})(77.3\ \mathrm{K}-69.3\ \mathrm{K})}-2.303}
+%28.586\simeq\sqrt{817.58}=28.593
+%\end{equation}
+%
+%\begin{equation}% 4.78
+%[Q_{in}]_{cs}^{n}=\frac{\tilde{kA}_{cs}^{n}h_L}{\tilde{c}_p\ell_{cs}}\ln\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right] 
+%=\frac{(0.698\ \mathrm{W cm/K})(20.7\ \mathrm{J/g})}{(5.28\ \mathrm{J/gK})(18.9\ \mathrm{cm})}\ln\left[\frac{(5.28\ \mathrm{J/gK})(69.3\ \mathrm{K}-4.2\ \mathrm{K})}{(20.7\ \mathrm{J/g})}+1\right] 
+%=(0.1448\ \mathrm{W})(2.868)=0.4153\ \mathrm{W}
+%\end{equation}
+%
+%\begin{equation}% 4.100
+%[Q_\ell]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\left(\frac{[\alpha_\ell]_{cs}^{n}}{2}\right) 
+%=\frac{(0.698\ \mathrm{W cm/K})(77.3\ \mathrm{K}-69.3\ \mathrm{K})}{(20\ \mathrm{cm})}\left(\frac{3.035}{2}\right)=0.4237\ \mathrm{W}
+%\end{equation}
+%
+%\begin{equation}% 4.101
+%[Q_j]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\left[\frac{[\alpha_\ell]_{cs}^{n}}{2}+\beta_{cs}^{n}+\beta_{cs}^{n}e^{\frac{[\alpha_\ell]_{cs}^{n}(\xi_{cs}-1)}{2}}\right] 
+%=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\left[\left(\frac{3.035}{2}\right)+(28.586)e^{\frac{3.035(0.645-1)}{2}}\right] 
+%=\frac{(0.698\ \mathrm{W cm/K})(77.3\ \mathrm{K}-69.3\ \mathrm{K})}{(20\ \mathrm{cm})}\left[\left(\frac{3.035}{2}\right)+26.30\right]=7.7743\ \mathrm{W}
+%\end{equation}
+%
+%\begin{equation}% 4.97
+%[Q_\ell]_{cs}^{n}+[Q_f]_{cs}^{n}-[Q_{in}]_{cs}^{n}=[\dot{m}_h]_{cs}^{n}\tilde{c}_p(T_\ell-T_0)
+%0.4237\ \mathrm{W}+7.7658-0.4153=7.7742\ \mathrm{W} 
+%\simeq 7.7743\ \mathrm{W}             
+%\end{equation}
+%
+%\begin{equation}% 4.97
+%[Q_\ell]_{cs}+Q_j-[Q_{in}]_{cs}=[\dot{m}_h]_{cs}\tilde{c}_p(T_\ell-T_0)
+%\end{equation}
+%
+%\begin{equation}
+%T(0)=(\frac{T_{cs}-T_0}{e^{[\alpha_\ell]_{cs}\xi_{cs}}-1})(1+\frac{e^{[\alpha_\ell]_{cs}\xi_{cs}}T_0-T_{cs}}{T_{cs}-T_0}) =(\frac{T_{cs}-T_0}{e^{[\alpha_\ell]_{cs}\xi_{cs}}-1})[\frac{T_0(e^{[\alpha_\ell]_{cs}\xi_{cs}}-1)}{T_{cs}-T_0}]=T_0
+%\end{equation}
+%
+%\begin{equation}
+%T(\xi_{cs})=(\frac{T_{cs}-T_0}{e^{[\alpha_\ell]_{cs}\xi_{cs}}-1})(e^{[\alpha_\ell]_{cs}\xi_{cs}}+\frac{e^{[\alpha_\ell]_{cs}\xi_{cs}}T_0-T_{cs}}{T_{cs}-T_0}) =(\frac{T_{cs}-T_0}{e^{[\alpha_\ell]_{cs}\xi_{cs}}-1})[\frac{T_{cs}(e^{[\alpha_\ell]_{cs}\xi_{cs}}-1)}{T_{cs}-T_0}]=T_{cs}
+%\end{equation}
+%
+%\begin{equation}
+%[Q_{in}]_{cs}=\frac{\tilde{k}[A_m]_{cs}}{\ell}\frac{dT}{d\xi}\mid_{\xi=0}
+%\end{equation}
+%
+%\begin{equation}
+%[Q_{in}]_{cs}=\frac{\tilde{k}[A_m]_{cs}}{\ell}(\frac{T_{cs}-T_0}{e^{[\alpha_\ell]_{cs}\xi_{cs}}-1})[\alpha_\ell]_{cs}\ell_{cs}=[\dot{m}_h]_{cs}h_L
+%\end{equation}
+%
+%\begin{equation}% 4.65a
+%e^{[\alpha_\ell]_{cs}\xi_{cs}}=\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1
+%\end{equation}
+%
+%\begin{equation}% 4.65b
+%[\alpha_\ell]_{cs}=\frac{1}{\xi_{cs}}\ln[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1]
+%\end{equation}
+%
+%\begin{equation}% 4.64
+%[Q_{in}]_{cs}=\frac{\tilde{k}[A_m]_{cs}h_L}{\tilde{c}_p\ell_{cs}}\ln[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1]
+%\end{equation}
+%
+%\begin{equation}
+%\frac{dT}{d\xi}\mid_{\ell_{cs}}=\frac{[\alpha_\ell]_{cs}e^{[\alpha_\ell]_{cs}\xi_{cs}}(T_{cs}-T_0)}{(e^{[\alpha_\ell]_{cs}\xi_{cs}}-1)}
+%\end{equation}
+%
+%\begin{equation}
+%\frac{dT}{d\xi}\mid_{\ell_{cs}}=\frac{\beta_{cs}e^{\frac{[\alpha_\ell]{cs}}{2}}(T_\ell-T_{cs})}{e^{\frac{[\alpha_\ell]_{cs}}{2}}\sin\beta_{cs}(1-\xi_{cs})}
+%\end{equation}
+%
+%\begin{equation}
+%\frac{[\alpha_\ell]_{cs}e^{[\alpha_\ell]_{cs}\xi_{cs}}(T_\ell-T_{cs})}{(e^{[\alpha_\ell]_{cs}\xi_{cs}}-1)}=\frac{\beta_{cs}e^{\frac{[\alpha_\ell]_{cs}\xi_{cs}}{2}(T_\ell-T_{cs})}{e^{\frac{[\alpha_\ell]_{cs}}{2}}\sin\beta_{cs}(1-\xi_{cs})}
+%\end{equation}
+%
+%\begin{equation}
+%	[Q_{\ell_{cs}}]_{cs}=\frac{\tilde{k}[A_m]_{cs}}{\ell}\frac{dT}{d\xi}\mid_{\ell_{cs}} 
+%	=\tilde{k}[A_m]_{cs}\frac{[\alpha_\ell]_{cs}e^{[\alpha_\ell]_{cs}\xi_{cs}}(T_{cs}-T_0)}{\ell(e^{[\alpha_\ell]_{cs}\xi_{cs}}-1)}
+%\end{equation}
+%
+%\begin{equation}
+%	[Q_{\ell_{cs}}]_{cs}=\tilde{k}[A_m]_{cs}\frac{[\dot{m}_h]_{cs}\tilde{c}_p\ell}{\tilde{k}[A_m]_{cs}}\times\frac{\left[ \frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right] (T_{cs}-T_0)}{\ell\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}\right]} 
+%	=[\dot{m}_h]_{cs}h_L\left[ \frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]
+%\end{equation}
+%
+%\begin{equation}% 4.72
+%	[Q_{\ell_{cs}}]_{cs}-[Q_{in}]_{cs}=[\dot{m}]_{cs}\tilde{c}_p(T_{cs}-T_0)
+%\end{equation}
+%
+%\begin{equation}
+%	[Q_\ell]_{cs}=\frac{\tilde{k}[A_m]_{cs}}{\ell}\frac{dT}{d\xi}\mid_\ell=\frac{\tilde{c}[A_m]_{cs}(T_\ell-T_{cs})}{\ell e^{[\alpha_\ell]_{cs}}\sin\beta_{cs}(1-\xi_{cs})} 
+%	\times e^{[\alpha_\ell]_{cs}}[\frac{1}{2}[\alpha_\ell]_{cs}\sin\beta_{cs}(1-\beta_{cs})+\beta_{cs}\cos\beta_{cs}(1-\xi_{cs})] 
+%	=\frac{\tilde{c}[A_m]_{cs}(T_\ell-T_{cs})}{\ell}[\frac{1}{2}[\alpha_\ell]_{cs}+\beta_{cs}\cot\beta_{cs}(1-\xi_{cs})]
+%\end{equation}
+%
+%\begin{equation}
+%	[Q_{\ell_{cs}}]_{cs}=\frac{\tilde{k}[A_m]_{cs}}{\ell}\frac{dT}{d\xi}\mid_{\ell_{cs}}=\frac{\tilde{c}[A_m]_{cs}(T_\ell-T_{cs})}{\ell}\left[\beta_{cs}\frac{e^{\frac{[\alpha_\ell]_{cs}\xi_{cs}}{2}}}{e^{\frac{[\alpha_\ell]_{cs}}{2}}\sin\beta_{cs}(1-\xi_{cs})}\right]
+%\end{equation}
+%
+%\begin{equation}
+%	Q_j=\frac{\tilde{\rho}_xI_o(I_o-I_{c\ell})\ell}{[A_m]_{cs}e^{\frac{[\alpha_\ell]_{cs}}{2}\sin\beta_{cs}(1-\xi_{cs})}\int_{xi_{cs}}^{1}e^{[\alpha_\ell]_{cs}\xi}\sin\beta_{cs}(\xi-\xi_{cs})d\xi
+%\end{equation}
+%
+%\begin{equation}
+%Q_j=\frac{4\tilde{\rho}_xI_o(I_o-I_{c\ell})\ell e^{\frac{[\alpha_\ell]_{cs}\xi_{cs}}{2}}{[A_m]_{cs}e^{\frac{[\alpha_\ell]_{cs}}{2}\sin\beta_{cs}(1-\xi_{cs})([\alpha_\ell]_{cs}^{2}+4\beta_{cs}^{2})} 
+%\times\mid e^{\frac{[\alpha_\ell]_{cs}}{2}x}(\frac{[\alpha_\ell]_{cs}}{2}\sin\beta_{cs}x-\beta_{cs}\cos\beta_{cs}x)\mid_{0}^{1-\xi_{cs}} 
+%=\frac{4\tilde{\rho}_xI_o(I_o-I_{c\ell})\ell}{[A_m]_{cs}e^{\frac{[\alpha_\ell]_{cs}}{2}\sin\beta_{cs}(1-\xi_{cs})([\alpha_\ell]_{cs}^{2}+4\beta_{cs}^{2})} 
+%\times[\frac{[\alpha_\ell]_{cs}}{2}e^{\frac{[\alpha_\ell]_{cs}}{2}}\sin\beta_{cs}(1-\xi_{cs})-\beta_{cs}e^{\frac{[\alpha_\ell]_{cs}}{2}\cos\beta_{cs}(1-\xi_{cs})+\beta_{cs}e^{\frac{[\alpha_\ell]_{cs}\xi_{cs}}{2}}}]
+%\end{equation}
+%
+%
+%
+%
+%
+%
+%
+%
+%\subsection{讨论4.16：FSV和CSV电流引线的保护}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%\subsection{讨论4.17：HTS电流引线——铜膨胀}
+%
+%
+%
+%
+%
+%
+%
+%\subsection{问题4.6：6 kA气冷HTS电流引线}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%\subsection{讨论4.18：“最优”CSV引线}
+%
+%
+%
+%
+%
+%
+%
+%
+%\subsection{问题4.7：气冷铜电流引线}
+%
+%
+%
+%
+%
+%\subsection{讨论4.19：气冷支撑棒}
+%
+%
+%
+%
+%
+%\subsection{讨论4.20：低温下的结构材料}
+%低温应用的结构材料必须承受大的应力，同时在大温区内传递很少的热流。
+%一个可以用于检验材料适合低温应用的性质是$\tilde{k}/\sigma_U$，
+%这是温度平均热导率(特定温度区间)和极限拉伸强度的比值。
+%$Q_{\bar{vp}}$和$Q_{vp}$都正比于$\tilde{k}$。
+%
+%表4.18给出了G-10、304不锈钢、黄铜、红铜作为结构材料的相关参数值；列入红铜是为了展示它的不适合。
+%基于$\tilde{k}/\sigma_U$，G-10要比不锈钢好；不过，不锈钢更适宜焊接。
+%
+%\textcolor{red}{表4.18}
