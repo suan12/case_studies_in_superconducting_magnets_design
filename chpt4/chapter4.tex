@@ -778,15 +778,46 @@ $\Delta T_{op}/T_{op}\simeq 0$。其中，$\Delta T_{op}$是最冷点(接近二�
 
 
 \subsection{讨论4.8：辐射传热}
+本节我们以混合III磁体为例，讨论由辐射传入恒温容器内的热。辐射传热的理论基础是Stefan-Boltzmann方程：
 \begin{equation}% 4.15
 q_r=\epsilon_r\sigma T^4
 \end{equation}
+
+式中，$q_r$是温度为$T$[K]的表面的辐射热流$[\mathrm{W/m^2}]$。$\epsilon_r$是$T$下的总发射系数。
+$\sigma$是Stefan-Boltzmann常数，$5.67\times 10^{-8}\ \mathrm{W/m^2 K^4}$。
+实际计算低温容器的辐射热输入并不像上式给出的这样直接，主要是确定辐射热量的两个表面的$\epsilon_r$准确值很难。
+对于发射系数分别为$\epsilon_{cl}$和$\epsilon_{wm}$的平行板，一板处于低温$T_{cl}$，一板处于高温$T_{wm}$，
+有效总发射系数可由下式给出：
 \begin{equation}% 4.16
 \epsilon_r=\frac{\epsilon_{cl}\epsilon_{wm}}{\epsilon_{cl}+\epsilon_{wm}-\epsilon_{cl}\epsilon_{wm}}
 \end{equation}
+
+尽管理论上区分平行板、圆柱、球等配置方式，但多数低温容器中，平行板公式可用于上述三种配置
+(非平行配置通常是有不等面积的表面)。
+这是因为：1) 多数低温容器中，分隔两个板的军力通常远小于表面的尺度；2) 由这种几何近似引起的热辐射计算误差远小于
+表面发射系数计算的不确定性误差。于是，方程4.15修正为：
 \begin{equation}% 4.17
 q_r=\epsilon_r\sigma(T_{wm}^4-T_{cl}^4)
 \end{equation}
+
+表4.8给出了一些材料在两种特定温度下的$\epsilon_r$和$q_r$典型值。
+
+\textbf{实例}\qquad 这里我们首先计算混合III的4.2 K磁体腔接收的来自20 K和80 K屏的总热输入。
+磁体腔表面均为机械抛光的不锈钢，面积为：1) 面向20 K辐射屏为7.3 $\mathrm{m^2}$；2)面向80 K辐射屏为2.8 $\mathrm{m^2}$。
+为了简化计算，我们使用方程4.17的平行板模型，并且认为冷热面积相同。
+使用表4.8给出的机械抛光不锈钢表面$q_r$近似值，有：
+\begin{align*}
+\mbox{20 K板对腔体：} &Q_r\simeq (0.4\times 10^{-3}\ \mathrm{W/m^2})(7.3\ \mathrm{m^2})\simeq 3\ \mathrm{mW}\\
+\mbox{80 K板对腔体：} &Q_r\simeq (162\times 10^{-3}\ \mathrm{W/m^2})(2.8\ \mathrm{m^2})\simeq 3\ \mathrm{mW}
+\end{align*}
+
+\textcolor{red}{表4.8}
+
+我们还可以计算
+
+
+
+
 \begin{equation}% 4.18
 q_r=\frac{\epsilon_r}{N_i+1}\sigma(T_{wm}^4-T_{cl}^4)
 \end{equation}
