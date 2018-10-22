@@ -704,7 +704,7 @@ e) 从点$c$到点$d$的热-冷流的总焓减必须等于从点$h$到点$i$的�
 
 从S2.5中解出$\dot{m}_{\ell r}$：
 \begin{align*}% page 246
-\dot{m}_{\ell r}&=\frac{\{\dot{m}_{he}[h_{he}(30\ \mathrm{K},10\ \mathrm{atm})-h_{he}(8\ \mathrm{K},10\ \mathrm{atm})]-\dot{m}_v[h_v(30\ \mathrm{K},1\ \mathrm{atm})-h_{v}(4.22\ \mathrm{K},1\ \mathrm{atm})]\}}{h_v(30\ \mathrm{K},1\ \mathrm{atm})-h_{l}(4.22\ \mathrm{K},1\ \mathrm{atm})}\\\notag
+\dot{m}_{\ell r}&=\frac{\{\dot{m}_{he}[h_{he}(30/10)-h_{he}(8/10)]-\dot{m}_v[h_v(30/1)-h_{v}(4.22/1)]\}}{h_v(30/1)-h_{l}(4.22/1)}\\\notag
 &=\frac{(1\ \mathrm{g/s})(168.4\ \mathrm{J/g}-33.44\ \mathrm{J/g})-(0.798 \ \mathrm{g/s})(170.2J\ \mathrm{J/g}-30.13\ \mathrm{J/g})}{(170.2\ \mathrm{J/g}-9.71\ \mathrm{J/g})}\\\notag
 &\simeq 0.144 \ \mathrm{g/s}
 \end{align*}
@@ -719,7 +719,7 @@ f) 从点$a^\prime$到点$b$的热-冷流热损耗等于从点$i^\prime$到点$j
 
 方程S2.6等式左侧：
 \begin{align*}% S2.7a
-\dot{m}_{he}[h_{he}(295\ \mathrm{K},10\ \mathrm{atm})-h_{he}(46\ \mathrm{K},10\ \mathrm{atm})]
+\dot{m}_{he}[h_{he}(295\ \mathrm{K},10\ \mathrm{atm})&-h_{he}(46\ \mathrm{K},10\ \mathrm{atm})]\\\notag
 &=(1\ \mathrm{g/s})(1550.0\ \mathrm{J/g}-253.9\ \mathrm{J/g})\\\notag
 &\simeq 1296\ \mathrm{W} \tag{S2.7a}
 \end{align*}
@@ -771,7 +771,7 @@ $\Delta T_{op}/T_{op}\simeq 0$。其中，$\Delta T_{op}$是最冷点(接近二�
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.6]{chpt4/figs/fig4.15.eps}
+	\includegraphics[scale=0.5]{chpt4/figs/fig4.15.eps}
 	\caption{制冷回环器冷却磁体示意图。}
 \end{figure}
 
@@ -927,127 +927,86 @@ $\eta_g$不仅与温度$T_{cl}$和$T_{wm}$有关，还和适应系数有关。30
 \subsection{讨论4.11：固态制冷工质/磁体}
 \textbf{A. 设计和运行概念}
 
-Generally, a superconducting magnet, LTS or HTS, remains fully superconducting
-and operates “stably” over a temperature range from its nominal operating temperature $T_{op}$ 
-to a maximum operating temperature. Chiefly because of a much
-greater critical temperature, $T_c$, of HTS compared with that of LTS, this range,
-$\Delta T_{op}$ is an order of magnitude greater for an HTS magnet than an LTS magnet
-of comparable size and field performance: typically $\Delta T_{op}$ > 1 K for HTS, while
-$\Delta T_{op}$< 1 K for LTS. (This concept of “temperature margin” for LTS and HTS
-magnets is discussed in CHAPTER 6.)
+通常来说，超导磁体(LTS或HTS)在额定运行温度$T_{op}$ 和最高运行温度区间内应保持全超导并稳定运行。
+相比于LTS，HTS的临界温度$T_c$高得多，差不多相同大小和场性能的HTS磁体的
+运行区间$\Delta T_{op}$要比LTS大一个量级：典型的HTS值是$\Delta T_{op}$ > 1 K；而典型LTS值
+$\Delta T_{op}$< 1 K (LTS和HTS磁体的温度裕度概念将在第6章讨论)。
 
+FBML发展的设计/运行概念识别出了HTS磁体的大$\Delta T_{op}$，并将它与固体介质的大热容组合起来[4.30–
+4.32]。在这个设计/运行概念中，$\Delta T_{op}$不再认为是LTS磁体允许的暂态偏离，而被看做磁体的新的机遇。
 
-A design/operation concept developed at FBML recognizes this large $\Delta T_{op}$ of
-HTS magnets and combines it with the large heat capacity of solid cryogen [4.30–
-4.32]. In this design/operation concept, $\Delta T_{op}$is no longer considered a transitory
-excursion permitted in LTS magnets, but a new opportunity for a magnet.
-
-
-This combination of an expanded operating range, possible primarily with HTS
-but not altogether impossible with LTS, and an enhanced heat capacity offers
-operating options, an example of which is described below, that are infeasible
-with “conventional” design/operation concepts, i.e., “dry,” cryocooled but without
-solid cryogen, or “wet,” immersed in a bath of cryogen or force-cooled by cryogen.
-Note that even for a solid cryogen-cooled magnet, the primary cooling source is
-a cryocooler or a cryocirculator (DISCUSSION 4.7). Typically, such a magnet is
-surrounded by a volume of solid cryogen and housed in a magnet chamber.
+将运行温区扩展(主要是HTS，LTS也并非不可能)与增强的热容的组合提供了新的运行方式。下面将给出一个例子，
+它在“传统”的设计/运行概念下，不管是不含固态介质的“干式”，或是浸泡于制冷剂中的“湿式”，抑或制冷剂迫冷的方式都不可行。注意，即使是固态介质冷却的磁体，主要冷源还是制冷机或者制冷回环器(讨论4.7)。
+这样的磁体一般安装于磁体腔内，填充固体制冷工质。
 
 \textbf{永久模式磁体应用}
 
-One application of this design/operation concept is in constant-field magnets such
-as for NMR and MRI that normally operate in persistent mode. With the magnet’s
-operating temperature designed to span a “large” range, this concept enables such
-a magnet to maintain a constant operating field over a design-specified period of
-time even after its primary cooling source is turned off and thermally decoupled
-from the cold body. The cooling source may be turned off intentionally, e.g.,
-to create a measurement environment free of the cooling source vibration or for
-cooling source maintenance, or under fault mode, e.g., a power outage.
+这个设计/运行概念的一个应用是恒定场磁体，比如NMR和MRI这种通常运行在永久模式的。
+这些磁体运行温度区间一般设计的很大，这个概念能让这种磁体在特定设计时间范围内，甚至在主要冷源
+关闭或从冷体热解耦的情况下，都能维持恒定运行磁场。
+冷源可能是故意关闭的，比如创造无冷源振动的测量环境，又如冷源维护，又如故障模式。
 
 \textbf{B. 固体中的热扩散}
 
-In a homogeneous isotropic solid (density,$\rho$, thermal conductivity, $k$, and specific
-heat, $c_p$) the rate of thermal diffusion through the solid is characterized by its
-thermal diffusivity, $D_{th}[\mathrm{m^2/s}]$, given by:
+在均匀各向同性固体 (密度$\rho$，热导率$k$，比热$c_p$)中，通过固体的热扩散由它的热扩散系数 $D_{th}[\mathrm{m^2/s}]$描述：
 \begin{equation}% 4.20
 D_{th}=\frac{k}{\rho c_p}
 \end{equation}
 
-The time scale required for transient heating applied at one location to “reach” a
-distance δsd in the solid thus is given by:
-
+某点的暂态热在固体中传导$\delta_{sd}$距离的时间尺度于是为：
 \begin{equation}% 4.21
 \tau_{sd}=\frac{1}{D_{th}}(\frac{\delta_{sd}}{\pi})^2
 \end{equation}
 
 \textcolor{red}{表4.10}
 
-Table 4.10 lists approximate values of $D_{th}$ and corresponding $\tau_{sd}$ for $\delta_{sd}$=10 mm for
-solid neon (SNe), solid nitrogen (SN2), and copper (Cu) in the range 4–60 K, based
-on$\rho(T)$, $c_p(T)$, and $k(T)$ data [4.33–4.35]. Over this temperature range thermal
-diffusivities of SN2 are 3 to 5 orders of magnitude less than those of copper—heat
-penetrates into SN2 much more slowly than into copper. For example, at 30 K, as
-given in Table 4.10 for $\delta_{sd}$=10 mm,  $\tau_{sd}$=46 s in SN2, whereas it is only 1.3 ms for
-Cu. However, SN2 can absorb much more heat per unit volume than Cu.
+表4.10列出了固氖 (SNe)、固氮(SN2)、铜(Cu)在4–60 K区间$\delta_{sd}$=10 mm时，$D_{th}$和对应的$\tau_{sd}$的近似值，数值基于$\rho(T)$, $c_p(T)$和$k(T)$数据[4.33–4.35]。
+在这个温度区间，SN2的热扩散系数比铜小3-5个量级——相比固氮，热更容易传入铜。
+例如，30 K时，如表4.10所列，对$\delta_{sd}$=10 mm，固氮中的$\tau_{sd}$=46 s，而在铜中只需1.3 ms。
+不过，SN2单位体积可吸收的热量要比铜大得多。
 
 \textbf{“缓慢”加热}
 
-If the heat required to be absorbed by a volume of solid cryogen of a “reasonable” thermal diffusion distance can be absorbed gradually, over a period of time
-much longer than τsd, the entire solid will remain nearly uniform in temperature.
-Indeed, as noted above, solid cryogen appears best applied to magnets that are
-generally operated in persistent mode such as those for MRI and NMR. As studied in PROBLEM 4.3 below, in a solid-cryogen-cooled magnet which has a heating
-time of hours over a diffusion distance of 1–2 cm, the entire solid-nitrogen volume
-may be assumed to be at a uniform temperature
+如果需要一定体积固态工质在合适的热扩散距离下吸收的热可以是缓慢吸收的，也即时间比$\tau_{sd}$长得多，
+整个固体将维持近乎温度均匀。实际上，如前文所述，固体工质用于通常运行于永久模式的MRI和NMR是最佳的。
+下面的问题4.3将研究，固体工质冷却的磁体的扩散距离1-2 cm的加热时间需要几个小时，整体固氮体积可以假定为
+均匀温度分布的。
 
 \textbf{暂态加热}
 
-Under rapid transient conditions only a very thin layer of solid cryogen—note that
-$\delta_{sd}\propto\sqrt{\tau_{sd}}$(from Eq. 4.21)—is effective in absorbing heat that would otherwise
-heat the magnet winding. Even with this limitation, and despite the probable
-occurrence of “thermal dry-out” (below), SN2 has proven effective in suppressing
-temperature rises in HTS test samples subjected to transient heating [4.36, 4.37].
-Recently, a group in Kyoto University has shown that a phenomenon they term
-“thermal dry-out” occurs, creating a “large” temperature gap across the contact
-between the transiently heated surface and solid nitrogen [4.38–4.40]. Thermal
-dry-out and a solution to overcome this phenomenon are discussed below.
+在快速暂态状态下，仅固体工质的一小薄层——注意
+$\delta_{sd}\propto\sqrt{\tau_{sd}}$(方程4.21)——可有效吸收热量，多余热量将引起磁体绕组温升。
+即使在这个极限下，尽管可能发生“热烧干”(下文)，SN2业已被证明可有效抑制暂态加热下的HTS测试绕组温升[4.36, 4.37]。
+最近，Kyoto大学的小组证明他们命名的“热干烧”现象在暂态热源表面和固体介质表面的接触面上产生了很大的温差[4.38–4.40]。下面将讨论热干烧和一个克服这个现象的解决方法。
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.6]{chpt4/figs/fig4.17.eps}
+	\includegraphics[scale=0.7]{chpt4/figs/fig4.17.eps}
 	\caption{过流扰动下的HTS超导带的温度和时间关系。实线：仅由SN2冷却；虚线：由SN2-LN2混合物冷却；点线：初始温度25.1 K。}
 \end{figure}
 
 
 \textbf{C. “热烧干”}
-Nakamura and his colleagues in Kyoto University have experimentally demonstrated that when the surface in thermal contact with SN2 is subjected to a “large”
-heating flux, thermal dry-out occurs [4.38–4.40]. For solid nitrogen at 60 K, for example, a thermal dry-out begins at a power flux of $\sim 1.5\ \mathrm{W/cm^2}$. Apparently, a
-thin vapor layer at the interface is responsible for this temperature discontinuity.
 
+Kyoto大学的Nakamura及其合作者试验展示了SN2的表面处于大的热流密度下，将发生热干烧[4.38–4.40]。
+比如，对60 K的固氮，热干烧开始于能量密度$\sim 1.5\ \mathrm{W/cm^2}$。
+很明显，接触面上的薄气膜是产生温度不连续的原因。
 
-Figure 4.17 shows temperature vs. time plots for an HTS strip under over-current
-disturbances, each disturbance lasting up to$\sim 600$ s. The solid curve corresponds to
-a typical run for the strip in contact with solid nitrogen only. The dotted horizontal
-line, at 25.1 K, indicates the initial temperature of both the strip and solid nitrogen.
-Beyond $\sim 400$ s, at which the heat flux is $14.3\ \mathrm{W/cm^2}$ with a temperature difference
-($\Delta T$) in excess of 3 K, a thermal runaway occurs that, were the over-current to
-persist, would lead to conductor damage.
+图4.17给出了过流扰动下的HTS超导带的温度和时间关系。扰动持续长达$\sim 600$ s。实线对应超导带仅与固氮
+接触的运行方式；25.1 K的水平点线给出的是超导带和固氮的初始温度。
+$\sim 400$ s之后，热流$14.3\ \mathrm{W/cm^2}$，对应温差($\Delta T$)超过3 K，发生热失控。如果
+过流继续，将导致导体损毁。
 
 \textbf{固氮-液氖混合物抑制热烧干}
 
-The Kyoto group has demonstrated that a mixture of solid nitrogen and liquid
-neon—liquid neon occupying $\sim 1\%$ of the total volume—is quite effective in suppressing this thermal dry-out. Of course the use of LNe restricts operation to a
-narrow range, between 24.5 and 27.1 K under atmospheric pressure. The dashed
-curve in Fig. 4.17 corresponds to a typical run for the strip in contact with an
-SN2-LNe mixture. Even after repeated over-current runs, it was observed that the
-strip temperature remained at 26.9 K, anchored by LNe. Note that here $Delta T<$ 2 K;
-more importantly, at least for up to 600 s, there appears to be no imminent thermal runaway. (Note that in both sets of measurements, the “cold body” was
-continuously cooled by a cryocooler, which acted as the system’s cold sink.)
+Kyoto研究组证明固氮-液氖混合物——液氖占总体积的$\sim 1\%$——对抑制热烧干十分有效。
+当然，LNe的使用将运行温区限制的更窄，大气压下为24.5-27.1 K。
+图4.17中的虚线对应超导带由SN2-LNe混合物冷却的典型运行情况。
+甚至在反复过流冲击下，他们观察到超导带温度仍维持在26.9 K，这是由LNe锚定的。
+注意这里$Delta T<$ 2 K；更重要的是，至少对600 s，并无热失控发生迹象。
+(两类测量方法中，“冷体”由作为系统冷源的制冷机持续冷却)
 
-
-For applications in the liquid nitrogen temperature range, perhaps a mixture of
-solid argon (SAr) and subcooled liquid nitrogen operating in the range 65–77 K
-may be an effective option to improve the solid cryogen’s inherently poor thermal
-contact characteristics. Argon melts at 83.8 K and boils at 87.3 K.
-
+对液氮温区的应用，或许运行于65-77 K的固氩(SAr)和过冷液氮的混合物是一个提高固体工质固有劣热接触性质的有效方法。氖的熔点是83.8 K，沸点是87.3 K。
 
 
 
@@ -1183,7 +1142,10 @@ $T(t\simeq 2,150\ \mathrm{s})$ = 15 K. For 1-liter SN2, we have the warm-up peri
 with 1-W heat input: $[\Delta t(10 K\rightarrow 15 K)]_{1 litter}^{1 W}\simeq 1,750$s = 0.486 h. For 15-liter
 solid nitrogen with 0.25-W heat input, the 10-15 K warm-up period, $[\Delta t(10 K\rightarrow 15 K)]_{15 litter}^{0.25 W}$, is given by:
 
-%%%此处有公式
+\begin{align*}% page260
+[\Delta t(10\mathrm{K}\rightarrow 15\mathrm{K})]_{15\mathrm{L}}^{0.25\mathrm{W}}&=(\frac{1\mathrm{W}}{0.25\mathrm{w}})(\frac{15\mathrm{L}}{1\mathrm{l}})[\Delta t(10\mathrm{K}\rightarrow 15\mathrm{K})]_{1\mathrm{L}}^{1\mathrm{W}}\\\notag
+&\simeq (4)(5)(0.486\mathrm{h})=29-30\mathrm{h}
+\end{align*}
 
 
 \begin{figure}[htbp]
@@ -1206,57 +1168,101 @@ $[\Delta t(10 K\rightarrow 15 K)]_{15 litter}^{0.25 W}$ may be given by
 [\Delta(10K \rightarrow15K)]_{15liter}^{0.25W}=\frac{(15000cm^3)(1.625J/cm^3)}{(0.25W)(3600s/h)}\simeq27.1h~30h
 \end{equation*}
 
-
+c) 直径$D$，长度为$\ell$，壁厚$\Delta r_{N2}\ll D$的圆柱体内的固氮体积$V_{N2}$为：
 \begin{equation*}% S3.1
-\nu_{N2}=\pi D\ell\Delta r_{N2}
-\Delta r_{N2}=\frac{\mu_{N2}}{\pi D\ell}=\frac{(15000cm^3)}{\pi(90cm)(30cm)}=1.8cm
+\nu_{N2}=\pi D\ell\Delta r_{N2} \tag{S3.1}
 \end{equation*}
 
+代入$V_{N2}=15000\ \mathrm{cm^3},D=90\ \mathrm{cm},\ell= 30\ \mathrm{cm}$，有：
+\begin{equation*}% S3.1
+\Delta r_{N2}=\frac{\mu_{N2}}{\pi D\ell}=\frac{(15000\ \mathrm{cm^3})}{\pi(90\ \mathrm{cm})(30\ \mathrm{cm})}=1.8\ \mathrm{cm}
+\end{equation*}
+
+我们可以令$\Delta r_{N2}$=1.8 cm与方程4.21中的$\delta_{sd}$相等，代入10 K和15 K之间的大致平均值
+$D_{th}\simeq 55\times10^{−2}\ \mathrm{cm^2/s}$解4.21，有：
 \begin{equation}% 4.21
 \tau_{sd}=\frac{1}{D_{th}}(\frac{\delta_{sd}}{\pi})^2
-=\frac{1}{(55\times10^{-2}cm^2/s)}(\frac{1.8cm}{\pi})^2~0.6s
+=\frac{1}{(55\times10^{-2}cm^2/s)}(\frac{1.8cm}{\pi})^2\sim 0.6 s
 \end{equation}
-\begin{equation*}% page260
-h(15K)-h(10K)\simeq\frac{C_p(10K)+C_p(15K)}{2}(15K-10K)
-\simeq\frac{(0.400J/cm^3K+0.875J/cm^3K)}{2}(5K)
-\simeq3.2J/cm^3
-\end{equation*}
+
+The diffusion time of$\sim$ 0.6 s is much less than the 30-h warm-up time. Thus, the
+assumption of uniform temperature within this 15-liter SN2 is valid.
+
+d) We reverse the order of the two approaches to the solution given in b). Thus,
+using the $C_p(T)$ data for solid neon given in Fig. 4.2 and by taking the area
+underneath the $C_p(T)$ curve for SNe between 10 K and 15 K, we have:
+\begin{align*}% page260
+h(15K)-h(10K)&\simeq\frac{C_p(10K)+C_p(15K)}{2}(15K-10K)\\\notag
+&\simeq\frac{(0.400J/cm^3K+0.875J/cm^3K)}{2}(5K)\\\notag
+&\simeq 3.2J/cm^3
+\end{align*}
+
+For the same warm-up time from 10 K to 15 K with 0.25-W heat input for 15-liter
+solid nitrogen, $[\Delta t(10 K\rightarrow 15 K)]_{15 litter}^{0.25 W}\simeq 27.1$ h computed in b), the volume of solid neon,$V_{Ne}(10 K\rightarrow 15 K)$, is given by:
 \begin{equation*}% page261
 V_{Ne}(10K \rightarrow 15K)=\frac{(27.1h)(3600s/h)(2.5W)}{(3.2J/cm^3)(1000cm^3/liter)}
 \simeq7.6liter~\frac{1}{2}\times15liter
 \end{equation*}
+
+From Fig. 4.18 we note that for 1-liter solid neon, $T(t\simeq 0.33 h)=10 K$ and $T(t\simeq
+1.22 h)=15 K$, resulting in $[\Delta t(10 K\rightarrow 15 K)]_{1 litter}^{1 W}\simeq 0.89$ h for SNe; for 1-liter SN2:
+$[\Delta t(10 K\rightarrow 15 K)]_{1 litter}^{1 W}\simeq 0.486$ h. We thus have:
 \begin{equation*}% page261
-V_{Ne}(10K \rightarrow 15K)=\frac{(0.486h)}{0.89h}(15liter)\simeq8.2liter\simeq\frac{1}{2}\times(15liter)
+V_{Ne}(10K \rightarrow 15K)=\frac{(0.486h)}{0.89h}(15liter)\simeq 8.2 liter\simeq\frac{1}{2}\times(15 liter)
 \end{equation*}
+
+e) From Fig. 4.18 we note that for 1-liter solid nitrogen, $T(t\simeq 0.6 h)=15 K$ and
+$T(t\simeq 17.75 h) = 60 K$, or  $[\Delta t(15 K\rightarrow 60 K)]_{1 litter}^{1 W}\simeq 17.15 h$. For an average heat
+input of 3.3 W and 15-liter SN2, we have:
 \begin{equation*}% page261
 [\Delta t(15K \rightarrow 60K)]_{15liter}^{3.3W}=(\frac{15liter}{1liter})(\frac{1W}{3.3W})[\Delta t(15K\rightarrow60K)]_{1liter}^{1W}
 \simeq(15)(0.303)(17.15h)
 =78h~80h
 \end{equation*}
+
+f) In this transition, an energy density of $5\ \mathrm{J/cm^3}[= (75\ \mathrm{kJ})/(15,000\ \mathrm{cm^3})]$ is injected into copper at an initial temperature of 20 K. Thus, we may determine
+the final temperature Tf from the following equation:
 \begin{equation*}% S3.2
 \int_{20K}^{T_i}[C_p(T)]_{cu}dT=5J/cm^3
 \end{equation*}
-\begin{equation*}% page261
-h(35K)-h(30K)\simeq\frac{C_p(30K)+C_p(35K)}{2}(35K-30K)
-\simeq\frac{(1.24J/cm^3K+1.55J/cm^3K)}{2}(5K)
-\simeq7.0J/cm^3
-\end{equation*}
+
+根据图4.2，我们发现S3.2满足$T_f\simeq 40$ K。
+
+g) Using the $C_p(T)$ data for SN2 given in Fig. 4.2 and by taking the area underneath the $C_p(T)$ curve from 30 K to 35 K, we have:
+\begin{align*}% page261
+h(35K)-h(30K)&\simeq\frac{C_p(30K)+C_p(35K)}{2}(35K-30K)\\\notag
+&\simeq\frac{(1.24J/cm^3K+1.55J/cm^3K)}{2}(5K)\\\notag
+&\simeq 7.0J/cm^3
+\end{align*}
+
+于是我们有：
 \begin{equation*}% page262
 [\Delta t(30K \rightarrow 35K)]_{15liter}^{10W}=\frac{(15000cm^3)(7.0J/cm^3)}{(10W)(3,600s/h)}
-\simeq2.9h~3h
+\simeq 2.9h~3h
 \end{equation*}
-\begin{equation*}% page262
-h(40K)-h(35K)\simeq\frac{C_p(35K)+C_p(35.61K)}{2}(35.61K-35K)
-+\Delta h(35.61K)+\frac{C_p(35.61K)+C_p(40K)}{2}(40K-35.61K)
-\simeq\frac{(1.60J/cm^3K+1.62J/cm^3K)}{2}(0.6K)
-+8.2J/cm^3+\frac{(1.29J/cm^3K+1.33J/cm^3K)}{2}(4.39K)
-\simeq0.98J/cm^3+8.2J/cm^3+5.75J/cm^3\simeq14.9J/cm^3
-[\Delta t(30K \rightarrow 35K)]_{15liter}^{10W}=\frac{(15,000 cm^3)(14.9J/cm^3)}{(10W)(3,600s/h)}
-\simeq6.2h~6h
-\end{equation*}
-\begin{equation}% 4.21
-\tau_{sd}=\frac{1}{D_{th}}(\frac{\delta_{sd}}{\pi})^2
-\end{equation}
+
+h) We proceed as in g) except here an energy absorption at 35.61 K, $\Delta h(35.61 K)=8.2 J/cm3$, must be added. Also, the enthalpy area computation must be performed over two temperature ranges, 35–35.61 K and 35.61–40 K. Thus:
+\begin{align*}% page262
+h(40K)-h(35K)\simeq&\frac{C_p(35K)+C_p(35.61K)}{2}(35.61K-35K) \\\notag
+&+\Delta h(35.61K)+\frac{C_p(35.61K)+C_p(40K)}{2}(40K-35.61K)\\\notag
+\simeq&\frac{(1.60J/cm^3K+1.62J/cm^3K)}{2}(0.6K)\\\notag
+&+8.2J/cm^3+\frac{(1.29J/cm^3K+1.33J/cm^3K)}{2}(4.39K)\\\notag
+\simeq&0.98J/cm^3+8.2J/cm^3+5.75J/cm^3\simeq14.9J/cm^3\\\notag
+\end{align*}
+\begin{align*}
+[\Delta t(30K \rightarrow 35K)]_{15liter}^{10W}=&\frac{(15,000 cm^3)(14.9J/cm^3)}{(10W)(3,600s/h)}\\\notag
+\simeq&6.2h~6h \notag
+\end{align*}
+
+Thus the contribution of the extra enthalpy at 35.61 K more than doubles (2.1
+times) the warm-up time for the same temperature increment of 5 K
+
+i) Equation 4.21 is used to compute $\tau_{sd}$ for $D_{th} = 2.4\times 10^{−3} cm^2/s$ and $\delta_{sd}=0.04 cm$ and demonstrate that this$\tau_{sd}$ indeed is$\sim 0.1$ s. Thus:
+\begin{align}% 4.21
+\tau_{sd}&=\frac{1}{D_{th}}(\frac{\delta_{sd}}{\pi})^2
+\end{align}
+
+
 \begin{equation*}% page 262
 p_{sd}=[h(35K)-h(30K)]\frac{\delta_{sd}}{\tau_{sd}}
 =(7.0J/cm^3)\frac{(0.04 cm)}{(0.067s)}=4.2W/cm^2
