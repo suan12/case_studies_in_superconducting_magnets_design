@@ -864,42 +864,344 @@ q_r=\frac{\epsilon_r}{N_i+1}\sigma(T_{wm}^4-T_{cl}^4)
 
 \textbf{B. “低”压极限}
 
+在$P_g\sim 10^{-4}$或更小时，$k_g$直接正比于$P_g$。对于温度为$T_{cl}$的冷板和温度为$T_{wm}$的热板的平行配置，
+压力$P_g$下的残余气体热流$q_r$如下给出[4.29]：
+\begin{equation}% 4.19
+q_g=\eta_g P_g(T_{wm}-T_{cl})
+\end{equation}
 
+$\eta_g$不仅与温度$T_{cl}$和$T_{wm}$有关，还和适应系数有关。300 K时，氦和氢都是0.3；4.2 K时，氦是1；20 K时，氢是0.6。
+表4.9给出了在$P_g=10^{-5}$ torr下，跨越温度为$T_{cl}$和$T_{wm}$的平行板的氦和氢的$\eta_g$和$q_g$[4.29]。
 
-\textbf{实例}\qquad 
+\textbf{实例}\qquad 混合III的磁体腔的主要面积在4.2 K($T_{cl}$)下近似为：
+对着20 K辐射屏的是$7.3\ \mathrm{m^2}$，对着80 K辐射屏的是$2.8\ \mathrm{m^2}$。
+采用平行板近似，我们可以计算出真空空间内压力为$10^{-5}$ torr的参与氦气导入的总的热输入。
 
-
+温度为4.2 K的磁体腔表面，暴露于20 K辐射屏，在$P_g=10^{-5}$ torr下的$q_g$是$27\ \mathrm{mW/m^2}$(表4.9)。
+于是，平行板假设下的表面积$7.3\ \mathrm{m^2}$对应总热输入为$\sim 300\ \mathrm{mW}$。
+类似的，温度为4.2 K的磁体腔表面，暴露于80 K辐射屏，从表4.9可知，$q_g$是$86\ \mathrm{mW/m^2}$，
+对应$2.8\ \mathrm{m^2}$下的总热输入$\sim 240\ \mathrm{mW}$。
+这样，进入磁体腔的总热输入为$\sim 540\ \mathrm{mW}$，这个值对本系统过大了；应当维持真空水平在$10^{-6}$ torr才行。
+因此，将低温容器的真空压力维持在小于$\sim 10^{-5}$ torr很重要。
 
 \textcolor{red}{表4.9}
 
 
-
-\begin{equation}% 4.19
-q_g=\eta_gP_g(T_{wm}-T_{cl})
-\end{equation}
-
-
-
 \subsection{讨论4.10：真空泵系统}
 
+图4.16给出的是超导磁体运行中使用的典型真空泵系统框图。
+低温容器真空口连接在涡轮分子泵上，分子泵在过去的十年内已经开始取代
+曾经广泛使用的扩散泵/冷阱系统。涡轮分子泵是唯一的可以无需冷阱即可运行于$10^{−10}$ torr的
+纯机械真空泵。尽管在它自身的机械泵上加装了涡轮泵，在多数磁体应用中，由于低温容器真空空间可能很大，所以一般都会再额外加一台机械泵，如图所示。低温容器真空空间的抽真空流程是，开始先用机械泵将真空
+达到$\sim 5$ torr，接下来启动涡轮泵(或扩散/冷阱)，将真空达到$10^{-5}-10^{-6}$ torr。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.5]{chpt4/figs/fig4.16.eps}
+	\caption{超导磁体运行中使用的典型真空泵系统框图。}
+\end{figure}
 
+\textbf{真空度量}
+
+低温容器常用的两种真空度量方法是：1) 热电偶；2)电离计。下面是两种类型的简要描述。
+
+\textbf{热电偶：} 热电偶度量的原理是在上面讨论的“低”压极限下压力对气体热导率的依赖关系。
+热电偶节安装于连接到待测真空空间的管内，它的温度由加热器设定。
+随压力变化的气体冷却热电偶；热电偶节电路的感应电流变化反映了真空压力。这种度量方法的应用
+区间是$10^{-3}\sim 1$ torr，即机械泵覆盖的区间。
+
+\textbf{电离计：} 对$\sim 10^{-6}$ torr和$10^{-4}$ torr之间的真空度，这也是多数低温容器
+运行的区间，电离计广泛使用。有两种电离计：1) 热阴极；2) 冷阴极。
+
+\textit{热阴极：} 这种度量器由加热丝(热阴极)、阳极、负偏置粒子采集板组成，上述部件都放置在
+连接于待测量真空空间的管子内。电子从加热丝运动到阳极，与气体分子碰撞，产生离子化分子，被吸引到采集板。
+测量电路测得相应的电流。由于分子是由电子离子化的，离子电流还依赖于撞击分子的电子数量：
+精确的压力测量因而要求对加热丝电流的精细控制。
+用于混合III低温容器的热电极度量器在磁体运行区间是关闭的，以最小化“加热器疲劳”。所谓加热丝疲劳，
+是由加热丝的振荡运动产生的，源于加热丝供电电流和磁体边缘场的Lorentz相互作用。
+
+\textit{冷阴极：} 也称为Philips或Penning度量，它使用一个冷阴极和两个平行阳极，磁场施加于阳极板法向，
+每次开启($\sim 2$ kV)一个。冷阴极产生的少量电子于是被驱使沿螺旋轨迹交替运动向两个板中的一个。
+这种配置有效的增加了少量电子和气体分子之间的碰撞几率。和加热丝不同，冷阴极不会“污染”气体也
+不会为真空失效而损毁。但它的精确度要比热阴极差。
 
 \subsection{讨论4.11：固态制冷工质/磁体}
+\textbf{A. 设计和运行概念}
+
+Generally, a superconducting magnet, LTS or HTS, remains fully superconducting
+and operates “stably” over a temperature range from its nominal operating temperature $T_{op}$ 
+to a maximum operating temperature. Chiefly because of a much
+greater critical temperature, $T_c$, of HTS compared with that of LTS, this range,
+$\Delta T_{op}$ is an order of magnitude greater for an HTS magnet than an LTS magnet
+of comparable size and field performance: typically $\Delta T_{op}$ > 1 K for HTS, while
+$\Delta T_{op}$< 1 K for LTS. (This concept of “temperature margin” for LTS and HTS
+magnets is discussed in CHAPTER 6.)
+
+
+A design/operation concept developed at FBML recognizes this large $\Delta T_{op}$ of
+HTS magnets and combines it with the large heat capacity of solid cryogen [4.30–
+4.32]. In this design/operation concept, $\Delta T_{op}$is no longer considered a transitory
+excursion permitted in LTS magnets, but a new opportunity for a magnet.
+
+
+This combination of an expanded operating range, possible primarily with HTS
+but not altogether impossible with LTS, and an enhanced heat capacity offers
+operating options, an example of which is described below, that are infeasible
+with “conventional” design/operation concepts, i.e., “dry,” cryocooled but without
+solid cryogen, or “wet,” immersed in a bath of cryogen or force-cooled by cryogen.
+Note that even for a solid cryogen-cooled magnet, the primary cooling source is
+a cryocooler or a cryocirculator (DISCUSSION 4.7). Typically, such a magnet is
+surrounded by a volume of solid cryogen and housed in a magnet chamber.
+
+\textbf{永久模式磁体应用}
+
+One application of this design/operation concept is in constant-field magnets such
+as for NMR and MRI that normally operate in persistent mode. With the magnet’s
+operating temperature designed to span a “large” range, this concept enables such
+a magnet to maintain a constant operating field over a design-specified period of
+time even after its primary cooling source is turned off and thermally decoupled
+from the cold body. The cooling source may be turned off intentionally, e.g.,
+to create a measurement environment free of the cooling source vibration or for
+cooling source maintenance, or under fault mode, e.g., a power outage.
+
+\textbf{B. 固体中的热扩散}
+
+In a homogeneous isotropic solid (density,$\rho$, thermal conductivity, $k$, and specific
+heat, $c_p$) the rate of thermal diffusion through the solid is characterized by its
+thermal diffusivity, $D_{th}[\mathrm{m^2/s}]$, given by:
 \begin{equation}% 4.20
-D_{th}=\frac{k}{\varrho c_p}
+D_{th}=\frac{k}{\rho c_p}
 \end{equation}
+
+The time scale required for transient heating applied at one location to “reach” a
+distance δsd in the solid thus is given by:
+
 \begin{equation}% 4.21
-T_{sd}=\frac{1}{D_{th}}(\frac{\delta_{sd}}{\pi})^2
+\tau_{sd}=\frac{1}{D_{th}}(\frac{\delta_{sd}}{\pi})^2
 \end{equation}
+
+\textcolor{red}{表4.10}
+
+Table 4.10 lists approximate values of $D_{th}$ and corresponding $\tau_{sd}$ for $\delta_{sd}$=10 mm for
+solid neon (SNe), solid nitrogen (SN2), and copper (Cu) in the range 4–60 K, based
+on$\rho(T)$, $c_p(T)$, and $k(T)$ data [4.33–4.35]. Over this temperature range thermal
+diffusivities of SN2 are 3 to 5 orders of magnitude less than those of copper—heat
+penetrates into SN2 much more slowly than into copper. For example, at 30 K, as
+given in Table 4.10 for $\delta_{sd}$=10 mm,  $\tau_{sd}$=46 s in SN2, whereas it is only 1.3 ms for
+Cu. However, SN2 can absorb much more heat per unit volume than Cu.
+
+\textbf{“缓慢”加热}
+
+If the heat required to be absorbed by a volume of solid cryogen of a “reasonable” thermal diffusion distance can be absorbed gradually, over a period of time
+much longer than τsd, the entire solid will remain nearly uniform in temperature.
+Indeed, as noted above, solid cryogen appears best applied to magnets that are
+generally operated in persistent mode such as those for MRI and NMR. As studied in PROBLEM 4.3 below, in a solid-cryogen-cooled magnet which has a heating
+time of hours over a diffusion distance of 1–2 cm, the entire solid-nitrogen volume
+may be assumed to be at a uniform temperature
+
+\textbf{暂态加热}
+
+Under rapid transient conditions only a very thin layer of solid cryogen—note that
+$\delta_{sd}\propto\sqrt{\tau_{sd}}$(from Eq. 4.21)—is effective in absorbing heat that would otherwise
+heat the magnet winding. Even with this limitation, and despite the probable
+occurrence of “thermal dry-out” (below), SN2 has proven effective in suppressing
+temperature rises in HTS test samples subjected to transient heating [4.36, 4.37].
+Recently, a group in Kyoto University has shown that a phenomenon they term
+“thermal dry-out” occurs, creating a “large” temperature gap across the contact
+between the transiently heated surface and solid nitrogen [4.38–4.40]. Thermal
+dry-out and a solution to overcome this phenomenon are discussed below.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt4/figs/fig4.17.eps}
+	\caption{过流扰动下的HTS超导带的温度和时间关系。实线：仅由SN2冷却；虚线：由SN2-LN2混合物冷却；点线：初始温度25.1 K。}
+\end{figure}
+
+
+\textbf{C. “热烧干”}
+Nakamura and his colleagues in Kyoto University have experimentally demonstrated that when the surface in thermal contact with SN2 is subjected to a “large”
+heating flux, thermal dry-out occurs [4.38–4.40]. For solid nitrogen at 60 K, for example, a thermal dry-out begins at a power flux of $\sim 1.5\ \mathrm{W/cm^2}$. Apparently, a
+thin vapor layer at the interface is responsible for this temperature discontinuity.
+
+
+Figure 4.17 shows temperature vs. time plots for an HTS strip under over-current
+disturbances, each disturbance lasting up to$\sim 600$ s. The solid curve corresponds to
+a typical run for the strip in contact with solid nitrogen only. The dotted horizontal
+line, at 25.1 K, indicates the initial temperature of both the strip and solid nitrogen.
+Beyond $\sim 400$ s, at which the heat flux is $14.3\ \mathrm{W/cm^2}$ with a temperature difference
+($\Delta T$) in excess of 3 K, a thermal runaway occurs that, were the over-current to
+persist, would lead to conductor damage.
+
+\textbf{固氮-液氖混合物抑制热烧干}
+
+The Kyoto group has demonstrated that a mixture of solid nitrogen and liquid
+neon—liquid neon occupying $\sim 1\%$ of the total volume—is quite effective in suppressing this thermal dry-out. Of course the use of LNe restricts operation to a
+narrow range, between 24.5 and 27.1 K under atmospheric pressure. The dashed
+curve in Fig. 4.17 corresponds to a typical run for the strip in contact with an
+SN2-LNe mixture. Even after repeated over-current runs, it was observed that the
+strip temperature remained at 26.9 K, anchored by LNe. Note that here $Delta T<$ 2 K;
+more importantly, at least for up to 600 s, there appears to be no imminent thermal runaway. (Note that in both sets of measurements, the “cold body” was
+continuously cooled by a cryocooler, which acted as the system’s cold sink.)
+
+
+For applications in the liquid nitrogen temperature range, perhaps a mixture of
+solid argon (SAr) and subcooled liquid nitrogen operating in the range 65–77 K
+may be an effective option to improve the solid cryogen’s inherently poor thermal
+contact characteristics. Argon melts at 83.8 K and boils at 87.3 K.
+
+
 
 
 \subsection{问题4.3：固态制冷剂冷却的磁体}
+本节我们处理固体工质冷却的磁体。
 
+a) Using $C_p$ vs. $T$ plots shown in Fig. 4.2, make $T(t)$ plots of volumes, each
+1 liter, of Cu, Pb, SNe, and SN2, under 1-W heat input for an initial temperature of 4 K and a final temperature of 60 K, except for SNe, 25 K. Assume
+uniformity of temperature within each volume during the warm-up
+
+b) Using the $T(t)$ plot for SN2 of a)—or straight from Fig. 4.2—show that it
+takes $\sim 30$ hours for a 15-liter volume of SN2 to warm up from 10 K to 15 K
+under a constant heat input of 0.25 W. Neglect heat capacities of other materials, including that of the magnet, in the cold body and assume temperature
+uniformity within the solid nitrogen during the warm-up.
+
+
+As discussed in DISCUSSION 4.11, it is desirable for a solid cryogen cooled
+magnet to be able to operate over a temperature range considerably greater
+than the $\sim 1$ K (or even less) typical for LTS magnets. In an SN2-cooled HTS
+magnet operating in persistent mode, for example, a typical operating mode
+might be to operate at a nominal temperature of 10 K with its cooling source
+running. When the cooling source is shut off, either purposely to eliminate its
+noise or accidentally by a power outage, and it is thermally decoupled from
+the cold body, the magnet will start warming up slowly, keeping its operating
+field over a temperature rise of$\Delta T_{op}$, which is 5 K for this particular magnet.
+Note that in order to take full advantage of this large heat capacity of solid
+cryogen available in the cold body, it is required to design the system to have
+the cold body automatically decoupled thermally from the cooling source
+whenever it is turned off.
+
+c) This 15-liter volume of solid nitrogen is to be placed inside the cold body
+to encircle a magnet of 896-mm winding o.d. (860-mm i.d.) and 300-mm
+winding length. Let the nitrogen be in the shape of a cylinder, $\simeq$ 896-mm
+i.d., 300-mm long, and $\Delta r_{N2}$ thick. (Because the cold body is constructed
+of copper sheets of sufficient thickness, most heat entering the cold body
+from the i.d. side of the magnet flows through the walls of the cold body
+by conduction to the outer wall.) Compute $\Delta r_{N2}$ for this 15-liter SN2 and,
+assuming that heat entering the cold body flows through the solid nitrogen
+layer only in the radial direction from the outer wall of the cold body, show
+that the thermal diffusion time corresponding to this layer thickness is $\sim 0.6$ s,
+which is much smaller than the 30-h warm-up time from 10 K to 15 K
+
+
+d) Show that the 15-liter volume of cryogen in the cold body filled with solid
+nitrogen in b) may be halved if it is filled with solid neon. (Because the
+volumetric price of SN2 is at least $\sim 200$ times less than that of SNe, nitrogen
+is preferred to neon unless neon is absolutely necessary.)
+
+
+e) Show that it takes this 15-liter SN2 another ∼80 hours to warm up from 15 K
+to 60 K. Over the 15–60 K temperature range, take an average heat input to
+the cold body of 3.3 W. Neglect the magnetic energy stored in the magnet
+that would presumably be converted into thermal energy when the magnet
+becomes warm enough to lose its superconductivity.
+
+
+f) During this warm-up process beyond 15 K, when the highest field part of
+the winding reaches, say 20 K, the magnet begins losing superconductivity
+and its field decays. For this magnet with a winding volume of 15,000 $\mathrm{cm^3}$
+and a stored energy of 75 kJ, compute its final temperature for an initial
+temperature of 20 K, assuming that during this transient the entire magnetic
+energy is converted to heat within the winding only. Assume that the winding
+is at a uniform temperature at the end of energy conversion and its enthalpy
+may be approximated by copper’s. Note that because a total thermal energy
+of $\sim 1$ MJ is absorbed by the solid nitrogen from 15 K to 60 K, it is reasonable
+to neglect the additional thermal energy of 75 kJ in e) above.
+
+
+Although the magnet is at uniform temperature except during the brief period of field decay and shortly thereafter, because the field within the winding
+is not uniform, quenching is not initiated simultaneously within the winding.
+Nevertheless, the field decay is expected to last only a few seconds—this is
+based on a quench analysis of a real HTS magnet.
+
+
+g) Show that it takes the same HTS magnet system $\sim 3$ hours from an initial
+operating temperature of 30 K to a final temperature of 35 K for a constant
+heat input of 10 W. Assume the other assumptions in b) are valid.
+
+
+h) Repeat g) for the range 35–40 K for the same constant heat input of 10 W,
+and demonstrate that the extra enthalpy of the phase transition at 35.61 K
+doubles the warm-up time over the same temperature increment of 5 K.
+
+Solid nitrogen may also be used to stabilize an HTS winding subjected to transitory
+disturbances. Experiments have demonstrated that a thin layer ($\sim 0.5$ mm) of SN2
+in contact with a Bi2223 tape indeed suppressed the conductor’s temperature rise
+when it was driven to the normal state by an over-current pulse imposed upon a
+constant transport current [4.36, 4.37]. It is because of the poor thermal diffusivity
+of solid nitrogen that only a thin layer ($\sim 0.5$mm) is effective in absorbing transient
+power dissipation.
+
+i) Using Eq. 4.21 given in DISCUSSION 4.11, show that a transient heating of
+constant amplitude (square wave) and $\sim 0.1$ s  duration diffuses through a 0.4-
+mm thick layer of SN2, initially at 30 K, over this heating period. Although
+the solid nitrogen layer temperature rises during heating, use a constant value
+of $D_{th}=2.4×10^{−3}\ \mathrm{cm^2/s}$ at 30 K ($D_{th}=0.24\ \mathrm{mm^2/s}$ in Table 4.10).
+
+
+j) For this 0.1-s transient heating of i), show that a power flux of $4.2\ \mathrm{W/cm^2}$
+could be absorbed by this SN2 layer as it is heated to 35 K.
+
+
+k) Discuss the effectiveness of a thin layer of solid nitrogen subjected to transient
+heating when the heated layer must pass through the solid-to-solid phase
+transition at 35.61 K. As footnoted in Table 4.10, $D_{th}$ of solid nitrogen at
+35.61 K is theoretically 0.
+
+
+l) Discuss to what extent the expansion of a magnet may impact the spatial
+field homogeneity as the magnet warms up over its permitted operating temperature range, here between 10 K and 15 K.
+
+\subsubsection{问题4.4之解}
+a) Figure 4.18 shows $T(t)$ plots of 1-liter volumes of Cu, Pb, SNe, and SN2,
+subjected to a constant heat input of 1 W with an initial temperature of 4.2 K and
+a final temperature of 60 K (25 K for SNe)—it also includes a dotted horizontal
+line at 4.2 K showing the duration required to boil off 1 liter of 4.2-K liquid helium
+(LHe). The figure clearly demonstrates that among these substances, at least on
+a volume basis SNe in the range 4–25 K and SN2 in the range 25–60 K are the
+best heat capacity enhancers. Because specific densities of SNe ($1.25\ \mathrm{g/cm^3}$ at
+25 K) and SN2 ($1\ \mathrm{g/cm^3}$ at 25 K) are an order of magnitude less than those of Pb
+($11.4\ \mathrm{g/cm^3}$) and Cu ($8.96\ \mathrm{g/cm^3}$), for the same extra volume in the cold body
+occupied by a heat capacity enhancer substance, either of these solid cryogens not
+only performs its task well but also is only a modest extra mass to the system.
+
+
+Because the entire warm-up (4.2 K–60 K) takes, for example, $\sim 18$ hours for SN2,
+we may safely conclude that the assumption of uniform temperature throughout
+the 1-liter volume of solid with a diffusion distance of $\sim 10$ cm—is
+valid. The uniform temperature assumption is clearly valid for copper and lead.
+
+b) From Fig. 4.18 we note that for 1-liter SN2, $T(t\simeq 400\ \mathrm{s})$ = 10 K and
+$T(t\simeq 2,150\ \mathrm{s})$ = 15 K. For 1-liter SN2, we have the warm-up period from 10 K to 15 K
+with 1-W heat input: $[\Delta t(10 K\rightarrow 15 K)]_{1 litter}^{1 W}\simeq 1,750$s = 0.486 h. For 15-liter
+solid nitrogen with 0.25-W heat input, the 10-15 K warm-up period, $[\Delta t(10 K\rightarrow 15 K)]_{15 litter}^{0.25 W}$, is given by:
+
+%%%此处有公式
+
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt4/figs/fig4.18.eps}
+	\caption{初始温度4.2 K，终末温度60 K，。。。$T(t)$。}
+\end{figure}
+
+Alternatively, we may directly use Fig. 4.2 and compute $h(15 K)−h(10 K) [J/cm^3]$
+by performing the$\int C_p(T)dT$ for SN2 between 10 K and 15 K:
 \begin{equation*}% page260
 h(15K)-h(10K)\simeq\frac{C_p(10K)+C_p(15K)}{2}(15K-10K)
 \simeq\frac{(0.175J/cm^3K+0.475J/cm^3K)}{2}(5K)
 \simeq1.625J/cm^3
 \end{equation*}
+
+Thus the 10–15 K warm-up time for 15-liter solid nitrogen with 0.25-W heat input,
+$[\Delta t(10 K\rightarrow 15 K)]_{15 litter}^{0.25 W}$ may be given by
 \begin{equation*}% page260
 [\Delta(10K \rightarrow15K)]_{15liter}^{0.25W}=\frac{(15000cm^3)(1.625J/cm^3)}{(0.25W)(3600s/h)}\simeq27.1h~30h
 \end{equation*}
@@ -909,6 +1211,7 @@ h(15K)-h(10K)\simeq\frac{C_p(10K)+C_p(15K)}{2}(15K-10K)
 \nu_{N2}=\pi D\ell\Delta r_{N2}
 \Delta r_{N2}=\frac{\mu_{N2}}{\pi D\ell}=\frac{(15000cm^3)}{\pi(90cm)(30cm)}=1.8cm
 \end{equation*}
+
 \begin{equation}% 4.21
 \tau_{sd}=\frac{1}{D_{th}}(\frac{\delta_{sd}}{\pi})^2
 =\frac{1}{(55\times10^{-2}cm^2/s)}(\frac{1.8cm}{\pi})^2~0.6s
