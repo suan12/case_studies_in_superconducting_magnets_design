@@ -9,16 +9,51 @@
 \subsubsection*{交流损耗的能量密度表}
 
 \subsection{磁滞损耗}
+
+\begin{equation}% 7.1
+\int\left[-\int_{S}^{}\vec{E}\times\vec{H}\cdot d\vec{\ \mathcal{A}}\right]dt=\int_{\nu}^{}\left[\int\vec{E}\cdot\vec{J}dt+\frac{1}{2}\mu_oH^2+\mu_oH\int\vec{H}\cdot d\vec{M}\right]d\nu
+\end{equation}
+
 \subsubsection*{Bean板的磁滞损耗}
+\begin{equation}% 7.2
+\int\left[-\int_{S}\vec{E}(x)\times\vec{H}_e\cdot d\vec{\ \mathcal{A}}\right]dt=\int_{0}^{2a}\left[\int\vec{E}(x)\cdot\vec{J}_c(x)dt+\frac{1}{2}\mu_oH_{s}^{2}(x)\right]dx
+\end{equation}
+\begin{equation}% 7.3a
+e_{hy}=\frac{1}{2a}\int_{0}^{2a}\left[\int J_cE(x)dt\right]dx
+\end{equation}
+\begin{equation}% 7.3b
+e_{hy}=\frac{1}{2a}\{\int\left[-\int_{S}\vec{E}(x)\times\vec{H}_e\cdot d\vec{\ \mathcal{A}}\right]dt-\frac{1}{2}\mu_oH\int_{0}^{2a}H_{s}^{2}(x)dx\}
+\end{equation}
+\begin{equation}% 7.4a
+e_{hy}=\mu_o\oint\vec{H}_ed\vec{M}_e(\vec{H}_e)
+\end{equation}
+\begin{equation}% 7.4b
+e_{hy}=-\mu_o\oint M(H_e)dH_e
+\end{equation}
+
 
 \subsubsection*{外磁场时间序列下的Bean板}
+\begin{equation}% 7.5
+H_e(t)=0*(\ \mathrm{Virgin slab})\rightarrow H_m\rightarrow 0\rightarrow -H_m\rightarrow 0\rightarrow H_m\rightarrow 0\rightarrow -H_m\rightarrow 0
+\end{equation}
+
 
 \subsection{多丝复合物中的耦合损耗}
 
 \subsubsection*{耦合时间常数}
+\begin{equation}% 7.6
+\tau_{cp}=\frac{\mu_o\ell_{p}^{2}}{8\pi\rho_{ef}}
+\end{equation}
+
 
 \subsubsection*{有效基底电阻}
 
+\begin{equation}% 7.7a
+\rho_{ef0}=\frac{1-\lambda_f}{1+\lambda_f}\rho_m
+\end{equation}
+\begin{equation}% 7.7b
+\rho_{ef\infty}=\frac{1+\lambda_f}{1-\lambda_f}\rho_m
+\end{equation}
 
 \subsection{涡流损耗}
 
@@ -26,15 +61,39 @@
 
 \subsection{分段电阻}
 
+
+
 \subsubsection*{搭接电阻（接头）}
+\begin{equation}% 7.8
+R_{sd}=\frac{\rho_{sd}\delta_{sd}}{a\ell_{sp}}
+\end{equation}
+
 
 \subsubsection*{接触电阻}
+\begin{equation}% 7.9a 7.9b
+R_{sp}=R_{cA}+R_{sd}+R_{cB} 
+=\frac{R_{ct}}{A_{ct}}
+\end{equation}
+\begin{equation}% 7.9c
+R_{sp}=\frac{R_{ct}}{A_{ct}}\simeq R_{sd}
+\end{equation}
+\begin{equation}% 7.10
+R_{ct}\simeq\rho_{sd}\delta_{sd}
+\end{equation}
+
 
 \subsubsection*{机械接触开关}
 
 \subsection{机械扰动}
 
 \subsubsection*{导体移动和矫正}
+\begin{equation}% 7.11
+e_f=\mu_ff_{L_r}\Delta r_f
+\end{equation}
+\begin{equation}% page411最后一个
+\Delta r_f=\frac{e_f}{\mu_ff_{L_r}}=\frac{(1300\ \mathrm{J/m^3})}{(0.3)(2\times 10^8\ \mathrm{N/m^3})}\simeq 20\times 10^{-6}\ \mathrm{m}=20\ \mathrm{\mu m}
+\end{equation}
+
 
 \subsubsection*{填充材料分裂和矫正}
 
@@ -43,14 +102,205 @@
 
 \subsection{应用于HTS磁体}
 
+
+
+
 \section{专题}
-\subsection{问题1：磁滞能量密度——在“小”磁场时间序列的“纯”Bean板}
+\subsection{问题7.1：磁滞能量密度——在“小”磁场时间序列的“纯”Bean板}
 
-\newpage
-\subsection{问题2：磁滞能量密度——在“中”磁场时间序列的“纯”Bean板}
+\begin{equation}% 5.5
+-M(H_e)=H_e-\frac{H_{e}^{2}}{2H_p}        (H_e=0*\rightarrow H_m\leq H_p)
+\end{equation}
+\begin{equation}% 7.12
+-M(H_e)=H_e+\frac{H_{e}^{2}-2H_mH_e-H_{m}^{2}}{4H_p}      (H_e=H_m\rightarrow 0)
+\end{equation}
+\begin{equation}% 7.13a
+e_{hy}=\frac{\mu_oH_{m}^{3}}{6H_p}        (0\leq H_m\leq H_p)
+\end{equation}
+\begin{equation}% 7.14a
+e_{hy}=\frac{\mu_oH_{m}^{3}}{24H_p}       (0\leq H_m\leq H_p)
+\end{equation}
+\begin{equation}% 7.15a
+e_{hy}=\frac{5\mu_oH_{m}^{3}}{24H_p}      (0\leq H_m\leq H_p)
+\end{equation}
 
-\newpage
-\subsection{问题3：磁滞能量密度——在“大”磁场时间序列的“纯”Bean板}
+\subsubsection{问题7.1之解}
+\begin{equation}% page416 1
+E_z(x)=\mu_o\frac{dH_e}{dt}(x_+-x)
+\end{equation}
+\begin{equation}% page416 2
+E_z(x)dt=\mu_o(x_+-x)dH_e
+\end{equation}
+\begin{equation}% page416 3 and 4
+e_{hy}=\frac{1}{a}\int_{0}^{a}\left[\int J_cE(x)dt\right]dx 
+=\frac{\mu_oF_c}{a}\int_{0}^{H_m}\left[\int_{0}^{x_+(x_+-x)dx}\right]dH_e
+\end{equation}
+\begin{equation}% page416 5 and 6
+e_{hy}=\frac{\mu_oJ_c}{a}\int_{0}^{H_m}\left(x_{+}^{2}-\frac{x_{+}^{2}}{2}\right)dH_e 
+=\frac{\mu_oJ_c}{a}\int_{0}^{H_m}\frac{H_{e}^{2}}{2J_{c}^{2}}dH_e=\frac{\mu_oH_{m}^{3}}{6aJ_c}
+\end{equation}
+\begin{equation}% 7.13a
+e_{hy}=\frac{\mu_oH_{m}^{3}}{6H_p}    (H_m\leq H_p)
+\end{equation}
+\begin{equation}% page416 S1.3
+E_z(x)dt=\mu_o(x-x_-)dH_e
+\end{equation}
+\begin{align*}% page416 S1.4
+e_{hy}&=\frac{\mu_oJ_c}{a}\int_{H_m}^{0}\left[\int_{0}^{x_-}(x-x_-)dx\right]dH_e=\frac{\mu_oJ_c}{a}\int_{H_m}^{0}\left(\frac{x_{-}^{2}}{2}-x_{-}^{2}\right)dH_e \\\notag
+&=\frac{\mu_oJ_c}{a}\int_{H_m}^{0}\frac{(H_m-H_e)^2}{8J_{c}^{2}}dH_e=\frac{\mu_oH_{m}^{3}}{24aJ_c}
+\end{align*}
+\begin{equation}% 7.14a
+e_{hy}=\frac{\mu_oH_{m}^{3}}{24H_p}       (0\leq H_m\leq H_p)
+\end{equation}
+\begin{equation}% page417 S1.5a
+E_z(0)=\mu_o\frac{H_e}{J_c}\left(\frac{dH_e}{dt}\right)
+\end{equation}
+\begin{equation}% page417 S1.6a两个
+e_{py1}\equiv\frac{1}{a}\int\left[-\int_{S}\vec{E}(x)\times\vec{H}_e\cdot d\vec{\ \mathcal{A}}\right]dt=\frac{\mu_o}{aJ_c}\int_{0}^{H_m}H_{e}^{2}dH_e
+e_{py1}=\frac{\mu_oH_{m}^{3}}{3H_p}
+\end{equation}
+\begin{equation}% page417 S1.5b
+E_z(0)=-\mu_o\left(\frac{H_m-H_e}{2J_c}\right)\frac{dH_e}{dt}
+\end{equation}
+\begin{equation}% page417 S1.6b两个
+e_{py2}=\frac{\mu_o}{2aJ_c}\int_{H_m}^{0}(H_m-H_e)H_edH_e
+e_{py2}=-\frac{\mu_oH_{m}^{3}}{12H_p}
+\end{equation}
+\begin{equation}% page417 S1.7a
+H_s(x)=J_cx        (0\leq x\leq x_0)
+\end{equation}
+\begin{equation}% page417 S1.7b
+H_s(x)=H_m-J_cx    (x_0\leq x\leq H_m/J_c)
+\end{equation}
+\begin{equation}% page417 S1.8
+e_{m_f}=\frac{\mu_o}{2a}\int_{0}^{a}H_{s}^{2}(x)dx=\frac{\mu_o}{2a}\left(2\times\int_{0}^{\frac{H_m}{2J_c}}J_{c}^{2}x^2dx\right)
+e_{m_f}=\frac{\mu_oH_{m}^{3}}{24H_p}
+\end{equation}
+\begin{equation}% 7.15a两个
+e_{hy}=e_{py1}+e_{py2}-e_{m_f} 
+=\frac{\mu_oH_{m}^{3}}{3H_p}-\frac{\mu_oH_{m}^{3}}{12H_p}-\frac{\mu_oH_{m}^{3}}{24H_p}
+e_{hy}=\frac{5\mu_oH_{m}^{3}}{24H_p}       (0\leq H_m\leq H_p)
+\end{equation}
+\begin{equation}% page418 S1.9
+e_{py}=e_{hy}+e_{m_f}-e_{m_i}
+\end{equation}
+
+
+\begin{align*}% page418 S1.10两个
+e_{m_{f1}}&=\frac{\mu_o}{2a}\int_{0}^{a}H_{s}^{2}(x)dx \\\notag
+&=\frac{\mu_o}{2a}\left[\int_{0}^{\frac{H_m}{J_c}}(H_m-J_cx)^2dx\right]
+\end{align*}
+\begin{align*}
+e_{m_{f1}}=\frac{\mu_oH_{m}^{3}}{6H_p}
+\end{align*}
+
+
+
+\begin{equation}% page418 S1.11a
+e_{py1}=\frac{\mu_oH_{m}^{3}}{6H_p}+\frac{\mu_oH_{m}^{3}}{6H_p}=\frac{\mu_oH_{m}^{3}}{3H_p}
+\end{equation}
+\begin{equation}% page418 S1.11b
+e_{py2}=\frac{\mu_oH_{m}^{3}}{24H_p}+\frac{\mu_oH_{m}^{3}}{24H_p}-\frac{\mu_oH_{m}^{3}}{6H_p}=\frac{\mu_oH_{m}^{3}}{12H_p}
+\end{equation}
+
+
+\subsection{问题7.2：磁滞能量密度——在“中”磁场时间序列的“纯”Bean板}
+
+
+\begin{equation}% 5.5和5.6
+-M(H_e)=H_e-\frac{H_{e}^{2}}{2H_p}                          (H_e=0*\rightarrow H_p)
+=\frac{1}{2}H_p                                      (H_e=H_p\rightarrow H_m)
+\end{equation}
+\begin{equation}% 5.7a
+-M(H_e)=\frac{1}{2}H_p-(H_m-H_e)+\frac{(H_m-H_e)^2}{4H_p}   (H_e=H_m\rightarrow 0)
+\end{equation}
+\begin{equation}% 7.13b
+e_{hy}=\frac{1}{2}\mu_oH_pH_m\left(1-\frac{2H_p}{3H_m}\right)   (H_p\leq H_m\leq 2H_p)
+\end{equation}
+\begin{equation}% 7.15b
+e_{hy}=\frac{1}{2}\mu_oH_pH_m\left[1-\frac{2H_p}{3H_m}+\frac{1}{12}\left(\frac{H_m}{H_p}\right)^2\right]     (H_p\leq H_m \leq 2H_p)
+\end{equation}
+
+\subsubsection{问题7.2之解}
+\begin{equation}% page420 S2.1
+e_{hy1^\prime}=\frac{1}{6}\mu_oH_{p}^{2}       (H_e=0\rightarrow H_p)
+\end{equation}
+\begin{equation}% page420 S2.2
+E_z(x)=\mu_o\frac{dH_e}{dt}(a-x)
+\end{equation}
+
+\begin{subequations}
+\begin{align*}% page420 S2.3a和2.3b
+e_{hy1^\prime}&=\frac{1}{a}\int_{0}^{a}\left[\int J_cE(x)dt\right]dx=\frac{\mu_oJ_c}{a}\int_{0}^{a}\left[\int_{H_p}^{H_m}(a-x)dH_e\right]dx \\
+&=\mu_oJ_c(H_m-H_p)\int_{0}^{a}\frac{a-x}{a}dx=\frac{1}{2}\mu_oH_p(H_m-H_p)
+\end{align*}
+\end{subequations}
+
+
+
+
+\begin{equation}% page420 7.13b两个
+e_{hy}=\frac{1}{6}\mu_oH_{p}^{2}+\frac{1}{2}\mu_oH_p(H_p-H_m) 
+=\frac{1}{2}\mu_oH_pH_m-\frac{1}{3}\mu_oH_{p}^{2}
+e_{hy}=\frac{1}{2}\mu_oH_pH_m\left(1-\frac{2H_p}{3H_m}\right)       (H_p\leq H_m\leq 2H_p)
+\end{equation}
+\begin{equation}% page420 S2.4a
+e_{py1^\prime}=\frac{1}{3}\mu_oH_{p}^{2}
+\end{equation}
+\begin{equation}% page420 S2.5
+E_z(0)=\mu_oa\frac{dH_e}{dt}
+\end{equation}
+\begin{equation}% page420 2.4b两个
+e_{pyq^{\prime\prime}}\equiv\frac{1}{a}\int\left[-\int_{S}\vec{E}(x)\times\vec{H}_e\cdot d\vec{\ \mathcal{A}}\right]dt=\mu_o\int_{H_p}^{H_m}H_edH_e
+e_{pyq^{\prime\prime}}=\frac{1}{2}\mu_o(H_{m}^{2}-H_{p}^{2})
+\end{equation}
+\begin{equation}% page421 S1.6b
+e_{py2}=-\frac{\mu_oH_{m}^{3}}{12H_p}
+\end{equation}
+\begin{equation}% page421 S2.7两个
+e_{m_f}=\frac{\mu_o}{2a}\int_{0}^{a}H_{s}^{2}(x)dx=\frac{\mu_o}{2a}\left[\int_{0}^{\frac{H_m}{2J_c}}J_{c}^{2}x^2dx+\int_{\frac{H_m}{2J_c}}^{a}(H_m-J_cx)^2dx\right]
+e_{m_f}=\frac{1}{2}\mu_oH_{m}^{2}-\frac{\mu_oH_{m}^{3}}{8H_p}-\frac{1}{2}\mu_oH_mH_p+\frac{1}{6}\mu_oH_{p}^{2}
+\end{equation}
+\begin{equation}% page421 S2.8一个
+e_{hy}=e_{py1^\prime}+e_{py1^{\prime\prime}}+e_{py}-e_{m_f} 
+=\frac{1}{3}\mu_oH_{p}^{2}+\frac{1}{2}\mu_o(H_{m}^{2}-H_{p}^{2})-\frac{\mu_oH_{m}^{3}}{12H_p} 
+-\left(\frac{1}{2}\mu_oH_{m}^{2}-\frac{\mu_oH_{m}^{3}}{8H_p}-\frac{1}{2}\mu_oH_mH_p+\frac{1}{6}\mu_oH_{p}^{2}\right) 
+=-\frac{1}{3}\mu_oH_{p}^{2}+\frac{\mu_oH_{m}^{3}}{24H_p}+\frac{1}{2}\mu_oH_pH_m              
+\end{equation}
+\begin{equation}% 7.15b
+e_{hy}=\frac{1}{2}\mu_oH_pH_m\left[1-\frac{2H_p}{3H_m}+\frac{1}{12}\left(\frac{H_m}{H_p}\right)^2\right]     (H_p\leq H_m\leq 2H_p)
+\end{equation}
+\begin{equation}% 7.15a
+e_{hy}=\frac{5\mu_oH_{m}^{3}}{24H_p}    (H_m\leq H_p) 
+=\frac{5}{24}\mu_oH_{p}^{2}
+\end{equation}
+\begin{equation}% 7.15b
+e_{hy}=\frac{1}{2}\mu_oH_pH_m\left[1-\frac{2H_p}{3H_m}+\frac{1}{12}\left(\frac{H_m}{H_p}\right)^2\right]    (H_p\leq H_m\leq 2H_p) 
+=\frac{1}{2}\mu_oH_{p}^{2}\left[1-\frac{2}{3}+\frac{1}{12}\right]=\frac{5}{24}\mu_oH_{p}^{2}
+\end{equation}
+
+
+\subsection{问题7.3：磁滞能量密度——在“大”磁场时间序列的“纯”Bean板}
+
+\begin{equation}% 7.16a
+e_{hy2^\prime}=\frac{1}{3}\mu_oH_{p}^{2}
+\end{equation}
+\begin{equation}% 7.16b
+e_{hy2^{\prime\prime}}=\frac{1}{2}\mu_oH_pH_m\left(1-\frac{2H_p}{H_m}\right)
+\end{equation}
+\begin{equation}% 7.14b
+e_{hy}=\frac{1}{2}\mu_oH_pH_m\left(1-\frac{4H_p}{3H_m}\right)     (H_m\geq 2H_p)
+\end{equation}
+\begin{equation}% 7.15c
+e_{hy}=\mu_oH_pH_m\left(1-\frac{H_p}{H_m}\right)      (H_m\geq 2H_p)
+\end{equation}
+
+\subsubsection{问题7.3之解}
+
+
+
+
+
 
 \newpage
 \subsection{讨论4：磁滞能量密度——磁化的Bean板}
