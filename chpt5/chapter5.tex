@@ -1,4 +1,4 @@
-\chapter{磁化}
+\chapter{励磁}
 \section{引言}
 本章我们使用Bean于1962年提出的唯象磁化理论来讨论第II类超导体的磁化问题。如第一章指出的，对多数超导磁体应用所关注的磁场范围（$>\sim 0.5T$），第II类超导体
 处于混合态，即在超导态的“海”中还存在正常态的“岛”。当第II类超导体处于时变磁场或时变传输电流中时，这些岛中将产生耗散，体现为磁通跳跃（一种暂态现象）或交流损耗。
@@ -110,7 +110,7 @@ $H_p<H_e<H_m-2H_p,\quad \Delta M=-M(H_e\uparrow)+M(H_e\downarrow)$范围内，�
   I=\int_{0}^{2a} J(x)dx=0
 \end{equation}
 
-\subsection{传输电流对磁化的效应}
+\subsection{传输电流对励磁的效应}
 当有传输电流$I_t$（$y$向单位长度）在板中沿$+z$方向（流出纸面）时，我们看到在$x=2a$处磁场有一个$I_t/2$的增长，在$x=0$处有一个$I_t/2$的减少。
 
 因为板内屏蔽电流是从每一个表面逐渐进入内部的，板内的场分布$H_s(x)$如图\ref{fig:hwithi}所示。图中的$x^*$和$x^+$由下式给出：
@@ -220,7 +220,149 @@ $H_e(t)$从0（$t=0$）增（$\uparrow$）至$H_e$（$t=t_1$）时，我们有
 图中的$M$的单位是$emu/cm^3$，不是SI单位。
 
 \section{专题}
-\subsection{讨论1：传导电流磁化}
+\subsection{讨论5.1：传导电流磁化}
+正如本书最初所述，在传输电流存在条件下的励磁依赖于外场和传输电流施加的顺序。
+这里我们考虑三种情况：A) 先加磁场后加传输电流； B) 先通电流后加磁场；C) 磁场和电流交替改变。
+
+\textbf{A.  先加磁场后加传输电流}
+
+\begin{equation}% page321 第1个
+H_{s2_{1}}(x)=2H_{p}+J_{c}x=2J_{c}a+J_{c}x\qquad(0\leq x\leq x*)
+\end{equation}
+\begin{equation}% page321 第2个
+H_{s2_{2}}(x)=2.5H_{p}-J_{c}x=2.5J_{c}a-J_{c}x\quad(x*\leq x\leq x+)
+\end{equation}
+\begin{equation}% page321 第3个
+H_{s2_{3}}(s)=H_{p}+J_{c}x=J_{c}a+J_{C}x\qquad(x+\leq x\leq 2a)
+\end{equation}
+\begin{equation}% page322 第1个
+H_{s2_{1}}(X)=(H_{e}-\frac{1}{2}I_{t})+J_{c}x\qquad(0\leq x\leq x*)
+\end{equation}
+\begin{equation}% page322 第2个
+H_{s2_{2}}(x)=H_{e}-J_{c}x\qquad(x*\leq x\leq x+)
+\end{equation}
+\begin{equation}% page322 第3个
+H_{s2_{s}}(x)=(H_{e}+\frac{1}{2}I_{t})+J_{c}(x-2a)\qquad(x+\leq x\leq2a)
+\end{equation}
+\begin{equation}% page322 第4个
+H_{{s}2_{1}}(x*)=H_{s2_{2}}(x*)
+\end{equation}
+\begin{equation}% page322 第5个
+H_{e}-H_{p}i+J_{c}x*=H_{e}J_{c}x*\Rightarrow x*=\frac{H_{p}}{2J_{c}}i=\frac{1}{2}ai
+\end{equation}
+\begin{equation}% page322 第6个
+H_{s2_{2}}(x*)=H_{e}-\frac{1}{2}aJ_{c}i=H_{e}-\frac{1}{2}H_{p}i
+\end{equation}
+\begin{equation}% page322 第7个
+H_{s2_{2}}(x+)=H_{s2_{3}}(x+)
+\end{equation}
+\begin{equation}% page322 第8个
+H_{e}-J_{c}x+=H_{e}+H_{p}i+J_{c}(x^{+}-2a)\Rightarrow x^{+}=a(1-\frac{1}{2}i)
+\end{equation}
+\begin{equation}% page322 第9个
+H_{s2_{2}(x+)}=H_{e}-H_{p}+\frac{1}{2}H_{p}i
+\end{equation}
+\begin{equation}% page323 第1个
+A_{1}=\frac{1}{2}x*[H_{s1}(0)+H_{s2}(x*)]=\frac{1}{4}ai[(H_{e}-H_{p}i)+(H_{e}-\frac{1}{2}H_{p}i)]\\
+=\frac{1}{4}ai(2H_{e}-\frac{3}{2}H_{p}i)  
+=a(\frac{1}{2}H_{e}i-\frac{3}{8}H_{P}i^{2})
+\end{equation}
+\begin{equation}% page323 第2个
+A_{2}=\frac{1}{2}(x^{+}-x*)[H_{s2}(x*)+H_{s2}(x^{+})]\\
+=\frac{1}{2}(a-ai)(H_{e}-\frac{1}{2}H_{p}i+H_{e}-H_{p}+\frac{1}{2}H_{p}i)\\
+=\frac{1}{2}a(-i)(2H_{e}-H_{p})\\
+=a(H_{e}-H_{e}i-\frac{1}{2}H_{p}+\frac{1}{2}H_{p}i)
+\end{equation}
+\begin{equation}% page323 第3个
+A_{3}=\frac{1}{2}(2a-x+)[H_{s2}(x+)+H_{s3}(2a)]\\
+=\frac{1}{2}(a+\frac{1}{2}ai)(H_{e}-H_{p}+\frac{1}{2}H_{p}i+H_{e}+H_{P}i)\\
+=a(1+\frac{1}{2}i)(H_{e}-\frac{1}{2}H_{p}+\frac{3}{4}H_{p}i)\\
+=a(H_{e}+\frac{1}{2}H_{e}i-\frac{1}{2}H_{p}-\frac{1}{4}H_{p}i+\frac{3}{4}H_{p}i+\frac{3}{8}H_{p}i^{2})
+\end{equation}
+\begin{equation}% page323 第4个
+Shaded\quad area=A_{1}+A_{2}+A_{3}\\
+=a(\frac{1}{2}H_{e}i-\frac{3}{8}H_{p}i^{2}+H_{e}-H_{e}i-\frac{1}{2}H_{p}+\frac{1}{2}H_{p}i\\
++H_{e}+\frac{1}{2}H_{e}i-\frac{1}{2}H_{p}-\frac{1}{4}H_{P}i+\frac{3}{4}H_{P}i+\frac{3}{8}H_{p}i^{2})\\
+=a(2H_{e}-H_{p}+H_{p}i)
+\end{equation}
+\begin{equation}% page323 第4个
+-M(i)=H_{e}-\frac{1}{2a}\times(Shaded\quad area)\\
+=H_{e}-H_{e}+\frac{1}{2}H_{p}-\frac{1}{2}H_{p}i\\
+=\frac{1}{2}H_{p}(1-i)\qquad(5.17a)\\
+=-M(0)f_{1}(i)\qquad(5.17b)
+\end{equation}
+
+C) 磁场和电流交替改变。
+
+\textbf{B. 先通电流后加磁场}
+
+\begin{equation}% page324 第1个
+I_{t}=\int_{0}^{2a}J(x)dx=J_{c}(0.5)+J_{c}(2a-1.5a)=J_{c}a
+\end{equation}
+\begin{equation}% page324 第2个
+I_{t}=\int_{0}^{2a}J(x)dx=-J_{c}(0.5a)+J_{c}(2a-0.5a)=J_{c}a
+\end{equation}
+\begin{equation}% page324 第3个
+H_{s1}(x)=(H_{e}-H_{p}i)-J_{c}x\qquad(0\leq \leq x*)
+\end{equation}
+\begin{equation}% page324 第4个
+H_{s2}(x)=(H_{e}+H_{p}i)+J_{c}(x-2a)\quad(x*\leq x leq  2a)
+\end{equation}
+\begin{equation}% page324 第5个
+x*=a-ai=a(1-i)
+\end{equation}
+\begin{equation}% page325 第1个
+H_{s1}(x*)=H_{e}-H_{p}i-J_{c}a(1-i)=J_{e}-H_{p}
+\end{equation}
+\begin{equation}% page325 第2个
+A_{1}=\frac{1}{2}a(1-i)(H_{e}-H_{p}i+H_{e}-H_{p}\\
+=a(1-i)(H_{e}\frac{1}{2}H_{p}-\frac{1}{2}H_{p}i)\\
+=a(H_{e}-H_{e}i\frac{1}{2}H_{p}+\frac{1}{2}H_{p}i^{2})
+\end{equation}
+\begin{equation}% page325 第3个
+A_{2}=\frac{1}{2}(2a-a+ai)(H_{e}+H_{p}i+H_{e}-H_{P})\\
+=a(1+i)(H_E-\frac{1}{2}H_{p}+\frac{1}{2}H_{p}i)\\
+=a(H_{e}+H_{e}-\frac{1}{2}H_{p}+\frac{1}{2}H_{p}i^{2})
+\end{equation}
+\begin{equation}% page325 第4个
+Shaded\quad area=A_{1}+A_{2}\\
+=a(2H_{e}-H_{p}+H_{p}i^{2})
+\end{equation}
+\begin{equation}% page325 第5个
+-M(i)=H_{e}-\frac{1}{2}(2H_{e}-H_{p}+H_{P}i^{2}\\
+=\frac{1}{2}H_{p}(1-i^{2})\qquad(5.18a)\\
+=-M(0)f_{2}(i)\qquad(5.18b)
+\end{equation}
+
+
+\textbf{C. 磁场和电流交替改变}
+
+\begin{equation}% page326 第1个
+H_{s2}(x)=H_{e}+H_{p}i-J_{c}x\qquad(x*\leq x\leq a)\\
+\end{equation}
+
+\begin{equation}% page326 第2个
+H_{s3}(x)=H_{e}+H_{p}i+J_{c}(x-2a)\quad(a\leq x\leq a^{+})\\
+\end{equation}
+
+\begin{equation}% page326 第3个
+H_{s2}(x*)=H_{e}\Rightarrow H_{e}+H_{p}i-J_{c}x*\\
+\end{equation}
+
+\begin{equation}% page326 第3个
+x*=\frac{H_{p}i}{J_{c}}=ai\\
+\end{equation}
+
+\begin{equation}% page326 第4个
+H_{s3}(x+)=H_{e}\Rightarrow H_{e}+H_{P}i+J_{c}(x^{+}-2a)\\
+\end{equation}
+
+\begin{equation}% page326 第3个
+x^{+}=2a-\frac{H_{p}}{J_{c}}i=2a-ai\\
+\end{equation}
+
+
+
 
 \newpage
 \subsection{讨论2：SQUID用于磁化测量}
