@@ -13,7 +13,8 @@
 第7和第8章同样讨论不同条件下线圈内温升：第7章讨论温升的原因或源；第8章讨论控制磁体不可预测温升的保护方法。
 首先，LTS和HTS磁体的稳定性问题就截然不同。
 
-\subsection*{LTS vs. HTS}
+\textbf{LTS vs. HTS}
+
 如图1.6给出的，稳定性的实现难度和费用随运行温度提高而降低。在下面的讨论中，我们将比较HTS和LTS的“稳定裕度”，并证明HTS磁体实际上
 是非常稳定的。换句话说，任何HTS磁体都会达到其运行电流，且不会存在“提前失超（premature quench）”.
 
@@ -31,6 +32,30 @@
 \end{description}
 
 
+\subsection{热能量}
+
+\subsection{热传导}
+
+\subsection{焦耳热}
+
+\subsection{扰动谱}
+
+\subsection{稳定裕度 vs 扰动能}
+
+\subsection{冷却}
+
+\section{电流密度}
+
+\subsection{横截面积}
+
+\subsection{复合物超导体}
+
+\subsection{绕组中的电流密度}
+
+
+\section{专题}
+\subsection{讨论6.1：低温稳定性——电路模型}
+
 
 \begin{equation}% page362 第1个 6.10a
 V_{cd}=R_mI_m\simeq R_m{(I_t-Ic)}
@@ -39,8 +64,12 @@ V_{cd}=R_mI_m\simeq R_m{(I_t-Ic)}
 G_{j}=V_{cd}I_t
 \end{equation}
 \begin{equation}% page362 第3个 6.11
-{（G_j）}\simeq R_{m}I_{t}{（I_t-I_c)}
+{(G_j)}\simeq R_{m}I_{t}{（I_t-I_c)}
 \end{equation}
+
+
+
+\subsection{问题6.1：低温稳定性——温度依赖}
 \begin{equation}% page363 第1个 6.12
 I_c(T)=I_{c_o}(\frac{T_c-T}{T_c-T_{o_p}}) (T_{o_p}\leq T \leq T_c)
 \end{equation}
@@ -53,6 +82,8 @@ G_j(T)=R_mI_t^2(\frac{T-T_{cs}}{T_c-T_{cs}})(T_{cs}\leq T\leq T_c)
 \begin{equation}% page363 第4个 6.13c
 G_j(T)=R_mI_t^2 (T\ge T_c)
 \end{equation}
+
+\subsubsection{问题6.1之解}
 \begin{equation}% page364 第1个 6.13a
 G_j(T)=0 (T_{o_p}\leq T \leq T_{cs})
 \end{equation}
@@ -81,8 +112,11 @@ T\ge T_c:
 \begin{equation}% page364 第7个 6.14b
 G_j(T)=R_m(T)I_t^2
 \end{equation}
+
+
+\subsection{讨论6.2：Stekly低温稳定性判据}
 \begin{equation}% page365 第1个 6.15
-C_{cd}(T)\frac {\partial T}{\partial t}=\nabla.[k_{cd}(T)\nabla T]+\rho _{cd}(T)J_{cd}^2(t)+g_d(t)-(\frac{f_p\ \\mathrm{P}_D}{A_{cd}})g_q(T)
+C_{cd}(T)\frac {\partial T}{\partial t}=\nabla\cdot[k_{cd}(T)\nabla T]+\rho _{cd}(T)J_{cd}^2(t)+g_d(t)-(\frac{f_p\ \mathrm{P}_D}{A_{cd}})g_q(T)
 \end{equation}
 \begin{equation}% page365 第2个 6.16a
 G_j(T)=R_mI_{c_o}^2（\frac{T-T_{op}}{T_c-T_{op}}) (T_{o_p}\leq T \leq T_c)
@@ -115,9 +149,20 @@ J_{op}=\frac{I_{op}}{A_{sc}+A_ {\bar{m}}+A_m}
 \begin{equation}% page366 第3个 6.21b
 \gamma_{m/s}\equiv \frac{A_m}{A_{sc}+A_m}
 \end{equation}
+
+
+
+
+\subsection{讨论6.3：复合物超导体}
+
+
+
+\subsection{问题6.2：低温稳定性——非线性冷却曲线}
 \begin{equation}% page367 第1个 6.22
 [J_{m_o}]_{sk}=\sqrt{\frac{f_pP_Dq_{fm}}{\rho_mA_m}}
 \end{equation}
+
+\subsubsection{问题6.2之解}
 \begin{equation}% page368 第1个 S2.1
 \frac {\rho_mI_{co}^2}{A_m}=f_pP_Dq_{fm}
 \end{equation}
@@ -127,12 +172,17 @@ J_{op}=\frac{I_{op}}{A_{sc}+A_ {\bar{m}}+A_m}
 \begin{equation}% page368 第3个 s1.2
 I_{c_o}=I_t(\frac{T_c-T_{op} }{T_c-T_{cs}})
 \end{equation}
+
 \begin{equation}% page368 第4个
 g_j(T)=(\frac{A_{cd}}{f_pP_D})R_mI_t^2=(\frac{A_{cd}}{f_pP_D})R_mI_{co}^2\frac{(T_c-T_{cs})^2(T-T_{cs})}{(T_c-T_{op})^3}
 \end{equation}
 \begin{equation}% page368 第5个
 \frac{dg_j(T)}{dT}=(\frac{A_{cd}}{f_pP_D})R_mI_{co}^2\frac{(T_c-T_{cs})^2}{(T_c-T_{op})^3}
 \end{equation}
+
+
+
+\subsection{讨论6.4：等效面积判据}
 \begin{equation}% page369 第1个 6.23
 \int_{T_{op}}^{T_{eq}}[g_q(T)-(\frac{A_{cd}}{f_pP_D})g_j(T)]d(T)
 =\int_{T_{op}}^{T_{eq}}[g_q(T)-\hat{g}_j(T)]dT=0
@@ -143,18 +193,28 @@ g_j(T)=\rho_m(T)J_{m_o}^2(\frac{T-T_{op}}{T_c-T_{op}}) (T_{op}\leq T \leq T_c)
 \begin{equation}% page369 第3个 6.24b
 g_j(T)=\rho_m(T)J_{m_o}^2 (T \geq T_c)
 \end{equation}
+
+
+\subsection{讨论6.5：超导体“指数”n}
 \begin{equation}% page370 第1个 6.25a
 V_s=V_c(\frac{I_s}{I_c})^n
 \end{equation}
 \begin{equation}% page370 第2个 6.25b
 E_s=E_c(\frac{I_s}{I_c})^n
 \end{equation}
+
+
+
+\subsection{问题6.3：复合物超导体(n)——电路模型}
 \begin{equation}% page371 第1个 6.26a
 R_s=R_c(\frac{I_s}{I_c})^{(n-1)}
 \end{equation}
 \begin{equation}% page371 第2个 6.26b
 R_{dif}=nR_c(\frac{I_s}{I_c})^{(n-1)}
 \end{equation}
+
+\subsubsection{问题6.3之解}
+
 \begin{equation}% page372 第1个 S3.1
 R_s=\frac{V_s}{I_s}=\frac{V_c}{I_s}(\frac{I_s}{I_c})^2=\frac{V_c}{I_c}(\frac{I_s}{I_c})^{(n-1)}
 \end{equation}
@@ -179,6 +239,10 @@ V_m=R_mI_m=V_s=V_c(\frac{I_s}{I_c})^{n}
 \begin{equation}% page372 第7个S3.4
 P_{cd}=R_mI_mI_t=V_sI_t
 \end{equation}
+
+
+
+\subsection{问题6.4：电流脉冲下的YBCO}
 \begin{equation}% page375 第1个6.27a
 R_m(T)=0.190+1.530(\frac{T-77}{293-77})\ [\ \mathrm{m\Omega}]
 \end{equation}
@@ -188,6 +252,10 @@ I_c(T)=100(\frac{93-T}{93-77})[\ \mathrm{A}]
 \begin{equation}% page375 第1个6.27C
 V_s(T)=5[\frac{I_s(T)}{I_c(T)}]^{10} [\ \mathrm{\mu V}]
 \end{equation}
+
+
+\subsubsection{问题6.4之解}
+
 \begin{equation}% page376 第1个S4.1a
 I_t=I_s+I_m
 \end{equation}
@@ -223,6 +291,9 @@ V_{cd}=40\times10^{-3}\ \mathrm{V}=R_m(T)I_m
 \begin{equation}% page377 第3个S4.8
 8000=[\frac{16(406200T-28027799)}{(93-T)(135400T-6793895)}]^{12.24}
 \end{equation}
+
+
+\subsection{讨论6.6：CICC导体}
 \begin{equation}% page378 第1个6.28a
 C_{cd}(T)\frac{\partial T}{\partial t}=\nabla.[k_{cd}(T)\nabla T]+\rho_{cd}(T)J_{cd_o}^2(t)+g_d(t)-(\frac{f_pP_D}{A_{cd}})h_{he}(T-T_{he})
 \end{equation}
@@ -236,68 +307,134 @@ h_{he}=0.0259(\frac{k_{he}}{D_{hy}})Re^{0.8}Pr^{0.4}(\frac{T_{he}}{T_{cd}})^{-0.
 I_{lim}=\sqrt{\frac{A_mf_p\ \mathrm{P}_Dh_{he}(T_c-T_{op})}{\rho_m}}
 \end{equation}
 
-\subsection{热能量}
-
-\subsection{热传导}
-
-\subsection{焦耳热}
-
-\subsection{扰动谱}
-
-\subsection{稳定裕度 vs 扰动能}
-
-\subsection{冷却}
-
-\section{电流密度}
-
-\subsection{横截面积}
-
-\subsection{复合物超导体}
-
-\subsection{绕组中的电流密度}
 
 
-\section{专题}
-\subsection{讨论1：低温稳定性——电路模型}
 
-\newpage
-\subsection{问题2：低温稳定性——温度依赖}
+\subsection{问题6.5：冷却复合物导体的伏安关系}
 
-\newpage
-\subsection{讨论3：Stekly低温稳定性判据}
 
-\newpage
-\subsection{讨论4：复合物超导体}
+\begin{equation}% page383 第1个6.31
+V=\frac{R_m(I-I_{co})}{1-\frac{R_mII_{co}}{f_pP_{cd}\ell h_q(T_c-T_{op})}}
+\end{equation}
+\begin{equation}% page383 第2个6.32
+\ \mathrm{u}(\ \mathrm{i})=\frac{\ \mathrm{i}-1}{1-\alpha_{ski}}
+\end{equation}
 
-\newpage
-\subsection{问题5：低温稳定性——非线性冷却曲线}
 
-\newpage
-\subsection{讨论6：等效面积判据}
+\subsubsection{问题6.5之解}
+\begin{equation}% page384 第1个S5.1
+G_{j}(T_{op}+\triangle T)=VI=R_m\{I-I_{co}[\frac{T_c-(T_{op}+\Delta T)}{T_c-T_{op}}]\}I
+\end{equation}
+\begin{equation}% page384 第1个S5.1
+=R_mI[(I-I_{co})+\frac{I_{co}\Delta T}{T_c-T_{op}}]
+\end{equation}
+\begin{equation}% page384 第2个S52
+\Delta T=\frac{R_mI(I-I_{c_o})(T-T_{op})}{f_pP_{cd}\ell h_q(T_c-T_{op})-R_mI_{c_o}I}
+\end{equation}
+\begin{equation}% page384 第3个S5.3a
+V=R_m\{(I-I_{c_o})+\frac{I_{c_o}}{T_c-T_{op}}[\frac{R_mI(I-I_{co})(T_c-T_{op})}{f_pP_{cd}\ell h_q(T_c-T_{op})-R_mI_{c_o}I}]\}
+\end{equation}
+\begin{equation}% page384 第4个S5.3b
+=R_m(I-I_{c_o}))+\frac{R_m^2I_{c_o}(I-I_(co))}{f_pP_{cd}\ell h_q(T_c-T_{op})-R_mI_{c_o}I}
+\end{equation}
+\begin{equation}% page384 第5个6.31
+V=\frac{R_m(I-I_{co})}{1-\frac{R_mII_{co}}{f_pP_{cd}\ell h_q(T_c-T_{op})}}
+\end{equation}
+\begin{equation}% page384 第6个
+V=\frac{R_m(I-I_{co})}{1-\alpha_{sk}(I/I_{co})}
+\end{equation}
+\begin{equation}% page384 第7个
+v(i)=\frac{i-1}{1-\alpha_{sk}i}
+\end{equation}
+\begin{equation}% page384 第8个
+\alpha_{sk}=\frac{\rho_mI_{co^2}}{f_pP_{cd}A_mh_q(T_c-T_{op})}
+\end{equation}
+\begin{equation}% page384 第9个
+=\frac{(4\times10^{-10}\ \mathrm{\Omega m})(100\ \mathrm{A})^2}{(1)(2\times10^{-2}\ \mathrm{m^2})(10^4\ \mathrm{W/m^2K})(5.2\ \mathrm{K}-4.2\ \mathrm{K})}=0.1
+\end{equation}
+\begin{equation}% page384 第10个
+v(i)=\frac{10(i-1)}{10-i}
+\end{equation}
 
-\newpage
-\subsection{讨论7：超导体“指数”n}
 
-\newpage
-\subsection{问题8：复合物超导体（n）——电路模型}
+\subsection{问题6.6：混合III SCM的稳定性分析}
 
-\newpage
-\subsection{问题9：电流脉冲下的YBCO}
+\begin{equation}% page387 第1个
+q_k=a_k(T^{n_k}_{cd}-T^{n_k}_b)
+\end{equation}
+\subsubsection{问题6.6之解}
 
-\newpage
-\subsection{讨论10：CICC导体}
 
-\newpage
-\subsection{问题11：冷却复合物导体的伏安关系}
 
-\newpage
-\subsection{问题12：混合III SCM的稳定性分析}
+\subsection{讨论6.7：cryostable vs 准绝热磁体}
 
-\newpage
-\subsection{讨论13：cryostable vs 准绝热磁体}
 
-\newpage
-\subsection{讨论14：MPZ概念}
 
-\newpage
-\subsection{问题15：绝热绕组中的耗散能密度}
+\subsection{讨论6.8：MPZ概念}
+
+
+
+\begin{equation}% page391 第1个
+R_{mz}=\sqrt{\frac{3k_{wd}(T_c-T_{op})}{\rho_mJ_m^2}}
+\end{equation}
+
+
+
+\subsection{问题6.7：绝热绕组中的耗散能密度}
+
+\begin{equation}% page392 第1个
+0=\nabla.[k_{wd}(T)\nabla T]+g_d(t)
+\end{equation}
+\begin{equation}% page392 第2个
+T(\rho)=\frac{a_1^2gd}{4k_{wd}}[(1-\rho^2)+(\frac{\alpha^2-1}{\ln \alpha})\ln\rho]+T_{op}
+\end{equation}
+\begin{equation}% page392 第3个
+\rho_{mx}=\sqrt{\frac{\alpha^2-1}{2\ln \alpha}}
+\end{equation}
+\begin{equation}% page392 第4个
+g_{d_c}=\frac{4k_{wd}\Delta T_{mx}}{a_1^2\{1+\frac{\alpha^2-1}{2\ln \alpha}[\ln{(\frac{\alpha^2-1}{2\ln\alpha})}-1]\}}
+\end{equation}
+\begin{equation}% page392 第5个
+g_{dc}=(\frac{k_{wd}\Delta T_{mx}}{a_1^2})\gamma_{d_c}(\alpha)
+\end{equation}
+\begin{equation}% page392 第6个
+\gamma_{d_c}(\alpha)\equiv\frac{4}{1+\frac{\alpha-1}{2\ln\alpha}[\ln(\frac{\alpha^2-1}{2\ln\alpha})-1]}
+\end{equation}
+
+
+\subsubsection{问题6.7之解}
+\begin{equation}% page393 第1个
+\frac{k_{wd}}{r} \frac{d}{dr}(r\frac{dT}{dr})+g_d=0
+\end{equation}
+\begin{equation}% page393 第2个
+\frac{k_{wd}}{\rho}\frac{d}{d\rho}(\rho\frac{dT}{d\rho})+g_da_1^2=0
+\end{equation}
+\begin{equation}% page393 第3个
+T(\rho)=-\frac{g_da_1^2}{4k_{wd}}\rho^2+A\ln\rho+B
+\end{equation}
+\begin{equation}% page393 第4个
+T(\rho)=-\frac{g_da_1^2}{4k_{wd}}[(1-\rho^2)+(\frac{\alpha-1}{\ln\alpha})\ln\rho]+T_{op}
+\end{equation}
+\begin{equation}% page393 第5个
+\frac{dT}{d\rho}=\frac{g_da_1^2}{4k_{wd}}[-2\rho+(\frac{\alpha^2-1}{\ln\alpha})\frac{1}{\rho}]=0
+\end{equation}
+\begin{equation}% page393 第6个
+\rho_{mx}=\sqrt{\frac{\alpha^2-1}{2\ln\alpha}}
+\end{equation}
+\begin{equation}% page393 第7个
+T(\rho_{mx})\equiv T_{mx}=\frac{a_1^2g_d}{4k_{wd}}[(1-\rho_{mx}^2)+(\frac{\alpha^2-1}{\ln\alpha})\ln\rho_{mx}]+T_{op}
+\end{equation}
+\begin{equation}% page393 第8个
+\Delta T_{mx}=\frac{g_{d_c}a_1^2}{4k_{wd}}(1+\frac{\alpha^2-1}{2\ln\alpha}[\ln(\frac{\alpha^2-1}{2\ln\alpha})-1])
+\end{equation}
+\begin{equation}% page393 第9个
+g_{d_c}=\frac{4k_{wd}\Delta T_{mx}}{a_1^2\{(1+\frac{\alpha^2-1}{2\ln\alpha}[\ln(\frac{\alpha^2-1}{2\ln\alpha})-)\}}
+\end{equation}
+\begin{equation}% page394 第1个
+g_{d_c}=(\frac{k_{wd}\Delta T_{mx}}{a_1^2})\gamma_{d_c}(\alpha)
+\end{equation}
+\begin{equation}% page394 第1个
+=\frac{(0.01\ \mathrm{W/cmK})(3\ \mathrm{K})}{(10\ \mathrm{cm})^2}(7.9)\simeq2.4\times10^{-3}\ \mathrm{W/cm^3}\simeq2.4\times10^3\ \mathrm{W/m^3}
+\end{equation}
+
+
