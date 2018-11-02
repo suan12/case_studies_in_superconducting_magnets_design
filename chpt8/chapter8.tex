@@ -176,6 +176,138 @@ Y(T_f,T_i)=\left(\frac{A_m}{A_{cd}}\right)\frac{V_{op}^{2}\tau_{ah}}{\ell_{cd}^{
 Y(T_f,T_i)=\left(\frac{A_m}{A_{cd}}\right)\frac{\mu_o\ \mathcal{L}(\alpha,\beta)V_{op}^{2}\tau_{ah}}{\pi^2(\alpha+1)^2a_1L}
 \end{equation}
 
+\begin{equation}% 8.36
+\tau_{ah}^{\upsilon}=\left(\frac{A_{cd}}{A_m}\right)\frac{\pi^2(\alpha+1)^2a_1L}{\mu_o\ \mathcal{L}(\alpha,\beta)}\left[\frac{Y(T_f,T_i)}{V_{op}^{2}}\right]
+\end{equation}
+\begin{equation}% 8.37a
+V=L\frac{dI}{dt}
+\end{equation}
+\begin{equation}% 8.37b
+V=\frac{2E_m}{I_{o}^{2}}\left(\frac{\Delta I}{\Delta t}\right)\approx\frac{2E_m}{I_o\Delta t}
+\end{equation}
+\begin{equation}% 8.38
+[V_{in}]_{mx}=f_r(1-f_r)R_{nz}I_{op}
+\end{equation}
+\begin{equation}% 8.39
+[V_{in}]_{mx}=f_r(1-f_r)\frac{\pi(\alpha+1)\rho_m(T_f)a_1}{4A_m}NI_{op}
+\end{equation}
+\begin{equation}% 8.40a
+J_{m_o}^{V}=\frac{2}{f_r(1-f_r)}\left[\frac{F(\alpha,\beta)}{\pi(\alpha^2-1)\beta}\right]\left[\frac{\mu_oV_{bk}I_{op}}{a_{1}^{2}\rho_m(T_f)B_o}\right]
+\end{equation}
+\begin{equation}% 8.40b
+J_{m_o}^{V}=\frac{2}{f_r(1-f_r)}\left[\frac{\sqrt{\ \mathcal{L}(\alpha,\beta)}}{\pi(\alpha+1)}\right]\left[\frac{V_{bk}I_{op}}{\rho_m(T_f)}\sqrt{\frac{2\mu_o}{a_1E_m}}\right]
+\end{equation}
+\begin{equation}% 8.41a
+C_n(T)\frac{\partial T_n}{\partial t}=\frac{\partial}{\partial x}\left[k_n(T)\frac{\partial T_n}{\partial x}\right]+\rho_n(T)J^2
+\end{equation}
+\begin{equation}% 8.41b
+C_s(T)\frac{\partial T_s}{\partial t}=\frac{\partial}{\partial x}\left[k_s(T)\frac{\partial T_s}{\partial x}\right]
+\end{equation}
+\begin{equation}% 8.42
+\frac{\partial T_n}{\partial t}=\frac{\partial T}{\partial z}\frac{\partial z}{\partial t}=-U_\ell\frac{dT}{dz}
+\end{equation}
+\begin{equation}% 8.43a
+-C_n(T)U_\ell\frac{dT_n}{dz}=\frac{d}{dz}\left[k_n(T)\frac{dT_n}{dz}\right]+\rho_n(T)J^2
+\end{equation}
+\begin{equation}% 8.43b
+-C_s(T)U_\ell\frac{dT_s}{dz}=\frac{d}{dz}\left[k_s(T)\frac{dT_s}{dz}\right]
+\end{equation}
+\begin{equation}% 8.44a
+(z<0)      \frac{d}{dz}\left[k_n(T)\frac{dT_n}{dz}\right]+C_n(T)U_\ell\frac{dT_n}{dz}+\rho_n(T)J^2=0
+\end{equation}
+\begin{equation}% 8.44b
+(z>0)      \frac{d}{dz}\left[k_s(T)\frac{dT_s}{dz}\right]+C_s(T)U_\ell\frac{dT_s}{dz}=0
+\end{equation}
+\begin{equation}% 8.45a
+(z<0)      C_nU_\ell\frac{dT_n}{dz}+\rho_nJ^2=0
+\end{equation}
+\begin{equation}% 8.45b
+(z>0)     k_s\frac{d^2T_s}{dz^2}+C_sU_\ell\frac{dT_s}{dz}=0
+\end{equation}
+\begin{equation}% 8.46a
+T_s(z)=Ae^{-cz}+T_{op}
+\end{equation}
+\begin{equation}% 8.46b
+T_s(z)=(T_t-T_{op})\exp\left(-\frac{C_sU_\ell}{k_s}z\right)+T_{op}
+\end{equation}
+\begin{equation}% 8.47a
+k_n\frac{dT_n}{dz}\mid_0=k_s\frac{dT_s}{dz}\mid_0
+\end{equation}
+\begin{equation}% 8.47b
+-\frac{k_n\rho_nJ^2}{C_nU_\ell}=-C_sU_\ell(T_t-T_{op})
+\end{equation}
+\begin{equation}% 8.48
+U_\ell=J\sqrt{\frac{\rho_nk_n}{C_nC_s(T_t-T_{op})}}
+\end{equation}
+\begin{equation}% 8.49
+U_\ell=J\sqrt{\frac{\rho_n(T_t)k_n(T_t)}{\left[C_n(T_t)-\frac{1}{k_n(T_t)}\frac{dk_n}{dT}\mid_{T_t}\int_{T_{op}}^{T_t}C_s(T)dT\right]\int_{T_{op}}^{T_t}C_s(T)dT}}
+\end{equation}
+\begin{equation}% 8.50a
+U_\ell=\frac{J}{C_o}\sqrt{\frac{\rho_nk_n}{(T_t-T_{op})}}
+\end{equation}
+\begin{equation}% 8.50b
+U_\ell=\frac{J}{C_o(\tilde{T})}\sqrt{\frac{\rho_n(\tilde{T})k_n(\tilde{T})}{(T_t-T_{op})}}
+\end{equation}
+\begin{equation}% 8.51a
+U_\ell=\frac{J_m}{C_{cd}}(\tilde{T})\sqrt{\frac{\rho_m(\tilde{T})k_m(\tilde{T})}{T_t-T_{op}}}
+\end{equation}
+\begin{equation}% 8.51b
+U_\ell\simeq\frac{J_m}{C_m}(\tilde{T})\sqrt{\frac{\rho_m(\tilde{T})k_m(\tilde{T})}{T_t-T_{op}}}
+\end{equation}
+\begin{equation}% 8.52
+U_t=U_\ell\sqrt{\frac{1}{2}\left(\frac{\delta_{cd}}{\delta_i}\right)\left[\frac{k_i(\tilde{T})}{k_m(\tilde{T})}\right]}
+\end{equation}
+\begin{equation}% 8.53
+\frac{1}{k_{i}^{\prime}}=\frac{1}{k_i}+R_{th_{ct}^{1}}+R_{th_{ct}^{2}}
+\end{equation}
+\begin{equation}% 8.54
+U_t=U_\ell\sqrt{\frac{1}{2}\left(\frac{\delta_{cd}}{\delta_i}\right)\frac{k_i}{k_m[1+k_i(R_{th_{ct}^{1}}+R_{th_{ct}^{1}})]}}
+\end{equation}
+\begin{equation}% 8.55
+U_t=U_\ell\sqrt{\frac{1}{2}\left(\frac{\delta_{cd}}{\delta_i}\right)\frac{1}{k_m(R_{th_{ct}^{1}}+R_{th_{ct}^{1}})}}
+\end{equation}
+\begin{equation}% 8.56
+\frac{d_{cd}}{U_t}\ll\frac{2\pi a_1}{U_\ell}
+\end{equation}
+\begin{equation}% 8.57
+\frac{a_1(\alpha-1)}{U_t}<\tau_{dg}
+\end{equation}
+\begin{equation}% 8.58
+\frac{a_1(\alpha-1)}{U_t}=\frac{Z(T_f,T_i)}{J_{m_o}^{2}}
+\end{equation}
+\begin{equation}% 8.59
+[a_1(\alpha-1)]_{ah}^{i}=\frac{Z(T_f,T_i)}{J_{m_o}C_m(\tilde{T})}\sqrt{\frac{\rho_m(\tilde{T})k_i(\tilde{T})\delta_{cd}}{2\delta_i(T_t-T_{op})}}
+\end{equation}
+\begin{equation}% 8.60a 8.60b 8.60c
+[a_1(\alpha-1)]_{ah}^{sh}=U_t\left(\frac{L}{R_{nz}}\right) 
+=\frac{J_{m_o}}{C_n(\tilde{T})}\sqrt{\frac{\rho_m(\tilde{T})k_i(\tilde{T})\delta_{cd}}{2\delta_i(T_t-T_{op})}}\left(\frac{L}{R_{nz}}\right)  
+=\frac{J_{m_o}}{C_n(\tilde{T})}\sqrt{\frac{\rho_m(\tilde{T})k_i(\tilde{T})\delta_{cd}}{2\delta_i(T_t-T_{op})}}\times 
+\frac{4A_m}{f_r\pi(\alpha+1)\rho_m(T_f)}\sqrt{\frac{\mu_o\mathcal{L}(\alpha,\beta)L}{a_1}}
+\end{equation}
+\begin{equation}% 8.60d
+[a_1(\alpha-1)]_{ah}^{sh}=\frac{1}{C_m(\tilde{T})}\sqrt{\frac{\rho_m(\tilde{T})k_i(\tilde{T})\delta_{cd}}{2\delta_i(T_t-T_{op})}}\times 
+\frac{4}{f_r\pi(\alpha+1)\rho_m(T_f)}\sqrt{\frac{2\mu_o\mathcal{L}(\alpha,\beta)E_m}{a_1}}
+\end{equation}
+\begin{equation}% 8.61
+\frac{E_r}{E_m}=\frac{0.5\zeta(1-k)+(1+k)}{\zeta+(1+k)}
+\end{equation}
+\begin{equation}% 8.62a
+\frac{I_1(t)}{I_0}=\frac{R(1+k)^2}{2r}\exp\left(-\frac{Rt}{2L}\right)\left[1-\frac{R(1+k)^2}{2r}\right]\exp\left[-\frac{rt}{(1-k^2)L}\right]
+\end{equation}
+\begin{equation}% 8.62b
+\frac{I_2(t)}{I_0}=(1+k)\exp\left(-\frac{Rt}{2L}\right)-k\exp\left[-\frac{rt}{(1-k^2)L}\right]
+\end{equation}
+\begin{equation}% 8.63
+E_d=E_m+E_s-E_{R1}-E_{R2}
+\end{equation}
+\begin{equation}% page500第一个
+E_s=(100\ \mathrm{A})\int_{0}^{0.4\ \mathrm{s}}[V_1(t)+V_2(t)]dt+(10\ \mathrm{V})\int_{0.4\ \mathrm{s}}^{2\ \mathrm{s}}\left[I_1(t)+\frac{V_1(t)}{R_1}\right]dt 
+\simeq 200\ \mathrm{J}+650\ \mathrm{J}\simeq 850\ \mathrm{J}
+\end{equation}
+\begin{equation}% page500 第二个和第三个
+E_{R1}=\frac{1}{R_1}\int_{0}^{2\ \mathrm{s}}V_1(t)^2dt\simeq 50\ \mathrm{J} 
+E_{R2}=\frac{1}{R_2}\int_{0}^{2\ \mathrm{s}}V_2(t)^2dt\simeq 300\ \mathrm{J}
+\end{equation}
 
 \subsection{热点和热点温度}
 
