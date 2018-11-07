@@ -99,74 +99,110 @@ J_{m_o}^{i}(T_f,T_i)=\sqrt{\left(\frac{1+\gamma_{m/s}}{\gamma_{m/s}}\right)\frac
 \begin{equation}% 8.13
 C_m(T)\frac{dT}{dt}=\left(\frac{A_m}{A_{cd}}\right)\rho_m(T)J_{m}^{2}(t)
 \end{equation}
+
 \begin{equation}% 8.14
 L\frac{dI_m(t)}{dt}+[R_D+r(t)]I_m(t)=0
 \end{equation}
+
 \begin{equation}% 8.15
 J_m(t)=J_{m_o}e^{-t/\tau_{dg}}
 \end{equation}
-\begin{equation}% 8.16a 8.16b 8.16c
-Z(T_f,T_i)=\left(\frac{A_m}{A_{cd}}\right)\int_{0}^{\infty}J_{m_o}^{2}e^{-2t/\tau_{dg}}dt=\left(\frac{A_m}{A_{cd}}\right)J_{m_o}^{2}\times\frac{1}{2}\tau_{dg} 
-=\left(\frac{A_m}{A_{cd}}\right)J_{m_o}^{2}\left(\frac{L}{2R_D}\right) 
-=\left(\frac{\gamma_{m/s}}{1+\gamma_{m/s}}\right)J_{m_o}^{2}\left(\frac{L}{2R_D}\right)
-\end{equation}
+
+
+\begin{subequations}% 8.16a 8.16b 8.16c
+	\begin{align*}
+Z(T_f,T_i)&=\left(\frac{A_m}{A_{cd}}\right)\int_{0}^{\infty}J_{m_o}^{2}e^{-2t/\tau_{dg}}dt=\left(\frac{A_m}{A_{cd}}\right)J_{m_o}^{2}\times\frac{1}{2}\tau_{dg} \\
+&=\left(\frac{A_m}{A_{cd}}\right)J_{m_o}^{2}\left(\frac{L}{2R_D}\right)\\ 
+&=\left(\frac{\gamma_{m/s}}{1+\gamma_{m/s}}\right)J_{m_o}^{2}\left(\frac{L}{2R_D}\right)
+\end{align*}
+\end{subequations}
+
+
 \begin{equation}% 8.17a
 L=\frac{2E_m}{I_{op}^{2}}
 \end{equation}
+
 \begin{equation}% 8.17b
 R_D=\frac{V_D}{I_{op}}
 \end{equation}
+
 \begin{equation}% 8.18a
 Z(T_f,T_i)=\left(\frac{A_m}{A_{cd}}\right)\frac{J_{m_o}^{2}E_m}{V_DI_{op}}
 \end{equation}
+
 \begin{equation}% 8.18b
 Z(T_f,T_i)=\frac{J_{m_o}^{2}E_m}{A_{cd}V_D}
 \end{equation}
+
 \begin{equation}% 8.19
 J_{m_o}^{D}=\frac{A_{cd}V_DZ(T_f,T_i)}{E_m}
 \end{equation}
 
 \subsection{引线短接的磁体的绝热加热}
+
 \begin{equation}% 8.20
 L\frac{dI_m(t)}{dt}+r(T)I_m(t)=0
 \end{equation}
+
 \begin{equation}% 8.21
 R_{nz}=\frac{\rho_m(T_f)\ell_{nz}}{4A_m}
 \end{equation}
+
 \begin{equation}% 8.22
 J_m(t)=J_{m_o}e^{-t/(L/R_{nz})}
 \end{equation}
+
 \begin{equation}% 8.23a
 Z(T_f,T_i)=\left(\frac{A_m}{A_{cd}}\right)\int_{0}^{\infty}J_{m_o}^{2}e^{-2t/(L/R_{nz})}dt
 \end{equation}
+
+
 \begin{equation}% 8.23b 8.23c
 Z(T_f,T_i)=\frac{1}{2}\left(\frac{A_m}{A_{cd}}\right)J_{m_o}^{2}\left(\frac{L}{R_{nz}}\right) 
 =\frac{1}{2}\left(\frac{A_m}{A_{cd}}\right)J_{m_o}^{2}\tau_{dg}
 \end{equation}
+
+
+
 \begin{equation}% 8.24
 \ell_{nz}=f_r\pi a_1(\alpha+1)N
 \end{equation}
+
+
 \begin{equation}% 8.25
 R_{nz}=f_r\frac{\rho_m(T_f)\pi a_1(\alpha+1)N}{4A_m}
 \end{equation}
+
+
 \begin{equation}% 8.26
 N=\sqrt{\frac{L}{\mu_oa_1\ \mathcal{L}(\alpha,\beta)}}
 \end{equation}
+
+
 \begin{equation}% 8.27
 R_{nz}=f_r\frac{\pi(\alpha+1)\rho_m(T_f)}{4A_m}\sqrt{\frac{a_1L}{\mu_o\ \mathcal{L}(\alpha,\beta)}}
 \end{equation}
+
+
 \begin{equation}% 8.28a
 \tau_{dg}=\frac{L}{R_{nz}}=\frac{4A_m}{f_r\pi(\alpha+1)\rho_m(T_f)}\sqrt{\frac{\mu_o\ \mathcal{L}(\alpha,\beta)L}{a_1}}
 \end{equation}
+
+
 \begin{equation}% 8.28b
 \tau_{dg}=\frac{4}{f_r\pi(\alpha+1)\rho_m(T_f)J_{m_o}}\sqrt{\frac{2\mu_o\ \mathcal{L}(\alpha,\beta)E_m}{a_1}}
 \end{equation}
+
+
 \begin{equation}% 8.29
 \rho_m(T_f)Z(T_f,T_i)=\left(\frac{A_m}{A_{cd}}\right)\frac{2J_{m_o}}{f_r\pi(\alpha+1)}\sqrt{\frac{2\mu_o\ \mathcal{L}(\alpha,\beta)E_m}{a_1}}
 \end{equation}
+
 \begin{equation}% 8.30a
 J_{m_o}^{sh}=\frac{1}{2}\left(\frac{A_{cd}}{A_m}\right)f_r\pi(\alpha+1)\rho_m(T_f)Z(T_f,T_i)\sqrt{\frac{a_1}{2\mu_o\ \mathcal{L}(\alpha,\beta)E_m}}
 \end{equation}
+
+
 \begin{equation}% 8.30b
 J_{m_o}^{sh}(T_f,T_i)=\frac{1}{2}\left(\frac{A_{cd}}{A_m}\right)\frac{f_r\pi(\alpha+1)\rho_m(T_f)Z(T_f,T_i)}{\mu_o\ \mathcal{L}(\alpha,\beta)NI_{op}}
 \end{equation}
@@ -374,8 +410,15 @@ E_{R1}=\frac{1}{R_1}\int_{0}^{2\ \mathrm{s}}V_1(t)^2dt\simeq 50\ \mathrm{J}
 E_{R2}=\frac{1}{R_2}\int_{0}^{2\ \mathrm{s}}V_2(t)^2dt\simeq 300\ \mathrm{J}
 \end{equation}
 
+\begin{equation}% page500第四个
+\mathcal{V}_{cd}[h_{cu}(T_f)-h_{cu}(T_{op})]\simeq(694\ \mathrm{cm^3})[h_{cu}(T_f)]=5500\ \mathrm{J}
+\end{equation}
+
 \section{主动保护}
 \subsection{过热}
+\begin{equation}% page501 8.7
+e_{mr}\equiv\frac{E_m}{V_r}=\frac{2(\alpha-1)\beta\mathcal{L}(\alpha,\beta)}{f_r\pi(\alpha+1)F^2(\alpha,\beta)}\left(\frac{B_{o}^{2}}{2\mu_o}\right)
+\end{equation}
 
 
 \subsection{多线圈磁体中的过压}
@@ -383,47 +426,391 @@ E_{R2}=\frac{1}{R_2}\int_{0}^{2\ \mathrm{s}}V_2(t)^2dt\simeq 300\ \mathrm{J}
 
 \subsection{主动保护技术：检测-抑制}
 
+\begin{equation}% page502 8.18b
+Z(T_f,T_i)=\frac{J_{m_o}E_m}{A_{cd}V_D}
+\end{equation}
+
+\begin{equation}% page503 8.19
+J_{m_o}^{D}=\frac{A_{cd}Z(T_f,T_i)V_D}{E_m}
+\end{equation}
+
+
+
+\begin{equation}% 8.65
+V_D=\frac{J_{m_o}E_m}{A_{cd}Z(T_f,T_i)}
+\end{equation}
+\begin{equation}% 8.66a 8.66b
+Z(T_f,T_i)=\left(\frac{A_m}{A_{cd}}\right)(J_{m_o}^{2}\tau_{dl}+\frac{1}{2}J_{m_o}^{2}\tau_{dg})
+=\left(\frac{A_m}{A_{cd}}\right)(\tau_{dl}+\frac{1}{2}\tau_{dg})J_{m_o}^{2}
+\end{equation}
 
 \subsection{主动保护技术：检测-激活加热器}
 
 
 \subsection{失超电压保护技术：基本电桥}
 
+\begin{equation}% 8.67a
+V_{cl}(t)=L_1\frac{dI(t)}{dt}+rI(t)+L_2\frac{dI(t)}{dt}
+\end{equation}
+\begin{equation}% 8.67b
+i_R(t)=\frac{V_{cl}(t)}{R_1+R_2}
+\end{equation}
+\begin{equation}% 8.67c
+V_{out}(t)=L_1\frac{dI(t)}{dt}+rI(t)-R_1i_R(t)
+\end{equation}
+\begin{equation}% 8.68
+V_{out}(t)=L_1\frac{dI(t)}{dt}+rI(t) 
+-\frac{R_1}{R_1+R_2}\left[L_1\frac{dI(t)}{dt}+rI(t)+L_2\frac{dI(t)}{dt}\right] 
+=\left(\frac{R_2}{R_1+R_2}\right)L_1\frac{dI(t)}{dt} 
+-\left(\frac{R_1}{R_1+R_2}\right)L_2\frac{dI(t)}{dt}+\left(\frac{R_2}{R_1+R_2}\right)rI(t)
+\end{equation}
+\begin{equation}% 8.69
+\left(\frac{R_2}{R_1+R_2}\right)L_1\frac{dI(t)}{dt}-\left(\frac{R_1}{R_1+R_2}\right)L_2\frac{dI(t)}{dt}=0
+\end{equation}
+\begin{equation}% 8.70
+V_{out}(t)=\left(\frac{R_2}{R_1+R_2}\right)rI(t)
+\end{equation}
+
+
 \section{专题}
-\subsection{问题1：大型超导磁体的回温}
 
-\newpage
-\subsection{问题2：6 kA气冷HTS引线的保护}
+\subsection{问题8.1：大型超导磁体的回温}
+\begin{equation}% 8.71a 8.71b
+\mathcal{V}C_{cd}(T)\frac{dT}{dt}=\frac{\rho_m(T)\ell_{cd}}{A_m}I_{o}^{2} 
+=\frac{A_m}{\rho_m(T)\ell_{cd}}V_{o}^{2}
+\end{equation}
 
-\newpage
-\subsection{问题3：制冷机制冷的NbTi磁体的保护}
+\subsubsection{问题8.1之解}
+\begin{equation}% page508 S1.1
+\Delta t_{\omega}^{I}\mid_{10\ \mathrm{K}}^{300\ \mathrm{K}}=\frac{\mathcal{V}_{cd}A_m}{\ell_{cd}I_{o}^{2}}\int_{10\ \mathrm{K}}^{300\ \mathrm{K}}\frac{C_{cu}(T)}{\rho_m{cu}(T)}dT 
+=\frac{\mathcal{V}_{cd}A_m}{\ell_{cd}I_{o}^{2}}Z(T_f=300\ \mathrm{K},T_i=10\ \mathrm{K})
+\end{equation}
+\begin{equation}% page508 S1.2
+\Delta t_{\omega}^{I}\mid_{10\mathrm{K}}^{300\mathrm{K}}=\frac{(0.4\ \mathrm{m^3})(1.5\times 10^{-5}\ \mathrm{m^2})(15.1\times 10^{16}\ \mathrm{A^2s/m^4})}{(1\times 10^4\ \mathrm{m})(25\ \mathrm{A})^2} 
+\simeq 1.45\times 10^5\ \mathrm{s}\simeq 40\ \mathrm{h}\simeq 1\frac{2}{3}\ \mathrm{days} 
+\end{equation}
+\begin{equation}% page508 S1.3
+\Delta t_{\omega}^{I}\mid_{10\mathrm{K}}^{300\mathrm{K}}=\frac{\mathcal{V}_{cd}\ell_{cd}}{A_mV_{o}^{2}}\int_{10\ \mathrm{K}}^{300\ \mathrm{K}}C_{cu}(T)\rho_m{cu}(T)dT 
+=\frac{\mathcal{V}_{cd}\ell_{cd}}{A_mV_{o}^{2}}Y(T_f=300\ \mathrm{K},T_i=10\ \mathrm{K})
+\end{equation}
+\begin{equation}% page508 S1.4
+\Delta t_{\omega}^{I}\mid_{10\mathrm{K}}^{300\mathrm{K}}=\frac{(0.4\ \mathrm{m^3})(1\times 10^4\ \mathrm{m})(7.25\ \mathrm{V^2s/m^2})}{(1.5\times 10^{-5}\ \mathrm{m^2})(25\ \mathrm{V})^2} 
+=3.1\times 10^6\ \mathrm{s}\simeq 860\ \mathrm{h}\simeq 36\ \mathrm{days} 
+\end{equation}
+\begin{equation}% page509 S1.5
+\Delta t_{\omega}^{I}\mid_{10\mathrm{K}}^{50\mathrm{K}}=\frac{(0.4\ \mathrm{m^3})(1.5\times 10^{-5}\ \mathrm{m^2})(4.5\times 10^{16}\ \mathrm{A^2s/m^4})}{(1\times 10^4\ \mathrm{m})(100\ \mathrm{A})^2} 
+=\simeq 2.7\times 10^3\ \mathrm{s}=45\ \mathrm{min}
+\end{equation}
+\begin{equation}% page509 S1.6
+\Delta t_{\omega}^{I}\mid_{50\mathrm{K}}^{300\mathrm{K}}=\frac{(0.4\ \mathrm{m^3})(1\times 10^4\ \mathrm{m})(7.25\ \mathrm{J\Omega/m^2})}{(1.5\times 10^{-5}\ \mathrm{m^2})(100\ \mathrm{V})^2} 
+=1.93\times 10^5\ \mathrm{s}=54\ \mathring{h}
+\end{equation}
+\begin{equation}% page509 S1.7
+\Delta t_{\omega}^{I}\mid_{80\mathrm{K}}^{300\mathrm{K}}\simeq 0.7\times 10^5\ \mathrm{s}\sim 20\ \mathrm{h}
+\end{equation}
+\begin{equation}% page509 S1.8
+\Delta t_{\omega}^{I}\mid_{80\mathrm{K}}^{300\mathrm{K}}\simeq 3\times 10^6\ \mathrm{s}\simeq 830\ \mathrm{h}\simeq 35\ \mathrm{days}
+\end{equation}
 
-\newpage
-\subsection{问题4：混合III SCM的“热点”温度}
 
-\newpage
-\subsection{讨论5：失超电压探测——一个变种}
 
-\newpage
-\subsection{问题6：抑制电阻的设计}
+\subsection{问题8.2：6 kA气冷HTS引线的保护}
 
-\newpage
-\subsection{讨论7：磁体的“缓慢”放电模式}
 
-\newpage
-\subsection{讨论8：低阻电阻器设计}
+\subsubsection{问题8.2之解}
+\begin{equation}% 8.66b
+Z(T_f,T_i)=\left(\frac{A_m}{A_{cd}}\right)(\tau_{dl}+\frac{1}{2}\tau_{dg})J_{o}^{2}
+\end{equation}
+\begin{equation}% page510 S.1
+Z(T_f,T_i)=\left(\frac{\gamma_{m/s}}{1+\gamma_{m/s}}\right)(\tau_{dl}+\frac{1}{2}\tau_{dg})J_{o}^{2}
+\end{equation}
+\begin{equation}% page510 第三个
+Z(T_f,T_i)=(12.5\ \mathrm{s})\left(\frac{2}{3}\right)(3.46\times 10^7\ \mathrm{A/m^2})^2\simeq 1\times 10^{16}\ \mathrm{A^2s/m^4}
+\end{equation}
 
-\newpage
-\subsection{讨论9：过热\& 内部电压判据}
 
-\newpage
-\subsection{讨论10：Bi2223带电流引线的保护}
 
-\newpage
-\subsection{讨论11：$MgB_2$磁体的主动保护}
+\subsection{问题8.3：制冷机制冷的NbTi磁体的保护}
 
-\newpage
-\subsection{问题12：NMR磁体的被动保护}
+\subsubsection{问题8.3之解}
+\begin{equation}% page511 第一个
+I_{op}=(6.25\times 10^7\ \mathrm{A/m^2})\frac{(10\times 10^{-3}\ \mathrm{m})(3\times 10^{-3}\ \mathrm{m})4}{(1+4)}=1500\ \mathrm{A}
+\end{equation}
+\begin{equation}% 8.72
+V_D=\frac{J_{m_o}E_m}{A_{cd}Z(T_f,T_i)}
+\end{equation}
+\begin{equation}% page511 S3.1
+V_D=\frac{(6.25\times 10^7\ \mathrm{A/m^2})^2(10\times 10^6\ \mathrm{J})}{(3\times 10^{-5}\ \mathrm{m^2})(6.7\times 10^{16}\ \mathrm{A^2s/m^4})} 
+=310\ \mathrm{V}
+\end{equation}
 
-\newpage
-\subsection{讨论13：HTS磁体到底要不要保护？}
+
+
+\subsection{问题8.4：混合III SCM的“热点”温度}
+\begin{equation}% 8.73
+r(t)=r_0+\eta t
+\end{equation}
+\begin{equation}% 8.74
+I(t)=I_{op}\exp\left[-\frac{(R_D+r_0)}{L}t-\frac{\eta}{2L}t^2\right]
+\end{equation}
+
+
+\subsubsection{问题8.4之解}
+
+\begin{equation}% page513 8.16c
+Z(T_f,T_i)=\left(\frac{\gamma_{m/s}}{1+\gamma_{m/s}}\right)J_{m_o}^{2}\left(\frac{L}{2R_D}\right)
+\end{equation}
+\begin{equation}% page513 S4.1
+J_{m_o}=\frac{I_{op}}{A_m}=\left(\frac{\gamma_{m/s}+1}{\gamma_{m/s}}\right)\frac{I_{op}}{ab}
+\end{equation}
+\begin{equation}% page513 S4.2
+J_{m_o}=\left(\frac{5.1}{4.1}\right)\frac{(2230\ \mathrm{A})}{(9.49\times 10^{-3}\ \mathrm{m})(4.52\times 10^{-3}\ \mathrm{m})} 
+=6.47\times 10^7\ \mathrm{A/m^2}
+\end{equation}
+\begin{equation}% page513 S4.2后第一个
+Z(T_f,4\ \mathrm{K})=\left(\frac{5.1}{4.1}\right)(6.47\times 10^7\ \mathrm{A/m^2})^2\left(\frac{8\ \mathrm{H}}{2\times 0.3\Omega}\right)
+\end{equation}
+\begin{equation}% page513 S4.2后第二个
+Z(T_f,4\ \mathrm{K})=4.5\times 10^{16}\ \mathrm{A^2s/m^4}
+\end{equation}
+\begin{equation}% page513 S4.3
+L\frac{dI(t)}{dt}+(R_D+R_0+\eta t)I(t)=0
+\end{equation}
+\begin{equation}% page513 S4.4
+\frac{dI(t)}{dt}=-\frac{(R_D+R_0+\eta t)}{L}dt
+\end{equation}
+\begin{equation}% page513 S4.5
+\ln\left[\frac{I(t)}{I_{op}}\right]=-\frac{(R_D+R_0)}{L}t-\frac{\eta}{2L}t^2
+\end{equation}
+\begin{equation}% 8.74
+I(t)=I_{op}\exp\left[-\frac{(R_D+R_0)}{L}t-\frac{\eta}{2L}t^2\right]
+\end{equation}
+\begin{equation}% page514 S4.6
+E_{sm}\int_{0}^{\infty}r(t)I_{0}^{2}\exp\left[-\frac{2(R_D+R_0)}{L}t-\frac{\eta}{L}t^2\right]dt
+\end{equation}
+
+\subsection{讨论8.1：失超电压探测——一个变种}
+
+\begin{equation}% 8.75
+V_{out}(t)=\sum_{n=1}^{11}[\alpha_{2n-1}V_{2n-1}(t)-\alpha_{2n}V_{2n}(t)]
+\end{equation}
+
+
+\subsection{问题8.5：抑制电阻的设计}
+\begin{equation}% 8.76a
+\ell=\sqrt{\frac{E_mR_D}{\rho C_p\Delta T}}
+\end{equation}
+\begin{equation}% 8.76b
+\omega\delta=\sqrt{\frac{\rho E_m}{R_DC_p\Delta T}}
+\end{equation}
+
+\subsubsection{问题8.5之解}
+
+\begin{equation}% page518 S5.1a
+R_D-\frac{\rho\ell}{\omega\delta}
+\end{equation}
+\begin{equation}% page518 S5.1b
+\omega\delta=\frac{\rho\ell}{R_D}
+\end{equation}
+\begin{equation}% page518 S5.2a
+E_m=\ell\omega\delta C_p\Delta T
+\end{equation}
+\begin{equation}% page518 S5.2b
+\omega\delta=\frac{E_m}{\ell C_p\Delta T}
+\end{equation}
+\begin{equation}% 8.76a
+\omega\delta=\sqrt{\frac{\rho E_m}{R_DC_p\Delta T}}
+\end{equation}
+\begin{equation}% page518 倒数第二个
+\ell\simeq\sqrt{\frac{(2\times 10^7\ \mathrm{J})(0.3\Omega)}{(10^{-6}\ \mathrm{\Omega m})(4\times 1066\ \mathrm{J/m^2K})(200\ \mathrm{K})}} 
+=86.6\ \mathrm{m}
+\end{equation}
+\begin{equation}% page518 最后一个
+\omega\delta\simeq\sqrt{\frac{(10^{-6}\ \mathrm{\Omega m})(2\times 10^7\ \mathrm{J})}{(0.3\Omega)(4\times 10^6\ \mathrm{J/m^2K})(200\ \mathrm{K})}} 
+\simeq 2.9\times 10^{-4}\ \mathrm{m^2}\simeq 290\ \mathrm{mm^2}
+\end{equation}
+
+
+\subsection{讨论8.2：磁体的“缓慢”放电模式}
+\begin{equation}% 8.77a
+\frac{dI_m(t)}{dt}=-\frac{I_m(t)}{\tau_m}
+\end{equation}
+\begin{equation}% 8.77b
+\frac{dI_m(t)}{dt}=-\frac{V_{dd}}{L}
+\end{equation}
+
+
+\subsection{讨论8.3：低阻电阻器设计}
+\begin{equation}% 8.78a
+r_d=\frac{\rho\ell}{\omega\delta}
+\end{equation}
+\begin{equation}% 8.78b
+r_dI_m(0)^2\simeq 2\omega\ell g_{cv}
+\end{equation}
+\begin{equation}% 8.79a
+\ell\simeq r_dI_m(0)\sqrt{\frac{\delta}{2\rho g_{cv}}}
+\end{equation}
+\begin{equation}% 8.79b
+\omega\simeq I_m(0)\sqrt{\frac{\rho}{2\delta g_{cv}}}
+\end{equation}
+\begin{equation}% page521 第一个
+\ell\simeq(0.01\Omega)(250\ \mathrm{A})\sqrt{\frac{(250\times 10^{-6}\ \mathrm{m})}{2(10^{-6}\ \mathrm{\Omega m})(20\ \mathrm{W/m^2})}} 
+\simeq 6.3\ \mathrm{m}
+\end{equation}
+\begin{equation}% page521 第二个
+\omega\simeq(250\ \mathrm{A})\sqrt{\frac{(10^{-6}\ \mathrm{\Omega m})}{2(250\times 10^{-6}\ \mathrm{m})(20\ \mathrm{W/m^2})}} 
+\simeq 2.5\ \mathrm{m}
+\end{equation}
+\begin{equation}% page521第三个
+\ell\simeq(0.01\Omega)(250\ \mathrm{A})\sqrt{\frac{(250\times 10^{-6}\ \mathrm{m})}{2(10^{-6}\ \mathrm{\Omega m})(20\times 10^3\ \mathrm{W/m^2})}} 
+\simeq 20\ \mathrm{cm}
+\end{equation}
+\begin{equation}% page521 第四个
+\omega\simeq(250\ \mathrm{A})\sqrt{\frac{(10^{-6}\ \mathrm{\Omega m})}{2(250\times 10^{-6}\ \mathrm{m})(20\times 10^3\ \mathrm{W/m^2})}} 
+\simeq 8\ \mathrm{cm}
+\end{equation}
+
+
+\subsection{讨论8.4：过热\& 内部电压判据}
+
+\begin{equation}% page522 8.30a
+J_{m_{op}}^{sh}=\left(\frac{1+\gamma_{m/s}}{\gamma_{m/s}}\right)\frac{f_r\pi(\alpha+1)\rho_m(T_f)Z(T_f,T_i)}{2}\sqrt{\frac{a_1}{2\mu_o\ \mathcal{L}(\alpha,\beta)E_m}} 
+=\left(\frac{1+1}{1}\right)\frac{(0.5)\pi(1.3+1)(1.11\times 10^{-8}\ \mathrm{\Omega m})(10.5\times 10^{16}\ \mathrm{A^2s/m^4})}{2}\times 
+=\sqrt{\frac{0.15\ \mathrm{m}}{2(4\pi\times 10^{-7}\ \mathrm{H/m})(0.54)(3\times 10^6\ \mathrm{J})}} 
+\simeq 2(21.1\times 10^8\ \mathrm{J/m^3})(0.19\ \mathrm{Am/J})\simeq 805\ \mathrm{MA/m^2}=805\ \mathrm{A/mm^2}
+\end{equation}
+\begin{equation}% 8.40b
+J_{m_{op}}^{V}=\frac{2}{f_r(1-f_r)}\left[\frac{\sqrt{\mathcal{L}(\alpha,\beta)}}{\pi(\alpha+1)}\right]\left[\frac{V_{bk}I_{op}}{\rho_m(T_f)}\sqrt{\frac{2\mu_o}{a_1E_m}}\right] 
+=\frac{2}{0.5(1-0.5)}\left[\frac{\sqrt{0.54}}{\pi(1.3+1)}\right]\left[\frac{(10^4\ \mathrm{V})(300\ \mathrm{A})}{(1.11\times 10^{-8}\ \mathrm{\Omega m})}\sqrt{\frac{2(4\pi\times 10^{-7}\ \mathrm{H/m})}{(0.15\ \mathrm{m})(3\times 10^6\ \mathrm{J})}}\right] 
+=8(0.102)(2.70\times 10^{14}\ \mathrm{A^2/m})(2.36\times 10^{-6}\ \mathrm{A^{-1}m^{-1}}) 
+=5.2\times 10^8\ \mathrm{A/m^2}=520\ \mathrm{A/mm^2}
+\end{equation}
+
+
+\subsection{讨论8.5：Bi2223带电流引线的保护}
+
+\begin{equation}% 8.80
+a_mk_m\frac{d^2T}{dz^2}+\frac{\rho_mI_{t}^{2}}{a_m}=0
+\end{equation}
+\begin{equation}% 8.81
+T(\zeta)=T_{cl}+(T_{wm}-T_{cl})\zeta+\frac{\rho_m\ell^2I_{t}^{2}}{2a_{m}^{2}k_m}(\zeta-\zeta^2)
+\end{equation}
+\begin{equation}% 8.82a
+\zeta(T_{pk})=\frac{1}{2}+\frac{a_{m}^{2}k_m}{\rho_mI_{t}^{2}\ell^2}(T_{wm}-T_{cl})
+\end{equation}
+\begin{equation}% 8.82b
+T_{pk}\simeq \frac{1}{2}(T_{cl}+T_{wm})+\frac{\rho_mI_{t}^{2}\ell^2}{8a_{m}^{2}k_m}
+\end{equation}
+\begin{equation}% page523 最后一个
+\frac{a_{m}^{2}k_m}{\rho_mI_{t}^{2}\ell^2}(T_{wm}-T_{cl})=\frac{(8\times 10^{-3}\ \mathrm{cm^2})^2(2\ \mathrm{W/cm K})}{(1\times 10^{-6}\ \mathrm{\Omega cm})(50\ \mathrm{A})^2(15\ \mathrm{cm})^2} 
+\simeq 0.01
+\end{equation}
+\begin{equation}% page524 第一个
+T_{pk}\simeq\frac{1}{2}(T_{cl}+\frac{\rho_mI_{t}^{2}\ell^2}{8a_{m}^{2}k_m} 
+=\frac{1}{2}(10\ \mathrm{K}+70\ \mathrm{K})+\frac{(1\times 10^{-6}\ \mathrm{\Omega cm})(50\ \mathrm{A})^2(15\ \mathrm{cn})^2}{8(8\times 10^{-3}\ \mathrm{cm^2})^2(2\ \mathrm{W/cm K})}\simeq 590\ \mathrm{K}
+\end{equation}
+
+
+
+\subsection{讨论8.6：$MgB_2$磁体的主动保护}
+
+\begin{equation}% page528 8.9c
+\int_{T_i}^{T_f}\frac{C_m(T)}{\rho_m(T)}dT=\left(\frac{A_m}{A_{cd}}\right)J_{m_o}^{2}\tau_{ah}
+\end{equation}
+\begin{equation}% page528 6.33
+R_{mz}=\sqrt{\frac{3k_{wd}(T_c-T_{op})}{\rho_mJ_{m}^{2}}}
+\end{equation}
+\begin{equation}% 8.83a
+V_M(t)=V_r(t)+(L_M+M_{MC1}+M_{MC2})\frac{dI_{op}(t)}{dt}
+\end{equation}
+\begin{equation}% 8.83b
+V_{C1}(t)=(L_{C1}+M_{C1M}+M_{C1C2})\frac{dI_{op}}{dt}=V_{C2}(t)=-\frac{1}{2}V_M(t)
+\end{equation}
+\begin{equation}% 8.83c
+V_M(t)+V_{C1}(t)+V_{C2}(t)=0
+\end{equation}
+
+
+
+\subsection{问题8.6：NMR磁体的被动保护}
+\begin{equation}% 8.84a
+I_8=I_0-\frac{V_8}{S_8}
+\end{equation}
+\begin{equation}% 8.84b
+I_{9a}=I_0-\frac{V_{9a}}{S_{9a}}
+\end{equation}
+\begin{equation}% 8.84c
+I_{9b}=I_0-\frac{V_{9b}}{S_{9b}}
+\end{equation}
+\begin{equation}% 8.84d
+I_{10}=I_0-\frac{V_{10}}{S_{10}}
+\end{equation}
+\begin{equation}% 8.84e
+I_{11/12}=I_0\frac{V_{11/12}}{S_{11/12}}
+\end{equation}
+
+
+\subsubsection{问题8.6之解}
+
+\begin{equation}% page535 8.84a
+I_8=I_0-I_{r8}  
+=I_0-\frac{V_8}{S_8}
+\end{equation}
+\begin{equation}% page535 8.84b
+I_{9a}=I_8+I_{r8}-I_{r9a}=I_0-\frac{V_8}{S_8}+\frac{V_8}{S_8}-\frac{V_{9a}}{S_{9a}}
+=I_0-\frac{V_{9a}}{S_{9a}}
+\end{equation}
+\begin{equation}% page535 8.84c
+I_{9b}=I_{9a}+\frac{V_{9a}}{S_{9a}}-\frac{V_{9b}}{S_{9b}}=I_0-\frac{V_{9a}}{S_{9a}}+\frac{V_{9a}}{S_{9a}}-\frac{V_{9b}}{S_{9b}} 
+=I_0\frac{V_{9b}}{S_{9b}}
+\end{equation}
+\begin{equation}% page535 8.84d
+I_{10}=I_{9b}+\frac{V_{9b}}{S_{9b}}-\frac{V_{10}}{S_{10}}=I_0-\frac{V_{9b}}{S_{9b}}+\frac{V_{9b}}{S_{9b}}-\frac{V_{10}}{S_{10}}
+=I_0-\frac{V_{10}}{S_{10}}
+\end{equation}
+\begin{equation}% page535 8.84e
+I_{11/12}=I_{10}+\frac{V_{10}}{S_{10}}-\frac{V_{11/12}}{S_{11/12}}=I_0-\frac{V_{10}}{S_{10}}+\frac{V_{10}}{S_{10}}-\frac{V_{11/12}}{S_{11/12}}
+=I_0-\frac{V_{11/12}}{S_{11/12}}
+\end{equation}
+\begin{equation}% page535 S6.1
+V_8=V_r\mid_8+L_8\frac{dI_8}{dt}+M_{8,9a}\frac{dI_{9a}}{dt}+M_{8,9b}\frac{dI_{9b}}{dt} 
++M_{8,10}\frac{dI_{10}}{dt}+M_{8,11}\frac{dI_{11}}{dt}+M_{8,12}\frac{dI_{12}}{dt}
+\end{equation}
+\begin{equation}% page535 S6.2a
+V_8\simeq V_r\mid_8+(4.413\ \mathrm{H})(84.5\ \mathrm{A/s})+(2.268\ \mathrm{H})(-154.1\ \mathrm{A/s}) 
++(2.243\ \mathrm{H})(-107.1\ \mathrm{A/s})+(0.715\ \mathrm{H})(41.3\ \mathrm{A/s}) 
++(2.747\ \mathrm{H})(33.6\ \mathrm{A/s})+(2.755\ \mathrm{H})(33.6\ \mathrm{A/s})
+\end{equation}
+\begin{equation}% page535 S6.2b
+V_8=V_r\mid_8+372.9-349.5-240.2+39.4+92.4+92.6 
+=V_r\mid_8-2.5\ \mathrm{V}
+\end{equation}
+\begin{equation}% page536 S6.3a
+V_8=V_r\mid_8+(4.413\ \mathrm{H})(147.2\ \mathrm{A/s})+(2.268\ \mathrm{H})(-234.7\ \mathrm{A/s}) 
++(2.243\ \mathrm{H})(-198.1\ \mathrm{A/s})+(0.715\ \mathrm{H})(-44.8\ \mathrm{A/s}) 
++(2.747\ \mathrm{H})(19.3\ \mathrm{A/s})+(2.755\ \mathrm{H})(19.3\ \mathrm{A/s})
+\end{equation}
+\begin{equation}% page536 S6.3b
+V_8=V_r\mid_8+(649.6-532.3-444.3-32.0+53.0+53.2)[\mathrm{V}]
+=V_r\mid_8-252.9[\mathrm{V}]
+\end{equation}
+\begin{equation}% page536 S6.4
+P_{mg}=\sum_{n=8}^{12}V_r\mid_n\times I_n
+\end{equation}
+\begin{equation}% page536 S6.5
+P_{mg}\simeq\left(\tilde{V}-\sum_{m,n=8}^{12}L_{m,n}\frac{d\tilde{I}}{dt}\right)\times \tilde{I}
+\end{equation}
+\begin{equation}% page536 S6.6
+P_{mg}\simeq[0-(60.25\ \mathrm{H})(-50\ \mathrm{A/s})](90\ \mathrm{A})\simeq 270,000\ \mathrm{W}
+\end{equation}
+
+
+
+
+\subsection{讨论8.7：HTS磁体到底要不要保护？}
+\begin{equation}% 8.85a
+\$_{T/w}=\$_M+\$_{qp}
+\end{equation}
+\begin{equation}% 8.85b
+\$_{T/wo}=\$_M+P_{dm}(\$_M+\$_{ra})
+\end{equation}
