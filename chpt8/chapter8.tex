@@ -1,27 +1,25 @@
 \chapter{保护}
 \section{引言}
 保护是五大关键设计和运行项目之一——其他四项是稳定性、机械完整性、制冷和导体。
+
+
+
+
 \subsection{热能密度 vs. 磁能密度}
 除非绕组得到了保护，不然磁体绕组的一小部分，即“热点”，就要吸收掉存储于绕组中的大部分磁能。这样，该部分将过热并永久性损坏。
 不过，熔化磁体中单位绕组体积的热能密度要远大于磁体存储的磁能密度。
 
 仅考虑将磁体内部空间内存储的能量全部绝热转换为热，引起铜（绕组的一种代表性材料）的焓密度$h_{Cu}(T)$变化。如果是从4K（或者80K）加热到它的熔点1356K，
 那么初始磁感应密度$B_0$将高达$~150 T$：
-\begin{eqnarray}\label{eqn: 8.1}
-% \nonumber % Remove numbering (before each equation)
-  \frac{B_0^2}{2\mu_0}&=& h_{Cu}(1356K)-h_{Cu}(4K/80K)\approx 5.2\times 10^9 J/m^3 \nonumber\\
-  B_0 &\approx
-   &\sqrt{2(4\pi \times 10^-7 H/m)(5.2\times 10^9 J/m^3)}\approx 115 T
-\end{eqnarray}
-
-
-
 \begin{equation}% 8.1第一个
 \frac{B_{0}^{2}}{2\mu_o}=h_{cu}(1356\ \mathrm{K})-h_{cu}(4\ \mathrm{K}\ \mathrm{or}80\ \mathrm{K})\simeq 5.2\times 10^9\ \mathrm{J/m^3}
 \end{equation}
 \begin{equation}% 8.1第二个
 B_0\simeq\sqrt{2(4\pi\times 10^{-7}\ \mathrm{H/m})(5.2\times 10^9\ \mathrm{J/m^3})}\simeq 115\ \mathrm{T}
 \end{equation}
+
+\subsection{热点和热点温度}
+
 \begin{equation}% page468 3.79
 E_m=\frac{1}{2}LI^2
 \end{equation}
@@ -49,10 +47,27 @@ V_r=f_eV_w=f_r2\pi a_{1}^{3}(\alpha^2-1)\beta
 \begin{equation}% 8.7
 e_{mr}=\frac{E_m}{V_r}=\frac{2(\alpha-1)\beta\ \mathcal{L}(\alpha,\beta)}{f_r\pi(\alpha+1)F^2(\alpha,\beta)}\left(\frac{B_{o}^{2}}{2\mu_o}\right)
 \end{equation}
+
+
+\subsection{绕组材料的温度数据}
+
+
+
+\subsection{安全、风险和高度风险$T_f$区间}
+
+
+\subsection{温度引起的应变}
+
+
+
+\section{绝热加热}
+
 \begin{equation}% 8.8a和8.8b
 C_{cd}(T)\frac{dT}{dt}\simeq\rho_{cd}(T)J_{cd_o}^{2}(t) 
 \simeq\rho_m(T)J_{cd_o}^{2}(t)
 \end{equation}
+
+\subsection{恒定电流模式下的绝热加热}
 \begin{equation}% 8.9a
 A_{cd}C_{cd}(T)\frac{dT}{dt}=\frac{\rho_m(T)}{A_m}I_{op}^{2}(t)
 \end{equation}
@@ -78,6 +93,9 @@ Z(T_f,T_i)=Z(T_f,0)-Z(T_i,0)=Z(T_f)-Z(T_i)
 \begin{equation}% 8.12b
 J_{m_o}^{i}(T_f,T_i)=\sqrt{\left(\frac{1+\gamma_{m/s}}{\gamma_{m/s}}\right)\frac{Z(T_f,T_i)}{\tau_{ah}}}
 \end{equation}
+
+\subsection{恒定放电模式下的绝热加热}
+
 \begin{equation}% 8.13
 C_m(T)\frac{dT}{dt}=\left(\frac{A_m}{A_{cd}}\right)\rho_m(T)J_{m}^{2}(t)
 \end{equation}
@@ -107,6 +125,8 @@ Z(T_f,T_i)=\frac{J_{m_o}^{2}E_m}{A_{cd}V_D}
 \begin{equation}% 8.19
 J_{m_o}^{D}=\frac{A_{cd}V_DZ(T_f,T_i)}{E_m}
 \end{equation}
+
+\subsection{引线短接的磁体的绝热加热}
 \begin{equation}% 8.20
 L\frac{dI_m(t)}{dt}+r(T)I_m(t)=0
 \end{equation}
@@ -150,6 +170,10 @@ J_{m_o}^{sh}=\frac{1}{2}\left(\frac{A_{cd}}{A_m}\right)f_r\pi(\alpha+1)\rho_m(T_
 \begin{equation}% 8.30b
 J_{m_o}^{sh}(T_f,T_i)=\frac{1}{2}\left(\frac{A_{cd}}{A_m}\right)\frac{f_r\pi(\alpha+1)\rho_m(T_f)Z(T_f,T_i)}{\mu_o\ \mathcal{L}(\alpha,\beta)NI_{op}}
 \end{equation}
+
+
+\subsection{恒定电压模式下的绝热加热}
+
 \begin{equation}% 8.31a两个
 A_{cd}\ell_{cd}C_{cd}(T)\frac{dT}{dt}=\frac{V_{op}^{2}}{R_n(T)}=\frac{V_{op}^{2}A_m}{\rho_m(T)\ell_{cd}}
 C_m(T)\frac{dT}{dt}\simeq\left(\frac{A_m}{A_{cd}}\right)\frac{V_{op}^{2}}{\rho_m(T)\ell_{cd}^{2}}
@@ -179,12 +203,24 @@ Y(T_f,T_i)=\left(\frac{A_m}{A_{cd}}\right)\frac{\mu_o\ \mathcal{L}(\alpha,\beta)
 \begin{equation}% 8.36
 \tau_{ah}^{\upsilon}=\left(\frac{A_{cd}}{A_m}\right)\frac{\pi^2(\alpha+1)^2a_1L}{\mu_o\ \mathcal{L}(\alpha,\beta)}\left[\frac{Y(T_f,T_i)}{V_{op}^{2}}\right]
 \end{equation}
+
+
+\section{高电压}
+
 \begin{equation}% 8.37a
 V=L\frac{dI}{dt}
 \end{equation}
 \begin{equation}% 8.37b
 V=\frac{2E_m}{I_{o}^{2}}\left(\frac{\Delta I}{\Delta t}\right)\approx\frac{2E_m}{I_o\Delta t}
 \end{equation}
+
+\subsection{电弧环境}
+
+\subsection{Paschen电压试验}
+
+\subsection{失超磁体内的电压峰值}
+
+
 \begin{equation}% 8.38
 [V_{in}]_{mx}=f_r(1-f_r)R_{nz}I_{op}
 \end{equation}
@@ -197,6 +233,11 @@ J_{m_o}^{V}=\frac{2}{f_r(1-f_r)}\left[\frac{F(\alpha,\beta)}{\pi(\alpha^2-1)\bet
 \begin{equation}% 8.40b
 J_{m_o}^{V}=\frac{2}{f_r(1-f_r)}\left[\frac{\sqrt{\ \mathcal{L}(\alpha,\beta)}}{\pi(\alpha+1)}\right]\left[\frac{V_{bk}I_{op}}{\rho_m(T_f)}\sqrt{\frac{2\mu_o}{a_1E_m}}\right]
 \end{equation}
+
+\section{正常区传播（NZP）}
+
+\subsection{轴向NZP速度}
+
 \begin{equation}% 8.41a
 C_n(T)\frac{\partial T_n}{\partial t}=\frac{\partial}{\partial x}\left[k_n(T)\frac{\partial T_n}{\partial x}\right]+\rho_n(T)J^2
 \end{equation}
@@ -254,6 +295,11 @@ U_\ell=\frac{J_m}{C_{cd}}(\tilde{T})\sqrt{\frac{\rho_m(\tilde{T})k_m(\tilde{T})}
 \begin{equation}% 8.51b
 U_\ell\simeq\frac{J_m}{C_m}(\tilde{T})\sqrt{\frac{\rho_m(\tilde{T})k_m(\tilde{T})}{T_t-T_{op}}}
 \end{equation}
+
+
+
+\subsection{“制冷”条件下的NZP}
+
 \begin{equation}% 8.52
 U_t=U_\ell\sqrt{\frac{1}{2}\left(\frac{\delta_{cd}}{\delta_i}\right)\left[\frac{k_i(\tilde{T})}{k_m(\tilde{T})}\right]}
 \end{equation}
@@ -266,9 +312,24 @@ U_t=U_\ell\sqrt{\frac{1}{2}\left(\frac{\delta_{cd}}{\delta_i}\right)\frac{k_i}{k
 \begin{equation}% 8.55
 U_t=U_\ell\sqrt{\frac{1}{2}\left(\frac{\delta_{cd}}{\delta_i}\right)\frac{1}{k_m(R_{th_{ct}^{1}}+R_{th_{ct}^{1}})}}
 \end{equation}
+
+
+\subsection{横向匝间速度}
+
+\subsection{热-流体失超恢复(THQB)}
+
+\subsection{交流损耗诱导的NZP}
+
+\section{计算机仿真}
 \begin{equation}% 8.56
 \frac{d_{cd}}{U_t}\ll\frac{2\pi a_1}{U_\ell}
 \end{equation}
+
+
+\section{自保护磁体}
+
+\subsection{尺度限制}
+
 \begin{equation}% 8.57
 \frac{a_1(\alpha-1)}{U_t}<\tau_{dg}
 \end{equation}
@@ -288,6 +349,10 @@ U_t=U_\ell\sqrt{\frac{1}{2}\left(\frac{\delta_{cd}}{\delta_i}\right)\frac{1}{k_m
 [a_1(\alpha-1)]_{ah}^{sh}=\frac{1}{C_m(\tilde{T})}\sqrt{\frac{\rho_m(\tilde{T})k_i(\tilde{T})\delta_{cd}}{2\delta_i(T_t-T_{op})}}\times 
 \frac{4}{f_r\pi(\alpha+1)\rho_m(T_f)}\sqrt{\frac{2\mu_o\mathcal{L}(\alpha,\beta)E_m}{a_1}}
 \end{equation}
+
+
+\section{孤立磁体的被动保护}
+
 \begin{equation}% 8.61
 \frac{E_r}{E_m}=\frac{0.5\zeta(1-k)+(1+k)}{\zeta+(1+k)}
 \end{equation}
@@ -309,47 +374,19 @@ E_{R1}=\frac{1}{R_1}\int_{0}^{2\ \mathrm{s}}V_1(t)^2dt\simeq 50\ \mathrm{J}
 E_{R2}=\frac{1}{R_2}\int_{0}^{2\ \mathrm{s}}V_2(t)^2dt\simeq 300\ \mathrm{J}
 \end{equation}
 
-\subsection{热点和热点温度}
-
-\subsection{绕组材料的温度数据}
-
-\subsection{$T_f$的安全、风险、高度风险区间}
-
-\subsection{温度引起的应变}
-
-
-\section{绝热加热}
-\subsection{恒定电流模式下的绝热加热}
-\subsection{恒定放电量模式下的绝热加热}
-\subsection{引线短接的磁体的绝热加热}
-\subsection{恒定电压模式下的绝热加热}
-
-\section{高电压}
-\subsection{电弧环境}
-\subsection{Paschen电压试验}
-\subsection{失超磁体内的电压峰值}
-
-\section{正常区传播（NZP）}
-
-\subsection{轴向NZP速度}
-\subsection{“制冷”条件下的NZP}
-\subsection{横向匝间速度}
-\subsection{热-流体失超恢复（THQB）}
-\subsection{交流损耗诱导的NZP}
-
-\section{计算机仿真}
-
-\section{自保护磁体}
-\subsection{尺度限制}
-
-\section{孤立磁体的被动保护}
-
-
 \section{主动保护}
 \subsection{过热}
+
+
 \subsection{多线圈磁体中的过压}
+
+
 \subsection{主动保护技术：检测-抑制}
+
+
 \subsection{主动保护技术：检测-激活加热器}
+
+
 \subsection{失超电压保护技术：基本电桥}
 
 \section{专题}
