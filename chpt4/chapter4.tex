@@ -1066,34 +1066,24 @@ k) 讨论当被加热层必须在35.61 K经过固-固相变时，受到暂态加
 
 l) 讨论磁体在其允许运行温度区间(这里是10 K到15 K)的温升过程中，磁体的膨胀在何种程度上影响空间场的均匀性。
 
-\subsubsection{问题4.4之解}
+\subsubsection{问题4.3之解}
 a) 图4.18给出了1 L体积Cu, Pb, SNe和SN2初始温度4.2 K，终了温度60 K(SNe是25 K)在恒定热输入1 W，$T(t)$图
 ——它还包括一条4.2 K水平点线，给出了1 L的4.2 K液氦挥发所需的时间。
+从该图可清晰看出，在这些物质中，至少以体积算，4-25 K区间的SNe和25-60 K区间的SN2分别是
+最好的热容增强剂。因为SNe的比密度($1.25\ \mathrm{g/cm^3}$@25 K)和SN2的比密度($1\ \mathrm{g/cm^3}$@25 K)
+要比Pb($11.4\ \mathrm{g/cm^3}$)和Cu ($8.96\ \mathrm{g/cm^3}$)小一个量级，
+热容增强剂在冷体中占有同样的额外体积时，这些固体工质都不仅能起到很好的效果，还仅增加了很小的系统质量。
 
- The figure clearly demonstrates that among these substances, at least on
-a volume basis SNe in the range 4–25 K and SN2 in the range 25–60 K are the
-best heat capacity enhancers. Because specific densities of SNe ($1.25\ \mathrm{g/cm^3}$ at
-25 K) and SN2 ($1\ \mathrm{g/cm^3}$ at 25 K) are an order of magnitude less than those of Pb
-($11.4\ \mathrm{g/cm^3}$) and Cu ($8.96\ \mathrm{g/cm^3}$), for the same extra volume in the cold body
-occupied by a heat capacity enhancer substance, either of these solid cryogens not
-only performs its task well but also is only a modest extra mass to the system.
+以SN2为例，因为整个加热(4.2 K–60 K)过程需要$\sim 18$小时，
+我们可以放心的说，扩散距离$\sim 10$ cm的1 L固体体积内的温度均匀分布假设是可行的。
+均匀温度假设很明显对铜和铅都是合理的。
 
-
-Because the entire warm-up (4.2 K–60 K) takes, for example, $\sim 18$ hours for SN2,
-we may safely conclude that the assumption of uniform temperature throughout
-the 1-liter volume of solid with a diffusion distance of $\sim 10$ cm—is
-valid. The uniform temperature assumption is clearly valid for copper and lead.
-
-b) From Fig. 4.18 we note that for 1-liter SN2, $T(t\simeq 400\ \mathrm{s})$ = 10 K and
-$T(t\simeq 2,150\ \mathrm{s})$ = 15 K. For 1-liter SN2, we have the warm-up period from 10 K to 15 K
-with 1-W heat input: $[\Delta t(10 K\rightarrow 15 K)]_{1 litter}^{1 W}\simeq 1,750$s = 0.486 h. For 15-liter
-solid nitrogen with 0.25-W heat input, the 10-15 K warm-up period, $[\Delta t(10 K\rightarrow 15 K)]_{15 litter}^{0.25 W}$, is given by:
-
+b) 从图4.18中，我们知道对于1 L的SN2，$T(t\simeq 400\ \mathrm{s})$ = 10 K，$T(t\simeq 2,150\ \mathrm{s})$ = 15 K。
+对1 L的SN2，在1 W的热输入下，从10 K加热到15 K的时间为：$[\Delta t(10 \ \mathrm{K}\rightarrow 15\ \mathrm{K})]_{1\ \mathrm{L}}^{1\ \mathrm{W}}\simeq 1,750$ s = 0.486 h。在0.25 W的热输入下，15 L的固氮从10-15 K的加热时间$[\Delta t(10 \ \mathrm{K}\rightarrow 15 \ \mathrm{K})]_{15 \ \mathrm{L}}^{0.25\ \mathrm{W}}$由下式给出：
 \begin{align*}% page260
-[\Delta t(10\mathrm{K}\rightarrow 15\mathrm{K})]_{15\mathrm{L}}^{0.25\mathrm{W}}&=(\frac{1\mathrm{W}}{0.25\mathrm{w}})(\frac{15\mathrm{L}}{1\mathrm{l}})[\Delta t(10\mathrm{K}\rightarrow 15\mathrm{K})]_{1\mathrm{L}}^{1\mathrm{W}}\\\notag
+[\Delta t(10\mathrm{K}\rightarrow 15\ \mathrm{K})]_{15\mathrm{L}}^{0.25\mathrm{W}}&=(\frac{1\mathrm{W}}{0.25\ \mathrm{W}})(\frac{15\mathrm{L}}{1\mathrm{l}})[\Delta t(10\mathrm{K}\rightarrow 15\mathrm{K})]_{1\mathrm{L}}^{1\mathrm{W}}\\\notag
 &\simeq (4)(5)(0.486\mathrm{h})=29-30\mathrm{h}
 \end{align*}
-
 
 \begin{figure}[htbp]
 	\centering
@@ -1101,18 +1091,16 @@ solid nitrogen with 0.25-W heat input, the 10-15 K warm-up period, $[\Delta t(10
 	\caption{初始温度4.2 K，终末温度60 K，。。。$T(t)$。}
 \end{figure}
 
-Alternatively, we may directly use Fig. 4.2 and compute $h(15 K)−h(10 K) [J/cm^3]$
-by performing the$\int C_p(T)dT$ for SN2 between 10 K and 15 K:
-\begin{equation*}% page260
-h(15K)-h(10K)\simeq\frac{C_p(10K)+C_p(15K)}{2}(15K-10K)
-\simeq\frac{(0.175J/cm^3K+0.475J/cm^3K)}{2}(5K)
-\simeq1.625J/cm^3
-\end{equation*}
+另一种解法，我们可以直接使用图4.2，通过在10 K和15 K间对SN2应用$\int C_p(T)dT$计算$h(15\ \mathrm{K})−h(10\ \mathrm{K}) [\ \mathrm{J/cm^3}]$：
+\begin{align*}% page260
+h(15\ \mathrm{K})-h(10\ \mathrm{K})&\simeq\frac{C_p(10\ \mathrm{K})+C_p(15\ \mathrm{K})}{2}(15\ \mathrm{K}-10\ \mathrm{K})\\
+&\simeq\frac{(0.175\ \mathrm{J/cm^3K}+0.475\ \mathrm{J/cm^3K} )}{2}(5\ \mathrm{K})\\
+&\simeq 1.625\ \mathrm{J/cm^3}
+\end{align*}
 
-Thus the 10–15 K warm-up time for 15-liter solid nitrogen with 0.25-W heat input,
-$[\Delta t(10 K\rightarrow 15 K)]_{15 litter}^{0.25 W}$ may be given by
+于是，在0.25 W的热输入下，15 L的固氮从10-15 K的加热时间$[\Delta t(10\ \mathrm{K}\rightarrow 15\ \mathrm{K})]_{15\ \mathrm{L}}^{0.25 W}$可由下式给出： 
 \begin{equation*}% page260
-[\Delta(10K \rightarrow15K)]_{15liter}^{0.25W}=\frac{(15000cm^3)(1.625J/cm^3)}{(0.25W)(3600s/h)}\simeq27.1h~30h
+[\Delta(10\ \mathrm{K} \rightarrow 15\ \mathrm{K})]_{15\ \mathrm{L}}^{0.25\ \mathrm{W}}=\frac{(15000\ \mathrm{cm^3})(1.625\ \mathrm{J/cm^3})}{(0.25\ \mathrm{W})(3600\ \mathrm{s/h})}\simeq 27.1\ \mathrm{h}\sim 30\ \mathrm{h}
 \end{equation*}
 
 c) 直径$D$，长度为$\ell$，壁厚$\Delta r_{N2}\ll D$的圆柱体内的固氮体积$V_{N2}$为：
@@ -1129,53 +1117,53 @@ c) 直径$D$，长度为$\ell$，壁厚$\Delta r_{N2}\ll D$的圆柱体内的固
 $D_{th}\simeq 55\times10^{−2}\ \mathrm{cm^2/s}$解4.21，有：
 \begin{equation}% 4.21
 \tau_{sd}=\frac{1}{D_{th}}(\frac{\delta_{sd}}{\pi})^2
-=\frac{1}{(55\times10^{-2}cm^2/s)}(\frac{1.8cm}{\pi})^2\sim 0.6 s
+=\frac{1}{(55\times 10^{-2}\ \mathrm{cm^2/s})}(\frac{1.8\ \mathrm{cm}}{\pi})^2\sim 0.6\ \mathrm{s}
 \end{equation}
 
-The diffusion time of$\sim$ 0.6 s is much less than the 30-h warm-up time. Thus, the
-assumption of uniform temperature within this 15-liter SN2 is valid.
+扩散时间$\sim$ 0.6 s相比30小时的加热时间是很短的。于是，在15 L的SN2内的均匀温度分布假设是合理的。
 
-d) We reverse the order of the two approaches to the solution given in b). Thus,
-using the $C_p(T)$ data for solid neon given in Fig. 4.2 and by taking the area
-underneath the $C_p(T)$ curve for SNe between 10 K and 15 K, we have:
+d) 我们颠倒b)中给出的两种方法的顺序。即，使用图4.2中给出的固氖$C_p(T)$数据，计算SNe的$C_p(T)$曲线在10 K和15 K之间
+与坐标轴围成的面积，有：
 \begin{align*}% page260
-h(15K)-h(10K)&\simeq\frac{C_p(10K)+C_p(15K)}{2}(15K-10K)\\\notag
-&\simeq\frac{(0.400J/cm^3K+0.875J/cm^3K)}{2}(5K)\\\notag
-&\simeq 3.2J/cm^3
+h(15\ \mathrm{K})-h(10\ \mathrm{K})&\simeq\frac{C_p(10\ \mathrm{K})+C_p(15\ \mathrm{K})}{2}(15\ \mathrm{K}-10\ \mathrm{K})\\\notag
+&\simeq\frac{(0.400\ \mathrm{J/cm^3K}+0.875\ \mathrm{J/cm^3K})}{2}(5\ \mathrm{K})\\\notag
+&\simeq 3.2\ \mathrm{J/cm^3}
 \end{align*}
 
-For the same warm-up time from 10 K to 15 K with 0.25-W heat input for 15-liter
-solid nitrogen, $[\Delta t(10 K\rightarrow 15 K)]_{15\ \mathrm{L}r}^{0.25 W}\simeq 27.1$ h computed in b), the volume of solid neon,$V_{Ne}(10 K\rightarrow 15 K)$, is given by:
+在0.25 W热输入下，对15 L固氮从10 K到15 K的同样的加热时间$[\Delta t(10\ \mathrm{K}\rightarrow 15\ \mathrm{K})]_{15\ \mathrm{L}r}^{0.25\ \mathrm{W}}\simeq 27.1$ h下，固氖的体积$V_{Ne}(10\ \mathrm{K}\rightarrow 15\ \mathrm{K})$由下式给出：
 \begin{equation*}% page261
-V_{Ne}(10K \rightarrow 15K)=\frac{(27.1h)(3600s/h)(2.5W)}{(3.2J/cm^3)(1000cm^3/liter)}
+V_{Ne}(10\ \mathrm{K} \rightarrow 15\ \mathrm{K})=\frac{(27.1\ \mathrm{h})(3600\ \mathrm{s/h} )(2.5\ \mathrm{W})}{(3.2\ \mathrm{J/cm^3})(1000 \ \mathrm{cm^3/L})}
 \simeq 7.6\ \mathrm{L}\sim\frac{1}{2}\times 15\ \mathrm{L}
 \end{equation*}
 
-From Fig. 4.18 we note that for 1-liter solid neon, $T(t\simeq 0.33 h)=10 K$ and $T(t\simeq
-1.22 h)=15 K$, resulting in $[\Delta t(10 K\rightarrow 15 K)]_{1\ \mathrm{L}}^{1 W}\simeq 0.89$ h for SNe; for 1-liter SN2:
-$[\Delta t(10 K\rightarrow 15 K)]_{1 litter}^{1 W}\simeq 0.486$ h. We thus have:
+从图4.18中，我们看到对1 L固氖， $T(t\simeq 0.33\ \mathrm{h})=10\ \mathrm{K}$和$T(t\simeq
+1.22\ \mathrm{h})=15\ \mathrm{K}$，有$[\Delta t(10\ \mathrm{K}\rightarrow 15\ \mathrm{K})]_{1\ \mathrm{L}}^{1\ \mathrm{W}}\simeq 0.89$ h。
+对1 L的SN2，有：
+$[\Delta t(10\ \mathrm{K}\rightarrow 15\ \mathrm{K})]_{1\ \mathrm{L}}^{1\ \mathrm{W}}\simeq 0.486$ h。
+于是我们有：
 \begin{equation*}% page261
-V_{Ne}(10K \rightarrow 15K)=\frac{(0.486h)}{0.89h}(15\ \mathrm{L})\simeq 8.2 \ \mathrm{L}\simeq\frac{1}{2}\times(15\ \mathrm{L})
+V_{Ne}(10\ \mathrm{K}\rightarrow 15\ \mathrm{K})=\frac{(0.486\ \mathrm{h})}{0.89\ \mathrm{h}}(15\ \mathrm{L})\simeq 8.2 \ \mathrm{L}\simeq\frac{1}{2}\times(15\ \mathrm{L})
 \end{equation*}
 
-e) From Fig. 4.18 we note that for 1-liter solid nitrogen, $T(t\simeq 0.6 h)=15 K$ and
-$T(t\simeq 17.75\ \mathrm{h}) = 60\ \mathrm{K}$, or  $[\Delta t(15\ \mathrm{K}\rightarrow 60\ \mathrm{K})]_{1\ \mathrm{L}}^{1\ \mathrm{W}}\simeq 17.15\ \mathrm{h}$. For an average heat
-input of 3.3 W and 15-liter SN2, we have:
-\begin{equation*}% page261
-[\Delta t(15\ \mathrm{K} \rightarrow 60\ \mathrm{K})]_{15\ \mathrm{L}}^{3.3\ \mathrm{W}}=(\frac{15\ \mathrm{L}}{1\ \mathrm{L}})(\frac{1\ \mathrm{W}}{3.3\ \mathrm{W}})[\Delta t(15\ \mathrm{K}\rightarrow 60\ \mathrm{K})]_{1\ \mathrm{L}}^{1\ \mathrm{W}}
-\simeq(15)(0.303)(17.15\ \mathrm{h})
-=78\sim 80\ \mathrm{h}
-\end{equation*}
+e) 从图4.18，我们看到对1 L的固氮，$T(t\simeq 0.6 h)=15 K$和$T(t\simeq 17.75\ \mathrm{h}) = 60\ \mathrm{K}$，
+或者$[\Delta t(15\ \mathrm{K}\rightarrow 60\ \mathrm{K})]_{1\ \mathrm{L}}^{1\ \mathrm{W}}\simeq 17.15\ \mathrm{h}$。
+对平均热输入3.3 W和15 L的SN2，有：
+\begin{align*}% page261
+[\Delta t(15\ \mathrm{K} \rightarrow 60\ \mathrm{K})]_{15\ \mathrm{L}}^{3.3\ \mathrm{W}}&=(\frac{15\ \mathrm{L}}{1\ \mathrm{L}})(\frac{1\ \mathrm{W}}{3.3\ \mathrm{W}})[\Delta t(15\ \mathrm{K}\rightarrow 60\ \mathrm{K})]_{1\ \mathrm{L}}^{1\ \mathrm{W}}\\
+&\simeq(15)(0.303)(17.15\ \mathrm{h})\\
+&=78\sim 80\ \mathrm{h}
+\end{align*}
 
-f) In this transition, an energy density of $5\ \mathrm{J/cm^3}[= (75\ \mathrm{kJ})/(15,000\ \mathrm{cm^3})]$ is injected into copper at an initial temperature of 20 K. Thus, we may determine
-the final temperature Tf from the following equation:
+f) 在这转变中，能量以密度$5\ \mathrm{J/cm^3}[= (75\ \mathrm{kJ})/(15,000\ \mathrm{cm^3})]$流入初始温度为20 K的铜。
+这样，我们可以由下式确定最终温度$T_f$：
 \begin{equation*}% S3.2
-\int_{20K}^{T_i}[C_p(T)]_{cu}dT=5\ \mathrm{J/cm^3}
+\int_{20\ \mathrm{K}}^{T_i}[C_p(T)]_{cu}dT=5\ \mathrm{J/cm^3}
 \end{equation*}
 
 根据图4.2，我们发现S3.2满足$T_f\simeq 40$ K。
 
-g) Using the $C_p(T)$ data for SN2 given in Fig. 4.2 and by taking the area underneath the $C_p(T)$ curve from 30 K to 35 K, we have:
+g) 使用图4.2中的SN2的$C_p(T)$数据，计算SN2的$C_p(T)$曲线在30 K和35 K之间
+与坐标轴围成的面积，有
 \begin{align*}% page261
 h(35\ \mathrm{K})-h(30\ \mathrm{K})&\simeq\frac{C_p(30\ \mathrm{K})+C_p(35\ \mathrm{K})}{2}(35\ \mathrm{K}-30\ \mathrm{K})\\\notag
 &\simeq\frac{(1.24\ \mathrm{J/cm^3 K}+1.55\ \mathrm{J/cm^3 K})}{2}(5\ \mathrm{K})\\\notag
@@ -1185,16 +1173,18 @@ h(35\ \mathrm{K})-h(30\ \mathrm{K})&\simeq\frac{C_p(30\ \mathrm{K})+C_p(35\ \mat
 于是我们有：
 \begin{equation*}% page262
 [\Delta t(30\ \mathrm{K} \rightarrow 35\ \mathrm{K})]_{15\ \mathrm{L}}^{10\ \mathrm{W}}=\frac{(15000\ \mathrm{cm^3})(7.0\ \mathrm{J/cm^3})}{(10\ \mathrm{W})(3,600\ \mathrm{s/h})}
-\simeq 2.9 h~3 h
+\simeq 2.9\ \mathrm{h}\sim 3\ \mathrm{h}
 \end{equation*}
 
-h) We proceed as in g) except here an energy absorption at 35.61 K, $\Delta h(35.61 K)=8.2 J/cm3$, must be added. Also, the enthalpy area computation must be performed over two temperature ranges, 35–35.61 K and 35.61–40 K. Thus:
+h) 类似g)，除了必须增加35.61 K时的能量吸收值$\Delta h(35.61 K)=8.2 J/cm3$。
+同时，焓面积计算必须在两个温度区间进行：35–35.61 K和35.61–40 K。于是：
 \begin{align*}% page262
 h(40\ \mathrm{K})-h(35\ \mathrm{K})\simeq&\frac{C_p(35\ \mathrm{K})+C_p(35.61\ \mathrm{K})}{2}(35.61\ \mathrm{K}-35\ \mathrm{K}) \\\notag
 &+\Delta h(35.61\ \mathrm{K})+\frac{C_p(35.61\ \mathrm{K})+C_p(40\ \mathrm{K})}{2}(40\ \mathrm{K}-35.61\ \mathrm{K})\\\notag
-\simeq&\frac{(1.60\ \mathrm{J/cm^3 K}+1.62\ \mathrm{J/cm^3 K})}{2}(0.6K)\\\notag
+\simeq&\frac{(1.60\ \mathrm{J/cm^3 K}+1.62\ \mathrm{J/cm^3 K})}{2}(0.6\ \mathrm{K})\\\notag
 &+8.2\ \mathrm{J/cm^3}+\frac{(1.29\ \mathrm{J/cm^3 K}+1.33\ \mathrm{J/cm^3 K})}{2}(4.39\ \mathrm{K})\\\notag
-\simeq&0.98\ \mathrm{J/cm^3}+8.2\ \mathrm{J/cm^3}+5.75\ \mathrm{J/cm^3}\simeq 14.9\ \mathrm{J/cm^3}\\\notag
+\simeq&0.98\ \mathrm{J/cm^3}+8.2\ \mathrm{J/cm^3}+5.75\ \mathrm{J/cm^3}\\\notag
+\simeq& 14.9\ \mathrm{J/cm^3}\\\notag
 \end{align*}
 
 \begin{align*}
@@ -1202,178 +1192,352 @@ h(40\ \mathrm{K})-h(35\ \mathrm{K})\simeq&\frac{C_p(35\ \mathrm{K})+C_p(35.61\ \
 \simeq&6.2\sim 6\ \mathrm{h} \notag
 \end{align*}
 
-Thus the contribution of the extra enthalpy at 35.61 K more than doubles (2.1
-times) the warm-up time for the same temperature increment of 5 K
+于是，在相同的温升5 K下，35.61 K时的额外的焓贡献令加热时间翻倍(2.1倍)。
 
-i) Equation 4.21 is used to compute $\tau_{sd}$ for $D_{th} = 2.4\times 10^{−3} cm^2/s$ and $\delta_{sd}=0.04 cm$ and demonstrate that this$\tau_{sd}$ indeed is$\sim 0.1$ s. Thus:
+i) 方程4.21用于计算$\tau_{sd}$ for $D_{th} = 2.4\times 10^{−3} \ \mathrm{cm^2/s}$和$\delta_{sd}=0.04\ \mathrm{cm}$，给出了$\tau_{sd}$实际是 $\sim 0.1$ s，即：
 \begin{align}% 4.21
 \tau_{sd}&=\frac{1}{D_{th}}(\frac{\delta_{sd}}{\pi})^2
 \end{align}
 
+j) 在30 K到35 K温度区间，0.067 s内可能注入0.04 mm厚的SN2层的最大功率流$p_{sd}$可由下式计算：
+\begin{align*}% page 262
+p_{sd}&=[h(35\ \mathrm{K})-h(30\ \mathrm{K})]\frac{\delta_{sd}}{\tau_{sd}}\\
+&=(7.0\ \mathrm{J/cm^3})\frac{(0.04\ \mathrm{cm})}{(0.067\ \mathrm{s})}=4.2 \ \mathrm{W/cm^2}
+\end{align*}
 
-\begin{equation*}% page 262
-p_{sd}=[h(35\ \mathrm{K})-h(30\ \mathrm{K})]\frac{\delta_{sd}}{\tau_{sd}}
-=(7.0\ \mathrm{J/cm^3})\frac{(0.04\ \mathrm{cm})}{(0.067\ \mathrm{s})}=4.2 \ \mathrm{W/cm^2}
-\end{equation*}
+k) 如表4.10的脚注给出的，固氮在35.61 K下有$D_{th} = 0$。这是因为能量是由固体吸收而不是被扩散——8.2 $\mathrm{J/cm^3}$——
+由于它经历相变，SN2热容近乎趋于无限大。
+不过，暂态试验结果[4.36, 4.37]已经证明在扩展相变温度的很大的范围内，固氮的吸收暂态能量效果不减。
+
+l) 因为绕组温升对磁体空间磁场均匀性的影响对NMR和MRI应用非常重要，我们将在讨论4.12中论及。
 
 
 
-%\subsection{讨论4.12：温升和场均匀性}
-%\begin{equation}% 4.22
-%\alpha(T)=\frac{1}{L_o}(\frac{\partial L}{\partial T})_P
-%\end{equation}
-%\begin{equation}% 4.23
-%\alpha(T)=aT+bT^3
-%\end{equation}
-%\begin{equation}% 4.24
-%(\frac{\Delta L}{L_o}_{cu})=\int_{10K}^{15K}(5\times10^{-9}T+3\times10^{-11}T^3)dT=0.62\times10^{-6}
-%\end{equation}
-%
-%
-%
-%\subsection{讨论4.13：低温热测}
-%
-%
-%
-%
-%\subsection{讨论4.14：气冷铜电流引线}
-%\begin{equation}% 4.25
-%Q_{in}=[Ak(T)\frac{dT}{dz}]_{z+\Delta z}+\dot{m}_Ic_p(T)T+\frac{\rho(T)I_{o}^{2}}{A}\Delta z
-%\end{equation}
-%\begin{equation}% 4.26
-%Q_{out}=[Ak(T)\frac{dT}{dz}]_z+\dot{m}_Ic_p(T)(T+\Delta T)
-%\end{equation}
-%\begin{equation}% 4.27
-%[Ak(T)\frac{dT}{dz}]_{z+\Delta z}-[Ak(T)\frac{dT}{dz}]_z-\dot{m}_Ic_p(T)\Delta T+\frac{\rho(T)I_{o}^{2}}{A}\Delta z=0
-%\end{equation}
-%\begin{equation}% 4.28
-%\frac{d[Ak(T)\frac{dT}{dz}]}{dz}-\dot{m}_Ic_p(T)\frac{dT}{dz}+\frac{\rho(T)I_{o}^{2}}{A}=0
-%\end{equation}
-%\begin{equation}% 4.29a
-%-\dot{m}_Ic_{p0}\frac{dT}{dz}\mid_{z=0}+\frac{\rho(T)I_{o}^{2}}{A}\simeq0
-%\end{equation}
-%\begin{equation}% 4.29b
-%\frac{dT}{dz}\mid_{z=0}\simeq\frac{\rho_0I_{o}^{2}}{A\dot{m}_Ic_{p0}}
-%\end{equation}
-%\begin{equation}% 4.30
-%Q_{I_o}=Ak(T_0)\frac{dT}{dz}\mid_{z=0}=\frac{k_0\rho_0I_{0}^{2}}{\dot{m}_Ic_{p0}}
-%\end{equation}
-%\begin{equation}% 4.31a
-%\dot{m}_I=\frac{Q_{I_o}}{h_L}
-%\end{equation}
-%\begin{equation}% 4.31b
-%\dot{m}_I=I_o\sqrt{\frac{k_0\rho_0}{c_{p0}h_L}}
-%\end{equation}
-%\begin{equation}% 4.32a
-%\frac{Q_{I_o}}{I_o}=\sqrt{\frac{h_Lk_0\rho_0}{c_{p0}}}
-%\end{equation}
-%\begin{equation}% 4.32b
-%\frac{Q_{I_o}}{I_o}\simeq\sqrt{\frac{(20.7\times10^3J/kg)(600W/mK)(2.5\times10^{-10}\Omega m)}{5.26\times10^3J/kgK}}
-%=7.7\times10^{-4}W/A=0.77mW/A~1mW/A
-%\end{equation}
-%\begin{equation}% 4.33
-%\dot{m}_Ic_p(T)\frac{dT}{dz}+\frac{\rho(T)I_{o}^{2}}{A}=0
-%\end{equation}
-%\begin{equation}% 4.34a
-%\int_{T_o}^{T_i}\frac{dT}{\rho(T)}=\int_{0}^{\ell}\frac{I_{o}^{2}dz}{A\dot{m}_I\tilde{c}_p}=\frac{I_{o}^{2}\ell}{A\dot{m}_I\tilde{c}_p}
-%\end{equation}
-%\begin{equation}% 4.34b
-%\int_{T_o}^{T_i}\frac{dT}{\rho(T)}\simeq1.2\times10^{11}K\Omega m
-%\end{equation}
-%\begin{equation}% 4.34c
-%\int_{T_o}^{T_i}\frac{dT}{\rho(T)}\simeq(\frac{I_{o}^{2}\ell}{Ac_{p0}})\frac{1}{I_0}\sqrt{\frac{c_{p0}h_L}{k_0\rho_0}}
-%\end{equation}
-%\begin{equation}% 4.35a
-%(\frac{I_o\ell}{A})_{ot} \equiv \zeta_o\simeq[\int_{T_0}^{T_i}\frac{dT}{\rho_(T)}]\sqrt{\frac{c_{p0}k_0 \rho_0}{h_L}}
-%\end{equation}
-%
-%
-%\begin{equation}% 4.35b
-%(\frac{I_o\ell}{A}_{ot})\simeq2.3\times10^7\ \mathrm{A/m}
-%\end{equation}
-%\begin{equation}% 4.36
-%A\tilde{k}\frac{d^2T}{dz^2}-\dot{m}_0\tilde{c}_p\frac{dT}{dz}=0
-%\end{equation}
-%\begin{equation}% 4.37
-%\tilde{k}=\frac{1}{T_\ell-T_0}\int_{T_0}^{T_\ell}k(T)dT
-%\end{equation}
-%\begin{equation}% 4.38a
-%T(z)=T_0+\frac{h_L}{\tilde{c}_p}[\exp(\frac{\dot{m}_0\tilde{c}_pz}{A\tilde{k}})-1]
-%\end{equation}
-%\begin{equation}% 4.38b
-%T(\ell)\equiv T_\ell=T_0+\frac{h_L}{\tilde{c}_p}[\exp(\frac{\dot{m}_0\tilde{c}_p\ell}{A\tilde{k}})-1]
-%\end{equation}
-%\begin{equation}% 4.39a
-%\frac{\dot{m}_0\tilde{c}_p\ell}{A\tilde{k}}=\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]
-%\end{equation}
-%\begin{equation}% 4.39b
-%\dot{m}_0=\frac{\tilde{k}}{\tilde{c}_p}(\frac{A}{\ell})\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]
-%\end{equation}
-%\begin{equation}% 4.40a
-%Q_0=\frac{\tilde{k}h_L}{\tilde{c}_p}(\frac{A}{\ell})\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]
-%\end{equation}
-%\begin{equation}% 4.40b
-%Q_0=\frac{\tilde{k}h_L}{\tilde{c}_p}(\frac{I_o}{\zeta_o})\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]
-%\end{equation}
-%\begin{equation}% 4.41
-%\frac{Q_0}{Q_{I_o}}\frac{\tilde{k}}{\tilde{c}_p\zeta_o}\sqrt{\frac{h_Lc_{p0}}{k_0p_0}}\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]
-%\end{equation}
-%\begin{equation}% 4.42
-%\frac{Q_0}{Q_{I_o}}\simeq0.69
-%\end{equation}
-%\begin{equation}% 4.43a
-%V_o=\frac{I_o}{A}\int_{0}^{\ell}\rho_{cu}dz
-%\end{equation}
-%\begin{equation}% 4.43b
-%V_o=\tilde{\rho}_{cu}(\frac{I_o\ell}{A})_{ot}=\tilde{\rho}_{cu}\zeta_o
-%\end{equation}
-%\begin{equation}% 4.44
-%\tilde{\rho}_{cu}=\frac{1}{\ell}\int_{0}^{\ell}\rho_{cu}dz\simeq\frac{1}{T_\ell-T_0}\int_{T_0}^{T_\ell}\rho_{cu}(T)dT
-%\end{equation}
-%\begin{equation}% 4.45
-%V_o\simeq2.3\times10^7\tilde{\rho}_{cu}\ \mathrm{V}
-%\end{equation}
-%\begin{equation}% 4.46
-%AC_{cu}(T)\frac{dT}{dt}=\frac{d}{dz}[Ak(T)\frac{dT}{dz}]-\dot{m}_Ic_p(T)\frac{dT}{dz}+\frac{\rho_{cu}(T)}{A}I_{o}^{2}
-%\end{equation}
-%\begin{equation}% 4.47
-%AC_{cu}(T)\frac{dT}{dt}=\frac{\rho_{cu}(T)}{A}I_{o}^{2}
-%\end{equation}
-%\begin{equation}% 4.48
-%C_{cu}(T)\frac{dT}{dt}\frac{\rho_{cu}(T)\zeta_{o}^{2}}{\ell^2}
-%\end{equation}
-%\begin{equation}% 4.49
-%\frac{dT}{dt}=\frac{\rho_o\zeta_{o}^{2}}{C_o\ell^2}+\frac{\gamma_{cu}\zeta_{o}^{2}}{C_o\ell^2}T=\frac{\rho_o}{\gamma_{cu}\tau_\ell}+\frac{T}{\tau_\ell}
-%\end{equation}
-%\begin{equation}% 4.50
-%\tau_\ell=\frac{C_o\ell^2}{\gamma_{cu}\zeta_{o}^{2}}
-%\end{equation}
-%\begin{equation}% 4.51
-%T(t)=Ke^{t/\tau_\ell}-\frac{\rho_o}{\gamma_{cu}}
-%\end{equation}
-%\begin{equation}
-%\tau_\ell=\frac{(3.5\times10^6\ \mathrm{J/m^3K})(1\ \mathrm{m})^2}{(68\times10^{-12}\ \mathrm{\Omega m/K})(2.5\times10^7\ \mathrm{A/m})^2}\sim90\ \mathrm{s}
-%\end{equation}
-%
-%
-%
-%\subsection{讨论4.15：干式引线——正常金属和高温超导体}
-%
-%\begin{equation}% 4.52
-%A\tilde{k}\frac{d^2T}{dz^2}+\frac{\tilde{\rho}I_{o}^{2}}{A}=0
-%\end{equation}
-%\begin{equation}% 4.53
-%Q_{I_o}=A\tilde{k}\frac{dT}{dz}\mid_{z=0}=\tilde{k}(T_\ell-T_0)(\frac{A}{\ell})+\frac{\tilde{\rho}I_{o}^{2}}{2}(\frac{\ell}{A})
-%\end{equation}
-%\begin{equation}% 4.12
-%(\frac{I_o\ell}{A})_{dr}=\sqrt{\frac{2\tilde{k}(T_\ell-T_0)}{\tilde{\rho}}}
-%\end{equation}
-%\begin{equation}% 4.54
-%[Q_{I_o}]_{dr}=I_o\sqrt{2\tilde{k}\tilde{\rho}(T_\ell-T_0)}
-%\end{equation}
-%\begin{equation}% 4.55
-%[Q_{I_hts}]_{dr}=k_{hts}A_{hts}\frac{(T_{\omega_{hts}}-T_0)}{\ell_{hts}}
-%\end{equation}
+\subsection{讨论4.12：温升和场均匀性}
+对NMR或MRI磁体，空间磁场均匀性是设计/运行的关键问题。
+本节，我们将定量的计算在允许的温升区间内，加热何种程度上会影响磁场均匀性。
+这里，我们在10–15 K区间内进行计算。
+
+线性热膨胀系数$\alpha(T)$定义为：
+\begin{equation}% 4.22
+\alpha(T)=\frac{1}{L_o}(\frac{\partial L}{\partial T})_P
+\end{equation}
+式中，$L_0$是初始长度。下标$P$表示等压过程。在低温下，$\alpha(T)$可由下式给出：
+\begin{equation}% 4.23
+\alpha(T)=aT+bT^3
+\end{equation}
+基于铜在$0\le T\le 50$ K范围内试验得到的$\alpha(T)$图我们发现铜的$a$和$b$为：
+$a_{Cu}= 5\times 10^{-9} K^{−2}$，$b_{Cu} = 3\times 10^{−11} K^{−4}$。
+对于10 K和15 K之间的$\Delta T_{op} = 5$ K，我们可以计算铜的$\Delta L/L_0$。通过在10 K和15 K之间对方程4.23积分，可得
+$(\Delta L/L_0)_{Cu}$。这里，铜被选做绕组材料的代表。
+附录III的表A3.4列出了给定金属和非金属的平均线性热膨胀数据。我们可以导出，这些材料在20 K和80 K之间的膨胀变化百分比
+是一个数量级的。于是，我们可以确认，选择铜来定量计算$\Delta L/L_0$没问题，于是：
+\begin{equation}% 4.24
+(\frac{\Delta L}{L_0}_{Cu})=\int_{10\ \mathrm{K}}^{15\ \mathrm{K}}(5\times 10^{-9}T+3\times 10^{-11}T^3)dT=0.62\times 10^{-6}
+\end{equation}
+线性变化发生在三个维度上。如果绕组在各方向等量膨胀，不会对均匀性有损害。
+实际上，因为各绕组是各向异性的，磁场均匀性将会退降，但在何种程度上退降则取决于有多少介质是各向异性的；所以，
+这个膨胀量是难于精确预测的。
+
+注意到，所有材料的$\Delta L/L_0$不仅与$\Delta T_{op}$，且与初始温度有关。
+增长。因此，由于固态介质冷却的NMR或MRI磁体存在潜在的在运行温度偏移下的磁场均匀性退降，故小心的保持他们的初始运行温度
+在$\sim 20$ K之下，并保证$\Delta T_{op}$不大于10 K。
+
+\subsection{讨论4.13：低温热测}
+Temperature plays a dominant role in the key design/operation issues—conductor,
+cryogenics, mechanical, protection, stability—of superconducting magnets, as may
+be inferred from Fig. 1.6. Temperature measurement is thus one of the requirements in the operation of and experiments on superconducting magnets. It is a
+large subject, with a book devoted to it [4.41] or a whole chapter [4.42]. Rubin
+presents, with nearly 500 papers cited, a thorough review of progress in cryogenic thermometry over the period 1982–1997 [4.43]. Here our coverage, at only
+an introductory level and extent, is limited to thermometers, not thermometry.
+Specifically, we discuss temperature sensors that are readily available and commonly used in superconducting magnets; not included here are instrumentation
+and calibration techniques, important topics in thermometry. Because we deal
+with sensors only for superconducting magnets and related experiments, our discussion on thermometers covers the temperature range 2–300 K.
+
+\textbf{A. Kelvin温标}
+
+In 1854 Kelvin proposed to take absolute zero as the starting point of a thermodynamic temperature scale. In 1954, the kelvin (K) was adopted as the unit of
+thermodynamic temperature, defined as 1/273.16 of water’s triple point temperature (0.0100$\circ C$). Accordingly, 0$\circ C$, water’s melting point on the Celsius scale, is
+equal to 273.15 K. Note that K stands by itself as the unit of temperature scale:
+it is thus not 4.2◦K or 4.2 degrees Kelvin, but 4.2 K or 4.2 kelvins.
+
+\textbf{B. 需求}
+
+As for any sensor, there are a number of requirements for a temperature sensor.
+These (listed here in no particular order of importance) with the desired quality
+given in parentheses, include: 1) signal level (high); 2) sensitivity (high); 3) response time (fast, to detect transitory events); 4) size (small); 5) magnetic field
+effect (minimal); 6) DC offset (zero); and 7) cost (low). Also desirable are reproducibility, stability, and linearity. Although every sensor is a linear function of any
+variable over a small range, clearly it cannot be expected to remain linear over an
+arbitrarily large range. With the proliferation of computer-based data acquisition
+techniques, linearity is not as pressing as it once was.
+
+\textbf{C. 温度计类型}
+
+Three types of thermometers are used in superconducting magnets and related
+experiments: 1) diodes; 2) resistors; and 3) thermocouples. Gas and vapor pressure
+thermometers, once quite common, particularly in the laboratory setup, are rarely
+used now. Each of the three types of thermometers is described briefly below.
+
+\textbf{二极管测温} The junction voltage of a semiconductor device, such as
+a diode, forward-biased at a constant current, increases with decreasing temperature. Most widely used diode thermometers are based on Si and GaAlAs junctions;
+many commercial thermometers, both calibrated and uncalibrated, are available.
+Calibrated versions are as little as $\sim 1/2$ (some Si diodes) or as much as$\sim 4$ times
+more expensive than uncalibrated versions, the cost differential dictated chiefly by
+the sensor’s operating temperature range.
+
+\textbf{电阻测温}Resistance thermometers are available with either
+temperature coefficient sign: negative if based on semiconductors and positive if
+based on metals (generally pure to maximize the sensor’s sensitivity, ohm/kelvin).
+
+The negative temperature coefficient sensors include germanium, carbon resistors,
+carbon-glass (primarily for use in magnetic fields), and ruthenium oxide. The
+positive temperature coefficient sensors include platinum, platinum alloys, and
+rhodium-iron. Becoming increasingly popular is the zirconium oxynitride thermometer under the name Cernox, manufactured by Lake Shore Cryotronics, Inc.
+Among metal-based sensors, the one based on pure platinum is the most prominent and everyone’s choice when highest-accuracy is required; indeed the standard
+platinum resistance thermometer defines the International Temperature Standard
+from 13.8033 K, the triple point of hydrogen, up to well beyond 300 K.
+
+\textbf{温度谱}
+
+Figure 4.19 shows a temperature spectrum over the range from 100 picokelvins
+(100 pK) to 1 gigakelvin (1 GK). Note that superconducting magnets operate over
+a temperature span that extends less than 2 log scales, 1 K–100 K.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt4/figs/fig4.19.eps}
+	\caption{涵盖19个数量级的温度谱。}
+\end{figure}
+
+\textbf{热电偶} For cryogenic applications that tolerate uncertainties of temperature up to 5\%—for example, 1 K at 20 K—thermocouples are widely used.
+This is chiefly because they can meet some of the requirements listed earlier—
+small size and fast response time—more readily than the diode and resistance
+thermometers. Also, thermocouples are the least expensive among the three types.
+
+\textbf{D. 几种热传感器的信号水平和敏感性}
+
+Table 4.11 presents approximate values of signal level (V ) and sensitivity ($\delta V/\delta T$)
+at selected temperatures in the 2–300 K range for six commonly used thermometers, two from each of the three types: diodes [4.44], resistances [4.44]; and thermocouples [4.45]. Note that these values are given here to demonstrate that both
+signal levels and sensitivities vary over a wide range among thermometers and as
+a “guide” in the selection process for appropriate sensors. Commercial sources of
+these sensors generally supply accurate “general” data for these sensors; each calibrated sensor is provided with its own specific data. Each thermometer in Table
+4.11 is briefly discussed below, including magnetic field effects.
+
+\textbf{额外评论，包括磁场效应}
+
+Diode Diode thermometers, such as silicon and GaAlAs, have the highest sensitivity among the three types over the entire temperature range of our interest.
+Also as may be deduced from Table 4.11, the sensor’s V (T) curve is quite linear,
+i.e., V decreasing roughly linearly with T, in the 50–300 K range. Also attractive is that for most applications in which temperature uncertainties up to 5\% are
+acceptable, uncalibrated sensors that rely only on the manufacturer’s standard calibration curve may be used. The only negative is its unsuitability in the presence
+of a magnetic field, particularly in the temperature range below 60 K [4.45].
+
+\textbf{GaAlAs} There are two important aspects of GaAlAs that are different from Si:
+1) greater nonlinearity of V (T); and 2) insensitivity to magnetic fields up to $\sim 5$ T.
+
+\textbf{Cernox} Although not as sensitive as diode thermometers, second to Si, Cernox
+is widely used. Unlike Si, it is quite insensitive to a magnetic field. Data of
+Lake Shore Cryotronics [4.44], the manufacturer of Cernox, show that at 20 K the
+sensor’s $\delta T/T$ uncertainty due to magnetic field is less than 0.2\% up to a field of
+20 T; the error increases with decreasing temperature, reaching $\sim 5$\% at 2 K.
+
+\textbf{Platinum} A platinum sensor is quite insensitive to magnetic field at temperatures above $\sim 40$ K: for example, at 40 K and 5 T, $\delta T/T$ is 1.5\%, which, at 80 K
+and 5 T, decreases by a factor of 10 [4.44].
+
+\textbf{Type E Thermocouple} Both Type E and Chromel-Au0.07\%Fe have the smallest signal levels and sensitivities compared with the other four sensors. Note that
+with the ice-point (0◦) reference, Type E, at 20 K, for example, has an offset voltage of ∼11 mV, while its sensitivity is only  $\sim 10\mu$V/K. However, its accuracy is
+much improved when only changes in temperature from a specific operating point
+are to be measured. Also, if temperature uncertainties up to $\sim 5$\% can be tolerated
+and many sensors are required, Type E is an excellent choice. Field sensitivity is
+quite modest, e.g., 2\% at 20 K and <1\% at 45 K, both in a field of 8 T [4.44].
+
+\textbf{AuFe(0.07\%)-Chromel} Among all thermocouples, chromel-AuFe(0.07\%) gives
+the highest sensitivity, and thus is most suitable, at temperatures below $\sim 20$ K. Its
+V (T) values, however, can easily deviate from the published values [4.45] when the
+AuFe(0.07\%) wire is strained—it must be handled very carefully. Its sensitivity
+to magnetic field is roughly one order of magnitude greater than that of Type E.
+
+\textbf{电容式热传感器}
+
+Though not included in the above discussion, capacitance thermometers such as
+strontium titanate sensors are used because of their very low magnetic field dependence. Several other types based on glass or plastic materials are popular for
+temperatures below 1 K.
+
+\subsection{讨论4.14：气冷铜电流引线}
+For a superconducting magnet immersed in a bath of liquid helium at 4.2 K, a
+vapor-cooled copper current lead can be a large heat load on the system cryogenics.
+The basic design concept for an optimum vapor-cooled copper lead is to make the
+Joule heating and conduction heating about equal and to remove the heat by
+funneling cold helium vapor through the lead. Work on vapor-cooled leads began
+in the 1960s and continues [4.47–4.52]. Vapor-cooled leads are now commercially
+available in the current range 100 A–75 kA. Recently, it has reached the 100-kA
+level [4.53]. Here we present analytical expressions for key parameters of a lead.
+
+\textbf{A. 功率密度方程}
+
+The total power $Q_{in}$ flowing into and generated within a differential volume$A\Delta z$
+of a vapor-cooled lead (Fig. 4.20) carrying the lead’s rated current $I_0$ is given by:
+\begin{equation}% 4.25
+Q_{in}=[Ak(T)\frac{dT}{dz}]_{z+\Delta z}+\dot{m}_Ic_p(T)T+\frac{\rho(T)I_{o}^{2}}{A}\Delta z
+\end{equation}
+
+
+\begin{equation}% 4.26
+Q_{out}=[Ak(T)\frac{dT}{dz}]_z+\dot{m}_Ic_p(T)(T+\Delta T)
+\end{equation}
+\begin{equation}% 4.27
+[Ak(T)\frac{dT}{dz}]_{z+\Delta z}-[Ak(T)\frac{dT}{dz}]_z-\dot{m}_Ic_p(T)\Delta T+\frac{\rho(T)I_{o}^{2}}{A}\Delta z=0
+\end{equation}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt4/figs/fig4.20.eps}
+	\caption{气冷引线的体积微元热平衡。}
+\end{figure}
+
+\begin{equation}% 4.28
+\frac{d[Ak(T)\frac{dT}{dz}]}{dz}-\dot{m}_Ic_p(T)\frac{dT}{dz}+\frac{\rho(T)I_{o}^{2}}{A}=0
+\end{equation}
+
+\textbf{B. 冷端热输入\&蒸发率}
+
+\begin{equation}% 4.29a
+-\dot{m}_Ic_{p0}\frac{dT}{dz}\mid_{z=0}+\frac{\rho(T)I_{o}^{2}}{A}\simeq0
+\end{equation}
+\begin{equation}% 4.29b
+\frac{dT}{dz}\mid_{z=0}\simeq\frac{\rho_0I_{o}^{2}}{A\dot{m}_Ic_{p0}}
+\end{equation}
+\begin{equation}% 4.30
+Q_{I_o}=Ak(T_0)\frac{dT}{dz}\mid_{z=0}=\frac{k_0\rho_0I_{0}^{2}}{\dot{m}_Ic_{p0}}
+\end{equation}
+\begin{equation}% 4.31a
+\dot{m}_I=\frac{Q_{I_o}}{h_L}
+\end{equation}
+\begin{equation}% 4.31b
+\dot{m}_I=I_o\sqrt{\frac{k_0\rho_0}{c_{p0}h_L}}
+\end{equation}
+\begin{equation}% 4.32a
+\frac{Q_{I_o}}{I_o}=\sqrt{\frac{h_Lk_0\rho_0}{c_{p0}}}
+\end{equation}
+\begin{equation}% 4.32b
+\frac{Q_{I_o}}{I_o}\simeq\sqrt{\frac{(20.7\times10^3J/kg)(600W/mK)(2.5\times10^{-10}\Omega m)}{5.26\times10^3J/kgK}}
+=7.7\times 10^{-4}W/A=0.77mW/A~1mW/A
+\end{equation}
+
+\textbf{C. 优化电流引线参数}
+
+\begin{equation}% 4.33
+\dot{m}_Ic_p(T)\frac{dT}{dz}+\frac{\rho(T)I_{o}^{2}}{A}=0
+\end{equation}
+\begin{equation}% 4.34a
+\int_{T_o}^{T_i}\frac{dT}{\rho(T)}=\int_{0}^{\ell}\frac{I_{o}^{2}dz}{A\dot{m}_I\tilde{c}_p}=\frac{I_{o}^{2}\ell}{A\dot{m}_I\tilde{c}_p}
+\end{equation}
+\begin{equation}% 4.34b
+\int_{T_o}^{T_i}\frac{dT}{\rho(T)}\simeq1.2\times10^{11}K\Omega m
+\end{equation}
+\begin{equation}% 4.34c
+\int_{T_o}^{T_i}\frac{dT}{\rho(T)}\simeq(\frac{I_{o}^{2}\ell}{Ac_{p0}})\frac{1}{I_0}\sqrt{\frac{c_{p0}h_L}{k_0\rho_0}}
+\end{equation}
+\begin{equation}% 4.35a
+(\frac{I_o\ell}{A})_{ot} \equiv \zeta_o\simeq[\int_{T_0}^{T_i}\frac{dT}{\rho_(T)}]\sqrt{\frac{c_{p0}k_0 \rho_0}{h_L}}
+\end{equation}
+
+
+\begin{equation}% 4.35b
+(\frac{I_o\ell}{A}_{ot})\simeq2.3\times10^7\ \mathrm{A/m}
+\end{equation}
+
+\textbf{D. 静态热输入}
+
+\begin{equation}% 4.36
+A\tilde{k}\frac{d^2T}{dz^2}-\dot{m}_0\tilde{c}_p\frac{dT}{dz}=0
+\end{equation}
+\begin{equation}% 4.37
+\tilde{k}=\frac{1}{T_\ell-T_0}\int_{T_0}^{T_\ell}k(T)dT
+\end{equation}
+\begin{equation}% 4.38a
+T(z)=T_0+\frac{h_L}{\tilde{c}_p}[\exp(\frac{\dot{m}_0\tilde{c}_pz}{A\tilde{k}})-1]
+\end{equation}
+\begin{equation}% 4.38b
+T(\ell)\equiv T_\ell=T_0+\frac{h_L}{\tilde{c}_p}[\exp(\frac{\dot{m}_0\tilde{c}_p\ell}{A\tilde{k}})-1]
+\end{equation}
+\begin{equation}% 4.39a
+\frac{\dot{m}_0\tilde{c}_p\ell}{A\tilde{k}}=\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]
+\end{equation}
+\begin{equation}% 4.39b
+\dot{m}_0=\frac{\tilde{k}}{\tilde{c}_p}(\frac{A}{\ell})\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]
+\end{equation}
+\begin{equation}% 4.40a
+Q_0=\frac{\tilde{k}h_L}{\tilde{c}_p}(\frac{A}{\ell})\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]
+\end{equation}
+\begin{equation}% 4.40b
+Q_0=\frac{\tilde{k}h_L}{\tilde{c}_p}(\frac{I_o}{\zeta_o})\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]
+\end{equation}
+\begin{equation}% 4.41
+\frac{Q_0}{Q_{I_o}}\frac{\tilde{k}}{\tilde{c}_p\zeta_o}\sqrt{\frac{h_Lc_{p0}}{k_0p_0}}\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]
+\end{equation}
+\begin{equation}% 4.42
+\frac{Q_0}{Q_{I_o}}\simeq0.69
+\end{equation}
+
+\textbf{E. 优化电流引线的压降}
+	
+\begin{equation}% 4.43a
+V_o=\frac{I_o}{A}\int_{0}^{\ell}\rho_{cu}dz
+\end{equation}
+\begin{equation}% 4.43b
+V_o=\tilde{\rho}_{cu}(\frac{I_o\ell}{A})_{ot}=\tilde{\rho}_{cu}\zeta_o
+\end{equation}
+\begin{equation}% 4.44
+\tilde{\rho}_{cu}=\frac{1}{\ell}\int_{0}^{\ell}\rho_{cu}dz\simeq\frac{1}{T_\ell-T_0}\int_{T_0}^{T_\ell}\rho_{cu}(T)dT
+\end{equation}
+\begin{equation}% 4.45
+V_o\simeq2.3\times10^7\tilde{\rho}_{cu}\ \mathrm{V}
+\end{equation}
+
+\textbf{F. 流体阻塞端的热负荷}
+
+\begin{equation}% 4.46
+AC_{cu}(T)\frac{dT}{dt}=\frac{d}{dz}[Ak(T)\frac{dT}{dz}]-\dot{m}_Ic_p(T)\frac{dT}{dz}+\frac{\rho_{cu}(T)}{A}I_{o}^{2}
+\end{equation}
+\begin{equation}% 4.47
+AC_{cu}(T)\frac{dT}{dt}=\frac{\rho_{cu}(T)}{A}I_{o}^{2}
+\end{equation}
+\begin{equation}% 4.48
+C_{cu}(T)\frac{dT}{dt}\frac{\rho_{cu}(T)\zeta_{o}^{2}}{\ell^2}
+\end{equation}
+\begin{equation}% 4.49
+\frac{dT}{dt}=\frac{\rho_o\zeta_{o}^{2}}{C_o\ell^2}+\frac{\gamma_{cu}\zeta_{o}^{2}}{C_o\ell^2}T=\frac{\rho_o}{\gamma_{cu}\tau_\ell}+\frac{T}{\tau_\ell}
+\end{equation}
+\begin{equation}% 4.50
+\tau_\ell=\frac{C_o\ell^2}{\gamma_{cu}\zeta_{o}^{2}}
+\end{equation}
+\begin{equation}% 4.51
+T(t)=Ke^{t/\tau_\ell}-\frac{\rho_o}{\gamma_{cu}}
+\end{equation}
+\begin{equation}
+\tau_\ell=\frac{(3.5\times10^6\ \mathrm{J/m^3K})(1\ \mathrm{m})^2}{(68\times10^{-12}\ \mathrm{\Omega m/K})(2.5\times10^7\ \mathrm{A/m})^2}\sim90\ \mathrm{s}
+\end{equation}
+
+
+
+\subsection{讨论4.15：干式引线——正常金属和高温超导体}
+
+
+\begin{equation}% 4.52
+A\tilde{k}\frac{d^2T}{dz^2}+\frac{\tilde{\rho}I_{o}^{2}}{A}=0
+\end{equation}
+\begin{equation}% 4.53
+Q_{I_o}=A\tilde{k}\frac{dT}{dz}\mid_{z=0}=\tilde{k}(T_\ell-T_0)(\frac{A}{\ell})+\frac{\tilde{\rho}I_{o}^{2}}{2}(\frac{\ell}{A})
+\end{equation}
+\begin{equation}% 4.12
+(\frac{I_o\ell}{A})_{dr}=\sqrt{\frac{2\tilde{k}(T_\ell-T_0)}{\tilde{\rho}}}
+\end{equation}
+\begin{equation}% 4.54
+[Q_{I_o}]_{dr}=I_o\sqrt{2\tilde{k}\tilde{\rho}(T_\ell-T_0)}
+\end{equation}
+\begin{equation}% 4.55
+[Q_{I_hts}]_{dr}=k_{hts}A_{hts}\frac{(T_{\omega_{hts}}-T_0)}{\ell_{hts}}
+\end{equation}
 %
 %
 %
