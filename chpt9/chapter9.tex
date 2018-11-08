@@ -8,9 +8,172 @@
 
 
 
-
-
 \section*{例9.2A：串联混合磁体(SCH)}
+
+
+\subsection*{Q/A 9.2A：SCH超导磁体}
+
+\begin{equation}% page548 第1个
+\lambda J_{op}=\frac{NI}{2b(a_2-a_1)}
+\end{equation}
+\begin{equation}% page548 第2个
+=\frac{756(20\times10^3\ \mathrm{A})}{(942.0\ \mathrm{mm})(610.1\ \mathrm{mm}-305.0\ \mathrm{mm})}=52.6\ \mathrm{A/mm^2}
+\end{equation}
+\begin{equation}% page548 第3个
+B_{z}(0,0)=\frac{\mu_oNI}{2a_1(\alpha-1)}\ln(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}})
+\end{equation}
+\begin{equation}% page548 第4个
+B_z(0,0)=\frac{(4\pi\times10^{-7}\ \mathrm{H/m})(756)(20\times10^3\ \mathrm{A})}{(0.610\ \mathrm{m})(2.00-1)}\ln(\frac{2.00+\sqrt{(2.00)^2+(1.544)^2}}{1+\sqrt{1+(1.544)^2}})
+\end{equation}
+\begin{equation}% page548 第4个
+=14.52\ \mathrm{T}
+\end{equation}
+\begin{equation}% page548 第5个
+L=\mu_oa_1N^2\ \mathcal{L}(\alpha,\beta)
+\end{equation}
+\begin{equation}% page548 第6个
+L_s=(4\pi\times10^{-7}\ \mathrm{H/m})(0.305\ \mathrm{m})(756)^2(1.2)=263\ \mathrm{mH}
+\end{equation}
+\begin{equation}% page548 第7个
+E_{ms}=\frac{1}{2}(L_s+M_{sr})I_{op}^2
+\end{equation}
+\begin{equation}% page548 第8个
+=\frac{1}{2}(260\ \mathrm{mH}+17\ \mathrm{mH})(20\ \mathrm{kA})^2=55.4\ \mathrm{MJ}
+\end{equation}
+\begin{equation}% page549 第1个
+V_S=L_s\frac{dI_s}{dt}+M_{sr}\frac{dI_r}{dt}+M_{sr}\frac{dI_s}{dt}+L_r\frac{dI_r}{dt}+R_rL_r
+\end{equation}
+\begin{equation}% page549 第2个
+=(L_s+2M_{sr}+L_r)\frac{dI_s}{dt}+R_rI_S
+\end{equation}
+\begin{equation}% page549 第3个
+V_S=(260\ \mathrm{mH}+2\times17\ \mathrm{mH}+10\ \mathrm{mH})(400\ \mathrm{A/s})+(30\ \mathrm{m\Omega})(10\ \mathrm{kA})=421.6\ \mathrm{kA}
+\end{equation}
+\begin{equation}% page549 第4个
+V_S=(L_s+2M_{sr}+L_r)\frac{dI_S}{dt}+R_rI_S
+\end{equation}
+\begin{equation}% page549 第5个
+=421.6\ \mathrm{V}
+\end{equation}
+\begin{equation}% page550 第1个
+V_{ind}=(L_s+2M_{sr}+L_r)\frac{dI_S}{dt}
+\end{equation}
+\begin{equation}% page550 第2个
+V_{ind}=(260\ \mathrm{mH}+2\times17\ \mathrm{mH}+10\ \mathrm{mH})(400\ \mathrm{A/s})=121.6\ \mathrm{V}
+\end{equation}
+\begin{equation}% page550 第3个
+m_{he}=\varrho_{he}A_{cl}v_{he}
+\end{equation}
+\begin{equation}% page550 第4个
+v_{he}=\frac{m_{he}}{\varrho_{he}A_{cd}}
+\end{equation}
+\begin{equation}% page550 第5个
+=\frac{(5\ \mathrm{g/s})}{(0.132\ \mathrm{g/cm^3})(0.760\ \mathrm{cm^2})}\simeq50\ \mathrm{cm/s}
+\end{equation}
+\begin{equation}% page550 第6个
+R_e=\frac{\varrho_{he}v_{he}D_{he}}{\nu_{he}}
+\end{equation}
+\begin{equation}% page550 第7个
+\simeq\frac{(0.132\ \mathrm{g/cm^3})(50\ \mathrm{cm/s})(1\ \mathrm{cm})}{35.9\times10^{-6}\ \mathrm{g/cm\ s}}\simeq1.8\times10^5
+\end{equation}
+\begin{equation}% page551 第1个
+I_{lim}=\sqrt{\frac{A_mf_p\ \mathcal{P}_Dh_{he}(T_c-T_{op})}{\rho_m}}
+\end{equation}
+\begin{equation}% page551 第2个
+I_{lim}=\sqrt{\frac{(57.4\times10^{-2}\ \mathrm{cm^2})(3\ \mathrm{cm})(0.42\ \mathrm{W/cm^2K})(5.8\ \mathrm{K})}{2\times10^{-8}\ \mathrm{\Omega cm}}}\simeq 14.4\ \mathrm{kA}<20\ \mathrm{kA}
+\end{equation}
+\begin{equation}% page551 第3个
+L_s\frac{dI_s(t)}{t}+M_{sr}\frac{dI_r(t)}{dt}+R_DI_s(t)=0
+\end{equation}
+\begin{equation}% page551 第4个
+M_{sr}\frac{dI_s(t)}{dt}+L_r\frac{dI_r(t)}{dt}+R_rI_r(T)=0
+\end{equation}
+\begin{equation}% page551 第5个
+L_s\frac{dI_s(t)}{dt}+R_DI_s(t)=0
+\end{equation}
+\begin{equation}% page551 第6个
+L_r\frac{dI_r(t)}{dt}+R_rI_r(t)=0
+\end{equation}
+\begin{equation}% page551 第7个
+I_s(t)=I_oe^{-tR_D/L_s}
+\end{equation}
+\begin{equation}% page551 第8个
+I_r(t)=I_oe^{-tR_r/L_r}
+\end{equation}
+\begin{equation}% page552 第1个
+L_s\frac{dI_s(t)}{dt}=-R_DI_s(t)-M_{sr}\frac{dI_r(t)}{dt}
+\end{equation}
+\begin{equation}% page552 第2个
+E_s=R_D\int_{0}^{\infty}I_s^2(t)dt
+\end{equation}
+\begin{equation}% page552 第3个
+E_s=R_D\int_{0}^{\infty}I_{o}^2e^{-2t/\tau_{eff}}dt=\frac{R_DI_o^2\tau_{eff}}{2}
+\end{equation}
+\begin{equation}% page552 第4个
+\tau_{eff}=\frac{2E_s}{R_DI_o^2}=\frac{2(55.4\times10^6\ \mathrm{J})}{(0.1\ \mathrm{\Omega})(2\times10^4\ \mathrm{A})^2}=2.77\ \mathrm{s}
+\end{equation}
+\begin{equation}% page553 第1个
+e_{hy}=\frac{1}{2}\mu_oH_pH_m(1+i)^2\     \ [H_m\geq H_p(1-i)]
+\end{equation}
+\begin{equation}% page553 第2个
+e_{hy1}\simeq\frac{2d_f}{3\pi}\int_{0}^{B_m}J_c(B,t,\epsilon)dB
+\end{equation}
+\begin{equation}% page553 第3个
+\tilde{J}_c(B,4.5K,\epsilon=0)=\tilde{J}_c(0,4.5K)\frac{b_o}{b_o+B}
+\end{equation}
+\begin{equation}% page553 第4个
+\int_{0}^{B_m}\tilde{J}_c(B,4.5\ \mathrm{K})dB=\tilde{J}(0,4.5\ \mathrm{K})b_o\int_{0}^{B_m}\frac{dB}{b_o+B}=\tilde{J}_c(0,4.5\ \mathrm{K})b_o\ln(\frac{b_o+B_m}{b_o})
+\end{equation}
+\begin{equation}% page553 第5个
+=(42\times10^9\ \mathrm{J/m^2})(1\ \mathrm{T})\ln15=113.7\times10^9\ \mathrm{J/m^4}
+\end{equation}
+\begin{equation}% page553 第6个
+e_{hy1}\simeq\frac{2(42\times10^{-6}\ \mathrm{m})}{3\pi}(113.7\times10^9\ \mathrm{J/m^4})\simeq1014\ \mathrm{kJ/m^3}
+\end{equation}
+\begin{equation}% page554 第1个
+E_{hy1}=e_{hy}(A_{sc}+A_{\bar{m}})\ell_1
+\end{equation}
+\begin{equation}% page554 第2个
+\ell_1\simeq2\pi(0.305\ \mathrm{m}+0.017\ \mathrm{m})42\simeq85\ \mathrm{m}
+\end{equation}
+\begin{equation}% page554 第3个
+E_{hy1}=(1014\times10^3\ \mathrm{J/m^3})(40.2\times10^{-6}\ \mathrm{m^2})(85\ \mathrm{m})\simeq 3.5\ \mathrm{kJ}
+\end{equation}
+\begin{equation}% page554 第4个
+\frac{dH_{he}}{dt}=C_{he}m_{he}\Delta\tilde{T}_{he}
+\end{equation}
+\begin{equation}% page554 第5个
+=(4.28\ \mathrm{J/gK})(5\ \mathrm{g/s})(4.0\ \mathrm{K})\simeq86\ \mathrm{W}
+\end{equation}
+\begin{equation}% page554 第6个
+P_{hy1_{mx}}\simeq\frac{E_{hy1}}{\Delta t_{mn}}=86\ \mathrm{W}
+\end{equation}
+\begin{equation}% page554 第7个
+\Delta t{mn}=\frac{E_{hy1}}{P_{hy1_{mx}}}\simeq\frac{3.5\ \mathrm{kJ}}{86\ \mathrm{W}}\simeq41\ \mathrm{s}
+\end{equation}
+\begin{equation}% page554 第8个
+(\frac{dI_s}{dt})_{mx}=\frac{\Delta I_s}{\Delta t_{mn}}\simeq\frac{20\times10^3\ \mathrm{A}}{41\ \mathrm{s}}\simeq490\ \mathrm{A/s}
+\end{equation}
+\begin{equation}% page555 第1个
+e_{cp}=2\mu_oH_{m}^2[1+\frac{1}{4}(\frac{\pi D_{mf}}{\ell_p})^2]\Gamma
+\end{equation}
+\begin{equation}% page555 第2个
+\Gamma\simeq\frac{4\tau_{cp}}{\tau_m}\   \  (\tau_m\gg \tau_{cp})
+\end{equation}
+\begin{equation}% page555 第3个
+e_{cp}\simeq\frac{1}{2}(2\frac{B_m^2}{\mu_o})\Gamma
+\end{equation}
+\begin{equation}% page555 第4个
+=\frac{4B_m^2\tau_{cp}}{\mu_o\tau_m}
+\end{equation}
+\begin{equation}% page555 第5个
+e_{cp}=\frac{4(14\ \mathrm{T})^2(30\times10^{-3}\ \mathrm{s})}{(4\pi\times10^{-7}\ \mathrm{T})(50\ \mathrm{s})}\simeq357\ \mathrm{kJ/m^3}
+\end{equation}
+\begin{equation}% page556 第1个
+Z(T_f,T_i)=(\frac{A_m}{A_{cd}})\int_{0}^{\infty}J_{m_o}^2e^{-2t/\tau_{dg}}dt=(\frac{A_m}{A_{cd}})J_{m_o}^2\times\frac{1}{2}\tau_{dg}
+\end{equation}
+
+
 
 
 
@@ -18,6 +181,8 @@
 \section*{例9.2B：钢板上的超导线圈}
 
 
+
+\subsection{Q/A 9.2B：钢板上的超导线圈}
 
 
 
