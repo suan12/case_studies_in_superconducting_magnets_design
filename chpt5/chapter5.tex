@@ -548,7 +548,149 @@ a_{c}=\sqrt{\frac{3\tilde{C}_{s}(T_{c}-T_{op})}{\mu_{o}J_{c_{o}}^{2}}}\quad(5.40
 
 
 \subsection{讨论5.5：磁扩散和热扩散}
-
+\begin{equation}%page339 第1个
+H_{s1}(x)=H_{e}+J_{c}(x-a)\quad(S2.1a)
+\end{equation}
+\begin{equation}%page339 第2个
+H_{s2}(x)=H_{e}+(J_{c}-| \Delta J_{c}|)(x-a)(S2.1b)
+\end{equation}
+\begin{equation}%page339 第3个
+\oint_{C}\vec{E}\cdot d\vec{s}=-\mu_{o}\int_{S}\frac{\triangle H_{s}(x)\vec{\imath}_{y}\cdot d\vec{A}}{\Delta t}
+\end{equation}
+\begin{equation}%page339 第4个
+\Delta H_{S}(x)=H_{s2}(x)-H_{s1}(x)\\
+=|\Delta J_{c}|(a-x)\qquad(S2.3)
+\end{equation}
+\begin{equation}%page339 第5个
+E_{z}(x)=\mu_{o}\frac{|\Delta J_{c}|}{\Delta t}\int_{0}^{x}(a-x)dx\\
+\mu_{o}\frac{|\Delta J_{c}|}{\Delta t}(ax-\frac{x^{2}}{2})\qquad(S2.4)
+\end{equation}
+\begin{equation}%page339 第6个
+\varepsilon_{\phi}=\int_{0}^{a}p(x)\Delta tdx\\
+=\mu_{o}J_{c}|\Delta J_{c}|\int_{0}^{a}(ax-\frac{x^{2}}{2})dx=\frac{\mu_{o}J_{c}|\Delta J_{c}|a^{3}}{3}\quad(S2.5)
+\end{equation}
+\begin{equation}%page339 第7个
+e_{\phi}=\frac{\mu_{o}J_{c}|\Delta J_{c}|a^{2}}{3}\qquad(5.37)
+\end{equation}
+\begin{equation}%page340 第1个
+\int S_{x}(a)dt=\Delta E_{m}+\varepsilon_{\phi}\qquad(S2.6)
+\end{equation}
+\begin{equation}%page340 第2个
+E_{z}(a)=\mu_{o}\frac{|\Delta J_{c}|a^{2}}{2\Delta t}\qquad(S2.7)
+\end{equation}
+\begin{equation}%page340 第3个
+\vec{S}(a)=\mu_{o}\frac{|\Delta J_{c}|a^{2}}{2\Delta t}\vec{\imath}_{z}\times H_{e}\vec{\imath}_{y}=-\mu_{o}\frac{H_{e}|\Delta J_{c}|a^{2}}{2\Delta t}\quad(S2.8)
+\end{equation}
+\begin{equation}%page340 第4个
+\int S_{x}(a)dt=\mu_{o}\frac{H_{e}|\Delta J_{c}|a^{2}}{2}\qquad(S2.9)
+\end{equation}
+\begin{equation}%page340 第5个
+\Delta E_{m}=\frac{\mu_{o}}{2}\int_{0}^{a}[H_{s2}^{a}(x)-H_{s1}^{2}(x)]dx\qquad(S2.10)\\
+=\frac{\mu_{o}}{2}\int_{0}^{a}\{[H_{e}+(J_{c}-|\Delta J_{c}|)(x-a)]^{2}-[H_{e}+J_{c}(x-a)]^{2}\}dx
+=\frac{\mu_{o}}{2}\int_{0}^{a}[-2H_{e}|\Delta J_{c}|(x-a)-2J_{C}|\Delta J_{c}|(x-a)^{2}+|\Delta J_{c}|^{2}(x-a)^{2}]dx
+\end{equation}
+\begin{equation}%page340 第6个
+\Delta E_{m}=\mu_{o}(\frac{H_{e}|\Delta J_{c}|a^{2}}{2}-\frac{J_{c}|\Delta J_{c}|a^{3}}{3})\quad(S2.11)
+\end{equation}
+\begin{equation}%page340 第7个
+\varepsilon_{\phi}=\int S_{x}(a)dt-\Delta E_{m}\qquad(S2.12)
+\end{equation}
+\begin{equation}%page340 第8个
+\varepsilon_{\phi}=\mu_{o}\frac{H_{e}|\Delta J_{c}|a^{2}}{2}-\mu_{o}(\frac{H_{e}|\Delta J_{c}|a^{2}}{2}-\frac{J_{c}|\Delta J_{c}|a^{3}}{3})\\
+=\mu_{O}\frac{J_{c}|\Delta J_{c}|a^{3}}{3}\qquad(S2.13)
+\end{equation}
+\begin{equation}%page340 第9个
+e_{\phi}=\frac{              \varepsilon_{\phi}}{a}=\frac{\mu_{o}J_{c}|\Delta J_{c}|a^{2}}{3}\qquad(5.37)
+\end{equation}
+\begin{equation}%page341 第1个
+\Delta J_{c}=-J_{c_{c}}(\frac{\Delta T}{T_{c}-T_{op}})\qquad(5.39)
+\end{equation}
+\begin{equation}%page341 第2个
+|\Delta J_{c}|=\frac{J_{c_{o}}\Delta T}{T_{c}-T_{op}}\qquad(S2.14)
+\end{equation}
+\begin{equation}%page341 第3个
+e_{\phi}=\frac{\mu_{o}J_{c_{o}}^{2}\Delta T a^{2}}{3(T_{c}-T_{op})}\qquad(S2.15)
+\end{equation}
+\begin{equation}%page341 第4个
+\Delta T_{s}=\frac{e_{\phi}}{\tilde{C}_{s}}>0\qquad(S2.16)
+\end{equation}
+\begin{equation}%page341 第5个
+\frac{\Delta T_{s}}{\Delta T}<\frac{\mu_{o}J_{c_{o}}^{2}a^{2}}{3\tilde{C}_{s}(T_{c}-T_{op})}\qquad(S2.17)
+\end{equation}
+\begin{equation}%page341 第6个
+a_{C}=\sqrt{\frac{3\tilde{C}_{s}(T_{c}-T_{op})}{\mu_{o}J_{c_{o}}^{2}}}\qquad(5.40)
+\end{equation}
+\begin{equation}%page342 第1个
+e_{\phi}=\frac{(\mu_{o}J_{p})^{2}}{6\mu_{o}}\qquad(5.41)
+\end{equation}
+\begin{equation}%page343 第1个
+\Delta H(x)=H_{p}\frac{(a-x)}{a}\qquad(S3.1)
+\end{equation}
+\begin{equation}%page343 第2个
+E(x)=\mu_{o}\frac{H_{p}}{\Delta t}\int_{0}^{x}\frac{a-x}{a}dx=\frac{\mu_{o}H_{p}}{a\Delta t}(ax-\frac{x^{2}}{2})\quad(S3.2)
+\end{equation}
+\begin{equation}%page343 第3个
+\vec{S}(a)=-\frac{\mu_{o}}{2\Delta t}H_{p}aH_{e}\vec{\imath}_{x}\qquad(S3.3)
+\end{equation}
+\begin{equation}%page343 第4个
+e_{s}=\frac{\int S_{x}(a)dt}{a}=\frac{\mu_{o}}{2}H_{p}H_{e}\qquad(S3.4)
+\end{equation}
+\begin{equation}%page343 第5个
+e_{m1}=\frac{\mu_{o}}{2a}\int_{0}^{a}[H_{e}+J_{c}(x-a)]^{2}dx\qquad(S3.5)
+\end{equation}
+\begin{equation}%page343 第6个
+=\frac{\mu_{o}}{2a}(H_{e}^{2}a-H_{e}J_{c}a^{2}+\frac{J_{c}^{2}a^{3}}{3})=\frac{\mu_{o}}{2}H_{e}^{2}-\frac{\mu_{o}}{2}H_{e}H_{p}+\frac{\mu_{o}}{6}H_{p}^{2}(S3.6)
+\end{equation}
+\begin{equation}%page343 第7个
+\Delta e_{m}=e_{m2}-e_{m1}=\frac{\mu_{o}}{2}H_{e}H_{p}-\frac{\mu_{o}}{6}H_{p}^{2}\qquad(S3.7)
+\end{equation}
+\begin{equation}%page343 第8个
+e_{\phi}=\frac{\mu_{o}}{2}H_{p}H_{e}-\frac{\mu_{o}}{2}H_{e}H_{p}+\frac{\mu_{o}}{6}H_{p}^{2}=\frac{\mu_{o}}{6}H_{p}^{2}\quad(S3.8)
+\end{equation}
+\begin{equation}%page343 第9个
+e_{\phi}=\frac{(\mu_{o}H_{p})^{2}}{6\mu_{o}}\qquad(5.41)
+\end{equation}
+\begin{equation}%page343 第10个
+e_{\phi}\simeq\frac{(0.5T)^{2}}{(6)(4\pi\times10^{-7}\ \mathrm{H/m})}\simeq33\times10^{3}\ \mathrm{J/m^{3}}
+\end{equation}
+\begin{equation}%page345 第1个
+E_{1x}=\mu_{o}\dot{H}_{0z}y\qquad(5.42)
+\end{equation}
+\begin{equation}%page345 第2个
+I_{cp}=\int_{0}^{\ell}J_{cu}dy=\frac{\mu_{o}\dot{H}_{0z}}{\rho_{cu}}\int_{0}^{\ell}ydy=\frac{\mu_{o}\dot{H}_{0z}\ell^{2}}{2\rho_{cu}}\quad(5.43)
+\end{equation}
+\begin{equation}%page345 第3个
+\ell_{c}=\sqrt{\frac{2\rho_{cu}J_{c}d_{f}}{\mu_{o}\dot{H}_{0z}}}\qquad(5.44)
+\end{equation}
+\begin{equation}%page346 第1个
+\frac{\partial E_{1y}}{\partial x}-\frac{\partial E_{1x}}{\partial y}=-\mu_{o}\dot{H}_{0z}\qquad(S4.1)
+\end{equation}
+\begin{equation}%page346 第2个
+E_{1x}=\mu_{o}\dot{H}_{0z}y\qquad(5.42)
+\end{equation}
+\begin{equation}%page346 第3个
+I_{cp}=\int_{0}^{\ell}J_{cu}dy=\frac{\mu_{o}\dot{H}_{0z}}{\rho_{cu}}\int_{0}^{\ell}ydy=\frac{\mu_{o}\dot{H}_{0z}\ell^{2}}{2\rho_{cu}}\quad(5.43)
+\end{equation}
+\begin{equation}%page346 第4个
+\ell_{c}=\sqrt{\frac{2\rho_{cu}J_{c}d_{f}}{\mu_{o}\dot{H}_{0z}}}\qquad(5.44)
+\end{equation}
+\begin{equation}%page346 第5个
+N_{f}=\frac{4I_{c}}{\pi d_{f}^{2}J_{c}}=\frac{4(100A)}{\pi(0.2\times10^{-6}m)^{2}(2\times10^{9}A/m^{2})}\\
+=1.6\times10^{6}
+\end{equation}
+\begin{equation}%page348 第1个
+\ell_{p2}=2\sqrt{\frac{2\rho_{cu}J_{c}d_{f}}{\mu_{o}\dot{H}_{0z}}}\qquad(S5.1)
+\end{equation}
+\begin{equation}%page348 第2个
+\ell_{p2}=2\sqrt{\frac{(2)(2\\times10^{10}\ \mathrm{\Omega m})(4\times10^{4}\ \mathrm{A/m})}{0.09\ \mathrm{T/S}}}\\
+=2.7\times10^{-2}m=27mm
+\end{equation}
+\begin{equation}%page349 第1个
+e_{\phi}(T_{op})\geq h_{s}(T_{c})-h_{s}(T_{op})\qquad(5.45)
+\end{equation}
+\begin{equation}%page349 第2个
+a_{c}=\sqrt{\frac{6[h_{s}(T_{c})-h_{s}(T_{op})]}{\mu_{o}J_{c}^{2}(T_{op})}}\qquad(5.46)8t, 
+\end{equation}
 
 \subsection{问题5.2：磁通跳跃判据}
 
