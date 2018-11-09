@@ -152,17 +152,14 @@ R_{nz}=\frac{\rho_m(T_f)\ell_{nz}}{4A_m}
 J_m(t)=J_{m_o}e^{-t/(L/R_{nz})}
 \end{equation}
 
-\begin{equation}% 8.23a
-Z(T_f,T_i)=\left(\frac{A_m}{A_{cd}}\right)\int_{0}^{\infty}J_{m_o}^{2}e^{-2t/(L/R_{nz})}dt
-\end{equation}
 
-
-\begin{equation}% 8.23b 8.23c
-Z(T_f,T_i)=\frac{1}{2}\left(\frac{A_m}{A_{cd}}\right)J_{m_o}^{2}\left(\frac{L}{R_{nz}}\right) 
-=\frac{1}{2}\left(\frac{A_m}{A_{cd}}\right)J_{m_o}^{2}\tau_{dg}
-\end{equation}
-
-
+\begin{subequations}% 8.23a，b,c
+	\begin{align*}
+Z(T_f,T_i)&=\left(\frac{A_m}{A_{cd}}\right)\int_{0}^{\infty}J_{m_o}^{2}e^{-2t/(L/R_{nz})}dt\\
+Z(T_f,T_i)&=\frac{1}{2}\left(\frac{A_m}{A_{cd}}\right)J_{m_o}^{2}\left(\frac{L}{R_{nz}}\right) \\
+&=\frac{1}{2}\left(\frac{A_m}{A_{cd}}\right)J_{m_o}^{2}\tau_{dg}
+\end{align*}
+\end{subequations}
 
 \begin{equation}% 8.24
 \ell_{nz}=f_r\pi a_1(\alpha+1)N
@@ -183,49 +180,46 @@ N=\sqrt{\frac{L}{\mu_oa_1\ \mathcal{L}(\alpha,\beta)}}
 R_{nz}=f_r\frac{\pi(\alpha+1)\rho_m(T_f)}{4A_m}\sqrt{\frac{a_1L}{\mu_o\ \mathcal{L}(\alpha,\beta)}}
 \end{equation}
 
-
-\begin{equation}% 8.28a
-\tau_{dg}=\frac{L}{R_{nz}}=\frac{4A_m}{f_r\pi(\alpha+1)\rho_m(T_f)}\sqrt{\frac{\mu_o\ \mathcal{L}(\alpha,\beta)L}{a_1}}
-\end{equation}
-
-
-\begin{equation}% 8.28b
+\begin{subequations}% 8.28a，b
+	\begin{align*}
+\tau_{dg}&=\frac{L}{R_{nz}}=\frac{4A_m}{f_r\pi(\alpha+1)\rho_m(T_f)}\sqrt{\frac{\mu_o\ \mathcal{L}(\alpha,\beta)L}{a_1}}\\
 \tau_{dg}=\frac{4}{f_r\pi(\alpha+1)\rho_m(T_f)J_{m_o}}\sqrt{\frac{2\mu_o\ \mathcal{L}(\alpha,\beta)E_m}{a_1}}
-\end{equation}
-
+\end{align*}
+\end{subequations}
 
 \begin{equation}% 8.29
 \rho_m(T_f)Z(T_f,T_i)=\left(\frac{A_m}{A_{cd}}\right)\frac{2J_{m_o}}{f_r\pi(\alpha+1)}\sqrt{\frac{2\mu_o\ \mathcal{L}(\alpha,\beta)E_m}{a_1}}
 \end{equation}
 
-\begin{equation}% 8.30a
-J_{m_o}^{sh}=\frac{1}{2}\left(\frac{A_{cd}}{A_m}\right)f_r\pi(\alpha+1)\rho_m(T_f)Z(T_f,T_i)\sqrt{\frac{a_1}{2\mu_o\ \mathcal{L}(\alpha,\beta)E_m}}
-\end{equation}
-
-
-\begin{equation}% 8.30b
-J_{m_o}^{sh}(T_f,T_i)=\frac{1}{2}\left(\frac{A_{cd}}{A_m}\right)\frac{f_r\pi(\alpha+1)\rho_m(T_f)Z(T_f,T_i)}{\mu_o\ \mathcal{L}(\alpha,\beta)NI_{op}}
-\end{equation}
+\begin{subequations}% 8.30a，b
+	\begin{align*}
+J_{m_o}^{sh}&=\frac{1}{2}\left(\frac{A_{cd}}{A_m}\right)f_r\pi(\alpha+1)\rho_m(T_f)Z(T_f,T_i)\sqrt{\frac{a_1}{2\mu_o\ \mathcal{L}(\alpha,\beta)E_m}}\\
+J_{m_o}^{sh}(T_f,T_i)&=\frac{1}{2}\left(\frac{A_{cd}}{A_m}\right)\frac{f_r\pi(\alpha+1)\rho_m(T_f)Z(T_f,T_i)}{\mu_o\ \mathcal{L}(\alpha,\beta)NI_{op}}
+\end{align*}
+\end{subequations}
 
 
 \subsection{恒定电压模式下的绝热加热}
 
-\begin{equation}% 8.31a两个
-A_{cd}\ell_{cd}C_{cd}(T)\frac{dT}{dt}=\frac{V_{op}^{2}}{R_n(T)}=\frac{V_{op}^{2}A_m}{\rho_m(T)\ell_{cd}}
-C_m(T)\frac{dT}{dt}\simeq\left(\frac{A_m}{A_{cd}}\right)\frac{V_{op}^{2}}{\rho_m(T)\ell_{cd}^{2}}
-\end{equation}
-\begin{equation}% 8.31b
-\int_{T_i}^{T_f}C_m(T)\rho_m(T)dT=\left(\frac{A_m}{A_{cd}}\right)\frac{V_{op}^{2}}{\ell_{cd}^{2}}\tau_{ah}
-\end{equation}
-\begin{equation}% 8.32a
-Y(T_f,T_i)\equiv\int_{T_i}^{T_f}C_m(T)\rho_m(T)dT
-\end{equation}
-\begin{equation}% 8.32b
-Y(T_f,T_i)\simeq\tilde{\rho}_m[H_m(T_f)-H_m(T_i)]
-\end{equation}
-\begin{equation}% 8.32c
-Y(T_f,T_i)=Y(T_f)-Y(T_i)
-\end{equation}
+\begin{subequations}% 8.31a，b
+	\begin{align*}
+A_{cd}\ell_{cd}C_{cd}(T)\frac{dT}{dt}&=\frac{V_{op}^{2}}{R_n(T)}=\frac{V_{op}^{2}A_m}{\rho_m(T)\ell_{cd}}
+C_m(T)\frac{dT}{dt}\\\notag
+&\simeq\left(\frac{A_m}{A_{cd}}\right)\frac{V_{op}^{2}}{\rho_m(T)\ell_{cd}^{2}}\\
+\int_{T_i}^{T_f}C_m(T)\rho_m(T)dT&=\left(\frac{A_m}{A_{cd}}\right)\frac{V_{op}^{2}}{\ell_{cd}^{2}}\tau_{ah}
+\end{align*}
+\end{subequations}
+
+
+\begin{subequations}% 8.32a，b,c
+	\begin{align*}
+Y(T_f,T_i)&\equiv\int_{T_i}^{T_f}C_m(T)\rho_m(T)dT\\
+Y(T_f,T_i)&\simeq\tilde{\rho}_m[H_m(T_f)-H_m(T_i)]\\
+Y(T_f,T_i)&=Y(T_f)-Y(T_i)
+\end{align*}
+\end{subequations}
+
+
 \begin{equation}% 8.33
 Y(T_f,T_i)=\left(\frac{A_m}{A_{cd}}\right)\frac{V_{op}^{2}\tau_{ah}}{\ell_{cd}^{2}}
 \end{equation}
@@ -243,12 +237,15 @@ Y(T_f,T_i)=\left(\frac{A_m}{A_{cd}}\right)\frac{\mu_o\ \mathcal{L}(\alpha,\beta)
 
 \section{高电压}
 
-\begin{equation}% 8.37a
-V=L\frac{dI}{dt}
-\end{equation}
-\begin{equation}% 8.37b
-V=\frac{2E_m}{I_{o}^{2}}\left(\frac{\Delta I}{\Delta t}\right)\approx\frac{2E_m}{I_o\Delta t}
-\end{equation}
+
+\begin{subequations}% 8.37a，b
+	\begin{align*}
+V&=L\frac{dI}{dt}\\
+V&=\frac{2E_m}{I_{o}^{2}}\left(\frac{\Delta I}{\Delta t}\right)\approx\frac{2E_m}{I_o\Delta t}
+	\end{align*}
+\end{subequations}
+
+
 
 \subsection{电弧环境}
 
@@ -383,16 +380,19 @@ U_t=U_\ell\sqrt{\frac{1}{2}\left(\frac{\delta_{cd}}{\delta_i}\right)\frac{1}{k_m
 \begin{equation}% 8.59
 [a_1(\alpha-1)]_{ah}^{i}=\frac{Z(T_f,T_i)}{J_{m_o}C_m(\tilde{T})}\sqrt{\frac{\rho_m(\tilde{T})k_i(\tilde{T})\delta_{cd}}{2\delta_i(T_t-T_{op})}}
 \end{equation}
-\begin{equation}% 8.60a 8.60b 8.60c
-[a_1(\alpha-1)]_{ah}^{sh}=U_t\left(\frac{L}{R_{nz}}\right) 
-=\frac{J_{m_o}}{C_n(\tilde{T})}\sqrt{\frac{\rho_m(\tilde{T})k_i(\tilde{T})\delta_{cd}}{2\delta_i(T_t-T_{op})}}\left(\frac{L}{R_{nz}}\right)  
-=\frac{J_{m_o}}{C_n(\tilde{T})}\sqrt{\frac{\rho_m(\tilde{T})k_i(\tilde{T})\delta_{cd}}{2\delta_i(T_t-T_{op})}}\times 
-\frac{4A_m}{f_r\pi(\alpha+1)\rho_m(T_f)}\sqrt{\frac{\mu_o\mathcal{L}(\alpha,\beta)L}{a_1}}
-\end{equation}
-\begin{equation}% 8.60d
-[a_1(\alpha-1)]_{ah}^{sh}=\frac{1}{C_m(\tilde{T})}\sqrt{\frac{\rho_m(\tilde{T})k_i(\tilde{T})\delta_{cd}}{2\delta_i(T_t-T_{op})}}\times 
+
+
+\begin{subequations}% 8.60a 8.60b 8.60c
+	\begin{align*}
+[a_1(\alpha-1)]_{ah}^{sh}=U_t\left(\frac{L}{R_{nz}}\right) \\
+&=\frac{J_{m_o}}{C_n(\tilde{T})}\sqrt{\frac{\rho_m(\tilde{T})k_i(\tilde{T})\delta_{cd}}{2\delta_i(T_t-T_{op})}}\left(\frac{L}{R_{nz}}\right)  \\
+&=\frac{J_{m_o}}{C_n(\tilde{T})}\sqrt{\frac{\rho_m(\tilde{T})k_i(\tilde{T})\delta_{cd}}{2\delta_i(T_t-T_{op})}}\times 
+\frac{4A_m}{f_r\pi(\alpha+1)\rho_m(T_f)}\sqrt{\frac{\mu_o\mathcal{L}(\alpha,\beta)L}{a_1}}\\
+[a_1(\alpha-1)]_{ah}^{sh}&=\frac{1}{C_m(\tilde{T})}\sqrt{\frac{\rho_m(\tilde{T})k_i(\tilde{T})\delta_{cd}}{2\delta_i(T_t-T_{op})}}\times 
 \frac{4}{f_r\pi(\alpha+1)\rho_m(T_f)}\sqrt{\frac{2\mu_o\mathcal{L}(\alpha,\beta)E_m}{a_1}}
-\end{equation}
+\end{align*}
+\end{subequations}
+
 
 
 \section{孤立磁体的被动保护}
@@ -409,10 +409,13 @@ U_t=U_\ell\sqrt{\frac{1}{2}\left(\frac{\delta_{cd}}{\delta_i}\right)\frac{1}{k_m
 \begin{equation}% 8.63
 E_d=E_m+E_s-E_{R1}-E_{R2}
 \end{equation}
-\begin{equation}% page500第一个
-E_s=(100\ \mathrm{A})\int_{0}^{0.4\ \mathrm{s}}[V_1(t)+V_2(t)]dt+(10\ \mathrm{V})\int_{0.4\ \mathrm{s}}^{2\ \mathrm{s}}\left[I_1(t)+\frac{V_1(t)}{R_1}\right]dt 
-\simeq 200\ \mathrm{J}+650\ \mathrm{J}\simeq 850\ \mathrm{J}
-\end{equation}
+
+\begin{align*}% page500第一个
+E_s&=(100\ \mathrm{A})\int_{0}^{0.4\ \mathrm{s}}[V_1(t)+V_2(t)]dt+(10\ \mathrm{V})\int_{0.4\ \mathrm{s}}^{2\ \mathrm{s}}\left[I_1(t)+\frac{V_1(t)}{R_1}\right]dt \\
+&\simeq 200\ \mathrm{J}+650\ \mathrm{J}\simeq 850\ \mathrm{J}
+\end{align*}
+
+
 \begin{equation}% page500 第二个和第三个
 E_{R1}=\frac{1}{R_1}\int_{0}^{2\ \mathrm{s}}V_1(t)^2dt\simeq 50\ \mathrm{J} 
 E_{R2}=\frac{1}{R_2}\int_{0}^{2\ \mathrm{s}}V_2(t)^2dt\simeq 300\ \mathrm{J}
@@ -466,15 +469,22 @@ i_R(t)=\frac{V_{cl}(t)}{R_1+R_2}
 \begin{equation}% 8.67c
 V_{out}(t)=L_1\frac{dI(t)}{dt}+rI(t)-R_1i_R(t)
 \end{equation}
-\begin{equation}% 8.68
-V_{out}(t)=L_1\frac{dI(t)}{dt}+rI(t) 
--\frac{R_1}{R_1+R_2}\left[L_1\frac{dI(t)}{dt}+rI(t)+L_2\frac{dI(t)}{dt}\right] 
-=\left(\frac{R_2}{R_1+R_2}\right)L_1\frac{dI(t)}{dt} 
+
+
+\begin{align}% 8.68
+V_{out}(t)&=L_1\frac{dI(t)}{dt}+rI(t) 
+-\frac{R_1}{R_1+R_2}\left[L_1\frac{dI(t)}{dt}+rI(t)+L_2\frac{dI(t)}{dt}\right] \\\notag
+&=\left(\frac{R_2}{R_1+R_2}\right)L_1\frac{dI(t)}{dt} 
 -\left(\frac{R_1}{R_1+R_2}\right)L_2\frac{dI(t)}{dt}+\left(\frac{R_2}{R_1+R_2}\right)rI(t)
-\end{equation}
+\end{align}
+
+
+
 \begin{equation}% 8.69
 \left(\frac{R_2}{R_1+R_2}\right)L_1\frac{dI(t)}{dt}-\left(\frac{R_1}{R_1+R_2}\right)L_2\frac{dI(t)}{dt}=0
 \end{equation}
+
+
 \begin{equation}% 8.70
 V_{out}(t)=\left(\frac{R_2}{R_1+R_2}\right)rI(t)
 \end{equation}
@@ -489,26 +499,36 @@ V_{out}(t)=\left(\frac{R_2}{R_1+R_2}\right)rI(t)
 \end{equation}
 
 \subsubsection{问题8.1之解}
-\begin{equation}% page508 S1.1
-\Delta t_{\omega}^{I}\mid_{10\ \mathrm{K}}^{300\ \mathrm{K}}=\frac{\mathcal{V}_{cd}A_m}{\ell_{cd}I_{o}^{2}}\int_{10\ \mathrm{K}}^{300\ \mathrm{K}}\frac{C_{cu}(T)}{\rho_m{cu}(T)}dT 
-=\frac{\mathcal{V}_{cd}A_m}{\ell_{cd}I_{o}^{2}}Z(T_f=300\ \mathrm{K},T_i=10\ \mathrm{K})
-\end{equation}
-\begin{equation}% page508 S1.2
-\Delta t_{\omega}^{I}\mid_{10\mathrm{K}}^{300\mathrm{K}}=\frac{(0.4\ \mathrm{m^3})(1.5\times 10^{-5}\ \mathrm{m^2})(15.1\times 10^{16}\ \mathrm{A^2s/m^4})}{(1\times 10^4\ \mathrm{m})(25\ \mathrm{A})^2} 
-\simeq 1.45\times 10^5\ \mathrm{s}\simeq 40\ \mathrm{h}\simeq 1\frac{2}{3}\ \mathrm{days} 
-\end{equation}
-\begin{equation}% page508 S1.3
-\Delta t_{\omega}^{I}\mid_{10\mathrm{K}}^{300\mathrm{K}}=\frac{\mathcal{V}_{cd}\ell_{cd}}{A_mV_{o}^{2}}\int_{10\ \mathrm{K}}^{300\ \mathrm{K}}C_{cu}(T)\rho_m{cu}(T)dT 
-=\frac{\mathcal{V}_{cd}\ell_{cd}}{A_mV_{o}^{2}}Y(T_f=300\ \mathrm{K},T_i=10\ \mathrm{K})
-\end{equation}
-\begin{equation}% page508 S1.4
-\Delta t_{\omega}^{I}\mid_{10\mathrm{K}}^{300\mathrm{K}}=\frac{(0.4\ \mathrm{m^3})(1\times 10^4\ \mathrm{m})(7.25\ \mathrm{V^2s/m^2})}{(1.5\times 10^{-5}\ \mathrm{m^2})(25\ \mathrm{V})^2} 
-=3.1\times 10^6\ \mathrm{s}\simeq 860\ \mathrm{h}\simeq 36\ \mathrm{days} 
-\end{equation}
-\begin{equation}% page509 S1.5
-\Delta t_{\omega}^{I}\mid_{10\mathrm{K}}^{50\mathrm{K}}=\frac{(0.4\ \mathrm{m^3})(1.5\times 10^{-5}\ \mathrm{m^2})(4.5\times 10^{16}\ \mathrm{A^2s/m^4})}{(1\times 10^4\ \mathrm{m})(100\ \mathrm{A})^2} 
-=\simeq 2.7\times 10^3\ \mathrm{s}=45\ \mathrm{min}
-\end{equation}
+\begin{align*}% page508 S1.1
+\Delta t_{\omega}^{I}\mid_{10\ \mathrm{K}}^{300\ \mathrm{K}}&=\frac{\mathcal{V}_{cd}A_m}{\ell_{cd}I_{o}^{2}}\int_{10\ \mathrm{K}}^{300\ \mathrm{K}}\frac{C_{cu}(T)}{\rho_m{cu}(T)}dT \\
+&=\frac{\mathcal{V}_{cd}A_m}{\ell_{cd}I_{o}^{2}}Z(T_f=300\ \mathrm{K},T_i=10\ \mathrm{K})
+\end{align*}
+
+
+\begin{align*}% page508 S1.2
+\Delta t_{\omega}^{I}\mid_{10\mathrm{K}}^{300\mathrm{K}}&=\frac{(0.4\ \mathrm{m^3})(1.5\times 10^{-5}\ \mathrm{m^2})(15.1\times 10^{16}\ \mathrm{A^2s/m^4})}{(1\times 10^4\ \mathrm{m})(25\ \mathrm{A})^2} \\
+&\simeq 1.45\times 10^5\ \mathrm{s}\simeq 40\ \mathrm{h}\simeq 1\frac{2}{3}\ \mathrm{days} 
+\end{align*}
+
+
+\begin{align*}% page508 S1.3
+\Delta t_{\omega}^{I}\mid_{10\mathrm{K}}^{300\mathrm{K}}&=\frac{\mathcal{V}_{cd}\ell_{cd}}{A_mV_{o}^{2}}\int_{10\ \mathrm{K}}^{300\ \mathrm{K}}C_{cu}(T)\rho_m{cu}(T)dT \\
+&=\frac{\mathcal{V}_{cd}\ell_{cd}}{A_mV_{o}^{2}}Y(T_f=300\ \mathrm{K},T_i=10\ \mathrm{K})
+\end{align*}
+
+
+\begin{align*}% page508 S1.4
+\Delta t_{\omega}^{I}\mid_{10\mathrm{K}}^{300\mathrm{K}}&=\frac{(0.4\ \mathrm{m^3})(1\times 10^4\ \mathrm{m})(7.25\ \mathrm{V^2s/m^2})}{(1.5\times 10^{-5}\ \mathrm{m^2})(25\ \mathrm{V})^2} \\
+&=3.1\times 10^6\ \mathrm{s}\simeq 860\ \mathrm{h}\simeq 36\ \mathrm{days} 
+\end{align*}
+
+
+\begin{align*}% page509 S1.5
+\Delta t_{\omega}^{I}\mid_{10\mathrm{K}}^{50\mathrm{K}}&=\frac{(0.4\ \mathrm{m^3})(1.5\times 10^{-5}\ \mathrm{m^2})(4.5\times 10^{16}\ \mathrm{A^2s/m^4})}{(1\times 10^4\ \mathrm{m})(100\ \mathrm{A})^2} \\
+&\simeq 2.7\times 10^3\ \mathrm{s}=45\ \mathrm{min}
+\end{align*}
+
+
 \begin{equation}% page509 S1.6
 \Delta t_{\omega}^{I}\mid_{50\mathrm{K}}^{300\mathrm{K}}=\frac{(0.4\ \mathrm{m^3})(1\times 10^4\ \mathrm{m})(7.25\ \mathrm{J\Omega/m^2})}{(1.5\times 10^{-5}\ \mathrm{m^2})(100\ \mathrm{V})^2} 
 =1.93\times 10^5\ \mathrm{s}=54\ \mathring{h}
@@ -633,10 +653,10 @@ E_m=\ell\omega\delta C_p\Delta T
 \ell\simeq\sqrt{\frac{(2\times 10^7\ \mathrm{J})(0.3\Omega)}{(10^{-6}\ \mathrm{\Omega m})(4\times 1066\ \mathrm{J/m^2K})(200\ \mathrm{K})}} 
 =86.6\ \mathrm{m}
 \end{equation}
-\begin{equation}% page518 最后一个
-\omega\delta\simeq\sqrt{\frac{(10^{-6}\ \mathrm{\Omega m})(2\times 10^7\ \mathrm{J})}{(0.3\Omega)(4\times 10^6\ \mathrm{J/m^2K})(200\ \mathrm{K})}} 
-\simeq 2.9\times 10^{-4}\ \mathrm{m^2}\simeq 290\ \mathrm{mm^2}
-\end{equation}
+\begin{align*}% page518 最后一个
+\omega\delta&\simeq\sqrt{\frac{(10^{-6}\ \mathrm{\Omega m})(2\times 10^7\ \mathrm{J})}{(0.3\Omega)(4\times 10^6\ \mathrm{J/m^2K})(200\ \mathrm{K})}} \\
+&\simeq 2.9\times 10^{-4}\ \mathrm{m^2}\simeq 290\ \mathrm{mm^2}
+\end{align*}
 
 
 \subsection{讨论8.2：磁体的“缓慢”放电模式}
@@ -681,18 +701,22 @@ r_dI_m(0)^2\simeq 2\omega\ell g_{cv}
 
 \subsection{讨论8.4：过热\& 内部电压判据}
 
-\begin{equation}% page522 8.30a
-J_{m_{op}}^{sh}=\left(\frac{1+\gamma_{m/s}}{\gamma_{m/s}}\right)\frac{f_r\pi(\alpha+1)\rho_m(T_f)Z(T_f,T_i)}{2}\sqrt{\frac{a_1}{2\mu_o\ \mathcal{L}(\alpha,\beta)E_m}} 
-=\left(\frac{1+1}{1}\right)\frac{(0.5)\pi(1.3+1)(1.11\times 10^{-8}\ \mathrm{\Omega m})(10.5\times 10^{16}\ \mathrm{A^2s/m^4})}{2}\times 
-=\sqrt{\frac{0.15\ \mathrm{m}}{2(4\pi\times 10^{-7}\ \mathrm{H/m})(0.54)(3\times 10^6\ \mathrm{J})}} 
-\simeq 2(21.1\times 10^8\ \mathrm{J/m^3})(0.19\ \mathrm{Am/J})\simeq 805\ \mathrm{MA/m^2}=805\ \mathrm{A/mm^2}
-\end{equation}
-\begin{equation}% 8.40b
-J_{m_{op}}^{V}=\frac{2}{f_r(1-f_r)}\left[\frac{\sqrt{\mathcal{L}(\alpha,\beta)}}{\pi(\alpha+1)}\right]\left[\frac{V_{bk}I_{op}}{\rho_m(T_f)}\sqrt{\frac{2\mu_o}{a_1E_m}}\right] 
-=\frac{2}{0.5(1-0.5)}\left[\frac{\sqrt{0.54}}{\pi(1.3+1)}\right]\left[\frac{(10^4\ \mathrm{V})(300\ \mathrm{A})}{(1.11\times 10^{-8}\ \mathrm{\Omega m})}\sqrt{\frac{2(4\pi\times 10^{-7}\ \mathrm{H/m})}{(0.15\ \mathrm{m})(3\times 10^6\ \mathrm{J})}}\right] 
-=8(0.102)(2.70\times 10^{14}\ \mathrm{A^2/m})(2.36\times 10^{-6}\ \mathrm{A^{-1}m^{-1}}) 
-=5.2\times 10^8\ \mathrm{A/m^2}=520\ \mathrm{A/mm^2}
-\end{equation}
+\begin{align*}% page522 8.30a
+J_{m_{op}}^{sh}&=\left(\frac{1+\gamma_{m/s}}{\gamma_{m/s}}\right)\frac{f_r\pi(\alpha+1)\rho_m(T_f)Z(T_f,T_i)}{2}\sqrt{\frac{a_1}{2\mu_o\ \mathcal{L}(\alpha,\beta)E_m}} \\
+&=\left(\frac{1+1}{1}\right)\frac{(0.5)\pi(1.3+1)(1.11\times 10^{-8}\ \mathrm{\Omega m})(10.5\times 10^{16}\ \mathrm{A^2s/m^4})}{2}\times \\
+&=\sqrt{\frac{0.15\ \mathrm{m}}{2(4\pi\times 10^{-7}\ \mathrm{H/m})(0.54)(3\times 10^6\ \mathrm{J})}} \\
+&\simeq 2(21.1\times 10^8\ \mathrm{J/m^3})(0.19\ \mathrm{Am/J})\\
+&\simeq 805\ \mathrm{MA/m^2}=805\ \mathrm{A/mm^2}
+\end{align*}
+
+
+
+\begin{align*}% 8.40b
+J_{m_{op}}^{V}&=\frac{2}{f_r(1-f_r)}\left[\frac{\sqrt{\mathcal{L}(\alpha,\beta)}}{\pi(\alpha+1)}\right]\left[\frac{V_{bk}I_{op}}{\rho_m(T_f)}\sqrt{\frac{2\mu_o}{a_1E_m}}\right] \\
+&=\frac{2}{0.5(1-0.5)}\left[\frac{\sqrt{0.54}}{\pi(1.3+1)}\right]\left[\frac{(10^4\ \mathrm{V})(300\ \mathrm{A})}{(1.11\times 10^{-8}\ \mathrm{\Omega m})}\sqrt{\frac{2(4\pi\times 10^{-7}\ \mathrm{H/m})}{(0.15\ \mathrm{m})(3\times 10^6\ \mathrm{J})}}\right] \\
+&=8(0.102)(2.70\times 10^{14}\ \mathrm{A^2/m})(2.36\times 10^{-6}\ \mathrm{A^{-1}m^{-1}}) \\
+&=5.2\times 10^8\ \mathrm{A/m^2}=520\ \mathrm{A/mm^2}
+\end{align*}
 
 
 \subsection{讨论8.5：Bi2223带电流引线的保护}
