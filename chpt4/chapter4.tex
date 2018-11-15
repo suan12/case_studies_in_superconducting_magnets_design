@@ -1456,108 +1456,185 @@ $T_0$ too high, thus enabling the superconductor shunt to carry $I_o$ supercondu
 
 \textbf{C. 优化电流引线参数}
 
-The high-current approximation of Eq. 4.28 is given by:
+方程4.28的大电流近似为：
 \begin{equation}% 4.33
 \dot{m}_Ic_p(T)\frac{dT}{dz}+\frac{\rho(T)I_{o}^{2}}{A}=0
 \end{equation}
+对4.33，基于氦的从$T_0$到$T_{\ell}$温区的平均热容$c_p(T)\simeq \~{c}_p$，
+在合适的区间对两端积分，解出$dT/\rho(T)$：
 \begin{equation}% 4.34a
 \int_{T_o}^{T_i}\frac{dT}{\rho(T)}=\int_{0}^{\ell}\frac{I_{o}^{2}dz}{A\dot{m}_I\tilde{c}_p}=\frac{I_{o}^{2}\ell}{A\dot{m}_I\tilde{c}_p}
 \end{equation}
-\begin{equation}% 4.34b
-\int_{T_o}^{T_i}\frac{dT}{\rho(T)}\simeq1.2\times10^{11}K\Omega m
-\end{equation}
-\begin{equation}% 4.34c
-\int_{T_o}^{T_i}\frac{dT}{\rho(T)}\simeq(\frac{I_{o}^{2}\ell}{Ac_{p0}})\frac{1}{I_0}\sqrt{\frac{c_{p0}h_L}{k_0\rho_0}}
-\end{equation}
+对铜，积分$\int_{T_0}^{T_\ell} dT/\rho(T)$可由下式近似给出：
+\begin{align*}% 4.34b
+\int_{T_o}^{T_i}\frac{dT}{\rho(T)}\simeq 1.2\times 10^{11}K\Omega m\tag{4.34b}
+\end{align*}
+上式中，$T_0$ = 6 K，$T_\ell$= 273 K。
+将方程4.31b代入4.34a，假定$\~{c}_p\simeq c_{p0}$(这对氦是合理的)，我们有：
+\begin{align*}% 4.34c
+\int_{T_o}^{T_i}\frac{dT}{\rho(T)}\simeq(\frac{I_{o}^{2}\ell}{Ac_{p0}})\frac{1}{I_0}\sqrt{\frac{c_{p0}h_L}{k_0\rho_0}} \tag{4.34c}
+\end{align*}
+我们用额定电流$I_o$、引线长度$\ell$和截面积$A$表示优化电流引线参数比$(I_o \ell/A)_{ot}\equiv \zeta_o$，有：
 \begin{equation}% 4.35a
 (\frac{I_o\ell}{A})_{ot} \equiv \zeta_o\simeq[\int_{T_0}^{T_i}\frac{dT}{\rho_(T)}]\sqrt{\frac{c_{p0}k_0 \rho_0}{h_L}}
 \end{equation}
-
-
+在上述方程中代入合适的数值，我们可以在数值上解出$\zeta_o$：
+\begin{align*}
+\zeta_o\simeq (1.2\times 10^11\ \mathrm{K/\Omega m})\sqrt{\frac{5.26XXX}{20.7XXX}}
+\end{align*}
+于是：
 \begin{equation}% 4.35b
 (\frac{I_o\ell}{A}_{ot})\simeq2.3\times10^7\ \mathrm{A/m}
 \end{equation}
+举例来说，对于=$I_o$=6 kA，$\ell$=38 cm，方程4.35b给出：$A\simeq 1\ \mathrm{cm^2}$。
 
 \textbf{D. 静态热输入}
 
+The liquid helium boil-off rate when the optimized lead carries no current—called
+the “standing” boil-off rate,$\.{m}_0$—is due to heat input into the helium by conduction
+only. With$I_o$= 0 inserted into Eq. 4.28, we have:
 \begin{equation}% 4.36
 A\tilde{k}\frac{d^2T}{dz^2}-\dot{m}_0\tilde{c}_p\frac{dT}{dz}=0
 \end{equation}
+式中，$\~{k}$和$\~{c}_p$分别是氦在温度区间$T_0$至$T_\ell$的平均热导率和平均比热。
 \begin{equation}% 4.37
 \tilde{k}=\frac{1}{T_\ell-T_0}\int_{T_0}^{T_\ell}k(T)dT
 \end{equation}
+Table 4.18 (p. 307) presents values of$\~{k}$ for four materials (G-10, stainless steel
+304, brass, and copper) over three common temperature ranges in cryogenic applications:
+4–80 K; 4–300 K; and 80–300 K.
+
+给定边界条件$T(z=0)=T_0$和$A\~{k}(dT/dz)_{z=0}=\.{m}_0 h_L$，$T(z)$可以表示为：
 \begin{equation}% 4.38a
 T(z)=T_0+\frac{h_L}{\tilde{c}_p}[\exp(\frac{\dot{m}_0\tilde{c}_pz}{A\tilde{k}})-1]
 \end{equation}
-\begin{equation}% 4.38b
-T(\ell)\equiv T_\ell=T_0+\frac{h_L}{\tilde{c}_p}[\exp(\frac{\dot{m}_0\tilde{c}_p\ell}{A\tilde{k}})-1]
-\end{equation}
+于是：
+\begin{align*}% 4.38b
+T(\ell)\equiv T_\ell=T_0+\frac{h_L}{\tilde{c}_p}[\exp(\frac{\dot{m}_0\tilde{c}_p\ell}{A\tilde{k}})-1]\tag{4.38b}
+\end{align*}
+从方程4.38b中解出$\dot{m}_0\tilde{c}_p\ell/A\tilde{k}$，有：
 \begin{equation}% 4.39a
 \frac{\dot{m}_0\tilde{c}_p\ell}{A\tilde{k}}=\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]
 \end{equation}
-\begin{equation}% 4.39b
-\dot{m}_0=\frac{\tilde{k}}{\tilde{c}_p}(\frac{A}{\ell})\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]
-\end{equation}
+从方程4.39a中，我们可以解出$\.{m}_0$：
+\begin{align*}% 4.39b
+\dot{m}_0=\frac{\tilde{k}}{\tilde{c}_p}(\frac{A}{\ell})\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]\tag{4.39b}
+\end{align*}
+联立方程4.39b和$Q_0=\.{m}_0 h_L$，我们有：
 \begin{equation}% 4.40a
 Q_0=\frac{\tilde{k}h_L}{\tilde{c}_p}(\frac{A}{\ell})\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]
 \end{equation}
-\begin{equation}% 4.40b
-Q_0=\frac{\tilde{k}h_L}{\tilde{c}_p}(\frac{I_o}{\zeta_o})\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]
-\end{equation}
+对于优化的引线，有$(I_o \ell/A)_{ot}=\zeta_o$。于是：
+\begin{align*}% 4.40b
+Q_0=\frac{\tilde{k}h_L}{\tilde{c}_p}(\frac{I_o}{\zeta_o})\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]\tag{4.40b}
+\end{align*}
+对于优化的气冷铜引线，$Q_0$和$Q_{I_o}$的比值可由下式给出：
 \begin{equation}% 4.41
 \frac{Q_0}{Q_{I_o}}\frac{\tilde{k}}{\tilde{c}_p\zeta_o}\sqrt{\frac{h_Lc_{p0}}{k_0p_0}}\ln[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1]
 \end{equation}
+将$\~{k}$=660 W/mK；$\~{c}_p\simeq$5.2 kJ/kg K；$T_{\ell}$=300 K；$T_0$=4 K；以及
+$\zeta_o\simeq2.3\times 10^7$  A/m代入方程4.11，有：
 \begin{equation}% 4.42
-\frac{Q_0}{Q_{I_o}}\simeq0.69
+\frac{Q_0}{Q_{I_o}}\simeq 0.69
 \end{equation}
+That is, the standing boil-off rate of a vapor-cooled lead is roughly 70\% of the
+boil-off rate of the lead carrying its rated current.
 
 \textbf{E. 优化电流引线的压降}
-	
+
+The voltage drop$V_o$ over the entire length of the copper lead at$I_o$is given by:
 \begin{equation}% 4.43a
 V_o=\frac{I_o}{A}\int_{0}^{\ell}\rho_{cu}dz
 \end{equation}
-\begin{equation}% 4.43b
-V_o=\tilde{\rho}_{cu}(\frac{I_o\ell}{A})_{ot}=\tilde{\rho}_{cu}\zeta_o
-\end{equation}
+Integration over the lead length$\ell$is necessary because$\rho_{cu}$,
+the electrical resistivity
+of copper, is temperature-dependent and thus varies with $z$. Equation 4.43a may
+be expressed as:
+\begin{align*}% 4.43b
+V_o=\tilde{\rho}_{cu}(\frac{I_o\ell}{A})_{ot}=\tilde{\rho}_{cu}\zeta_o \tag{4.43b}
+\end{align*}
+式中，
 \begin{equation}% 4.44
 \tilde{\rho}_{cu}=\frac{1}{\ell}\int_{0}^{\ell}\rho_{cu}dz\simeq\frac{1}{T_\ell-T_0}\int_{T_0}^{T_\ell}\rho_{cu}(T)dT
 \end{equation}
+Equation 4.44 assumes a linear temperature gradient along the current lead. Combining
+Eqs. 4.43b, where$\~{\rho}_{cu}$is given in the unit of$\Omega m$, and Eq. 4.35b, we have:
 \begin{equation}% 4.45
-V_o\simeq2.3\times10^7\tilde{\rho}_{cu}\ \mathrm{V}
+V_o\simeq2.3\times 10^7\tilde{\rho}_{cu}\ \mathrm{V}
 \end{equation}
+That is, $V_{ot}$is the same among leads optimized for any rated current.
+
+For copper,$\~{\rho}_{cu}$is$\sim$2.5×10−10 Ωm (below$\sim$50 K) and varies linearly with temperature
+above$\sim$50 K, being 1.75×10−8 Ωm at 273 K. From Eq. 4.44, we have:
+$\~{\rho}_{cu}\simeq 0.4\times 10^{-8}\ \mathrm{\Omega m}$。The voltage drop across an optimum lead at its rated current
+is independent of rated current; for a copper lead it is$\sim$100 mV. Thus, $V_o\sim$100mV
+at 100A for a 100-A lead and at 10 kA for a 10-kA lead; when the warm end is
+“cool,” which often happens in vapor-cooled leads, $V_{o}$can be less than 100 mV.
+This conclusion agrees, within an order of magnitude, with experimental data for
+vapor-cooled copper leads in the 1 kA–30 kA range [4.54].
 
 \textbf{F. 流体阻塞端的热负荷}
 
+When a cooling gas flow stoppage occurs, the steady-state solution on which the
+design of optimum leads is based is no longer valid. If the lead continues to carry
+its rated current$I_o$without cooling, “flow stoppage meltdown” of the lead may
+occur, most often near the warm end. The time-dependent power equation [W/m]
+for a differential element of an optimum lead is given by:
 \begin{equation}% 4.46
 AC_{cu}(T)\frac{dT}{dt}=\frac{d}{dz}[Ak(T)\frac{dT}{dz}]-\dot{m}_Ic_p(T)\frac{dT}{dz}+\frac{\rho_{cu}(T)}{A}I_{o}^{2}
 \end{equation}
+where$C_{cu}(T)$is the volumetric heat capacity of the lead metal (copper). With
+no cooling ($\.{m}_I=0$)and the conduction term set equal to zero (conservative
+assumption), Eq. 4.46 becomes:
 \begin{equation}% 4.47
 AC_{cu}(T)\frac{dT}{dt}=\frac{\rho_{cu}(T)}{A}I_{o}^{2}
 \end{equation}
+优化的引线满足$(I_o\ell/A)=\zeta_o=2.3\times10^7$ A/m。于是：
 \begin{equation}% 4.48
 C_{cu}(T)\frac{dT}{dt}\frac{\rho_{cu}(T)\zeta_{o}^{2}}{\ell^2}
 \end{equation}
+Because flow stoppage meltdown usually happens near the warm end, we replace
+$C_{cu}(T)$with$C_o$(a constant) and$\rho_{cu}(T)=\rho_o+\gamma_{cu}T$($\rho_o$和$\gamma_{cu}$都是常数)：
 \begin{equation}% 4.49
 \frac{dT}{dt}=\frac{\rho_o\zeta_{o}^{2}}{C_o\ell^2}+\frac{\gamma_{cu}\zeta_{o}^{2}}{C_o\ell^2}T=\frac{\rho_o}{\gamma_{cu}\tau_\ell}+\frac{T}{\tau_\ell}
 \end{equation}
+引线的热常数$\tau_{\ell}$由下式给出：
 \begin{equation}% 4.50
 \tau_\ell=\frac{C_o\ell^2}{\gamma_{cu}\zeta_{o}^{2}}
 \end{equation}
+The solution to Eq. 4.49 is given by:
 \begin{equation}% 4.51
 T(t)=Ke^{t/\tau_\ell}-\frac{\rho_o}{\gamma_{cu}}
 \end{equation}
-\begin{equation}
-\tau_\ell=\frac{(3.5\times10^6\ \mathrm{J/m^3K})(1\ \mathrm{m})^2}{(68\times10^{-12}\ \mathrm{\Omega m/K})(2.5\times10^7\ \mathrm{A/m})^2}\sim90\ \mathrm{s}
-\end{equation}
+where$K$ is a constant. Equation 4.51 states that upon gas flow stoppage $T(t)$
+rises exponentially with a time constant of$\tau_\ell$. Because$\tau_\ell$is proportional to$\ell^2$,
+a longer optimum lead takes longer to reach the metal’s meltdown temperature
+than does a shorter optimum lead. Note that because$\zeta_o=(I_o \ell/A)$, we may also
+conclude that for the same rated current a thicker optimum lead is safer than a
+thinner optimum lead against a flow stoppage incident.
 
+举例来说，对于一个优化的长为$\ell$=1 m的10 kA引线，其
+$C_o=3.5\times 10^6\ \mathrm{J/m^3 K}$，$\gamma_{cu}=68\times 10^{-12}\ \mathrm{\Omega m/K}$，$(I_o \ell/A)\equiv\zeta_o=2.3\times 10^7$A/m，我们有：
+\begin{align*}
+\tau_\ell=\frac{(3.5\times 10^6\ \mathrm{J/m^3K})(1\ \mathrm{m})^2}{(68\times 10^{-12}\ \mathrm{\Omega m/K})(2.5\times 10^7\ \mathrm{A/m})^2}\sim 90\ \mathrm{s}
+\end{align*}
 
+Note that$\tau_\ell$is doubled for an optimum 10-kA lead having$\ell$=1.4m.
 
 \subsection{讨论4.15：干式引线——正常金属和高温超导体}
+For a dry superconducting magnet, current leads must generally operate in a
+vacuum environment. Here we discuss two types of leads rated at$I_o$: 1) normal
+metal [4.55]; and 2) HTS over its usable temperature range [4.56].
 
+\textbf{A. 正常金属}
 
+The steady-state power differential equation over a unit lead length is given by:
 \begin{equation}% 4.52
 A\tilde{k}\frac{d^2T}{dz^2}+\frac{\tilde{\rho}I_{o}^{2}}{A}=0
 \end{equation}
+where $A$ is the lead active cross sectional area;$\~{k}$and$\~{\rho}$are, respectively, the metal’s T-averaged thermal conductivity and electrical resistivity. Solving Eq. 4.52 with
+the boundary conditions $T(z = 0) = T_0$ and $T(z =\ell) = T_\ell$, we obtain Eq. 4.11
+(p. 240), from which the heat input at the cold end,$Q_{I_o}$ may be derived:
 \begin{equation}% 4.53
 Q_{I_o}=A\tilde{k}\frac{dT}{dz}\mid_{z=0}=\tilde{k}(T_\ell-T_0)(\frac{A}{\ell})+\frac{\tilde{\rho}I_{o}^{2}}{2}(\frac{\ell}{A})
 \end{equation}
@@ -1570,74 +1647,74 @@ Q_{I_o}=A\tilde{k}\frac{dT}{dz}\mid_{z=0}=\tilde{k}(T_\ell-T_0)(\frac{A}{\ell})+
 \begin{equation}% 4.55
 [Q_{I_hts}]_{dr}=k_{hts}A_{hts}\frac{(T_{\omega_{hts}}-T_0)}{\ell_{hts}}
 \end{equation}
-%
-%
-%
-%
-%\subsection{问题4.4：气冷HTS电流引线——全超导型(FSV)}
-%
-%\begin{equation}% 4.56
-%\frac{d}{dz}\left[[A_m]_{fs}k_m(T)\frac{dT}{dz}\right]-[\dot{m}_h]_{fs}c_p(T)\frac{dT}{dz}=0
-%\end{equation}
-%
-%\begin{equation}% 4.57
-%[A_m]_{fs}\tilde{k}\frac{d^2T}{dz^2}-[\tilde{m}_h]_{fs}\tilde{c}_p\frac{dT}{dz}=0
-%\end{equation}
-%
-%\begin{equation}% 4.58
-%T(z)=T_0+(\frac{T_\ell-T_0}{e^{[\alpha]_{fs}}-1})[e^{[\alpha]_{fs}(z/\ell)}-1]
-%\end{equation}
-%
-%\begin{equation}% 4.59
-%[\alpha]_{fs}=\frac{[\dot{m}_h]_{fs}\tilde{c}_p\ell}{\tilde{k}[A_m]_{fs}}
-%\end{equation}
-%
-%\begin{equation}% 4.60
-%[Q_{in}]_{fs}=\frac{\tilde{k}[A_m]_{fs}h_L}{\tilde{c}_p\ell}\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
-%\end{equation}
-%
-%\begin{equation}% 4.61
-%[Q_\ell]_{fs}-[Q_{in}]_{fs}=[\dot{m}_h]_{fs}\tilde{c}_p(T_\ell-T_0)
-%\end{equation}
-%
-%\begin{equation}
-%[Q_{in}]_{fs}=\tilde{k}[A_m]_{fs}\frac{dT}{dz}\mid_0=[\dot{m}_h]_{fs}h_L
-%\end{equation}
-%
-%\begin{equation}
-%\tilde{k}[A_m]_{fs}\frac{dT}{dz}\mid_0=\tilde{k}[A_m]_{fs}(\frac{T_\ell-T_0}{e^{[\alpha]_{fs}-1}})\frac{[\alpha]_{fs}}{\ell}
-%=(\frac{T_\ell-T_0}{e^{[\alpha]_{fs}}-1})[\dot{m}_h]_{fs}\tilde{c}_p=[\dot{m}_h]_{fs}h_L
-%\end{equation}
-%
-%\begin{equation}
-%e^{[\alpha]_{fs}}=\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1
-%\end{equation}
-%
-%\begin{equation}
-%[\alpha]_{fs}=\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
-%\end{equation}
-%
-%\begin{equation}
-%[\dot{m}_h]_{fs}=\frac{\tilde{k}[A_m]_{fs}}{\tilde{c}_p\ell}\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
-%\end{equation}
-%
-%\begin{equation}% 4.60
-%[Q_{in}]_{fs}=\frac{\tilde{k}[A_m]_{fs}h_L}{\tilde{c}_p\ell}\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
-%\end{equation}
-%
-%\begin{equation}
-%[Q_\ell]_{fs}=\tilde{k}[A_m]_{fs}\frac{dT}{dz}\mid_\ell=[\dot{m}_h]_{fs}\tilde{c}_p(\frac{T_\ell-T_0}{e^{[\alpha]_{fs}-1}})e^{[\alpha]_{fs}}
-%=[\dot{m}_h]_{fs}h_L\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
-%=[\dot{m}_h]_{fs}\tilde{c}_p(T_\ell-T_0)+[\dot{m}_h]_{fs}h_L
-%\end{equation}
-%
-%\begin{equation}% 4.61
-%[Q_\ell]_{fs}-[Q_{in}]_{fs}=[\dot{m}_h]_{fs}\tilde{c}_p(T_\ell-T_0v)
-%\end{equation}
-%
-%
-%
-%
+
+
+
+
+\subsection{问题4.4：气冷HTS电流引线——全超导型(FSV)}
+
+\begin{equation}% 4.56
+\frac{d}{dz}\left[[A_m]_{fs}k_m(T)\frac{dT}{dz}\right]-[\dot{m}_h]_{fs}c_p(T)\frac{dT}{dz}=0
+\end{equation}
+
+\begin{equation}% 4.57
+[A_m]_{fs}\tilde{k}\frac{d^2T}{dz^2}-[\tilde{m}_h]_{fs}\tilde{c}_p\frac{dT}{dz}=0
+\end{equation}
+
+\begin{equation}% 4.58
+T(z)=T_0+(\frac{T_\ell-T_0}{e^{[\alpha]_{fs}}-1})[e^{[\alpha]_{fs}(z/\ell)}-1]
+\end{equation}
+
+\begin{equation}% 4.59
+[\alpha]_{fs}=\frac{[\dot{m}_h]_{fs}\tilde{c}_p\ell}{\tilde{k}[A_m]_{fs}}
+\end{equation}
+
+\begin{equation}% 4.60
+[Q_{in}]_{fs}=\frac{\tilde{k}[A_m]_{fs}h_L}{\tilde{c}_p\ell}\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
+\end{equation}
+
+\begin{equation}% 4.61
+[Q_\ell]_{fs}-[Q_{in}]_{fs}=[\dot{m}_h]_{fs}\tilde{c}_p(T_\ell-T_0)
+\end{equation}
+
+\begin{equation}
+[Q_{in}]_{fs}=\tilde{k}[A_m]_{fs}\frac{dT}{dz}\mid_0=[\dot{m}_h]_{fs}h_L
+\end{equation}
+
+\begin{equation}
+\tilde{k}[A_m]_{fs}\frac{dT}{dz}\mid_0=\tilde{k}[A_m]_{fs}(\frac{T_\ell-T_0}{e^{[\alpha]_{fs}-1}})\frac{[\alpha]_{fs}}{\ell}
+=(\frac{T_\ell-T_0}{e^{[\alpha]_{fs}}-1})[\dot{m}_h]_{fs}\tilde{c}_p=[\dot{m}_h]_{fs}h_L
+\end{equation}
+
+\begin{equation}
+e^{[\alpha]_{fs}}=\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1
+\end{equation}
+
+\begin{equation}
+[\alpha]_{fs}=\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
+\end{equation}
+
+\begin{equation}
+[\dot{m}_h]_{fs}=\frac{\tilde{k}[A_m]_{fs}}{\tilde{c}_p\ell}\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
+\end{equation}
+
+\begin{equation}% 4.60
+[Q_{in}]_{fs}=\frac{\tilde{k}[A_m]_{fs}h_L}{\tilde{c}_p\ell}\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
+\end{equation}
+
+\begin{equation}
+[Q_\ell]_{fs}=\tilde{k}[A_m]_{fs}\frac{dT}{dz}\mid_\ell=[\dot{m}_h]_{fs}\tilde{c}_p(\frac{T_\ell-T_0}{e^{[\alpha]_{fs}-1}})e^{[\alpha]_{fs}}
+=[\dot{m}_h]_{fs}h_L\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
+=[\dot{m}_h]_{fs}\tilde{c}_p(T_\ell-T_0)+[\dot{m}_h]_{fs}h_L
+\end{equation}
+
+\begin{equation}% 4.61
+[Q_\ell]_{fs}-[Q_{in}]_{fs}=[\dot{m}_h]_{fs}\tilde{c}_p(T_\ell-T_0v)
+\end{equation}
+
+
+
+
 %\subsection{问题4.5：气冷HTS引线——电流分配型(CSV)}
 %\begin{equation}% 4.62
 %T(\xi)=(\frac{T_{cs}-T_0}{e^{[\alpha_\ell]_{cs}\xi_{cs}}-1})(e^{[\alpha_\ell]_{cs}\xi}+\frac{e^{[\alpha_\ell]_{cs}\xi_{cs}T_0-T_{cs}}}{T_{cs}-T_0})
