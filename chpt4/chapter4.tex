@@ -584,7 +584,7 @@ h_g(6\ \mathrm{K},10\ \mathrm{atm})=x_\ell h_\ell(4.2\ \mathrm{K},1\ \mathrm{atm
 基于制冷机的小型液化器的热力学过程是本问题的核心。
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.6]{chpt4/figs/fig4.12.eps}
+	\includegraphics[scale=0.7]{chpt4/figs/fig4.12.eps}
 	\caption{配合一个基于制冷机的小型氦液化器的超导磁体系统示意图，它应用于慢MAS NMR系统。其中，
 	运行于持续模式的超导磁体由来自基于制冷机的小型液化器的液氦冷却，
 	产生一个与旋转轴为$54.73\circ$的磁场。1：地磁补偿线圈(静止)；2：磁体/低温容器组合体；3：驱动电机；
@@ -594,7 +594,7 @@ h_g(6\ \mathrm{K},10\ \mathrm{atm})=x_\ell h_\ell(4.2\ \mathrm{K},1\ \mathrm{atm
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.6]{chpt4/figs/fig4.13.eps}
+	\includegraphics[scale=0.7]{chpt4/figs/fig4.13.eps}
 	\caption{基于制冷机的小型氦液化器示意图。}
 \end{figure}
 
@@ -771,7 +771,7 @@ $\Delta T_{op}/T_{op}\simeq 0$。其中，$\Delta T_{op}$是最冷点(接近二�
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.5]{chpt4/figs/fig4.15.eps}
+	\includegraphics[scale=0.6]{chpt4/figs/fig4.15.eps}
 	\caption{制冷回环器冷却磁体示意图。}
 \end{figure}
 
@@ -1374,16 +1374,20 @@ level [4.53]. Here we present analytical expressions for key parameters of a lea
 
 \textbf{A. 功率密度方程}
 
-The total power $Q_{in}$ flowing into and generated within a differential volume$A\Delta z$
-of a vapor-cooled lead (Fig. 4.20) carrying the lead’s rated current $I_0$ is given by:
+图4.20所示的载有额定电流$I_0$的气冷引线的微元体积$A\Delta z$内产生和流入的总功率$Q_{in}$为：
 \begin{equation}% 4.25
 Q_{in}=[Ak(T)\frac{dT}{dz}]_{z+\Delta z}+\dot{m}_Ic_p(T)T+\frac{\rho(T)I_{o}^{2}}{A}\Delta z
 \end{equation}
-
-
+式中，$z$是引线轴向距离，$z=0$位于引线的冷末端。
+$k(T),A, \rho(T)$分别是引线(一般是铜)的热导率、有效截面积、电阻率。
+$\.{m}_I$和$c_p(T)$分别是氦气的质量流量和比热。
+氦气和引线之间的热传递假定为理想的。
+$T$是$z$处引线和氦的温度。流出微元体积$A\Delta z$的总功率$Q_{out}$为：
 \begin{equation}% 4.26
 Q_{out}=[Ak(T)\frac{dT}{dz}]_z+\dot{m}_Ic_p(T)(T+\Delta T)
 \end{equation}
+
+稳态条件下，有$Q_{in}=Q_{out}$，于是：
 \begin{equation}% 4.27
 [Ak(T)\frac{dT}{dz}]_{z+\Delta z}-[Ak(T)\frac{dT}{dz}]_z-\dot{m}_Ic_p(T)\Delta T+\frac{\rho(T)I_{o}^{2}}{A}\Delta z=0
 \end{equation}
@@ -1394,37 +1398,65 @@ Q_{out}=[Ak(T)\frac{dT}{dz}]_z+\dot{m}_Ic_p(T)(T+\Delta T)
 	\caption{气冷引线的体积微元热平衡。}
 \end{figure}
 
+让方程4.27除以$\Delta z$，并令$\Delta z\rightarrow 0$，我们有：
 \begin{equation}% 4.28
 \frac{d[Ak(T)\frac{dT}{dz}]}{dz}-\dot{m}_Ic_p(T)\frac{dT}{dz}+\frac{\rho(T)I_{o}^{2}}{A}=0
 \end{equation}
 
 \textbf{B. 冷端热输入\&蒸发率}
 
+在大电流极限下，即$|d[Ak(T)dT/dz]/dz|\ll\rho(T)I_O^2/A$时，方程4.28在$z=0$处有$T(0)=T_0$，可以简化为：
 \begin{equation}% 4.29a
--\dot{m}_Ic_{p0}\frac{dT}{dz}\mid_{z=0}+\frac{\rho(T)I_{o}^{2}}{A}\simeq0
+-\dot{m}_Ic_{p0}\frac{dT}{dz}\mid_{z=0}+\frac{\rho(T)I_{o}^{2}}{A}\simeq 0
 \end{equation}
+式中，$c_{p0}c_{p}(T_0)$，$\rho_0=\rho(T)$。由方程4.29a，我们可以解得$(dT/dz)_{z=0}$：
 \begin{equation}% 4.29b
 \frac{dT}{dz}\mid_{z=0}\simeq\frac{\rho_0I_{o}^{2}}{A\dot{m}_Ic_{p0}}
 \end{equation}
+因为$z=0$处$Q_{I_0}$完全是热传导，代入$k_0=k(T_0)$有：
 \begin{equation}% 4.30
 Q_{I_o}=Ak(T_0)\frac{dT}{dz}\mid_{z=0}=\frac{k_0\rho_0I_{0}^{2}}{\dot{m}_Ic_{p0}}
 \end{equation}
+进入液体的功率$Q_{I_0}$以$\.{m}_I$的速率令液体汽化：
 \begin{equation}% 4.31a
 \dot{m}_I=\frac{Q_{I_o}}{h_L}
 \end{equation}
-\begin{equation}% 4.31b
-\dot{m}_I=I_o\sqrt{\frac{k_0\rho_0}{c_{p0}h_L}}
-\end{equation}
+式中，$h_L$是液氦的汽化潜热[K/kg]。联立方程4.30和4.31a，解出$\.{m}_I$，有：
+\begin{align*}% 4.31b
+\dot{m}_I=I_o\sqrt{\frac{k_0\rho_0}{c_{p0}h_L}} \tag{4.31b}
+\end{align*}
+将方程4.31b给出的$\.{m}_I$代入方程4.30，解出$Q_{I_o}/I_o$，有：
 \begin{equation}% 4.32a
 \frac{Q_{I_o}}{I_o}=\sqrt{\frac{h_Lk_0\rho_0}{c_{p0}}}
 \end{equation}
-\begin{equation}% 4.32b
-\frac{Q_{I_o}}{I_o}\simeq\sqrt{\frac{(20.7\times10^3J/kg)(600W/mK)(2.5\times10^{-10}\Omega m)}{5.26\times10^3J/kgK}}
-=7.7\times 10^{-4}W/A=0.77mW/A~1mW/A
-\end{equation}
+
+注意到，$Q_{I_o}$既不依赖于引线自底部($z = 0$)至顶部($z =\ell$)的有效长度$\ell$，
+也不依赖于引线导体截面积$A$。不过，它正比于引线额定电流$I_o$。
+如果引线载流$I<I_o$，冷端热输入将不再是$(I/I_o)Q_{I_o}$。
+
+在这个讨论中，气冷引线冷端温度$T_0$假定为$T_0$=6 K之下的温度。
+然而，由于经常需要提供高于磁体的液氦源，在实际气冷引线中，引线冷端($z = 0$)可能位于磁体顶部(和最低液位)以上——在一些情况下，要高出25 cm或更多。 The cold end is then electrically
+and thermally connected to a superconductor-shunted copper extension, the other
+end ($z<0$) of which penetrates into the liquid. The superconductor shunt (often of
+copper/NbTi composite) carries $I_o$ to the magnet, and the copper conducts $Q_{I_o}$to
+the liquid. The copper extension must have enough cross sectional area to conduct
+$Q_{I_o}$, even when exposed out of liquid helium over its entire span, without raising
+$T_0$ too high, thus enabling the superconductor shunt to carry $I_o$ superconductively.
+
+
+代入液氦的$h_L = 20.7 \times 10^3$ J/kg和$c_{p0}\simeq 5.26\times 10^3$ J/kg K；铜的
+ $k_0 =600$ W/mK和$\rho_0\simeq 2.5\times 10^{-10}\ \mathrm{\Omega m}$，有：
+\begin{align*}% 4.32b
+\frac{Q_{I_o}}{I_o}&\simeq\sqrt{\frac{(20.7\times 10^3\ \mathrm{J/kg})(600\ \mathrm{W/mK})(2.5\times 10^{-10}\ \mathrm{\Omega m})}{5.26\times 10^3\mathrm{J/kgK}}}\\
+&=7.7\times 10^{-4}\ \mathrm{W/A}=0.77\ \mathrm{mW/A}\sim 1\ \mathrm{mW/A} \tag{4.32b}
+\end{align*}
+
+对于一根优化的气冷引线，1 mW/A是估算进入液氦的热量的一个有用的典型值。
+对一根额定运行于10 kA的引线，热负荷是$\sim $10 W；一对儿就是$\sim $20 W。
 
 \textbf{C. 优化电流引线参数}
 
+The high-current approximation of Eq. 4.28 is given by:
 \begin{equation}% 4.33
 \dot{m}_Ic_p(T)\frac{dT}{dz}+\frac{\rho(T)I_{o}^{2}}{A}=0
 \end{equation}
