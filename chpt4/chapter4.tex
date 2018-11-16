@@ -2345,19 +2345,37 @@ b) 代入$[Q_{in}]_{fs}^n$= 0.4337W，我们得到$\dot{m}_h]_{fs}^{n}= [Q_{in}]
 
 
 \subsubsection{问题4.6C：CSV，有并联常规金属带}
+Here, we shall consider an example of a CSV lead with $N_{cs} = (2/3)N_{fs}$ = 50 and
+the same number (120) of normal metal tapes added as in the FSV studied above.
 
-\begin{equation}% 4.96a
-\sin\beta_{cs}^{n}(1-\xi)=1
-\end{equation}
+a) Show that $T_{cs}$ = 69.3K for this CSV lead. Assume that $i_c(T)$ is a linear
+function of $T$, with $i_c(T_0)$=445.5 A and $i_c(T-\ell)$=80 A, as given in Table 4.12.
 
-\begin{equation}% 4.96b
-\beta_{cs}^{n}(1-\xi_{cs})=\pi/2
-\end{equation}
+b) For$\ell$=20 cm (same value as the FSV counterparts), determine $\xi_{cs}$for this
+CSV for a special—simple—case in which:
 
+\begin{subequations}% 4.96a
+	\begin{align*}
+\sin\beta_{cs}^{n}(1-\xi)&=1\\
+\beta_{cs}^{n}(1-\xi_{cs})&=\pi/2
+	\end{align*}
+\end{subequations}
+
+You may determine$\xi_{cs}$ iteratively, first guessing a value of$\xi_{cs}$, compute $\beta_{cs}^n$ from Eq. 4.96b, then insert$\xi_{cs}$and$\beta_{cs}^n$ into Eq. 4.83 to see if Eq. 4.83 is indeed
+satisfied. Because $i_c(T)$is assumed a linear function of $T$, an appropriate
+starting value of$\xi_{cs}$ into Eq. 4.96b may be 0.9 ($\simeq $69.3/77.3).
+
+c) Verify that$\beta_{cs}^n$ found in b) agrees with$\beta_{cs}^n$ computed by Eq. 4.81.
+
+d) Compute$[Q_{in}]^n_{cs}$ , the heat input to liquid helium at $z=0$, given by Eq. 4.78.
+
+e) Numerically compute each term appearing in the following power balance
+equation and demonstrate that power is balanced.
 \begin{equation}% 4.97
 [Q_\ell]_{cs}^{n}+[Q_j]_{cs}^{n}-[Q_{in}]_{cs}^{n}=[\dot{m}_h]_{cs}^{n}\tilde{c}_p(T_\ell-T_0)
 \end{equation}
-
+$[Q_\ell]_{cs}^{n}$is the heat into the lead at$z=\ell$;$[Q_j]_{cs}^{n}$is the Joule dissipation within sthe current-sharing region; and$[Q_{\ell_{cs}}]_{cs}$is the heat out of the lead at$z=\ell_{cs}$.
+$[Q_\ell]_{cs}^{n}$and$[Q_j]_{cs}^{n}$are given by modified forms of Eq. S5.9 and Eq. S5.14:
 \begin{equation}% 4.98
 [Q_\ell]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}[\frac{1}{2}[\alpha_\ell]_{cs}^{n}+\beta_{cs}^{n}\cot\beta_{cs}^{n}(1-\xi_{cs})]
 \end{equation}
@@ -2366,7 +2384,7 @@ b) 代入$[Q_{in}]_{fs}^n$= 0.4337W，我们得到$\dot{m}_h]_{fs}^{n}= [Q_{in}]
 [Q_j]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\left[\frac{1}{2}[\alpha_\ell]_{cs}^{n}+\beta_{cs}^{n}\cot\beta_{cs}^{n}(1-\xi_{cs}) 
 +\beta_{cs}^{n}\frac{e^{\frac{[\alpha_\ell]_{cs}^{n}\xi_{cs}}{2}}}{e^{\frac{[\alpha_\ell]_{cs}^{n}}{2}}\sin\beta_{cs}^{n}(1-\xi_{cs})}\right]
 \end{equation}
-
+Note that because$\beta_{cs}^n (1-\xi_{cs})=\pi/2$here, Eqs. 4.98 and 4.99 are simplified:
 \begin{equation}% 4.100
 [Q_\ell]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\times\frac{1}{2}[\alpha_\ell]_{cs}^{n}
 \end{equation}
@@ -2376,7 +2394,9 @@ b) 代入$[Q_{in}]_{fs}^n$= 0.4337W，我们得到$\dot{m}_h]_{fs}^{n}= [Q_{in}]
 \end{equation}
 
 \subsubsection{问题4.6C之解}
-
+a) 因为$I_c(T_\ell)=N_{cs}i_c(T_\ell)$，其中$N_{cs}$=50，由表4.12，$i_c(T_\ell)$=80 A，在$T=$77.3 K时，我们有：$I_c(T_\ell)= 50\times 80= 4,000$ A；类似的，在
+$T_0$=4.2 K时有$I_c(T_0)$ = 22,275 A。
+于是，这种参数的Bi2223/Ag-Au带在77.3 K和4.2 K之间的$I_c(T)$满足：
 \begin{equation}
  I_c(T)=23,325-250T[\ \mathrm{A}]
 \end{equation}
