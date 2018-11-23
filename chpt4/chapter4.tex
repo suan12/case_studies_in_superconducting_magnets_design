@@ -2270,21 +2270,20 @@ resistivity of Ag-Au over the temperature range indicated in Table 4.12. Table
 
 \subsubsection{问题4.6A：FSV，无并联常规金属带}
 
-a) Show that $N_{fs}$=75 for this 6-kA vapor-cooled FSV lead.
+a) 证明这根6 kA的气冷FSV引线，$N_{fs}$=75。
 
-b) Show that $[Q_{in}]_{fs}$ =0.0786 W for this lead with$\ell$=20 cm. Here,$\ell$must be
-“long” on one hand to ensure good heat exchange with effluent vapor, while
-“short” on the other to limit the cost of the Bi2223/Ag-Au tapes.
+b) 证明若这根引线$\ell$=20 cm，有$[Q_{in}]_{fs}$ =0.0786 W。这里，$\ell$在一端
+必须足够“长”以确保与气体有良好的热交换，另一端足够“短”以限制Bi2223/Ag-Au带材的费用。
 
-c) Verify that Eq. 4.61 is satisfied for this lead by computing each power term.
+c) 验证方程4.61通过计算各功率项，可用于这根引线。
 
 \colorbox{red}{表4.12和4.13}
 
 \subsubsection{问题4.6A之解}
 
-a) 因为$I_o=N_{fs} i_c(T_\ell)$，我们有：$N_{fs}$=6,000A/80A=75.
-b) With$\tilde{k}$ = 0.327W/cmK; $[A_m]_{fs}=N_{fs} a_m= 0.416\ \mathrm{cm^2}$; $h_L$ = 20.7 J/g; $\~{c}_p$=5.28 J/gK (averaged between 4.2K and 77 K) ; $T_\ell$= 77.3K; $T_0$ = 4.2 K, and$\ell$=
-20 cm into Eq. 4.60, we obtain:
+a) 因为$I_o=N_{fs} i_c(T_\ell)$，我们有：$N_{fs}$=6,000 A/80 A=75。
+
+b) 将$\tilde{k}$ = 0.327 W/cmK; $[A_m]_{fs}=N_{fs} a_m= 0.416\ \mathrm{cm^2}$; $h_L$ = 20.7 J/g; $\~{c}_p$=5.28 J/gK (4.2 K和77 K间的平均值) ; $T_\ell$= 77.3K; $T_0$ = 4.2 K, 以及$\ell$=20 cm代入方程4.60，有：
 \begin{align*}% 4.60
 [Q_{in}]_{fs}=&\frac{\tilde{k}[A_m]_{fs}h_L}{\tilde{c}_p\ell}\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right] \\\tag{4.60}
 =&\frac{(0.327\ \mathrm{W/cmK})(0.461\ \mathrm{cm^2})(20.7\ \mathrm{J/g})}{(5.28\ \mathrm{J/gK})(20\ \mathrm{cm})} \\
@@ -2292,27 +2291,28 @@ b) With$\tilde{k}$ = 0.327W/cmK; $[A_m]_{fs}=N_{fs} a_m= 0.416\ \mathrm{cm^2}$; 
 =&0.0798\ \mathrm{W}
 \end{align*}
 
-As studied in DISCUSSION 4.14 (Eq. 4.32b ), a copper vapor-cooled 6-kA lead would
-have had $Q_{in}\simeq$6 W; thus,$\sim$0.08W is indeed an impressive improvement
+讨论4.14A (方程4.32b )已经研究，对气冷铜制6 kA引线，有$Q_{in}\simeq$6 W；于是，
+$\sim$0.08 W实质上是一个很客观的提升。
 
-c) With $[Q_{in}]_{fs}$ = 0.0798W, we obtain$\dot{m}_h]_{fs}= [Q_{in}]_{fs}/h_L$ = 0.00385 g/s. Heatinput at $z=\ell$is given by the first form of Eq. S4.5b:
+c) 由$[Q_{in}]_{fs}$ = 0.0798 W，我们有
+$\dot{m}_h]_{fs}= [Q_{in}]_{fs}/h_L$ = 0.00385 g/s。在$z=\ell$处的热输入由方程S4.5b的第一种形式给出：
 \begin{align*}
 [Q_\ell]_{fs}&=[\dot{m}_h]_{fs}h_L\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right] \\
 &=(0.00385\ \mathrm{g/s})(20.7\ \mathrm{J/g})\left[\frac{(5.28\ \mathrm{J/gK})(77.3\ \mathrm{K}-4.2\ \mathrm{K})}{(20.7\ \mathrm{J/g})}+1\right] \\
 &=1.556\ \mathrm{W}
 \end{align*}
-于是，$[Q_\ell]_{fs}−[Q_{in}]_{fs}$=1.486W, which essentially equals$[\dot{m}_h]_{fs} \tilde{c}_p(T_\ell-T_0)$=1.487 W.
+于是，$[Q_\ell]_{fs}−[Q_{in}]_{fs}$=1.486 W，基本上等于$[\dot{m}_h]_{fs} \tilde{c}_p(T_\ell-T_0)$=1.487 W.
 
 \subsubsection{问题4.6B：FSV，有并联常规金属带}
-Here, we study an FSV lead with 120 normal metal tapes, $[A_n]_{fs}$=1.735 cm2 (Table
-4.13), paralleled to the FSV lead of PROBLEM 4.6A. Although not demonstrated
-here, for this lead a normal metal of 1.735-cm2 cross section is sufficient against
-flow stoppage incidents that may occur in typical operating conditions
+这里，我们研究一条并联120根常规金属带的FSV引线，类似于问题4.6A中的引线，
+$[A_n]_{fs}$=1.735 $cm^2$ (表4.13)。
+尽管未经证明，截面为1.735 $cm^2$的常规导体足以抵抗典型操作条件下可能发生的
+流体阻塞故障。
 
 a) 使用方程4.75，计算$[Q_{in}]_{fs}^n$。因为存在常规金属，$[A_n]_{fs}\gg [A_m]_{fs}$，
 $[Q_{in}]_{fs}^n\gg[Q_{in}]_{fs}$=0.0798 W。
 
-b) Verify numerically that the power terms are balanced for this lead too.
+b) 数值验证功率项在这条引线上也是平衡的。
 
 \subsubsection{问题4.6B之解}
 a) 首先，我们使用方程4.76计算$[\tilde{kA}]_{fs}^{n}$。注意$[A_m]_{fs}=0.416\ \mathrm{cm^2}$：
@@ -2332,7 +2332,9 @@ a) 首先，我们使用方程4.76计算$[\tilde{kA}]_{fs}^{n}$。注意$[A_m]_{
 有效长度($\ell$)20 cm，截面为$A = 0.480\ \mathrm{cm^2}$，
 约为$[A_n]_{fs}$ = 1.735$\ \mathrm{cm^2}$的30\%。
 尽管$[A_n]_{fs}$很大，$[Q_{in}]_{fs}^n$仍为$Q_{I_o}$的$\sim$ 1/14。这主要是因为
-$\~{k}_n\ll k_0$，其中$k_0$是铜在4.2 K附近的热导率，即0.350 W/cmK ($\~{k}_n$) vs. 6 W/cmK ($k_0$). Also note that this lead generates no Joule dissipation over this part ($\ell$) of the lead.
+$\~{k}_n\ll k_0$，其中$k_0$是铜在4.2 K附近的热导率，
+即0.350 W/cmK ($\~{k}_n$) vs. 6 W/cmK ($k_0$)。同时注意到，在引线的这个部分($\ell$)，
+没有焦耳热产生。
 
 b) 代入$[Q_{in}]_{fs}^n$= 0.4337W，我们得到$\dot{m}_h]_{fs}^{n}= [Q_{in}]^n_{fs}/h_L\simeq$
 0.021 g/s。在$z=\ell$处的热输入$[Q_\ell]_{fs}^{n}$，尽管未推导，但类似于方程S4.5b。于是：
@@ -2350,9 +2352,7 @@ FSV引线，增加了同样数量(120)跟常规金属带。
 
 a) 证明这根CSV引线的$T_{cs}$ = 69.3K。假设$i_c(T)$是$T$的线性函数，且有$i_c(T_0)$=445.5 A，$i_c(T-\ell)$=80 A，如表4.12所给。
 
-b) For$\ell$=20 cm (same value as the FSV counterparts), determine $\xi_{cs}$for this
-CSV for a special—simple—case in which:
-
+b) 对$\ell$=20 cm (与FSV情况同)，确定如下CSV简单特例的$\xi_{cs}$：
 \begin{subequations}% 4.96a
 	\begin{align*}
 \sin\beta_{cs}^{n}(1-\xi)&=1\\
@@ -2360,21 +2360,21 @@ CSV for a special—simple—case in which:
 	\end{align*}
 \end{subequations}
 
-You may determine$\xi_{cs}$ iteratively, first guessing a value of$\xi_{cs}$, compute $\beta_{cs}^n$ from Eq. 4.96b, then insert$\xi_{cs}$and$\beta_{cs}^n$ into Eq. 4.83 to see if Eq. 4.83 is indeed
-satisfied. Because $i_c(T)$is assumed a linear function of $T$, an appropriate
-starting value of$\xi_{cs}$ into Eq. 4.96b may be 0.9 ($\simeq $69.3/77.3).
+你可以迭代的确定$\xi_{cs}$。首先，猜一个$\xi_{cs}$值，根据方程4.96b计算$\beta_{cs}^n$，
+将$\xi_{cs}$和$\beta_{cs}^n$代入方程4.83，检查其是否已经满足。
+因为假定了$i_c(T)$是$T$的线性函数，$\xi_{cs}$的一个合适的起始值可选0.9($\simeq $69.3/77.3)。
 
-c) Verify that$\beta_{cs}^n$ found in b) agrees with$\beta_{cs}^n$ computed by Eq. 4.81.
+c) 验证b)中得到的$\beta_{cs}^n$与方程4.81计算得到的$\beta_{cs}^n$是一致的。 
 
-d) Compute$[Q_{in}]^n_{cs}$ , the heat input to liquid helium at $z=0$, given by Eq. 4.78.
+d) 使用方程4.78，计算$z=0$处输入液氦的热量$[Q_{in}]^n_{cs}$。
 
-e) Numerically compute each term appearing in the following power balance
-equation and demonstrate that power is balanced.
+e) 数值计算下面功率平衡方程中的每一项，证明功率是平衡的。
 \begin{equation}% 4.97
 [Q_\ell]_{cs}^{n}+[Q_j]_{cs}^{n}-[Q_{in}]_{cs}^{n}=[\dot{m}_h]_{cs}^{n}\tilde{c}_p(T_\ell-T_0)
 \end{equation}
-$[Q_\ell]_{cs}^{n}$is the heat into the lead at$z=\ell$;$[Q_j]_{cs}^{n}$is the Joule dissipation within sthe current-sharing region; and$[Q_{\ell_{cs}}]_{cs}$is the heat out of the lead at$z=\ell_{cs}$.
-$[Q_\ell]_{cs}^{n}$and$[Q_j]_{cs}^{n}$are given by modified forms of Eq. S5.9 and Eq. S5.14:
+$[Q_\ell]_{cs}^{n}$是引线$z=\ell$处的热输入；$[Q_j]_{cs}^{n}$是电流分享区内的焦耳热耗散；
+$[Q_{\ell_{cs}}]_{cs}$是引线$z=\ell_{cs}$处的热输出。
+$[Q_\ell]_{cs}^{n}$和$[Q_j]_{cs}^{n}$由方程S5.9和S5.14的变种给出：
 \begin{equation}% 4.98
 [Q_\ell]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}[\frac{1}{2}[\alpha_\ell]_{cs}^{n}+\beta_{cs}^{n}\cot\beta_{cs}^{n}(1-\xi_{cs})]
 \end{equation}
