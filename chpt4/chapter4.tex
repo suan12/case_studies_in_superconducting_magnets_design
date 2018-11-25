@@ -1259,47 +1259,35 @@ Rubin通过将近500多篇论文的钩沉，给出了一个1982-1997年间有关
 这样，Celsius温标下水的冰点0$\circ C$对应273.15 K。K本身就表示了温标的单位，所以应该用
 4.2 K或4.2 kelvins，而不能用4.2◦K或4.2度Kelvin。
 
-\textbf{B. 需求}
+\textbf{B. 要求}
 
-As for any sensor, there are a number of requirements for a temperature sensor.
-These (listed here in no particular order of importance) with the desired quality
-given in parentheses, include: 1) signal level (high); 2) sensitivity (high); 3) response time (fast, to detect transitory events); 4) size (small); 5) magnetic field
-effect (minimal); 6) DC offset (zero); and 7) cost (low). Also desirable are reproducibility, stability, and linearity. Although every sensor is a linear function of any
-variable over a small range, clearly it cannot be expected to remain linear over an
-arbitrarily large range. With the proliferation of computer-based data acquisition
-techniques, linearity is not as pressing as it once was.
+如其他传感器一样，温度传感器有多种要求。这些要求包括(序号不代表重要性；括号内为期望)：
+1) 信号水平(高)； 2) 灵敏度(高)； 3) 响应时间(快，检测转变事件)；4) 尺寸(小)；
+5) 磁场效应(小)；6) DC偏置(零)；和7) 费用(低)。其他想望的性能还包括可重复性、
+稳定性和线性。尽管每一个传感器在小范围内对每一个变量都是线性函数，但明显在任意大范围内保持线性
+是不可能的。随着基于计算机的数据采集技术的大规模使用，对线性的要求已不像过去那样高了。
 
-\textbf{C. 温度计类型}
+\textbf{C. 温度传感器类型}
 
-Three types of thermometers are used in superconducting magnets and related
-experiments: 1) diodes; 2) resistors; and 3) thermocouples. Gas and vapor pressure
-thermometers, once quite common, particularly in the laboratory setup, are rarely
-used now. Each of the three types of thermometers is described briefly below.
+超导磁体及其试验中常用三种温度传感器：1) 二极管； 2) 电阻；和3) 热电偶。
+气压量热计曾普遍使用，尤其是在实验室里，但现在已经罕用了。下面简要介绍上述三种温度传感器。
 
-\textbf{二极管测温} The junction voltage of a semiconductor device, such as
-a diode, forward-biased at a constant current, increases with decreasing temperature. Most widely used diode thermometers are based on Si and GaAlAs junctions;
-many commercial thermometers, both calibrated and uncalibrated, are available.
-Calibrated versions are as little as $\sim 1/2$ (some Si diodes) or as much as$\sim 4$ times
-more expensive than uncalibrated versions, the cost differential dictated chiefly by
-the sensor’s operating temperature range.
+\textbf{二极管} 二极管等半导体器件的结电压在恒定电流的正向偏置下随温度降低而增加。
+最广泛使用的二极管温度传感器是Si和GaAlAs结二极管；未校准的和校准的商业温度传感器均可购得。
+校准的要比未校准的贵约4倍，价格的差异主要是由传感器的运行温区决定的。
 
-\textbf{电阻测温}Resistance thermometers are available with either
-temperature coefficient sign: negative if based on semiconductors and positive if
-based on metals (generally pure to maximize the sensor’s sensitivity, ohm/kelvin).
+\textbf{电阻} 两种温度系数的电阻温度传感器均有使用：基于半导体的负系数和基于金属的正系数
+(一般来说，金属纯度高则传感器敏感性高，$\Omega/K$)。
 
-The negative temperature coefficient sensors include germanium, carbon resistors,
-carbon-glass (primarily for use in magnetic fields), and ruthenium oxide. The
-positive temperature coefficient sensors include platinum, platinum alloys, and
-rhodium-iron. Becoming increasingly popular is the zirconium oxynitride thermometer under the name Cernox, manufactured by Lake Shore Cryotronics, Inc.
-Among metal-based sensors, the one based on pure platinum is the most prominent and everyone’s choice when highest-accuracy is required; indeed the standard
-platinum resistance thermometer defines the International Temperature Standard
-from 13.8033 K, the triple point of hydrogen, up to well beyond 300 K.
+负温度系数传感器包括germanium, carbon resistors, carbon-glass (主要用于磁场中)和ruthenium oxide。
+正温度系数传感器包括platinum, platinum alloys和rhodium-iron。
+zirconium oxynitride传感器，特别是Lake Shore Cryotronics, Inc的Cernox产品，越来越流行。
+基于金属的传感器之中，基于纯铂的这一种最为突出，是高准确度要求下的必选；实际上，标准铂电阻
+温度传感器定义了氢三相点13.8033 K到300 K以上的国际温度标准(International Temperature Standard)。
 
 \textbf{温度谱}
 
-Figure 4.19 shows a temperature spectrum over the range from 100 picokelvins
-(100 pK) to 1 gigakelvin (1 GK). Note that superconducting magnets operate over
-a temperature span that extends less than 2 log scales, 1 K–100 K.
+图4.19给出了跨越100 pK到1 GK区间的温度谱。我们看到，超导磁体运行跨过不到2个log尺度，1 K–100 K。
 
 \begin{figure}[htbp]
 	\centering
@@ -1307,36 +1295,33 @@ a temperature span that extends less than 2 log scales, 1 K–100 K.
 	\caption{涵盖19个数量级的温度谱。}
 \end{figure}
 
-\textbf{热电偶} For cryogenic applications that tolerate uncertainties of temperature up to 5\%—for example, 1 K at 20 K—thermocouples are widely used.
-This is chiefly because they can meet some of the requirements listed earlier—
-small size and fast response time—more readily than the diode and resistance
-thermometers. Also, thermocouples are the least expensive among the three types.
+\textbf{热电偶} 对可容忍5\%温度不确定性的制冷应用——比如20 K下可容忍1 K——热电偶广泛使用。
+这主要是由于热电偶符合上面列出的多项要求——尺寸小、响应快——比二极管和电阻温度传感器要好。
+另外，热电偶也是这三种中最便宜的。
 
 \textbf{D. 几种热传感器的信号水平和敏感性}
 
-Table 4.11 presents approximate values of signal level (V ) and sensitivity ($\delta V/\delta T$)
-at selected temperatures in the 2–300 K range for six commonly used thermometers, two from each of the three types: diodes [4.44], resistances [4.44]; and thermocouples [4.45]. Note that these values are given here to demonstrate that both
+表4.11给出了6种常用热传感器的信号水平(V)和敏感性($\delta V/\delta T$)在2-300 K区间几个温度下的近似值。三种类型，每种选两个，二极管[4.44]，电阻[4.44]，热电偶[4.45]。
+Note that these values are given here to demonstrate that both
 signal levels and sensitivities vary over a wide range among thermometers and as
-a “guide” in the selection process for appropriate sensors. Commercial sources of
-these sensors generally supply accurate “general” data for these sensors; each calibrated sensor is provided with its own specific data. Each thermometer in Table
-4.11 is briefly discussed below, including magnetic field effects.
+a “guide” in the selection process for appropriate sensors. 
+这些传感器的商业渠道通常提供准确的“典型”数据；各校准的传感器都提供它自己的特定数据。
+下面简要讨论表4.11中的各传感器，包括其磁场下的效应。
 
-\textbf{额外评论，包括磁场效应}
+\textbf{评论，含磁场效应}
 
-Diode Diode thermometers, such as silicon and GaAlAs, have the highest sensitivity among the three types over the entire temperature range of our interest.
-Also as may be deduced from Table 4.11, the sensor’s V (T) curve is quite linear,
-i.e., V decreasing roughly linearly with T, in the 50–300 K range. Also attractive is that for most applications in which temperature uncertainties up to 5\% are
-acceptable, uncalibrated sensors that rely only on the manufacturer’s standard calibration curve may be used. The only negative is its unsuitability in the presence
-of a magnetic field, particularly in the temperature range below 60 K [4.45].
+\textbf{Diode} 二极管热传感器，比如silicon和GaAlAs，在我们感兴趣的温区内具有最高的敏感性。
+从表4.11中还可以推断出，传感器的V (T)曲线线性化很好，即在50-300 K区间，V大体上是随T线性减小的。
+另一个吸引人之处是，大多数应用都可接受5\%的不确定性，仅依赖于制造商标准校准曲线的未校准的传感器
+也是可用的。仅有的负面问题是它不适合用于磁场中，特别是低于60 K的温区内[4.45]。
 
-\textbf{GaAlAs} There are two important aspects of GaAlAs that are different from Si:
-1) greater nonlinearity of V (T); and 2) insensitivity to magnetic fields up to $\sim 5$ T.
+\textbf{GaAlAs} 相比Si，GaAlAs有两处重要不同：1) V (T)具有更强的非线性；
+2) 对$\sim 5$ T以内的磁场不敏感。
 
-\textbf{Cernox} Although not as sensitive as diode thermometers, second to Si, Cernox
-is widely used. Unlike Si, it is quite insensitive to a magnetic field. Data of
-Lake Shore Cryotronics [4.44], the manufacturer of Cernox, show that at 20 K the
-sensor’s $\delta T/T$ uncertainty due to magnetic field is less than 0.2\% up to a field of
-20 T; the error increases with decreasing temperature, reaching $\sim 5$\% at 2 K.
+\textbf{Cernox} 尽管不如二极管敏感，仅次于Si的Cernox得到了广泛使用。
+不像Si，它对磁场十分不敏感。制造商Lake Shore Cryotronics的数据[4.44]表明，
+20 K下该传感器在20 T内的$\delta T/T$对磁场的不确定性小于0.2\%；误差随温度降低而增加，
+在2 K时达到$\sim 5$\%。
 
 \textbf{Platinum} A platinum sensor is quite insensitive to magnetic field at temperatures above $\sim 40$ K: for example, at 40 K and 5 T, $\delta T/T$ is 1.5\%, which, at 80 K
 and 5 T, decreases by a factor of 10 [4.44].
