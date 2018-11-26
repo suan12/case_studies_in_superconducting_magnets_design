@@ -1323,37 +1323,29 @@ a “guide” in the selection process for appropriate sensors.
 20 K下该传感器在20 T内的$\delta T/T$对磁场的不确定性小于0.2\%；误差随温度降低而增加，
 在2 K时达到$\sim 5$\%。
 
-\textbf{Platinum} A platinum sensor is quite insensitive to magnetic field at temperatures above $\sim 40$ K: for example, at 40 K and 5 T, $\delta T/T$ is 1.5\%, which, at 80 K
-and 5 T, decreases by a factor of 10 [4.44].
+\textbf{Platinum} 铂传感器在温度$\sim 40$ K以上对磁场十分不敏感：例如，40 K和5 T时，
+$\delta T/T$是1.5\%，80 K和5 T时下降10倍[4.44]。
 
-\textbf{Type E Thermocouple} Both Type E and Chromel-Au0.07\%Fe have the smallest signal levels and sensitivities compared with the other four sensors. Note that
-with the ice-point (0◦) reference, Type E, at 20 K, for example, has an offset voltage of ∼11 mV, while its sensitivity is only  $\sim 10\mu$V/K. However, its accuracy is
-much improved when only changes in temperature from a specific operating point
-are to be measured. Also, if temperature uncertainties up to $\sim 5$\% can be tolerated
-and many sensors are required, Type E is an excellent choice. Field sensitivity is
-quite modest, e.g., 2\% at 20 K and <1\% at 45 K, both in a field of 8 T [4.44].
+\textbf{E型热电偶} E型和Chromel-Au0.07\%Fe热电偶相比于其他四种传感器，信号水平和敏感性
+都是最低的。以冰点($0^\circ$)为基准，E型在20 K的偏置电压为$\sim 11$ mV，
+其敏感度仅为$\sim 10\mu$V/K。然而，当仅测量在特定运行点附近的温度变化时，它的准确度有很大提升。
+同时，如果$\sim 5$\%的温度不确定性可以接受，并且需要大量传感器，那E型热电偶是一个极好的选择。
+它的磁场的敏感性是中等的，比如在8 T磁场下，20 K时为2\%，45 K时<1\%[4.44]。
 
-\textbf{AuFe(0.07\%)-Chromel} Among all thermocouples, chromel-AuFe(0.07\%) gives
-the highest sensitivity, and thus is most suitable, at temperatures below $\sim 20$ K. Its
-V (T) values, however, can easily deviate from the published values [4.45] when the
-AuFe(0.07\%) wire is strained—it must be handled very carefully. Its sensitivity
-to magnetic field is roughly one order of magnitude greater than that of Type E.
+\textbf{AuFe(0.07\%)-Chromel} 所有的热电偶中，chromel-AuFe(0.07\%)具有最高的敏感性，于是
+它最适合$\sim 20$ K之下的温度测量。不过，当AuFe(0.07\%)线有应变时，它的V (T) 值很容易偏离公开值[4.45]——它必须小心处理。
+它对磁场的敏感性大致上要比E型热电偶高一个数量级。
 
 \textbf{电容式热传感器}
 
-Though not included in the above discussion, capacitance thermometers such as
-strontium titanate sensors are used because of their very low magnetic field dependence. Several other types based on glass or plastic materials are popular for
-temperatures below 1 K.
+尽管上面的讨论未涉及，但电容式热传感器，如strontium titanate传感器，因其对磁场依赖性很小也有所使用。
+几种其他类型的基于玻璃或塑料材料的传感器在1 K以下温度测量上应用很多。
 
 \subsection{讨论4.14：气冷铜电流引线}
-For a superconducting magnet immersed in a bath of liquid helium at 4.2 K, a
-vapor-cooled copper current lead can be a large heat load on the system cryogenics.
-The basic design concept for an optimum vapor-cooled copper lead is to make the
-Joule heating and conduction heating about equal and to remove the heat by
-funneling cold helium vapor through the lead. Work on vapor-cooled leads began
-in the 1960s and continues [4.47–4.52]. Vapor-cooled leads are now commercially
-available in the current range 100 A–75 kA. Recently, it has reached the 100-kA
-level [4.53]. Here we present analytical expressions for key parameters of a lead.
+对于浸于4.2 K液氦中的超导磁体，气冷铜引线会为制冷系统带来很大的热负荷。
+优化的气冷铜引线的基本设计概念是令焦耳热和传导热大致相等，通过引线注入冷氦气带走这些热量。
+气冷引线的工作开始于1960s，现在还在继续[4.47–4.52]。100 A-75 kA的气冷引线现在已可商业化购得。
+最近，最大电流已经达到的100 kA水平[4.53]。这里，我们给出引线关键参数的解析表达式。
 
 \textbf{A. 功率密度方程}
 
@@ -1418,13 +1410,10 @@ Q_{I_o}=Ak(T_0)\frac{dT}{dz}\mid_{z=0}=\frac{k_0\rho_0I_{0}^{2}}{\dot{m}_Ic_{p0}
 如果引线载流$I<I_o$，冷端热输入将不再是$(I/I_o)Q_{I_o}$。
 
 在这个讨论中，气冷引线冷端温度$T_0$假定为$T_0$=6 K之下的温度。
-然而，由于经常需要提供高于磁体的液氦源，在实际气冷引线中，引线冷端($z = 0$)可能位于磁体顶部(和最低液位)以上——在一些情况下，要高出25 cm或更多。 The cold end is then electrically
-and thermally connected to a superconductor-shunted copper extension, the other
-end ($z<0$) of which penetrates into the liquid. The superconductor shunt (often of
-copper/NbTi composite) carries $I_o$ to the magnet, and the copper conducts $Q_{I_o}$to
-the liquid. The copper extension must have enough cross sectional area to conduct
-$Q_{I_o}$, even when exposed out of liquid helium over its entire span, without raising
-$T_0$ too high, thus enabling the superconductor shunt to carry $I_o$ superconductively.
+然而，由于经常需要提供高于磁体的液氦源，在实际气冷引线中，引线冷端($z = 0$)可能位于磁体顶部(和最低液位)以上——在一些情况下，要高出25 cm或更多。 然后，冷端在电气上和热上连接到超导体旁路的铜延伸段
+，另一端($z<0$)插入液体中。超导体旁路(通常是铜/NbTi合物)载流通向磁体的电流$I_o$，
+铜向液体传导热量$Q_{I_o}$。铜延伸段必须有足够的截面积以传导$Q_{I_o}$，甚至在其整个区段上无液氦，
+也不应提高$T_0$过大，这样超导旁路才能以超导的状态载流$I_o$。
 
 
 代入液氦的$h_L = 20.7 \times 10^3$ J/kg和$c_{p0}\simeq 5.26\times 10^3$ J/kg K；铜的
@@ -1473,9 +1462,8 @@ $T_0$ too high, thus enabling the superconductor shunt to carry $I_o$ supercondu
 
 \textbf{D. 静态热输入}
 
-The liquid helium boil-off rate when the optimized lead carries no current—called
-the “standing” boil-off rate,$\.{m}_0$—is due to heat input into the helium by conduction
-only. With$I_o$= 0 inserted into Eq. 4.28, we have:
+优化的引线无电流通过时的液氦蒸发率——称为静态蒸发率，$\.{m}_0$——仅取决于传导到氦中的热输入。
+将$I_o$= 0代入方程4.28，我们有：
 \begin{equation}% 4.36
 A\tilde{k}\frac{d^2T}{dz^2}-\dot{m}_0\tilde{c}_p\frac{dT}{dz}=0
 \end{equation}
@@ -1483,9 +1471,8 @@ A\tilde{k}\frac{d^2T}{dz^2}-\dot{m}_0\tilde{c}_p\frac{dT}{dz}=0
 \begin{equation}% 4.37
 \tilde{k}=\frac{1}{T_\ell-T_0}\int_{T_0}^{T_\ell}k(T)dT
 \end{equation}
-Table 4.18 (p. 307) presents values of$\~{k}$ for four materials (G-10, stainless steel
-304, brass, and copper) over three common temperature ranges in cryogenic applications:
-4–80 K; 4–300 K; and 80–300 K.
+表4.18给出了四种材料(G-10，不锈钢304，紫铜和黄铜)在三个制冷应用中常用温区的$\~{k}$值：
+4–80 K；4–300 K；和80–300 K。
 
 给定边界条件$T(z=0)=T_0$和$A\~{k}(dT/dz)_{z=0}=\.{m}_0 h_L$，$T(z)$可以表示为：
 \begin{equation}% 4.38a
@@ -1520,19 +1507,16 @@ $\zeta_o\simeq2.3\times 10^7$  A/m代入方程4.11，有：
 \begin{equation}% 4.42
 \frac{Q_0}{Q_{I_o}}\simeq 0.69
 \end{equation}
-That is, the standing boil-off rate of a vapor-cooled lead is roughly 70\% of the
-boil-off rate of the lead carrying its rated current.
+也即，气冷引线的静态挥发率大致上是引线通过额定电流时的挥发率的70\%。
 
 \textbf{E. 优化电流引线的压降}
 
-The voltage drop$V_o$ over the entire length of the copper lead at$I_o$is given by:
+载流为$I_o$时，整条铜引线上的压降$V_o$为：
 \begin{equation}% 4.43a
 V_o=\frac{I_o}{A}\int_{0}^{\ell}\rho_{cu}dz
 \end{equation}
-Integration over the lead length$\ell$is necessary because$\rho_{cu}$,
-the electrical resistivity
-of copper, is temperature-dependent and thus varies with $z$. Equation 4.43a may
-be expressed as:
+有必要在引线长度$\ell$上作积分，因为铜的电阻率$\rho_{cu}$依赖于温度，也即随$z$变化。
+方程4.43a可以改写为：
 \begin{align*}% 4.43b
 V_o=\tilde{\rho}_{cu}(\frac{I_o\ell}{A})_{ot}=\tilde{\rho}_{cu}\zeta_o \tag{4.43b}
 \end{align*}
@@ -1540,14 +1524,13 @@ V_o=\tilde{\rho}_{cu}(\frac{I_o\ell}{A})_{ot}=\tilde{\rho}_{cu}\zeta_o \tag{4.43
 \begin{equation}% 4.44
 \tilde{\rho}_{cu}=\frac{1}{\ell}\int_{0}^{\ell}\rho_{cu}dz\simeq\frac{1}{T_\ell-T_0}\int_{T_0}^{T_\ell}\rho_{cu}(T)dT
 \end{equation}
-Equation 4.44 assumes a linear temperature gradient along the current lead. Combining
-Eqs. 4.43b, where$\~{\rho}_{cu}$is given in the unit of$\Omega m$, and Eq. 4.35b, we have:
+方程4.44假设电流引线上的温度梯度是线性的。与方程4.43b和4.35b联立，其中$\~{\rho}_{cu}$的单位是$\Omega m$，我们有：
 \begin{equation}% 4.45
 V_o\simeq2.3\times 10^7\tilde{\rho}_{cu}\ \mathrm{V}
 \end{equation}
-That is, $V_{ot}$is the same among leads optimized for any rated current.
+也即，对任意额定电流优化的引线的$V_{ot}$是相同的。
 
-For copper,$\~{\rho}_{cu}$is$\sim$2.5×10−10 Ωm (below$\sim$50 K) and varies linearly with temperature
+对铜，$\~{\rho}_{cu}\sim 2.5\times 10^{−10}\ \mathrm{\Omega m}$ ($\sim$50 K之下) and varies linearly with temperature
 above$\sim$50 K, being 1.75×10−8 Ωm at 273 K. From Eq. 4.44, we have:
 $\~{\rho}_{cu}\simeq 0.4\times 10^{-8}\ \mathrm{\Omega m}$。The voltage drop across an optimum lead at its rated current
 is independent of rated current; for a copper lead it is$\sim$100 mV. Thus, $V_o\sim$100mV
