@@ -1729,26 +1729,20 @@ b) 上端在$z=\ell$处传导到引线中的热量$[Q_{\ell}]_{fs}$为：
 方程4.61表明，三个功率项是平衡的。也即，$z=\ell$处进入引线的热量与$z=0$处流出引线的热量差
 恰好等于氦气的热功率增加量。
 
-\subsection{问题4.5：气冷HTS引线——电流分配型(CSV)}
+\subsection{问题4.5：气冷HTS引线——电流共享型(CSV)}
 
-这里我们研究We study here a vapor-cooled HTS current lead in which a short section at the
-warm ($T_\ell$) end is designed to operate in the so-called “current-sharing” mode [4.75–
-4.77]—current sharing is studied in CHAPTER 6. This current-sharing version
-(CSV) of a vapor-cooled HTS lead has the same rated current as its FSV counterpart
-studied in PROBLEM 4.4. Figure 4.22 shows a linearized $I_c(T)$ plot for the
-superconductor in the lead, with critical currents of $I_{c0}$ at $T_0 (z = 0)$ and$I_{c\ell}$at
-$T_\ell(z=\ell)$. Also shown by the dotted horizontal line is the rated transport current
-$I_o$of the lead. As indicated in the figure, $I_c(T_{cs})=I_o$ at $T_{cs}$, the temperature at
-which current sharing begins. 
+这里我们研究气冷HTS电流引线，其中热端($T_\ell$) 的一小段设计运行于所谓的“电流共享”模式[4.75–
+4.77]——电流共享将在第六章研究。电流共享型(CSV)的气冷HTS引线和问题4.4中研究的FSV型的额定电流相同。
+图4.22给出了引线超导体的线性化$I_c(T)$图，其在$T_0 (z = 0)$时临界电流$I_{c0}$，
+在$T_\ell(z=\ell)$时为$I_{c\ell}$。水平点线图还给出了引线的额定传输电流$I_o$。
+如图指出的，电流共享开始的温度$T_{cs}$时，$I_c(T_{cs})=I_o$。
 虚线给出了$I_o$流过超导体常规金属基底的部分。在$T_\ell$时，超导体载流$I_{c\ell}$，基底载流
 $I_o-I_{c\ell}$。HTS引线的这个很小的部分产生焦耳热，必须用足够的氦将之带走。
 
 \textbf{CSV的优势}
 
-For the same rated transport current, the CSV lead contains fewer (Ncs) expensive
-HTS tapes than its FSV counterpart ($N_{cs} <N_{fs}$). Furthermore, as discussed in
-PROBLEM 4.6 for 6-kA leads, the cold-end heat input of the CSV lead, despite
-its Joule dissipation near the warm end, is less than that of the FSV counterpart.
+在相同的额定传输电流下，相比于FSV型，CSV型引线含有较少($N_{cs}$)的贵重HTS带材 ($N_{cs} <N_{fs}$)。
+并且，如问题4.6讨论的6 kA引线所给出的，CSV引线的冷端的热输入要小于FSV的。
 
 \textbf{超导段分析}($0\le z\le \ell_{cs}$)
 
@@ -1807,17 +1801,17 @@ T(\xi)=T_{cs}+\frac{(T_\ell-T_{cs})}{e^{\frac{[\alpha_\ell]_{cs}}{2}}\sin\beta_{
 \begin{equation}% 4.68b
 \beta_{cs}=\sqrt{\frac{\tilde{\rho}_xI_o(I_o-I_{c\ell})\ell^2}{\tilde{k}[A_m]_{cs}^{2}(T_\ell-T_{cs})}-\frac{1}{4}[\alpha_\ell]_{cs}^{2}}
 \end{equation}
-Combining Eqs. 4.68b and 4.65b, we also have:
+联立4.68b和4.65b，我们有：
 \begin{equation}% 4.68c
 \beta_{cs}=\sqrt{\frac{\tilde{\rho}_xI_o(I_o-I_{c\ell})\ell^2}{\tilde{k}[A_m]_{cs}^{2}(T_\ell-T_{cs})}-\frac{1}{4}\{\frac{1}{\xi_{cs}}\ln\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]\}^2}
 \end{equation}
 
-c) By equating conduction heat derivable from Eq. 4.62 and that derivable from
-Eq. 4.67, both at $\xi_{cs}=\ell_{cs}/\ell$,show that$\xi_{cs}$may be given by:
+c) 令方程4.62和方程4.67分别给出的热传导相等，两者都有$\xi_{cs}=\ell_{cs}/\ell$，证明
+$\xi_{cs}$可以写为：
 \begin{equation}% 4.69
 [\alpha_\ell]_{cs}e^{\frac{[\alpha_\ell]_{cs}(1+\xi_{cs})}{2}}=\frac{\beta_{cs}}{\sin\beta_{cs}(1-\xi_{cs})}\left[\frac{\tilde{c}_p(T_\ell-T_{cs})}{h_L}\right]
 \end{equation}
-Combining Eqs. 4.65a, 4.65b, and 4.69, and noting that:
+联立4.65a，4.65b和4.69，并注意到：
 \begin{subequations}
 	\begin{align*}
 e^{\frac{[\alpha_\ell]_{cs}}{2}}&=\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]^{1/(2\xi_{cs})}\\
@@ -1829,20 +1823,18 @@ e^{\frac{[\alpha_\ell]_{cs}\xi_{cs}}{2}}&=\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h
 \frac{1}{\xi_{cs}}\left[\frac{h_L}{\tilde{c}_p(T_\ell-T_{cs})}\right]\ln\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]
 \end{equation}
 
-Note that for a set of parameters of a CSV lead—$\~{\rho}_x, \~{k}, [A_m]_{cs}, I_o, I_{c\ell}$—the
-only unknown parameter in Eq. 4.71 is ξcs, because the only unknown in $\beta_{cs}$(Eq. 4.68c) is also$\xi_{cs}$:$\xi_{cs}$must satisfy both Eqs. 4.68c and 4.71.
+对于一组CSV引线参数——$\~{\rho}_x, \~{k}, [A_m]_{cs}, I_o, I_{c\ell}$——方程4.71中
+唯一不知道的参数是$\xi_{cs}$。因为$\beta_{cs}$(方程4.68c)中唯一不知道的参数也是$\xi_{cs}$，
+$\xi_{cs}$必须同时满足方程4.68c和4.71。
 
-d) Show that over the fully superconducting section ($0\le z\le \ell_{cs}$) of this CSV
-lead, the three power terms are balanced:
+d) 证明在该CSV引线的整个超导段 ($0\le z\le \ell_{cs}$)，三个功率项是平衡的： 
 \begin{equation}% 4.72
 [Q_{\ell_{cs}}]_{cs}-[Q_{in}]_{cs}=[\dot{m}_h]_{cs}\tilde{c}_p(T_{cs}-T_0)
 \end{equation}
 式中，$[Q_{\ell_{cs}}]$是在$z=\ell_{cs}$进入全超导段的传导热。
 
-e) Show that in the current-sharing region, the four power terms—$[Q_\ell]_{cs}$, the
-conduction into the CSV lead at $z =\ell$; $Q_j$, the total Joule dissipation generated
-within the region; $[Q_{\ell_{cs}}]$, the conduction out of the lead at$z =\ell_{cs}$;
-and convective cooling,$\.{m}_h \~{c}_p (T_\ell-T_{cs})$—are balanced.
+e) 证明在电流共享区域，四个功率项——在$z =\ell$处进入CSV引线的传导热$[Q_\ell]_{cs}$；
+区域内产生的总焦耳热耗散$Q_j$；在$z =\ell_{cs}$处流出引线的传导热$[Q_{\ell_{cs}}]$；以及对流冷量$\.{m}_h \~{c}_p (T_\ell-T_{cs})$——是平衡的。
 \begin{equation}% 4.73
 [Q_\ell]_{cs}+Q_j-[Q_{\ell_{cs}}]_{cs}=[\dot{m}_h]_{cs}\tilde{c}_p(T_\ell-T_{cs})
 \end{equation}
@@ -1851,11 +1843,11 @@ f) 证明：
 \begin{equation}% 4.74
 [Q_\ell]_{cs}+Q_j-[Q_{\ell_{cs}}]_{cs}=[\dot{m}_h]_{cs}\tilde{c}_p(T_\ell-T_0)
 \end{equation}
-That is, over the entire CSV lead, power is balanced
+即，在整个CSV引线范围内，能量是平衡的。
 
 
 \subsubsection{问题4.5之解}
-a) By inserting$\xi=0$ into Eq. 4.62, we obtain:
+a) 将$\xi=0$代入方程4.62，有：
 \begin{align*}
 T(0)&=\left(\frac{T_{cs}-T_0}{e^{[\alpha_{1}\ell]_{cs}\xi_{cs}}-1}\right)\left(1+\frac{e^{[\alpha_{1}\ell]_{cs}\xi_{cs}}T_0-T_{cs}}{T_{cs}-T_0}\right)\\
 &=\left(\frac{T_{cs}-T_0}{e^{[\alpha_{1}\ell]_{cs}\xi_{cs}}-1}\right)\left[\frac{T_0({e^{[\alpha_{1}\ell]_{cs}\xi_{cs}}-1})}{T_{cs}-T_0}\right]=T_0 \tag{S5.1}
@@ -1869,18 +1861,18 @@ b) 我们有：
 \begin{equation}
 [Q_{in}]_{cs}=\frac{\tilde{k}[A_m]_{cs}}{\ell}\frac{dT}{d\xi}\mid_{\xi=0}
 \end{equation}
-where $dT/d\xi$ is evaluated from $T(\xi)$given by Eq. 4.62. Thus:
+式中，$dT/d\xi$由方程4.62给出的$T(\xi)$计算。于是：
 \begin{equation}
 [Q_{in}]_{cs}=\frac{\tilde{k}[A_m]_{cs}}{\ell}(\frac{T_{cs}-T_0}{e^{[\alpha_\ell]_{cs}\xi_{cs}}-1})[\alpha_\ell]_{cs}\ell_{cs}=[\dot{m}_h]_{cs}h_L
 \end{equation}
-Combining $[\alpha_{1}\ell]_{cs}$ given by Eqs. 4.63 and S5.4, we obtain:
+联立方程4.63和S5.4给出的$[\alpha_{1}\ell]_{cs}$我们得到：
 \begin{equation}% 4.65a
 e^{[\alpha_\ell]_{cs}\xi_{cs}}=\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1
 \end{equation}
 \begin{equation}% 4.65b
 [\alpha_\ell]_{cs}=\frac{1}{\xi_{cs}}\ln[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1]
 \end{equation}
-Finally, by combining Eqs. S5.3 and 4.65b, and noting$xi_{cs}\ell=\ell_{cs}$, we have:
+最后，联立方程S5.3和4.65b，并注意到$xi_{cs}\ell=\ell_{cs}$，我们有：
 \begin{equation}% 4.64
 [Q_{in}]_{cs}=\frac{\tilde{k}[A_m]_{cs}h_L}{\tilde{c}_p\ell_{cs}}\ln[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1]
 \end{equation}
@@ -1888,8 +1880,7 @@ Finally, by combining Eqs. S5.3 and 4.65b, and noting$xi_{cs}\ell=\ell_{cs}$, we
 通常更小，最多也就是FSV的$[A_m]_{fs}/\ell$的$\sim 80\%$。
 
 
-c) We can solve for $\xi_{cs}$ by equating the temperature slope derivable from Eq. 4.62
-and that derivable from Eq. 4.67, both at$\xi_{cs}=\ell_{cs}/\ell$
+c) 我们可以令方程4.62导出的与方程4.67导出的温度斜率相等，解出$\xi_{cs}$。两者都有$\xi_{cs}=\ell_{cs}/\ell$。
 \begin{equation}
 \frac{dT}{d\xi}\mid_{\ell_{cs}}=\frac{[\alpha_\ell]_{cs}e^{[\alpha_\ell]_{cs}\xi_{cs}}(T_{cs}-T_0)}{(e^{[\alpha_\ell]_{cs}\xi_{cs}}-1)}
 \end{equation}
@@ -1897,13 +1888,13 @@ and that derivable from Eq. 4.67, both at$\xi_{cs}=\ell_{cs}/\ell$
 \frac{dT}{d\xi}\mid_{\ell_{cs}}=\frac{\beta_{cs}e^{\frac{[\alpha_\ell]{cs}}{2}}(T_\ell-T_{cs})}{e^{\frac{[\alpha_\ell]_{cs}}{2}}\sin\beta_{cs}(1-\xi_{cs})}
 \end{equation}
 
-Equating Eqs. S5.5a and S5.5b, we obtain:
+令S5.5a和S5.5b相等，有：
 
 \begin{align*}
 \frac{[\alpha_\ell]_{cs}e^{[\alpha_\ell]_{cs}\xi_{cs}}(T_{cs}-T_0)}{(e^{[\alpha_\ell]_{cs}\xi_{cs}}-1)}
 =\frac{\beta_{cs}e^{\frac{[\alpha_\ell]_{cs}\xi_{cs}}{2}}(T_\ell-T_{cs})}{e^{\frac{[\alpha_\ell]_{cs}}{2}}\sin\beta_{cs}(1-\xi_{cs})} \tag{S5.6}
 \end{align*}
-Equation S5.6 may be rearranged and combined with Eqs. 4.70 to obtain Eq. 4.71.
+方程S5.6可以重新排列，并与方程4.70联立得到4.71：
 
 d) 从方程S5.5a，我们可以计算$[Q_{\ell_{cs}}]_{cs}$：
 \begin{align*}
@@ -1919,7 +1910,7 @@ d) 从方程S5.5a，我们可以计算$[Q_{\ell_{cs}}]_{cs}$：
 \begin{equation}% 4.72
 [Q_{\ell_{cs}}]_{cs}-[Q_{in}]_{cs}=[\dot{m}]_{cs}\tilde{c}_p(T_{cs}-T_0)
 \end{equation}
-That is, within the fully superconducting section of a CSV lead, power is balanced.
+也即，在CSV引线的整个超导短，能量是平衡的。
 
 e) 在$z=\ell$处传导至引线的热量$[Q_\ell]_{cs}$可由方程4.67计算：
 \begin{align*}
@@ -1953,27 +1944,25 @@ Q_j=&
 
 方程S5.14
 
-Combining Eqs. S5.9, S5.10, and S5.14, we obtain:
+联立方程S5.9、S5.10和S5.14，有：
 
 方程S5.15
 
-And from Eqs. S5.15 and 4.63:
+根据方程S5.15和4.63：
 \begin{align*}% 4.73
 [Q_\ell]_{cs}+Q_j-[Q_{\ell_{cs}}]_{cs}=[\dot{m}_h]_{cs}\tilde{c}_p(T_\ell-T_{cs}) \tag{4.73}
 \end{align*}
 
-f) By adding Eqs. 4.72 and 4.73, we obtain:
+f) 代入方程4.72和4.73，有：
 \begin{align*}% 4.74
 [Q_\ell]_{cs}+Q_j-[Q_{\ell_{cs}}]_{cs}=[\dot{m}_h]_{cs}\tilde{c}_p(T_\ell-T_0) \tag{4.74}
 \end{align*}
 
 \textbf{Ag-Au合金的热导率和电导率数据}
 
-Figures 4.23 and 4.24 present, respectively, thermal conductivity and electrical
-resistivity data of Ag-Au alloys [4.78]. Although “pure” silver used in Bi2223 has
-an advantage of very small electrical resistivity, its thermal conductivity is too
-great for current leads. A compromise has been to replace pure Ag with Ag-Au
-in Bi2223 manufactured specifically for use in current leads.
+图4.23和4.24分别给出了Ag-Au合金的热导率和电阻率数据[4.78]。
+尽管Bi2223中使用的“纯”银具有很小的电阻率，但它的热导率对电流引线却太大了。
+故出于折中考虑，电流引线专用的Bi2223带在制作时将纯Ag替换为Ag-Au合金。
 
 \begin{figure}[htbp]
 	\centering
@@ -1987,13 +1976,9 @@ in Bi2223 manufactured specifically for use in current leads.
 \end{figure}
 
 \subsection{讨论4.16：FSV和CSV电流引线的保护}
-Because each HTS tape (Bi2223/Ag-Au in PROBLEM 4.5) in either an FSV or
-a CSV lead has a relatively large $i_c(T_\ell)$ with a relatively small $a_m$, when driven
-normal it generates a large Joule dissipation in comparison with the available
-convective cooling: neither lead is capable of surviving an episode of even a short
-period of flow stoppage. To protect against such a fault-mode incident, the lead
-must be paralleled with normal-metal tapes that not only reduce Joule dissipation
-but also increase the cooling surface area.
+因为FSV或CSV引线中的各HTS带 (问题4.5中的Bi2223/Ag-Au)都有较大的$i_c(T_\ell)$以及较小的$a_m$，
+当进入正常态时，相比于可用的对流冷却能力来说，它产生的焦耳热耗散偏大：两种引线都不能承受哪怕短时
+的流体阻塞。为了保护此类故障事件，引线必须并联常规金属带。这样，不仅减小了焦耳耗散，还提高了冷却表面积。
 
 \textbf{FSV} 此时，FSV引线的$[Q_{in}]_{fs}$修改为$[Q_{in}]_{fs}^{n}$：
 \begin{equation}% 4.75
@@ -2003,16 +1988,13 @@ but also increase the cooling surface area.
 \begin{equation}% 4.76
 [\tilde{kA}]_{fs}^{n}=\tilde{k}[A_m]_{fs}+\tilde{k}[A_n]_{fs}
 \end{equation}
-$\~{k}_n$和$[A_n]_{fs}$分别是the thermal conductivity and total cross sectional
-area of the normal metal tapes paralleled to the HTS tapes. Note that for the sake
-of protection, heat input to the liquid helium is increased because$[Q_{in}]_{fs}^{n}>[Q_{in}]_{fs}$,
-as given by Eq. 4.60. $[\alpha]_{fs}$, given by Eq. 4.59, is modified to:
+$\~{k}_n$和$[A_n]_{fs}$分别是并联于HTS带的常规金属带的热导率和总截面积。
+为了达到保护的目的，进入液氦的热输入增加了，如方程4.60指出的那样：$[Q_{in}]_{fs}^{n}>[Q_{in}]_{fs}$。方程4.59给出的$[\alpha]_{fs}$修改为：
 \begin{equation}% 4.77a 4.77b
 [\alpha_\ell]_{fs}^{n}=\frac{[\dot{m}_h]_{fs}^{n}\tilde{c}_p\ell}{\tilde{kA}_{fs}^{n}} 
 =\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
 \end{equation}
-where $[\dot{m}_h]_{fs}^{n}$is the effluent helium mass flow rate for an FSV lead paralleled with
-normal metal tapes.
+式中，$[\dot{m}_h]_{fs}^{n}$是并联了常规金属带的FSV引线的氦气质量流量。
 \begin{equation}% 4.74
 [Q_\ell]_{cs}+Q_j-[Q_{in}]_{cs}=\dot{m}_h\tilde{c}_p(T_\ell-T_0)
 \end{equation}
@@ -2024,19 +2006,16 @@ normal metal tapes.
 \begin{equation}% 4.79
 [\tilde{kA}]_{cs}^{n}=\tilde{k}[A_m]_{cs}+\tilde{k}[A_n]_{cs}
 \end{equation}
-式中，$[A_n]_{cs}$是CSV引线中使用的常规金属带的总截面积。
-Note that$\ell_{cs}$remains the same whether the CSV lead is paralleled with
-normal metal tapes or not. Note also that because$[A_m]_{fs}$和$[A_m]_{cs}$are different,
-$[A_n]_{fs}$和$[A_n]_{cs}$can be different. $[\alpha]_{cs}$also is different:
+式中，$[A_n]_{cs}$是CSV引线中使用的常规金属带的总截面积。不论CSV引线是否并联常规金属带，
+$\ell_{cs}$保持不变。另外，因为$[A_m]_{fs}$和$[A_m]_{cs}$不同，$[A_n]_{fs}$和$[A_n]_{cs}$可能不同。$[\alpha]_{cs}$也不同：
 \begin{equation}% 4.80a 4.80b
 [\alpha_\ell]_{cs}^{n}=\frac{[\dot{m}_h]_{cs}^{n}\tilde{c}_p\ell}{\tilde{kA}_{cs}^{n}} 
 =\frac{1}{\xi_{cs}}\ln\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]
 \end{equation}
-where$[\dot{m}_h]_{cs}^{n}$and$\xi_{cs}(\ell_{c}/\ell)$are, respectively, the helium mass flow rate and
-dimensionless length from $z = 0$ at which the current-sharing region starts for a
-CSV lead paralleled with normal metal tapes.
+式中，$[\dot{m}_h]_{cs}^{n}$是氦气质量流量；$\xi_{cs}(\ell_{c}/\ell)$是从$z = 0$处电流共享段
+开始有并联常规金属带的无量纲长度。
 
-For the CSV lead, $\beta_{cs}$also is modified:
+对于CSV引线，$\beta_{cs}$还可以写为：
 \begin{equation}% 4.81
 \beta_{cs}^{n}=\sqrt{\frac{\tilde{\rho}_x\tilde{\rho}_nI_o(I_o-I_{c\ell})\ell^2}{[\tilde{kA}]_{cs}^{n}\tilde{\rho A}_{cs}^{n}(T_\ell-T_{cs})}-\frac{1}{4}([\alpha_\ell]_{cs}^{n})^2}
 \end{equation}
@@ -2044,7 +2023,7 @@ For the CSV lead, $\beta_{cs}$also is modified:
 \begin{equation}% 4.82
 [\tilde{\rho A}]_{cs}^{n}=\tilde{\rho}_x[A_n]_{cs}+\tilde{\rho}_n[A_m]_{cs}
 \end{equation}
-Equation 4.71 is modified as given below:
+方程4.71可以改写为下式：
 \begin{align}% 4.83
 \frac{1}{\xi_{cs}}\left[\frac{h_L}{\tilde{c}_p(T_\ell-T_{cs})}\right]&\ln\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]^{\frac{1+\xi_{cs}}{2\xi_{cs}}}\\
 &=\frac{\beta_{cs}^{n}}{\sin\beta_{cs}^{n}(1-\xi_{cs})}
@@ -2241,7 +2220,9 @@ b) 代入$[Q_{in}]_{fs}^n$= 0.4337W，我们得到$\dot{m}_h]_{fs}^{n}= [Q_{in}]
 &\simeq(0.021\ \mathrm{g/s})(20.7\ \mathrm{J/g})\left[\frac{(5.28\ \mathrm{J/gk})(77.3\ \mathrm{K}-4.2\ \mathrm{K})}{(20.7\ \mathrm{J/g})}+1\right]\\
 &=8.540\ \mathrm{W}
 \end{align*}
-于是，我么有：$[Q_\ell]_{fs}^{n}-[Q_{in}]_{fs}^{n}=8.106\ \mathrm{W}\simeq [\.{m}_h]_{fs}^n \~{c}_p(T_\ell-T_0)$=8.105 W。
+于是，我们有：
+
+$[Q_\ell]_{fs}^{n}-[Q_{in}]_{fs}^{n}=8.106\ \mathrm{W}\simeq [\.{m}_h]_{fs}^n \~{c}_p(T_\ell-T_0)$=8.105 W。
 
 
 \subsubsection{问题4.6C：CSV，有并联常规金属带}
@@ -2281,7 +2262,7 @@ $[Q_\ell]_{cs}^{n}$和$[Q_j]_{cs}^{n}$由方程S5.9和S5.14的变种给出：
 [Q_j]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\left[\frac{1}{2}[\alpha_\ell]_{cs}^{n}+\beta_{cs}^{n}\cot\beta_{cs}^{n}(1-\xi_{cs}) 
 +\beta_{cs}^{n}\frac{e^{\frac{[\alpha_\ell]_{cs}^{n}\xi_{cs}}{2}}}{e^{\frac{[\alpha_\ell]_{cs}^{n}}{2}}\sin\beta_{cs}^{n}(1-\xi_{cs})}\right]
 \end{equation}
-Note that because$\beta_{cs}^n (1-\xi_{cs})=\pi/2$here, Eqs. 4.98 and 4.99 are simplified:
+因为这里$\beta_{cs}^n (1-\xi_{cs})=\pi/2$，方程4.98和4.99简化为：
 \begin{equation}% 4.100
 [Q_\ell]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\times\frac{1}{2}[\alpha_\ell]_{cs}^{n}
 \end{equation}
@@ -2297,147 +2278,261 @@ $T_0$=4.2 K时有$I_c(T_0)$ = 22,275 A。
 \begin{equation}
  I_c(T)=23,325-250T[\ \mathrm{A}]
 \end{equation}
+式中，$T$是开氏温度。这个方程给出$T_c$=93.3 K。由方程S6C.1，我们可以解出$I_c(T_{cs})$=6000 A下的
+$T_{cs}$=69.3 K。
 
-\begin{align}% 4.79
+b) 如表4.14给出的，$\xi_{cs}$=0.94505，它给出$\beta_{cs}^n$=28.586。
+
+c) $[A_m]_{cs}=N_{cs} a_m=50\times 0.555\ \mathrm{mm^2}=0.2775\ \mathrm{cm^2}$(表4.12)；
+$[A_n]_{cs}=[A_n]_{fs}=1.735\ \mathrm{cm^2}$(表4.13)。于是：
+\begin{align*}% 4.79
 [\tilde{kA}]_{cs}^{n}&=\tilde{k}[A_m]_{cs}+\tilde{k}[A_n]_{cs} \\
 &=(0.327\ \mathrm{W/cmK})(0.2775\ \mathrm{cm^2})+(0.350\ \mathrm{W/cmK})(1.735\ \mathrm{cm^2}) \\
-&=0.0907\ \mathrm{W cm/K}+0.607\ \mathrm{W cm/K}=0.698\ \mathrm{W cm/K}
-\end{align}
+&=0.0907\ \mathrm{W cm/K}+0.607\ \mathrm{W cm/K}=0.698\ \mathrm{W cm/K} \tag{4.79}
+\end{align*}
 
-\begin{align}% 4.82
+\begin{align*}% 4.82
 [\tilde{\rho A}]_{cs}^{n}&=\tilde{\rho}_x[A_m]_{cs}+\tilde{\rho}_n[A_n]_{cs} \\
 &=(1\mu\Omega\ \mathrm{cm})(1.735\ \mathrm{cm^2})+(2.25\mu\Omega\ \mathrm{cm})(0.2775\ \mathrm{cm^2}) \\
-&=1.735\mu\Omega\ \mathrm{cm^3}+0.624\mu\Omega\ \mathrm{cm^3}=2.359\mu\Omega\ \mathrm{cm^3}
-\end{align}
+&=1.735\mu\Omega\ \mathrm{cm^3}+0.624\mu\Omega\ \mathrm{cm^3}=2.359\mu\Omega\ \mathrm{cm^3} \tag{4.82}
+\end{align*}
 
-\begin{align}% 4.80b
+\begin{align*}% 4.80b
 [\alpha_\ell]_{cs}^{n}&=\frac{1}{\xi_{cs}^{n}}\ln\left[\frac{\tilde{c}_p(T_{cs}-Y_0)}{h_L}+1\right] \\
 &=\frac{1}{0.94505}\ln\left[\frac{(5.28\ \mathrm{J/gK})(69.3\ \mathrm{K}-4.2\ \mathrm{K})}{(20.7\ \mathrm{J/g})}+1\right] \\
-&=\frac{1}{0.94505}\ln(17.605)=3.035
-\end{align}
-
-\begin{equation}
+&=\frac{1}{0.94505}\ln(17.605)=3.035 \tag{4.80b}
+\end{align*}
+于是，通过计算4.81，得到$([\alpha_\ell]_{cs}^2/4$：
+\begin{align*}
 \frac{1}{4}([\alpha_\ell]_{cs}^{n})^2=2.303
-\end{equation}
+\end{align*}
 
-\begin{align}% 4.81
+\colorbox{red}{表4.14}
+
+将必要的值代入方程4.81，得到：
+\begin{align*}% 4.81
 \beta_{cs}^{n}&=\sqrt{\frac{\tilde{\rho}_x\tilde{\rho}_nI_o(I_o-I_{c\ell})\ell^2}{[\tilde{kA}]_{cs}^{n}[\tilde{\rho A}]_{cs}^{n}(T_\ell-T_{cs})}-\frac{1}{4}([\alpha_\ell]_{cs}^{n})^2}
-28.586\\
+28.586\\ \tag{4.81}
 &=\sqrt{\frac{(1\mu\Omega\ \mathrm{cm})(2.25\mu\Omega\ \mathrm{cm})(6\ \mathrm{kA})(6\ \mathrm{kA}-4\ \mathrm{kA})(20\ \mathrm{cm})^2}{(0.698\ \mathrm{W cm/K})(2.359\mu\Omega\ \mathrm{cm^3})(77.3\ \mathrm{K}-69.3\ \mathrm{K})}-2.303}
 28.586\\
 &\simeq\sqrt{817.58}=28.593
-\end{align}
+\end{align*}
 
-\begin{align}% 4.78
-[Q_{in}]_{cs}^{n}&=\frac{\tilde{kA}_{cs}^{n}h_L}{\tilde{c}_p\ell_{cs}}\ln\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right] \\
+d) 由$\xi_{cs}=0.94505$和$\ell=20$ cm，得$\ell_{cs}$=18.9 cm。于是，这条CSV引线的电流共享段
+长为1.1 cm，从$z$=18.9 cm到$z$=20 cm。由方程4.78：
+\begin{align*}% 4.78
+[Q_{in}]_{cs}^{n}&=\frac{\tilde{kA}_{cs}^{n}h_L}{\tilde{c}_p\ell_{cs}}\ln\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right] \\ \tag{4.78}
 &=\frac{(0.698\ \mathrm{W cm/K})(20.7\ \mathrm{J/g})}{(5.28\ \mathrm{J/gK})(18.9\ \mathrm{cm})}\ln\left[\frac{(5.28\ \mathrm{J/gK})(69.3\ \mathrm{K}-4.2\ \mathrm{K})}{(20.7\ \mathrm{J/g})}+1\right] \\
 &=(0.1448\ \mathrm{W})(2.868)=0.4153\ \mathrm{W}
-\end{align}
+\end{align*}
+于是，如我们所预料的，$[Q_{in}]_{cs}^n$=0.4153 W$<[Q_{in}]_{fs}^n$=0.4296 W；
+$[Q_{in}]_{cs}^n$约为铜的1/15。由$[Q_{in}]_{cs}^n$=0.4153 W，可得$[\.{m}_h]_{cs}^n$=0.02006 g/s。
 
-\begin{align}% 4.100
-[Q_\ell]_{cs}^{n}&=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\left(\frac{[\alpha_\ell]_{cs}^{n}}{2}\right) \\
+e) 应用方程4.100和4.101，我们有：
+\begin{align*}% 4.100
+[Q_\ell]_{cs}^{n}&=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\left(\frac{[\alpha_\ell]_{cs}^{n}}{2}\right) \\ \tag{4.100}
 &=\frac{(0.698\ \mathrm{W cm/K})(77.3\ \mathrm{K}-69.3\ \mathrm{K})}{(20\ \mathrm{cm})}\left(\frac{3.035}{2}\right)\\
 &=0.4237\ \mathrm{W}
-\end{align}
-
-\begin{align}% 4.101
-[Q_j]_{cs}^{n}&=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\left[\frac{[\alpha_\ell]_{cs}^{n}}{2}+\beta_{cs}^{n}+\beta_{cs}^{n}e^{\frac{[\alpha_\ell]_{cs}^{n}(\xi_{cs}-1)}{2}}\right] \\
+\end{align*}
+\begin{align*}% 4.101
+[Q_j]_{cs}^{n}&=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\left[\frac{[\alpha_\ell]_{cs}^{n}}{2}+\beta_{cs}^{n}+\beta_{cs}^{n}e^{\frac{[\alpha_\ell]_{cs}^{n}(\xi_{cs}-1)}{2}}\right] \\\tag{4.101}
 &=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\left[\left(\frac{3.035}{2}\right)+(28.586)e^{\frac{3.035(0.645-1)}{2}}\right] \\
 &=\frac{(0.698\ \mathrm{W cm/K})(77.3\ \mathrm{K}-69.3\ \mathrm{K})}{(20\ \mathrm{cm})}\left[\left(\frac{3.035}{2}\right)+26.30\right]=7.7743\ \mathrm{W}
-\end{align}
-
-\begin{align}% 4.97
-[Q_\ell]_{cs}^{n}+[Q_f]_{cs}^{n}-[Q_{in}]_{cs}^{n}&=[\dot{m}_h]_{cs}^{n}\tilde{c}_p(T_\ell-T_0)
+\end{align*}
+由$[\dot{m}_h]_{cs}^{n}\tilde{c}_p(T_\ell-T_0)$=(0.02006 g/s)(5.28 J/gK)(77.3 K-4.2 K)=7.7743 W
+和$[Q_{in}]_{cs}^{n}=$0.4153 W，我们可以得到：
+\begin{align*}% 4.97
+[Q_\ell]_{cs}^{n}+[Q_j]_{cs}^{n}-[Q_{in}]_{cs}^{n}&=[\dot{m}_h]_{cs}^{n}\tilde{c}_p(T_\ell-T_0)\\\tag{4.97}
 0.4237\ \mathrm{W}+7.7658-0.4153=7.7742\ \mathrm{W} \\
 &\simeq 7.7743\ \mathrm{W}             
-\end{align}
-
-\begin{equation}% 4.97
-[Q_\ell]_{cs}+Q_j-[Q_{in}]_{cs}=[\dot{m}_h]_{cs}\tilde{c}_p(T_\ell-T_0)
-\end{equation}
+\end{align*}
 
 
 \subsection{讨论4.18：“最优”CSV引线}
+如我们在问题4.6C中所见，最大的功率项是$[Q_j]_{cs}^n$=7.7659 W，而$[Q_{in}]_{cs}^n$=0.4153 W
+是和FSV的$[Q_{in}]_{fs}^n$=0.4337 W是非常接近的。
 
-\begin{equation}% 4.98
+于是，由于$[Q_j]_{cs}^n$值很大，CSV引线的$[Q_{in}]_{cs}^n$可以和$[Q_{in}]_{fs}^n$具有可比性的
+唯一方法是$[Q_{\ell}]_{cs}^n\ll [Q_{\ell}]_{fs}^n$。这其实恰好就是问题4.6B中b)以及问题4.6C中e)的解中所看到的：$[Q_{\ell}]_{fs}^n$=8.540 W，$[Q_{\ell}]_{cs}^n$=0.4237 W。这是怎么回事？答案可以从方程4.98中看到：
+\begin{equation*}% 4.98
 [Q_\ell]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\left[\frac{1}{2}[\alpha_\ell]_{cs}^{n}+\beta_{cs}^{n}\cot\beta_{cs}^{n}(1-\xi_{cs})\right]
-\end{equation}
-
+\end{equation*}
+通过选择方程等号右侧中括号项内合适的$\beta_{cs}^n$和$\xi_{cs}$，可以令$[Q_\ell]_{cs}^{n}=0$。
+对于$\beta_{cs}^{n}(1-\xi_{cs})>\pi/2$，$\cot\beta_{cs}^{n}(1-\xi_{cs})<0$，确实存在一组
+$\beta_{cs}^n$和$\xi_{cs}$不仅令$[Q_\ell]_{cs}^{n}=0$，还满足方程4.83。这样的一组值实质上最小化了
+$[Q_{in}]_{cs}^n$，给出了一条可满足保护条件的带有常规金属的“优化”CSV引线。
 
 \subsubsection{问题4.6D：铜段($\sim$80 K-300 K)}
+这里我们研究6 kA气冷电流引线，或如问题4.6B耦合于FSV引线，或如问题4.6C耦合于CSV引线。
+我们将确定三种流量的值：1) 气氦； 2) 气氮；3) 液氮。
+对液氮的情况，我们还将确定$\ell_{\ell_q}$的值。表4.15列出了6 kA气冷铜引线的关键参数值。
+冷端($z=0$)位于77.3 K，热端($z=\ell_{cu}$)位于293 K。
 
+a) 当进入77. K冷端点($z$=0)的制冷工质是气氦时，确定$\.{m}_{fl}$。
 
+b) 如方程4.89中讨论的，证明冷端的热传导输入$Q_o$实际是小的可以忽略。
+
+c) 当进入77. K冷端点($z$=0)的制冷工质是气氮时，确定$\.{m}_{fl}$。
+
+d) 当进入77. K冷端点($z$=0)的制冷工质是液氮时，确定$\.{m}_{fl}$，同时确定$\ell_{\ell_q}$。
+
+\colorbox{red}{Biao 4.15}
 
 \subsubsection{问题4.6D之解}
+a) 将表4.15中的参数值代入方程4.87c，我们有：
 \begin{align*}
 \beta_{cu}=\sqrt{\frac{I_{o}^{2}\gamma_{cu}\ell_{cu}^{2}}{\tilde{k}_{cu}A_{cu}^{2}}-\alpha_{cu}^{2}}&=\sqrt{\frac{(6\ \mathrm{kA})^2(7.01\ \mathrm{n\Omega cm/K})(38\ \mathrm{cm})^2}{(4\ \mathrm{W /cmK})(1.19\ \mathrm{cm^2})^2}-\alpha_{cu}^{2}} \\
-&=\sqrt{64.333-\alpha_{cu}^{2}}
+&=\sqrt{64.333-\alpha_{cu}^{2}} \tag{S6D.1}
 \end{align*}
-
-\begin{equation}
+存在一组$\beta_{cu}$和$\alpha_{cu}$同时满足方程4.88b和S6.D.1。这两个方程可以迭代求解；
+表4.16给出了迭代结果。从表4.16，我们看到$\beta_{cu}=2.786750\simeq 2.786885$，于是
+$\alpha_{cu}=7.521055$。从方程4.87a，解出$\.{m}_{fl}$：
+\begin{align*}
 \dot{m}_{fl}=\frac{2\alpha_{cu}\tilde{k}_{cu}A_{cu}}{\tilde{c}_{fl}\ell_{cu}} 
-=\frac{2(7.521)(4\ \mathrm{W/cmK})(1.19\ \mathrm{cm^2})}{(5.28\ \mathrm{J/gK})(38\ \mathrm{cm})}=0.357\ \mathrm{g/s}
-\end{equation}
+=\frac{2(7.521)(4\ \mathrm{W/cmK})(1.19\ \mathrm{cm^2})}{(5.28\ \mathrm{J/gK})(38\ \mathrm{cm})}=0.357\ \mathrm{g/s} \tag{S6D.2}
+\end{align*}
+这里算得的氦质量流量0.357 g/s非常接近于AMI 6 kA气冷铜引线的蒸发液氦质量流量$\.{m}_h$，即
+$Q_{in}\sim$7.2 W：$\.{m}_h\sim$0.35 g/s($\sim$7.2 W/20.4 J/g)。77.3 K和293 K间
+的总冷却功率由$\dot{m}_{fl}\tilde{c}_{fl}(T_{\ell_{cu}}-T_o)$给出，为407 W。
 
-\begin{align}% 4.89
-Q_o&=\frac{\tilde{k}_{cu}A_{cu}}{\ell_{cu}}\frac{d\theta(\zeta)}{d\zeta}\mid_0=\frac{\tilde{k}_{cu}A_{cu}\theta_{\ell_{cu}}\beta_{cu}}{\ell_{cu}e^{\alpha_{cu}}\sin\beta_{cu}}\simeq 0 \\
+b) 代入$e^{\alpha_{cu}}=1846$，$\sin(159.669^\circ)$=0.3474，$\theta_{\ell_{cu}}$=216 K，以及
+其他参数到方程4.89，有：
+\begin{align*}% 4.89
+Q_o&=\frac{\tilde{k}_{cu}A_{cu}}{\ell_{cu}}\frac{d\theta(\zeta)}{d\zeta}\mid_0=\frac{\tilde{k}_{cu}A_{cu}\theta_{\ell_{cu}}\beta_{cu}}{\ell_{cu}e^{\alpha_{cu}}\sin\beta_{cu}}\simeq 0 \\ \tag{4.89}
 &=\frac{(4\ \mathrm{W/cmK})(1.19\ \mathrm{cm^2})(216\ \mathrm{K})(2.787)}{(38\ \mathrm{cm})(1846)(0.3474)}\\
 &\simeq 0.118\ \mathrm{W}\simeq 0
-\end{align}
+\end{align*}
+
+c) 在a)中确定的$\beta_{cu}$和$\alpha_{cu}$同样适用于气氮情况。两者唯一的不同是比热：气氮的是1.04 J/gK。于是：$\dot{m}_{fl}$=1.812 g/s。
+
+\colorbox{red}{表4.16}
 
 
+d) 这里我们来确定满足方程4.93、4.94和4.95在给定参数值$\rho_o, \gamma_{cu}, I_o, \~{k}_{cu}， A_{cu}$下的$\ell_{\ell_q}$。用迭代的方法确定$\ell_{\ell_q}$是最简单的。我们进行如下步骤：
+
+步骤1：猜$\ell_{\ell_q}$(表4.17的第一列)；
+
+步骤2：从方程4.93计算$\dot{m}_{fl}$(第二列)；
+
+步骤3：将$\ell_{\ell_q}$和$\dot{m}_{fl}$代入方程4.95a，计算$\alpha_{cu}^\prime$(第三列)；
+
+步骤4：将$\alpha_{cu}^\prime$代入方程4.95b，计算$\beta_{cu}^\prime$(第四列)；
+
+步骤5：用角度制表示$\beta_{cu}^\prime$(第五列)：它必须在90到180之间；
+
+步骤6：计算$\cot\beta_{cu}^\prime$(第六列)；
+
+步骤7：使用方程4.94计算$\alpha_{cu}^\prime$(第七列)。
+
+如果步骤7计算的$\alpha_{cu}^\prime$与步骤3计算值基本相等，迭代完成；迭代开始猜的$\ell_{\ell_q}$是正确的。表4.17给出了上述迭代的结果，$\ell_{\ell_q}$=26.98 cm($\simeq$27 cm)和$\dot{m}_{fl}$=0.902 g/s是希望得到的值。
+
+于是，铜引线的底端有了液氮，具体说是有总长$\simeq$27 cm浸入液氮和气氮混合物中，这一段的温度是77.3 K。仅其余部分，从$z\simeq$27 cm到$z$=38 cm是由气氮流冷却的；它的温度从$z\simeq$27 cm 的77.3K升高
+到$z=$38 cm的293 K。 
+
+与c)中77.3 K气氮的$\dot{m}_{fl}$=1.812 g/s相比，液氮流量仅需一半。这是因为液氮在77.3 K汽化时可吸收大量热量，即199 J/g，相等于气氮温升将近200 K($\tilde{c}_{fl}=1.04 J/gK$)。
+如果引入到铜引线的制冷工质为77.3 K的氮，c)和d)的结果表明77.3 K的液氮更好。
+
+\colorbox{red}{表4.17}
 
 \subsection{问题4.7：气冷铜电流引线}
+Vapor-cooled current leads for a superconducting magnet operated in a bath of liquid
+helium may be entirely of copper (DISCUSSION 4.14) or superconducting over
+the lower cold section (PROBLEMS 4.4–4.6), extended to the room-temperature
+terminal by a copper lead rated at the same current.
 
+In some applications, current leads carry a rated current only occasionally or even
+rarely during the life of a magnet [4.81–4.84]. Examples of occasional use include
+magnets of low duty cycle in which the magnets are energized periodically, each
+time for a short duration. When the total duration of “off-current” operation far
+exceeds that of “on-current” operation, it may be possible to reduce the long-term
+consumption of helium with vapor-cooled leads having a $Q_0/Q_{I_o}$ratio (Eq. 4.42)
+significantly smaller than the ∼0.6 achievable with copper leads.
+
+Because$Q_0\propto \~{k}$(Eq. 4.40), such low-Q0 leads should be of an alloy (e.g., brass),
+rather than pure copper. It necessarily implies that such an alloy lead would have
+Joule dissipation rate greater than its copper counterpart. Because the effluent
+helium flow rate would remain roughly the same, to be effective, the alloy lead
+must operate in overcurrent mode, and the thermal behavior of such a lead in
+overcurrent mode becomes an important design and operation issue [4.85].
+
+对下面的问题，铜的物性按如下取值：热导率$[k_0]_{br}$=22 W/mK，电阻率$[\rho_0]_{br}=21\ \mathrm{n\Omega m}$，上述两者都是在$T_0$时的值。另有$\int_{T_0}^{T_\ell}dT/\rho_{br}(T)$=
+0.97$\times 10^{10} K/\Omega m$[4.86]。
+
+a) 证明黄铜引线的$I_o\ell/A$为(紫铜近似为$2.3\times 10^7$A/m)：
 \begin{equation}% 4.102
 \left[\frac{I_o\ell}{A}\right]_{br}\equiv[\zeta_o]_{br}\simeq0.35\times 10^7\ \mathrm{A/m}
 \end{equation}
+也即，具有相同$\ell$和$A$的黄铜引线，其优化额定电流仅为紫铜的$\sim 1/7$。
 
+b) 证明冷端热输入和额定电流之比$[Q_{I_o}/I_o]$由下式给出：
 \begin{equation}% 4.103
 \left[\frac{Q_{I_o}}{I_o}\right]_{br}\simeq 1.25\ \mathrm{mW/A}
 \end{equation}
+紫铜的这个比值是0.77 mW/A(方程4.32b)。对黄铜引线，尽管电阻率更大，是紫铜在4.2 K时的约100倍，但
+$[Q_{I_o}/I_o]$仅为比紫铜大约60\%。
 
+c) 证明无电流时冷端热输入和引线电流之比$[Q_0/I_o]$由下式给出：
 \begin{equation}% 4.104
 \left[\frac{Q_0}{Q_{I_o}}\right]_{br}\simeq 0.21
 \end{equation}
+计算中，使用$\~{k}_{br}$=55 W/mK(表4.18)；$\~{c}_p$=5.2 kJ/kgK；$c_{p0}$=6.0 kJ/kgK。
 
+\textbf{过流模式}
+
+As stated above, brass leads are suitable for low-duty-cycle applications. Consider
+a brass current lead in the overcurrent mode carrying a constant current$I>I_o$,
+the nominal rated current. The power equation may be given by:
 \begin{equation}% 4.105
 AC_{br}(T)\frac{dT}{dt}=\frac{d}{dz}\left[Ak_{br}(T)\frac{dT}{dz}\right]-\dot{m}_{br}(I)c_p(T)\frac{dT}{dz}+\frac{\rho_{br}(T)}{A}I^2
 \end{equation}
+式中，$C_{br}(T), k_{br}(T), \rho_{br}(T)$分别是黄铜的依赖于温度的热容、热导率和电阻率，
+$\.{m}_{br}(I)$是气流量，依赖于电流。对于优化的黄铜引线，若稳态$dT/dt=0$下$I>I_o$：
+引线微元温度尽管与$z$有关，但不随时间变化。
 
+为在$I>I_o$时解出方程4.105，我们做如下简化：
+\begin{enumerate}
+	\item 整根引线视为单一实体，平均温度。。。
+	\item 方程4.105中的$dT/dz$假定为常数，。。。。
+	\item 在$I>I_o$时，。。。
+	\item $\rho_{br}(T)=$
+\end{enumerate}
+在这些假设下，方程4.105变为：
 \begin{equation}% 4.106
 A\tilde{C}_{br}\frac{d\tilde{T}(t)}{dt}=-\upsilon_{br}I[1+\eta_{br}(I-I_o)]\tilde{c}_p\frac{\tilde{T}(t)}{(\ell/2)}+\frac{[\rho_0]_{br}}{A}I^2+\frac{\gamma_{br}}{A}[\tilde{T}(t)-\tilde{T}_o]I^2
 \end{equation}
-
+将$\theta(T)=\~{T}(t)-\~{T}_o$代入方程4.106，我们有$\frac{d\theta(t)}{dt}$，并可解出$\theta(t)$：
 \begin{align}% 4.107a
 \frac{d\theta(t)}{dt}=&\frac{1}{A^2\ell\tilde{C}_{br}}(\{2\upsilon_{br}\tilde{c}_pAI[1+\eta_{br}(I-I_o)]-\gamma_{br}\ell I^2\}\theta(t) \\
 &+\{2\upsilon_{br}\tilde{c}_pA\tilde{T}_oI[1+\eta_{br}(I-I_o)]-[\rho_0]_{br}\ell I^2\})
 \end{align}
-
 \begin{equation}% 4.107b
 \theta(t)=\Delta\theta(I)\left[1-e^{-t/\tau_j(I)}\right]
 \end{equation}
-
+$\Delta\theta(I)$和$\tau_j(I)$都是依赖于电流的常数，分别是温升和响应时间。响应时间假定为要比
+建立$I>I_o$的时间要长得多。解出两个量：
 \begin{equation}% 4.108a
 \Delta\theta(I)=\frac{[\rho_0]_{br}\ell I^2-2\upsilon_{br}\tilde{c}_pA\tilde{T}_oI[1+\eta_{br}(I-I_o)]}{2\upsilon_{br}\tilde{c}_pAI[1+\eta_{br}(I-I_o)]-\gamma_{br}\ell I^2}
 \end{equation}
-
 \begin{equation}% 4.108b
 \tau_j(I)=\frac{A^2\tilde{C}_{br}\ell}{2\upsilon_{br}\tilde{c}_pAI[1+\eta_{br}(I-I_o)]-\gamma_{br}\ell I^2}
 \end{equation}
 
+d) 证明$nu_{br}$为：
 \begin{equation}% 4.109
 \upsilon_{br}=\frac{[\rho_0]_{br}\ell I_o}{2\tilde{c}_pA\tilde{T}_o}
 \end{equation}
 
+e) 证明。。。。。。。。
 \begin{equation}% 4.110
 [Q_I]_{br}=h_L\upsilon_{br}I[1+\eta_{br}(I-I_o)]
 \end{equation}
 
+f) 证明，，，，，，，
 \begin{equation}% 4.111
 \left[\frac{I_o\ell}{A}\right]_{br}=\frac{2\tilde{c}_p\tilde{T}_o}{[\rho_0]_{br}}\sqrt{\frac{[k_0]_{br}[\rho_0]_{br}}{h_Lc_{p0}}}
 \end{equation}
 
+g) 整个引线上的压降。。。。。。。。。
 \begin{equation}% 4.112
 V_{br}(t)=V_o(\tilde{T}_o)+\Delta V(I)(1-e^{-t/\tau_j(I)})
 \end{equation}
@@ -2446,12 +2541,29 @@ V_{br}(t)=V_o(\tilde{T}_o)+\Delta V(I)(1-e^{-t/\tau_j(I)})
 \Delta V(I)=\frac{\gamma_{br}\ell}{A}\{\frac{[\rho_0]_{br}\ell I^2-2\upsilon_{br}\tilde{c}_pA\tilde{T}_oI[1+\eta_{br}(I-I_o)]}{2\upsilon_{br}\tilde{c}_pAI[1+\eta_{br}(I-I_o)]-\gamma_{br}\ell I^2}\}I
 \end{equation}
 
-\subsubsection{问题4.7之解}
+h) Consider a vapor-cooled brass lead rated at 25 kA under a cyclic operation
+in which it is subjected to an overcurrent of 75 kA (=$3\times I_o$) over a 5-min period,
+followed by a 30-min off-current period. As may become evident from
+experimental results performed on a 40-A brass lead [4.87], presented later in
+Figs. 4.25 and 4.26, the 40-A brass lead can operate stably at an overcurrent
+of up to nearly 200A (= $5\times I_o$) over an indefinite period of time—in the
+experiment the overcurrent condition at a given I lasts only up to 500 s.
 
+%Determine I◦ of a vapor-cooled copper lead that when operated at I◦ continuously
+%results in the same cold-end heat input as that of the 25-kA brass
+%lead operated in the mode described above. Use νbr = 6.13×10−8 kg/s A,
+%determined in the experiment [4.87], and ηbr=2.2×10−5 A−1, scaled to a 25-
+%kA lead from the experiment (ηbr=0.0138A−1 at I◦=40 A). For the copper
+%lead, use QI◦/I◦=1mW/A.
+
+
+\subsubsection{问题4.7之解}
+a) %From Eq. 4.35, [I◦/A]br for brass leads is:
+
+%With cp0=6.0 kJ/kgK and other property values inserted into Eq. S7.1, we have:
 \begin{equation}
 \left[\frac{I_o\ell}{A}\right]_{br}=\sqrt{\frac{c_{p0}[k_0]_{br}[\rho_0]_{br}}{h_L}}\int_{T_0}^{T_1}\frac{dT}{\rho_{br}(T)}
 \end{equation}
-
 
 \begin{align}% 4.102
 \left[\frac{I_o\ell}{A}\right]_{br}&=\sqrt{\frac{(6.0\ \mathrm{kJ/kgK})(22\ \mathrm{W/mK})(21\ \mathrm{n\Omega m})}{(20.7\ \mathrm{kJ/kg})}}(0.97\times10^{10}\ \mathrm{K/\Omega m})
@@ -2459,62 +2571,76 @@ V_{br}(t)=V_o(\tilde{T}_o)+\Delta V(I)(1-e^{-t/\tau_j(I)})
 &\equiv[\zeta_o]_{br}\simeq 0.35\times 10^7\ \mathrm{A/m}
 \end{align}
 
+b) From Eq. 4.32a, which is for copper leads, we obtain:
 \begin{align}% 4.103
 \left[\frac{Q_{I_o}}{A}\right]_{br}&=\sqrt{\frac{h_L[k_0]_{br}[\rho_0]_{br}}{c_{p0}}}=\sqrt{\frac{(20.4\ \mathrm{kJ/kg})(22\ \mathrm{W/mK})(21\ \mathrm{n\Omega m})}{(6.0\ \mathrm{kJkgK})}}
 \left[\frac{Q_{I_o}}{A}\right]_{br}\\\notag
 &\simeq 1.25\ \mathrm{mW/A}
 \end{align}
 
+c) From Eq. 4.41 with %˜kbr =55W/mK (Table 4.18) and other values, including ln[˜cp(T−T0)/hL + 1]4.32, we have:
 \begin{align*}
 \left[\frac{Q_0}{Q_{I_o}}\right]_{br}&=\frac{\tilde{k}_{br}}{\tilde{c}_p[\zeta_o]_{br}}\sqrt{\frac{h_Lc_{p0}}{[k_0]_{br}[\rho_0]_{br}}}\times\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right] \\
 &\simeq\frac{(55\ \mathrm{W/mK})}{(5.2\ \mathrm{kJ/kgK})(0.36\times 10^7\ \mathrm{A/m})}\sqrt{\frac{(20.7\ \mathrm{kJ/kg})(6.0\ \mathrm{kJ/kgK})}{(22\ \mathrm{W/mK})(21\ \mathrm{n\Omega m})}}\times 4.32
 \end{align*}
-
+于是，
 \begin{equation}%4.104
 \left[\frac{Q_0}{Q_{I_o}}\right]_{br}\simeq0.21
 \end{equation}
 
+d) Because $\Delta \theta(I_o)$=0 (no overcurrent), from Eq. 4.107a we have:
 \begin{equation}
 [\rho_0]_{br}\ell I_{o}^{2}-2\upsilon_{br}\tilde{c}_pA\tilde{T}_oI_o=0
 \end{equation}
-
+From Eq. S7.4, we obtain:
 \begin{equation}% 4.109
 \unboldmath=\frac{[rho_0]_{br}\ell I_o}{2\tilde{c}_pA\tilde{T}_o}
 \end{equation}
 
+e) From$[Q_{I_o}]_{br}=\.{m}_{br}h_L$and with$\.{m}_{br}(I)=\upsilon_{br}I[1+\eta_{br}(I-I_o)]$(assumption 3 ):
 \begin{equation}% 4.110
 [Q_{I_o}]_{br}=h_L\upsilon_{br}I[1+\eta_{br}(I-I_o)]
 \end{equation}
 
-\begin{equation}
+f) With$[\frac{I_o\ell}{A}]_{br}$from Eq. 4.109 and$[Q_{I_o}]_{br}$from Eq. 4.110 at$I=I_o$:
+\begin{align*}
 \left[\frac{I_o\ell}{A}\right]_{br}=\upsilon_{br}\frac{2\tilde{c}_p\tilde{T}_o}{[\rho_0]_{br}}
-\end{equation}
-
-\begin{equation}
+\end{align*}
+\begin{align*}
 [Q_{I_o}]_{br}=h_L\upsilon_{br}I_o
-\end{equation}
-
-\begin{equation}
-\left[\frac{I_o\ell}{A}\right]_{br}=\left[\frac{[Q_{I_o}]_{br}}{I_o}\right]_{br}\frac{2\tilde{c}_p\tilde{T}_o}{h_L[\rho_0]_{br}}
-\end{equation}
-
-\begin{equation}% 4.111
+\end{align*}
+Combining Eqs. S7.5a and S7.5b, we have:
+\begin{align*}
+\left[\frac{I_o\ell}{A}\right]_{br}=\left[\frac{[Q_{I_o}]}{I_o}\right]_{br}\frac{2\tilde{c}_p\tilde{T}_o}{h_L[\rho_0]_{br}}
+\end{align*}
+Inserting$[\frac{[Q_{I_o}]}{I_o}]_{br}$from Eq. S7.2 into Eq. S7.6, we obtain:
+\begin{align*}% 4.111
 \left[\frac{I_o\ell}{A}\right]_{br}=\frac{2\tilde{c}_p\tilde{T}_o}{[\rho_0]_{br}}\sqrt{\frac{[k_0]_{br}[\rho_0]_{br}}{h_Lc_{p0}}}
-\end{equation}
-
+\end{align*}
+We may determine the value of$\~{T}_o$, the only unknown parameter in Eq. 4.111:
 \begin{align*}
 \tilde{T}_o&=\frac{[\rho_0]_{br}}{2\tilde{c}_p}\left[\frac{I_o\ell}{A}\right]_{br}\sqrt{\frac{h_Lc_{p0}}{[k_0]_{br}[\rho_0]_{br}}} \\
 &=\frac{(21\ \mathrm{n\Omega m})}{2(5.19\ \mathrm{kJ/kgK})}(0.358\times 10^7\ \mathrm{A/m})\sqrt{\frac{(20.7\ \mathrm{kJ/kg})(6.0\ \mathrm{kJ/kgK})}{(22\ \mathrm{W/mK})(21\ \mathrm{n\Omega m})}}\\
 &\simeq 120\ \mathrm{K}
 \end{align*}
+This value of 120K is quite reasonable because$\~{T}_o$is assumed to be the steadystate
+average temperature of the entire lead at$I_o$, i.e., ∼4K at the cold end and
+∼293K at the warm end, which gives a linear average value of 149 K.
 
+g) An increase in the lead voltage,$\Delta V(I)$, at a given level of overcurrent $I$ comes
+from an increase in the brass resistivity,$\Delta\rho_{br}(I)$, which in turn is caused by an
+increase in the lead temperature,$\Delta \theta(I)$. Thus:
 \begin{equation}
 \Delta V(I)=\frac{\ell\Delta\rho_{br}(I)}{A}I=\frac{\gamma_{br}\ell\Delta\theta(I)}{A}I
 \end{equation}
 
+Inserting the expression of $\Delta \theta(I)$given by Eq. 4.108a, we obtain:
 \begin{equation}% 4.113
 \Delta V(I)=\frac{\gamma_{br}\ell}{A}\{\frac{[\rho_0]_{br}\ell I^2-2\upsilon_{br}\tilde{c}_pA\tilde{T}_oI[1+\eta_{br}(I-I_o)]}{2\upsilon_{br}\tilde{c}_pAI[1+\eta_{br}(I-I_o)]-\gamma_{br}\ell T^2}\}I
 \end{equation}
+
+h) For a vapor-cooled 25-kA brass lead at an overcurrent of I =75 kA, we have
+$[Q_{I_o}]_{br}$，。。。。。。。。。。。。。。。。。。。。
 
 \begin{align*}% 4.110
 [Q_{I_o}]_{br}&=h_L\upsilon_{br}I[1+\eta_{br}(I-I_o)] \\
@@ -2522,17 +2648,42 @@ V_{br}(t)=V_o(\tilde{T}_o)+\Delta V(I)(1-e^{-t/\tau_j(I)})
 &\times[1+(2.2\times 10^{-5}\ \mathrm{A^{-1}})(75\ \mathrm{kA-}-25\ \mathrm{kA})]\\
 &\simeq 200\ \mathrm{W}
 \end{align*}
-
-\begin{equation}
+At $I_o$ = 25 kA, we have, from Eq. 4.103, $[Q_{I_o}]_{br}$= 31.5 W. When carrying no
+current, this 25-kA brass lead has, from Eq. 4.104, $[Q_0]_{br}\simeq 0.21[Q_{I_o}]_{br}\simeq$6.6 W.
+Thus, a total energy injected into the cold bath,$E_{br}$, over a 300-s period at 75 kA
+and over a 1800-s period at 25 kA, is given by:
+\begin{align*}
 E_{br}\simeq(300\ \mathrm{s})(200\ \mathrm{W})+(1,800\ \mathrm{s})(6.6\ \mathrm{W}) 
-\simeq 72\ \mathrm{kJ}
-\end{equation}
+\simeq 72\ \mathrm{kJ} \tag{S7.10}
+\end{align*}
+Over this 2100-s period, a copper lead would have required a cold-end heat input of
+33.8 W, to match the total energy $E_{br}$=72 kJ. For a vapor-cooled copper lead operating
+continuously at$I_o$, this translates to a current rating of$\sim$35 kA (<75 kA).
+Although no detailed study is available for vapor-cooled copper leads in overcurrent
+mode, it is quite possible that a copper lead too can be operated safely with
+an overcurrent up to a “reasonable” value of $I/I_o$。
 
-\begin{equation}
+\textbf{气冷黄铜引线的实验结果}
+
+Here we present experimental results of a pair of vapor-cooled brass leads [4.87].
+Each lead has the same active length ($\ell$= 54 cm) and cross sectional area (A =
+0.0613 $\mathrm{cm^2}$) as those of an optimal vapor-cooled copper lead rated at 280 A. As
+inferred from Eq. 4.102, this brass counterpart thus is rated at $[I_o]_{br}$ given by:
+\begin{align*}
 [I_o]_{br}=\frac{[\zeta_o]_{br}}{\zeta_o}I_o 
 \simeq\frac{(0.35\times 10^7\ \mathrm{A/m})}{(2.3\times 10^7\ \mathrm{A/m})}(280\ \mathrm{A})\sim 40\ \mathrm{A}
-\end{equation}
+\end{align*}
+Figure 4.25 shows a measured heat input vs. I plot of this brass lead in the current
+ranges of 0 to its nominally rated current of 40 A, and 40A to 90A (overcurrent).
+As expected, the results show that the heat input is linear with I up to ∼40 A,
+while beyond 40 A, the results agree well with the solid curve given by Eq. 4.110.
 
+Figure 4.26 shows$\Delta V(i)$ vs. $t$ plots for three constant overcurrent levels, 130 A,
+150 A, and 203 A. The solid curves are experimental, while the dotted curves are
+analytical, given by Eq. 4.113. The experimental curve at 203A shows that at this
+level of overcurrent ($I\sim 5\times I_o$), the lead eventually—after $\sim$400 s—enters into an
+unstable (overheated) region. The results indicate that it is safe to operate the
+lead up to an overcurrent level $\sim$4 times the rated current.
 
 \begin{figure}[htbp]
 	\centering
@@ -2548,15 +2699,21 @@ E_{br}\simeq(300\ \mathrm{s})(200\ \mathrm{W})+(1,800\ \mathrm{s})(6.6\ \mathrm{
 
 
 \subsection{讨论4.19：气冷支撑棒}
+低温容器内的结构支撑向低温环境带来传导热负荷。
+就像讨论4.14中的气冷铜电流引线，氦气可以用于跨越两个温度冷却有效长度
+(冷端$T_0$，热端$T_\ell$)$\ell$和横截面为$A$的支撑棒，从而极大的降低传导热损耗。
+
+假设棒材料的热导率是温度无关的，为$\~{k}$；氦和棒之间的传热是理想的
+我们可以证明棒在无氦冷却时从$T_\ell$到$T_0$的传导热输入$Q_{\bar{vp}}$与有氦冷却的热输入$Q_{vp}$之比为：
 \begin{equation}% 4.114
 \frac{Q_{\bar{vp}}}{Q_{vp}}=\frac{c_{p0}(T_\ell-T_0)}{h_L\ln\left[\frac{c_{p0}(T_\ell-T_0)}{h_L}+1\right]}
 \end{equation}
-
+我们发现，$\frac{Q_{\bar{vp}}}{Q_{vp}}$与棒的尺寸和热导率无关。
+代入$c_{p0}$=6.0 J/g K, $h_L$=20.4 J/g, $T_0$=4 K,$T_\ell$=300 K，方程4.114给出：
 \begin{align*}
 \frac{Q_{\bar{vp}}}{Q_{vp}}=\frac{(6.0\ \mathrm{J/gK})(296\ \mathrm{K})}{(20.4\ \mathrm{J/g})\ln(88)}=19.4\sim 20
 \end{align*}
-
-
+也就是说，可以通过有效利用冷氦气，能够很大程度的降低通过结构件进入的传导热输入。
 
 \subsection{讨论4.20：低温下的结构材料}
 低温应用的结构材料必须承受大的应力，同时在大温区内传递很少的热流。
