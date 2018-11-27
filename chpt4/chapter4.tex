@@ -2435,25 +2435,18 @@ d) 这里我们来确定满足方程4.93、4.94和4.95在给定参数值$\rho_o,
 \colorbox{red}{表4.17}
 
 \subsection{问题4.7：气冷铜电流引线}
-Vapor-cooled current leads for a superconducting magnet operated in a bath of liquid
-helium may be entirely of copper (DISCUSSION 4.14) or superconducting over
-the lower cold section (PROBLEMS 4.4–4.6), extended to the room-temperature
-terminal by a copper lead rated at the same current.
+浸泡于液氦中运行的超导磁体的气冷电流引线可以整体是铜(讨论4.14)或者冷端下部整体式超导(问题4.4-4.6)，
+通过相同额定电流的铜引线延伸到室温终端。
 
-In some applications, current leads carry a rated current only occasionally or even
-rarely during the life of a magnet [4.81–4.84]. Examples of occasional use include
-magnets of low duty cycle in which the magnets are energized periodically, each
-time for a short duration. When the total duration of “off-current” operation far
-exceeds that of “on-current” operation, it may be possible to reduce the long-term
-consumption of helium with vapor-cooled leads having a $Q_0/Q_{I_o}$ratio (Eq. 4.42)
-significantly smaller than the ∼0.6 achievable with copper leads.
+在一些应用中，电流引线仅偶尔通过额定电流，甚至在磁体生命周期内都很少通过额定电流[4.81–4.84]。
+偶尔使用的例子包括周期通电的低占空比周期磁体，每次通电仅工作一小段时间。
+当欠电流运行总时间远超过额定电流运行时间时，就可以显著降低具有$Q_0/Q_{I_o}$的气冷引线的氦气长期消耗
+至铜引线可以达到的$\sim$0.6。
 
-Because$Q_0\propto \~{k}$(Eq. 4.40), such low-Q0 leads should be of an alloy (e.g., brass),
-rather than pure copper. It necessarily implies that such an alloy lead would have
-Joule dissipation rate greater than its copper counterpart. Because the effluent
-helium flow rate would remain roughly the same, to be effective, the alloy lead
-must operate in overcurrent mode, and the thermal behavior of such a lead in
-overcurrent mode becomes an important design and operation issue [4.85].
+因为$Q_0\propto \~{k}$(方程4.40)，如此低$Q_0$的引线应当是合金 (比如黄铜)，而不是纯铜。
+显然，这种合金引线的焦耳耗散率会明显大于铜的。
+因为氦气流量大致保持一致，为了保持有效，合金引线必须运行在过电流模式，所以这种过电流模式的引线的
+热行为称为设计和运行的重要问题[4.85]。
 
 对下面的问题，铜的物性按如下取值：热导率$[k_0]_{br}$=22 W/mK，电阻率$[\rho_0]_{br}=21\ \mathrm{n\Omega m}$，上述两者都是在$T_0$时的值。另有$\int_{T_0}^{T_\ell}dT/\rho_{br}(T)$=
 0.97$\times 10^{10} K/\Omega m$[4.86]。
@@ -2479,9 +2472,8 @@ c) 证明无电流时冷端热输入和引线电流之比$[Q_0/I_o]$由下式给
 
 \textbf{过流模式}
 
-As stated above, brass leads are suitable for low-duty-cycle applications. Consider
-a brass current lead in the overcurrent mode carrying a constant current$I>I_o$,
-the nominal rated current. The power equation may be given by:
+如前所述，黄铜引线适合于低占空比应用。
+考虑一根过流模式的黄铜引线，载有恒定电流大于标称额定电流：$I>I_o$。能量方程可以写为：
 \begin{equation}% 4.105
 AC_{br}(T)\frac{dT}{dt}=\frac{d}{dz}\left[Ak_{br}(T)\frac{dT}{dz}\right]-\dot{m}_{br}(I)c_p(T)\frac{dT}{dz}+\frac{\rho_{br}(T)}{A}I^2
 \end{equation}
@@ -2491,11 +2483,14 @@ $\.{m}_{br}(I)$是气流量，依赖于电流。对于优化的黄铜引线，�
 
 为在$I>I_o$时解出方程4.105，我们做如下简化：
 \begin{enumerate}
-	\item 整根引线视为单一实体，平均温度。。。
-	\item 方程4.105中的$dT/dz$假定为常数，。。。。
-	\item 在$I>I_o$时，。。。
-	\item $\rho_{br}(T)=$
+	\item 整根引线视为单一实体，平均温度为$\~{T}$。进一步，我们假定平均温度等于中点($z=\ell/2$)温度。
+	$C_{br}(T)$和$c_p(T)$也假定为常数，分别等于$\~{C}_{br}$和$\~{c}_p$。
+	\item 方程4.105中的$dT/dz$假定为常数，$\~{T}/(\ell/2)=2\~{T}/\ell$。
+	\item 对$I>I_o$，$\.{m}_{br}(I)=\nu_{br}I[1+\eta_{br}(I-I_o)]$，其中$\nu_{br}$和$\eta_{br}$都是常数。
+	\item $\rho_{br}(T)=[\rho_0]_{br}+\gamma_{br}(\~{T}-\~{T}_o)$，其中$\~{T}_o$是中点温度的初始值($I=I_o$时)；
+	对黄铜，$[\rho_0]_{br}=21\ \mathrm{\Omega m}$，$\gamma_{br}=74\ \mathrm{p\Omega m/K}$[4.86]。
 \end{enumerate}
+
 在这些假设下，方程4.105变为：
 \begin{equation}% 4.106
 A\tilde{C}_{br}\frac{d\tilde{T}(t)}{dt}=-\upsilon_{br}I[1+\eta_{br}(I-I_o)]\tilde{c}_p\frac{\tilde{T}(t)}{(\ell/2)}+\frac{[\rho_0]_{br}}{A}I^2+\frac{\gamma_{br}}{A}[\tilde{T}(t)-\tilde{T}_o]I^2
@@ -2522,63 +2517,56 @@ d) 证明$nu_{br}$为：
 \upsilon_{br}=\frac{[\rho_0]_{br}\ell I_o}{2\tilde{c}_pA\tilde{T}_o}
 \end{equation}
 
-e) 证明。。。。。。。。
+e) 证明，在过电流区域，热输入$[Q_I]_{br}$由下式给出：
 \begin{equation}% 4.110
 [Q_I]_{br}=h_L\upsilon_{br}I[1+\eta_{br}(I-I_o)]
 \end{equation}
 
-f) 证明，，，，，，，
+f) 证明方程4.102给出的$[\frac{I_o\ell}{A}]_{br}$也可以由下式给出：
 \begin{equation}% 4.111
 \left[\frac{I_o\ell}{A}\right]_{br}=\frac{2\tilde{c}_p\tilde{T}_o}{[\rho_0]_{br}}\sqrt{\frac{[k_0]_{br}[\rho_0]_{br}}{h_Lc_{p0}}}
 \end{equation}
+式中，$c_{p0}$是冷端温度下的氦比热。
 
-g) 整个引线上的压降。。。。。。。。。
+g) 整个引线上的压降$V_{br}(t)$为：
 \begin{equation}% 4.112
 V_{br}(t)=V_o(\tilde{T}_o)+\Delta V(I)(1-e^{-t/\tau_j(I)})
 \end{equation}
-
+式中，$V_o(\~{T}_o)$是载流为$I_o$时的稳态引线电压。证明$\Delta V(I)$在常数$I$下，为：
 \begin{equation}% 4.113
 \Delta V(I)=\frac{\gamma_{br}\ell}{A}\{\frac{[\rho_0]_{br}\ell I^2-2\upsilon_{br}\tilde{c}_pA\tilde{T}_oI[1+\eta_{br}(I-I_o)]}{2\upsilon_{br}\tilde{c}_pAI[1+\eta_{br}(I-I_o)]-\gamma_{br}\ell I^2}\}I
 \end{equation}
 
-h) Consider a vapor-cooled brass lead rated at 25 kA under a cyclic operation
-in which it is subjected to an overcurrent of 75 kA (=$3\times I_o$) over a 5-min period,
-followed by a 30-min off-current period. As may become evident from
-experimental results performed on a 40-A brass lead [4.87], presented later in
-Figs. 4.25 and 4.26, the 40-A brass lead can operate stably at an overcurrent
-of up to nearly 200A (= $5\times I_o$) over an indefinite period of time—in the
-experiment the overcurrent condition at a given I lasts only up to 500 s.
+h) 考虑一条额定电流25 kA的黄铜引线，工作于周期运行模式，通过5 min的75 kA (=$3\times I_o$)过电流，
+而后30 min无电流。40 A黄铜引线的实验结果[4.87]清楚的表明，该引线可以在过流高达200A (= $5\times I_o$)
+时稳定运行不限时长的时间——实验中，给定$I$下的过流情况持续500 s。
 
-%Determine I◦ of a vapor-cooled copper lead that when operated at I◦ continuously
-%results in the same cold-end heat input as that of the 25-kA brass
-%lead operated in the mode described above. Use νbr = 6.13×10−8 kg/s A,
-%determined in the experiment [4.87], and ηbr=2.2×10−5 A−1, scaled to a 25-
-%kA lead from the experiment (ηbr=0.0138A−1 at I◦=40 A). For the copper
-%lead, use QI◦/I◦=1mW/A.
+确定气冷铜引线的$I_o$，条件是连续运行于$I_o$，冷端热输入和25 kA黄铜引线运行在上面给定的相同模式时相同。
+Determine I◦ of a vapor-cooled copper lead that when operated at I◦ continuously
+使用试验[4.87]获得的$\nu_{br} = 6.13\times 10^{−8}$ kg/s A，$\eta_{br}=2.2\times 10^{−5}\ \mathrm{A^{−1}}$，该值
+是25 kA引线的试验数据($I_o$=40 A时，$\eta_{br}=0.0138 A^{-1}$)的成比例值。对于铜引线，使用$Q_{I_o}/I_o$=1 mW/A。
 
 
 \subsubsection{问题4.7之解}
-a) %From Eq. 4.35, [I◦/A]br for brass leads is:
-
-%With cp0=6.0 kJ/kgK and other property values inserted into Eq. S7.1, we have:
-\begin{equation}
-\left[\frac{I_o\ell}{A}\right]_{br}=\sqrt{\frac{c_{p0}[k_0]_{br}[\rho_0]_{br}}{h_L}}\int_{T_0}^{T_1}\frac{dT}{\rho_{br}(T)}
-\end{equation}
-
+a) 根据方程4.35，黄铜引线的$[\frac{I_o\ell}{A}]_{br}$为：
+\begin{align*}
+\left[\frac{I_o\ell}{A}\right]_{br}=\sqrt{\frac{c_{p0}[k_0]_{br}[\rho_0]_{br}}{h_L}}\int_{T_0}^{T_1}\frac{dT}{\rho_{br}(T)} \tag{S7.1}
+\end{align*}
+向方程S7.14中代入$c_{p0}$=6.0 kJ/kgK和其他物性值，有：
 \begin{align}% 4.102
 \left[\frac{I_o\ell}{A}\right]_{br}&=\sqrt{\frac{(6.0\ \mathrm{kJ/kgK})(22\ \mathrm{W/mK})(21\ \mathrm{n\Omega m})}{(20.7\ \mathrm{kJ/kg})}}(0.97\times10^{10}\ \mathrm{K/\Omega m})
 \left[\frac{I_o\ell}{A}\right]_{br}\\\notag
 &\equiv[\zeta_o]_{br}\simeq 0.35\times 10^7\ \mathrm{A/m}
 \end{align}
 
-b) From Eq. 4.32a, which is for copper leads, we obtain:
+b) 由铜引线的方程4.32a，我们有：
 \begin{align}% 4.103
 \left[\frac{Q_{I_o}}{A}\right]_{br}&=\sqrt{\frac{h_L[k_0]_{br}[\rho_0]_{br}}{c_{p0}}}=\sqrt{\frac{(20.4\ \mathrm{kJ/kg})(22\ \mathrm{W/mK})(21\ \mathrm{n\Omega m})}{(6.0\ \mathrm{kJkgK})}}
 \left[\frac{Q_{I_o}}{A}\right]_{br}\\\notag
 &\simeq 1.25\ \mathrm{mW/A}
 \end{align}
 
-c) From Eq. 4.41 with %˜kbr =55W/mK (Table 4.18) and other values, including ln[˜cp(T−T0)/hL + 1]4.32, we have:
+c) 由方程4.41，代入$\~{k}_{br}$ =55 W/mK(表4.18)和其他值，包括$\ln[\~{c}_p(T_\ell−T_0)/h_L + 1]\simeq 4.32$，我们有：
 \begin{align*}
 \left[\frac{Q_0}{Q_{I_o}}\right]_{br}&=\frac{\tilde{k}_{br}}{\tilde{c}_p[\zeta_o]_{br}}\sqrt{\frac{h_Lc_{p0}}{[k_0]_{br}[\rho_0]_{br}}}\times\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right] \\
 &\simeq\frac{(55\ \mathrm{W/mK})}{(5.2\ \mathrm{kJ/kgK})(0.36\times 10^7\ \mathrm{A/m})}\sqrt{\frac{(20.7\ \mathrm{kJ/kg})(6.0\ \mathrm{kJ/kgK})}{(22\ \mathrm{W/mK})(21\ \mathrm{n\Omega m})}}\times 4.32
@@ -2588,36 +2576,36 @@ c) From Eq. 4.41 with %˜kbr =55W/mK (Table 4.18) and other values, including ln
 \left[\frac{Q_0}{Q_{I_o}}\right]_{br}\simeq0.21
 \end{equation}
 
-d) Because $\Delta \theta(I_o)$=0 (no overcurrent), from Eq. 4.107a we have:
+d) 因为$\Delta \theta(I_o)$=0 (没有过流)，根据方程4.107a，我们有：
 \begin{equation}
 [\rho_0]_{br}\ell I_{o}^{2}-2\upsilon_{br}\tilde{c}_pA\tilde{T}_oI_o=0
 \end{equation}
-From Eq. S7.4, we obtain:
+从方程S7.4，我们得到：
 \begin{equation}% 4.109
 \unboldmath=\frac{[rho_0]_{br}\ell I_o}{2\tilde{c}_pA\tilde{T}_o}
 \end{equation}
 
-e) From$[Q_{I_o}]_{br}=\.{m}_{br}h_L$and with$\.{m}_{br}(I)=\upsilon_{br}I[1+\eta_{br}(I-I_o)]$(assumption 3 ):
+e) 由$[Q_{I_o}]_{br}=\.{m}_{br}h_L$和$\.{m}_{br}(I)=\upsilon_{br}I[1+\eta_{br}(I-I_o)]$(假设3)：
 \begin{equation}% 4.110
 [Q_{I_o}]_{br}=h_L\upsilon_{br}I[1+\eta_{br}(I-I_o)]
 \end{equation}
 
-f) With$[\frac{I_o\ell}{A}]_{br}$from Eq. 4.109 and$[Q_{I_o}]_{br}$from Eq. 4.110 at$I=I_o$:
+f) 由方程4.109中的$[\frac{I_o\ell}{A}]_{br}$和方程4.110在$I=I_o$下的$[Q_{I_o}]_{br}$：
 \begin{align*}
 \left[\frac{I_o\ell}{A}\right]_{br}=\upsilon_{br}\frac{2\tilde{c}_p\tilde{T}_o}{[\rho_0]_{br}}
 \end{align*}
 \begin{align*}
 [Q_{I_o}]_{br}=h_L\upsilon_{br}I_o
 \end{align*}
-Combining Eqs. S7.5a and S7.5b, we have:
+联立方程S7.5a和S7.5b，我们有：
 \begin{align*}
 \left[\frac{I_o\ell}{A}\right]_{br}=\left[\frac{[Q_{I_o}]}{I_o}\right]_{br}\frac{2\tilde{c}_p\tilde{T}_o}{h_L[\rho_0]_{br}}
 \end{align*}
-Inserting$[\frac{[Q_{I_o}]}{I_o}]_{br}$from Eq. S7.2 into Eq. S7.6, we obtain:
+将方程S7.2中的$[\frac{[Q_{I_o}]}{I_o}]_{br}$代入方程S7.6，有：
 \begin{align*}% 4.111
 \left[\frac{I_o\ell}{A}\right]_{br}=\frac{2\tilde{c}_p\tilde{T}_o}{[\rho_0]_{br}}\sqrt{\frac{[k_0]_{br}[\rho_0]_{br}}{h_Lc_{p0}}}
 \end{align*}
-We may determine the value of$\~{T}_o$, the only unknown parameter in Eq. 4.111:
+我们可以确定方程4.111中唯一不知道的参数$\~{T}_o$的值：
 \begin{align*}
 \tilde{T}_o&=\frac{[\rho_0]_{br}}{2\tilde{c}_p}\left[\frac{I_o\ell}{A}\right]_{br}\sqrt{\frac{h_Lc_{p0}}{[k_0]_{br}[\rho_0]_{br}}} \\
 &=\frac{(21\ \mathrm{n\Omega m})}{2(5.19\ \mathrm{kJ/kgK})}(0.358\times 10^7\ \mathrm{A/m})\sqrt{\frac{(20.7\ \mathrm{kJ/kg})(6.0\ \mathrm{kJ/kgK})}{(22\ \mathrm{W/mK})(21\ \mathrm{n\Omega m})}}\\
