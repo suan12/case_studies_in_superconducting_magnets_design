@@ -1530,28 +1530,24 @@ V_o\simeq2.3\times 10^7\tilde{\rho}_{cu}\ \mathrm{V}
 \end{equation}
 也即，对任意额定电流优化的引线的$V_{ot}$是相同的。
 
-对铜，$\~{\rho}_{cu}\sim 2.5\times 10^{−10}\ \mathrm{\Omega m}$ ($\sim$50 K之下) and varies linearly with temperature
-above$\sim$50 K, being 1.75×10−8 Ωm at 273 K. From Eq. 4.44, we have:
-$\~{\rho}_{cu}\simeq 0.4\times 10^{-8}\ \mathrm{\Omega m}$。The voltage drop across an optimum lead at its rated current
-is independent of rated current; for a copper lead it is$\sim$100 mV. Thus, $V_o\sim$100mV
-at 100A for a 100-A lead and at 10 kA for a 10-kA lead; when the warm end is
-“cool,” which often happens in vapor-cooled leads, $V_{o}$can be less than 100 mV.
-This conclusion agrees, within an order of magnitude, with experimental data for
-vapor-cooled copper leads in the 1 kA–30 kA range [4.54].
+对铜，$\~{\rho}_{cu}\sim 2.5\times 10^{−10}\ \mathrm{\Omega m}$ ($\sim$50 K之下)并且在
+$\sim$50 K以上时与温度呈线性，273 K时为$1.75\times 10^{−8}\ \mathrm{\Omega m}$。
+根据方程4.44，我们有：$\~{\rho}_{cu}\simeq 0.4\times 10^{-8}\ \mathrm{\Omega m}$。
+优化引线在其额定电流运行时的压降与额定电流值无关；对铜引线，这个值$\sim$100 mV。
+这样，100 A引线在载流为100 A时，或10 kA引线在载流为10 kA时，都有$V_o\sim$100 mV；
+当热端被冷却——这在气冷引线中是很常见的——$V_{o}$将小于100 mV。
+这个结论在数量级上与1 kA-30 kA的气冷铜引线的试验数据吻合很好[4.54]。
 
 \textbf{F. 流体阻塞端的热负荷}
 
-When a cooling gas flow stoppage occurs, the steady-state solution on which the
-design of optimum leads is based is no longer valid. If the lead continues to carry
-its rated current$I_o$without cooling, “flow stoppage meltdown” of the lead may
-occur, most often near the warm end. The time-dependent power equation [W/m]
-for a differential element of an optimum lead is given by:
+一旦发生冷却气体的流体阻塞，基于稳态解的优化引线设计方法就不再适用。
+如果引线在无冷却的情况下持续通过额定电流$I_o$，引线可能发生“流体阻塞熔化”，通常是在热端附近。
+优化引线微元的时变能量方程[W/m]为：
 \begin{equation}% 4.46
 AC_{cu}(T)\frac{dT}{dt}=\frac{d}{dz}[Ak(T)\frac{dT}{dz}]-\dot{m}_Ic_p(T)\frac{dT}{dz}+\frac{\rho_{cu}(T)}{A}I_{o}^{2}
 \end{equation}
-where$C_{cu}(T)$is the volumetric heat capacity of the lead metal (copper). With
-no cooling ($\.{m}_I=0$)and the conduction term set equal to zero (conservative
-assumption), Eq. 4.46 becomes:
+式中，$C_{cu}(T)$是引线金属(铜)的单位体积热容。
+在无冷却($\.{m}_I=0$)和传导项为零(保守假设)时，方程4.46变为：
 \begin{equation}% 4.47
 AC_{cu}(T)\frac{dT}{dt}=\frac{\rho_{cu}(T)}{A}I_{o}^{2}
 \end{equation}
@@ -1559,8 +1555,8 @@ AC_{cu}(T)\frac{dT}{dt}=\frac{\rho_{cu}(T)}{A}I_{o}^{2}
 \begin{equation}% 4.48
 C_{cu}(T)\frac{dT}{dt}\frac{\rho_{cu}(T)\zeta_{o}^{2}}{\ell^2}
 \end{equation}
-Because flow stoppage meltdown usually happens near the warm end, we replace
-$C_{cu}(T)$with$C_o$(a constant) and$\rho_{cu}(T)=\rho_o+\gamma_{cu}T$($\rho_o$和$\gamma_{cu}$都是常数)：
+因为流体阻塞熔化通常发生在近热端，我们用$C_o$(常数)替代$C_{cu}(T)$，以及
+$\rho_{cu}(T)=\rho_o+\gamma_{cu}T$($\rho_o$和$\gamma_{cu}$都是常数)：
 \begin{equation}% 4.49
 \frac{dT}{dt}=\frac{\rho_o\zeta_{o}^{2}}{C_o\ell^2}+\frac{\gamma_{cu}\zeta_{o}^{2}}{C_o\ell^2}T=\frac{\rho_o}{\gamma_{cu}\tau_\ell}+\frac{T}{\tau_\ell}
 \end{equation}
@@ -1568,16 +1564,13 @@ $C_{cu}(T)$with$C_o$(a constant) and$\rho_{cu}(T)=\rho_o+\gamma_{cu}T$($\rho_o$�
 \begin{equation}% 4.50
 \tau_\ell=\frac{C_o\ell^2}{\gamma_{cu}\zeta_{o}^{2}}
 \end{equation}
-The solution to Eq. 4.49 is given by:
+方程4.49的解为：
 \begin{equation}% 4.51
 T(t)=Ke^{t/\tau_\ell}-\frac{\rho_o}{\gamma_{cu}}
 \end{equation}
-where$K$ is a constant. Equation 4.51 states that upon gas flow stoppage $T(t)$
-rises exponentially with a time constant of$\tau_\ell$. Because$\tau_\ell$is proportional to$\ell^2$,
-a longer optimum lead takes longer to reach the metal’s meltdown temperature
-than does a shorter optimum lead. Note that because$\zeta_o=(I_o \ell/A)$, we may also
-conclude that for the same rated current a thicker optimum lead is safer than a
-thinner optimum lead against a flow stoppage incident.
+式中，$K$是常数。方程4.51表明，在气流阻塞时，$T(t)$指数式升高，时间常数$\tau_\ell$。 因为$\tau_\ell$正比于$\ell^2$，更长的优化引线达到金属熔化温度的时间也更长。
+因为$\zeta_o=(I_o \ell/A)$，我们还可以得出对同样额定电流的引线，粗的优化引线要比细的优化引线
+更能抗受流体阻塞故障。
 
 举例来说，对于一个优化的长为$\ell$=1 m的10 kA引线，其
 $C_o=3.5\times 10^6\ \mathrm{J/m^3 K}$，$\gamma_{cu}=68\times 10^{-12}\ \mathrm{\Omega m/K}$，$(I_o \ell/A)\equiv\zeta_o=2.3\times 10^7$A/m，我们有：
@@ -1585,22 +1578,20 @@ $C_o=3.5\times 10^6\ \mathrm{J/m^3 K}$，$\gamma_{cu}=68\times 10^{-12}\ \mathrm
 \tau_\ell=\frac{(3.5\times 10^6\ \mathrm{J/m^3K})(1\ \mathrm{m})^2}{(68\times 10^{-12}\ \mathrm{\Omega m/K})(2.5\times 10^7\ \mathrm{A/m})^2}\sim 90\ \mathrm{s}
 \end{align*}
 
-Note that$\tau_\ell$is doubled for an optimum 10-kA lead having$\ell$=1.4m.
+注意，对优化的10 kA、$\ell$=1.4 m引线，$\tau_\ell$翻倍。
 
 \subsection{讨论4.15：干式引线——正常金属和高温超导体}
-For a dry superconducting magnet, current leads must generally operate in a
-vacuum environment. Here we discuss two types of leads rated at$I_o$: 1) normal
-metal [4.55]; and 2) HTS over its usable temperature range [4.56].
+对一个干式超导磁体，电流引线通常也必须运行于真空环境。
+这里，我们讨论两类额定值为$I_o$的引线：1) 常规金属[4.55]；2) 在其可用温度范围的HTS[4.56]。
 
 \textbf{A. 正常金属}
 
-The steady-state power differential equation over a unit lead length is given by:
+单位引线长度上的稳态能量微分方程为：
 \begin{equation}% 4.52
 A\tilde{k}\frac{d^2T}{dz^2}+\frac{\tilde{\rho}I_{o}^{2}}{A}=0
 \end{equation}
-where $A$ is the lead active cross sectional area;$\~{k}$and$\~{\rho}$are, respectively, the metal’s T-averaged thermal conductivity and electrical resistivity. Solving Eq. 4.52 with
-the boundary conditions $T(z = 0) = T_0$ and $T(z =\ell) = T_\ell$, we obtain Eq. 4.11
-(p. 240), from which the heat input at the cold end,$Q_{I_o}$ may be derived:
+式中，$A$引线的有效截面积；$\~{k}$和$\~{\rho}$分别是金属的温度平均热导率和电阻率。
+在$T(z = 0) = T_0$和$T(z =\ell) = T_\ell$边界条件下解方程4.52，我们得到了4.11，其中的冷端热输入$Q_{I_o}$可以导出：
 \begin{equation}% 4.53
 Q_{I_o}=A\tilde{k}\frac{dT}{dz}\mid_{z=0}=\tilde{k}(T_\ell-T_0)(\frac{A}{\ell})+\frac{\tilde{\rho}I_{o}^{2}}{2}(\frac{\ell}{A})
 \end{equation}
@@ -1626,12 +1617,10 @@ HTS延伸段传入温度为$T_0$的磁体环境的热输入$[Q_{I_{hts}}]_{dr}$�
 [Q_{I_hts}]_{dr}=k_{hts}A_{hts}\frac{(T_{\omega_{hts}}-T_0)}{\ell_{hts}}
 \end{equation}
 
-In a real normal-metal/HTS lead, the normal metal heat at its cold end, given by
-Eq. 4.54 with $T_0\simeq T_{w_{hts}}$, generally is absorbed by the 1st stage of a cryocooler,
-the 2nd stage of which maintains the magnet at $T_0$. Also, the HTS lead, whether
-of bulk or tape, must be protected; protection of Bi2223 tape current lead is
-discussed in DISCUSSION 8.5. Besides the HTS lead considered here, there also
-are vapor-cooled HTS versions, as studied in PROBLEMS 4.4–4.6.
+在一个实际的常规金属/HTS引线中，常规金属的冷端热量(方程4.54给出，$T_0\simeq T_{w_{hts}}$)，
+一般由制冷机的一级冷头所吸收；二级冷头用于维持磁体在$T_0$。
+同时，不论是块材还是带材制成的HTS引线都必须有保护；Bi2223带材电流引线的保护将在讨论8.5中涉及。
+除了这里考虑的HTS引线，还存在气冷HTS引线变种，将在问题4.4-4.6中研究。
 
 
 \subsection{问题4.4：气冷HTS电流引线——全超导型(FSV)}
