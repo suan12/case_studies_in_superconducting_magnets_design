@@ -135,7 +135,7 @@ $H_p<H_e<H_m-2H_p,\quad \Delta M=-M(H_e\uparrow)+M(H_e\downarrow)$范围内，�
 
 \begin{figure}[htbp]
   \centering
- \includegraphics[bb=0 0 800 600]{chpt5/figs/fig5.6.eps}
+ \includegraphics[scale=0.8]{chpt5/figs/fig5.6.eps}
   \caption{在图5.5给出的磁场$H_s(x)$下的$J(x)$}\label{fig:jtoh5.5}
 \end{figure}
 
@@ -220,351 +220,618 @@ $H_e(t)$从0（$t=0$）增（$\uparrow$）至$H_e$（$t=t_1$）时，我们有
 图中的$M$的单位是$emu/cm^3$，不是SI单位。
 
 \section{专题}
-\subsection{讨论5.1：传导电流磁化}
+\subsection{讨论5.1：传输电流磁化}
 正如本书最初所述，在传输电流存在条件下的励磁依赖于外场和传输电流施加的顺序。
 这里我们考虑三种情况：A) 先加磁场后加传输电流； B) 先通电流后加磁场；C) 磁场和电流交替改变。
 
 \textbf{A.  先加磁场后加传输电流}
 
-\begin{equation}% page321 第1个
-H_{s2_{1}}(x)=2H_{p}+J_{c}x=2J_{c}a+J_{c}x\qquad(0\leq x\leq x*)
-\end{equation}
-\begin{equation}% page321 第2个
-H_{s2_{2}}(x)=2.5H_{p}-J_{c}x=2.5J_{c}a-J_{c}x\quad(x*\leq x\leq x+)
-\end{equation}
-\begin{equation}% page321 第3个
-H_{s2_{3}}(s)=H_{p}+J_{c}x=J_{c}a+J_{C}x\qquad(x+\leq x\leq 2a)
-\end{equation}
-\begin{equation}% page322 第1个
-H_{s2_{1}}(X)=(H_{e}-\frac{1}{2}I_{t})+J_{c}x\qquad(0\leq x\leq x*)
-\end{equation}
-\begin{equation}% page322 第2个
-H_{s2_{2}}(x)=H_{e}-J_{c}x\qquad(x*\leq x\leq x+)
-\end{equation}
-\begin{equation}% page322 第3个
-H_{s2_{s}}(x)=(H_{e}+\frac{1}{2}I_{t})+J_{c}(x-2a)\qquad(x+\leq x\leq2a)
-\end{equation}
-\begin{equation}% page322 第4个
-H_{{s}2_{1}}(x*)=H_{s2_{2}}(x*)
-\end{equation}
-\begin{equation}% page322 第5个
-H_{e}-H_{p}i+J_{c}x*=H_{e}J_{c}x*\Rightarrow x*=\frac{H_{p}}{2J_{c}}i=\frac{1}{2}ai
-\end{equation}
-\begin{equation}% page322 第6个
+图5.9给出了厚度为$2a$的Bean板在施加如下特定磁场-电流序列后内部磁场$H_s(x)$的特征。
+\begin{enumerate}
+	\item 起始，$H_{s1}(x)$，有$H_e=2.5H_p$，无传输电流——点线。
+	\item 接下来，$H_{s2}(x)$，通过传输电流$I_t=J_c=I_c/2$后，施加恒定外场——实线。其中，$J_c a=H_p$。
+	\item 最后，$H_{s3}(x)$，传输电流进一步增加到$2J_c a=I_c$后，磁场$H_e =2.5 H_p$，最终$H_{s3}(0)=1.5 H_p$
+	以及$H_{s3}(2a)=3.5H_p$——虚线。
+\end{enumerate}
+
+$H_{s1}(x)$和$H_{s3}(x)$是很直接的。$H_{s2}(x)$由三个分段函数$H_{s2_1}(x),H_{s2_2}(x),H_{s2_3}(x)$组成：
+\begin{align*}% page321 第1个
+H_{s2_{1}}(x)&=2H_{p}+J_{c}x=2J_{c}a+J_{c}x\qquad&(0\leq x\leq x*)\\
+H_{s2_{2}}(x)&=2.5H_{p}-J_{c}x=2.5J_{c}a-J_{c}x\quad&(x*\leq x\leq x+)\\
+H_{s2_{3}}(s)&=H_{p}+J_{c}x=J_{c}a+J_{C}x\qquad&(x+\leq x\leq 2a)
+\end{align*}
+式中，$x*$和$x+$由$H_{s1}(x)$和$H_{s2}(x)$的两个拐点给出。也即，$H_{s1}(x*)=H_{s2_1}(x*)$，
+$H_{s1}(x+)=H_{s2_3}(x+)$：$x*=0.25a$，$x+=0.75a$。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.7]{chpt5/figs/fig5.9.eps}
+	\caption{在$H_e=2.5H_p$下的磁场特征。首先，$I_t$=0(点线)，然后$I_t=J_c a=I_c/2$(实线)，最后$I_t=2J_c a=I_c$(虚线)。}
+\end{figure}
+
+图5.10给出了。。。。。
+
+面积A1.。。。。。。
+
+\begin{align*}
+H_{s2_{1}}(X)&=(H_{e}-\frac{1}{2}I_{t})+J_{c}x\qquad&(0\leq x\leq x*)\\
+H_{s2_{2}}(x)&=H_{e}-J_{c}x\qquad&(x*\leq x\leq x+)\\
+H_{s2_{s}}(x)&=(H_{e}+\frac{1}{2}I_{t})+J_{c}(x-2a)\qquad&(x+\leq x\leq2a)
+\end{align*}
+我们解出$x*$和$x+$，确定$H_{s2_2}(x*)$和$H_{s2_2}(x+)$：
+\begin{align*}
+H_{{s}2_{1}}(x*)=H_{s2_{2}}(x*)\\
+H_{e}-H_{p}i+J_{c}x*=H_{e}J_{c}x*\Rightarrow x*=\frac{H_{p}}{2J_{c}}i=\frac{1}{2}ai\\
 H_{s2_{2}}(x*)=H_{e}-\frac{1}{2}aJ_{c}i=H_{e}-\frac{1}{2}H_{p}i
-\end{equation}
-\begin{equation}% page322 第7个
-H_{s2_{2}}(x+)=H_{s2_{3}}(x+)
-\end{equation}
-\begin{equation}% page322 第8个
-H_{e}-J_{c}x+=H_{e}+H_{p}i+J_{c}(x^{+}-2a)\Rightarrow x^{+}=a(1-\frac{1}{2}i)
-\end{equation}
-\begin{equation}% page322 第9个
-H_{s2_{2}(x+)}=H_{e}-H_{p}+\frac{1}{2}H_{p}i
-\end{equation}
-\begin{equation}% page323 第1个
-A_{1}=\frac{1}{2}x*[H_{s1}(0)+H_{s2}(x*)]=\frac{1}{4}ai[(H_{e}-H_{p}i)+(H_{e}-\frac{1}{2}H_{p}i)]\\
-=\frac{1}{4}ai(2H_{e}-\frac{3}{2}H_{p}i)  
-=a(\frac{1}{2}H_{e}i-\frac{3}{8}H_{P}i^{2})
-\end{equation}
-\begin{equation}% page323 第2个
-A_{2}=\frac{1}{2}(x^{+}-x*)[H_{s2}(x*)+H_{s2}(x^{+})]\\
-=\frac{1}{2}(a-ai)(H_{e}-\frac{1}{2}H_{p}i+H_{e}-H_{p}+\frac{1}{2}H_{p}i)\\
-=\frac{1}{2}a(-i)(2H_{e}-H_{p})\\
-=a(H_{e}-H_{e}i-\frac{1}{2}H_{p}+\frac{1}{2}H_{p}i)
-\end{equation}
-\begin{equation}% page323 第3个
-A_{3}=\frac{1}{2}(2a-x+)[H_{s2}(x+)+H_{s3}(2a)]\\
-=\frac{1}{2}(a+\frac{1}{2}ai)(H_{e}-H_{p}+\frac{1}{2}H_{p}i+H_{e}+H_{P}i)\\
-=a(1+\frac{1}{2}i)(H_{e}-\frac{1}{2}H_{p}+\frac{3}{4}H_{p}i)\\
-=a(H_{e}+\frac{1}{2}H_{e}i-\frac{1}{2}H_{p}-\frac{1}{4}H_{p}i+\frac{3}{4}H_{p}i+\frac{3}{8}H_{p}i^{2})
-\end{equation}
+\end{align*}
+以及
+\begin{align*}
+H_{s2_{2}}(x+)&=H_{s2_{3}}(x+)\\
+H_{e}-J_{c}x+&=H_{e}+H_{p}i+J_{c}(x^{+}-2a)\Rightarrow x^{+}=a(1-\frac{1}{2}i)\\
+H_{s2_{2}(x+)}&=H_{e}-H_{p}+\frac{1}{2}H_{p}i
+\end{align*}
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.7]{chpt5/figs/fig5.10.eps}
+	\caption{用于励磁计算的有传输电流(实线)的磁场的特征。竖直点线分开三个区域：$A_1， A_2$和$A_3$。}
+\end{figure}
 
+M is proportional to the size of the “shaded area,” shown in Fig. 5.10, which is
+the sum of three partitioned areas A1, A2, and A3.
 
-\begin{equation}% page323 第4个
-Shaded\quad area=A_{1}+A_{2}+A_{3}\\
-=a(\frac{1}{2}H_{e}i-\frac{3}{8}H_{p}i^{2}+H_{e}-H_{e}i-\frac{1}{2}H_{p}+\frac{1}{2}H_{p}i\\
-+H_{e}+\frac{1}{2}H_{e}i-\frac{1}{2}H_{p}-\frac{1}{4}H_{P}i+\frac{3}{4}H_{P}i+\frac{3}{8}H_{p}i^{2})\\
-=a(2H_{e}-H_{p}+H_{p}i)
-\end{equation}
-
-
-
-\begin{equation}% page323 第4个
--M(i)=H_{e}-\frac{1}{2a}\times(Shaded\quad area)\\
-=H_{e}-H_{e}+\frac{1}{2}H_{p}-\frac{1}{2}H_{p}i\\
-=\frac{1}{2}H_{p}(1-i)\qquad(5.17a)\\
-=-M(0)f_{1}(i)\qquad(5.17b)
-\end{equation}
-
-C) 磁场和电流交替改变。
+The area of each trapezoid is its (base)×(height1+height2)/2.
+\begin{align*}% page323 第1个
+A_{1}&=\frac{1}{2}x*[H_{s1}(0)+H_{s2}(x*)]=\frac{1}{4}ai[(H_{e}-H_{p}i)+(H_{e}-\frac{1}{2}H_{p}i)]\\
+&=\frac{1}{4}ai(2H_{e}-\frac{3}{2}H_{p}i)  \\
+&=a(\frac{1}{2}H_{e}i-\frac{3}{8}H_{P}i^{2})
+\end{align*}
+\begin{align*}% page323 第2个
+A_{2}&=\frac{1}{2}(x^{+}-x*)[H_{s2}(x*)+H_{s2}(x^{+})]\\
+&=\frac{1}{2}(a-ai)(H_{e}-\frac{1}{2}H_{p}i+H_{e}-H_{p}+\frac{1}{2}H_{p}i)\\
+&=\frac{1}{2}a(-i)(2H_{e}-H_{p})\\
+&=a(H_{e}-H_{e}i-\frac{1}{2}H_{p}+\frac{1}{2}H_{p}i)
+\end{align*}
+\begin{align*}% page323 第3个
+A_{3}&=\frac{1}{2}(2a-x+)[H_{s2}(x+)+H_{s3}(2a)]\\
+&=\frac{1}{2}(a+\frac{1}{2}ai)(H_{e}-H_{p}+\frac{1}{2}H_{p}i+H_{e}+H_{P}i)\\
+&=a(1+\frac{1}{2}i)(H_{e}-\frac{1}{2}H_{p}+\frac{3}{4}H_{p}i)\\
+&=a(H_{e}+\frac{1}{2}H_{e}i-\frac{1}{2}H_{p}-\frac{1}{4}H_{p}i+\frac{3}{4}H_{p}i+\frac{3}{8}H_{p}i^{2})
+\end{align*}
+By combining these three areas, we may compute the shaded area:
+\begin{align*}% page323 第4个
+Shaded\quad area=&A_{1}+A_{2}+A_{3}\\
+=&a(\frac{1}{2}H_{e}i-\frac{3}{8}H_{p}i^{2}+H_{e}-H_{e}i-\frac{1}{2}H_{p}+\frac{1}{2}H_{p}i\\
+&+H_{e}+\frac{1}{2}H_{e}i-\frac{1}{2}H_{p}-\frac{1}{4}H_{P}i+\frac{3}{4}H_{P}i+\frac{3}{8}H_{p}i^{2})\\
+=&a(2H_{e}-H_{p}+H_{p}i)
+\end{align*}
+With the shaded area known, M can be computed quickly:
+\begin{align*}% page323 第4个
+-M(i)&=H_{e}-\frac{1}{2a}\times(Shaded\quad area)\\
+&=H_{e}-H_{e}+\frac{1}{2}H_{p}-\frac{1}{2}H_{p}i\\
+&=\frac{1}{2}H_{p}(1-i)\qquad(5.17a)\\
+&=-M(0)f_{1}(i)\qquad(5.17b)
+\end{align*}
+where f1(i) = 1 − i. −M(i) decreases linearly with i, becoming 0 at i = 1.
 
 \textbf{B. 先通电流后加磁场}
 
-\begin{equation}% page324 第1个
-I_{t}=\int_{0}^{2a}J(x)dx=J_{c}(0.5)+J_{c}(2a-1.5a)=J_{c}a
-\end{equation}
-\begin{equation}% page324 第2个
-I_{t}=\int_{0}^{2a}J(x)dx=-J_{c}(0.5a)+J_{c}(2a-0.5a)=J_{c}a
-\end{equation}
-\begin{equation}% page324 第3个
-H_{s1}(x)=(H_{e}-H_{p}i)-J_{c}x\qquad(0\leq \leq x*)
-\end{equation}
-\begin{equation}% page324 第4个
-H_{s2}(x)=(H_{e}+H_{p}i)+J_{c}(x-2a)\quad(x*\leq x leq  2a)
-\end{equation}
-\begin{equation}% page324 第5个
-x*=a-ai=a(1-i)
-\end{equation}
-\begin{equation}% page325 第1个
-H_{s1}(x*)=H_{e}-H_{p}i-J_{c}a(1-i)=J_{e}-H_{p}
-\end{equation}
+这里向板加外部磁场和传输电流顺序是反过来的。。。。。。。
 
-\begin{align}% page325 第2个
+在图4.11中，。。。。。
+
+开始，$H_e=0$：
+\begin{align*}% page324 第1个
+I_{t}=\int_{0}^{2a}J(x)dx=J_{c}(0.5)+J_{c}(2a-1.5a)=J_{c}a
+\end{align*}
+接下来，$H_e=2H_p$：
+\begin{align*}% page324 第2个
+I_{t}=\int_{0}^{2a}J(x)dx=-J_{c}(0.5a)+J_{c}(2a-0.5a)=J_{c}a
+\end{align*}
+为了确定板内的励磁。。。。。。。
+\begin{align*}
+H_{s1}(x)&=(H_{e}-H_{p}i)-J_{c}x\qquad(0\leq \leq x*)\\
+H_{s2}(x)&=(H_{e}+H_{p}i)+J_{c}(x-2a)\quad(x*\leq x leq  2a)
+\end{align*}
+因为，。。。。。。
+\begin{align*}% page324 第5个
+x*=a-ai=a(1-i)
+\end{align*}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.7]{chpt5/figs/fig5.11.eps}
+	\caption{磁场特征，点线表示仅有电流，实现表示有磁场和电流。}
+\end{figure}
+
+Once x∗ is determined, we can compute Hs1(x∗):
+\begin{align*}% page325 第1个
+H_{s1}(x*)=H_{e}-H_{p}i-J_{c}a(1-i)=J_{e}-H_{p}
+\end{align*}
+We can now compute the shaded area, which is the sum of two areas, A1 and A2,
+partitioned by the vertical dashed line in Fig. 5.12.
+\begin{align*}% page325 第2个
 A_{1}&=\frac{1}{2}a(1-i)(H_{e}-H_{p}i+H_{e}-H_{p}\\
 &=a(1-i)(H_{e}\frac{1}{2}H_{p}-\frac{1}{2}H_{p}i)\\
 &=a(H_{e}-H_{e}i\frac{1}{2}H_{p}+\frac{1}{2}H_{p}i^{2})
-\end{align}
-
-
-
-\begin{align}% page325 第3个
+\end{align*}
+\begin{align*}% page325 第3个
 A_{2}&=\frac{1}{2}(2a-a+ai)(H_{e}+H_{p}i+H_{e}-H_{P})\\\notag
 &=a(1+i)(H_E-\frac{1}{2}H_{p}+\frac{1}{2}H_{p}i)\\\notag
 &=a(H_{e}+H_{e}-\frac{1}{2}H_{p}+\frac{1}{2}H_{p}i^{2})
-\end{align}
+\end{align*}
+\begin{align*}% page325 第4个
+Shaded\quad area&=A_{1}+A_{2}\\
+&=a(2H_{e}-H_{p}+H_{p}i^{2})
+\end{align*}
+Once the shaded area is known, we have M:
+\begin{subequations}
+	\begin{align*}
+-M(i)&=H_{e}-\frac{1}{2}(2H_{e}-H_{p}+H_{P}i^{2}\\\notag
+&=\frac{1}{2}H_{p}(1-i^{2})\\
+&=-M(0)f_{2}(i)
+	\end{align*}
+\end{subequations}
+式中，$f_2(i) = 1 − i^2$。励磁时电流$i$的二次函数。
 
-
-
-\begin{equation}% page325 第4个
-Shaded\quad area=A_{1}+A_{2}\\
-=a(2H_{e}-H_{p}+H_{p}i^{2})
-\end{equation}
-\begin{equation}% page325 第5个
--M(i)=H_{e}-\frac{1}{2}(2H_{e}-H_{p}+H_{P}i^{2}\\
-=\frac{1}{2}H_{p}(1-i^{2})\qquad(5.18a)\\
-=-M(0)f_{2}(i)\qquad(5.18b)
-\end{equation}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.7]{chpt5/figs/fig5.12.eps}
+	\caption{用以计算励磁的同时有传输电流和磁场的场特性磁场特征。竖直点线分出两个区域$A_1$和$A_2$。}
+\end{figure}
 
 
 \textbf{C. 磁场和电流交替改变}
 
-\begin{equation}% page326 第1个
-H_{s2}(x)=H_{e}+H_{p}i-J_{c}x\qquad(x*\leq x\leq a)\\
-\end{equation}
+Finally, we shall consider Hs(x) and −M(i) for the slab when the following sequence
+of field and transport current is applied.
 
-\begin{equation}% page326 第2个
-H_{s3}(x)=H_{e}+H_{p}i+J_{c}(x-2a)\quad(a\leq x\leq a^{+})\\
-\end{equation}
+\begin{enumerate}
+	\item 开始
+	\item 当
+	\item 当
+	\item 现在
+	\item 再一次
+\end{enumerate}
 
-\begin{equation}% page326 第3个
+Figure 5.13 shows the field profile Hs(x) after Step 5, consisting of five piece-wise
+solid lines, the second and third of which, useful to compute M(i), are given below.
+\begin{align*}
+H_{s2}(x)&=H_{e}+H_{p}i-J_{c}x\qquad(x*\leq x\leq a)\\
+H_{s3}(x)&=H_{e}+H_{p}i+J_{c}(x-2a)\quad(a\leq x\leq a^{+})
+\end{align*}
+where x∗ and x may be solved from: Hs2(x∗)=Hs3(x )=He. Thus:
+\begin{align*}
 H_{s2}(x*)=H_{e}\Rightarrow H_{e}+H_{p}i-J_{c}x*\\
-\end{equation}
-
-\begin{equation}% page326 第3个
 x*=\frac{H_{p}i}{J_{c}}=ai\\
-\end{equation}
-
-\begin{equation}% page326 第4个
 H_{s3}(x+)=H_{e}\Rightarrow H_{e}+H_{P}i+J_{c}(x^{+}-2a)\\
-\end{equation}
+x^{+}=2a-\frac{H_{p}}{J_{c}}i=2a-ai
+\end{align*}
 
-\begin{equation}% page326 第3个
-x^{+}=2a-\frac{H_{p}}{J_{c}}i=2a-ai\\
-\end{equation}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.7]{chpt5/figs/fig5.13.eps}
+	\caption{第五步之后的磁场特征。}
+\end{figure}
 
+The magnetization is computed from appropriate areas, shown in Fig. 5.14, in
+which the slab is divided into four “white” areas, from left to right, designated A1
+(rectangle), A2 (trapezoid), A3 (trapezoid), and A4 (rectangle minus “triangle”).
+In the figure, “base” and “height” are given by:
+\begin{align*}
+base&=x+-x*=(2a-ai)-ai=(a(1-i)\\
+height&=H_{e}-H_{s2}(a)=H_{e}-(H_{e}+H_{p}i-J_{c}a)\\
+&=J_{c}a-J_{p}i=H_{p}(1-i)
+\end{align*}
+The two “dotted” areas in Fig. 5.14 are equal in magnitude but have “opposite”
+signs, hence they cancel out when we perform the area integral. The sum of the
+areas, A1, A2, A3, and A4, is given by:
+\begin{align*}
+\sum_{j=1}^{4}A_{j}&=2aH_{e}-crossed\quad area\\
+crossed\quad area&=\frac{1}{2}(base)\times(height)\\
+\sum_{j=1}^{4}A_{j}&=2aH_{e}-\frac{1}{2}2a(1-i)H_{p}(1-i)\\
+&=2aH_{e}-aH_{p}(1-i)^{2}
+\end{align*}
+The magnetization, −M(i), is thus given by:
+\begin{align*}% page327 第6个
+-M(i)&=H_{e}-\frac{1}{2a}[2aH_{e}-a \grave{}H_{p}(1-i)^{2}]\\
+&=\frac{1}{2}H_{p}(1-i)^{2}
+\end{align*}
+\begin{subequations}
+	\begin{align*}
+-M(i)=&-M(0)(1-i)^{2}\\
+=&-M(0)f_{3}(i)
+	\end{align*}
+\end{subequations}
+式中，$f_3(i) = (1 − i)^2$。
 
-\begin{equation}% page326 第3个
-\sum_{j=1}^{4}A_{j}=2aH_{e}-crossed\quad area
-\end{equation}
-\begin{equation}% page326 第4个
-crossed\quad area=\frac{1}{2}(bses)\times(height)
-\end{equation}
-\begin{equation}% page326 第5个
-\sum_{j=1}^{4}A_{j}=2aH_{e}-\frac{1}{2}2a(1-i)H_{p}(1-i)
-\end{equation}
-\begin{equation}% page327 第1个
-base=x+-x*=(2a-ai)-ai=(a(1-i)\\
-\end{equation}
-\begin{equation}% page327 第2个
-height=H_{e}-H_{s2}(a)=H_{e}-(H_{e}+H_{p}i-J_{c}a)\\
-=J_{c}a-J_{p}i=H_{p}(1-i)
-\end{equation}
-\begin{equation}% page327 第3个
-\sum_{j=1}^{4}A_{j}=2aH_{e}-crossed\quad are
-\end{equation}
-\begin{equation}% page327 第4个
-crossed\quad area=\frac{1}{2}(base)\times(height)
-\end{equation}
-\begin{equation}% page327 第5个
-\sum_{j=1}^{4}A_{j}=2aH_{e}-\frac{1}{2}2a(1-i)H_{p}(1-i)\\
-=2aH_{e}-aH_{p}(1-i)^{2}
-\end{equation}
-\begin{equation}% page327 第6个
--M(i)=H_{e}-\frac{1}{2a}[2aH_{e}-a \grave{}H_{p}(1-i)^{2}]\\
-=\frac{1}{2}H_{p}(1-i)^{2}
-\end{equation}
-\begin{equation}% page327 第7个
--M(i)=-M(0)(1-i)^{2}\qquad(5.19a)
-=-M(0)f_{3}(i)\qquad(5.19b)
-\end{equation}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.7]{chpt5/figs/fig5.14.eps}
+	\caption{用以计算励磁的第五步之后的磁场特征。}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt5/figs/fig5.15.eps}
+	\caption{讨论5.1研究的三种归一化励磁 vs. 归一化电流关系。}
+\end{figure}
+
+\textbf{Magnetization Functions—Summary}
+
+Figure 5.15 presents three normalized magnetization functions, f1(i), f2(i), and
+f3(i), where i = It/Ic. It is interesting to note how different sequences of transport
+current and external field applications affect M(i). These f(i) functions were validated
+with experimental results [5.3, 5.4], thereby making Bean’s model accepted
+quite quickly after its formulation.
 
 
 
 \subsection{讨论5.2：SQUID用于磁化测量}
+A SQUID (Superconducting Quantum Interference Device), based on the principle
+of the Josephson effect, is an electronic device that can be used to measure
+changes in magnetic field with extremely high resolution—individual flux quanta
+of magnitude 2.0×10−15 Wb(Tm2).
 
+A typical SQUID magnetization measurement setup consists of a test sample, at
+a constant temperature, placed in a uniform field. The test sample is moved back
+and forth in the uniform field; during each cycle it cuts through measurement
+coils, one located at one end of the test sample and the other located at the other
+end. The induced current in each measurement coil is measured by the SQUID in
+terms of the field generated by the current, which, in turn, is a measure of the test
+sample’s magnetization. Because SQUIDs operate best in low-field environments
+(perhaps no higher than ∼100 oersted or ∼0.01 T), they are usually shielded from
+the high-field environment of the test sample.
 
 
 
 \subsection{讨论5.3：“Bean细丝”中的磁化}
-
+\subsubsection{第一部分：磁场平行于细丝轴}
+For an infinitely long superconducting filament of diameter df subjected to an
+external magnetic field parallel to the filament’s axis (z),$H_e\vec{i_z}$, we may use the
+same assumptions as Bean to derive expressions for its magnetization. For an
+infinitely long filament exposed to$H_e\vec{i_z}$, Ampere’s law (Eq. 2.5) is given by:
 \begin{equation}% page329 第1个
-\frac{dH_{z}}{dr}\vec{\imath}_{\theta}=-J_{c}\vec{\imath}_{\theta}\qquad(5.20)
+\frac{dH_{z}}{dr}\vec{\imath}_{\theta}=-J_{c}\vec{\imath}_{\theta}
 \end{equation}
+Equation 5.20 states that an axially (z) directed magnetic field within the filament,
+Hs(r), is a linear function of r with a slope of Jc.
+
+\textbf{A. 初始态}
+
+For He ≤ Hp, where Hp is the critical-state field, the field within the filament,
+Hs(r), is zero from r=0 to r∗=(df/2−He/Jc) and varies as Jcr from r∗ to df /2:
 \begin{equation}% page329 第2个
-H_{s}(r)=H_{e}\frac{r-r*}{\frac{d_{f}}{2}-r*}\quad(5.21)
+H_{s}(r)=H_{e}\frac{r-r*}{\frac{d_{f}}{2}-r*}
 \end{equation}
+Note that r∗=0 when He=Hp, where Hp is the critical-state field:
 \begin{equation}% page329 第3个
-H_{p}=\frac{1}{2}J_{c}d_{f}\qquad(5.22)
+H_{p}=\frac{1}{2}J_{c}d_{f}
 \end{equation}
-
-
-
-
-\begin{equation}% page329 第4个
-\tilde{B_{s}}=\frac{4\mu_{o}}{\pi d_{f}^{2}}\int_{r*}^{\frac{d_{f}}{2}}H_{e}\frac{r-r*}{\frac{d_{f}}{2}-r*}(2\pi r)dr\\
-=\frac{8\mu_{o}H_{e}}{d_{f}^{2}(\frac{d_{f}}{2}-r*)}(\frac{1}{24}d_{f}^{3}-\frac{1}{8}d_{f}^{2}r*+\frac{1}{6}r*^{3})\quad(5.23)
-\end{equation}
-
-
+Using steps similar to those taken with Eq. 5.4, we may compute the average
+magnetic induction within the filament,$\~{B}_s$：
+\begin{align}% page329 第4个
+\tilde{B_{s}}&=\frac{4\mu_{o}}{\pi d_{f}^{2}}\int_{r*}^{\frac{d_{f}}{2}}H_{e}\frac{r-r*}{\frac{d_{f}}{2}-r*}(2\pi r)dr\\
+&=\frac{8\mu_{o}H_{e}}{d_{f}^{2}(\frac{d_{f}}{2}-r*)}(\frac{1}{24}d_{f}^{3}-\frac{1}{8}d_{f}^{2}r*+\frac{1}{6}r*^{3})
+\end{align}
+Unlike in the case of a slab, where the integration may be performed geometrically
+from Hs(x), here the “area” integration must be performed mathematically. By
+inserting r∗=(df/2−He/Jc) into Eq. 5.23 and noting that Hp=Jcdf/2, we obtain:
 \begin{equation}%page329 第5个
-\frac{\tilde{B}_{s}}{\mu_{o}}=\frac{2H^{2}_{e}}{d_{f}J_{c}}-\frac{4H^{3}_{e}}{3(d_{f}J_{c})^{2}}=\\frac{H^{2}_{e}}{H_{P}}-\frac{H_{e}^{3}}{3H^{2}_{p}}\qquad(5.24)
+\frac{\tilde{B}_{s}}{\mu_{o}}=\frac{2H^{2}_{e}}{d_{f}J_{c}}-\frac{4H^{3}_{e}}{3(d_{f}J_{c})^{2}}=\\frac{H^{2}_{e}}{H_{P}}-\frac{H_{e}^{3}}{3H^{2}_{p}}
 \end{equation}
+根据定义$M=\~{B}_s/\mu_{0}-H_e$，我们有：
 \begin{equation}%page329 第6个
--M=H_{e}-\frac{H^{2}_{e}}{H_{P}}+\frac{H^{3}_{e}}{3H^{2}_{p}}\quad(0\leq H_{e}\leq H_{P})\qquad(5.25)
+-M=H_{e}-\frac{H^{2}_{e}}{H_{P}}+\frac{H^{3}_{e}}{3H^{2}_{p}}\quad(0\leq H_{e}\leq H_{P})
 \end{equation}
-\begin{equation}%page329 第7个
--M=\frac{1}{3}H_{p}=\frac{1}{3}(\frac{J_{c}d_{f}}{2})\quad(H_{e}\geq H_{p})\qquad(5.26)
-\end{equation}
-\begin{equation}%page330 第1个
-m_{A}=\int_{0}^{a}2xJ_{c}(x)dx=J_{c}a^{2}\qquad(5.27a)
-\end{equation}
-\begin{equation}%page330 第2个
-M=\frac{m_{A}}{2a}=\frac{1}{2}J_{c}a\qquad(5.27b)
-\end{equation}
-\begin{equation}%page330 第3个
-m_{A}=\int_{-\frac{d_{f}}{2}}^{\frac{d_{f}}{2}}2xJ_{c}(x,y)dxdy=\frac{1}{6}J_{c}d_{f}^{2}\quad(5.28)
-\end{equation}
-\begin{equation}%page330 第4个
-M=\frac{\mathbf{4m_{A}}}{\pi d_{f}^{2}}=(\frac{4}{3\pi})J_{c}(\frac{d_{f}}{2})\simeq0.424J_{c}(\frac{d_{f}}{2})\sim0.5J_{c}a\quad(5.29a)
-\end{equation}
-\begin{equation}%page330 第5个
-H_{p}=(\frac{8}{3\pi})J_{c}(\frac{d_{f}}{2})\qquad(5.29b)
-\end{equation}
+Note that Eq. 5.25 is similar to, but clearly different from, Eq. 5.5 for the slab.
 
+\textbf{B. 临界态及以上}
+
+For He≥Hp the filament is in the critical state, and its magnetization is constant
+and given from Eq. 5.25 with He=Hp:
+\begin{equation}%page329 第7个
+-M=\frac{1}{3}H_{p}=\frac{1}{3}(\frac{J_{c}d_{f}}{2})\quad(H_{e}\geq H_{p})
+\end{equation}
+The “magnetization factor” for the filament is 1/3; for the slab it is 1/2 (Eq. 5.6).
+
+\subsubsection{第二部分：磁场垂直于细丝轴}
+When the applied external field is perpendicular to the axis of a filament of diameter
+df , the current distribution within the filament is complicated for He ≤Hp,
+the critical field. For He≥Hp, a total current of Jcπd2
+f/8 is induced flowing in the
++z-direction, and the same magnitude in the −z-direction. Figure 5.16 shows the
+current distributions for: a) a Bean slab (2a); and b) a filament of diameter df .
+
+We may compute the magnetization, M, by integrating the magnetic moment, mA,
+per unit volume. Here, we derive expressions for the critical state magnetization
+for a Bean slab of width 2a and a filament of diameter df .
+
+\textbf{A. Bean板}
+
+For a Bean slab in the critical state, the magnetic moment mA per unit length in
+both z- and y-directions, from Jc(x) shown in Fig. 5.16a, is given by:
+\begin{equation}%page330 第1个
+m_{A}=\int_{0}^{a}2xJ_{c}(x)dx=J_{c}a^{2}
+\end{equation}
+The conductor volume per unit length in both z- and y-directions is 2a. Thus:
+\begin{align*}%page330 第2个
+M=\frac{m_{A}}{2a}=\frac{1}{2}J_{c}a\tag{5.27b}
+\end{align*}
+M given by Eq. 5.27b, except for the sign, is identical to that given by Eq. 5.6.
+
+\textbf{B. 细丝}
+
+For a filament of diameter df , the magnetic moment mA per unit length in the
+z-direction, from Jc(x, y) shown in Fig. 5.16b, is given by:
+\begin{equation}%page330 第3个
+m_{A}=\int_{-\frac{d_{f}}{2}}^{\frac{d_{f}}{2}}2xJ_{c}(x,y)dxdy=\frac{1}{6}J_{c}d_{f}^{2}
+\end{equation}
+The conductor volume per unit length in the z-direction is πd2
+f /4. Thus:
+\begin{subequations}
+	\begin{align*}
+M&=\frac{\mathbf{4m_{A}}}{\pi d_{f}^{2}}=(\frac{4}{3\pi})J_{c}(\frac{d_{f}}{2})\simeq0.424J_{c}(\frac{d_{f}}{2})\sim0.5J_{c}a\\
+H_{p}&=(\frac{8}{3\pi})J_{c}(\frac{d_{f}}{2})
+	\end{align*}
+\end{subequations}
+This is nearly the same (8/3π∼1) as that for a Bean slab of thickness df .
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt5/figs/fig5.16.eps}
+	\caption{Induced current distributions in a) Bean slab of width 2a and b) an infinitely
+		long filament of diameter dd, both subjected to an external field He in the y-direction.。}
+\end{figure}
 
 \subsection{讨论5.4：磁化中的$J_c$}
-\begin{equation}%page331 第5个
-J_{c}(0\ \mathrm{T};10\ \mathrm{K})=\frac{6\ \mathrm{M}(0\ \mathrm{T};10\ \mathrm{k})}{d_{f}}\\
-=\frac{6(240\times10^{3}\ \mathrm{A/m})}{(0.531\times10^{-3}\ \mathrm{m})}\\
-=2.7\times10^{9}\ \mathrm{A/m^{2}}
-\end{equation}
+We demonstrate here how critical current density (Jc) data may be extracted
+from magnetization (M) data. This method of extracting Jc data from M data
+is quite useful when dealing with superconductor test samples too short for a
+standard voltage vs. current measurement technique. Test samples too small for
+V (I) measurement were common in the early days of HTS, and Bean’s model
+discussed above was extremely useful.
+
+In a V (I) measurement the sample must be “long” to: 1) generate a detectable
+voltage with the very low electric field that defines the superconducting-to-normal
+transition—the typical criterion is between 0.1 to $1\ \mathrm{\mu V/cm}$; and 2) keep the contact
+resistance to the lead wires at each end of the test sample “low,” thereby preventing
+excessive heating at the ends which might cause a premature normal transition.
+The test samples should normally be at least 10mm long; perhaps under certain
+circumstances they can be as short as 5 mm, but not much shorter than this. It
+depends largely on the level of critical current.
+
+Figure 5.8 presented the magnetization vs. applied field traces at 10 K, 20 K, and
+30K of a short length (15mm) of copper/MgB2 composite wire of an equivalent
+circular diameter of 1.038 mm[5.7]; the MgB2 itself has a diameter of 0.531 mm.
+Here, the unit of magnetization is given in emu/cm3 corresponding to the total
+wire diameter of 1.038 mm. The external field is along the wire axis, i.e., the same
+configuration as in DISCUSSION 5.3 Part 1. To compute the superconductor’s Jc,
+for example, at 10K in zero field, we treat the wire as a Bean rod of infinite length
+and 0.531mm diameter. First, we convert emu/cm3 into the SI unit equivalent,
+A/m, by multiplying it by 1000. (See Appendix I.)
+
+At 10K in zero field, the magnetization, from Fig. 5.8, is 60 emu/cm3 or 60 kA/m.
+To translate this to M corresponding to the volume of just the MgB2, we must
+multiply 60 kA/m by (1.038/0.531)2 = 4.0. Solving Eq. 5.26 for Jc with M =
+240 kA/m and df =5.31×10−4 m, we obtain:
+\begin{align*}%page331 第5个
+J_{c}(0\ \mathrm{T};10\ \mathrm{K})&=\frac{6\ \mathrm{M}(0\ \mathrm{T};10\ \mathrm{k})}{d_{f}}\\
+&=\frac{6(240\times10^{3}\ \mathrm{A/m})}{(0.531\times10^{-3}\ \mathrm{m})}\\
+&a=2.7\times10^{9}\ \mathrm{A/m^{2}}
+\end{align*}
 
 
 \subsection{问题5.1：磁化测量}
+This problem applies the magnetization measurement technique discussed in 5.4 to
+one of the four superconductors used in the Hybrid III SCM, to confirm that there
+would be no flux jumping. The absence of flux jumping is one of the necessary
+conditions for magnets that are not “cryostable”—this point will be discussed in
+more detail in CHAPTER 6.
 
+Table 5.1 presents specifications of the superconductor, a bare NbTi composite
+strip with overall dimensions of 9.2mm width and 2.6mm thickness. (Not all
+parameters in the table, e.g., twist pitch, are relevant for this problem.)
+
+The test sample consisted of 52 (13×4) 100-mm long strips assembled in a rectangular
+solid of square cross section, 38mm×38 mm, as shown in Fig. 5.17. Each
+bare strip was electrically insulated with a thin tape. In the orientation shown
+in Fig. 5.17a, each strip presents its narrow surface to the external magnetic induction
+Be; in the orientation shown in Fig. 5.17b, each strip is broadside to
+Be. The test sample assembly was placed inside a rectangular-bore (cross section
+107mm×42mm) search coil set containing a primary search coil and two secondary
+coils (Fig. 5.17c). The test assembly midplane coincided with that of the primary
+search coil, whose midplane coincided with that of an external magnet generating
+Be. The midplane-to-midplane distance between the primary and one of the
+secondary coils was 70 mm. The primary coil had 500 turns of fine copper wire
+over an axial distance of 40mm centered on its midplane; each secondary search
+coil had 280 turns, extending an axial distance of 20mm centered on its midplane.
+The turn density in the axial direction in each search coil was uniform.
+
+When an external magnetic induction Be was swept at a rate of 0.05 T/s between
+0 and 5T with the test sample at 4.2K with its orientation as in Fig. 5.17a, a
+plot of −M (given in Vmz) vs. Be plot similar to that shown in Fig. 5.8 was
+obtained. +Vmz is the integrator output proportional to −M, the negative of
+the test sample magnetization. The effective integration time,$\tau_{it}$, was 1 s; the
+balancing potentiometer’s constant k was 0.5. Assume negligible voltage drift.
+
+\colorbox{red}{表5.1}
+
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt5/figs/fig5.17.eps}
+	\caption{Magnetization measurement details, dimensions in mm.
+		(a) Each strip presents its narrow surface to the external magnetic
+		induction, Be; (b) Each strip is broadside to Be; (c) Search coil setup.。}
+\end{figure}
+
+a) Make a ballpark estimate of ΔVmz at Be∼2.5T (magnetization trace “width”
+in Fig. 5.8, given in volts). Note that $\tau_{it}$ = 1 s and k = 0.5. Assume df = 2a,
+where df is the filament diameter and 2a is the width of the Bean slab.
+
+b) A 1.8-K measurement was performed by pumping on the cryostat and reducing
+the liquid helium bath pressure to 12.6 torr. The technician who controlled
+the cryostat pressure noticed that pressure control was more difficult,
+because of an increased liquid boil-off rate, when the test sample orientation
+was as in Fig. 5.17b rather than as in Fig. 5.17a. Is this an aberration or
+does his observation make sense? Explain.
+
+c) The z-component of the external induction Be over the radial space occupied
+by the search coil may be approximated to vary as:
 \begin{equation}%page333 第1个
 B_{e}(z)\simeq B_{e}(0)[1-c(\frac{z}{z_{o}})^{2}]\qquad(5.30)
 \end{equation}
+where z◦ = 75 mm. Based on information you have, compute the value of c.
 
 \subsubsection{问题5.1之解}
+a) Equation 5.13 indicates that search coils need to be balanced; otherwise, a
+term proportional to the applied field contributes to the apparent magnetization.
+Since the −M(H) trace shown in Fig. 5.8 is not tilted, the search coils are balanced.
+From Eq. 5.14b:
+\begin{align*}%page334 第1个
+V_{bg}(t)=(k-1)\mu_{o}N_{pc}A_{pc}\frac{dM}{dt}\tag{5.14b}
+\end{align*}
+We have from Eq. 5.16c:
+\begin{align*}%page334 第2个
+\Delta V_{mz}=-f_{m}\frac{(k-1)\mu_{o}N_{pc}A_{pc}}{\tau_{it}}J_{c}a\tag{5.16c}
+\end{align*}
+We have: k = 0.5; τit = 1s; Npc = 500; Apc = (13)(0.1 m)(2.6×10−3 m) =
+3.38×10−3 m2 [also acceptable is (0.1m)×(38×10−3 m) = 3.8×10−3 m2]; fm =(NbTi
+volume)/total composite volume)= $1/(\gamma_{c/s} + 1)$ = 0.25.
 
-\begin{equation}%page334 第1个
-V_{bg}(t)=(k-1)\mu_{o}N_{pc}A_{pc}\frac{dM}{dt}\qquad(5.14b)
-\end{equation}
-\begin{equation}%page334 第2个
-\Delta V_{mz}=-f_{m}\frac{(k-1)\mu_{o}N_{pc}A_{pc}}{\tau_{it}}J_{c}a\qquad(5.16c)
-\end{equation}
-\begin{equation}%page334 第3个
-2.0\times10^{9}A/m^{2}=\frac{J_{0}B_{0}}{5T+0.3T}\Rightarrow J_{0}B_{0}=10.6\times10^{9}A\quad\ \mathrm{T/m^{2}}
-\end{equation}
+\textbf{$J_c$的估计(4.2 K，2.5 T)}
 
-\begin{equation}%page334 第4个
-2.0\times 10^{9}\ \mathrm{A/m^{2}}=\frac{J_{0}B_{0}}{5T+0.3T}\Rightarrow J_{0}B_{0}=10.6\times10^{9}\ \mathrm{A/m^{2}}
-\end{equation}
-\begin{equation}%page334 第5个
+From Table 5.1 we have Jc at 4.2K and 5T of 2.0×109 A/m2. It is generally
+accepted that for a given temperature, Jc(Be) may be approximated, based on
+Eq. 1.3, by:
+\begin{align*}%page334 第3个
+2.0\times10^{9}A/m^{2}=\frac{J_{0}B_{0}}{5T+0.3T}\Rightarrow J_{0}B_{0}=10.6\times 10^{9}\quad\ \mathrm{AT/m^{2}}
+\end{align*}
+where for NbTi, B0 ∼ 0.3T. J0 is the zero-field critical current density, which is
+usually difficult to measure. Thus from the Jc value at 5T and B0 = 0.3T, we
+can first solve for J0B0:
+\begin{align*}%page334 第4个
+2.0\times 10^{9}\ \mathrm{A/m^{2}}=\frac{J_{0}B_{0}}{5T+0.3T}\Rightarrow J_{0}B_{0}=10.6\times 10^{9}\ \mathrm{A/m^{2}}
+\end{align*}
+Once J0B0 is known, then Jc may be solved at 2.5 T. Thus:
+\begin{align*}%page334 第5个
 J_{c}(2.5T)=\frac{10.6\times10^{9}\ \mathrm{AT/m^{2}}}{2.8T}=3.8\times^{9}\ \mathrm{A/m^{2}}
-\end{equation}
-
-
-
-
+\end{align*}
+Inserting appropriate values into Eq. 5.16c, we have:
 \begin{align*}%page334 第6个
 \Delta V_{mz}&=-0.25\frac{(-0.5)(4\pi\times 10^{-7}\ \mathrm{H/m})(500)(3.38\times 10^{-3}\ \mathrm{m^{2}})}{1\ \mathrm{s}}\\
 &\times(3.8\times 10^{9} A/m^{2})(50\times 1^{-6} m)\\
 &\simeq 50\ \mathrm{mV}
 \end{align*}
 
+Because the strip is flattened from a round conductor by a process that squeezes
+the conductor between rollers, the projected diameter of filaments in the direction
+parallel to Be would be actually slightly less than the equivalent circular-area
+radius, a = 50 $\mathrm{\mu m}$, which is used in the above computation for ΔVmz. If a radius
+less than 50 $\mathrm{\mu m}$is used, ΔVmz would be less than 50 mV.
 
+b) The anisotropic shape of the NbTi filaments makes magnetization in the orientation
+of Fig. 5.17b greater than that in the orientation of Fig. 5.17a—the “effective”
+a is greater. Thus there will be more magnetization loss.
 
-\begin{equation}%page335 第1个
-N_{pc}A_{pc}(\frac{d\tilde{B}_{e}}{dt})_{pc}=N_{sc}A_{sc}(\frac{d\tilde{B}_{e}}{dt})_{sc}\qquad(S1.2)
-\end{equation}
-\begin{equation}%page335 第2个
-[\tilde{B}_{e}]_{pc}=\frac{B_{e}(0)}{20}\int_{0}^{20}[1-c(\frac{z}{z_{0}})^{2}]dz\qquad(S1.3a)
-\end{equation}
-\begin{equation}%page335 第3个
-[\tilde{B}_{e}]_{sc}=\frac{B_{e}(0)}{20}\int_{60}^{80}[1-c(\frac{z}{z_{0}})^{2}]dz\qquad(S1.3b)
-\end{equation}
-\begin{equation}%page335 第4个
-\frac{250}{20}\int_{0}^{20}[1-c(\frac{z}{z_{0}})^{2}]dz=\frac{280}{20}\int_{60}^{80}[1-c(\frac{z}{z_{0}^{2}})]dz\quad(S1.4)
-\end{equation}
-\begin{equation}%page335 第5个
-250[20-\frac{c}{3}\frac{(20)^{3}}{(75)^{2}}]dz=280[80-\frac{c}{3}\frac{(80)^{3}}{(75)^{2}}-60+\frac{c}{3}\frac{(60)^{3}}{(75)^{2}}]
-\end{equation}
-\begin{equation}%page335 第6个
-5000-118.5c=22400-8495.4c-16800+1584c
-\end{equation}
-\begin{equation}%page335 第7个
-c\simeq\frac{600}{4793}\simeq0.125
-\end{equation}
+If the aspect ratio of the filaments is the same as for the conductor, eddy current
+loss will be proportional to$(a\.{H}_e)^2$in the orientation of Fig. 5.17b and$(b\.{H}_e)^2$
+in the orientation Fig. 5.17a—review PROBLEM 2.8. Thus eddy current loss is
+greater by a factor of (9.2/2.6)2 = 12.5 for Fig. 5.17b than for Fig. 5.17a.
 
+The increased heat load on the helium due to higher magnetization and eddy
+current losses causes a higher liquid helium boil-off rate; thus the technician’s
+observation makes sense.
+
+c) With balanced search coils, we have:
+\begin{align*}%page335 第1个
+N_{pc}A_{pc}(\frac{d\tilde{B}_{e}}{dt})_{pc}=N_{sc}A_{sc}(\frac{d\tilde{B}_{e}}{dt})_{sc}\tag{S1.2}
+\end{align*}
+%Because Apc = Asc, we have: Npc[˜Be]pc = Nsc[˜Be]sc. From symmetry, we consider
+only the upper half (the unit mm is omitted in the following equations):
+\begin{align*}%page335 第2个
+[\tilde{B}_{e}]_{pc}=\frac{B_{e}(0)}{20}\int_{0}^{20}[1-c(\frac{z}{z_{0}})^{2}]dz\tag{S1.3a}
+\end{align*}
+\begin{align*}%page335 第3个
+[\tilde{B}_{e}]_{sc}=\frac{B_{e}(0)}{20}\int_{60}^{80}[1-c(\frac{z}{z_{0}})^{2}]dz\tag{S1.3b}
+\end{align*}
+The Npc%[˜Be]pc = Nsc[˜Be]sc equality gives:
+\begin{align*}%page335 第4个
+\frac{250}{20}\int_{0}^{20}[1-c(\frac{z}{z_{0}})^{2}]dz&=\frac{280}{20}\int_{60}^{80}[1-c(\frac{z}{z_{0}^{2}})]dz\\\tag{S1.4}
+250[20-\frac{c}{3}\frac{(20)^{3}}{(75)^{2}}]dz&=280[80-\frac{c}{3}\frac{(80)^{3}}{(75)^{2}}-60+\frac{c}{3}\frac{(60)^{3}}{(75)^{2}}]\\
+	5000-118.5c&=22400-8495.4c-16800+1584c\\
+	c&\simeq\frac{600}{4793}\simeq 0.125
+\end{align*}
 
 
 \subsection{讨论5.5：磁扩散和热扩散}
+Before studying the flux jump criterion next in PROBLEM 5.2, we derive here basic
+equations of magnetic and thermal diffusion to identify two diffusivities: magnetic
+diffusivity, Dmg, and thermal diffusivity, Dth. The relative sizes of these two
+diffusivities are quite different for electrically conductive normal metals ($D_{th}\gg D_{mg}$) and for Type II superconductors ($D_{th}\ll D_{mg}$). This condition of $D_{th}\ll D_{mg}$
+in Type II superconductors makes the penetration of flux into a superconductor
+an adiabatic process, leading, as we shall study in PROBLEM 5.2, to the criterion
+for flux jumping.
 
-\begin{equation}%page336 第1个
-Ampere's\quad law:\quad \nabla\times\vec{H}=\vec{J}_{f}\qquad(2.5)
-\end{equation}
-\begin{equation}%page336 第2个
-Faraday's\quad law:\quad\nabla\times\vec{E}=-\frac{\partial\vec{B}}{\partial t}\qquad(2.8)
-\end{equation}
+To derive the magnetic diffusion equation, the applicable Maxwell’s equations are
+Ampere’s law and Faraday’s law, both in differential forms:
+\begin{align*}%page336 第1个
+Ampere's\quad law:\quad \nabla\times\vec{H}=\vec{J}_{f}\tag{2.5}
+\end{align*}
+\begin{align*}%page336 第2个
+Faraday's\quad law:\quad\nabla\times\vec{E}=-\frac{\partial\vec{B}}{\partial t}\tag{2.8}
+\end{align*}
+For the slab (width 2a) geometry, we can express Eqs. 2.5 and 2.8 as:
 \begin{equation}%page336 第3个
-Amperer's\quad law:\frac{\partial H_{y}}{\partial x}=J_{z}=\frac{E_{z}}{\rho_{e}}\qquad(5.31)
+Amperer's\quad law:\frac{\partial H_{y}}{\partial x}=J_{z}=\frac{E_{z}}{\rho_{e}}
 \end{equation}
 \begin{equation}%page336 第4个
-Faraday's\quad law:\frac{\partial E_{z}}{\partial x}=\frac{\partial B_{y}}{\partial t}=\mu_{o}\frac{\partial H_{y}}{\partial t}\quad(5.32)
+Faraday's\quad law:\frac{\partial E_{z}}{\partial x}=\frac{\partial B_{y}}{\partial t}=\mu_{o}\frac{\partial H_{y}}{\partial t}
 \end{equation}
-\begin{equation}%page336 第5个
+where$\rho_e$is the material’s electrical resistivity. From Eqs. 5.31 and 5.32, we obtain:
+\begin{align*}%page336 第5个
 \rho_{e}\frac{\partial^{2}H_{y}}{\partial x^{2}}=\mu_{o}\frac{\partial H_{y}}{\partial t}
-\end{equation}
+\end{align*}
 \begin{equation}%page336 第6个
-\frac{\rho_{e}}{\mu_{o}}\frac{\partial^{2}H_{y}}{\partial x^{2}}\equiv D_{mg}\frac{\partial^{2}H_{y}}{\partial x^{2}}=\frac{\partial H_{y}}{\partial t}\quad(5.33)
+\frac{\rho_{e}}{\mu_{o}}\frac{\partial^{2}H_{y}}{\partial x^{2}}\equiv D_{mg}\frac{\partial^{2}H_{y}}{\partial x^{2}}=\frac{\partial H_{y}}{\partial t}
 \end{equation}
+Equation 5.33 is a magnetic diffusion equation, for which:
 \begin{equation}%page336 第7个
-D_{mg}=\frac{{\rho}_{e}}{\mu_{o}}\qquad(5.34)
+D_{mg}=\frac{{\rho}_{e}}{\mu_{o}}
 \end{equation}
+Similarly, the one-dimensional thermal diffusion equation having constant thermal
+properties is given by:
 \begin{equation}%page336 第8个
-k\frac{\partial^{2}T}{\partial x^{2}}=C\frac{\partial T}{\partial t}\quad(5.35a)
+k\frac{\partial^{2}T}{\partial x^{2}}=C\frac{\partial T}{\partial t}
 \end{equation}
-\begin{equation}%page336 第9个
-\frac{k}{C}\frac{\partial^{2}T}{\partial x^{2}}\equiv D_{th}\frac{\partial^{2}T}{\partial x^{2}}=\frac{\partial T}{\partial t}\quad(5.35b)
-\end{equation}
+where k and C are, respectively, the material’s thermal conductivity and heat
+capacity. Dividing both sides of Eq. 5.35a by C, we obtain:
+\begin{align*}%page336 第9个
+\frac{k}{C}\frac{\partial^{2}T}{\partial x^{2}}\equiv D_{th}\frac{\partial^{2}T}{\partial x^{2}}=\frac{\partial T}{\partial t}\tag{5.35b}
+\end{align*}
+Equation 5.35b is a thermal diffusion equation, for which:
 \begin{equation}%page336 第10个
 D_{th}=\frac{k}{C}\qquad(5.36)
 \end{equation}
+Note that Eq. 5.36 and 4.20 are equivalent, because$C=\rho c_p$
 
+\colorbox{red}{表5.2}
+
+Table 5.2 presents approximate values of electrical and thermal properties and
+corresponding diffusivities at 4K and 80K for stainless steel and copper. From
+Table 5.2 we can clearly see that stainless steel, a stand-in for normal-state superconductors,
+and copper are opposite with respect to magnetic and thermal
+diffusivities. Specifically, changes in magnetic field propagate quickly through
+stainless steel, whereas temperature gradients are relatively slow to propagate;
+hence, large nonuniform temperature distributions can be created in stainless steel
+during changing magnetic fields. Physically, it means that magnetic heating happens
+essentially adiabatically in Type II superconductors. In copper, the reverse
+is true: the magnetic field diffuses very slowly, while any nonuniformity in temperature
+is quickly “evened out.” Therefore, copper in intimate contact with Type
+II superconductor can alleviate field-motion-induced instability in Type II superconductors.
+This thinking is the essence of dynamic stability, one of the stability
+criteria developed during the 1960s and 1970s [5.8] and applied also to HTS in the
+late 1980s [5.9].
 
 \subsection{问题5.2：磁通跳跃判据}
 
