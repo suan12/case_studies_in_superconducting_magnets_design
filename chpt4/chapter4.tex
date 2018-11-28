@@ -1941,12 +1941,16 @@ Q_j=&
 \end{align*}
 \end{subequations}
 从方程4.68b我们可以导出：
-
-方程S5.14
+\begin{align*}
+Q_j=&\frac{\~{k}[A_m]_{cs}(T_\ell-T_{cs})}{\ell}\\
+&\times\left[\frac{1}{2}[\alpha_\ell]_{cs}-\beta_{cs}\cot\beta_{cs}(1-\xi_{cs})+\beta_{cs}
+\frac{e^{\frac{[\alpha_\ell]_{cs}\xi_{cs}}{2}}}{e^{\frac{[\alpha_\ell]_{cs}}{2}}\sin\beta_{cs}(1-\xi_{cs})}\right] \tag{S5.14}
+\end{align*}
 
 联立方程S5.9、S5.10和S5.14，有：
-
-方程S5.15
+\begin{align*}
+[Q_\ell]_{cs}+Q_j-[Q_{\ell_{cs}}]_{cs}=\frac{\~{k}[A_m]_{cs}(T_\ell-T_{cs})}{\ell}[\alpha_\ell]_{cs} \tag{S5.15}
+\end{align*}
 
 根据方程S5.15和4.63：
 \begin{align*}% 4.73
@@ -2609,78 +2613,71 @@ f) 由方程4.109中的$[\frac{I_o\ell}{A}]_{br}$和方程4.110在$I=I_o$下的$
 &=\frac{(21\ \mathrm{n\Omega m})}{2(5.19\ \mathrm{kJ/kgK})}(0.358\times 10^7\ \mathrm{A/m})\sqrt{\frac{(20.7\ \mathrm{kJ/kg})(6.0\ \mathrm{kJ/kgK})}{(22\ \mathrm{W/mK})(21\ \mathrm{n\Omega m})}}\\
 &\simeq 120\ \mathrm{K}
 \end{align*}
-This value of 120K is quite reasonable because$\~{T}_o$is assumed to be the steadystate
-average temperature of the entire lead at$I_o$, i.e., ∼4K at the cold end and
-∼293K at the warm end, which gives a linear average value of 149 K.
+120 K是非常合理的一个值，因为$\~{T}_o$假定为整条引线在$I_o$时的稳态平均温度，即
+冷端约4 K，热端约293 K，其线性平均值为149 K。
 
-g) An increase in the lead voltage,$\Delta V(I)$, at a given level of overcurrent $I$ comes
-from an increase in the brass resistivity,$\Delta\rho_{br}(I)$, which in turn is caused by an
-increase in the lead temperature,$\Delta \theta(I)$. Thus:
+g) 由于黄铜的电阻率增加$\Delta\rho_{br}(I)$，引起给定过流水平$I$ 下的引线电压升高。
+而电阻率的增加又是由引线温度升高$\Delta \theta(I)$引起的，于是：
 \begin{equation}
 \Delta V(I)=\frac{\ell\Delta\rho_{br}(I)}{A}I=\frac{\gamma_{br}\ell\Delta\theta(I)}{A}I
 \end{equation}
-
-Inserting the expression of $\Delta \theta(I)$given by Eq. 4.108a, we obtain:
+将方程4.108a中给出的$\Delta \theta(I)$代入，有：
 \begin{equation}% 4.113
 \Delta V(I)=\frac{\gamma_{br}\ell}{A}\{\frac{[\rho_0]_{br}\ell I^2-2\upsilon_{br}\tilde{c}_pA\tilde{T}_oI[1+\eta_{br}(I-I_o)]}{2\upsilon_{br}\tilde{c}_pAI[1+\eta_{br}(I-I_o)]-\gamma_{br}\ell T^2}\}I
 \end{equation}
 
-h) For a vapor-cooled 25-kA brass lead at an overcurrent of I =75 kA, we have
-$[Q_{I_o}]_{br}$，。。。。。。。。。。。。。。。。。。。。
-
+h) 对于一条25 kA气冷黄铜引线，载有过电流$I$=75 kA。将$h_L$=20.7 kJ/kg；$\nu_{br}=6.13\times 10^{-8}$ kg/sA；
+$\eta_{br}=2.2\times 10^{-5}\ \mathrm{A^{-1}}$；$I_o$=25 kA代入方程4.110，我们有：
 \begin{align*}% 4.110
 [Q_{I_o}]_{br}&=h_L\upsilon_{br}I[1+\eta_{br}(I-I_o)] \\
 &=(20.7\ \mathrm{kJ/kg})(6.13\times 10^{-8}\ \mathrm{kg/sA})(75\ \mathrm{kA}) \\
 &\times[1+(2.2\times 10^{-5}\ \mathrm{A^{-1}})(75\ \mathrm{kA-}-25\ \mathrm{kA})]\\
 &\simeq 200\ \mathrm{W}
 \end{align*}
-At $I_o$ = 25 kA, we have, from Eq. 4.103, $[Q_{I_o}]_{br}$= 31.5 W. When carrying no
-current, this 25-kA brass lead has, from Eq. 4.104, $[Q_0]_{br}\simeq 0.21[Q_{I_o}]_{br}\simeq$6.6 W.
-Thus, a total energy injected into the cold bath,$E_{br}$, over a 300-s period at 75 kA
-and over a 1800-s period at 25 kA, is given by:
+根据方程4.103，在$I_o$ = 25 kA时有$[Q_{I_o}]_{br}$= 31.5 W。
+这条25 kA黄铜引线在无载流时，由方程4.104可得$[Q_0]_{br}\simeq 0.21[Q_{I_o}]_{br}\simeq$6.6 W。
+于是，75 kA持续300 s加上25 kA持续1800 s注入到冷池中的总能量$E_{br}$为：
 \begin{align*}
 E_{br}\simeq(300\ \mathrm{s})(200\ \mathrm{W})+(1,800\ \mathrm{s})(6.6\ \mathrm{W}) 
 \simeq 72\ \mathrm{kJ} \tag{S7.10}
 \end{align*}
-Over this 2100-s period, a copper lead would have required a cold-end heat input of
-33.8 W, to match the total energy $E_{br}$=72 kJ. For a vapor-cooled copper lead operating
-continuously at$I_o$, this translates to a current rating of$\sim$35 kA (<75 kA).
-Although no detailed study is available for vapor-cooled copper leads in overcurrent
-mode, it is quite possible that a copper lead too can be operated safely with
-an overcurrent up to a “reasonable” value of $I/I_o$。
+在这个2100 s的时间内，铜引线需要冷端热输入33.8 W以匹配总能量$E_{br}$=72 kJ。
+对于持续运行于$I_o$的气冷铜引线，对应的额定电流为$\sim$35 kA (<75 kA)。
+尽管气冷铜引线在过流模式下尚无更多细节研究，我们仍可断定，铜引线也可以在一定的过流水平$I/I_o$
+范围内安全的运行。
+
 
 \textbf{气冷黄铜引线的实验结果}
 
-Here we present experimental results of a pair of vapor-cooled brass leads [4.87].
-Each lead has the same active length ($\ell$= 54 cm) and cross sectional area (A =
-0.0613 $\mathrm{cm^2}$) as those of an optimal vapor-cooled copper lead rated at 280 A. As
-inferred from Eq. 4.102, this brass counterpart thus is rated at $[I_o]_{br}$ given by:
+这里我们给出一对气冷黄铜引线的实验结果[4.87]。各引线有相同的的有效长度($\ell$= 54 cm)、横截面积(A =
+0.0613 $\mathrm{cm^2}$)，这和额定280 A的优化气冷铜引线是一致的。
+由方程4.102可知，此黄铜引线额定值$[I_o]_{br}$应为：
 \begin{align*}
 [I_o]_{br}=\frac{[\zeta_o]_{br}}{\zeta_o}I_o 
 \simeq\frac{(0.35\times 10^7\ \mathrm{A/m})}{(2.3\times 10^7\ \mathrm{A/m})}(280\ \mathrm{A})\sim 40\ \mathrm{A}
 \end{align*}
-Figure 4.25 shows a measured heat input vs. I plot of this brass lead in the current
-ranges of 0 to its nominally rated current of 40 A, and 40A to 90A (overcurrent).
-As expected, the results show that the heat input is linear with I up to ∼40 A,
-while beyond 40 A, the results agree well with the solid curve given by Eq. 4.110.
+图4.25给出了该黄铜引线通过电流0一直到额定电流40 A以及40 A到90 A(过流态)测到的热输入 vs. 电流$I$曲线。
+如我们所料，结果表明在$\sim$40 A前，热输入与$I$成线性关系；超过40 A后，结果与方程4.110给出的实线
+吻合度很好。
 
-Figure 4.26 shows$\Delta V(i)$ vs. $t$ plots for three constant overcurrent levels, 130 A,
-150 A, and 203 A. The solid curves are experimental, while the dotted curves are
-analytical, given by Eq. 4.113. The experimental curve at 203A shows that at this
-level of overcurrent ($I\sim 5\times I_o$), the lead eventually—after $\sim$400 s—enters into an
-unstable (overheated) region. The results indicate that it is safe to operate the
-lead up to an overcurrent level $\sim$4 times the rated current.
+图4.26给出了三个恒定过电流水平130 A、150 A和203 A下的$\Delta V(i)$ vs. $t$曲线。
+实线是实验值，点线是基于4.113的理论分析值。
+203 A的实验曲线表明在这个过流水平($I\sim 5\times I_o$)，引线最终($\sim$400 s后)进入
+不稳定(过热)区域。
+结果指出，运行于$\sim$4倍额定电流的过流水平之下是能够保证安全的。
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.7]{chpt4/figs/fig4.25.eps}
-	\caption{。}
+	\caption{额定$I_o$=40 A气冷黄铜引线测到的热输入 vs. $I$关系[4.87]。实线：基于4.110的分析值，其中$\nu_{br}=6.13\times 10^{-8}$ kg/sA；
+		$\eta_{br}=0.0138\ \mathrm{A^{-1}}$.}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.7]{chpt4/figs/fig4.26.eps}
-	\caption{。}
+	\caption{恒定过电流水平130 A、150 A和203 A下的$\Delta V(i)$ vs. $t$曲线[4.87]。实线：实验值；
+		点线：方程4.108b和4.113的分析值，其中$A=0.0613\ \mathrm{cm^2}$；$\ell$=54 cm；$c_{p0}$=5.19 J/gK；$b=7.4\ \mathrm{n \Omega cm/K}$。}
 \end{figure}
 
 
