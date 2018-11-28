@@ -1643,7 +1643,7 @@ Hull将电流引线总共分为11类 [4.60]。其中就有全超导型(fully-sup
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.5]{chpt4/figs/fig4.21.eps}
+	\includegraphics[scale=0.4]{chpt4/figs/fig4.21.eps}
 	\caption{耦合于优化气冷常规金属的二元气冷引线。HTS引线从4.2 K的$z=0$处延伸至77-80 K的$z=\ell$。在$z=\ell$处，有额外制冷工质流入。}
 \end{figure}
 
@@ -1822,7 +1822,7 @@ $\xi_{cs}$可以写为：
 \begin{subequations}
 	\begin{align*}
 e^{\frac{[\alpha_\ell]_{cs}}{2}}&=\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]^{1/(2\xi_{cs})}\\
-e^{\frac{[\alpha_\ell]_{cs}\xi_{cs}}{2}}&=\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]^{1/2)}
+e^{\frac{[\alpha_\ell]_{cs}\xi_{cs}}{2}}&=\left[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\right]^{1/2}
 	\end{align*}
 \end{subequations}
 我们得到：
@@ -1935,15 +1935,15 @@ e) 在$z=\ell$处传导至引线的热量$[Q_\ell]_{cs}$可由方程4.67计算�
 	Q_j=\frac{\tilde{\rho}_x I_o(I_o-I_{c\ell})\ell}{[A_m]_{cs}e^{\frac{[\alpha_\ell]_{cs}}{2}\sin\beta_{cs}(1-\xi_{cs})}}\int_{xi_{cs}}^{1} e^{\frac{[\alpha_\ell]_{cs}}{2}\xi}\sin\beta_{cs}(\xi-\xi_{cs})d\xi \tag{S5.11}
 \end{align*}
 令$x=\xi-\xi_{cs}$，积分S5.11，有：
-\begin{subequations}
 \begin{align*}
 Q_j=&
 \frac{4\tilde{\rho}_xI_o(I_o-I_{c\ell})\ell e^{\frac{[\alpha_\ell]_{cs}\xi_{cs}}{2}}}{[A_m]_{cs}e^{\frac{[\alpha_\ell]_{cs}}{2}\sin\beta_{cs}(1-\xi_{cs})([\alpha_\ell]_{cs}^{2}+4\beta_{cs}^{2})}} \\\notag
 &\times\mid e^{\frac{[\alpha_\ell]_{cs}}{2}x}\left(\frac{[\alpha_\ell]_{cs}}{2}\sin\beta_{cs}x-\beta_{cs}\cos\beta_{cs}x\right)\mid_{0}^{1-\xi_{cs}} \\\tag{S5.12a}
+\end{align*}
+\begin{align*}
 =&\frac{4\tilde{\rho}_xI_o(I_o-I_{c\ell})\ell}{[A_m]_{cs}e^{\frac{[\alpha_\ell]_{cs}}{2}}\sin\beta_{cs}(1-\xi_{cs})([\alpha_\ell]_{cs}^{2}+4\beta_{cs}^{2})} \\\notag
 &\times\left[\frac{[\alpha_\ell]_{cs}}{2}e^{\frac{[\alpha_\ell]_{cs}}{2}}\sin\beta_{cs}(1-\xi_{cs})-\beta_{cs}e^{\frac{[\alpha_\ell]_{cs}}{2}}\cos\beta_{cs}(1-\xi_{cs})+\beta_{cs}e^{\frac{[\alpha_\ell]_{cs}\xi_{cs}}{2}}\right] \tag{S5.12b}
 \end{align*}
-\end{subequations}
 从方程4.68b我们可以导出：
 \begin{align*}
 Q_j=&\frac{\~{k}[A_m]_{cs}(T_\ell-T_{cs})}{\ell}\\
@@ -2081,8 +2081,8 @@ $\gamma_{cu}$和$\rho_o$分别是冷端温度$T_o$(这里是77 K)下的电阻温
 我们可以通过设置$d\theta/d\zeta|_{\zeta=1}=0$令$\theta_{mx}$出现在$\zeta=1$，得到：
 \begin{subequations}
 	\begin{align*}
-	\alpha_{cu}\sin\beta_{cu}+\beta_{cu}\cos\beta_{cu}=0\\
-	\alpha_{cu}+\beta_{cu}\cot\beta_{cu}=0
+	\alpha_{cu}\sin\beta_{cu}+\beta_{cu}\cos\beta_{cu}&=0\\
+	\alpha_{cu}+\beta_{cu}\cot\beta_{cu}&=0
 		\end{align*}
 \end{subequations}
 对于一组给定的引线参数，比如$A_{cu},\ell_{cu},I_o, \~{c}_{fl}, \gamma_{cu}$，有一组唯一的$\alpha_{cu}$和$\beta_{cu}$(进而，由方程4.87a和4.87b，可知$\.{m}_{fl}$的值)满足方程4.86。注意到$\cot\beta_{cu}$必须是负的，从而$\theta_{mx}$必须大于$\pi/2$，问题4.6D中还将看到。
@@ -2355,7 +2355,7 @@ e) 应用方程4.100和4.101，我们有：
 和$[Q_{in}]_{cs}^{n}=$0.4153 W，我们可以得到：
 \begin{align*}% 4.97
 [Q_\ell]_{cs}^{n}+[Q_j]_{cs}^{n}-[Q_{in}]_{cs}^{n}&=[\dot{m}_h]_{cs}^{n}\tilde{c}_p(T_\ell-T_0)\\\tag{4.97}
-0.4237\ \mathrm{W}+7.7658-0.4153=7.7742\ \mathrm{W} \\
+0.4237\ \mathrm{W}+7.7658-0.4153&=7.7742\ \mathrm{W} \\
 &\simeq 7.7743\ \mathrm{W}             
 \end{align*}
 
@@ -2366,9 +2366,9 @@ e) 应用方程4.100和4.101，我们有：
 
 于是，由于$[Q_j]_{cs}^n$值很大，CSV引线的$[Q_{in}]_{cs}^n$可以和$[Q_{in}]_{fs}^n$具有可比性的
 唯一方法是$[Q_{\ell}]_{cs}^n\ll [Q_{\ell}]_{fs}^n$。这其实恰好就是问题4.6B中b)以及问题4.6C中e)的解中所看到的：$[Q_{\ell}]_{fs}^n$=8.540 W，$[Q_{\ell}]_{cs}^n$=0.4237 W。这是怎么回事？答案可以从方程4.98中看到：
-\begin{equation*}% 4.98
-[Q_\ell]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\left[\frac{1}{2}[\alpha_\ell]_{cs}^{n}+\beta_{cs}^{n}\cot\beta_{cs}^{n}(1-\xi_{cs})\right]
-\end{equation*}
+\begin{align*}% 4.98
+[Q_\ell]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\left[\frac{1}{2}[\alpha_\ell]_{cs}^{n}+\beta_{cs}^{n}\cot\beta_{cs}^{n}(1-\xi_{cs})\right] \tag{4.98}
+\end{align*}
 通过选择方程等号右侧中括号项内合适的$\beta_{cs}^n$和$\xi_{cs}$，可以令$[Q_\ell]_{cs}^{n}=0$。
 对于$\beta_{cs}^{n}(1-\xi_{cs})>\pi/2$，$\cot\beta_{cs}^{n}(1-\xi_{cs})<0$，确实存在一组
 $\beta_{cs}^n$和$\xi_{cs}$不仅令$[Q_\ell]_{cs}^{n}=0$，还满足方程4.83。这样的一组值实质上最小化了
@@ -2508,23 +2508,24 @@ $\.{m}_{br}(I)$是气流量，依赖于电流。对于优化的黄铜引线，�
 A\tilde{C}_{br}\frac{d\tilde{T}(t)}{dt}=-\upsilon_{br}I[1+\eta_{br}(I-I_o)]\tilde{c}_p\frac{\tilde{T}(t)}{(\ell/2)}+\frac{[\rho_0]_{br}}{A}I^2+\frac{\gamma_{br}}{A}[\tilde{T}(t)-\tilde{T}_o]I^2
 \end{equation}
 将$\theta(T)=\~{T}(t)-\~{T}_o$代入方程4.106，我们有$\frac{d\theta(t)}{dt}$，并可解出$\theta(t)$：
-\begin{align}% 4.107a
-\frac{d\theta(t)}{dt}=&\frac{1}{A^2\ell\tilde{C}_{br}}(\{2\upsilon_{br}\tilde{c}_pAI[1+\eta_{br}(I-I_o)]-\gamma_{br}\ell I^2\}\theta(t) \\
-&+\{2\upsilon_{br}\tilde{c}_pA\tilde{T}_oI[1+\eta_{br}(I-I_o)]-[\rho_0]_{br}\ell I^2\})
-\end{align}
-\begin{equation}% 4.107b
-\theta(t)=\Delta\theta(I)\left[1-e^{-t/\tau_j(I)}\right]
-\end{equation}
+\begin{subequations}
+	\begin{align*}
+\frac{d\theta(t)}{dt}=&\frac{1}{A^2\ell\tilde{C}_{br}}(\{2\upsilon_{br}\tilde{c}_pAI[1+\eta_{br}(I-I_o)]-\gamma_{br}\ell I^2\}\theta(t) \\\notag
+&+\{2\upsilon_{br}\tilde{c}_pA\tilde{T}_oI[1+\eta_{br}(I-I_o)]-[\rho_0]_{br}\ell I^2\})\\
+\theta(t)&=\Delta\theta(I)\left[1-e^{-t/\tau_j(I)}\right]
+	\end{align*}
+\end{subequations}
+
 $\Delta\theta(I)$和$\tau_j(I)$都是依赖于电流的常数，分别是温升和响应时间。响应时间假定为要比
 建立$I>I_o$的时间要长得多。解出两个量：
-\begin{equation}% 4.108a
-\Delta\theta(I)=\frac{[\rho_0]_{br}\ell I^2-2\upsilon_{br}\tilde{c}_pA\tilde{T}_oI[1+\eta_{br}(I-I_o)]}{2\upsilon_{br}\tilde{c}_pAI[1+\eta_{br}(I-I_o)]-\gamma_{br}\ell I^2}
-\end{equation}
-\begin{equation}% 4.108b
-\tau_j(I)=\frac{A^2\tilde{C}_{br}\ell}{2\upsilon_{br}\tilde{c}_pAI[1+\eta_{br}(I-I_o)]-\gamma_{br}\ell I^2}
-\end{equation}
+\begin{subequations}
+	\begin{align*}
+\Delta\theta(I)&=\frac{[\rho_0]_{br}\ell I^2-2\upsilon_{br}\tilde{c}_pA\tilde{T}_oI[1+\eta_{br}(I-I_o)]}{2\upsilon_{br}\tilde{c}_pAI[1+\eta_{br}(I-I_o)]-\gamma_{br}\ell I^2}\\
+\tau_j(I)&=\frac{A^2\tilde{C}_{br}\ell}{2\upsilon_{br}\tilde{c}_pAI[1+\eta_{br}(I-I_o)]-\gamma_{br}\ell I^2}
+	\end{align*}
+\end{subequations}
 
-d) 证明$nu_{br}$为：
+d) 证明$\nu_{br}$为：
 \begin{equation}% 4.109
 \upsilon_{br}=\frac{[\rho_0]_{br}\ell I_o}{2\tilde{c}_pA\tilde{T}_o}
 \end{equation}
@@ -2563,61 +2564,65 @@ a) 根据方程4.35，黄铜引线的$[\frac{I_o\ell}{A}]_{br}$为：
 \left[\frac{I_o\ell}{A}\right]_{br}=\sqrt{\frac{c_{p0}[k_0]_{br}[\rho_0]_{br}}{h_L}}\int_{T_0}^{T_1}\frac{dT}{\rho_{br}(T)} \tag{S7.1}
 \end{align*}
 向方程S7.14中代入$c_{p0}$=6.0 kJ/kgK和其他物性值，有：
-\begin{align}% 4.102
-\left[\frac{I_o\ell}{A}\right]_{br}&=\sqrt{\frac{(6.0\ \mathrm{kJ/kgK})(22\ \mathrm{W/mK})(21\ \mathrm{n\Omega m})}{(20.7\ \mathrm{kJ/kg})}}(0.97\times10^{10}\ \mathrm{K/\Omega m})
-\left[\frac{I_o\ell}{A}\right]_{br}\\\notag
-&\equiv[\zeta_o]_{br}\simeq 0.35\times 10^7\ \mathrm{A/m}
-\end{align}
+\begin{align*}% 4.102
+\left[\frac{I_o\ell}{A}\right]_{br}=\sqrt{\frac{(6.0\ \mathrm{kJ/kgK})(22\ \mathrm{W/mK})(21\ \mathrm{n\Omega m})}{(20.7\ \mathrm{kJ/kg})}}(0.97\times10^{10}\ \mathrm{K/\Omega m})
+\end{align*}
+于是：
+\begin{align*}
+\left[\frac{I_o\ell}{A}\right]_{br}\equiv[\zeta_o]_{br}\simeq 0.35\times 10^7\ \mathrm{A/m} \tag{4.102}
+\end{align*}
 
 b) 由铜引线的方程4.32a，我们有：
-\begin{align}% 4.103
-\left[\frac{Q_{I_o}}{A}\right]_{br}&=\sqrt{\frac{h_L[k_0]_{br}[\rho_0]_{br}}{c_{p0}}}=\sqrt{\frac{(20.4\ \mathrm{kJ/kg})(22\ \mathrm{W/mK})(21\ \mathrm{n\Omega m})}{(6.0\ \mathrm{kJkgK})}}
-\left[\frac{Q_{I_o}}{A}\right]_{br}\\\notag
-&\simeq 1.25\ \mathrm{mW/A}
-\end{align}
+\begin{align*}% 4.103
+\left[\frac{Q_{I_o}}{A}\right]_{br}=\sqrt{\frac{h_L[k_0]_{br}[\rho_0]_{br}}{c_{p0}}}=\sqrt{\frac{(20.4\ \mathrm{kJ/kg})(22\ \mathrm{W/mK})(21\ \mathrm{n\Omega m})}{(6.0\ \mathrm{kJkgK})}} \tag{S7.2}
+\end{align*}
+于是：
+\begin{align*}
+\left[\frac{Q_{I_o}}{A}\right]_{br}\simeq 1.25\ \mathrm{mW/A} \tag{4.103}
+\end{align*}
 
 c) 由方程4.41，代入$\~{k}_{br}$ =55 W/mK(表4.18)和其他值，包括$\ln[\~{c}_p(T_\ell−T_0)/h_L+ 1]\simeq 4.32$，我们有：
 \begin{align*}
-\left[\frac{Q_0}{Q_{I_o}}\right]_{br}&=\frac{\tilde{k}_{br}}{\tilde{c}_p[\zeta_o]_{br}}\sqrt{\frac{h_Lc_{p0}}{[k_0]_{br}[\rho_0]_{br}}}\times\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right] \\
+\left[\frac{Q_0}{Q_{I_o}}\right]_{br}&=\frac{\tilde{k}_{br}}{\tilde{c}_p[\zeta_o]_{br}}\sqrt{\frac{h_Lc_{p0}}{[k_0]_{br}[\rho_0]_{br}}}\times\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right] \\\tag{S7.3}
 &\simeq\frac{(55\ \mathrm{W/mK})}{(5.2\ \mathrm{kJ/kgK})(0.36\times 10^7\ \mathrm{A/m})}\sqrt{\frac{(20.7\ \mathrm{kJ/kg})(6.0\ \mathrm{kJ/kgK})}{(22\ \mathrm{W/mK})(21\ \mathrm{n\Omega m})}}\times 4.32
 \end{align*}
 于是，
 \begin{equation}%4.104
-\left[\frac{Q_0}{Q_{I_o}}\right]_{br}\simeq0.21
+\left[\frac{Q_0}{Q_{I_o}}\right]_{br}\simeq 0.21 \tag{4.104}
 \end{equation}
 
 d) 因为$\Delta \theta(I_o)$=0 (没有过流)，根据方程4.107a，我们有：
-\begin{equation}
-[\rho_0]_{br}\ell I_{o}^{2}-2\upsilon_{br}\tilde{c}_pA\tilde{T}_oI_o=0
-\end{equation}
+\begin{align*}
+[\rho_0]_{br}\ell I_{o}^{2}-2\upsilon_{br}\tilde{c}_pA\tilde{T}_oI_o=0 \tag{S7.4}
+\end{align*}
 从方程S7.4，我们得到：
-\begin{equation}% 4.109
-\unboldmath=\frac{[rho_0]_{br}\ell I_o}{2\tilde{c}_pA\tilde{T}_o}
-\end{equation}
+\begin{align*}% 4.109
+\unboldmath=\frac{[rho_0]_{br}\ell I_o}{2\tilde{c}_pA\tilde{T}_o} \tag{4.109}
+\end{align*}
 
 e) 由$[Q_{I_o}]_{br}=\.{m}_{br}h_L$和$\.{m}_{br}(I)=\upsilon_{br}I[1+\eta_{br}(I-I_o)]$(假设3)：
-\begin{equation}% 4.110
-[Q_{I_o}]_{br}=h_L\upsilon_{br}I[1+\eta_{br}(I-I_o)]
-\end{equation}
+\begin{align*}% 4.110 
+[Q_{I_o}]_{br}=h_L\upsilon_{br}I[1+\eta_{br}(I-I_o)] \tag{4.110}
+\end{align*}
 
 f) 由方程4.109中的$[\frac{I_o\ell}{A}]_{br}$和方程4.110在$I=I_o$下的$[Q_{I_o}]_{br}$：
 \begin{align*}
-\left[\frac{I_o\ell}{A}\right]_{br}=\upsilon_{br}\frac{2\tilde{c}_p\tilde{T}_o}{[\rho_0]_{br}}
+\left[\frac{I_o\ell}{A}\right]_{br}=\upsilon_{br}\frac{2\tilde{c}_p\tilde{T}_o}{[\rho_0]_{br}} \tag{S7.5a}
 \end{align*}
 \begin{align*}
-[Q_{I_o}]_{br}=h_L\upsilon_{br}I_o
+[Q_{I_o}]_{br}=h_L\upsilon_{br}I_o \tag{S7.5b}
 \end{align*}
 联立方程S7.5a和S7.5b，我们有：
 \begin{align*}
-\left[\frac{I_o\ell}{A}\right]_{br}=\left[\frac{[Q_{I_o}]}{I_o}\right]_{br}\frac{2\tilde{c}_p\tilde{T}_o}{h_L[\rho_0]_{br}}
+\left[\frac{I_o\ell}{A}\right]_{br}=\left[\frac{[Q_{I_o}]}{I_o}\right]_{br}\frac{2\tilde{c}_p\tilde{T}_o}{h_L[\rho_0]_{br}} \tag{S7.6}
 \end{align*}
 将方程S7.2中的$[\frac{[Q_{I_o}]}{I_o}]_{br}$代入方程S7.6，有：
 \begin{align*}% 4.111
-\left[\frac{I_o\ell}{A}\right]_{br}=\frac{2\tilde{c}_p\tilde{T}_o}{[\rho_0]_{br}}\sqrt{\frac{[k_0]_{br}[\rho_0]_{br}}{h_Lc_{p0}}}
+\left[\frac{I_o\ell}{A}\right]_{br}=\frac{2\tilde{c}_p\tilde{T}_o}{[\rho_0]_{br}}\sqrt{\frac{[k_0]_{br}[\rho_0]_{br}}{h_Lc_{p0}}} \tag{4.111}
 \end{align*}
 我们可以确定方程4.111中唯一不知道的参数$\~{T}_o$的值：
 \begin{align*}
-\tilde{T}_o&=\frac{[\rho_0]_{br}}{2\tilde{c}_p}\left[\frac{I_o\ell}{A}\right]_{br}\sqrt{\frac{h_Lc_{p0}}{[k_0]_{br}[\rho_0]_{br}}} \\
+\tilde{T}_o&=\frac{[\rho_0]_{br}}{2\tilde{c}_p}\left[\frac{I_o\ell}{A}\right]_{br}\sqrt{\frac{h_Lc_{p0}}{[k_0]_{br}[\rho_0]_{br}}} \\ \tag{S7.7}
 &=\frac{(21\ \mathrm{n\Omega m})}{2(5.19\ \mathrm{kJ/kgK})}(0.358\times 10^7\ \mathrm{A/m})\sqrt{\frac{(20.7\ \mathrm{kJ/kg})(6.0\ \mathrm{kJ/kgK})}{(22\ \mathrm{W/mK})(21\ \mathrm{n\Omega m})}}\\
 &\simeq 120\ \mathrm{K}
 \end{align*}
@@ -2626,18 +2631,18 @@ f) 由方程4.109中的$[\frac{I_o\ell}{A}]_{br}$和方程4.110在$I=I_o$下的$
 
 g) 由于黄铜的电阻率增加$\Delta\rho_{br}(I)$，引起给定过流水平$I$ 下的引线电压升高。
 而电阻率的增加又是由引线温度升高$\Delta \theta(I)$引起的，于是：
-\begin{equation}
-\Delta V(I)=\frac{\ell\Delta\rho_{br}(I)}{A}I=\frac{\gamma_{br}\ell\Delta\theta(I)}{A}I
-\end{equation}
+\begin{align*}
+\Delta V(I)=\frac{\ell\Delta\rho_{br}(I)}{A}I=\frac{\gamma_{br}\ell\Delta\theta(I)}{A}I \tag{S7.8}
+\end{align*}
 将方程4.108a中给出的$\Delta \theta(I)$代入，有：
-\begin{equation}% 4.113
-\Delta V(I)=\frac{\gamma_{br}\ell}{A}\{\frac{[\rho_0]_{br}\ell I^2-2\upsilon_{br}\tilde{c}_pA\tilde{T}_oI[1+\eta_{br}(I-I_o)]}{2\upsilon_{br}\tilde{c}_pAI[1+\eta_{br}(I-I_o)]-\gamma_{br}\ell T^2}\}I
-\end{equation}
+\begin{align*}% 4.113
+\Delta V(I)=\frac{\gamma_{br}\ell}{A}\{\frac{[\rho_0]_{br}\ell I^2-2\upsilon_{br}\tilde{c}_pA\tilde{T}_oI[1+\eta_{br}(I-I_o)]}{2\upsilon_{br}\tilde{c}_pAI[1+\eta_{br}(I-I_o)]-\gamma_{br}\ell T^2}\}I \tag{4.113}
+\end{align*}
 
 h) 对于一条25 kA气冷黄铜引线，载有过电流$I$=75 kA。将$h_L$=20.7 kJ/kg；$\nu_{br}=6.13\times 10^{-8}$ kg/sA；
 $\eta_{br}=2.2\times 10^{-5}\ \mathrm{A^{-1}}$；$I_o$=25 kA代入方程4.110，我们有：
 \begin{align*}% 4.110
-[Q_{I_o}]_{br}&=h_L\upsilon_{br}I[1+\eta_{br}(I-I_o)] \\
+[Q_{I_o}]_{br}&=h_L\upsilon_{br}I[1+\eta_{br}(I-I_o)] \\ \tag{4.110}
 &=(20.7\ \mathrm{kJ/kg})(6.13\times 10^{-8}\ \mathrm{kg/sA})(75\ \mathrm{kA}) \\
 &\times[1+(2.2\times 10^{-5}\ \mathrm{A^{-1}})(75\ \mathrm{kA-}-25\ \mathrm{kA})]\\
 &\simeq 200\ \mathrm{W}
@@ -2676,14 +2681,14 @@ E_{br}\simeq(300\ \mathrm{s})(200\ \mathrm{W})+(1,800\ \mathrm{s})(6.6\ \mathrm{
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.7]{chpt4/figs/fig4.25.eps}
+	\includegraphics[scale=0.6]{chpt4/figs/fig4.25.eps}
 	\caption{额定$I_o$=40 A气冷黄铜引线测到的热输入 vs. $I$关系[4.87]。实线：基于4.110的分析值，其中$\nu_{br}=6.13\times 10^{-8}$ kg/sA；
 		$\eta_{br}=0.0138\ \mathrm{A^{-1}}$.}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.7]{chpt4/figs/fig4.26.eps}
+	\includegraphics[scale=0.6]{chpt4/figs/fig4.26.eps}
 	\caption{恒定过电流水平130 A、150 A和203 A下的$\Delta V(i)$ vs. $t$曲线[4.87]。实线：实验值；
 		点线：方程4.108b和4.113的分析值，其中$A=0.0613\ \mathrm{cm^2}$；$\ell$=54 cm；$c_{p0}$=5.19 J/gK；$b=7.4\ \mathrm{n \Omega cm/K}$。}
 \end{figure}
