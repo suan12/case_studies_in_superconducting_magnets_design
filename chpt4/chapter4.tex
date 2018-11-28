@@ -1875,6 +1875,8 @@ b) 我们有：
 联立方程4.63和S5.4给出的$[\alpha_{1}\ell]_{cs}$我们得到：
 \begin{align*}% 4.65a
 e^{[\alpha_\ell]_{cs}\xi_{cs}}=\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\\ \tag{4.65}
+\end{align*}
+\begin{align*}% 4.65a
 [\alpha_\ell]_{cs}=\frac{1}{\xi_{cs}}\ln[\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1] \tag{4.65b}
 \end{align*}
 最后，联立方程S5.3和4.65b，并注意到$xi_{cs}\ell=\ell_{cs}$，我们有：
@@ -1887,6 +1889,8 @@ e^{[\alpha_\ell]_{cs}\xi_{cs}}=\frac{\tilde{c}_p(T_{cs}-T_0)}{h_L}+1\\ \tag{4.65
 c) 我们可以令方程4.62导出的与方程4.67导出的温度斜率相等，解出$\xi_{cs}$。两者都有$\xi_{cs}=\ell_{cs}/\ell$。
 \begin{align*}
 \frac{dT}{d\xi}\mid_{\ell_{cs}}=\frac{[\alpha_\ell]_{cs}e^{[\alpha_\ell]_{cs}\xi_{cs}}(T_{cs}-T_0)}{(e^{[\alpha_\ell]_{cs}\xi_{cs}}-1)}\\\tag{S5.5a}
+\end{align*}
+\begin{align*}
 \frac{dT}{d\xi}\mid_{\ell_{cs}}=\frac{\beta_{cs}e^{\frac{[\alpha_\ell]{cs}}{2}}(T_\ell-T_{cs})}{e^{\frac{[\alpha_\ell]_{cs}}{2}}\sin\beta_{cs}(1-\xi_{cs})} \tag{S5.5b}
 \end{align*}
 令S5.5a和S5.5b相等，有：
@@ -2066,21 +2070,21 @@ $\gamma_{cu}$和$\rho_o$分别是冷端温度$T_o$(这里是77 K)下的电阻温
 \theta(\zeta)=\frac{T_{\ell_{cu}}-T_o}{e^{\alpha_{cu}}\sin\beta_{cu}}e^{\alpha_{cu}\zeta}\sin\beta_{cu}\zeta
 \end{equation}
 式中，
-\begin{equation}% 4.87a
-\alpha_{cu}=\frac{\dot{m}_{fl}\tilde{c}_{fl}\ell_{cu}}{2\tilde{k}_{cu}A_{cu}}
-\end{equation}
-\begin{equation}% 4.87b 4.87c
-\beta_{cu}=\sqrt{\frac{T_{o}^{2}\gamma_{cu}\ell_{cu}^{2}}{\tilde{k}_{cu}A_{cu}^{2}}-\left(\frac{\dot{m}_{fl}\tilde{c}_{fl}\ell_{cu}}{2\tilde{k}_{cu}A_{cu}}\right)^2}
-=\sqrt{\frac{T_{o}^{2}\gamma_{cu}\ell_{cu}^{2}}{\tilde{k}_{cu}A_{cu}^{2}}-\alpha_{cu}^{2}}
-\end{equation}
+\begin{subequations}
+	\begin{align*}
+\alpha_{cu}&=\frac{\dot{m}_{fl}\tilde{c}_{fl}\ell_{cu}}{2\tilde{k}_{cu}A_{cu}}\\
+\beta_{cu}&=\sqrt{\frac{T_{o}^{2}\gamma_{cu}\ell_{cu}^{2}}{\tilde{k}_{cu}A_{cu}^{2}}-\left(\frac{\dot{m}_{fl}\tilde{c}_{fl}\ell_{cu}}{2\tilde{k}_{cu}A_{cu}}\right)^2}\\
+&=\sqrt{\frac{T_{o}^{2}\gamma_{cu}\ell_{cu}^{2}}{\tilde{k}_{cu}A_{cu}^{2}}-\alpha_{cu}^{2}}
+	\end{align*}
+\end{subequations}
 
 我们可以通过设置$d\theta/d\zeta|_{\zeta=1}=0$令$\theta_{mx}$出现在$\zeta=1$，得到：
-\begin{equation}% 4.88a
-\alpha_{cu}\sin\beta_{cu}+\beta_{cu}\cos\beta_{cu}=0
-\end{equation}
-\begin{equation}% 4.88b
-\alpha_{cu}+\beta_{cu}\cot\beta_{cu}=0
-\end{equation}
+\begin{subequations}
+	\begin{align*}
+	\alpha_{cu}\sin\beta_{cu}+\beta_{cu}\cos\beta_{cu}=0\\
+	\alpha_{cu}+\beta_{cu}\cot\beta_{cu}=0
+		\end{align*}
+\end{subequations}
 对于一组给定的引线参数，比如$A_{cu},\ell_{cu},I_o, \~{c}_{fl}, \gamma_{cu}$，有一组唯一的$\alpha_{cu}$和$\beta_{cu}$(进而，由方程4.87a和4.87b，可知$\.{m}_{fl}$的值)满足方程4.86。注意到$\cot\beta_{cu}$必须是负的，从而$\theta_{mx}$必须大于$\pi/2$，问题4.6D中还将看到。
 
 \textbf{B. 冷端热输入和功率平衡}
@@ -2100,15 +2104,15 @@ Q_j=\frac{I_{o}^{2}\gamma_{cu}}{A_{cu}}\int_{0}^{\ell_{cu}}\theta(z)dz
 \end{equation}
 联立方程4.86和4.90，代入方程4.87c，有：
 \begin{align}% 4.91a
-Q_j=&\frac{I_{o}^{2}\gamma_{cu}\ell_{cu}(T_{\ell_{cu}}-T_o)}{A_{cu}e^{\alpha_{cu}}\sin\beta_{cu}}\int_{0}^{1}e^{\alpha_{cu}\zeta}\sin\beta_{cu}\zeta d\zeta \\
-=&\frac{I_{o}^{2}\gamma_{cu}\ell_{cu}(T_{\ell_{cu}}-T_o)}{A_{cu}(\alpha_{cu}^{2}+\beta_{cu}^{2})}(\alpha_{cu}-\beta_{cu}\cot\beta_{cu}) \\
-&+(terms containing e^{-\alpha_{cu}}) \\
+Q_j=&\frac{I_{o}^{2}\gamma_{cu}\ell_{cu}(T_{\ell_{cu}}-T_o)}{A_{cu}e^{\alpha_{cu}}\sin\beta_{cu}}\int_{0}^{1}e^{\alpha_{cu}\zeta}\sin\beta_{cu}\zeta d\zeta \\\notag
+=&\frac{I_{o}^{2}\gamma_{cu}\ell_{cu}(T_{\ell_{cu}}-T_o)}{A_{cu}(\alpha_{cu}^{2}+\beta_{cu}^{2})}(\alpha_{cu}-\beta_{cu}\cot\beta_{cu}) \\\notag
+&+(terms containing e^{-\alpha_{cu}}) \\\notag
 \simeq&\frac{\tilde{k}_{cu}A_{cu}}{\ell_{cu}}(T_{\ell_{cu}}-T_o)(\alpha_{cu}-\beta_{cu}\cot\beta_{cu})
 \end{align}
 代入方程4.88b，方程4.91a成为：
-\begin{equation}% 4.91b
-Q_j=\frac{\tilde{k}_{cu}A_{cu}}{\ell_{cu}}(T_{\ell_{cu}}-T_o)(\alpha_{cu}+\alpha_{cu})
-\end{equation}
+\begin{align*}% 4.91b
+Q_j=\frac{\tilde{k}_{cu}A_{cu}}{\ell_{cu}}(T_{\ell_{cu}}-T_o)(\alpha_{cu}+\alpha_{cu}) \tag{4.91b}
+\end{align*}
 接下来，与方程4.87a联立，方程4.91b成为：
 \begin{equation}% 4.92
 Q_j=\dot{m}_{fl}\tilde{c}_{fl}(T_{\ell_{cu}}-T_o)
@@ -2135,12 +2139,12 @@ Q_{j_{\ell q}}=\frac{\rho_oI_{o}^{2}\ell_{\ell q}}{A_{cu}}=\dot{m}_{fl}h_{n2}
 \alpha_{cu}^{\prime}+\beta_{cu}^{\prime}\cot\beta_{cu}^{\prime}=0
 \end{equation}
 式中，
-\begin{equation}% 4.95a
-\alpha_{cu}^{\prime}=\frac{\dot{m}_{fl}\tilde{c}_{fl}(\ell_{cu}-\ell_{\ell q})}{2\tilde{k}_{cu}A_{cu}}
-\end{equation}
-\begin{equation}% 4.95b
-\beta_{cu}^{\prime}=\sqrt{\frac{I_{o}^{2}\gamma_{cu}(\ell_{cu}-\ell_{\ell q})^2}{\tilde{k}_{cu}A_{cu}^{2}}-(\alpha_{cu}^{\prime})^2}
-\end{equation}
+\begin{subequations}
+	\begin{align*}
+\alpha_{cu}^{\prime}&=\frac{\dot{m}_{fl}\tilde{c}_{fl}(\ell_{cu}-\ell_{\ell q})}{2\tilde{k}_{cu}A_{cu}}\\
+\beta_{cu}^{\prime}&=\sqrt{\frac{I_{o}^{2}\gamma_{cu}(\ell_{cu}-\ell_{\ell q})^2}{\tilde{k}_{cu}A_{cu}^{2}}-(\alpha_{cu}^{\prime})^2}
+	\end{align*}
+\end{subequations}
 满足方程4.93和4.94的$\.{m}_{fl}$和$\ell_{\ell_q}$组是惟一的。
 
 \subsection{问题4.6：6 kA气冷HTS电流引线}
@@ -2206,11 +2210,11 @@ a) 首先，我们使用方程4.76计算$[\tilde{kA}]_{fs}^{n}$。注意$[A_m]_{
 =&0.136\ \mathrm{W cm/K}+0.607\ \mathrm{W cm/K}=0.743\ \mathrm{W cm/K}
 \end{align*}
 根据方程4.75，我们有：
-\begin{align}% 4.75
-[Q_{in}]_{fs}^{n}=&\frac{\tilde{kA}_{fs}^{n}h_L}{\tilde{c}_p\ell}\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right] \\
+\begin{align*}% 4.75
+[Q_{in}]_{fs}^{n}=&\frac{\tilde{kA}_{fs}^{n}h_L}{\tilde{c}_p\ell}\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right] \\ \tag{4.75}
 =&\frac{(0.743\ \mathrm{W cm/K})(20.7\ \mathrm{J/g})}{(5.28\ \mathrm{J/gK})(20\ \mathrm{cm})} \\
 &\times\ln\left[\frac{(5.28\ \mathrm{J/gk})(77.3\ \mathrm{K}-4.2\ \mathrm{K})}{(20.7\ \mathrm{J/g})}+1\right]=0.4337\ \mathrm{W}
-\end{align}
+\end{align*}
 
 注意到尽管实际上$[Q_{in}]_{fs}^n\gg[Q_{in}]_{fs}$，0.4337 W仍然仅为相应的铜引线
 ($\sim$6 W)的$\sim$1/14。同时，根据方程4.35b，一条优化的气冷引线，额定电流6 kA，
@@ -2266,10 +2270,10 @@ $[Q_\ell]_{cs}^{n}$和$[Q_j]_{cs}^{n}$由方程S5.9和S5.14的变种给出：
 [Q_\ell]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}[\frac{1}{2}[\alpha_\ell]_{cs}^{n}+\beta_{cs}^{n}\cot\beta_{cs}^{n}(1-\xi_{cs})]
 \end{equation}
 
-\begin{equation}% 4.99
-[Q_j]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\left[\frac{1}{2}[\alpha_\ell]_{cs}^{n}+\beta_{cs}^{n}\cot\beta_{cs}^{n}(1-\xi_{cs}) 
-+\beta_{cs}^{n}\frac{e^{\frac{[\alpha_\ell]_{cs}^{n}\xi_{cs}}{2}}}{e^{\frac{[\alpha_\ell]_{cs}^{n}}{2}}\sin\beta_{cs}^{n}(1-\xi_{cs})}\right]
-\end{equation}
+\begin{align*}% 4.99
+[Q_j]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\big[&\frac{1}{2}[\alpha_\ell]_{cs}^{n}+\beta_{cs}^{n}\cot\beta_{cs}^{n}(1-\xi_{cs}) \\\notag
+&+\beta_{cs}^{n}\frac{e^{\frac{[\alpha_\ell]_{cs}^{n}\xi_{cs}}{2}}}{e^{\frac{[\alpha_\ell]_{cs}^{n}}{2}}\sin\beta_{cs}^{n}(1-\xi_{cs})}\big]
+\end{align*}
 因为这里$\beta_{cs}^n (1-\xi_{cs})=\pi/2$，方程4.98和4.99简化为：
 \begin{equation}% 4.100
 [Q_\ell]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\times\frac{1}{2}[\alpha_\ell]_{cs}^{n}
@@ -2283,9 +2287,9 @@ $[Q_\ell]_{cs}^{n}$和$[Q_j]_{cs}^{n}$由方程S5.9和S5.14的变种给出：
 a) 因为$I_c(T_\ell)=N_{cs}i_c(T_\ell)$，其中$N_{cs}$=50，由表4.12，$i_c(T_\ell)$=80 A，在$T=$77.3 K时，我们有：$I_c(T_\ell)= 50\times 80= 4,000$ A；类似的，在
 $T_0$=4.2 K时有$I_c(T_0)$ = 22,275 A。
 于是，这种参数的Bi2223/Ag-Au带在77.3 K和4.2 K之间的$I_c(T)$满足：
-\begin{equation}
- I_c(T)=23,325-250T[\ \mathrm{A}]
-\end{equation}
+\begin{align*}
+ I_c(T)=23,325-250T[\ \mathrm{A}] \tag{S6C.1}
+\end{align*}
 式中，$T$是开氏温度。这个方程给出$T_c$=93.3 K。由方程S6C.1，我们可以解出$I_c(T_{cs})$=6000 A下的
 $T_{cs}$=69.3 K。
 
