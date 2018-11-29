@@ -238,13 +238,13 @@ $H_{s1}(x)$和$H_{s3}(x)$是很直接的。$H_{s2}(x)$由三个分段函数$H_{s
 \begin{align*}% page321 第1个
 H_{s2_{1}}(x)&=2H_{p}+J_{c}x=2J_{c}a+J_{c}x\qquad&(0\leq x\leq x*)\\
 H_{s2_{2}}(x)&=2.5H_{p}-J_{c}x=2.5J_{c}a-J_{c}x\quad&(x*\leq x\leq x+)\\
-H_{s2_{3}}(s)&=H_{p}+J_{c}x=J_{c}a+J_{C}x\qquad&(x+\leq x\leq 2a)
+H_{s2_{3}}(s)&=H_{p}+J_{c}x=J_{c}a+J_{c}x\qquad&(x+\leq x\leq 2a)
 \end{align*}
 式中，$x*$和$x+$由$H_{s1}(x)$和$H_{s2}(x)$的两个拐点给出。也即，$H_{s1}(x*)=H_{s2_1}(x*)$，
 $H_{s1}(x+)=H_{s2_3}(x+)$：$x*=0.25a$，$x+=0.75a$。
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.7]{chpt5/figs/fig5.9.eps}
+	\includegraphics[scale=0.6]{chpt5/figs/fig5.9.eps}
 	\caption{在$H_e=2.5H_p$下的磁场特征。首先，$I_t$=0(点线)，然后$I_t=J_c a=I_c/2$(实线)，最后$I_t=2J_c a=I_c$(虚线)。}
 \end{figure}
 
@@ -253,65 +253,60 @@ $H_{s1}(x+)=H_{s2_3}(x+)$：$x*=0.25a$，$x+=0.75a$。
 面积A1.。。。。。。
 
 \begin{align*}
-H_{s2_{1}}(X)&=(H_{e}-\frac{1}{2}I_{t})+J_{c}x\qquad&(0\leq x\leq x*)\\
+H_{s2_{1}}(x)&=(H_{e}-\frac{1}{2}I_{t})+J_{c}x\qquad&(0\leq x\leq x*)\\
 H_{s2_{2}}(x)&=H_{e}-J_{c}x\qquad&(x*\leq x\leq x+)\\
 H_{s2_{s}}(x)&=(H_{e}+\frac{1}{2}I_{t})+J_{c}(x-2a)\qquad&(x+\leq x\leq2a)
 \end{align*}
 我们解出$x*$和$x+$，确定$H_{s2_2}(x*)$和$H_{s2_2}(x+)$：
 \begin{align*}
-H_{{s}2_{1}}(x*)=H_{s2_{2}}(x*)\\
-H_{e}-H_{p}i+J_{c}x*=H_{e}J_{c}x*\Rightarrow x*=\frac{H_{p}}{2J_{c}}i=\frac{1}{2}ai\\
-H_{s2_{2}}(x*)=H_{e}-\frac{1}{2}aJ_{c}i=H_{e}-\frac{1}{2}H_{p}i
+&H_{{s}2_{1}}(x*)=H_{s2_{2}}(x*)\\
+&H_{e}-H_{p}i+J_{c}x*=H_{e}J_{c}x*\Rightarrow x*=\frac{H_{p}}{2J_{c}}i=\frac{1}{2}ai\\
+&H_{s2_{2}}(x*)=H_{e}-\frac{1}{2}aJ_{c}i=H_{e}-\frac{1}{2}H_{p}i
 \end{align*}
 以及
 \begin{align*}
 H_{s2_{2}}(x+)&=H_{s2_{3}}(x+)\\
 H_{e}-J_{c}x+&=H_{e}+H_{p}i+J_{c}(x^{+}-2a)\Rightarrow x^{+}=a(1-\frac{1}{2}i)\\
-H_{s2_{2}(x+)}&=H_{e}-H_{p}+\frac{1}{2}H_{p}i
+H_{s2_{2}}(x+)&=H_{e}-H_{p}+\frac{1}{2}H_{p}i
 \end{align*}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.7]{chpt5/figs/fig5.10.eps}
+	\includegraphics[scale=0.6]{chpt5/figs/fig5.10.eps}
 	\caption{用于励磁计算的有传输电流(实线)的磁场的特征。竖直点线分开三个区域：$A_1， A_2$和$A_3$。}
 \end{figure}
 
-M is proportional to the size of the “shaded area,” shown in Fig. 5.10, which is
-the sum of three partitioned areas A1, A2, and A3.
+$M$正比于如图5.10所示的``阴影面积``大小，是三个部分面积$A_1, A2$及$A_3$之和。
 
-The area of each trapezoid is its (base)×(height1+height2)/2.
+各梯形的面积为它的``底边$\times$(高1+高2)/2``。
 \begin{align*}% page323 第1个
 A_{1}&=\frac{1}{2}x*[H_{s1}(0)+H_{s2}(x*)]=\frac{1}{4}ai[(H_{e}-H_{p}i)+(H_{e}-\frac{1}{2}H_{p}i)]\\
 &=\frac{1}{4}ai(2H_{e}-\frac{3}{2}H_{p}i)  \\
-&=a(\frac{1}{2}H_{e}i-\frac{3}{8}H_{P}i^{2})
-\end{align*}
-\begin{align*}% page323 第2个
+&=a(\frac{1}{2}H_{e}i-\frac{3}{8}H_{P}i^{2})\\
 A_{2}&=\frac{1}{2}(x^{+}-x*)[H_{s2}(x*)+H_{s2}(x^{+})]\\
 &=\frac{1}{2}(a-ai)(H_{e}-\frac{1}{2}H_{p}i+H_{e}-H_{p}+\frac{1}{2}H_{p}i)\\
 &=\frac{1}{2}a(-i)(2H_{e}-H_{p})\\
-&=a(H_{e}-H_{e}i-\frac{1}{2}H_{p}+\frac{1}{2}H_{p}i)
-\end{align*}
-\begin{align*}% page323 第3个
+&=a(H_{e}-H_{e}i-\frac{1}{2}H_{p}+\frac{1}{2}H_{p}i)\\
 A_{3}&=\frac{1}{2}(2a-x+)[H_{s2}(x+)+H_{s3}(2a)]\\
 &=\frac{1}{2}(a+\frac{1}{2}ai)(H_{e}-H_{p}+\frac{1}{2}H_{p}i+H_{e}+H_{P}i)\\
 &=a(1+\frac{1}{2}i)(H_{e}-\frac{1}{2}H_{p}+\frac{3}{4}H_{p}i)\\
 &=a(H_{e}+\frac{1}{2}H_{e}i-\frac{1}{2}H_{p}-\frac{1}{4}H_{p}i+\frac{3}{4}H_{p}i+\frac{3}{8}H_{p}i^{2})
 \end{align*}
-By combining these three areas, we may compute the shaded area:
+组合这三个面积，我们可以计算出阴影面积：
 \begin{align*}% page323 第4个
-Shaded\quad area=&A_{1}+A_{2}+A_{3}\\
+\text{Shaded\quad area}=&A_{1}+A_{2}+A_{3}\\
 =&a(\frac{1}{2}H_{e}i-\frac{3}{8}H_{p}i^{2}+H_{e}-H_{e}i-\frac{1}{2}H_{p}+\frac{1}{2}H_{p}i\\
 &+H_{e}+\frac{1}{2}H_{e}i-\frac{1}{2}H_{p}-\frac{1}{4}H_{P}i+\frac{3}{4}H_{P}i+\frac{3}{8}H_{p}i^{2})\\
 =&a(2H_{e}-H_{p}+H_{p}i)
 \end{align*}
-With the shaded area known, M can be computed quickly:
+一旦阴影面积已知，$M$可快速算出：
 \begin{align*}% page323 第4个
 -M(i)&=H_{e}-\frac{1}{2a}\times(Shaded\quad area)\\
 &=H_{e}-H_{e}+\frac{1}{2}H_{p}-\frac{1}{2}H_{p}i\\
-&=\frac{1}{2}H_{p}(1-i)\qquad(5.17a)\\
-&=-M(0)f_{1}(i)\qquad(5.17b)
+&=\frac{1}{2}H_{p}(1-i)\\
+&=-M(0)f_{1}(i)
 \end{align*}
-where f1(i) = 1 − i. −M(i) decreases linearly with i, becoming 0 at i = 1.
+式中，$f_1(i) = 1 − i$。$−M(i)$线性随$i$减小，当$i=1$时为零。 
 
 \textbf{B. 先通电流后加磁场}
 
@@ -339,7 +334,7 @@ x*=a-ai=a(1-i)
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.7]{chpt5/figs/fig5.11.eps}
+	\includegraphics[scale=0.5]{chpt5/figs/fig5.11.eps}
 	\caption{磁场特征，点线表示仅有电流，实现表示有磁场和电流。}
 \end{figure}
 
@@ -353,14 +348,12 @@ partitioned by the vertical dashed line in Fig. 5.12.
 A_{1}&=\frac{1}{2}a(1-i)(H_{e}-H_{p}i+H_{e}-H_{p}\\
 &=a(1-i)(H_{e}\frac{1}{2}H_{p}-\frac{1}{2}H_{p}i)\\
 &=a(H_{e}-H_{e}i\frac{1}{2}H_{p}+\frac{1}{2}H_{p}i^{2})
-\end{align*}
-\begin{align*}% page325 第3个
 A_{2}&=\frac{1}{2}(2a-a+ai)(H_{e}+H_{p}i+H_{e}-H_{P})\\\notag
 &=a(1+i)(H_E-\frac{1}{2}H_{p}+\frac{1}{2}H_{p}i)\\\notag
 &=a(H_{e}+H_{e}-\frac{1}{2}H_{p}+\frac{1}{2}H_{p}i^{2})
 \end{align*}
 \begin{align*}% page325 第4个
-Shaded\quad area&=A_{1}+A_{2}\\
+\text{Shaded\quad area}&=A_{1}+A_{2}\\
 &=a(2H_{e}-H_{p}+H_{p}i^{2})
 \end{align*}
 Once the shaded area is known, we have M:
@@ -375,7 +368,7 @@ Once the shaded area is known, we have M:
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.7]{chpt5/figs/fig5.12.eps}
+	\includegraphics[scale=0.6]{chpt5/figs/fig5.12.eps}
 	\caption{用以计算励磁的同时有传输电流和磁场的场特性磁场特征。竖直点线分出两个区域$A_1$和$A_2$。}
 \end{figure}
 
@@ -401,15 +394,15 @@ H_{s3}(x)&=H_{e}+H_{p}i+J_{c}(x-2a)\quad(a\leq x\leq a^{+})
 \end{align*}
 where x∗ and x may be solved from: Hs2(x∗)=Hs3(x )=He. Thus:
 \begin{align*}
-H_{s2}(x*)=H_{e}\Rightarrow H_{e}+H_{p}i-J_{c}x*\\
-x*=\frac{H_{p}i}{J_{c}}=ai\\
-H_{s3}(x+)=H_{e}\Rightarrow H_{e}+H_{P}i+J_{c}(x^{+}-2a)\\
-x^{+}=2a-\frac{H_{p}}{J_{c}}i=2a-ai
+H_{s2}(x*)&=H_{e}\Rightarrow H_{e}+H_{p}i-J_{c}x*\\
+x*&=\frac{H_{p}i}{J_{c}}=ai\\
+H_{s3}(x+)&=H_{e}\Rightarrow H_{e}+H_{P}i+J_{c}(x^{+}-2a)\\
+x^{+}&=2a-\frac{H_{p}}{J_{c}}i=2a-ai
 \end{align*}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.7]{chpt5/figs/fig5.13.eps}
+	\includegraphics[scale=0.5]{chpt5/figs/fig5.13.eps}
 	\caption{第五步之后的磁场特征。}
 \end{figure}
 
@@ -418,15 +411,15 @@ which the slab is divided into four “white” areas, from left to right, desig
 (rectangle), A2 (trapezoid), A3 (trapezoid), and A4 (rectangle minus “triangle”).
 In the figure, “base” and “height” are given by:
 \begin{align*}
-base&=x+-x*=(2a-ai)-ai=(a(1-i)\\
-height&=H_{e}-H_{s2}(a)=H_{e}-(H_{e}+H_{p}i-J_{c}a)\\
+\text{base}&=x+-x*=(2a-ai)-ai=(a(1-i)\\
+\text{height}&=H_{e}-H_{s2}(a)=H_{e}-(H_{e}+H_{p}i-J_{c}a)\\
 &=J_{c}a-J_{p}i=H_{p}(1-i)
 \end{align*}
 The two “dotted” areas in Fig. 5.14 are equal in magnitude but have “opposite”
 signs, hence they cancel out when we perform the area integral. The sum of the
 areas, A1, A2, A3, and A4, is given by:
 \begin{align*}
-\sum_{j=1}^{4}A_{j}&=2aH_{e}-crossed\quad area\\
+\sum_{j=1}^{4}A_{j}&=2aH_{e}-\text{crossed\quad area}\\
 crossed\quad area&=\frac{1}{2}(base)\times(height)\\
 \sum_{j=1}^{4}A_{j}&=2aH_{e}-\frac{1}{2}2a(1-i)H_{p}(1-i)\\
 &=2aH_{e}-aH_{p}(1-i)^{2}
@@ -578,7 +571,7 @@ This is nearly the same (8/3π∼1) as that for a Bean slab of thickness df .
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.6]{chpt5/figs/fig5.16.eps}
+	\includegraphics[scale=0.5]{chpt5/figs/fig5.16.eps}
 	\caption{Induced current distributions in a) Bean slab of width 2a and b) an infinitely
 		long filament of diameter dd, both subjected to an external field He in the y-direction.。}
 \end{figure}
@@ -615,7 +608,7 @@ To translate this to M corresponding to the volume of just the MgB2, we must
 multiply 60 kA/m by (1.038/0.531)2 = 4.0. Solving Eq. 5.26 for Jc with M =
 240 kA/m and df =5.31×10−4 m, we obtain:
 \begin{align*}%page331 第5个
-J_{c}(0\ \mathrm{T};10\ \mathrm{K})&=\frac{6\ \mathrm{M}(0\ \mathrm{T};10\ \mathrm{k})}{d_{f}}\\
+J_{c}(0\ \mathrm{T};10\ \mathrm{K})&=\frac{6\ \mathrm{M}(0\ \mathrm{T};10\ \mathrm{K})}{d_{f}}\\
 &=\frac{6(240\times10^{3}\ \mathrm{A/m})}{(0.531\times10^{-3}\ \mathrm{m})}\\
 &a=2.7\times10^{9}\ \mathrm{A/m^{2}}
 \end{align*}
@@ -705,7 +698,7 @@ From Table 5.1 we have Jc at 4.2K and 5T of 2.0×109 A/m2. It is generally
 accepted that for a given temperature, Jc(Be) may be approximated, based on
 Eq. 1.3, by:
 \begin{align*}%page334 第3个
-2.0\times10^{9}A/m^{2}=\frac{J_{0}B_{0}}{5T+0.3T}\Rightarrow J_{0}B_{0}=10.6\times 10^{9}\quad\ \mathrm{AT/m^{2}}
+2.0\times10^{9}\ \mathrm{A/m^{2}}=\frac{J_{0}B_{0}}{5T+0.3T}\Rightarrow J_{0}B_{0}=10.6\times 10^{9}\ \mathrm{AT/m^{2}}
 \end{align*}
 where for NbTi, B0 ∼ 0.3T. J0 is the zero-field critical current density, which is
 usually difficult to measure. Thus from the Jc value at 5T and B0 = 0.3T, we
@@ -715,7 +708,7 @@ can first solve for J0B0:
 \end{align*}
 Once J0B0 is known, then Jc may be solved at 2.5 T. Thus:
 \begin{align*}%page334 第5个
-J_{c}(2.5T)=\frac{10.6\times10^{9}\ \mathrm{AT/m^{2}}}{2.8T}=3.8\times^{9}\ \mathrm{A/m^{2}}
+J_{c}(2.5T)=\frac{10.6\times10^{9}\ \mathrm{AT/m^{2}}}{2.8T}=3.8\times 10^{9}\ \mathrm{A/m^{2}}
 \end{align*}
 Inserting appropriate values into Eq. 5.16c, we have:
 \begin{align*}%page334 第6个
@@ -759,8 +752,8 @@ The Npc%[˜Be]pc = Nsc[˜Be]sc equality gives:
 \begin{align*}%page335 第4个
 \frac{250}{20}\int_{0}^{20}[1-c(\frac{z}{z_{0}})^{2}]dz&=\frac{280}{20}\int_{60}^{80}[1-c(\frac{z}{z_{0}^{2}})]dz\\\tag{S1.4}
 250[20-\frac{c}{3}\frac{(20)^{3}}{(75)^{2}}]dz&=280[80-\frac{c}{3}\frac{(80)^{3}}{(75)^{2}}-60+\frac{c}{3}\frac{(60)^{3}}{(75)^{2}}]\\
-	5000-118.5c&=22400-8495.4c-16800+1584c\\
-	c&\simeq\frac{600}{4793}\simeq 0.125
+5000-118.5c&=22400-8495.4c-16800+1584c\\
+c&\simeq\frac{600}{4793}\simeq 0.125
 \end{align*}
 
 
@@ -834,148 +827,302 @@ criteria developed during the 1960s and 1970s [5.8] and applied also to HTS in t
 late 1980s [5.9].
 
 \subsection{问题5.2：磁通跳跃判据}
+This problem deals with the derivation of the critical conductor size above which
+flux jumping will occur. Flux jumping was once a major source of instabilities in
+the first superconducting magnets of engineering significance in the early 1960s
+[5.10]. Flux jumping is a thermal instability peculiar to a Type II superconductor
+that permits the magnetic field to penetrate its interior. A time-varying magnetic
+field,$\.{H}_e$, at the conductor surface induces an electric field$\vec{E}$in the conductor,
+which interacts with the supercurrent (density Jc). This$\vec{E}\cdot \vec{J}_c$interaction heats
+the conductor. Since Jc decreases with temperature, the field (flux) penetrates
+further into the conductor, generating more heat, which further decreases Jc. The
+field penetration and temperature rise can cascade until the conductor loses its
+superconductivity. This thermal runaway event is called a flux jump.
 
+a) Using the Bean model and computing the $\vec{E}\cdot \vec{J}_c$ interaction over the positive
+half (0 ≤ x ≤ a) of the slab, show that an expression for the dissipative energy
+density,$e_\phi$[J/m3], generated within the slab when the critical current density
+Jc is suddenly decreased by |ΔJc| is given by:
 \begin{equation}%page338 第1个
-e_{\phi}=\frac{\mu_{o}J_{c}|\Delta J_{c}|a^{2}}{3}\quad(5.37)
+e_{\phi}=\frac{\mu_{o}J_{c}|\Delta J_{c}|a^{2}}{3}
 \end{equation}
+Note that the entire slab is in the critical state with its surface (±a) exposed
+to an external field of$H_e\vec{i}_y$.
+
+b) Derive Eq. 5.37 by computing the Poynting energy flow into the slab at x = a
+and equating it with the change in magnetic energy storage and dissipation
+energy$E_\phi$in the positive half of the slab.
+
+c) To relate ΔJc to an equivalent temperature rise in the conductor, we may
+assume a linear temperature dependence for Jc(T):
 \begin{equation}%page338 第2个
-J_{c}(T)=J_{c_{o}}(\frac{T_{c}-T}{T_{c}-T_{op}})\quad(5.38)
+J_{c}(T)=J_{c_{o}}(\frac{T_{c}-T}{T_{c}-T_{op}})
 \end{equation}
+where Jc◦ is the critical current density at the operating temperature Top. Tc
+is the critical temperature at a given magnetic induction B◦. From Eq. 5.38,
+ΔJc in Eq. 5.37 may be related to an equivalent temperature rise ΔT:
 \begin{equation}%page338 第3个
-\Delta J_{c}=-J_{c_{o}}(\frac{\Delta T}{T_{c}-T_{op}}\quad(5.39)
+\Delta J_{c}=-J_{c_{o}}(\frac{\Delta T}{T_{c}-T_{op}}
 \end{equation}
+Now, by requiring that $\Delta T_s=e_\phi/\~{C}_s\le \Delta T$, where$\~{C}_s$is the superconductor’s
+average heat capacity [J/m3 K] in the range from Top to Tc, show thermal
+stability implies a critical slab half width ac of:
 \begin{equation}%page338 第4个
-a_{c}=\sqrt{\frac{3\tilde{C}_{s}(T_{c}-T_{op})}{\mu_{o}J_{c_{o}}^{2}}}\quad(5.40)
+a_{c}=\sqrt{\frac{3\tilde{C}_{s}(T_{c}-T_{op})}{\mu_{o}J_{c_{o}}^{2}}}
 \end{equation}
+
 
 \subsubsection{问题5.2之解}
+a) Because of symmetry about x = 0, we
+shall consider only one half of the slab, between
+x = 0 and x = a. As illustrated in Fig. 5.18,
+the solid line corresponds to Hs1(x), which
+gives the initial field distribution within the
+slab, with J =Jc. The dotted line corresponds
+to Hs2(x) for the slab carrying Jc−|ΔJc|. Note
+that the field at the surface is He in both cases.
+We thus have:
 
-\begin{equation}%page339 第1个
-H_{s1}(x)=H_{e}+J_{c}(x-a)\quad(S2.1a)
-\end{equation}
-\begin{equation}%page339 第2个
-H_{s2}(x)=H_{e}+(J_{c}-| \Delta J_{c}|)(x-a)(S2.1b)
-\end{equation}
-\begin{equation}%page339 第3个
-\oint_{C}\vec{E}\cdot d\vec{s}=-\mu_{o}\int_{S}\frac{\triangle H_{s}(x)\vec{\imath}_{y}\cdot d\vec{A}}{\Delta t}
-\end{equation}
-\begin{equation}%page339 第4个
-\Delta H_{S}(x)=H_{s2}(x)-H_{s1}(x)\\
-=|\Delta J_{c}|(a-x)\qquad(S2.3)
-\end{equation}
-\begin{equation}%page339 第5个
-E_{z}(x)=\mu_{o}\frac{|\Delta J_{c}|}{\Delta t}\int_{0}^{x}(a-x)dx\\
-\mu_{o}\frac{|\Delta J_{c}|}{\Delta t}(ax-\frac{x^{2}}{2})\qquad(S2.4)
-\end{equation}
-\begin{equation}%page339 第6个
-\varepsilon_{\phi}=\int_{0}^{a}p(x)\Delta tdx\\
-=\mu_{o}J_{c}|\Delta J_{c}|\int_{0}^{a}(ax-\frac{x^{2}}{2})dx=\frac{\mu_{o}J_{c}|\Delta J_{c}|a^{3}}{3}\quad(S2.5)
-\end{equation}
-\begin{equation}%page339 第7个
-e_{\phi}=\frac{\mu_{o}J_{c}|\Delta J_{c}|a^{2}}{3}\qquad(5.37)
-\end{equation}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.5]{chpt5/figs/fig5.18.eps}
+	\caption{磁场特征。}
+\end{figure}
 
-
-
-\begin{equation}%page340 第1个
-\int S_{x}(a)dt=\Delta E_{m}+\varepsilon_{\phi}\qquad(S2.6)
-\end{equation}
-
-
-
-\begin{equation}%page340 第2个
-E_{z}(a)=\mu_{o}\frac{|\Delta J_{c}|a^{2}}{2\Delta t}\qquad(S2.7)
-\end{equation}
-\begin{equation}%page340 第3个
-\vec{S}(a)=\mu_{o}\frac{|\Delta J_{c}|a^{2}}{2\Delta t}\vec{\imath}_{z}\times H_{e}\vec{\imath}_{y}=-\mu_{o}\frac{H_{e}|\Delta J_{c}|a^{2}}{2\Delta t}\quad(S2.8)
-\end{equation}
-\begin{equation}%page340 第4个
-\int S_{x}(a)dt=\mu_{o}\frac{H_{e}|\Delta J_{c}|a^{2}}{2}\qquad(S2.9)
-\end{equation}
-
-
-\begin{align*}%page340 第5个
-\Delta E_{m}&=\frac{\mu_{o}}{2}\int_{0}^{a}[H_{s2}^{a}(x)-H_{s1}^{2}(x)]dx\tag(S2.10)\\
-&=\frac{\mu_{o}}{2}\int_{0}^{a}\{[H_{e}+(J_{c}-|\Delta J_{c}|)(x-a)]^{2}-[H_{e}+J_{c}(x-a)]^{2}\}dx\\\notag
-&=\frac{\mu_{o}}{2}\int_{0}^{a}[-2H_{e}|\Delta J_{c}|(x-a)-2J_{C}|\Delta J_{c}|(x-a)^{2}+|\Delta J_{c}|^{2}(x-a)^{2}]dx\notag
+\begin{align*}%page339 第1个
+H_{s1}(x)=H_{e}+J_{c}(x-a)\tag{S2.1a}
+\end{align*}
+\begin{align*}%page339 第2个
+H_{s2}(x)=H_{e}+(J_{c}-| \Delta J_{c}|)(x-a)\tag{S2.1b}
+\end{align*}
+Because there is a change in magnetic field
+within the slab, an electric field$\vec{E}$is generated,
+which from Faraday’s law of induction is
+given by:
+\begin{align*}%page339 第3个
+\oint_{C}\vec{E}\cdot d\vec{s}=-\mu_{o}\int_{S}\frac{\triangle H_{s}(x)\vec{\imath}_{y}\cdot d\vec{A}}{\Delta t} \tag{S2.2}
+\end{align*}
+From symmetry we have$\vec{E}(x = 0) = 0$ and$\vec{E}$points in the z-direction. ΔHs(x)
+is given by:
+\begin{align*}%page339 第4个
+\Delta H_{s}(x)&=H_{s2}(x)-H_{s1}(x)\\
+&=|\Delta J_{c}|(a-x)\tag{S2.3}
+\end{align*}
+联立方程S2.2和S2.3，有：
+\begin{align*}%page339 第5个
+E_{z}(x)&=\mu_{o}\frac{|\Delta J_{c}|}{\Delta t}\int_{0}^{x}(a-x)dx\\
+&=\mu_{o}\frac{|\Delta J_{c}|}{\Delta t}(ax-\frac{x^{2}}{2})\tag{S2.4}
+\end{align*}
+Dissipation power density, p(x), is given by Ez(x)Jc; the total energy density per
+unit length dissipated in the slab or per unit slab surface area in the y-z plane,$E_\phi$
+[J/m2], is given by:
+\begin{align*}%page339 第6个
+\varepsilon_{\phi}&=\int_{0}^{a}p(x)\Delta tdx\\
+&=\mu_{o}J_{c}|\Delta J_{c}|\int_{0}^{a}(ax-\frac{x^{2}}{2})dx=\frac{\mu_{o}J_{c}|\Delta J_{c}|a^{3}}{3}\tag{S2.5}
+\end{align*}
+The average dissipation energy density,$e_\phi$ is given by$E_\phi/a$:
+\begin{align*}%page339 第7个
+e_{\phi}=\frac{\mu_{o}J_{c}|\Delta J_{c}|a^{2}}{3}\tag{5.37}
 \end{align*}
 
+b) The Poynting energy flux [J/m2] in the y-z plane into the slab (in the −xdirection)
+at x = a is equal to the change in magnetic energy storage flux ΔEm
+[J/m2] and dissipation energy flux$E_\phi$ in the slab. Thus:
+\begin{align*}%page340 第1个
+\int S_{x}(a)dt=\Delta E_{m}+\varepsilon_{\phi}\tag{S2.6}
+\end{align*}
+通过在$x=a$处计算$\vec{S}=\vec{E}\times\vec{H}$可以确定$\vec{S}$的方向。在$x=a$处，
+$\vec{H}=H_e \vec{i_y}$；由方程S2.4得到的$E_z(x)$，可得：
+\begin{align*}%page340 第2个
+E_{z}(a)=\mu_{o}\frac{|\Delta J_{c}|a^{2}}{2\Delta t}\tag{S2.7}
+\end{align*}
+于是：
+\begin{align*}%page340 第3个
+\vec{S}(a)=\mu_{o}\frac{|\Delta J_{c}|a^{2}}{2\Delta t}\vec{\imath}_{z}\times H_{e}\vec{\imath}_{y}=-\mu_{o}\frac{H_{e}|\Delta J_{c}|a^{2}}{2\Delta t}\tag{S2.8}
+\end{align*}
+As expected,$\vec{S}(a)$points in the −x-direction; energy indeed flows into the slab.
+Thus:
+\begin{align*}%page340 第4个
+\int S_{x}(a)dt=\mu_{o}\frac{H_{e}|\Delta J_{c}|a^{2}}{2}\tag{S2.9}
+\end{align*}
+The difference in magnetic energy flux ΔEm in the slab is given by:
+\begin{align*}%page340 第5个
+\Delta E_{m}&=\frac{\mu_{o}}{2}\int_{0}^{a}[H_{s2}^{a}(x)-H_{s1}^{2}(x)]dx\\\tag(S2.10)
+&=\frac{\mu_{o}}{2}\int_{0}^{a}\{[H_{e}+(J_{c}-|\Delta J_{c}|)(x-a)]^{2}-[H_{e}+J_{c}(x-a)]^{2}\}dx\\
+&=\frac{\mu_{o}}{2}\int_{0}^{a}[-2H_{e}|\Delta J_{c}|(x-a)-2J_{C}|\Delta J_{c}|(x-a)^{2}+|\Delta J_{c}|^{2}(x-a)^{2}]dx
+\end{align*}
+Neglecting the |ΔJc|2 term in the above integral, we obtain:
+\begin{align*}%page340 第6个
+\Delta E_{m}=\mu_{o}(\frac{H_{e}|\Delta J_{c}|a^{2}}{2}-\frac{J_{c}|\Delta J_{c}|a^{3}}{3})\tag{S2.11}
+\end{align*}
+From Eq. S2.6, we have:
+\begin{align*}%page340 第7个
+\varepsilon_{\phi}=\int S_{x}(a)dt-\Delta E_{m}\tag{S2.12}
+\end{align*}
+Combining Eqs. S2.9, S2.11, and S2.12, we obtain:
+\begin{align*}%page340 第8个
+\varepsilon_{\phi}&=\mu_{o}\frac{H_{e}|\Delta J_{c}|a^{2}}{2}-\mu_{o}(\frac{H_{e}|\Delta J_{c}|a^{2}}{2}-\frac{J_{c}|\Delta J_{c}|a^{3}}{3})\\
+&=\mu_{O}\frac{J_{c}|\Delta J_{c}|a^{3}}{3}\tag{S2.13}
+\end{align*}
+Equation S2.13 leads directly to Eq. 5.37:
+\begin{align*}%page340 第9个
+e_{\phi}=\frac{\varepsilon_{\phi}}{a}=\frac{\mu_{o}J_{c}|\Delta J_{c}|a^{2}}{3}\tag{5.37}
+\end{align*}
+
+c) As given by Eq. 5.38, Jc(T) is a decreasing function of temperature. We thus
+have:
+\begin{align*}%page341 第1个
+\Delta J_{c}=-J_{c_{c}}(\frac{\Delta T}{T_{c}-T_{op}})\tag{5.39}
+\end{align*}
+From Eq. 5.39, we have:
+\begin{align*}%page341 第2个
+|\Delta J_{c}|=\frac{J_{c_{o}}\Delta T}{T_{c}-T_{op}}\tag{S2.14}
+\end{align*}
+Replacing Jc with Jc◦ in Eq. 5.37 and combining it with Eq. S2.14, we obtain:
+\begin{align*}%page341 第3个
+e_{\phi}=\frac{\mu_{o}J_{c_{o}}^{2}\Delta T a^{2}}{3(T_{c}-T_{op})}\tag{S2.15}
+\end{align*}
+Note that$e_{\phi}$is proportional not only to ΔT but also, more importantly, to a2.
+Under adiabatic conditions, the dissipation energy density$e_{\phi}$increases the superconductor’s
+temperature by ΔTs, given by:
+\begin{align*}%page341 第4个
+\Delta T_{s}=\frac{e_{\phi}}{\tilde{C}_{s}}>0\tag{S2.16}
+\end{align*}
+$\tilde{C}_{s}$is the superconductor’s average heat capacity [J/m3 K] in the temperature
+range from Top to Tc. Combining Eqs. S2.15 and S2.16, and requiring ΔTs < ΔT
+for thermal stability, we have:
+\begin{align*}%page341 第5个
+\frac{\Delta T_{s}}{\Delta T}<\frac{\mu_{o}J_{c_{o}}^{2}a^{2}}{3\tilde{C}_{s}(T_{c}-T_{op})}\tag{S2.17}
+\end{align*}
+For a given superconducting material and operating temperature, a is the only
+parameter that can be varied by the magnet designer to satisfy Eq. S2.17. That
+is, thermal stability can be satisfied only if the slab half-width a is less than the
+critical size ac, given by:
+\begin{align*}%page341 第6个
+a_{C}=\sqrt{\frac{3\tilde{C}_{s}(T_{c}-T_{op})}{\mu_{o}J_{c_{o}}^{2}}}\tag{5.40}
+\end{align*}
+Equation 5.40 is applied to compute approximate values of ac for NbTi (LTS) operating
+at 4.2K and YBCO (HTS) operating at 77.3 K. Table 5.3 lists approximate
+values of parameters appearing in Eq. 5.40 for both superconductors.
+
+We may conclude that for a circular filament of NbTi, ac=140 $\mu m$means a critical
+diameter of ∼300 $\mu m$(Eq. 5.29) and a coated YBCO tape of width 8 mm.
 
 
-\begin{equation}%page340 第6个
-\Delta E_{m}=\mu_{o}(\frac{H_{e}|\Delta J_{c}|a^{2}}{2}-\frac{J_{c}|\Delta J_{c}|a^{3}}{3})\quad(S2.11)
-\end{equation}
-\begin{equation}%page340 第7个
-\varepsilon_{\phi}=\int S_{x}(a)dt-\Delta E_{m}\qquad(S2.12)
-\end{equation}
-\begin{equation}%page340 第8个
-\varepsilon_{\phi}=\mu_{o}\frac{H_{e}|\Delta J_{c}|a^{2}}{2}-\mu_{o}(\frac{H_{e}|\Delta J_{c}|a^{2}}{2}-\frac{J_{c}|\Delta J_{c}|a^{3}}{3})\\
-=\mu_{O}\frac{J_{c}|\Delta J_{c}|a^{3}}{3}\qquad(S2.13)
-\end{equation}
-\begin{equation}%page340 第9个
-e_{\phi}=\frac{              \varepsilon_{\phi}}{a}=\frac{\mu_{o}J_{c}|\Delta J_{c}|a^{2}}{3}\qquad(5.37)
-\end{equation}
-\begin{equation}%page341 第1个
-\Delta J_{c}=-J_{c_{c}}(\frac{\Delta T}{T_{c}-T_{op}})\qquad(5.39)
-\end{equation}
-\begin{equation}%page341 第2个
-|\Delta J_{c}|=\frac{J_{c_{o}}\Delta T}{T_{c}-T_{op}}\qquad(S2.14)
-\end{equation}
-\begin{equation}%page341 第3个
-e_{\phi}=\frac{\mu_{o}J_{c_{o}}^{2}\Delta T a^{2}}{3(T_{c}-T_{op})}\qquad(S2.15)
-\end{equation}
-\begin{equation}%page341 第4个
-\Delta T_{s}=\frac{e_{\phi}}{\tilde{C}_{s}}>0\qquad(S2.16)
-\end{equation}
-\begin{equation}%page341 第5个
-\frac{\Delta T_{s}}{\Delta T}<\frac{\mu_{o}J_{c_{o}}^{2}a^{2}}{3\tilde{C}_{s}(T_{c}-T_{op})}\qquad(S2.17)
-\end{equation}
-\begin{equation}%page341 第6个
-a_{C}=\sqrt{\frac{3\tilde{C}_{s}(T_{c}-T_{op})}{\mu_{o}J_{c_{o}}^{2}}}\qquad(5.40)
-\end{equation}
+\colorbox{red}{表5.3}
 
 \subsection{问题5.3：磁通跳跃}
+The magnetization vs. ambient field trace shown in Fig. 5.19 was obtained with a
+monofilament Nb-Zr wire (0.5mm$\phi$) at 4.2K carrying no transport current. (In
+the early 1960s, superconductors based on alloys of niobium and zirconium, Nb-Zr,
+preceeded Nb-Ti. Shortly after a composite superconductor became the standard
+form for magnet-grade superconductors in the mid 1960s, Nb-Ti (now more commonly
+designated NbTi), being much easier to co-process with copper than Nb-Zr,
+replaced Nb-Zr.) Note that both ordinate (magnetization) and abscissa (field) are
+given in non-SI units. Use Bean’s model and treat the wire, of diameter df, as a
+slab of thickness 2a.
 
+a) Show that the field interval, ΔHf , indicated in the trace, is consistent with
+the measured magnitude of magnetization.
+
+b) Estimate the dissipation energy density,$e_{\phi}$[J/m3], resulting from the flux
+jump labeled A in Fig. 5.19. First, show that$e_{\phi}$is given by:
 \begin{equation}%page342 第1个
-e_{\phi}=\frac{(\mu_{o}J_{p})^{2}}{6\mu_{o}}\qquad(5.41)
+e_{\phi}=\frac{(\mu_{o}J_{p})^{2}}{6\mu_{o}}
 \end{equation}
+
+c) Estimate the temperature rise for flux jump A. Assume the heat capacity of
+Nb-Zr to be independent of temperature and equal to 6 kJ/m3 K.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.5]{chpt5/figs/fig5.19.eps}
+	\caption{Magnetization vs. ambient field trace for a 0.5-mm dia. Nb-Zr monofilament。}
+\end{figure}
+
 
 \subsubsection{问题5.3之解}
+a) From Bean’s model, flux jumping can occur every Hp. Clearly, Hp = ΔHf ,
+where ΔHf is indicated in Fig. 5.19. Also, full magnetization for a slab is Hp/2.
 
-\begin{equation}%page343 第1个
-\Delta H(x)=H_{p}\frac{(a-x)}{a}\qquad(S3.1)
-\end{equation}
-\begin{equation}%page343 第2个
-E(x)=\mu_{o}\frac{H_{p}}{\Delta t}\int_{0}^{x}\frac{a-x}{a}dx=\frac{\mu_{o}H_{p}}{a\Delta t}(ax-\frac{x^{2}}{2})\quad(S3.2)
-\end{equation}
-\begin{equation}%page343 第3个
-\vec{S}(a)=-\frac{\mu_{o}}{2\Delta t}H_{p}aH_{e}\vec{\imath}_{x}\qquad(S3.3)
-\end{equation}
-\begin{equation}%page343 第4个
+从图5.19可知，$\Delta H_f\simeq$ 5k gauss，$\mu_{0}\Delta H_f$=0.5 T。图中还给出，
+$H_p/2\simeq$ 2.5k gauss，是$\Delta H_f$的一半。他们是一致的。
+
+b) We can derive the flux jump energy density,$e_{\phi}$, using the Poynting energy
+balance:$e_s=e_{\phi}+\Delta e_m$, where es is the Poynting energy density entering the
+superconductor at x=a, and$\Delta e_m$is its change in stored magnetic energy density.
+Let’s consider only 0 ≤ x ≤ a. ΔH(x) within the slab is given by:
+\begin{align*}%page343 第1个
+\Delta H(x)=H_{p}\frac{(a-x)}{a}\tag{S3.1}
+\end{align*}
+由S3.1，可得：
+\begin{align*}%page343 第2个
+E(x)=\mu_{o}\frac{H_{p}}{\Delta t}\int_{0}^{x}\frac{a-x}{a}dx=\frac{\mu_{o}H_{p}}{a\Delta t}(ax-\frac{x^{2}}{2})\tag{S3.2}
+\end{align*}
+这样，在$x=a$处$\vec{S}$为：
+\begin{align*}%page343 第3个
+\vec{S}(a)=-\frac{\mu_{o}}{2\Delta t}H_{p}aH_{e}\vec{\imath}_{x}\tag{S3.3}
+\end{align*}
+$\vec{S}(a)$is directed towards the slab, and the Poynting energy density es is given by:
+\begin{align*}%page343 第4个
 e_{s}=\frac{\int S_{x}(a)dt}{a}=\frac{\mu_{o}}{2}H_{p}H_{e}\qquad(S3.4)
-\end{equation}
-\begin{equation}%page343 第5个
-e_{m1}=\frac{\mu_{o}}{2a}\int_{0}^{a}[H_{e}+J_{c}(x-a)]^{2}dx\qquad(S3.5)
-\end{equation}
-\begin{equation}%page343 第6个
-=\frac{\mu_{o}}{2a}(H_{e}^{2}a-H_{e}J_{c}a^{2}+\frac{J_{c}^{2}a^{3}}{3})=\frac{\mu_{o}}{2}H_{e}^{2}-\frac{\mu_{o}}{2}H_{e}H_{p}+\frac{\mu_{o}}{6}H_{p}^{2}(S3.6)
-\end{equation}
-\begin{equation}%page343 第7个
-\Delta e_{m}=e_{m2}-e_{m1}=\frac{\mu_{o}}{2}H_{e}H_{p}-\frac{\mu_{o}}{6}H_{p}^{2}\qquad(S3.7)
-\end{equation}
-\begin{equation}%page343 第8个
-e_{\phi}=\frac{\mu_{o}}{2}H_{p}H_{e}-\frac{\mu_{o}}{2}H_{e}H_{p}+\frac{\mu_{o}}{6}H_{p}^{2}=\frac{\mu_{o}}{6}H_{p}^{2}\quad(S3.8)
-\end{equation}
-\begin{equation}%page343 第9个
-e_{\phi}=\frac{(\mu_{o}H_{p})^{2}}{6\mu_{o}}\qquad(5.41)
-\end{equation}
-\begin{equation}%page343 第10个
+\end{align*}
+The stored magnetic energy density after flux jumping (em2) is μ◦H2
+e /2. The stored magnetic energy density before flux jumping, em1, is given by:
+\begin{align*}%page343 第5个
+e_{m1}=\frac{\mu_{o}}{2a}\int_{0}^{a}[H_{e}+J_{c}(x-a)]^{2}dx\tag{S3.5}
+\end{align*}
+\begin{align*}%page343 第6个
+=\frac{\mu_{o}}{2a}(H_{e}^{2}a-H_{e}J_{c}a^{2}+\frac{J_{c}^{2}a^{3}}{3})=\frac{\mu_{o}}{2}H_{e}^{2}-\frac{\mu_{o}}{2}H_{e}H_{p}+\frac{\mu_{o}}{6}H_{p}^{2}\tag{S3.6}
+\end{align*}
+\begin{align*}%page343 第7个
+\Delta e_{m}=e_{m2}-e_{m1}=\frac{\mu_{o}}{2}H_{e}H_{p}-\frac{\mu_{o}}{6}H_{p}^{2}\tag{S3.7}
+\end{align*}
+因为$e_\phi=e_s-\Delta e_m$，我们有：
+\begin{align*}%page343 第8个
+e_{\phi}=\frac{\mu_{o}}{2}H_{p}H_{e}-\frac{\mu_{o}}{2}H_{e}H_{p}+\frac{\mu_{o}}{6}H_{p}^{2}=\frac{\mu_{o}}{6}H_{p}^{2}\tag{S3.8}
+\end{align*}
+Equation S3.8 may be expressed as:
+\begin{align*}%page343 第9个
+e_{\phi}=\frac{(\mu_{o}H_{p})^{2}}{6\mu_{o}}\tag{5.41}
+\end{align*}
+Inserting μ◦Hp=0.5T into Eq. 5.41:
+\begin{align*}%page343 第10个
 e_{\phi}\simeq\frac{(0.5T)^{2}}{(6)(4\pi\times10^{-7}\ \mathrm{H/m})}\simeq33\times10^{3}\ \mathrm{J/m^{3}}
-\end{equation}
+\end{align*}
+
+c) $e_\phi = C_s \Delta T_s；33\times 10^3= 6\times 10^3 \Delta T_s$。我们解得：
+$\Delta T_s$=5.5 K。这足以令超导体进入正常态了。
 
 
 \subsection{问题5.4：导线换位}
+如问题5.2中所讨论的，为了避免磁通跳跃，要求导体直径要小于$2a_c$，对NbTi，该值为$\sim 250\ \mathrm{\mu m}$。NbTi线的典型$J_{c_o}$是$2\times 10^9\ \mathrm{A/m^2}$(4.2 K和5 T)，
+$250\ \mathrm{\mu m}$直径的线的临界电流仅为$\sim 100$ A——如果使用单线，对大多数磁体应用都是不够的。
+1960s末提出了使用多根线制造导体的思想：每一根线足够细以避免产生磁通跳跃，而后附着与常规金属上。
+这种方法当时就造出来高达1000 A临界电流的线。现在已经可以造出50 kA的导体了。
 
+In early (c. 1969) “multifilamentary” conductors, wires were untwisted. Coupling
+between filaments caused the wire as a whole to flux jump, despite each filament
+being small enough to satisfy the size criterion (Eq. 5.40). PROBLEM 5.5 deals
+with such conductors. Results of a study of multifilamentary conductors, analytical
+and experimental, by Wilson and others at the Rutherford Laboratory in the late
+1960s launched a new era of multifilamentary conductors [5.11].
+
+Simply stated, when filaments are embedded in a conductive metal (e.g., copper)
+and subjected to a time-varying magnetic field, the filaments are electrically coupled
+according to Faraday’s law. They then act as a single entity with an effective
+conductor diameter nearly as great as that of the entire conductor. The basic
+premise of the flux jumping criterion for isolated filaments is thus violated in an
+untwisted multifilamentary conductor. In order to eliminate flux jumping in multifilamentary
+conductors, filaments must be decoupled. Twisting of the wires, or
+more ideally transposition of the filaments (or strands of a multi-strand conductor),
+can do the trick of filament decoupling.
+
+Consider a two-dimensional conductor model comprised of two Bean slabs, each
+df wide, separated by a copper slab of width 2w and electrical resistivity ρcu.
+Figure 5.20 shows the conductor as seen looking down the z-axis. Note that unlike
+the one-dimensional Bean slab which extends into infinity in both the y- and zdirections,
+this conductor is$2\ell$long in the y-direction.
 
 \begin{figure}
 	\centering
@@ -984,82 +1131,222 @@ e_{\phi}\simeq\frac{(0.5T)^{2}}{(6)(4\pi\times10^{-7}\ \mathrm{H/m})}\simeq33\ti
 		metal slab sandwiched between two Bean slabs.}
 \end{figure}
 
+Suppose the conductor is subjected to a spatially uniform, time-varying magnetic
+field pointed in the z-direction,$\.{H}_{0z}\vec{i_z}$
 
-
+a) Show that the x-directed electric field within the copper slab, E1x, varies
+with y as given by:
 \begin{equation}%page345 第1个
 E_{1x}=\mu_{o}\dot{H}_{0z}y\qquad(5.42)
 \end{equation}
+Assume the electric field in each superconducting slab to be zero—strictly
+speaking it is not, but compared with that in the copper, it is extremely
+small; hence the approximation of zero$\vec{E}$field is valid. Also assume the field
+to be quasi-static. Under these assumptions, it is apparent that the$\vec{E}$field
+in the copper, as indicated in Eq. 5.42, has only an x component.
+
+b) Show that the net current flowing through the copper (per unit conductor
+depth in the z-direction), Icp [A/m], from one superconducting slab to the
+other superconducting slab, over one half conductor length (from y = 0 to$y=\ell$), is given by:
 \begin{equation}%page345 第2个
 I_{cp}=\int_{0}^{\ell}J_{cu}dy=\frac{\mu_{o}\dot{H}_{0z}}{\rho_{cu}}\int_{0}^{\ell}ydy=\frac{\mu_{o}\dot{H}_{0z}\ell^{2}}{2\rho_{cu}}\quad(5.43)
 \end{equation}
+
+c) At a critical length$\ell_c$, the net current Icp given by Eq. 5.43, becomes equal
+to Jcdf , the slab’s critical current (per unit conductor depth). Show that
+the critical length$\ell_c$is:
 \begin{equation}%page345 第3个
 \ell_{c}=\sqrt{\frac{2\rho_{cu}J_{c}d_{f}}{\mu_{o}\dot{H}_{0z}}}\qquad(5.44)
 \end{equation}
 
+d) Multifilamentary superconductors for 60-Hz power applications must have a
+filament size (df ) that is extremely small, in the range 0.1∼0.5 μm, which
+is even smaller than the wavelength of visible light (∼0.7$\mu m$). This extremely
+small size is required to keep “manageable” the hysteresis energy,
+generated within each filament every time a magnetic field is cycled. (As
+will be discussed in CHAPTER 6, hysteresis loss per cycle of field excitation
+is proportional to filament diameter.)
+
+Compute$\ell_c$for a typical “submicron” superconductor having the following
+parameters:
+% ρm = 30nΩm; Jc = 2GA/m2; df = 0.2 μm; μ◦ ˙H0z = 2 kT/s
+(equivalent to a sinusoidal excitation of 5-T amplitude magnetic induction
+at 60 Hz).$\rho_m$is the electric resistivity of the matrix, which is generally a
+copper-nickel alloy.
+
+e) Compute the number of filaments required for a submicron multifilamentary
+conductor with a filament diameter of 0.2$\mu m$ having a critical current of
+100 A. Use the same values of parameters given in d).
 
 \subsubsection{问题5.4之解}
+a) From Faraday’s law, applied under the quasi-static assumption, we have:
+\begin{align*}%page346 第1个
+\frac{\partial E_{1y}}{\partial x}-\frac{\partial E_{1x}}{\partial y}=-\mu_{o}\dot{H}_{0z}\tag{S4.1}
+\end{align*}
+Because$\vec{E}$is zero in the superconducting slabs, Ey = 0 at x = ±w, forcing E1y = 0
+everywhere in the copper slab. Thus:
+\begin{align*}%page346 第2个
+E_{1x}=\mu_{o}\dot{H}_{0z}y\tag{5.42}
+\end{align*}
 
-\begin{equation}%page346 第1个
-\frac{\partial E_{1y}}{\partial x}-\frac{\partial E_{1x}}{\partial y}=-\mu_{o}\dot{H}_{0z}\qquad(S4.1)
-\end{equation}
-\begin{equation}%page346 第2个
-E_{1x}=\mu_{o}\dot{H}_{0z}y\qquad(5.42)
-\end{equation}
-\begin{equation}%page346 第3个
-I_{cp}=\int_{0}^{\ell}J_{cu}dy=\frac{\mu_{o}\dot{H}_{0z}}{\rho_{cu}}\int_{0}^{\ell}ydy=\frac{\mu_{o}\dot{H}_{0z}\ell^{2}}{2\rho_{cu}}\quad(5.43)
-\end{equation}
-\begin{equation}%page346 第4个
-\ell_{c}=\sqrt{\frac{2\rho_{cu}J_{c}d_{f}}{\mu_{o}\dot{H}_{0z}}}\qquad(5.44)
-\end{equation}
-\begin{equation}%page346 第5个
-N_{f}=\frac{4I_{c}}{\pi d_{f}^{2}J_{c}}=\frac{4(100A)}{\pi(0.2\times10^{-6}m)^{2}(2\times10^{9}A/m^{2})}\\
-=1.6\times10^{6}
-\end{equation}
+b) Once the E field is known, the current density Jcu in the copper slab is given
+by: Jcu = E1x/ρcu. The net current flowing in the copper from one superconducting
+slab to the other over half the conductor length is given by:
+\begin{align*}%page346 第3个
+I_{cp}=\int_{0}^{\ell}J_{cu}dy=\frac{\mu_{o}\dot{H}_{0z}}{\rho_{cu}}\int_{0}^{\ell}ydy=\frac{\mu_{o}\dot{H}_{0z}\ell^{2}}{2\rho_{cu}}\tag{5.43}
+\end{align*}
+
+c) Equating Icp given by Eq. 5.43 with Jcdf and solving for$\ell_c$, we have:
+\begin{align*}%page346 第4个
+\ell_{c}=\sqrt{\frac{2\rho_{cu}J_{c}d_{f}}{\mu_{o}\dot{H}_{0z}}}\tag{5.44}
+\end{align*}
+
+d) Inserting appropriate values into Eq. 5.44, we obtain:
+\begin{align*}%page346 第4个
+\ell_{c}=110\ \mathrm{\mu m}
+\end{align*}
+In typical submicron strands, the twist pitch length is thus ∼100$\mu m$. This means
+that the diameter of such strands, by mechanical requirements, should be ∼1$\mu m$;
+actually a thermal-magnetic stability criterion, similar to the flux jump criterion,
+requires it to be even smaller than 1$\mu m$. This is because the strands, to reduce
+coupling losses, use Cu-Ni alloys as the matrix materials, resulting in a magnetic
+diffusion time constant that is smaller than the thermal diffusion time constant.
+
+e) Critical current (Ic), critical current density (Jc), filament number (Nf ) and
+diameter (df ) in a multifilamentary conductor are related by:
+\begin{align*}%page346 第4个
+I_c=N_f\frac{\pi d_f^2}{4} J_c \tag{S4.2}
+\end{align*}
+Solving for Nf from Eq. S4.2 with appropriate values of parameters, we obtain:
+\begin{align*}%page346 第5个
+N_{f}&=\frac{4I_{c}}{\pi d_{f}^{2}J_{c}}=\frac{4(100A)}{\pi(0.2\times10^{-6}m)^{2}(2\times10^{9}A/m^{2})}\\
+&=1.6\times 10^{6}
+\end{align*}
+In submicron strands, the number of filaments may approach ten million.
+
 
 
 \subsection{问题5.5：导体磁化}
+This problem illustrates the effect of filament size and twisting on magnetization.
+In the late 1960s, three NbTi composite superconductors of equal volume were
+subjected to magnetization measurements [5.12]. Conductors 1, 2, and 3, respectively,
+are: twisted multifilamentary wire with a twist pitch length$\ell_{p1}$; twisted
+multifilamentary wire with a twist pitch length$\ell_{p2}>\ell_{p1}$; and a monofilament.
 
 
+Figure 5.21 presents three magnetization curves, labeled A, B, and C, for the
+three NbTi composite conductors. Each conductor was subjected to field pulses
+indicated by arrows in the figure. Traces A, B, and C do not necessarily correspond
+to Conductors 1, 2, and 3, respectively. Note that Traces B (B1, B2, B3) show a
+dependence on field sweep rate; Trace C is independent of field sweep rate; Trace
+A also is independent of field sweep rate, but shows “partial” flux jumps induced
+by the field pulses.
 
+a) Identify which magnetization trace corresponds to which conductor.
+
+b) Estimate the ratio of filament diameter in the monofilament conductor to
+that in the multifilament conductors.
+
+c) Estimate the value of$\ell_{p2}$. Take Jcdf = 4×104 A/m for Conductors 1 and 2.
+Also comment on$\ell_{p1}$.
 
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.5]{chpt5/figs/fig5.21.eps}
+	\includegraphics[scale=0.4]{chpt5/figs/fig5.21.eps}
 	\caption{导体1,2,3的磁化迹线}
 \end{figure}
 
 
 \subsubsection{问题5.5之解}
+a) Note that Traces A and C are independent of field sweep rate and that the
+corresponding magnetization—an indication of filament diameter—is much greater
+for Trace A than that for Trace C. We therefore conclude that Trace A is for
+Conductor 3 (monofilament) and that Trace C is for Conductor 1 ($\ell_{p1}$). That
+leaves Trace B for Conductor 2 ($\ell_{p2}$). (Remember that each conductor has the
+same volume of NbTi superconductor, and thus its measured magnetization should
+be directly proportional to filament diameter.)
 
-\begin{equation}%page348 第1个
-\ell_{p2}=2\sqrt{\frac{2\rho_{cu}J_{c}d_{f}}{\mu_{o}\dot{H}_{0z}}}
-\end{equation}
+b) The ratio of magnetization width, ($M(H_e\uparrow) − M(H_e\downarrow)$) of Conductor 3
+(monofilament, Trace A) to that of Conductor 1 (Trace C), is roughly 10 for μ◦He
+below ∼1T (10 kilo-oersted). Therefore, we conclude that the filament diameter
+ratio is roughly 10.
 
-
-\begin{equation}%page348 第2个
-\ell_{p2}=2\sqrt{\frac{(2)(2\\times 10^{10}\ \mathrm{\Omega m})(4\times 10^{4}\ \mathrm{A/m})}{0.09\ \mathrm{T/S}}}\\
-=2.7\times 10^{-2}\ \mathrm{m}=27\ \mathrm{mm}
-\end{equation}
-
+c) Because a field sweep-rate of 900 oersted/sec ($\mu_0 \.{H}_{0z}$= 0.09 T/s) makes the
+magnetization of Conductor 2 (Trace B3) nearly equal to that of Conductor 3
+(Trace A), we may conclude that this sweep rate makes Conductor 2’s filament
+twist pitch length$\ell_{p2}$critical. Thus from Eq. 5.44:
+\begin{align*}%page348 第1个
+\ell_{p2}=2\sqrt{\frac{2\rho_{cu}J_{c}d_{f}}{\mu_{o}\dot{H}_{0z}}} \tag{S5.1}
+\end{align*}
+代入$\rho_{cu}= 2\times 10^{−10}\ \mathrm{\Omega m}$%; Jcdf = 4×104 A/m; and μ◦ ˙H0z = 0.09 T/s, we obtain:
+\begin{align*}%page348 第2个
+\ell_{p2}&=2\sqrt{\frac{(2)(2\times 10^{10}\ \mathrm{\Omega m})(4\times 10^{4}\ \mathrm{A/m})}{0.09\ \mathrm{T/S}}}\\
+&=2.7\times 10^{-2}\ \mathrm{m}=27\ \mathrm{mm}
+\end{align*}
+This value is close enough to the actual twist pitch of 10 mm. Because the magnetization
+of Conductor 1 (Trace C) at a sweep rate of 320 oersted/sec is considerably
+smaller than that of Conductor 2 for the same field sweep rate, we conclude that$\ell_{p1}$is significantly shorter than$\ell_{p2}$
 
 \subsection{讨论5.6：换位}
-
-
+An important implication of the condition Icp = Jcdf , used to derive Eq. 5.44
+(PROBLEM 5.4), is that the two superconducting slabs are electrically coupled.
+Were the conductor length substantially shorter than$2\ell_{c}$, on the other hand, the
+two would be decoupled. In reality, these slabs may be decoupled, even if each one
+is much longer than$2\ell_{c}$, if they are alternated in their positions with a pitch length
+less than$2\ell_{c}$. In multifilamentary conductors, we can achieve partial decoupling
+by twisting the wires with a pitch length$\ell_p\ll 2\ell_{c}$;$2\ell_{c}$must be small when$\.{H}_{0z}$is large. Note that in a twisted conductor each filament remains at a fixed radial
+distance from the strand axis. By contrast, in a cable of transposed strands, more
+complete decoupling is possible, because when strands are transposed each strand
+is made to occupy every radial position across the cable diameter as it spirals along
+the cable’s transposition length.
 
 
 \subsection{讨论5.7：HTS中的磁通跳跃？}
-
 \textbf{A. “完全”磁通跳跃的尺度判据}
 
+The conductor size criterion (Eq. 5.40) was originally derived for LTS in the limit
+$\Delta e_\phi/\Delta T=C_s$, where Cs is the superconductor heat capacity per unit volume,
+assumed constant. Because in LTS, the temperature excursion in a complete flux
+jump, i.e., Tc−Top, is small, this size criterion is adequate.
+
+A general condition for suppression of flux jumping, under adiabatic conditions, is
+that the superconductor’s magnetic energy must be less than its thermal density.
+Under adiabatic conditions a flux jump can proceed to completion only if the
+initial magnetic energy density at $T_{op}, e_\phi(T_{op})$, exceeds the thermal energy density
+required to heat the superconductor from Top to Tc:
 \begin{equation}%page349 5.45
 e_{\phi}(T_{op})\geq h_{s}(T_{c})-h_{s}(T_{op})
 \end{equation}
-
-
+where hs(Tc) and hs(Top) are the superconductor enthalpies, respectively, at Tc and
+Top. Because eφ(Top)=[μ◦Hp(Top)]2/6μ◦, and for Bean slab, Hp(Top)=aJc(Top),
+the conductor size criterion, ac, for suppressing complete flux jumping is given by:
 \begin{equation}%page349 第2个
 a_{c}=\sqrt{\frac{6[h_{s}(T_{c})-h_{s}(T_{op})]}{\mu_{o}J_{c}^{2}(T_{op})}}
 \end{equation}
+Comparing these two size criteria (Eqs. 5.40 and 5.46), we may conclude that under
+adiabatic conditions, a flux jump may initiate if the conductor size is greater than
+that specified by Eq. 5.40, but it may be only “partial” if the size does not exceed
+that of Eq. 5.46. Thus, flux jumps will be only partial in a superconductor that
+either violates the size criterion of Eq. 5.40 but not Eq. 5.46, or the process is not
+adiabatic. Note that even those flux jumps seen in Fig. 5.19 are, strictly speaking,
+not complete, most probably because the process was not perfectly adiabatic.
 
 \textbf{B. HTS中的磁通跳跃}
 
+Because Tc is ∼100K in HTS, under adiabatic conditions the energy condition of
+Eq. 5.45 is unlikely to be satisfied. Flux jumping is unlikely in HTS.
 
+For YBCO with Top=77K and Tc=93K (zero field and current), for example, the
+enthalpy difference is$\simeq$20MJ/m3 (60\% of the enthalpy difference for copper—
+from Cp differences of the two materials at 120 K), and with Jc(Top)=1010 A/m2,
+we compute, from Eq. 5.46: ac$\simeq$1mm (∼2mm diameter). Note that a YBCO
+wire of 2-mm diameter will have a “Bean” magnetization, μ◦M=μ◦aJc(Top)∼2T.
+
+Despite our expectation for HTS, flux jumps, not merely partial but also complete,
+have been observed in HTS, for example, in “thin” crystals, 2a=4.2 mm,
+with a y-axis extent of 0.2mm (thus “thin” rather than$\infty$as in a Bean slab) of
+BSCCO-2212 [5.13] and thin (∼100-μm) films of Type II superconductors including
+YBCO[5.14]. Nevertheless, in a real magnet-grade-superconductor, even of
+HTS, because it must satisfy many requirements, including limiting AC losses, the
+requirement that imposes, among other conditions, a severe size restriction, flux
+jumping should be one of the least troubling aspects for HTS magnets.
