@@ -338,12 +338,11 @@ x*=a-ai=a(1-i)
 	\caption{磁场特征，点线表示仅有电流，实现表示有磁场和电流。}
 \end{figure}
 
-Once x∗ is determined, we can compute Hs1(x∗):
+确定了$x*$之后，我们可以计算$H_{s1}(x∗)$：
 \begin{align*}% page325 第1个
 H_{s1}(x*)=H_{e}-H_{p}i-J_{c}a(1-i)=J_{e}-H_{p}
 \end{align*}
-We can now compute the shaded area, which is the sum of two areas, A1 and A2,
-partitioned by the vertical dashed line in Fig. 5.12.
+接下来我们可以计算阴影下的面积，即如图5.12中所示的由竖直线分开的A1和A2两部分之和：
 \begin{align*}% page325 第2个
 A_{1}&=\frac{1}{2}a(1-i)(H_{e}-H_{p}i+H_{e}-H_{p}\\
 &=a(1-i)(H_{e}\frac{1}{2}H_{p}-\frac{1}{2}H_{p}i)\\
@@ -356,7 +355,7 @@ A_{2}&=\frac{1}{2}(2a-a+ai)(H_{e}+H_{p}i+H_{e}-H_{P})\\\notag
 \text{Shaded\quad area}&=A_{1}+A_{2}\\
 &=a(2H_{e}-H_{p}+H_{p}i^{2})
 \end{align*}
-Once the shaded area is known, we have M:
+计算了阴影面积后，我们有$M$：
 \begin{subequations}
 	\begin{align*}
 -M(i)&=H_{e}-\frac{1}{2}(2H_{e}-H_{p}+H_{P}i^{2}\\\notag
@@ -375,8 +374,7 @@ Once the shaded area is known, we have M:
 
 \textbf{C. 磁场和电流交替改变}
 
-Finally, we shall consider Hs(x) and −M(i) for the slab when the following sequence
-of field and transport current is applied.
+最后，我们可以考虑按照以下序列施加磁场和传输电流时的$H_s(x)$和$−M(i)$。
 
 \begin{enumerate}
 	\item 开始
@@ -677,10 +675,9 @@ B_{e}(z)\simeq B_{e}(0)[1-c(\frac{z}{z_{o}})^{2}]\qquad(5.30)
 where z◦ = 75 mm. Based on information you have, compute the value of c.
 
 \subsubsection{问题5.1之解}
-a) Equation 5.13 indicates that search coils need to be balanced; otherwise, a
-term proportional to the applied field contributes to the apparent magnetization.
-Since the −M(H) trace shown in Fig. 5.8 is not tilted, the search coils are balanced.
-From Eq. 5.14b:
+a) 方程5.13表明搜索线圈需要平衡；否则，正比于外施磁场的那一项会对视在磁化作贡献。既然图5.8中给出的$−M(H)$迹线并非上翘，可见搜索线圈已经获得平衡。
+
+由方程5.14b有：
 \begin{align*}%page334 第1个
 V_{bg}(t)=(k-1)\mu_{o}N_{pc}A_{pc}\frac{dM}{dt}\tag{5.14b}
 \end{align*}
@@ -688,9 +685,8 @@ V_{bg}(t)=(k-1)\mu_{o}N_{pc}A_{pc}\frac{dM}{dt}\tag{5.14b}
 \begin{align*}%page334 第2个
 \Delta V_{mz}=-f_{m}\frac{(k-1)\mu_{o}N_{pc}A_{pc}}{\tau_{it}}J_{c}a\tag{5.16c}
 \end{align*}
-We have: k = 0.5; τit = 1s; Npc = 500; Apc = (13)(0.1 m)(2.6×10−3 m) =
-3.38×10−3 m2 [also acceptable is (0.1m)×(38×10−3 m) = 3.8×10−3 m2]; fm =(NbTi
-volume)/total composite volume)= $1/(\gamma_{c/s} + 1)$ = 0.25.
+我们有：$k$ = 0.5; $\tau_{it}$ = 1 s; $N_{pc}$ = 500; $A_{pc}$ = (13)(0.1 m)(2.6$\times 10^{−3}$ m) = 3.38$\times 10^{−3}\ \mathrm{m^2}$ 
+[(0.1 m)$\times$(38$\times 10^{−3}$ m) = 3.8$\times 10^{−3}\ \mathrm{m^2}$也是可以接受的]; $f_m$ =(NbTi体积)/(总体积)= $1/(\gamma_{c/s} + 1)$ = 0.25。
 
 \textbf{$J_c$的估计(4.2 K，2.5 T)}
 
@@ -699,13 +695,12 @@ volume)/total composite volume)= $1/(\gamma_{c/s} + 1)$ = 0.25.
 \begin{align*}%page334 第3个
 2.0\times10^{9}\ \mathrm{A/m^{2}}=\frac{J_{0}B_{0}}{5T+0.3T}\Rightarrow J_{0}B_{0}=10.6\times 10^{9}\ \mathrm{AT/m^{2}}
 \end{align*}
-where for NbTi, B0 ∼ 0.3T. J0 is the zero-field critical current density, which is
-usually difficult to measure. Thus from the Jc value at 5T and B0 = 0.3T, we
-can first solve for J0B0:
+式中，对NbTi，$B_0\sim$ 0.3 T。$J_0$是零场下的临界电流密度——通常是很难测量的。
+于是，由5 T的$J_c$和$B_0$ = 0.3 T，我们首先可以得到$J_0 B_0$：
 \begin{align*}%page334 第4个
 2.0\times 10^{9}\ \mathrm{A/m^{2}}=\frac{J_{0}B_{0}}{5T+0.3T}\Rightarrow J_{0}B_{0}=10.6\times 10^{9}\ \mathrm{A/m^{2}}
 \end{align*}
-Once J0B0 is known, then Jc may be solved at 2.5 T. Thus:
+一旦获得了$J_0 B_0$，可以解出2.5 T时的$J_c$：
 \begin{align*}%page334 第5个
 J_{c}(2.5T)=\frac{10.6\times10^{9}\ \mathrm{AT/m^{2}}}{2.8T}=3.8\times 10^{9}\ \mathrm{A/m^{2}}
 \end{align*}
