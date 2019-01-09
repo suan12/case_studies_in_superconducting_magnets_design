@@ -16,9 +16,22 @@
 \textbf{LTS vs. HTS}
 
 如图1.6给出的，稳定性的实现难度和费用随运行温度提高而降低。在下面的讨论中，我们将比较HTS和LTS的“稳定裕度”，并证明HTS磁体实际上
-是非常稳定的。换句话说，任何HTS磁体都会达到其运行电流，且不会存在“提前失超（premature quench）”.
+是非常稳定的。换句话说，任何HTS磁体都会达到其运行电流，且不会存在``提前失超(premature quench)``。
+这种偶然事件仍经常影响``高性能``(即绝热和高电流密度)LTS磁体。
+这意味着稳定性对于HTS磁体来说，不像在LTS磁体一样，是设计和运行中很严重的问题。
+不过，稳定性仍然是HTS磁体的关键问题[6.1–6.8]。
 
 \section{稳定性理论和标准}
+我们从含温度$T$的单位超导体体积的功率密度方程出发，讨论载有额定电流$I_{op}$的磁体的热稳定性：
+\begin{equation}
+C_{cd}(T)\frac{\partial T}{\partial t}=\nabla ·[k_{cd}(T)\nabla T]+\rho_{cd}(T)J_{cd_o}^2(t)+g_d(t)-(\frac{f_p\ \mathrm{P_D}}{A_{cd}})g_q(T)
+\end{equation}
+式中，等式左侧导体热能密度的时间变化率，其中$C_{cd}(T)$是导体单位体积的热容。
+这个公式是Stekly针对复合超导体，即由超导体和正常金属基底组成的超导体，提出的。
+对于纯稳态稳定性，左侧项必须总为零；实际上，对大多数线圈，甚至对绝热线圈，
+一个在运行温度$T_{op}$附近很小的温度漂移$\Delta T_{op}$都是允许的。
+如前所述，因为HTS磁体允许的$\Delta T_{op}$通常远大于LTS磁体，稳定性对HTS磁体来说，
+几乎不成问题。这一点下面将更详细的阐述。
 
 \subsection{公式6.1涉及的概念}
 每一个概念……
@@ -31,9 +44,7 @@
   \item[不稳定情况] 最后……
 \end{description}
 
-\begin{equation}% page352 第1个
-C_{cd}(T)\frac{\partial T}{\partial t}=\nabla ·[k_{cd}(T)\nabla T]+\rho_{cd}(T)J_{cd_o}^2(t)+g_d(t)-(\frac{f_p\ \mathrm{P_D}}{A_{cd}})g_q(T)
-\end{equation}
+
 \begin{equation}% page357 第1个
 \Delta e_h=\int_{T_{op}}^{T_{cs}(I_{op})}{C_{cd}(T)d(T)}=\int_{T_{op}}^{T_{op}+[\Delta T_{op}(I_{op})]_{st}}{C_{cd}(T)d(T)}
 \end{equation}
