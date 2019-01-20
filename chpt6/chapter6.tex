@@ -698,55 +698,111 @@ d) e)结果总结在表6.5b。
 
 
 \subsection{问题6.4：电流脉冲下的YBCO}
-\begin{equation}% page375 第1个6.27a
-R_m(T)=0.190+1.530(\frac{T-77}{293-77})\ [\ \mathrm{m\Omega}]
-\end{equation}
-\begin{equation}% page375 第1个6.27b
-I_c(T)=100(\frac{93-T}{93-77})[\ \mathrm{A}]
-\end{equation}
-\begin{equation}% page375 第1个6.27C
-V_s(T)=5[\frac{I_s(T)}{I_c(T)}]^{10} [\ \mathrm{\mu V}]
-\end{equation}
+此处，我们考虑一个10 mm宽的YBCO超导带样品，由77 K的沸腾液氮冷却。
+图6.12a给出了导体截面的示意图。导体的一侧由G10带绝缘；另一侧在银层外焊了铜层，总的Cu/Ag层厚度为
+55 $\mu$m；Cu表面与沸腾液氮接触。传输电流$I_t(t)$流过复合导体。
+如图6.12b中的虚线所示，它从100 A开始，快速升高至300 A，保持0.31 s后回到100 A。
+5 cm长的导体上的电压$V_{cd}(t)$如图6.12b中的实线所示。
+
+尽管实际的HTS磁体非常可能绝热运行，但对于$V_s-I_s$关系图等的测量总是将测试样品置于冷却良好的恒温环境
+为佳，对HTS，将之浸泡于液体工质中即可轻松实现。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt6/figs/fig6.12.eps}
+	\caption{(a)10 mm宽的YBCO超导带样品截面图；Cu/Ag面暴露于沸腾液氮；(b)施加过流脉冲后记录的
+		传输电流(虚线)和电压(实线)随时间变化的轨迹。}
+\end{figure}
+对这个YBCO带材，我们可以使用以下依赖于温度的正常金属基底：
+\begin{subequations}
+	\begin{align}
+	R_m(T)&=0.190+1.530(\frac{T-77}{293-77})\ [\ \mathrm{m\Omega}]\\
+	I_c(T)&=100(\frac{93-T}{93-77})[\ \mathrm{A}]\\
+	V_s(T)&=5[\frac{I_s(T)}{I_c(T)}]^{10} [\ \mathrm{\mu V}]
+	\end{align}
+\end{subequations}
+式中，$T$的单位是K。方程6.27a在77-293 K内有效；方程6.27b和6.27c仅在$\sim $77-93 K内有效。
+
+a) 应用图6.12b，在电流脉冲的初始部分($t\simeq$2.54 s和$I_t$=290 A)，此时假设导体仍然为77 K
+是合理的，我们有：$V_{cd}(t=2.54)\simeq$18 mV。为了满足图6.11电路模型要求的电压电流关系，计算：
+1) $I_s$；2)$I_m$；3) $V_{cd}$。
+
+此处计算得到的$V_{cd}$等于测量值18 mV吗？
+
+b) 在本实验测出的$V_{cd},I_s,n$中，最不准确的是$n$。证明，方程6.27c中代入$n=12.24$给出a)中的
+$V_{cd}$=18 mV。
+
+c) 在脉冲期间，$V_{cd}(t)$持续增加，达到峰值40 mV---在脉冲结束前$V_{cd}(t)$的跌落应该是由冷却的突然
+改善造成的。计算当$V_{cd}(t=2.79)=40$ mV时复合导体表面的热流密度$p_{cd}$。
+
+d) 假设Cu-Ag和YBCO层温度相同，计算$V_{cd}(t=2.79)=40$ mV时的温度。$n$取12.24。
 
 
 \subsubsection{问题6.4之解}
+a) 电路必须同时满足电流和电压要求：
+\begin{align*}% page376 第1个S4.1a
+I_t=I_s+I_m \tag{S4.1a}
+\end{align*}
+\begin{align*}% page376 第2个S4.1b
+R_mI_m=V_s(I_s) \tag{S4.1b}
+\end{align*}
+代入合适的值，有：
+\begin{align*}% page376 第3个S4.2a
+I_s=(290\ \mathrm{A})-I_m \tag{S4.2a}
+\end{align*}
+\begin{align*}% page376 第4个S4.2b
+(0.19\times10^{-3}\ \mathrm{\Omega})I_m=(5\times10^{-6}\ \mathrm{V})(\frac{290\ \mathrm {A}-I_m}{100\ \mathrm{A}})^{10} \tag{S4.2b}
+\end{align*}
+由方程S4.2b解$I_m$，我们有：1) $I_m$=70 A。一旦$I_m$已知，$I_s$和$V_{cd}$则容易计算：
+2) $I_s$=220 A； 3)$V_{cd}$=13.3 mV。也即，计算值与测量值18 mV并没有很好的吻合。
 
-\begin{equation}% page376 第1个S4.1a
-I_t=I_s+I_m
-\end{equation}
-\begin{equation}% page376 第2个S4.1b
-R_mI_m=V_s(I_s)
-\end{equation}
-\begin{equation}% page376 第3个S4.2a
-I_s=(290\ \mathrm{A})-I_m
-\end{equation}
-\begin{equation}% page376 第4个S4.2b
-(0.19\times10^{-3}\ \mathrm{\Omega})I_m=(5\times10^{-6}\ \mathrm{V})(\frac{290\ \mathrm {A}-I_m}{100\ \mathrm{A}})^{10}
-\end{equation}
-\begin{equation}% page376 第5个S4.3
-(18\times10^{-3}\ \mathrm{V})=(5\times10^{-6}\ \mathrm{V})(\frac{195.26\ \mathrm{A}}{100\ \mathrm{A}})^n
-\end{equation}
-\begin{equation}% page376 第6个S4.4
-V_{cd}=40\times10^{-3}\ \mathrm{V}=R_m(T)I_m
-\end{equation}
-\begin{equation}% page376 第7个S4.5a
-10\times10^{-3}=[{[0.190+1.530(\frac{T-77}{293-77})]^\times10^{-3}\ \mathrm{\Omega}}]I_m(T)
-\end{equation}
-\begin{equation}% page376 第8个S4 .5b I_m(T)=\frac{40\times10^{-3}\ \mathrm{V}}{[0.190+1.530(\frac{T-77}{293-77})]\times10^{-3}\ \mathrm{\Omega}}I_m(T)
-\end{equation}
-\begin{equation}% page376 第9个S4 .5c
-=\frac{40}{0.190+1.530(\frac{T-77}{293-77})}\ \mathrm{A}
-\end{equation}
-\begin{equation}% page377 第1个S4.6
-40\times10^{-3}\ \mathrm{V}=(5\times10^{-6}V)[\frac{300A-I_m(T)}{I_c(T)}]^{12.24}
-\end{equation}
-\begin{equation}% page377 第2个S4.7
-40\times10^{-3}\ \mathrm{V}=(5\times10^{-6}V)[\frac{300\ \mathrm{A}-\frac{40\ \mathrm{A}}{[0.190+1.530(\frac{T-77}{293-77})]}}{(100\ \mathrm{A})(\frac{93-T}{93-77})}]^{12.24}
-\end{equation}
-\begin{equation}% page377 第3个S4.8
-8000=[\frac{16(406200T-28027799)}{(93-T)(135400T-6793895)}]^{12.24}
-\end{equation}
+b) 在77 K，我们知道$R_m=0.19\ \mathrm{m\Omega}$。所以，使用$R_m I_m$=18 mV解出$I_m$，我们有：
+$I_m$=94.74 A；因此。$I_s$=290 A-94.74 A=195.26 A。将这些值代入6.2c，并将10用未知的$n$代替，有：
+\begin{align*}% page376 第5个S4.3
+(18\times10^{-3}\ \mathrm{V})=(5\times10^{-6}\ \mathrm{V})(\frac{195.26\ \mathrm{A}}{100\ \mathrm{A}})^n \tag{S4.3}
+\end{align*}
+解出$n$，有$n$=12.24。计算值和测量值之间的明显的$\sim 20\%$的误差是正常的，因为$n$是从$V_s$ vs. $I_s$
+测量值中导出的。不过，由于$n$是指数，它很小的误差会给其他参数带来很大的误差。
 
+c) 这段5 cm长复合导体的总耗散功率$P_{cd}$为$P_{cd}=V_{cd}I_t$。
+因此，$P_{cd}=$40 mV$\times$300 A=12 W。
+因为接触制液氮的总基底面积是5 $\mathrm{cm^2}$(边缘面积忽略)，
+我们有热流密度$p_{cd}=2.4\ \mathrm{W/cm^2}$。
+该值小于液氮核态沸腾的峰值热流密度$\sim 10\ \mathrm{W/cm^2}$。
+
+d) 电路要求与a)相同，除了温度不再是77 K。仅已知参数为$V_{cd}=$40 mV。这样，对基底由：
+\begin{align*}% page376 第6个S4.4
+V_{cd}=40\times10^{-3}\ \mathrm{V}=R_m(T)I_m ]\tag{S4.4}
+\end{align*}
+联立S4.4和6.27a，有：
+\begin{align*}% page376 第7个S4.5a
+10\times10^{-3}=[{[0.190+1.530(\frac{T-77}{293-77})]^\times10^{-3}\ \mathrm{\Omega}}]I_m(T) \tag{S4.5a}
+\end{align*}
+\begin{align*}% page376 第8个S4 .5b 
+I_m(T)=\frac{40\times10^{-3}\ \mathrm{V}}{[0.190+1.530(\frac{T-77}{293-77})]\times10^{-3}\ \mathrm{\Omega}}I_m(T) \tag{S4.5b}
+\end{align*}
+\begin{align*}% page376 第9个S4 .5c
+=\frac{40}{0.190+1.530(\frac{T-77}{293-77})}\ \mathrm{A} \tag{S4.5c}
+\end{align*}
+超导侧有同样的$V_{cd}$，于是：
+\begin{align*}% page377 第1个S4.6
+40\times10^{-3}\ \mathrm{V}=(5\times10^{-6}V)[\frac{300A-I_m(T)}{I_c(T)}]^{12.24} \tag{S4.6}
+\end{align*}
+由方程S4.5c和6.27b分别给出的$I_m(T)$和$I_c(T)$，我们有：
+\begin{align*}% page377 第2个S4.7
+40\times10^{-3}\ \mathrm{V}=(5\times10^{-6}V)[\frac{300\ \mathrm{A}-\frac{40\ \mathrm{A}}{[0.190+1.530(\frac{T-77}{293-77})]}}{(100\ \mathrm{A})(\frac{93-T}{93-77})}]^{12.24}\tag{S4.7}
+\end{align*}
+方程S4.7可以化简为：
+\begin{align*}% page377 第3个S4.8
+8000=[\frac{16(406200T-28027799)}{(93-T)(135400T-6793895)}]^{12.24} \tag{S4.8}
+\end{align*}
+解出$T$，有$T$=83.125 K。这等价于超导体表面和77.3 K沸腾液氮之间约6 K的温差；
+对液氮来说，这个温差肯定是位于核态沸腾区域的。图6.13给出了液氮沸点为77.3 K的热流数据。对应6.4的数据点
+在图中以实心圆点标出。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt6/figs/fig6.13.eps}
+	\caption{沸点为77.3 K的液氮的典型热流密度数据。对应c)和d)的数据点在图中以实心点标出。}
+\end{figure}
 
 \subsection{讨论6.6：CICC导体}
 \begin{equation}% page378 第1个6.28a
