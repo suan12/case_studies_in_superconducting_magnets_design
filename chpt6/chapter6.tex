@@ -148,60 +148,141 @@ $I_c(T)$近似是一条直线，连接了$T_{op}$下的临界电流$T_c(T_{op})\
 \begin{equation}% page357 第1个
 \Delta e_h=\int_{T_{op}}^{T_{cs}(I_{op})}{C_{cd}(T)d(T)}=\int_{T_{op}}^{T_{op}+[\Delta T_{op}(I_{op})]_{st}}{C_{cd}(T)d(T)}
 \end{equation}
-注意到，$\Delta e_h$不仅依赖于
-
+注意到，$\Delta e_h$不仅依赖于$C_{cd}(T),T_{op}$和$T_{cs}(I_{op})$或$[\Delta T_{op}(I_{op})]_{st}$，
+还依赖于与$I_{c_o}$有关的$I_{op}$($i_{op}\equiv I_{op}/I_{c_o}$)。
+特别的，对于如图6.2这样的对$I_c(T)$的简单直线近似，$[\Delta T_{op}(I_{op})]_{st}$可由下式给出：
 \begin{equation}% page357 第2个
 [\Delta T_{op}(I_{op})]_{st}=(T_c-T_{op})(1-i_{op})
 \end{equation}
-\begin{equation}% page360 第1个
-A_{cd}=A_{cs}+A_m+A_{\bar{m}}
-\end{equation}
-\begin{equation}% page360 第2个
-A_{wd}=A_{cd}+A_S+A_{in}+A_q
-\end{equation}
-\begin{equation}% page360 第3个
-J_c\equiv\frac{I_c}{A_{sc}}
-\end{equation}
-\begin{equation}% page360 第4个
-J_c\equiv\frac{I_c}{A_{sc}+A_{\bar{m}}}
-\end{equation}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt6/figs/fig6.2.eps}
+	\caption{某第II类超导体的$I_c(T)$直线近似。}
+\end{figure}
+从方程6.3，我们可以得出，对一个绝热磁体，它的电流分享温度必须大于其运行温度($T_{cs}>T_{op}$)，也即
+它的$I_{op}(I_t)$应当在绕组中低于导体的最小$I_{c_o}$。因为$I_{c_o}$与磁场有关，而磁场在绕组中是变化的。
+表6.4列出了几个对LTS和HTS磁体比较典型的$T_{op}$和$\Delta T_{op}$及其对应的$\Delta e_h$。
+
+表6.4.。。。。。
+
+\begin{description}
+	\item[LTS] 对比表6.4中给出的能量裕度与图6.1中给出的扰动能量密度，可以明确看到，LTS磁体非常容易因扰动
+	而失超，失超对应的能量密度由方程6.1中的$g_d(t)$表示。为了应对这个情况，多年来人们一直进行技术开发以
+	抑制这些扰动，如导线运动、磁通跳跃。对多数“直流”LTS绝热磁体，要最小化交流损耗以使其在大部分时间稳定运行。
+	最小化或消除机械扰动(如导线运动)的技术仅对LTS磁体比较重要，第七章简要讨论。
+	\item[HTS] 除了交流损耗，HTS磁体的扰动能量谱如图6.1所示。根据表6.4中的$\Delta e_h$，我们可以得出，HTS
+	磁体至少在DC条件下，是绝对稳定的：于是，每一个DC HTS磁体都应被设计为绝热运行的。
+\end{description}
+
+\subsection{冷却}
+尽管每一个超导磁体的运行都需要冷却，但如第四章论及，仅浸泡式低温稳定磁体需要\emph{在绕组间}用制冷剂冷却。
+这样，方程6.1中的$-g_q(T)$项仅用于表示绕组内的冷却；绕组外的冷却，是每一个超导体都要求的，一般而言是外沿的；
+它不出现于方程6.1中。
+如上文讨论，HTS磁体能够，实际上也总是，绝热运行。此外，除了因耦合LTS磁体而运行于液氦温区的，多数HTS磁体都是
+在$\sim$20 K以上运行。所以，液氦的传热数据对浸泡低温稳定HTS磁体设计不再是非常重要的；甚至液氮的传热数据
+对HTS磁体也不是非常重要的，这是因为绝热运行时，绕组中根本没有液氮。
+
+Bottura总结了氦在不同冷却区间的传热系数$h_q$与$\Delta T$的关系，如图6.3[6.14]；这里的$\Delta T$一般是指
+加热表面和4.2 K氦之间的温差。图中包括：1)核态沸腾和膜态沸腾，包括核态沸腾峰值点$h_{pk}=1.23\ \mathrm{W/cm^2 K}$；
+2)暂态核沸腾；3)1.8 K(超流)和4.2 K下的Kapitza；4)3.5 atm和4.5 K下$10^4$和$10^5$两个雷诺数下的迫流。
+这些图线中，包含峰值点的核态沸腾图是由浸泡式低温稳定磁体得出的；1.8 K的Kapitza图针对的是超流氦冷却的低温稳定磁体；
+迫流图是针对的CICC绕成的低温稳定磁体。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt6/figs/fig6.3.eps}
+	\caption{传热系数$h_q$与$\Delta T$的关系。}
+\end{figure}
+
+\section{电流密度}
+磁体产生的磁场的计算中，一个关键参数是总电流密度$\lambda J$(方程3.108)，它是由总安匝数$NI$除以磁体绕组截面积，
+截面不仅包括载流导体，同时也包括绕组中的非载流部分。图6.4(a)给出了复合导体的截面积组成部分，图6.4(b)定义了整个
+绕组的组成部分。两个图给出的是各部件代表性的常用组分。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt6/figs/fig6.4.eps}
+	\caption{截面积的示意图：(a)复合导体；(b)全绕组。}
+\end{figure}
+\subsection{截面积}
+如图6.4所示，超导体中至少有7个不同的截面积用于定义不同的电流密度：
+图6.4a中对复合导体有$A_{sc},A_m$和$A_{\bar{m}}$；图6.4b中对全绕组有$A_{cd},A_s,A_{in}$和$A_q$。
+$A_{\bar{m}}$，是非基底金属，在NbTi等合金中是0，但在$\mathrm{Nb_3 Sn}$和YBCO等化合物导体中不可忽略。
+注意到，其他材料如绝缘体等占据的截面并未包括到总的超导体截面中来。
+$A_S$通常是金属加强材料占据的截面，$A_{in}$包括绝缘体和有机填充材料如环氧等占据的截面。
+除了下面将讨论的CICC导体，$A_S$和$A_{in}$通常可以统一归为结构部件。
+复合导体和全绕组的总的截面积为：
+\begin{subequations}
+	\begin{align*}
+	A_{cd}&=A_{cs}+A_m+A_{\bar{m}}\\
+	A_{wd}&=A_{cd}+A_S+A_{in}+A_q
+	\end{align*}
+\end{subequations}
+
+\subsection{复合超导体}
+下面将定义并描述复合超导体的三个常用电流密度。
+
+\textbf{超导体临界电流密度}
+
+超导体临界电流密度$J_c$是由超导体在一定温度和磁场下的临界电流$I_c$除以截面$A_{sc}$(对NbTi和YBCO这种$A_{sc}$
+可以明确量化的材料)或者$A_{sc}+A_{\bar(m)}$(对$\mathrm{Nb_3 sN}$这样非基底金属是一个联合部分的材料)得到的：
+\begin{subequations}
+	\begin{align*}
+	J_c&\equiv\frac{I_c}{A_{sc}}\\
+	J_c&\equiv\frac{I_c}{A_{sc}+A_{\bar{m}}}
+	\end{align*}
+\end{subequations}
+在材料发展阶段中(表1.4中的阶段1)，定义为$J_c\equiv I_c/A{sc}$的$J_c$以及$H_{c2}$和$T_c$是描绘超导体性能
+的最合适、最有用的参数。
+
+\textbf{工程(或导体)临界\& 运行电流密度}
+
+工程(或导体)临界\& 运行电流密度$J_e (J_{cd})$考虑了工艺和磁体需求。$A_{\bar{m}}$和$A_m$都是磁体级别超导体
+的关键参数：
 \begin{equation}% page360 第5个
 J_e=J_{cd}\equiv\frac{I_c}{A_{cd}}=\frac{I_c}{A_{sc}+A_m+A_{\bar{m}}}
 \end{equation}
+在CICC导体(讨论6.6)中，结构组分$A_S$和制冷工质组分$A_q$的截面也是导体的组成部分，所以他们也常被包含到$A_{cd}$
+中去。当导体运行于电流$I_{op}$时，我们还可以定义工程(或导体)运行电流密度：$J_{e_o}=J_{cd_o}\equiv I_{op}/A_{cd}$。
+$J_{cd_o}(t)$隐含了$I_{op}(t)$可随时间变化。
+
+\textbf{基底电流密度}
+
+基底电流密度$J_m$对由复合导体绕成的磁体的稳定性和保护是一个非常重要的参数。$J_m$定义为通过基底的电流除以其截面积。
 \begin{equation}% page361 第1个
-J_{m}\equiv\frac{I_m}{A_m}    \        or        \    J_m(t)\equiv\frac{I_m(t)}{A_m}
+J_{m}\equiv\frac{I_m}{A_m}    \ \mbox{or}\    J_m(t)\equiv\frac{I_m(t)}{A_m}
 \end{equation}
-\begin{equation}% page361 第2个
-I_{op}=I_t=I_m+I_s   \   or     \ I_{op}(t)=I_{t}(t)=I_m(t)+I_s(t)
-\end{equation}
-\begin{equation}% page361 第3个
-J_{m_o}\equiv I_{op}   \    or\      J_{m_o}(t)\equiv\frac{I_{op}(t)}{A_m}
-\end{equation}
-\begin{equation}% page361 第4个
-\lambda J\equiv\frac{I}{A_{wd}}
-\end{equation}
-\begin{equation}% page361 第5个
-\lambda J_{op}\equiv\frac{I_op}{A_{wd}}   \  or   \   \lambda J_{op}(t)\equiv\frac{I_{op}(t)}{A_{wd}}
-\end{equation}
-\begin{equation}% page361 第6个
-J_{cic_o}\equiv\frac{I_{op}}{A_{cic}}\ or\  J_{cic_o}\equiv\frac{I_{op}(t)}{A_{cic}}
-\end{equation}
-\begin{equation}% page361 第7个
-A_{cic}\equiv A_{cd}+A_S+A_q
-\end{equation}
-
-
-
-
-\subsection{冷却}
-
-\section{电流密度}
-
-\subsection{横截面积}
-
-\subsection{复合物超导体}
+其中，$I_m$是运行(传输)电流$I_{op}(I_t)$的一部分或全部，而$I_{op}(I_t)$取决于超导体是否超导。
+\begin{align*}% page361 第2个
+I_{op}=I_t=I_m+I_s  \ \mbox{or}\ I_{op}(t)=I_{t}(t)=I_m(t)+I_s(t) \tag{6.7b}
+\end{align*}
+式中，$I_s$是通过超导体的电流。因为最相关的基底电流就是正常运行电流$I_{op}$，所以当$I_s=0$时，
+常用另一个基于$I_{op}$的基底电流密度：
+\begin{align*}% page361 第3个
+J_{m_o}\equiv I_{op}   \ \mbox{or}\  J_{m_o}(t)\equiv\frac{I_{op}(t)}{A_m} \tag{6.7c}
+\end{align*}
 
 \subsection{绕组中的电流密度}
+由第三章的研究以及上面简要的概述，我们知道磁体产生的磁场直接正比于磁体绕组的全电流密度。
+我们可以使用两个电流定义这个电流，一个是表示任意电流的$I$，另一个是表示磁体运行电流的$I_{op}$：
+\begin{subequations}
+	\begin{align*}
+	\lambda J\equiv\frac{I}{A_{wd}}\\
+	\lambda J_{op}\equiv\frac{I_op}{A_{wd}}  \ \mbox{or}\  \lambda J_{op}(t)\equiv\frac{I_{op}(t)}{A_{wd}}
+	\end{align*}
+\end{subequations}
+因为在这里讨论的所有电流密度中，是$\lambda J_{op}$决定了磁体产生的场，所以它对磁体费用的影响最为直接。
+因此，对一个在市场中有竞争力的磁体而言，$\lambda J_{op}$必须尽可能的大，当然也需要考虑具体的磁体的设计、运行需要。
+(第三章中，为了简单起见，$\lambda J_{op}$由$\lambda J$取代了。)
+
+\textbf{CICC导体的电流密度}
+
+CICC导体，用于大型和高场磁体(将在讨论6.6详细描述)。
+因为在CICC中，导体和绕组是耦合的，我们需要特别定义一个导体电流密度$J_{cic_o}$，描述运行电流下的CICC导体：
+\begin{subequations}
+	\begin{align*}
+	J_{cic_o}\equiv\frac{I_{op}}{A_{cic}}\ \mbox{or}\ J_{cic_o}\equiv\frac{I_{op}(t)}{A_{cic}}\\
+	A_{cic}\equiv A_{cd}+A_S+A_q
+	\end{align*}
+\end{subequations}
 
 
 \section{专题}
