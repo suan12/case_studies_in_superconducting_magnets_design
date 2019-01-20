@@ -563,9 +563,10 @@ $T_{cs}=T_{op}$(在$T_{cs}>T_{op}$时，使用6.14式)和$J_{m_o}=I_{op}/A_m$得
 
 图6.9给出了$\hat{q}_j(T)$曲线的一个满足等面积判据的例子。
 本例中，方程6.23通过令图6.9中两个交叉线区域相等而满足。
-物理上看，在温度为$\sim T_c$至$T_{eq}$“较热”区域中“多出”的热被传导至温度为$T_{op}$至$\sim T_{c}}
-$的“较冷”区域；较冷区域提供了“多出”的冷量。
-从图6.9可明显看出，相比Stekly低温稳定性判据，复合超导体的焦耳热耗散线$\hat{g}_j(T\ge T_c)$能更好的满足等面积判据。
+物理上看，在温度为$\sim T_c$至$T_{eq}$“较热”区域中“多出”的热被传导至温度
+为$T_{op}$至$\sim T_{c}$的“较冷”区域；较冷区域提供了“多出”的冷量。
+从图6.9可明显看出，相比Stekly低温稳定性判据，
+复合超导体的焦耳热耗散线$\hat{g}_j(T\ge T_c)$能更好的满足等面积判据。
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.6]{chpt6/figs/fig6.9.eps}
@@ -575,50 +576,125 @@ Wislon将这个1D等面积判据扩展到2D等面积判据[6.16]；
 2D判据已经饼式测试线圈实验验证。
 
 \subsection{讨论6.5：超导体“指数”n}
+超导体的“实际”和“理想”电压-电流特征曲线可由下面的“唯象”关系刻画：
 \begin{equation}% page370 第1个 6.25a
 V_s=V_c(\frac{I_s}{I_c})^n
 \end{equation}
-\begin{equation}% page370 第2个 6.25b
-E_s=E_c(\frac{I_s}{I_c})^n
-\end{equation}
+式中，$V_s$和$I_s$分别是超导体的电压(单位轴向长度)和电流；$I_c$是特定判据电压$V_s$下的临界电流；
+$n$是超导体指数。方程6.25也可由超导体的电场和电流密度表达：
+\begin{align*}% page370 第2个 6.25b
+E_s=E_c(\frac{I_s}{I_c})^n \tag{6.25'}
+\end{align*}
+很明显，$E_c$代表一个特定的临界电场，HTS通常是$1\times 10^{-4}$ V/m，而LTS一般要小1到2个数量级。
 
+一个理想的超导体，即在$I_c$下零点阻对应$n=\infty$。
+在磁体级超导体中，实际且有潜力的如NbTi、$\mathrm{Nb_3 Sn}$、Bi2223、Bi2212和图层YBCO，LTS的
+$n$值通常在$\sim$30至$\sim$80；HTS的在$\sim$10到$\sim$40.
 
+就如开始所述，方程6.25(或6.25')是唯象的。
+它是简单的基于实验V-I数据得到的：$n$是通过在$I_s$附近你和$V_s$和$I_s$数据得到的。
+预测$n$值没有任何理论基础，尽管非均匀细丝直径这样的低质量超导体确是低$n$值的原因[6.17]。
+因为实操中测量低于$\sim 0.8 I_c$下的$V_s$---纳伏或更小---很困难，检验6.25在$\sim 0.8 I_c$下的有效性
+也就很困难[6.18]。HTS的指数问题已有研究[6.19]，结果已用于YBCO线圈的设计[6.20]。
+
+图6.10给出了基于6.25在$n_1=5,n_2=50,n_3=\infty$等3个指数下的$V_s$ vs. $I_s$关系图以及判据电压下的
+临界电流。所以，图6.5的$R_s$ vs. $I_s$图对应理想超导体。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt6/figs/fig6.10.eps}
+	\caption{在$n_1=5,n_2=50,n_3=\infty$等3个指数下的$V_s$ vs. $I_s$关系图以及判据电压下的
+		临界电流。}
+\end{figure}
 
 \subsection{问题6.3：复合物超导体(n)——电路模型}
-\begin{equation}% page371 第1个 6.26a
-R_s=R_c(\frac{I_s}{I_c})^{(n-1)}
-\end{equation}
-\begin{equation}% page371 第2个 6.26b
-R_{dif}=nR_c(\frac{I_s}{I_c})^{(n-1)}
-\end{equation}
+对复合超导体，其超导特性可由6.25描写的，图6.5b的等效模型经修正如图6.11。
+它由一个理想电压源(无内阻)$V_S$串联一个差分电阻($R_{dif}\equiv \partial V_s/\partial I_s$，$V_s$是跨越超导体的电压)而成。如图6.5b一样，基底由电阻$R_m$代表。
+
+a) 证明，在$R_c\equiv V_c/I_c$时，$R_s\equiv V_s/I_s$和$R_{dif}$为：
+\begin{subequations}
+	\begin{align}
+	R_s&=R_c(\frac{I_s}{I_c})^{(n-1)}\\
+	R_{dif}&=nR_c(\frac{I_s}{I_c})^{(n-1)}
+	\end{align}
+\end{subequations}
+可见，$R_{dif}=nR_s$。对于$n=1$的超导体，其V-I曲线类似于常规电阻，有$R_s=R_c=R_{dif}$。
+
+b) 对一条10 cm长、1 cm宽的复合超导体，在77.3 K时$I_c=100$ A，$V_c=10\ \mu$V，$n=15$，
+基底电阻$R_m=0.3\ \mathrm{m\Omega}$。出于简单性，假设复合导体由维持77.3 K的沸腾液氮冷却， 
+计算：1) $I_m$和$I_s$；2)跨越10 cm长复合导体的总电压；3)复合导体内的总焦耳热；4)冷却表面
+为$10\ \mathrm{cm^2}$下的焦耳热密度；5)在传输电流$I_t$为90A、100A、120A、150A、300A和500A
+时的$R_{dif}$。
+
+c) 讨论恒温77.3 K假设，定性讨论如果复合导体的温度随着焦耳热增加而升高，结果如何修正？
+
+d) 令$n=30$，重复b)。
+
+e) 令$n=60$，重复b)。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt6/figs/fig6.11.eps}
+	\caption{具有如6.25式$V_s$ vs. $I_s$特性的复合超导体的等效电路模型，旁路为基底点电阻$R_m$。
+	超导体由理想电压源和差分电阻并联而成。}
+\end{figure}
 
 \subsubsection{问题6.3之解}
+a) 根据$R_s$的定义，并使用6.25中的$V_s$，有：
+\begin{align*}% page372 第1个 S3.1
+R_s=\frac{V_s}{I_s}=\frac{V_c}{I_s}(\frac{I_s}{I_c})^2=\frac{V_c}{I_c}(\frac{I_s}{I_c})^{(n-1)} \tag{S3.1}
+\end{align*}
+代入$R_c=V_c/I_c$，S3.1成为：
+\begin{align*}% page372 第2个 6.26a
+R_s=R_c(\frac{I_s}{I_c})^{(n-1)} \tag{6.26a}
+\end{align*}
+$R_{dif}$表示超导体在$I_s$时的差分电阻，于是：
+\begin{align*}% page372 第3个 S3.2
+R_{dif}=\frac{\partial V_s}{\partial I_s}=\frac{nV_c}{I_c}(\frac{I_s}{I_c})^{(n-1)} \tag{S3.2}
+\end{align*}
+\begin{align*}% page372 第4个 6.26a
+R_{dif}=nR_c(\frac{I_s}{I_c})^{(n-1)} \tag{6.26a}
+\end{align*}
+在S3.2中取偏微分是因为实际情况下$I_c$对温度的依赖必须在$I_s>I_c$区间的分析中予以考虑，该区间复合导体
+会被加热，此处将被加热至77.3 K以上。
 
-\begin{equation}% page372 第1个 S3.1
-R_s=\frac{V_s}{I_s}=\frac{V_c}{I_s}(\frac{I_s}{I_c})^2=\frac{V_c}{I_c}(\frac{I_s}{I_c})^{(n-1)}
-\end{equation}
-\begin{equation}% page372 第2个 6.26a
-R_s=R_c(\frac{I_s}{I_c})^{(n-1)}
-\end{equation}
-\begin{equation}% page372 第3个 S3.2
-R_{dif}=\frac{\partial V_s}{\partial I_s}=\frac{nV_c}{I_c}(\frac{I_s}{I_c})^{(n-1)}
-\end{equation}
-\begin{equation}% page372 第4个 6.26a
-R_{dif}=nR_c(\frac{I_s}{I_c})^{(n-1)}
-\end{equation}
-\begin{equation}% page372 第5个S3.3a
-I_t=I_m+I_s
-\end{equation}
-\begin{equation}% page372 第6个S3.3b
-V_m=R_mI_m=V_s=V_c(\frac{I_s}{I_c})^{n}
-\end{equation}
-\begin{equation}% page372 第6个S3.3c
-3\times 10^{-4}\ \mathrm{\Omega}\times I_m[\ \mathrm{A}]=10^{-5}V(\frac{90\ \mathrm{A}-I_m[\ \mathrm{A}]}{100\ \mathrm{A}})^{15}
-\end{equation}
-\begin{equation}% page372 第7个S3.4
-P_{cd}=R_mI_mI_t=V_sI_t
-\end{equation}
+b) 电路必须满足下面的电流电压方程：
+\begin{align*}% page372 第5个S3.3a
+I_t=I_m+I_s \tag{S3.3a}
+\end{align*}
+\begin{align*}% page372 第6个S3.3b
+V_m=R_mI_m=V_s=V_c(\frac{I_s}{I_c})^{n} \tag{S3.3b}
+\end{align*}
+作为例子，我们计算$I_t=90$ A时的$I_m$。从S3.3a，我们有$I_s=90\ \mathrm{A}-I_m$。
+将之代入S3.3b，有：
+\begin{align*}% page372 第6个S3.3c
+3\times 10^{-4}\ \mathrm{\Omega}\times I_m[\ \mathrm{A}]=10^{-5}V(\frac{90\ \mathrm{A}-I_m[\ \mathrm{A}]}{100\ \mathrm{A}})^{15} \tag{S3.3c}
+\end{align*}
+从S3.3c知，$I_m=$0.00686 A，故$I_s$=89.99314 A。
 
+复合导体中的总热耗散功率$P_D$为：
+\begin{align*}% page372 第7个S3.4
+P_{cd}=R_mI_mI_t=V_sI_t \tag{S3.4}
+\end{align*}
+焦耳热耗散热流$g_{jcd}$简单的由$P_{cd}$除以复合导体的总冷却面积得到。
+
+表6.5a给出了b)的解。
+
+表6.5a......
+
+c) 即使复合导体被沸腾液氮很好的冷却，它的温度必然升高以将焦耳热传至制冷剂。
+这里，液氮沸腾温度为77.3 K，随热流密度增加，导体温升在核态沸腾区域可高达$\sim 10$ K。
+方程6.25a中最明显的温度依赖参数是$I_c$，它随温度增加而降低；LTS和HTS的$n$值对温度的依赖关系少见文献报道，
+我们假定其为常数。在等效电路中，如果是纯金属基底，$R_m$在低温区可视为常数，但在温度超过$\sim 30$ K后
+近似线性随温度增加。$I_c$可以认为随温度$T$线性降低。$(I_s/I_c)^n$项于是随温度(焦耳热)剧烈增加。
+接下来，在问题6.4中，我们将做$I_c,R_m$为温度依赖的电路分析。
+
+d) e)结果总结在表6.5b。
+
+注意到，在$I_t>I_c=100$ A时，$n$值越小，$I_m, R_m I_m=V_s(I_s),P_{cd},g_{jcd},R_{dif}$也越小；
+在$I_t<100$ A时，相反的结论成立。
+这是很实际的问题。例如，在$I_t$=150 A时，对$n=15$的复合导体，$R_mI_m$=2.12 mV；
+而$n=60$的复合导体这个值时11.3 mV：很明显，就检测电阻性电压而言，显然$n=60$的导体要比$n=15$的好。 
+
+表6.5b............
 
 
 \subsection{问题6.4：电流脉冲下的YBCO}
