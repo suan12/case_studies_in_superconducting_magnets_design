@@ -367,10 +367,10 @@ I_{c_o}=I_t\left(\frac{T_c-T_{op} }{T_c-T_{cs}}\right) \tag{S1.2}
 式中，$I_{c_o}\equiv I_c(T_{op})$。联立S1.1和S1.2，有：
 
 \begin{align*}
-	G_j(T)&=R_mI_t^2(\frac{T-T_{cs}}{T_c-T_{cs}}) &(T_{cs}\leq T\leq T_c) \tag{6.13b}
+	G_j(T)=R_mI_t^2(\frac{T-T_{cs}}{T_c-T_{cs}}) (T_{cs}\leq T\leq T_c) \tag{6.13b}
 \end{align*}
 \begin{align*}
-    G_j(T)&=R_mI_t^2 &(T\ge T_c) \tag{6.13c}
+    G_j(T)=R_mI_t^2 (T\ge T_c) \tag{6.13c}
 \end{align*}
 
 
@@ -392,54 +392,103 @@ d) 如果$T_{op}>\sim 30$ K，$R_m$的常数假设就不合理的。也即，对
 方程6.13b和6.13c相应的修正为：
 \begin{subequations}
 	\begin{align}
-	T_{cs}\leq T\leq T_c:\quad G_j(T)&=R_m(T)I_t^2(\frac{T-T_{cs}}{T_c-T_{cs}})
+	T_{cs}\leq T\leq T_c:\quad G_j(T)&=R_m(T)I_t^2(\frac{T-T_{cs}}{T_c-T_{cs}})\\
 	T\ge T_c:\quad G_j(T)&=R_m(T)I_t^2
 	\end{align}
 \end{subequations}
 
 
 \subsection{讨论6.2：Stekly低温稳定性判据}
+在6.2.1节，我们看到所谓的Stekly低温稳定性判据通过浸泡到绕组中去的制冷剂平衡了复合超导体产生的焦耳热。
+这样，方程6.1可以化简为：
 \begin{equation}% page365 第1个 6.15
 C_{cd}(T)\frac {\partial T}{\partial t}=\nabla\cdot[k_{cd}(T)\nabla T]+\rho _{cd}(T)J_{cd}^2(t)+g_d(t)-(\frac{f_p\ \mathrm{P}_D}{A_{cd}})g_q(T)
 \end{equation}
-\begin{equation}% page365 第2个 6.16a
-G_j(T)=R_mI_{c_o}^2（\frac{T-T_{op}}{T_c-T_{op}}) (T_{o_p}\leq T \leq T_c)
-\end{equation}
-\begin{equation}% page365 第2个 6.16b
-\rho_{cd}J^2_{cd}(t)=\frac{\rho_{m}I_{co}^2}{A_{cd}A_m}
-（\frac{T-T_{op}}{T_c-T_{op}}) (T_{o_p}\leq T \leq T_c)
-\end{equation}
+式中，等号左侧、等号右侧第一项、第三项可以忽略。
+式中，$P_D$是从的导体周长；常数$f_D$是置于制冷剂中的$P_D$分数。
+Stekly首先通过选择$I_t=I_{c_o}$(令$I_t$等于超导体在$T_{op}$下的临界电流)发展了他的理论。
+注意到，$I_t$还表示运行电流$I_{op}$，那么选择$I_t=I_{op}=I_{c_o}$使得$T_{cs}=T_{op}$，
+以及6.13b成为：
+\begin{subequations}
+	\begin{align}
+	G_j(T)&=R_mI_{c_o}^2(\frac{T-T_{op}}{T_c-T_{op}}) &(T_{o_p}\leq T \leq T_c)\\
+	\rho_{cd}J^2_{cd}(t)&=\frac{\rho_{m}I_{co}^2}{A_{cd}A_m}
+	(\frac{T-T_{op}}{T_c-T_{op}}) &(T_{o_p}\leq T \leq T_c)
+	\end{align}
+\end{subequations}
+历史上，Stekly选择$I_t=I_{c_o}$发展他的判据不是为了超导磁体的稳定性，而是为了解释
+在V-I测试时超导体测试样品在其电流超过$I_{c_o}$后的分流。
+现在，每一个LTS超导磁体的运行电流都选在小于$I_{c_o}$。对于HTS磁体，稳定性不是重要的设计问题；
+但是类似LTS测试样品，HTS测试样品也存在稳定性问题。
+V-I特性相关的稳定性问题将在问题6.5中研究。
+
+Stekly的冷却选择是温度线性的：
 \begin{equation}% page365 第3个 6.17
 g_q(T)=h_q(T-T_b)\simeq h_q(T-T_{op})
 \end{equation}
-\begin{equation}% page365 第4个 6.18
+式中，$T$是导体的表面问题。$T_b$是冷池(制冷剂)的问题，假定其等于$T_{op}:T_b\simeq T_{op}$。
+
+根据6.15，Stekly低温稳定性判据要求$(f_p P_D/A_{cd})g_q(T)\ge \rho_{cd}(T)J_{cd}^2(t)$。
+根据6.16b和6.17，我们有：
+\begin{equation*}% page365 第4个 6.18
 \frac{f_pP_Dh_q(T-T_{op}}{A_cd}\geq \frac{\rho_m I_{co}^2}{A_{cd}A_m}(\frac{T-T_{op}}{T_c-T_{op}})
-\end{equation}
+\end{equation*}
 \begin{equation}% page365 第4个 6.18
 \frac{\rho_m I_{co}^2}{f_pP_DA_mh_q(T_c-T_{op})}\leq 1
 \end{equation}
+Stekly稳定性参数$\alpha_{sk}$由6.18给出：
 \begin{equation}% page365 第5个 6.19
 \alpha_{sk}=\frac{\rho_m I_{co}^2}{f_pP_DA_mh_q(T_c-T_{op})}
 \end{equation}
+注意到，无量纲参数$\alpha_{sk}$表示的是焦耳耗散密度和冷却功率的比值。于是，当$\alpha_{sk}\le 1$
+时(冷量足够)，运行时稳定的；当$\alpha_{sk}> 1$时(冷量不够)不稳定。
+
+根据Stekly稳定性判据，1960年代和1970年代建造和可靠运行的多数大型磁体都是低温稳定的。
+方程6.19表明$\alpha_{sk}\propto 1/A_m$，即对给定的冷却条件，稳定性或可靠性与$A_m$有直接关系。反过来：
 \begin{equation}% page366 第1个 6.20
 A_m=\frac {\rho_mI_{co}^2}{\alpha_{sk}f_pP_Dh_q(T_c-T_{op})}
 \end{equation}
-\begin{equation}% page366 第2个 6.6
-J_{op}=\frac{I_{op}}{A_{sc}+A_ {\bar{m}}+A_m}
-\end{equation}
+为了在给定冷却条件下实现更大程度的稳定性，在浸泡冷却的低温稳定磁体中，增加$A_m$十分必要。
+复合超导体在运行电流下的电流密度$J_{op}$为：
+\begin{align*}% page366 第2个 6.6
+J_{op}=\frac{I_{op}}{A_{sc}+A_ {\bar{m}}+A_m}\tag{6.6}
+\end{align*}
 \begin{equation}% page366 第2个 6.21a
 =(\frac{\gamma_{m/s}}{\gamma_{m/s}+1})J_{m_0}
 \end{equation}
-\begin{equation}% page366 第3个 6.21b
+式中的面积比$\gamma_{m/s}$定义为：
+\begin{align*}% page366 第3个 6.21b
 \gamma_{m/s}\equiv \frac{A_m}{A_{sc}+A_m}
-\end{equation}
+\end{align*}
+在NbTi中，$\gamma_{m/s}$被称为基底-超导体比率，在$\mathrm{Nb_3Sn}$中称为基底-非基底比率。
+显然，当$\gamma_{m/s}\gg 1$时，有$J_{op}\simeq J_m$。
 
+很明显，在这些早期的大型磁体中，稳定性无疑是优先于效率考虑的。这种哲学一直持续到今天，
+特别大型磁体。而大型磁体中，还有另一个可能比稳定性更重要的问题需要考虑：电磁力。
+大型低温稳定LTS磁体要求的加强组件$A_S$在限制绕组的总电流密度上，比基底金属$A_m$更重要。
 
+表6.5列出了两个低温稳定LTS磁体(一个是1960年代末期的NbTi磁体，一个是近期的CIC $\mathrm{Nb_3Sn}$磁体)的电流参数---$I_c,I_{op},\gamma_{m/s},J_c(=I_c/A_{sc}),J_e(=I_c/A_{cd}),
+J_{m_o}(=I_{op}/A_m),\lambda J_{op}(=I_{op}/A_{wd})$[6.12,3.24]。
+相比于NbTi磁体，$\mathrm{Nb_3Sn}$磁体的$\gamma_{m/s}$更小，这意味着它的$\lambda J_{op}$更好。
+这个性能的提高部分是由于近四十年来随着建造实际磁体而逐步深入的对稳定性和保护问题的理解，
+部分来自降低这种仅用于研究的个性化磁体的费用的压力。
 
+表6.5.。。。。。。。。。
 
 \subsection{讨论6.3：复合物超导体}
+可用的磁体级超导体通常有两类，一类是“Monolithic”(单体)，一类是“built-up”(组合)。
 
+\textbf{A. Monolith}
 
+超导体和正常金属通过简单合金工艺形成一个实体。视觉上看，除了在导体截面上，不能分辨出一个一个单体上存在
+多与一种组分。多数圆线复合导体都是单体的。尽管$\gamma_{m/s}$值大于10，但在合金过程中不折断
+细丝而生成单体超导体很难，特别是那些细丝直径小于100 $\mu$m的尤其难。
+
+\textbf{B. Build-up}
+
+组合的超导体由$\gamma_{m/s}$接近1的单体超导体和正常金属稳定部分组成，金属稳定部分通常是焊在
+处理后的单体上的。稳定部分的机械性能因而不受到单体处理过程的影响，从而能更容易满足导体规格要求。
+CIC导体是一种组合导体变种。
 
 \subsection{问题6.2：低温稳定性——非线性冷却曲线}
 \begin{equation}% page367 第1个 6.22
