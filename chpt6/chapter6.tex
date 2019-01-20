@@ -265,8 +265,8 @@ J_{m_o}\equiv I_{op}   \ \mbox{or}\  J_{m_o}(t)\equiv\frac{I_{op}(t)}{A_m} \tag{
 我们可以使用两个电流定义这个电流，一个是表示任意电流的$I$，另一个是表示磁体运行电流的$I_{op}$：
 \begin{subequations}
 	\begin{align}
-	\lambda J\equiv\frac{I}{A_{wd}}\\
-	\lambda J_{op}\equiv\frac{I_op}{A_{wd}}  \ \mbox{or}\  \lambda J_{op}(t)\equiv\frac{I_{op}(t)}{A_{wd}}
+	\lambda J&\equiv\frac{I}{A_{wd}}\\
+	\lambda J_{op}\equiv\frac{I_op}{A_{wd}}&  \ \mbox{or}\  \lambda J_{op}(t)\equiv\frac{I_{op}(t)}{A_{wd}}
 	\end{align}
 \end{subequations}
 因为在这里讨论的所有电流密度中，是$\lambda J_{op}$决定了磁体产生的场，所以它对磁体费用的影响最为直接。
@@ -287,63 +287,113 @@ CICC导体，用于大型和高场磁体(将在讨论6.6详细描述)。
 
 \section{专题}
 \subsection{讨论6.1：低温稳定性——电路模型}
+此处我们讨论低温稳定性的理论。我们采用电路模型来研究由超导体嵌入铜基底而组成的复合导体的行为。
 
+图6.5a给出了超导体的理想$R_s$和$I$关系图，其中，$R_s$是超导体的电阻---这个图可用于多数LTS，
+而对多数HTS不适用。此处所谓的理想，是指在$I_s<I_c$时，$R_s=0$，其中$I_c$是超导体的临界电流。
+在$I_s>I_c$时，$R_s=R_n$，其中，$R_n$是超导体在正常态的电阻；在$I_s=I_c$时，$0\le R_s\le 	R_n$，
+也即它满足电路条件。图6.5b给出了在温度$T$下载有传输电流$I_t$的复合超导体的电路模型。
+$I_s$是通过超导体的电流，$R_m$是基底金属的电阻；一般有$R_m\ll R_n$。
 
-\begin{equation}% page362 第1个 6.10a
-V_{cd}=R_mI_m\simeq R_m{(I_t-Ic)}
-\end{equation}
-\begin{equation}% page362 第2个 6.10b
-G_{j}=V_{cd}I_t
-\end{equation}
+\textbf{$I_t\le I_c$区}\quad 此时，超导体载有全部传输电流，$I_s=I_t\le I_c$。由图6.5a有$R_s=0$，
+由图6.5b有$V_{cd}=0$，其中$V_{cd}$是复合导体上的电压。总焦耳热耗散$G_j$为零。
+
+\textbf{$I_t>I_c$区}\quad 当$I_t>I_c$，由于$R_m\ll R_n$，超过$I_c$的电流几乎都将流过铜基底。
+也即。$I_m\simeq I_t-I_c$以及$I_s\simeq I_c$。其中，$I_m$是通过基底的电流。于是：
+\begin{subequations}
+	\begin{align}
+	V_{cd}&=R_mI_m\simeq R_m{(I_t-Ic)}\\
+	G_{j}&=V_{cd}I_t
+	\end{align}
+\end{subequations}
+联立上面两个方程，有：
 \begin{equation}% page362 第3个 6.11
 {(G_j)}\simeq R_{m}I_{t}{（I_t-I_c)}
 \end{equation}
-
-
+注意，$G_j$与温度无关，和$R_m，I_c$一样。因为基底金属(如铜)的电阻在4-30 K范围内几乎与温度无关，
+$R_m$在LTS的稳定性分析时，总是假定为常数。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt6/figs/fig6.5.eps}
+	\caption{(a)超导细丝$R_s$和$I$关系图；(b)复合超导体的电路模型。}
+\end{figure}
 
 \subsection{问题6.1：低温稳定性——温度依赖}
+下面我们考察复合导体单位长度总焦耳热耗散$G_j$对温度的依赖关系(讨论6.1中的方程6.11)。
+图6.6(与图6.2相同)给出了$I_c$与$T$的关系，该关系常用于近似超导体在恒定磁场下的$I_c(T)$
+(方程5.38给出了临界电流密度的相同的线性近似)。
+注意到$I_c(T_{op})=I_{c_o},\ I_c(T_c)=0$。当温度变化时，通过复合导体的净传输电流$I_t$仍保持不变。
+电流分享温度$T_{cs}$如图，有$I_t=I_c(T_{cs})$给出。
+
+a) 超导体的$I_c(T)$由下式近似：
 \begin{equation}% page363 第1个 6.12
 I_c(T)=I_{c_o}(\frac{T_c-T}{T_c-T_{o_p}}) (T_{o_p}\leq T \leq T_c)
 \end{equation}
-\begin{equation}% page363 第2个 6.13a
-G_j(T)=0 (T_{o_p}\leq T \leq T_{cs})
-\end{equation}
-\begin{equation}% page363 第3个 6.13b
-G_j(T)=R_mI_t^2(\frac{T-T_{cs}}{T_c-T_{cs}})(T_{cs}\leq T\leq T_c)
-\end{equation}
-\begin{equation}% page363 第4个 6.13c
-G_j(T)=R_mI_t^2 (T\ge T_c)
-\end{equation}
+证明，$G_j$有如下的温度依赖关系：
+\begin{subequations}
+	\begin{align}
+	G_j(T)&=0 &(T_{o_p}\leq T \leq T_{cs})\\
+	G_j(T)&=R_mI_t^2(\frac{T-T_{cs}}{T_c-T_{cs}})&(T_{cs}\leq T\leq T_c)\\
+	G_j(T)&=R_mI_t^2 &(T\ge T_c)
+	\end{align}
+\end{subequations}
+假定$R_m$与温度无关。
+
+b) 画出从$T_{op}$到$T>T_c$温度范围的方程6.13的关系图。
+
+c) 给出方程6.13b给出的$G_j$的物理解释。
+
+d) 定量的讨论方程6.13b如何在30 K以上修正。30 K之上，$R_m$将依赖于温度，成为$R_m(T)$，这是复合HTS的情况。
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt6/figs/fig6.6.eps}
+	\caption{超导体的$I_c(T)$线性近似。}
+\end{figure}
 
 \subsubsection{问题6.1之解}
-\begin{equation}% page364 第1个 6.13a
-G_j(T)=0 (T_{o_p}\leq T \leq T_{cs})
-\end{equation}
-\begin{equation}% page364 第2个 S1.1
-G_j(T)=R_mI_t[I_t-I_{co}(\frac{T_c-T}{T_c-T_{o_p}})] (T_{cs}\leq T\leq T_c)
-\end{equation}
+a) 因为$T_{op}\le T\le T_{cs}$时，有$I_c(T)>I_t$(图6.6)，我们有：
+\begin{align*}
+G_j(T)=0 \quad (T_{o_p}\leq T \leq T_{cs}) \tag{6.13a}
+\end{align*}
+将6.12给出的$I_c(T)$代入6.11给出的$G_j$中，有
+\begin{align*}
+G_j(T)&=R_m I_t[I_t-I_{c_o} \left(\frac{T_c-T}{T_c-T_{op}}\right)]\quad (T_{cs}\leq T\leq T_c) \tag{S1.1}
+\end{align*}
+令$I_t=I_c(T_{cs})$，并将之代入6.12，有：
+\begin{align*}% page364 第3个 S1.2
+I_{c_o}=I_t\left(\frac{T_c-T_{op} }{T_c-T_{cs}}\right) \tag{S1.2}
+\end{align*}
+式中，$I_{c_o}\equiv I_c(T_{op})$。联立S1.1和S1.2，有：
+\begin{subequations}
+	\begin{align*}
+	G_j(T)&=R_mI_t^2(\frac{T-T_{cs}}{T_c-T_{cs}}) &(T_{cs}\leq T\leq T_c)\\ \tag{6.13b}
+    G_j(T)&=R_mI_t^2 &(T\ge T_c) \tag{6.13c}
+	\end{align*}
+\end{subequations}
 
-\begin{equation}% page364 第3个 S1.2
-I_{c_o}=I_t(\frac{T_c-T_{op} }{T_c-T_{cs}})
-\end{equation}
-\begin{equation}% page364 第4个 6.13b
-G_j(T)=R_mI_t^2(\frac{T-T_{cs}}{T_c-T_{cs}}) (T_{cs}\leq T\leq T_c)
-\end{equation}
-\begin{equation}% page364 第5个 6.13c
-G_j(T)=R_mI_t^2 (T\ge T_c)
-\end{equation}
-\begin{equation}% page364 第6个 6.14a
-T_{cs}\leq T\leq T_c:
-\end{equation}
-\begin{equation}% page364 第6个 6.14a
-G_j(T)=R_m(T)I_t^2（\frac{T-T_{cs}}{T_c-T_{cs}})
-\end{equation}
-\begin{equation}% page364 第7个 6.14b
-T\ge T_c:
-\end{equation}
-\begin{equation}% page364 第7个 6.14b
-G_j(T)=R_m(T)I_t^2
-\end{equation}
+b) 如图6.7。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt6/figs/fig6.7.eps}
+	\caption{复合导体的$G_j(T)$图，其中$R_m$为常数。}
+\end{figure}
+
+c) 明显，只要$I_t<I_c(T)$，所有的传输电流都只通过超导体，$V_{cd}=0$，故$G_j(T)=0$。
+在电流分享温度$T_{cs}$下，当$I_t=I_c$时，超导体载有其为超导态下的最大可能电流；在$T_{cs}$之上，
+电流开始向铜基底分流，在复合导体内产生焦耳热。
+随着$T$升高，这个分流持续增加，直到达到$T_c$，在这个点几乎全部传输电流都被转移至基底中，
+当然其假设是$R_m\ll R_n$，而它通常是合理的。因为$R_m$是常数，所以$G_j$在温度$T_{cs}$和$T_c$
+之间随$T$的变化时线性的。$R_m$是常数这个假设对多数基底金属(如铜)在$T_{op}$小于30 K时都是有效的。
+
+d) 如果$T_{op}>\sim 30$ K，$R_m$的常数假设就不合理的。也即，对多数HTS，应将其做温度依赖看待。
+方程6.13b和6.13c相应的修正为：
+\begin{subequations}
+	\begin{align}
+	T_{cs}\leq T\leq T_c:\quad G_j(T)&=R_m(T)I_t^2(\frac{T-T_{cs}}{T_c-T_{cs}})
+	T\ge T_c:\quad G_j(T)&=R_m(T)I_t^2
+	\end{align}
+\end{subequations}
 
 
 \subsection{讨论6.2：Stekly低温稳定性判据}
