@@ -343,7 +343,7 @@ b) 画出从$T_{op}$到$T>T_c$温度范围的方程6.13的关系图。
 
 c) 给出方程6.13b给出的$G_j$的物理解释。
 
-d) 定量的讨论方程6.13b如何在30 K以上修正。30 K之上，$R_m$将依赖于温度，成为$R_m(T)$，这是复合HTS的情况。
+d) 定性的讨论方程6.13b如何在30 K以上修正。30 K之上，$R_m$将依赖于温度，成为$R_m(T)$，这是复合HTS的情况。
 
 \begin{figure}[htbp]
 	\centering
@@ -491,31 +491,56 @@ J_{m_o}(=I_{op}/A_m),\lambda J_{op}(=I_{op}/A_{wd})$[6.12,3.24]。
 CIC导体是一种组合导体变种。
 
 \subsection{问题6.2：低温稳定性——非线性冷却曲线}
+讨论6.2推出的参数$\alpha_{sk}$是基于与温度无关的传热系数$h_q$的。
+实际中，冷却曲线，甚至低温稳定磁体通畅运行的核态沸腾传热区域都是非线性很严重的，一个例子如图4.1所示。
+于是，直接从低温稳定性判据导出热流曲线$q(T)[\mathrm{W/cm^2\ or\ W/m^2}] $。
+
+a) 证明$I_{op}$下的基底电流密度$[J_{m_o}]_{sk}$满足Stekly低温稳定性判据的一个变体，
+该变体结合了热流密度曲线$q(T)$：
 \begin{equation}% page367 第1个 6.22
 [J_{m_o}]_{sk}=\sqrt{\frac{f_pP_Dq_{fm}}{\rho_mA_m}}
 \end{equation}
+式中，$q_{fm}$是膜态沸腾区域的最小热流密度。
+
+b) 在$I_{op}=I_{c_o}$时，在同一个图中定性画出$q(T)$曲线和尺度一致的产热曲线，并在图中指出稳定运行的区域。
+其中，$I_{c_o}$是超导体在$T_{op}$时的$I_c$。
+
+c) 在b)的同一个图上推广b)到$I_{op}<I_{c_o}$的情况。证明，在这个条件下，电流分享温区的
+$g_j(T_c)$和$d\hat{g}_j(T)/dT$小于$I_{op}=I_{c_o}$条件下的。
 
 \subsubsection{问题6.2之解}
-\begin{equation}% page368 第1个 S2.1
-\frac {\rho_mI_{co}^2}{A_m}=f_pP_Dq_{fm}
-\end{equation}
-\begin{equation}% page368 第2个 6.22
-[J_{m_o}]_{sk}=\sqrt{\frac{f_pP_Dq_{fm}}{\rho_mA_m}}
-\end{equation}
-\begin{equation}% page368 第3个 s1.2
-I_{c_o}=I_t(\frac{T_c-T_{op} }{T_c-T_{cs}})
-\end{equation}
+a) 在应用低温稳定性的多数应用中，我们必须假定超导体可能运行在完全正常态。然后，选择膜态沸腾区域的最小热流
+是最安全的。于是：
+\begin{align*}% page368 第1个 S2.1
+\frac {\rho_mI_{co}^2}{A_m}=f_pP_Dq_{fm} \tag{S2.1}
+\end{align*}
+解出$[J_{m_o}]_{sk}$，得到：
+\begin{align*}% page368 第2个 6.22
+[J_{m_o}]_{sk}=\sqrt{\frac{f_pP_Dq_{fm}}{\rho_mA_m}} \tag{6.22}
+\end{align*}
 
-\begin{equation}% page368 第4个
-g_j(T)=(\frac{A_{cd}}{f_pP_D})R_mI_t^2=(\frac{A_{cd}}{f_pP_D})R_mI_{co}^2\frac{(T_c-T_{cs})^2(T-T_{cs})}{(T_c-T_{op})^3}
-\end{equation}
-\begin{equation}% page368 第5个
-\frac{dg_j(T)}{dT}=(\frac{A_{cd}}{f_pP_D})R_mI_{co}^2\frac{(T_c-T_{cs})^2}{(T_c-T_{op})^3}
-\end{equation}
+b) 图6.8给出了液氦$q(T)$的典型曲线。图中同时还画出了$\hat{g}_j(T)\equiv (A_{cd}/f_p P_D)g_j(T)$曲线。
+通过选择合适的参数，$\hat{g}_j(T)\equiv (A_{cd}/f_p P_D)g_j(T)$略小于$q_{fm}$。
+
+c) 图6.8中的虚线表示$I_t<I_{c_o}$的情况。在温区$T_{op}\le T\le T_{cs}$，导体是全超导的。
+因为$G_j(T_{op})=R_m I_t^2$，很明显，它在$I_t<I_{c_o}$时更小。根据问题6.2的S1.2：
+\begin{align*}% page368 第3个 s1.2
+I_{c_o}=I_t(\frac{T_c-T_{op} }{T_c-T_{cs}}) \tag{S1.2}
+\end{align*}
+联立S1.2和6.13b，有：
+\begin{align*}% page368 第4个
+g_j(T)&=(\frac{A_{cd}}{f_pP_D})R_mI_t^2=(\frac{A_{cd}}{f_pP_D})R_mI_{co}^2\frac{(T_c-T_{cs})^2(T-T_{cs})}{(T_c-T_{op})^3}\\
+\frac{dg_j(T)}{dT}&=(\frac{A_{cd}}{f_pP_D})R_mI_{co}^2\frac{(T_c-T_{cs})^2}{(T_c-T_{op})^3}
+\end{align*}
+这样，$G_j(T_{op})$在$I_t=I_{c_o}(T_{cs}=T_{op})$时就要大于$I_t<I_{c_o}(T_{cs}>T_{op})$对应的值了。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt6/figs/fig6.8.eps}
+	\caption{液氦$q(T)$的定性图，以及$I_{op}=I_{c_o}$(实线)和$I_{op}<I_{c_o}$(虚线)$两种情况下的$$\hat{g}_j(T)$图。}
+\end{figure}
 
 
-
-\subsection{讨论6.4：等效面积判据}
+\subsection{讨论6.4：“等面积”判据}
 \begin{equation}% page369 第1个 6.23
 \int_{T_{op}}^{T_{eq}}[g_q(T)-(\frac{A_{cd}}{f_pP_D})g_j(T)]d(T)
 =\int_{T_{op}}^{T_{eq}}[g_q(T)-\hat{g}_j(T)]dT=0
