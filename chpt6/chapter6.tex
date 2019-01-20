@@ -541,17 +541,38 @@ g_j(T)&=(\frac{A_{cd}}{f_pP_D})R_mI_t^2=(\frac{A_{cd}}{f_pP_D})R_mI_{co}^2\frac{
 
 
 \subsection{讨论6.4：“等面积”判据}
+Maddock、James和Norris的等面积判据[6.15]是低温稳定性判据的一个变体，保留了方程6.1中的热传导项。
+于是，等面积判据仅在焦耳热耗散不再整个绕组内全局扩散的条件下成立。
+在Stekly低温稳定性判据中，焦耳热耗散是局域的，且完全被冷却项$g_q(T)$平衡掉；在等面积判据中，
+导体轴向的热传导起到移除当地焦耳热的辅助作用。
+因为判据应用于浸泡低温冷却磁体，它主要用于液氦冷却的LTS磁体。
+等面积判据要求满足下面的条件：
 \begin{equation}% page369 第1个 6.23
 \int_{T_{op}}^{T_{eq}}[g_q(T)-(\frac{A_{cd}}{f_pP_D})g_j(T)]d(T)
 =\int_{T_{op}}^{T_{eq}}[g_q(T)-\hat{g}_j(T)]dT=0
 \end{equation}
-\begin{equation}% page369 第2个 6.24a
-g_j(T)=\rho_m(T)J_{m_o}^2(\frac{T-T_{op}}{T_c-T_{op}}) (T_{op}\leq T \leq T_c)
-\end{equation}
-\begin{equation}% page369 第3个 6.24b
-g_j(T)=\rho_m(T)J_{m_o}^2 (T \geq T_c)
-\end{equation}
+式中，$T_{eq}$是高于$T_{op}$的温度，在该温度下有$g_q(T)=\hat{q}_j(T)$。
+$g_q(T)$是对流热流；$g_i(T)$是焦耳热耗散密度，可由方程6.13的$G_j$经代入
+$T_{cs}=T_{op}$(在$T_{cs}>T_{op}$时，使用6.14式)和$J_{m_o}=I_{op}/A_m$得到：
+\begin{subequations}
+	\begin{align}
+	g_j(T)&=\rho_m(T)J_{m_o}^2(\frac{T-T_{op}}{T_c-T_{op}}) &(T_{op}\leq T \leq T_c)\\
+	g_j(T)&=\rho_m(T)J_{m_o}^2 &(T \geq T_c)
+	\end{align}
+\end{subequations}
 
+图6.9给出了$\hat{q}_j(T)$曲线的一个满足等面积判据的例子。
+本例中，方程6.23通过令图6.9中两个交叉线区域相等而满足。
+物理上看，在温度为$\sim T_c$至$T_{eq}$“较热”区域中“多出”的热被传导至温度为$T_{op}$至$\sim T_{c}}
+$的“较冷”区域；较冷区域提供了“多出”的冷量。
+从图6.9可明显看出，相比Stekly低温稳定性判据，复合超导体的焦耳热耗散线$\hat{g}_j(T\ge T_c)$能更好的满足等面积判据。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt6/figs/fig6.9.eps}
+	\caption{满足等面积判据的$\hat{q}_j(T)$曲线例子。}
+\end{figure}
+Wislon将这个1D等面积判据扩展到2D等面积判据[6.16]；
+2D判据已经饼式测试线圈实验验证。
 
 \subsection{讨论6.5：超导体“指数”n}
 \begin{equation}% page370 第1个 6.25a
