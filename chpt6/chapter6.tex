@@ -1046,7 +1046,7 @@ NbTi线圈由32个双饼线圈组成，总绕组高度640 mm。
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.7]{chpt6/figs/fig6.17.eps}
+	\includegraphics[scale=0.6]{chpt6/figs/fig6.17.eps}
 	\caption{Winding details for the NbTi pancakes..}
 \end{figure}
 NbTi线圈(和$\mathrm{Nb_3 Sn}$线圈)设计为浸泡于1 atm和过冷1.8 K的超流液氦池中。
@@ -1098,7 +1098,7 @@ $\hat{g}_j(T)$在1.8 K$\le$T$\le T_{cs}$(3.7 K)区间为零，从$T_{cs}$开始�
 图6.19给出了$\hat{g}_j(T)$和$q(T)$的关系图。从图中，清晰地可以看到饼式线圈几乎是低温稳定的；它当然的满足等面积判据。
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.7]{chpt6/figs/fig6.19.eps}
+	\includegraphics[scale=0.6]{chpt6/figs/fig6.19.eps}
 	\caption{$\hat{g}_j(T)$(实线)和$q(T)$(点线)；问题c)对应的$\hat{g}_j(T)$(虚线)。}
 \end{figure}
 
@@ -1162,70 +1162,120 @@ R_{mz}=\sqrt{\frac{3k_{wd}(T_c-T_{op})}{\rho_mJ_m^2}}
 机械事件产生的扰动能量几乎不可能让HTS磁体突破其临界温度。
 
 \subsection{问题6.7：绝热绕组中的耗散能密度}
-
+考虑一个无限长螺管线圈，内径$2a_1$，外径$2a_2$。
+该磁体由制冷机冷却，在磁体周边(即内外径处)维持运行温度$T_{op}$，在绕组内部有一个均匀分布的耗散。
+这个模型近似的是环氧浸渍绕组内的交流损耗被制冷机冷却的磁体。
+在稳态条件下，绕组温度$T(r)$与时间无关，导体完全超导，即无焦耳损耗。应用于热各向同性绕组的功率密度是非常
+简化的方程6.1：
 \begin{equation}% page392 第1个
 0=\nabla.[k_{wd}(T)\nabla T]+g_d(t)
 \end{equation}
+式中，$k_{wd}(T)$是绕组的平均热导率。
+
+a) 证明，在$k_{wd}(T)=k_{wd}$，为常数条件下，绕组温度$T(\rho)(1\le \rho\le\alpha，\rho\equiv r/a-1)$处在
+空间均匀且恒定的热耗散密度$g_d(t)=g_d$下，可以写为：
 \begin{equation}% page392 第2个
 T(\rho)=\frac{a_1^2gd}{4k_{wd}}[(1-\rho^2)+(\frac{\alpha^2-1}{\ln \alpha})\ln\rho]+T_{op}
 \end{equation}
+
+b) 证明最大绕组温度$T_{mx}$出现在$\rho_{mx}$处：
 \begin{equation}% page392 第3个
 \rho_{mx}=\sqrt{\frac{\alpha^2-1}{2\ln \alpha}}
 \end{equation}
+
+c) 证明临界耗散密度$g_{d_c}$为下式。在该点的温升为绕组内最大，$\Delta T_{mx}\equiv T_{mx}-T_{op}$。
 \begin{equation}% page392 第4个
 g_{d_c}=\frac{4k_{wd}\Delta T_{mx}}{a_1^2\{1+\frac{\alpha^2-1}{2\ln \alpha}[\ln{(\frac{\alpha^2-1}{2\ln\alpha})}-1]\}}
 \end{equation}
-\begin{equation}% page392 第5个
-g_{dc}=(\frac{k_{wd}\Delta T_{mx}}{a_1^2})\gamma_{d_c}(\alpha)
-\end{equation}
-\begin{equation}% page392 第6个
-\gamma_{d_c}(\alpha)\equiv\frac{4}{1+\frac{\alpha-1}{2\ln\alpha}[\ln(\frac{\alpha^2-1}{2\ln\alpha})-1]}
-\end{equation}
+可见，$g_{d_c}$正比于$\Delta T_{mx}\equiv T_{mx}-T_{op}$。
+
+我们可将上式写为：
+\begin{align*}% page392 第5个
+g_{dc}=(\frac{k_{wd}\Delta T_{mx}}{a_1^2})\gamma_{d_c}(\alpha) \tag{6.37b}
+\end{align*}
+式中，无量纲参数为：
+\begin{align*}% page392 第6个
+\gamma_{d_c}(\alpha)\equiv\frac{4}{1+\frac{\alpha-1}{2\ln\alpha}[\ln(\frac{\alpha^2-1}{2\ln\alpha})-1]} \tag{6.37c}
+\end{align*}
+
+d) 画出方程6.37c给出的$\alpha$在1.25-5区间的$\gamma_{d_c}(\alpha)$。
 
 
 \subsubsection{问题6.7之解}
-\begin{equation}% page393 第1个
-\frac{k_{wd}}{r} \frac{d}{dr}(r\frac{dT}{dr})+g_d=0
-\end{equation}
-\begin{equation}% page393 第2个
-\frac{k_{wd}}{\rho}\frac{d}{d\rho}(\rho\frac{dT}{d\rho})+g_da_1^2=0
-\end{equation}
-\begin{equation}% page393 第3个
-T(\rho)=-\frac{g_da_1^2}{4k_{wd}}\rho^2+A\ln\rho+B
-\end{equation}
-\begin{equation}% page393 第4个
-T(\rho)=-\frac{g_da_1^2}{4k_{wd}}[(1-\rho^2)+(\frac{\alpha-1}{\ln\alpha})\ln\rho]+T_{op}
-\end{equation}
-\begin{equation}% page393 第5个
-\frac{dT}{d\rho}=\frac{g_da_1^2}{4k_{wd}}[-2\rho+(\frac{\alpha^2-1}{\ln\alpha})\frac{1}{\rho}]=0
-\end{equation}
-\begin{equation}% page393 第6个
-\rho_{mx}=\sqrt{\frac{\alpha^2-1}{2\ln\alpha}}
-\end{equation}
-\begin{equation}% page393 第7个
-T(\rho_{mx})\equiv T_{mx}=\frac{a_1^2g_d}{4k_{wd}}[(1-\rho_{mx}^2)+(\frac{\alpha^2-1}{\ln\alpha})\ln\rho_{mx}]+T_{op}
-\end{equation}
-\begin{equation}% page393 第8个
-\Delta T_{mx}=\frac{g_{d_c}a_1^2}{4k_{wd}}(1+\frac{\alpha^2-1}{2\ln\alpha}[\ln(\frac{\alpha^2-1}{2\ln\alpha})-1])
-\end{equation}
-\begin{equation}% page393 第9个
-g_{d_c}=\frac{4k_{wd}\Delta T_{mx}}{a_1^2\{(1+\frac{\alpha^2-1}{2\ln\alpha}[\ln(\frac{\alpha^2-1}{2\ln\alpha})-)\}}
-\end{equation}
+a) 方程6.34在2D柱坐标中，令$k_{wd}(T)$为常数$k_{wd}$，有：
+\begin{align*}% page393 第1个
+\frac{k_{wd}}{r} \frac{d}{dr}(r\frac{dT}{dr})+g_d=0 \tag{S7.1a}
+\end{align*}
+代入$\rho\equiv r/a_1$，有：
+\begin{align*}% page393 第2个
+\frac{k_{wd}}{\rho}\frac{d}{d\rho}(\rho\frac{dT}{d\rho})+g_da_1^2=0 \tag{S7.1b}
+\end{align*}
+将上式对$\rho$积分两次，有：
+\begin{align*}% page393 第3个
+T(\rho)=-\frac{g_da_1^2}{4k_{wd}}\rho^2+A\ln\rho+B \tag{S7.2}
+\end{align*}
+加入边界条件$T(1)=T_{op}$和$T(\alpha)=T_{op}$，有：
+\begin{align*}% page393 第4个
+T(\rho)=-\frac{g_da_1^2}{4k_{wd}}[(1-\rho^2)+(\frac{\alpha-1}{\ln\alpha})\ln\rho]+T_{op} \tag{6.35}
+\end{align*}
 
+b) 将6.35对$\rho$微分，并令结果等于零，有：
+\begin{align*}% page393 第5个
+\frac{dT}{d\rho}=\frac{g_da_1^2}{4k_{wd}}[-2\rho+(\frac{\alpha^2-1}{\ln\alpha})\frac{1}{\rho}]=0 \tag{S7.3}
+\end{align*}
+解出$\rho$，有：
+\begin{align*}% page393 第6个
+\rho_{mx}=\sqrt{\frac{\alpha^2-1}{2\ln\alpha}} \tag{6.36}
+\end{align*}
+
+c) 在$\rho=\rho_{mx},T(\rho_{mx})=T_{mx}$时，根据方程6.35，有：
+\begin{align*}% page393 第7个
+T(\rho_{mx})\equiv T_{mx}=\frac{a_1^2g_d}{4k_{wd}}[(1-\rho_{mx}^2)+(\frac{\alpha^2-1}{\ln\alpha})\ln\rho_{mx}]+T_{op} \tag{S7.4}
+\end{align*}
+注意到在$T_{mx}$下，$\Delta T_{mx}=T_{mx}-T_{op}$和$g_d=g_{d_o}$。联立6.36和S7.4，有：
+\begin{align*}% page393 第8个
+\Delta T_{mx}=\frac{g_{d_c}a_1^2}{4k_{wd}}(1+\frac{\alpha^2-1}{2\ln\alpha}[\ln(\frac{\alpha^2-1}{2\ln\alpha})-1]) \tag{S7.5}
+\end{align*}
+解出：
+\begin{align*}% page393 第9个
+g_{d_c}=\frac{4k_{wd}\Delta T_{mx}}{a_1^2\{(1+\frac{\alpha^2-1}{2\ln\alpha}[\ln(\frac{\alpha^2-1}{2\ln\alpha})-)\}} \tag{6.37}
+\end{align*}
+
+d) 图6.22给出了$\alpha$在1.25-5区间的$\gamma_{d_c}(\alpha)$。
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.7]{chpt6/figs/fig6.22.eps}
-	\caption{。。。。}
+	\caption{$\alpha$在1.25-5区间的$\gamma_{d_c}(\alpha)$}
 \end{figure}
 
+\textbf{实例}\quad 考虑几个可以近似实际案例的例子。
+
+\textbf{例1：}\quad 这里我们考虑$\alpha=2;a_1$=10 cm;$k_{wd}=0.01\ \mathrm{W/cm K}$
+(30 K的，由金属和绝缘组成的典型绕组);$\Delta T_{mx}$=3 K。
+因为$\gamma_{d_c}(2)$=7.9，应用6.37b，有：
+\begin{align*}% page394 第1个
+g_{d_c}&=(\frac{k_{wd}\Delta T_{mx}}{a_1^2})\gamma_{d_c}(\alpha)\\\tag{6.37b}
+&=\frac{(0.01\ \mathrm{W/cmK})(3\ \mathrm{K})}{(10\ \mathrm{cm})^2}(7.9)\simeq 2.4\times 10^{-3}\ \mathrm{W/cm^3}\simeq 2.4\times 10^3\ \mathrm{W/m^3}
+\end{align*}
+对这个$a_1$=10 cm和$a_2$=20 cm的轴向无限长HTS螺管，绕组温度维持在约30 K，由内外壁传导冷却，绕组内
+有交流损耗等均匀耗散，在温度裕度$\Delta T_{mx}$至少为3 K时，
+不破坏其超导性的最高能量密度为2.4 $\mathrm{kW/m^3}$。
+这个耗散密度上限随$\Delta T_{mx}$增加而提高。
+当然，尽管HTS可以在耗散密度2.4 $\mathrm{kW/m^3}$下保持全超导，但系统制冷负荷会变得非常重。
+
+第七章将研究，一个宽为$w$，厚为$\delta$的HTS带，置于平行于带材宽度方向的周期磁场中，在多丝超导体中
+占交流损耗三分之一的磁滞能量密度$e_{hy}\simeq\mu_0 J_c \delta H_m$，其中$J_c$是超导体的临界电流密度。
+对YBCO带材，在30 K和2 T下，$J_c\simeq 2\times 10^9\ \mathrm{A/m^2},\delta\simeq 1\times 10^{-6}$ m；
+这样，对$\mu_0 H_m=B_m=2$ T，我们有$e_{hy}=4\ \mathrm{kJ/m^3}$。
+这个耗散能量密度等同于60 Hz下的240 $\mathrm{kW/m^3}$，是最大允许水平的100倍！
+为了限制磁滞损耗能量密度到2.4 $\mathrm{kW/m^3}$，在相同的临界电流密度下，磁场必须小于0.02 T。注意，
+这指的是平行于带材的磁场。
 
 
+\textbf{例2：}\quad 此处我们考虑一个更薄的线圈：$\alpha=1.25$，其他参数相同。代入$\gamma_{d_c}(1.25)\simeq 128$，
+有$g_{d_c}\simeq 38\ \mathrm{kW/m^3}$。
 
-\begin{equation}% page394 第1个
-g_{d_c}=(\frac{k_{wd}\Delta T_{mx}}{a_1^2})\gamma_{d_c}(\alpha)
-\end{equation}
-\begin{equation}% page394 第1个
-=\frac{(0.01\ \mathrm{W/cmK})(3\ \mathrm{K})}{(10\ \mathrm{cm})^2}(7.9)\simeq2.4\times10^{-3}\ \mathrm{W/cm^3}\simeq2.4\times10^3\ \mathrm{W/m^3}
-\end{equation}
-
-
+\textbf{例3：}\quad 对更厚的线圈，例如$\alpha=4,\gamma_{d_c}(4)\simeq 0.85$:
+$g_{d_c}\simeq 260\ \mathrm{W/m^3}$。
+这个临界耗散密度对HTS带材来说太低了---60 Hz的0.01 T的磁场下即有$1200\ \mathrm{W/m^3}$的磁能密度！
+我们可以通过增强$k_{wd}$或将绕组分为薄壁线圈，各线圈分别内外壁冷却，以增加$g_{d_c}$，尽管明显需要增加制冷量。
