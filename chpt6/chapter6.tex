@@ -934,93 +934,196 @@ CIC导体要同时处理载流的股和载工质的沟槽。所以，CIC导体�
 下的另一个原因。
 
 \subsection{问题6.5：冷却复合物导体的伏安关系}
+本问题考察浸泡于4.2 K液氦中的复合超导体的V-I特性；
+我们将在三种不同冷却条件下考虑V-I特性。
+超导体参数如下：$T_{op}$=4.2 K下的临界电流$I_{c_o}$=1000 A；基底金属电阻率$\rho_m=4\times 10^{-10}\ \mathrm{\Omega m}$；基底总截面积$A_m=2\times 10^{-5}\ \mathrm{m^2}$；
+总导体周长$P_{cd}=2\times 10^{-2}$ m，暴露于液氦部分：$f_p P{cd}$；
+传热系数$h_q=10^4\ \mathrm{W/m^2K}$。
+$V$的带材测试长度为$\ell=0.1$ m。为了推到V-I关系，假定$I_c(T)$按方程6.12给出。
 
-
+a) 在$I<I_{c_o}$，我们有$V$=0 V。$I\ge I_{c_o}$，证明$V$可由下式给出：
 \begin{equation}% page383 第1个6.31
 V=\frac{R_m(I-I_{co})}{1-\frac{R_mII_{co}}{f_pP_{cd}\ell h_q(T_c-T_{op})}}
 \end{equation}
+式中，$R_m=\rho_m \ell/A_m$。假设导体出于热平衡态，即$T_{op}+\Delta T$的导体的阻性热耗散被冷量平衡。
+注意到$I_m=I-I_s$，其中$I_m$是基底电流，$I_s$是超导体在$T=T_{op}+\Delta T$时的电流，如方程6.12所给。
+
+b) 通过定义两个无量纲参数$v\equiv V/R_m I_{c_o}, i\equiv I/I_{c_o}$，加上Stekly参数$\alpha_{sk}$
+(方程6.19)，证明无量纲电压可由下式给出：
 \begin{equation}% page383 第2个6.32
 \ \mathrm{u}(\ \mathrm{i})=\frac{\ \mathrm{i}-1}{1-\alpha_{ski}}
 \end{equation}
 
+c) \textbf{工况1：}$f_p=1(\alpha_{sk}=0.1)$。在$T_c$=5.2 K($T_{op}$=4.2 K)时，计算$i=1,1.1,1.5,1.2$
+时的$v$。
+
+d) \textbf{工况2：}$f_p=0.1(\alpha_{sk}=1)$。证明在$i=1$时，不能确定$v$。
+
+e)\textbf{工况3：}$f_p=0.05(\alpha_{sk}=2)$。这里，表面积近乎与液氦热绝缘，导体将不稳定。Stekly
+在他的实验中使用实际电源观察到，电源电流在回到初始电流和相应的电压($v=i$线)前，
+突然从设计值跌落，与正的负载电压匹配[6.63]。
+由6.31导出的6.32基于$i<1$时$v=0$这一前提，在$i>1$稳态工况下不成立。你可以使用这个方程找到当$i$=1,0.9,0.8,0.75和0.707时的$v$值。
+
+f) 画出上文研究的三种工况下的$v(i)$图。用实线画出$v=i$。在三种工况上分别标上对应$\alpha_{sk}$值。
+
 
 \subsubsection{问题6.5之解}
-\begin{equation}% page384 第1个S5.1
-G_{j}(T_{op}+\triangle T)=VI=R_m\{I-I_{co}[\frac{T_c-(T_{op}+\Delta T)}{T_c-T_{op}}]\}I
-\end{equation}
-\begin{equation}% page384 第1个S5.1
-=R_mI[(I-I_{co})+\frac{I_{co}\Delta T}{T_c-T_{op}}]
-\end{equation}
-\begin{equation}% page384 第2个S52
-\Delta T=\frac{R_mI(I-I_{c_o})(T-T_{op})}{f_pP_{cd}\ell h_q(T_c-T_{op})-R_mI_{c_o}I}
-\end{equation}
-\begin{equation}% page384 第3个S5.3a
-V=R_m\{(I-I_{c_o})+\frac{I_{c_o}}{T_c-T_{op}}[\frac{R_mI(I-I_{co})(T_c-T_{op})}{f_pP_{cd}\ell h_q(T_c-T_{op})-R_mI_{c_o}I}]\}
-\end{equation}
-\begin{equation}% page384 第4个S5.3b
-=R_m(I-I_{c_o}))+\frac{R_m^2I_{c_o}(I-I_(co))}{f_pP_{cd}\ell h_q(T_c-T_{op})-R_mI_{c_o}I}
-\end{equation}
-\begin{equation}% page384 第5个6.31
-V=\frac{R_m(I-I_{co})}{1-\frac{R_mII_{co}}{f_pP_{cd}\ell h_q(T_c-T_{op})}}
-\end{equation}
-\begin{equation}% page384 第6个
-V=\frac{R_m(I-I_{co})}{1-\alpha_{sk}(I/I_{co})}
-\end{equation}
-\begin{equation}% page384 第7个
-v(i)=\frac{i-1}{1-\alpha_{sk}i}
-\end{equation}
-\begin{equation}% page384 第8个
-\alpha_{sk}=\frac{\rho_mI_{co^2}}{f_pP_{cd}A_mh_q(T_c-T_{op})}
-\end{equation}
-\begin{equation}% page384 第9个
-=\frac{(4\times10^{-10}\ \mathrm{\Omega m})(100\ \mathrm{A})^2}{(1)(2\times10^{-2}\ \mathrm{m^2})(10^4\ \mathrm{W/m^2K})(5.2\ \mathrm{K}-4.2\ \mathrm{K})}=0.1
-\end{equation}
-\begin{equation}% page384 第10个
-v(i)=\frac{10(i-1)}{10-i}
-\end{equation}
+a) 在$I> I_{c_o}$时，电势$V$由$R_m(I-I_s)$给出，其中$I_s$是超导体电流，即$I_s=I_c(T)$。
+焦耳热$G_j(T_{op}+\Delta T)$于是为：
+\begin{align*}% page384 第1个S5.1
+G_{j}(T_{op}+\triangle T)&=VI=R_m\{I-I_{co}[\frac{T_c-(T_{op}+\Delta T)}{T_c-T_{op}}]\}I\\
+&=R_mI[(I-I_{co})+\frac{I_{co}\Delta T}{T_c-T_{op}}] \tag{S5.1}
+\end{align*}
+$G_j(T_{op}+\Delta T)$由冷量匹配，冷量由$f_pP_{cd}\ell h_q(T_c-T_{op})=f_pP_{cd}\ell h_q\Delta T$给出。
+令两个功率相等，解出$\Delta T$，有：
+\begin{align*}% page384 第2个S52
+\Delta T=\frac{R_mI(I-I_{c_o})(T-T_{op})}{f_pP_{cd}\ell h_q(T_c-T_{op})-R_mI_{c_o}I} \tag{S5.2}
+\end{align*}
+联立S5.1和S5.2，解出$V$：
+\begin{align*}% page384 第3个S5.3a
+V=R_m\{(I-I_{c_o})+\frac{I_{c_o}}{T_c-T_{op}}[\frac{R_mI(I-I_{co})(T_c-T_{op})}{f_pP_{cd}\ell h_q(T_c-T_{op})-R_mI_{c_o}I}]\} \tag{S5.3a}
+\end{align*}
+\begin{align*}% page384 第4个S5.3b
+=R_m(I-I_{c_o})+\frac{R_m^2I_{c_o}(I-I_(co))}{f_pP_{cd}\ell h_q(T_c-T_{op})-R_mI_{c_o}I} \tag{S5.3b}
+\end{align*}
+由S5.3b，我们有：
+\begin{align*}% page384 第5个6.31
+V=\frac{R_m(I-I_{co})}{1-\frac{R_mII_{co}}{f_pP_{cd}\ell h_q(T_c-T_{op})}} \tag{6.31}
+\end{align*}
 
+b) 在$\alpha_{sk}$中，用$R_m/\ell$替代$\rho_m/A_m$，我们重写方程6.31：
+\begin{align*}% page384 第6个
+V=\frac{R_m(I-I_{co})}{1-\alpha_{sk}(I/I_{co})} \tag{S5.4}
+\end{align*}
+从中，可以得到：
+\begin{align*}% page384 第7个
+v(i)=\frac{i-1}{1-\alpha_{sk}i} \tag{6.32}
+\end{align*}
+
+c) $R_m=\rho_m \ell/A_m=2\times 10^{-6}\ \mathrm{\Omega}$。代入$f_p=1$，有：
+\begin{align*}% page384 第8个
+\alpha_{sk}&=\frac{\rho_mI_{co^2}}{f_pP_{cd}A_mh_q(T_c-T_{op})}\\
+&=\frac{(4\times10^{-10}\ \mathrm{\Omega m})(100\ \mathrm{A})^2}{(1)(2\times10^{-2}\ \mathrm{m^2})(10^4\ \mathrm{W/m^2K})(5.2\ \mathrm{K}-4.2\ \mathrm{K})}=0.1
+\end{align*}
+于是，方程6.32表示为：
+\begin{align*}% page384 第10个
+v(i)=\frac{10(i-1)}{10-i} \tag{S5.5}
+\end{align*}
+部分$i$值下的$v(i)$值如表6.7所列。
+
+表6.7.。。。。。。。。。。。。
+
+表6.8.。。。。。。。。。。。。。。。。
+
+d) 当$f_p=0.1$时，$\alpha_{sk}$变为1。对$i<1$，根据定义，$v=0$。对$v>1$，由方程6.32，$v(i)=i$。
+在$i=1$时，$v(i)$不能确定；物理上，如讨论6.1所指出的，这意味着$v$可以是$i=1$竖线上的任意点。
+在$i=1(I=I_{c_o})$时，根据方程6.31，$V=0$。
+
+e) 这里，$f_p = 0.05,\alpha_{sk} = 2$，我们可使用方程6.32计算$v(i)$。
+如前所述，Stekly观察到[6.63]$v(i)$在$i=0.707$(这里计算的)和$i= 1$之间的双值，即$i$从0增长到1，$v=0$，
+在$i=1$点，$v$突然出现，迫使$i$跌落(因为电源在电流$i=0$到$i=1$之间，电压很小，不能维持$i=1$的电流)。
+首先，图6.16中，在$i=1--0.707$之间标记了$\alpha_{sk}=2$的$v$迹线称为$\alpha_{sk}$下的“恢复”(归一)电流。
+然后，随着$i$减小到0.707之下，$v$回到0。 
+
+f) 如图6.16。
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.7]{chpt6/figs/fig6.16.eps}
-	\caption{Normalized voltage vs. normalized current traces for αsk =0.1, 1, and 2.}
+	\caption{$\alpha_{sk}=0.1,1,2$下的归一化电压vs. 归一化电流迹线。}
 \end{figure}
 
 
-
 \subsection{问题6.6：混合III SCM的稳定性分析}
+本问题处理混合III NbTi线圈的低温稳定性，它的导体特性见问题5.1的表5.1(混合III中的NbTi线圈
+实际上使用了两种级别的NbTi导体；这里，简化为同一种级别的。)
 
+NbTi线圈由32个双饼线圈组成，总绕组高度640 mm。
+各饼的内径为658 mm，外径907 mm。图6.17给出了绕组的重要细节。
+双饼线圈中的两个饼用0.5 mm厚浸渍环氧的薄绝缘层隔开。
+相邻的双饼之间有1 mm厚的径向的绝缘垫片。
+绝缘垫片平均占据了暴露于液氦中表面积的60\%。每一个双饼组中，氦仅浸润上饼上表面和下饼下表面。
+因为液氦在1.8 K出现超流，不会出现气泡影响下饼的冷却。
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.7]{chpt6/figs/fig6.17.eps}
 	\caption{Winding details for the NbTi pancakes..}
 \end{figure}
+NbTi线圈(和$\mathrm{Nb_3 Sn}$线圈)设计为浸泡于1 atm和过冷1.8 K的超流液氦池中。
+假设冷却主要是Kapitza热阻。所以，方程4.7给出的$q_k$应用于描写冷却：
+\begin{align*}% page387 第1个
+q_k=a_k(T^{n_k}_{cd}-T^{n_k}_b) \tag{4.7}
+\end{align*}
+式中，$T_{ck}$是导体温度(实际是导体表面的温度，也即金属基底的问题)，$T_b$是液氦池温度。
+可以取$a_k$=0.02 $\mathrm{W/cm^2 K^4}$，$n_k$=4.0(表4.7)。
+在运行温度$T_{op}=1.8$ K($T_{op}=T_b$)时，线圈载有传输电流$I_{op}=2100$ A，暴露于最大外磁场$\sim$ 10 T下。
+表5.1给出了有用的数据。
 
-\begin{equation}% page387 第1个
-q_k=a_k(T^{n_k}_{cd}-T^{n_k}_b)
-\end{equation}
+a) 为这个导体作一个合适的$I_c(T)$图，磁场为10 T，温区涵盖额定运行温度1.8 K到临界温度4.1 K。
+从图中确定，传输电流$I_t$=2100 A下的电流分享温度$T_{cs}$，在图中标出。
+
+b) 磁场10 T，温度$T_{op}=T_b$=1.8 K，$I_{op}$=2100 A，画并标出冷却和产热的功率密度和温度关系图。
+根据图，阐述饼式线圈是否稳定，如果稳定，是基于何种判据？如果不稳定，解释原因。
+为了回答这个问题，可以假定：1) 上面给出的$q(T)$在问题涉及的全温区都是合理的；2) 各饼内产生的热量可
+通过1 mm径向通道自由传出。
+
+c) FBNML之前建造的混合磁体的饼式线圈中，每一匝都由薄(0.4 mm)间隔片隔离，以使绕组通透，从而低温稳定。
+在混合III项目的早期阶段，我们认真的考虑了匝间冷却隔离垫片的设计，但最终采用了无隔离片的方案。
+结社混合III饼存在匝间隔离通道，在另一个图中简要画出功率密度和温度的关系图，
+假定50\%的总导体周长直接暴露于液氦中，其他条件相同。同样，根据图，讨论饼线圈的稳定性。
+
+
 \subsubsection{问题6.6之解}
-
-
+a) 图6.18给出了这个导体的$I_c(T)$图，该图通过连接两个点而成：一点为1.8 K和10 T下的6000 A(表5.1)，
+另一点为4.7 K和10 T下的0 A(表5.1和图6.18)。电流分享温度由2100 A=$I_c(T_{cs})$给出，它是3.7 K的值。
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.7]{chpt6/figs/fig6.18.eps}
-	\caption{Ic vs. T plot (solid) for a Hybrid III Nb-Ti conductor at 10 T. The
-		intersection of the line at Ic = 0 determines Tc = 4.7 K. It = 2100 A is given
-		by the dashed line, which intersects the solid line at Tcs = 3.7 K}
+	\caption{10 T混合III导体的$I_c$ vs. $T$图(实线)。$I_t$=2100 A是虚线，与实线交点对应$T_{cs}$=3.7 K}
 \end{figure}
 
+b) 首先计算$T\ge T_c$=4.7 K下有效的正常态下的$\hat{g}_j$。
+和$g_j(T_c)=\rho_m I_{op}^2/A_m A_{cd}$不同，$\hat{g}_j$是正常态的产热通量密度(暴露于液氦中的导体单位表面积)。
+也即，$\hat{g}_j=(A_{cd}/f_pP_{cd})g_j(T)$，其中$f_p P_{cd}$是暴露于液氦中的导体周长。
+$A_{cd}$和$A_{m}$分别是全部导体和基底金属的截面积。
+我么有：$A_{cd}=ab$，其中$a,b$分别是全部导体的宽和厚；$A_{m}=ab\gamma_{c/s}/(\gamma_{c/s}+1)$，
+其中，$\gamma_{c/s}$是铜-超导体比率。于是我们有：$\hat{g}_j(T_c)=\rho_m I_{op}^2(\gamma_{c/s}+1)/\gamma_{c/s}abf_p P_{cd}$。
 
+代入$I_t$ =2100 A,$\rho_m =4.5\times 10^{-10}\ \mathrm{\Omega m}$,$a$=9.2$\times 10^{-3}$ m, $b=2.6\times 10^{-3}$ m,$\gamma_{c/s}=3$,$f_p P_{cd}$ =(0.4)(2.6$\times 10^{−3}$ m)=1.04$\times 10^{−3}$ m，
+我们有tain:$\hat{g}_j(T_c)=1.06\times 10^5\ \mathrm{W/m^2}$。
 
+$\hat{g}_j(T)$在1.8 K$\le$T$\le T_{cs}$(3.7 K)区间为零，从$T_{cs}$开始，它线性随$T$增长直到$T_c$(4.7 K)。
+在临界值点，$\hat{g}_j(T_c)=1.06\times 10^5\ \mathrm{W/m^2}$。
+
+图6.19给出了$\hat{g}_j(T)$和$q(T)$的关系图。从图中，清晰地可以看到饼式线圈几乎是低温稳定的；它当然的满足等面积判据。
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.7]{chpt6/figs/fig6.19.eps}
-	\caption{gj(T) plot (solid) and q(T) plot (dotted);gj(T)
-		(dashed) corresponds to question c).}
+	\caption{$\hat{g}_j(T)$(实线)和$q(T)$(点线)；问题c)对应的$\hat{g}_j(T)$(虚线)。}
 \end{figure}
 
+c) $g_j(T)$和$q(T)$都和b)中计算的一样。本例中，相比没有隔层的绕组，单位导体长度暴露于液氦中的面积当然更大一些。
+本例下，$f_p P_{cd}$ = (0.5)(23.6$\times 10^{-3}$ m) = 11.8$\times 10^{-3}$ m，以及$\hat{g}_j(T_c)$
+= 9.34 $\mathrm{kW/m^2}$。
 
-\subsection{讨论6.7：cryostable vs 准绝热磁体}
+图6.19中的虚线给出了$\hat{g}_j(T_c)$图；用于前一个案例的$q(T)$仍然有效。
+根据图，明显饼式线圈是低温稳定的。
+
+\subsection{讨论6.7：低温稳定 vs 准绝热磁体}
+如问题6.6所讨论的，混合III线圈的双饼在匝间没有冷却通道。
+采用这种“准绝热”双饼的决策是为了减小应力。
+使用术语“准绝热”是因为NbTi线圈在没有冷却通道的条件下不是低温稳定的，但近似于绝热的性能---随后，上面所述的稳定性
+分析作为一个学生练习给出后，结果发现线圈是稳定的。
+1986年FBML的一个内部研究(未公开发表)检验了机械扰动对线圈运行的影响，表明NbTi线圈在准绝热条件下将，也肯定会，有
+令人满意的性能。
+
+图6.20给出了一个NbTi导体制成的高场级(HF)和低场级(LF)低温稳定和准绝热绕组的
+周向应力$\sigma_h$ vs. 线圈半径$r$的例子[3.14]。
+对低温稳定绕组，因为有结构上的“软”匝间绝缘带，$\sigma_h$ vs. $r$与局部应力($r\times J\times B_z$)一致。
+(HF-LF转变中的应力跳跃是因为导体截面的减小)
+对准绝热绕组，因为绕组在径向更有刚性(无间隔垫片)，内匝的径向膨胀由外部的绕组支撑，减小了内匝的应力。
+净结果就是应力分布更加均匀。(分析中，假定了每部分的导体截面相同)
+同等重要的是NbTi线圈总尺度的实质性减小，从外径1.06 m减小到约0.9 m。
 
 \begin{figure}[htbp]
 	\centering
