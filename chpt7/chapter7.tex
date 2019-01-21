@@ -3,7 +3,7 @@
 尽管超导体的完美导电性让超导电性永恒迷住了科学家，诱惑了工程师和企业家，但适合做磁体的第II类超导体运行
 于混合态，有磁滞损耗。第II类超导体在时变磁场、电流或两者同时存在的条件下本质上一定是有损耗的。
 此外，当第II类超导体被处理成细丝嵌入正常金属基底这样的复合导体后，还会出现另一种磁损耗。
-这些次损耗通常被称为交流损耗(AC~losses)。另外，磁体还有其他损耗，包括：1)导体接头；2) 洛伦兹力
+这些损耗通常称为交流损耗(AC~losses)。另外，磁体还有其他损耗，包括：1)导体接头；2) 洛伦兹力
 导致的导体、绕组的移动，引发的摩擦热；3) 洛伦兹力导致的绕组浸渍破裂，也引起损耗。
 尽管此处不会讨论，在聚变磁体中还存在另一种损耗：中子辐射。
 
@@ -71,51 +71,124 @@ Bean板在场方向($y$轴)是无限长的，在电流方向($z$轴)的宽度是
 对Bean板相关的表达式将在本章做推导。
 
 \subsection{磁滞损耗}
-
+如第二章所述，单位体积内的热耗散可以视为坡印廷矢量$\vec{S}$(方程2.20)流量。
+积分形式下，忽略电能项，方程2.20成为：
 \begin{equation}% 7.1
 \int\left[-\int_{S}^{}\vec{E}\times\vec{H}\cdot d\vec{\ \mathcal{A}}\right]dt=\int_{\nu}^{}\left[\int\vec{E}\cdot\vec{J}dt+\frac{1}{2}\mu_oH^2+\mu_oH\int\vec{H}\cdot d\vec{M}\right]d\nu
 \end{equation}
+尽管Bean在他的第II类超导体磁场行为纯唯象(临界态模型)模型中使用了定义$\vec{B}=\mu_0(\vec{H}+\vec{M})$，
+但如第五章所论及的，$B$是以超导体内磁场分布$H_s$下的“平均”磁感应强度$B_s$进行计算的，即$B_s(x)=\mu_0 H_s$。
+因为Bean板仅在一个维度(x)上有限，$H_s(x)$和板内感应的超导电流密度$J_c$(Bean模型中，是依赖于场的)
+仅在$x$方向变化。$J_c$是由电场$\vec{E}$建立起来的，后者是由$d\vec{B}(t)/dt$感应出来的。在Bean板中，
+还可以写为均匀外磁场的时间变化率$\mu_0 d\vec{H_e}(t)/dt$。
 
 \subsubsection*{Bean板的磁滞损耗}
+所以，Bean的第II类超导体临界态模型中，$\vec{M}$是由$\vec{H_s}_x$表示的，后者又是由$\vec{J_c}$表示的。
+相应的，宽度为$2a$的Bean板方程修改为：
 \begin{equation}% 7.2
 \int\left[-\int_{S}\vec{E}(x)\times\vec{H}_e\cdot d\vec{\ \mathcal{A}}\right]dt=\int_{0}^{2a}\left[\int\vec{E}(x)\cdot\vec{J}_c(x)dt+\frac{1}{2}\mu_oH_{s}^{2}(x)\right]dx
 \end{equation}
+式中，积分区间是$x=0$到$x=2a$(或者从$x=-a$到$x=a$)。
+因为$\vec{J_c}(x)$是由$\vec{E}(x)$感应出的，所以它平行于$E$场。7.2中的$\int E(x)\cdot J_c(x)dt$表示的是
+耗散，这个耗散被称为磁滞损耗。Bean板的磁滞损耗能量密度为：
 \begin{equation}% 7.3a
 e_{hy}=\frac{1}{2a}\int_{0}^{2a}\left[\int J_cE(x)dt\right]dx
 \end{equation}
-\begin{equation}% 7.3b
-e_{hy}=\frac{1}{2a}\{\int\left[-\int_{S}\vec{E}(x)\times\vec{H}_e\cdot d\vec{\ \mathcal{A}}\right]dt-\frac{1}{2}\mu_oH\int_{0}^{2a}H_{s}^{2}(x)dx\}
-\end{equation}
+通过联立7.3和7.2，我们可以得到另一种表达式：
+\begin{align*}% 7.3b
+e_{hy}=\frac{1}{2a}\{\int\left[-\int_{S}\vec{E}(x)\times\vec{H}_e\cdot d\vec{\ \mathcal{A}}\right]dt-\frac{1}{2}\mu_oH\int_{0}^{2a}H_{s}^{2}(x)dx\} \tag{7.3'}
+\end{align*}
+方程7.3’表示板中的磁滞能量密度等于进入板的Poynting能量密度减去板中的磁能密度的总能量密度。
+
+当外场$\vec{H}_e$经过一个完整周期，初始和终了磁场强度$\vec{H}_{e_i}$、$\vec{H}_{e_f}$
+和磁化强度$\vec{M}(\vec{H}_{e_i})$和$\vec{M}(\vec{H}_{e_f})$都是相等的，$e_{hy}$于是还可以表示为：
 \begin{equation}% 7.4a
 e_{hy}=\mu_o\oint\vec{H}_ed\vec{M}_e(\vec{H}_e)
 \end{equation}
-\begin{equation}% 7.4b
-e_{hy}=-\mu_o\oint M(H_e)dH_e
-\end{equation}
-
+从代数上看，上式还可以写为：
+\begin{align*}% 7.4b
+e_{hy}=-\mu_o\oint M(H_e)dH_e \tag{7.4'}
+\end{align*}
+在7.4’中，去掉了矢量符号。这是因为各矢量均仅有一个方向：$H_e$和$M$都是$y$向。
 
 \subsubsection*{外磁场时间序列下的Bean板}
+问题7.1-7.4和讨论7.1-7.2中，将研究Bean板置于外磁场在不同的时间序列下的磁滞能量密度。
+情况1-6和情况1i-6i分别为板中无直流传输电流和有直流传输电流的情况，各情况由7.5定义。
 \begin{equation}% 7.5
 H_e(t)=0*(\ \mathrm{Virgin slab})\rightarrow H_m\rightarrow 0\rightarrow -H_m\rightarrow 0\rightarrow H_m\rightarrow 0\rightarrow -H_m\rightarrow 0
 \end{equation}
 
+简要描述方程7.5中给出的$H_e(t)$时间序列如下。
+\begin{description}
+	\item[情况1] $H_e(t)$从$0*$增加至$H_m$，其中$0*$表示板未经使用，即板中无超导电流密度$J_c$。
+	\item[情况2] 这是情况1之后的场下降序列：$H_e(t)=H_m\rightarrow 0$。
+	\item[情况3] 这是情况1和情况2的组合：$H_e(t)=0*\rightarrow H_m\rightarrow 0$。
+	\item[情况4] 类似于情况1，但板已通过电流。
+	\item[情况5] 类似情况2，但它紧随情况4：$H_e(t)=H_m\rightarrow 0$。
+	\item[情况6] 开始于通过电流的的板，$H_e(t)$经过1个完整周期。
+	\item[情况1i-6i] 除了一直同游直流传输电流，其他和对应的情况1-6一样。
+\end{description}
+
+情况1/2/4的$H_s(x)$图分别如图7.2-图7.4。没有传输电流时，板的磁场行为是关于中点$x=a$对称的；
+因此，$H_s(x)$图仅给出$0\le x\le a$部分。情况1i-6i中的个别$H_s(t)$图后文给出。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt7/figs/fig7.2.eps}
+	\caption{情况1的磁场特性。}
+\end{figure}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt7/figs/fig7.3.eps}
+	\caption{情况2的磁场特性。}
+\end{figure}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt7/figs/fig7.4.eps}
+	\caption{情况4的磁场特性。}
+\end{figure}
 
 \subsection{多丝复合物中的耦合损耗}
+耦合损耗是多丝复合超导体中焦耳热的另一个形式，它来自时变外场在细丝之间感应出的耦合电流。
+因为耦合电流通过金属基底金属，它随时间衰减。出于简单考虑，我们采用带有一个简单耦合时间常数$\tau_{cp}$
+的指数模型。显然，$\tau_{cp}$越大，耦合电流在基底金属中流通的时间越长，造成的耦合能量损耗密度$e_{cp}$
+越大。$\tau_{cp}$是耦合电流路径中电感$L$和电阻$R$的比值；$L/R$随着绕节距长度$\ell_p$的紧凑性增加而减小，
+随基底金属电阻率增加而减少。图7.5给出了两根丝复合导体的示意图。多丝导体的复杂几何(比如换位丝就是复杂性的一个来源)
+让基于Bean板的分析模型几乎不可能。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt7/figs/fig7.5.eps}
+	\caption{两根丝复合导体的示意图，使用方程7.6定义节距$\ell_p$。}
+\end{figure}
 
 \subsubsection*{耦合时间常数}
+$e_{cp}$的关键参数是耦合时间常数$\tau_{cp}$。
+它定义了多丝导体置于外时变场而感应出的丝间耦合电流的衰减时间常数。
+实际中，电流衰减函数包括很多时间常数，不仅是主要的这一个。不过在实验中，
+仅能确定主要的这一个，它被用于多数唯象方法中，$\tau_{cp}$定义为：
 \begin{equation}% 7.6
 \tau_{cp}=\frac{\mu_o\ell_{p}^{2}}{8\pi\rho_{ef}}
 \end{equation}
-
+式中，$\ell_p$是超导丝的节距，$\rho_{ef}$是丝间电流用到的有效基底电阻率。
+如前所述，因为时间常数越长，能量耗散越大。故$\tau_{cp}$越大，$e_{cp}$越大。
+正如Wilson指出[1.27]的，$e_{cp}$可以视为在复合导体内总磁能密度$\mu_0 H_m^2/2$的一部分，
+当$\tau_{cp}\rightarrow 0$时有$e_{cp}\rightarrow 0$。
+如前所述，有用的$e_{cp}$公式在表7.8给出；它包括了多丝线在四种外部磁场函数下的$e_{cp}$：1)
+正弦；2)指数；3)三角波；4)梯形波。这些汉书的关键时间参数定义在图7.18中。
 
 \subsubsection*{有效基底电阻}
+我们将简要讨论方程7.5中出现的电阻率$\rho_{ef}$。它代表垂直于丝导体轴向的电流的基底有效电阻率。
+Carr提出了两个模型[7.18]:
+\begin{subequations}
+	\begin{align}
+	\rho_{ef0}&=\frac{1-\lambda_f}{1+\lambda_f}\rho_m\\
+	\rho_{ef\infty}&=\frac{1+\lambda_f}{1-\lambda_f}\rho_m
+	\end{align}
+\end{subequations}
+式中，$\lambda_f$是超导细丝在复合导体中的体积分数，$\rho_m$是基底的电阻率。
 
-\begin{equation}% 7.7a
-\rho_{ef0}=\frac{1-\lambda_f}{1+\lambda_f}\rho_m
-\end{equation}
-\begin{equation}% 7.7b
-\rho_{ef\infty}=\frac{1+\lambda_f}{1-\lambda_f}\rho_m
-\end{equation}
+方程7.7a和7.7b基于图7.6中的而两个极限电流分布：(a)中细丝表面的接触电阻是0，电流被拉入细丝中，令电路通路
+的视在截面和距离分别变大和变小，故得到7.7a；(b)中恰好相反。
+两个表达式都没有经受严格分析和试验的检验。实践中，方程7.7a和7.7b分别用于$\mathrm{Nb_3Sn}$和NbTi超导体的计算。
 
 \subsection{涡流损耗}
 
