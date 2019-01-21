@@ -1133,18 +1133,33 @@ c) $g_j(T)$和$q(T)$都和b)中计算的一样。本例中，相比没有隔层�
 
 
 \subsection{讨论6.8：MPZ概念}
+6.2.1部分简要的说明了MPZ概念在促进我们对发生于磁体绕组内部、影响几乎每一类磁体的“扰动”的理解的关键作用[1.27,6.14]。
+这个表明降低LTS磁体性能的扰动的细微性[6.64,6.65]。
 
-
-
+考虑一个无限半径的各向同性绕组(图6.21)运行在$I_{op}$，球形区域1($r\le R_{mz}$)全部是正常态，产生焦耳热密度
+为$\rho_m J_m^2$，其中$\rho_m$是温度无关的基底电阻率，$J_m=I_{op}/A_m$；
+区域2($r\ge R_{mz}$)是超导态；远离$R_{mz}$的区域，绕组温度是$T_{op}$。
+假定绕组的热导率$k_{wd}$均匀且与温度无关，我们可以得到，在时不变和绝热工况下，除了焦耳热无其他耗散，
+也即在方程6.1中，$C_{cd}\partial T/\partial t=0,g_d(t)=0,g_q(T)=0$。$R_{mz}$的表达式：
 \begin{equation}% page391 第1个
 R_{mz}=\sqrt{\frac{3k_{wd}(T_c-T_{op})}{\rho_mJ_m^2}}
 \end{equation}
+如果我们代入运行于液氦温度的LTS磁体的$k_{wd},T_c,T_{op},\rho_m，J_m$典型值，可以得到$R_{mz}$为0.1-10 mm。
+(如果$k_{wd}$非各向同性，但正交各向异性，如实际绕组那样，MPZ的形状将变为椭球，而非球。)
+相比于绕组体积，MPZ体积很小。但是，即使在绝热绕组中，它也可能有一个很小的$g_d(t)$，
+它的大小程度需限制到$R_{mz}$之下。
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.7]{chpt6/figs/fig6.21.eps}
-	\caption{Isotropic winding where in regionthe winding is generating Joule heating and in regionthe winding is superconducting}
+	\caption{各向同性绕组。}
 \end{figure}
+
+尽管方程6.33中的$(T_c−T_{op})$在HTS绕组中要比LTS高一个数量级，
+由于$\rho_m$随$T_{op}$增长而$k_{wd}$保持相对不变，在77.3 K时HTS绕组中的MPZ大小
+差不多和运行于$T_{op}=4.2$ K的LTS磁体中的一样大。
+一个对着运行温度显著增加的参数是绕组材料的焓密度。这样，如本章开始所述，由导线运动、环氧开裂等
+机械事件产生的扰动能量几乎不可能让HTS磁体突破其临界温度。
 
 \subsection{问题6.7：绝热绕组中的耗散能密度}
 
