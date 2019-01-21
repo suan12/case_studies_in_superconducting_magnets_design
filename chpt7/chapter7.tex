@@ -143,7 +143,7 @@ H_e(t)=0*(\ \mathrm{Virgin slab})\rightarrow H_m\rightarrow 0\rightarrow -H_m\ri
 \end{figure}
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.6]{chpt7/figs/fig7.4.eps}
+	\includegraphics[scale=0.7]{chpt7/figs/fig7.4.eps}
 	\caption{情况4的磁场特性。}
 \end{figure}
 
@@ -186,23 +186,48 @@ Carr提出了两个模型[7.18]:
 \end{subequations}
 式中，$\lambda_f$是超导细丝在复合导体中的体积分数，$\rho_m$是基底的电阻率。
 
-方程7.7a和7.7b基于图7.6中的而两个极限电流分布：(a)中细丝表面的接触电阻是0，电流被拉入细丝中，令电路通路
+方程7.7a和7.7b基于图7.6中的两个极限电流分布：(a)中细丝表面的接触电阻是0，电流被拉入细丝中，令电路通路
 的视在截面和距离分别变大和变小，故得到7.7a；(b)中恰好相反。
 两个表达式都没有经受严格分析和试验的检验。实践中，方程7.7a和7.7b分别用于$\mathrm{Nb_3Sn}$和NbTi超导体的计算。
 
 \subsection{涡流损耗}
+涡流损耗的基本问题已在问题2.7中研究了。圆线(图7.1b和7.1c)和带材(图7.1d和7.1e)低频极限下的能量密度$e_{ed}$公式，总结如表7.9。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt7/figs/fig7.6.eps}
+	\caption{多丝超导体中垂直于导体轴的电流分布。}
+\end{figure}
 
 \section{其他损耗}
+还有两个其他耗散源：1) 分段--或接头---电阻；和2) 机械扰动。
+对于干式磁体的驱动模式，无论LTS还是HTS，必须将接头电阻处产生的损耗降至最低，原因很明显---它直接增加了制冷机的热负荷。
+显然，这对持续运行模式的磁体不是问题---该模式要求接头近似为零，在$\mathrm{p\Omega}$数量级。
+机械扰动---绕组内发生的导体运动或环氧浸渍绕组的环氧开裂---仅对“绝热”LTS磁铁重要；
+对于冷却良好的LTS，最大的耗散源是复合超导体本身的焦耳热，机械扰动可以完全忽略。
+处于一个不同的原因，如第6章所述，高HTS磁体，不论冷却良好或“绝热”，是不受这些机械扰动的影响的。
+\subsection{接头电阻}
+只有在以下情况下，电阻型接头才会成为设计问题：1）必须限制在受限空间内或遵从特定配置；
+2）位于绕组内部较深的地方，那里的冷却有限或为零；3）必须承受较大的力；4）接头太多，其累积耗散会对系统的制冷负担加重。
+5）不与制冷剂直接接触，如在低温冷却磁体中那样。
 
-\subsection{分段电阻}
-
-
+大致来讲，有两种类型接头：搭接接头和对接接头。
+在大多数应用中，搭接接头比对接接头更好，原因有三个：1）比对接接头更容易制作；
+2）通过简单增加搭接长度可以任意降低接头电阻；3）通常比对接接头更容易满足强度要求。
+这里，我们讨论搭接拼接。
 
 \subsubsection*{搭接电阻（接头）}
+如图7.7所示，“握手式”搭接接头是最广泛使用的接头设计；它甚至非常适合在绕组内使用。
+导线A和导线B之间的接头以搭接长度$\ell_{sp}$、宽度$a$和厚度$\delta_{sd}$经焊接而电气连接。
+焊料电阻率为$\rho_{sd}$的焊料层电阻$R_{sd}$可由下式给出：
 \begin{equation}% 7.8
 R_{sd}=\frac{\rho_{sd}\delta_{sd}}{a\ell_{sp}}
 \end{equation}
-
+通常，$a$等于搭接导体的宽度。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt7/figs/fig7.7.eps}
+	\caption{“握手式”搭接接头。}
+\end{figure}
 
 \subsubsection*{接触电阻}
 \begin{equation}% 7.9a 7.9b
