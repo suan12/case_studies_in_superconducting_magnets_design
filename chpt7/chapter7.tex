@@ -230,21 +230,51 @@ R_{sd}=\frac{\rho_{sd}\delta_{sd}}{a\ell_{sp}}
 \end{figure}
 
 \subsubsection*{接触电阻}
-\begin{equation}% 7.9a 7.9b
-R_{sp}=R_{cA}+R_{sd}+R_{cB} 
-=\frac{R_{ct}}{A_{ct}}
-\end{equation}
-\begin{equation}% 7.9c
-R_{sp}=\frac{R_{ct}}{A_{ct}}\simeq R_{sd}
-\end{equation}
-\begin{equation}% 7.10
+接头电阻$R_{sp}$是以下三个部分之和：
+\begin{subequations}
+	\begin{align}
+R_{sp}&=R_{cA}+R_{sd}+R_{cB} \\
+&=\frac{R_{ct}}{A_{ct}}
+	\end{align}
+\end{subequations}
+式中，$R_{cA}$是导体A和焊接层之间的接触电阻，$R_{cB}$是导体B和焊接层之间的接触电阻。
+$R_{ct}$是接触电阻，单位为$[\Omega m^2]$，$A_{ct}=a\ell_{sp}$是接触面积。
+如果焊接剂“湿润”了各导体的表面，则假设$R_{cA}\simeq R_{cB}\simeq 0$是合理的，至少假设
+$R_{cA}\simeq R_{cB}\ll R_{sd}$是合理的：
+\begin{align*}% 7.9c
+R_{sp}=\frac{R_{ct}}{A_{ct}}\simeq R_{sd} \tag{7.9c}
+\end{align*}
+通过令$\ell_{sp}$足够长，$R_{sp}$可以任意小。联立7.8和7.9c，有：
+\begin{align}% 7.10
 R_{ct}\simeq\rho_{sd}\delta_{sd}
-\end{equation}
+\end{align}
+因此，我们可以选择低电阻率焊料来实现“小”$R_{ct}$。同样重要的是，最小化$\delta_{sd}$，一定不要超过10-50 $\mu$m。
+实际上，如果使用“超导”焊料，则$R_{ct}$为零，只要这种接头工作在低场区，并提供了足够电流传输面积$a\ell_{sp}$。
+利用超导焊料，可以制作$\mathrm{p\Omega}$数量级的超导接头。
+这种接头必须工作于低场($\le 1$ T)和深冷($\le 9$ K)环境中，要有足够的接触面积以便在接头承载工作电流时保持焊料超导。
 
+表7.1列出了所选锡铅焊料的$R_{ct}$值。$R_{ct}$是磁场依赖的，随B线性增加。
+在一些数据中，在0和1T之间观察到了非线性。这些数据仅作为一般指南给出。
+在涉及大型磁体的项目中，接头电阻是一个重要的设计问题，明智的做法是根据实测值确定。
+
+
+表7.1.。。。。。。。。。。。。。。。。。。
+
+表7.2.。。。。。。。。。。。。。。。。。。
+
+表7.2列出了Fujishiro[7.21]给出In和六种常用合金焊料的零场电阻率 vs. 温度的数据。
+其中，$T_{sl}$和$T_{lq}$分别是固相线和液相线温度。(这些温度的差异越小，焊接越容易；当$T_{sl} = T_{lq}$时，
+合金具有明确的熔点。）如表中所示，这些常见的焊料合金可在4.2 K以上超导；$T_c$是零场临界温度[4.41,4.42,7.20]。
 
 \subsubsection*{机械接触开关}
+对于某些应用，使用机械接触开关比使用热激活持续电流开关(persistent current switch, PCS)更有利。
+铜或涂铟铜表面之间的机械接触电阻虽然很小，但在4.2 K时也不超导[7.22]。
+最近，Sawa等研究了利用工作在77 K的HTS块盘之间的机械接触构建机械接触开关[7.23,7.24]。
+尽管在77 K下明显不超导，但如果在低于10 K的温度下运行，且用涂有超导焊料的HTS块材盘，
+则可以实现超导机械接触开关的盘到盘超导接触。
 
 \subsection{机械扰动}
+
 
 \subsubsection*{导体移动和矫正}
 \begin{equation}% 7.11
