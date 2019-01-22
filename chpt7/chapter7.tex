@@ -827,7 +827,7 @@ e_{hy}&=\mu_o\oint-M(H_e)dH_e \\
 \begin{align*}% 7.20a两个
 e_{hy}=&2\mu_o\int_{0}^{H_m}\big[\left(H_e-\frac{H_{e}^{2}+2H_mH_e-H_{m}^{2}}{4H_p}\right) \\
 &-\left(H_e+\frac{H_{e}^{2}-2H_mH_e-H_{m}^{2}}{4H_p}\right)\big]dH_e \\
-&=2\mu_o\int_{0}^{H_m}\left(-\frac{H_{e}^{2}}{2H_p}+\frac{H_{m}^{2}}{2H_p}\right)dH_e=2\mu_o\left(-\frac{H_{m}^{3}}{6H_p}+\frac{H_{m}^{3}}{2H_p}\right)
+=&2\mu_o\int_{0}^{H_m}\left(-\frac{H_{e}^{2}}{2H_p}+\frac{H_{m}^{2}}{2H_p}\right)dH_e=2\mu_o\left(-\frac{H_{m}^{3}}{6H_p}+\frac{H_{m}^{3}}{2H_p}\right)
 \end{align*}
 所以，
 \begin{align*}
@@ -847,10 +847,10 @@ e_{hy}=-2\mu_o\int_{0}^{H_m}\{[M(H_e)]_{H_e=0\rightarrow H_m}-[M(H_e)]_{H_e=H_m\
 由5.6给出，7.21的积分包括两个部分。将7.17b、5.6和5.7a代入7.21，有：
 \begin{align*}% page427倒数第二个
 e_{hy}=&2\mu_o\{\int_{0}^{2H_p-H_m}\left[-\frac{1}{2}H_p+(H_m+H_e)-\frac{(H_m+H_e)^2}{4H_p}\right]dH_e \\
-&+\int_{2H_p-H_m}^{H_m}\frac{1}{2}H_pdH_e-\int_{0}^{H_m}\left[\frac{1}{2}H_p-(H_m-H_e)+\frac{(H_m-H_e)^2}{4H_p}\right]\}dH_e
-=&2\mu_o\{\int_{0}^{2H_p-H_m}\left[-\frac{1}{2}H_p+H_m+H_e-\frac{H_{m}^{2}}{4H_p}-\frac{H_mH_e}{2H_p}-\frac{H_{e}^{2}}{4H_p}\right]dH_e 
-&+H_p(H_m-H_p)-\int_{0}^{H_m}\left[\frac{1}{2}H_p-H_m+H_e+\frac{H_{m}^{2}}{4H_p}-\frac{H_mH_e}{2H_p}+\frac{H_{e}^{2}}{4H_p}\right]\}dH_e 
-=&2\mu_o\big[\left(\frac{1}{3}H_{p}^{3}+\frac{1}{2}H_pH_m-\frac{1}{2}H_{m}^{2}+\frac{H_{m}^{3}}{12H_p}\right)\big] 
+&+\int_{2H_p-H_m}^{H_m}\frac{1}{2}H_pdH_e-\int_{0}^{H_m}\left[\frac{1}{2}H_p-(H_m-H_e)+\frac{(H_m-H_e)^2}{4H_p}\right]\}dH_e\\
+=&2\mu_o\{\int_{0}^{2H_p-H_m}\left[-\frac{1}{2}H_p+H_m+H_e-\frac{H_{m}^{2}}{4H_p}-\frac{H_mH_e}{2H_p}-\frac{H_{e}^{2}}{4H_p}\right]dH_e \\
+&+H_p(H_m-H_p)-\int_{0}^{H_m}\left[\frac{1}{2}H_p-H_m+H_e+\frac{H_{m}^{2}}{4H_p}-\frac{H_mH_e}{2H_p}+\frac{H_{e}^{2}}{4H_p}\right]\}dH_e \\
+=&2\mu_o\big[\left(\frac{1}{3}H_{p}^{3}+\frac{1}{2}H_pH_m-\frac{1}{2}H_{m}^{2}+\frac{H_{m}^{3}}{12H_p}\right)\big] \\
 =&2\mu_o\left(-\frac{2}{3}H_{p}^{2}+H_pH_m\right) 
 \end{align*}
 于是，
@@ -870,11 +870,11 @@ e_{hy}=2\mu_oH_pH_m\left(1-\frac{2H_p}{3H_m}\right) \quad (H_m\geq 2H_p) \tag{7.
 7.21的积分包括三个部分：
 \begin{align*}% page428 7.21和7.20c合成的
 e_{hy}=&2\mu_o\int_{0}^{H_m}\{-[M(H_e)]_{H_e=0\rightarrow H_m}+[M(H_e)]_{H_e=H_m\rightarrow 0}\}dH_e \\\tag{7.21}
-=&2\mu_o\{\int_{0}^{H_m}\frac{1}{2}H_pdH_e 
+=&2\mu_o]\big\{\int_{0}^{H_m}\frac{1}{2}H_pdH_e 
 -\int_{H_m-2H_p}^{H_m}\left[\frac{1}{2}H_p-(H_m-H_e)+\frac{(H_m-H_e)^2}{4H_p}\right]\\
-&-\int_{0}^{H_m-2H_p}(-\frac{1}{2}H_p)\}dH_e\\ 
+&-\int_{0}^{H_m-2H_p}(-\frac{1}{2}H_p)\big\}dH_e\\ 
 =&2\mu_o\big[H_p(H_m-H_p)\\ 
-&+\int_{H_m-2H_p}^{H_m}\left(-\frac{1}{2}H_p+H_m-\frac{H_{m}^{2}}{4H_p}-H_e+\frac{H_mH_e}{2H_p}-\frac{H_{e}^{2}}{4H_p}\right)dH_e\big] 
+&+\int_{H_m-2H_p}^{H_m}\left(-\frac{1}{2}H_p+H_m-\frac{H_{m}^{2}}{4H_p}-H_e+\frac{H_mH_e}{2H_p}-\frac{H_{e}^{2}}{4H_p}\right)dH_e\big] \\
 =&2\mu_o[H_p(H_m-H_p)+\frac{1}{3}H_{p}^{2}]
 \end{align*}
 \begin{align*}
@@ -964,7 +964,9 @@ $H_s(0)= H_m^* -H_p i$，$H_s(\xi_0)= H_m^* + H_p i$；
 
 
 
-\subsection{问题7.4：磁滞能量密度——载有直流电流的Bean板}
+\subsection{问题7.4：磁滞能量密度——载有直流电流的Bean板(情况4i--6i)}
+
+
 \begin{equation}% 7.22a
 e_{hy}=\frac{7\mu_oH_{m}^{3}}{24H_p}      [0\leq H_m\leq H_p(1-i)]
 \end{equation}
