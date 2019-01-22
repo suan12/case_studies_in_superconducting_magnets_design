@@ -608,8 +608,8 @@ E_z(0)=\mu_oa\frac{dH_e}{dt}  \tag{S2.5}
 \end{align*}
 方程7.3b等号右侧的第一部分坡印廷能量密度$e_{py1''}$于是可以写成：
 \begin{align*}% page420 2.4b两个
-e_{pyq^{\prime\prime}}\equiv\frac{1}{a}\int\left[-\int_{S}\vec{E}(x)\times\vec{H}_e\cdot d\vec{\ \mathcal{A}}\right]dt=\mu_o\int_{H_p}^{H_m}H_edH_e\\
-e_{pyq^{\prime\prime}}=\frac{1}{2}\mu_o(H_{m}^{2}-H_{p}^{2}) \tag{S2.4b}
+e_{pyq^{\prime\prime}}\equiv\frac{1}{a}&\int\left[-\int_{S}\vec{E}(x)\times\vec{H}_e\cdot d\vec{\ \mathcal{A}}\right]dt=\mu_o\int_{H_p}^{H_m}H_edH_e\\
+&e_{pyq^{\prime\prime}}=\frac{1}{2}\mu_o(H_{m}^{2}-H_{p}^{2}) \tag{S2.4b}
 \end{align*}
 在第二个场序列$H_e=H_m\rightarrow 0$时，$E_z(0)$和方程S1.5b给出的相同；
 对应的坡印廷能量密度$e_{py2}$于是可由方程S1.6b给出：
@@ -623,8 +623,8 @@ e_{py2}=-\frac{\mu_oH_{m}^{3}}{12H_p} \tag{S1.6b}
 和方程S1.8的积分是从$x=0$到$x=x_0=H_m/2J_c$是重叠的不同，此处的积分必须在$x=0\rightarrow x_0$
 和$x_0\rightarrow a$两个区间(图7.3b)分别进行：
 \begin{align*}% page421 S2.7两个
-e_{m_f}=\frac{\mu_o}{2a}\int_{0}^{a}H_{s}^{2}(x)dx=\frac{\mu_o}{2a}\left[\int_{0}^{\frac{H_m}{2J_c}}J_{c}^{2}x^2dx+\int_{\frac{H_m}{2J_c}}^{a}(H_m-J_cx)^2dx\right]\\
-e_{m_f}=\frac{1}{2}\mu_oH_{m}^{2}-\frac{\mu_oH_{m}^{3}}{8H_p}-\frac{1}{2}\mu_oH_mH_p+\frac{1}{6}\mu_oH_{p}^{2}\tag{S2.7}
+e_{m_f}&=\frac{\mu_o}{2a}\int_{0}^{a}H_{s}^{2}(x)dx=\frac{\mu_o}{2a}\left[\int_{0}^{\frac{H_m}{2J_c}}J_{c}^{2}x^2dx+\int_{\frac{H_m}{2J_c}}^{a}(H_m-J_cx)^2dx\right]\\
+e_{m_f}&=\frac{1}{2}\mu_oH_{m}^{2}-\frac{\mu_oH_{m}^{3}}{8H_p}-\frac{1}{2}\mu_oH_mH_p+\frac{1}{6}\mu_oH_{p}^{2}\tag{S2.7}
 \end{align*}
 联立7.3b、S2.4a、S2.4b、S1.6b和S2.7，我们得到情况3下的$e_{hy}$：
 \begin{align*}% page421 S2.8一个
@@ -665,6 +665,12 @@ e_{hy}=\frac{1}{2}\mu_oH_pH_m\left(1-\frac{4H_p}{3H_m}\right)     (H_m\geq 2H_p)
 e_{hy}=\mu_oH_pH_m\left(1-\frac{H_p}{H_m}\right)      (H_m\geq 2H_p)
 \end{equation}
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.7]{chpt7/figs/fig7.12.eps}
+	\caption{“大”磁场激励下的$-M(H_e)$。$H_m\le 2H_p=2J_c a$。}
+\end{figure}
+
 \subsubsection{问题7.3之解}
 
 \begin{equation}% 7.15b
@@ -702,6 +708,12 @@ e_{hy}=\mu_oH_pH_m\left(1-\frac{H_p}{H_m}\right)
 -M(H_e)=-\frac{1}{2}H_p
 \end{equation}
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.7]{chpt7/figs/fig7.13.eps}
+	\caption{−M(He) plots from −Hm to Hm: dash-dotted; dashed; and solid lines
+		correspond, respectively, to “small,” “medium,” and “large” field excursions。}
+\end{figure}
 
 \begin{equation}% page425 S1.1b
 E_z(x)dt=\mu_oH(x_+-x)dH_e
@@ -794,6 +806,34 @@ e_{hy}=2\mu_oH_pH_m   (H_m\gg H_p)
 \end{equation}
 
 \subsection{讨论7.2：载有直流电流的Bean板}
+
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.7]{chpt7/figs/fig7.14.eps}
+	\caption{Graphs of Hs(x) plots for a Bean slab of width 2a carrying DC transport
+		current of It(=2iHp), subjected to He(t) of Cases 1i and 2i, where Hm is the maximum
+		external field. 。}
+\end{figure}
+
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.7]{chpt7/figs/fig7.15.eps}
+	\caption{Hs(x) plots for Cases 4i and
+		5i, in which Hm ≤ Hp(1−i). 。}
+\end{figure}
+
+
+
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.7]{chpt7/figs/fig7.16.eps}
+	\caption{Hs(x) plots for Cases 4i and
+		5i, in which Hm ≥ 2Hp(1−i). 。}
+\end{figure}
+
 
 
 \subsection{问题7.4：磁滞能量密度——载有直流电流的Bean板}
@@ -920,6 +960,13 @@ e_{sf}=\frac{1}{24}\mu_oH_{p}^{2}i_{m}^{3}
 e_{sf}=\frac{2}{3}\mu_oH_{p}^{2}i_{m}^{3}
 \end{equation}
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.7]{chpt7/figs/fig7.17.eps}
+	\caption{Hs(x) plots for Cases 1sf and 2sf, 。}
+\end{figure}
+
+
 \subsubsection{问题7.5之解}
 \begin{align*}% page437 S5.1a和S5.1b
 e_{sfx}&=\frac{\mu_oJ_c}{2a}\int_{0}^{-H_pi_m}\left[\int_{0}^{x_+}(x-x_+)dx\right]dH_{sf} \\
@@ -960,13 +1007,25 @@ e_{hy}=\frac{2\mu_oH_{m}^{3}}{3H_p}
 =\frac{2}{3}\mu_oH_{p}^{2}i_{m}^{3}
 \end{equation}
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.7]{chpt7/figs/fig7.18.eps}
+	\caption{He(t) functions for coupling and eddy-current energy densities. 。}
+\end{figure}
+
 
 \subsection{讨论7.3：磁体整体的交流损耗}
+
 
 
 \subsection{讨论7.4：测量交流损耗的技术}
 
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.7]{chpt7/figs/fig7.19.eps}
+	\caption{Schematic drawing of a cross section, based on the original drawing。}
+\end{figure}
 
 
 \subsection{讨论7.5：CICC中的交流损耗}
@@ -979,6 +1038,12 @@ e_{hy}=\frac{2\mu_oH_{m}^{3}}{3H_p}
 
 
 \subsection{问题7.6：$Nb_3Sn$中的磁滞损耗}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.7]{chpt7/figs/fig7.20.eps}
+	\caption{...。}
+\end{figure}
 
 
 \subsubsection{问题7.6之解}
@@ -1008,7 +1073,11 @@ aJ_{c_o}\leq\sqrt{\frac{3\tilde{C}_s(T_c-T_{op})}{\mu_o}}
 
 
 \subsection{问题7.7：混合III SCM中的交流损耗}
-
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.7]{chpt7/figs/fig7.21.eps}
+	\caption{Burst disk (with diffuser) arrangement for HybridIII cryostat。}
+\end{figure}
 
 
 
@@ -1106,6 +1175,16 @@ P_{sp}=R_{sp}I_{op}^{2}=(64\times 10^{-9}\ \mathrm{\Omega})(2.1\times 10^3\ \mat
 
 
 \subsection{讨论7.8：持续模式运行\&“指数”}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.7]{chpt7/figs/fig7.22.eps}
+	\caption{Basic circuit diagram for a persistent-mode superconducting magnet。}
+\end{figure}
+
+
+
+
 \begin{equation}% page457 6.25b
 E_s=E_c\left(\frac{J_s}{J_c}\right)^n
 \end{equation}
@@ -1131,5 +1210,10 @@ n=\frac{\ln(V_2/V_1)}{\ln(I_2/I_1)}
 
 
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.7]{chpt7/figs/fig7.23.eps}
+	\caption{Typical V vs. I trace from which to determine an index number.。}
+\end{figure}
 
 
