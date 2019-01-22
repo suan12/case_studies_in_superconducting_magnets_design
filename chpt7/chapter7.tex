@@ -380,101 +380,156 @@ Arai在用Bi2223缠绕的实验饼式线圈中检测到了热诱导的AE信号[7
 
 \section{专题}
 \subsection{问题7.1：磁滞能量密度——在“小”磁场时间序列的“无染”Bean板}
-
-\begin{equation}% 5.5
--M(H_e)=H_e-\frac{H_{e}^{2}}{2H_p}        (H_e=0*\rightarrow H_m\leq H_p)
-\end{equation}
+考虑一个宽$2a$的“无染”Bean板，置于情况1所述的增长磁场序列中，$H_e=0*\rightarrow H_m\le H_p$(“小”磁场)，
+其中$0*$表示Bean板是“无染”的，$H_p=J_c a$。
+而后，将之置于如情况2所述的降低磁场序列中，$H_e=H_m\rightarrow 0$。
+情况3的磁场序列就是情况1后紧随情况2。
+情况1的$-M(H_e)$如方程5.5，情况2相应的被修正为方程5.7：
+\begin{align*}% 5.5
+-M(H_e)=H_e-\frac{H_{e}^{2}}{2H_p} \quad (H_e=0*\rightarrow H_m\leq H_p) \tag{5.5}
+\end{align*}
 \begin{equation}% 7.12
--M(H_e)=H_e+\frac{H_{e}^{2}-2H_mH_e-H_{m}^{2}}{4H_p}      (H_e=H_m\rightarrow 0)
+-M(H_e)=H_e+\frac{H_{e}^{2}-2H_mH_e-H_{m}^{2}}{4H_p}   \quad   (H_e=H_m\rightarrow 0)
 \end{equation}
-\begin{equation}% 7.13a
-e_{hy}=\frac{\mu_oH_{m}^{3}}{6H_p}        (0\leq H_m\leq H_p)
-\end{equation}
-\begin{equation}% 7.14a
-e_{hy}=\frac{\mu_oH_{m}^{3}}{24H_p}       (0\leq H_m\leq H_p)
-\end{equation}
+
+图7.10给出了上面两个方程的$-M(H_e)$。
+
+a) 对半板($0\le x\le a$)应用7.13，证明情况1$H_e=0*\rightarrow H_m$下的$e_{hy}$为：
+\begin{align*}% 7.13a
+e_{hy}=\frac{\mu_oH_{m}^{3}}{6H_p}  \quad      (0\leq H_m\leq H_p) \tag{7.13b}
+\end{align*}
+
+b) 类似的，对半板($0\le x\le a$)应用7.13，证明情况2$H_e=H_m\rightarrow 0$下的$e_{hy}$为：
+\begin{align}% 7.14a
+e_{hy}=\frac{\mu_oH_{m}^{3}}{24H_p}  \quad     (0\leq H_m\leq H_p)
+\end{align}
+
+c) 使用7.3b，证明情况3$H_e=0*\rightarrow H_m\rightarrow 0$下的$e_{hy}$显然为方程7.13和7.14之和：
 \begin{equation}% 7.15a
 e_{hy}=\frac{5\mu_oH_{m}^{3}}{24H_p}      (0\leq H_m\leq H_p)
 \end{equation}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt7/figs/fig7.10.eps}
+	\caption{“小”磁场激励($H_m\le H_p$)下的$-M(H_e)$。序列A开始于原点，即“无染”Bean板。}
+\end{figure}
 
 \subsubsection{问题7.1之解}
-\begin{equation}% page416 1
-E_z(x)=\mu_o\frac{dH_e}{dt}(x_+-x)
-\end{equation}
-\begin{equation}% page416 2
-E_z(x)dt=\mu_o(x_+-x)dH_e
-\end{equation}
-\begin{equation}% page416 3 and 4
-e_{hy}=\frac{1}{a}\int_{0}^{a}\left[\int J_cE(x)dt\right]dx 
-=\frac{\mu_oF_c}{a}\int_{0}^{H_m}\left[\int_{0}^{x_+(x_+-x)dx}\right]dH_e
-\end{equation}
-\begin{equation}% page416 5 and 6
-e_{hy}=\frac{\mu_oJ_c}{a}\int_{0}^{H_m}\left(x_{+}^{2}-\frac{x_{+}^{2}}{2}\right)dH_e 
-=\frac{\mu_oJ_c}{a}\int_{0}^{H_m}\frac{H_{e}^{2}}{2J_{c}^{2}}dH_e=\frac{\mu_oH_{m}^{3}}{6aJ_c}
-\end{equation}
-\begin{equation}% 7.13a
-e_{hy}=\frac{\mu_oH_{m}^{3}}{6H_p}    (H_m\leq H_p)
-\end{equation}
-\begin{equation}% page416 S1.3
-E_z(x)dt=\mu_o(x-x_-)dH_e
-\end{equation}
-\begin{align*}% page416 S1.4
-e_{hy}&=\frac{\mu_oJ_c}{a}\int_{H_m}^{0}\left[\int_{0}^{x_-}(x-x_-)dx\right]dH_e=\frac{\mu_oJ_c}{a}\int_{H_m}^{0}\left(\frac{x_{-}^{2}}{2}-x_{-}^{2}\right)dH_e \\\notag
-&=\frac{\mu_oJ_c}{a}\int_{H_m}^{0}\frac{(H_m-H_e)^2}{8J_{c}^{2}}dH_e=\frac{\mu_oH_{m}^{3}}{24aJ_c}
+a) 在增长磁场序列$H_e=0*\rightarrow H_m$下，首先找到当外场增加过程中的$E_z(x)dt$的表达式。
+板内的$H_s(x)$如图7.2a中的实线所示。板内的$x=0$和$x=x_+(=H_e/J_c)$之间，因磁场变化$dH_e/dt$引起的$E_z(x)$
+可以表示为：
+\begin{align*}% page416 1
+E_z(x)=\mu_o\frac{dH_e}{dt}(x_+-x) \tag{S1.1a}
 \end{align*}
-\begin{equation}% 7.14a
-e_{hy}=\frac{\mu_oH_{m}^{3}}{24H_p}       (0\leq H_m\leq H_p)
-\end{equation}
-\begin{equation}% page417 S1.5a
-E_z(0)=\mu_o\frac{H_e}{J_c}\left(\frac{dH_e}{dt}\right)
-\end{equation}
-\begin{equation}% page417 S1.6a两个
-e_{py1}\equiv\frac{1}{a}\int\left[-\int_{S}\vec{E}(x)\times\vec{H}_e\cdot d\vec{\ \mathcal{A}}\right]dt=\frac{\mu_o}{aJ_c}\int_{0}^{H_m}H_{e}^{2}dH_e
-e_{py1}=\frac{\mu_oH_{m}^{3}}{3H_p}
-\end{equation}
-\begin{equation}% page417 S1.5b
-E_z(0)=-\mu_o\left(\frac{H_m-H_e}{2J_c}\right)\frac{dH_e}{dt}
-\end{equation}
-\begin{equation}% page417 S1.6b两个
-e_{py2}=\frac{\mu_o}{2aJ_c}\int_{H_m}^{0}(H_m-H_e)H_edH_e
-e_{py2}=-\frac{\mu_oH_{m}^{3}}{12H_p}
-\end{equation}
-\begin{equation}% page417 S1.7a
-H_s(x)=J_cx        (0\leq x\leq x_0)
-\end{equation}
-\begin{equation}% page417 S1.7b
-H_s(x)=H_m-J_cx    (x_0\leq x\leq H_m/J_c)
-\end{equation}
-\begin{equation}% page417 S1.8
-e_{m_f}=\frac{\mu_o}{2a}\int_{0}^{a}H_{s}^{2}(x)dx=\frac{\mu_o}{2a}\left(2\times\int_{0}^{\frac{H_m}{2J_c}}J_{c}^{2}x^2dx\right)
-e_{m_f}=\frac{\mu_oH_{m}^{3}}{24H_p}
-\end{equation}
-\begin{equation}% 7.15a两个
-e_{hy}=e_{py1}+e_{py2}-e_{m_f} 
-=\frac{\mu_oH_{m}^{3}}{3H_p}-\frac{\mu_oH_{m}^{3}}{12H_p}-\frac{\mu_oH_{m}^{3}}{24H_p}
-e_{hy}=\frac{5\mu_oH_{m}^{3}}{24H_p}       (0\leq H_m\leq H_p)
-\end{equation}
-\begin{equation}% page418 S1.9
-e_{py}=e_{hy}+e_{m_f}-e_{m_i}
-\end{equation}
-
-
-\begin{align*}% page418 S1.10两个
-e_{m_{f1}}&=\frac{\mu_o}{2a}\int_{0}^{a}H_{s}^{2}(x)dx \\\notag
-&=\frac{\mu_o}{2a}\left[\int_{0}^{\frac{H_m}{J_c}}(H_m-J_cx)^2dx\right]
+\begin{align*}% page416 2
+E_z(x)dt=\mu_o(x_+-x)dH_e \tag{S1.1b}
+\end{align*}
+对前半板应用方程7.3a和S1.1b，有：
+\begin{align*}% page416 3 and 4
+e_{hy}=\frac{1}{a}\int_{0}^{a}\left[\int J_cE(x)dt\right]dx \tag{S1.2a}
 \end{align*}
 \begin{align*}
-e_{m_{f1}}=\frac{\mu_oH_{m}^{3}}{6H_p}
+=\frac{\mu_oF_c}{a}\int_{0}^{H_m}\left[\int_{0}^{x_+(x_+-x)dx}\right]dH_e \tag{S1.2b}
+\end{align*}
+在方程S1.2b中，因为$x_+$依赖于$H_e$，积分顺序和S1.2a相反。方程S1.2b成为：
+\begin{align*}% page416 5 and 6
+e_{hy}=\frac{\mu_oJ_c}{a}\int_{0}^{H_m}\left(x_{+}^{2}-\frac{x_{+}^{2}}{2}\right)dH_e  \tag{S1.2c}
+\end{align*}
+\begin{align*}
+=\frac{\mu_oJ_c}{a}\int_{0}^{H_m}\frac{H_{e}^{2}}{2J_{c}^{2}}dH_e=\frac{\mu_oH_{m}^{3}}{6aJ_c} \tag{S1.2d}
+\end{align*}
+\begin{equation}% 7.13a
+e_{hy}=\frac{\mu_oH_{m}^{3}}{6H_p} \quad   (H_m\leq H_p) \tag{7.13a}
+\end{equation}
+$e_{hy}\propto H_m^3$；也即，在“小”磁场激励下，$e_{hy}$以$H_m$的三次方增加；这已被很多实验所验证。
+
+b) 在降低的磁场序列$H_e=H_m\rightarrow 0$中，$E_z(x)$由下式给出：
+\begin{align*}% page416 S1.3
+E_z(x)dt=\mu_o(x-x_-)dH_e \tag{S1.3}
+\end{align*}
+式中，$x_-=(H_m-H_e)/2J_c$，如图7.3a所示。所以，$e_{hy}$为：
+\begin{align*}% page416 S1.4
+e_{hy}&=\frac{\mu_oJ_c}{a}\int_{H_m}^{0}\left[\int_{0}^{x_-}(x-x_-)dx\right]dH_e=\frac{\mu_oJ_c}{a}\int_{H_m}^{0}\left(\frac{x_{-}^{2}}{2}-x_{-}^{2}\right)dH_e \\\tag{S1.4}
+&=\frac{\mu_oJ_c}{a}\int_{H_m}^{0}\frac{(H_m-H_e)^2}{8J_{c}^{2}}dH_e=\frac{\mu_oH_{m}^{3}}{24aJ_c}
+\end{align*}
+\begin{align*}% 7.14a
+e_{hy}=\frac{\mu_oH_{m}^{3}}{24H_p}  \quad     (0\leq H_m\leq H_p) \tag{7.14a}
+\end{align*}
+在降低的磁场序列中，$e_{hy}$是增长磁场序列的$1/4$。
+根据图7.2a和7.3a，这是因为情况1中$E_z$是在$x=0$和$x_m=H_m/J_c$之间感应出的，而在情况2中，
+是在$x=0$和$x_0=H_m/2J_c$之间感应出的；此时仍有$e_{hy}\propto H_m^3$。
+
+c) 板中的E场，由它的下标$z$可知，是指向$z$向的。特别的，当$H_e(t)$指向$+y$向时，E指向$-z$向。
+这样，在板表面($x=0$)，坡印廷矢量$\vec{S}$指向$+x$向，因为在第一个序列$H_e=0*\rightarrow H_m$下，
+能量从外部空间进入板内，被储存和耗散。在第一个序列中，$E_z(0)$由S1.1b给出($x_+=H_e/J_c$)：
+\begin{align*}% page417 S1.5a
+E_z(0)=\mu_o\frac{H_e}{J_c}\left(\frac{dH_e}{dt}\right) \tag{S1.5a}
+\end{align*}
+方程7.3b的右侧第一项是情况1的坡印廷能量密度$e_{py1}$，可以写成：
+\begin{align*}% page417 S1.6a两个
+e_{py1}\equiv\frac{1}{a}\int\left[-\int_{S}\vec{E}(x)\times\vec{H}_e\cdot d\vec{\ \mathcal{A}}\right]dt=\frac{\mu_o}{aJ_c}\int_{0}^{H_m}H_{e}^{2}dH_e\\
+e_{py1}=\frac{\mu_oH_{m}^{3}}{3H_p} \tag{S1.6a}
+\end{align*}
+情况2中，$E_z(0)$由方程S1.3给出，此时$x_-=(H_m-H_e)/2J_c$：
+\begin{align*}% page417 S1.5b
+E_z(0)=-\mu_o\left(\frac{H_m-H_e}{2J_c}\right)\frac{dH_e}{dt} \tag{S15.b}
+\end{align*}
+于是，情况2的坡印廷能量密度$e_{py2}$为：
+\begin{align*}% page417 S1.6b两个
+e_{py2}=\frac{\mu_o}{2aJ_c}\int_{H_m}^{0}(H_m-H_e)H_edH_e\\
+e_{py2}=-\frac{\mu_oH_{m}^{3}}{12H_p} \tag{S1.6b}
+\end{align*}
+方程S1.6b中的$-$号表示$e_{py2}$是流回源的。在整个序列结束$H_e=0*\rightarrow H_m\rightarrow 0$(情况3)的时候，
+有方程7.12可知，$-M(0)=-H_m^2/4H_p$：
+板通过$H_s(x)$储存的磁场(或磁化)能量密度$e_{m_f}$为($x_0=H_m/2J_c$)：
+\begin{align*}% page417 S1.7a
+H_s(x)=J_cx  \quad      (0\leq x\leq x_0) \tag{S1.7a}
+\end{align*}
+\begin{align*}% page417 S1.7b
+H_s(x)=H_m-J_cx  \quad  (x_0\leq x\leq H_m/J_c) \tag{S1.7b}
+\end{align*}
+使用方程S1.7a和S1.7b，我们可以计算$e_{m_f}$：
+\begin{align*}% page417 S1.8
+e_{m_f}=\frac{\mu_o}{2a}\int_{0}^{a}H_{s}^{2}(x)dx&=\frac{\mu_o}{2a}\left(2\times\int_{0}^{\frac{H_m}{2J_c}}J_{c}^{2}x^2dx\right)\\
+e_{m_f}&=\frac{\mu_oH_{m}^{3}}{24H_p} \tag{S1.8}
+\end{align*}
+联立7.3b/S1.6a/S1.6b/S1.8，我们得到情况3的$e_{hy}$：
+\begin{align*}% 7.15a两个
+e_{hy}&=e_{py1}+e_{py2}-e_{m_f} \\
+&=\frac{\mu_oH_{m}^{3}}{3H_p}-\frac{\mu_oH_{m}^{3}}{12H_p}-\frac{\mu_oH_{m}^{3}}{24H_p}\\
+e_{hy}&=\frac{5\mu_oH_{m}^{3}}{24H_p}   \quad    (0\leq H_m\leq H_p) \tag{7.15a}
 \end{align*}
 
+\textbf{能流}
 
+这里我们检视一下在各磁场序列过程中从源到板的能流。每一个过程中，能量密度必须平衡：
+\begin{align*}% page418 S1.9
+e_{py}=e_{hy}+e_{m_f}-e_{m_i} \tag{S1.9}
+\end{align*}
+式中，$e_{m_f}$和$e_{m_i}$分别是板中终了和初始时的磁场能密。
+本质上，S1.9和7.2是一样的。
 
-\begin{equation}% page418 S1.11a
-e_{py1}=\frac{\mu_oH_{m}^{3}}{6H_p}+\frac{\mu_oH_{m}^{3}}{6H_p}=\frac{\mu_oH_{m}^{3}}{3H_p}
-\end{equation}
-\begin{equation}% page418 S1.11b
-e_{py2}=\frac{\mu_oH_{m}^{3}}{24H_p}+\frac{\mu_oH_{m}^{3}}{24H_p}-\frac{\mu_oH_{m}^{3}}{6H_p}=\frac{\mu_oH_{m}^{3}}{12H_p}
-\end{equation}
+在第一个序列中，$e_{py}=e_{py1}$(方程S1.6a)，$e_{hy}$(方程7.13a)，$e_{m_i}=0$(因为板处于“无染”态)和$e_{m_{f1}}$
+可以由$H_s(x)=H_m-J_c x$计算：
+\begin{align*}% page418 S1.10两个
+e_{m_{f1}}&=\frac{\mu_o}{2a}\int_{0}^{a}H_{s}^{2}(x)dx \\
+&=\frac{\mu_o}{2a}\left[\int_{0}^{\frac{H_m}{J_c}}(H_m-J_cx)^2dx\right]\\
+e_{m_{f1}}&=\frac{\mu_oH_{m}^{3}}{6H_p} \tag{S1.10}
+\end{align*}
+将7.13a和S1.10代入S1.9的右侧，有：
+\begin{align*}% page418 S1.11a
+e_{py1}=\frac{\mu_oH_{m}^{3}}{6H_p}+\frac{\mu_oH_{m}^{3}}{6H_p}=\frac{\mu_oH_{m}^{3}}{3H_p} \tag{S1.11a}
+\end{align*}
+方程S1.11a中的$e_{py1}$和方程S1.6a中的是一致的，表明在第一个过程中能量密度流是平衡的。
+
+我们还可以检视第二个过程$H_e=H_m\rightarrow 0$的能量平衡。这个过程中，S1.9方程右侧需要出现的能量密度是：
+$e_{hy}$(方程7.14a),$e_{m_f}$(方程S1.8)和$e_{m_i}=e_{m_{f1}}$(方程S1.10)：
+\begin{align*}% page418 S1.11b
+e_{py2}=\frac{\mu_oH_{m}^{3}}{24H_p}+\frac{\mu_oH_{m}^{3}}{24H_p}-\frac{\mu_oH_{m}^{3}}{6H_p}=\frac{\mu_oH_{m}^{3}}{12H_p} \tag{S1.11b}
+\end{align*}
+方程S1.11b中的$e_{py2}$等于方程S1.6b中的$e_{py2}$，表明在第二个过程中S1.9的能量平衡是成立的。
+如前所述，$-$号表明在第二个过程中存在由板向源的净能量流：
+这个能流密度加上磁滞能量流密度对应板中储存磁能的净减少量。
 
 
 \subsection{问题7.2：磁滞能量密度——在“中”磁场时间序列的“纯”Bean板}
