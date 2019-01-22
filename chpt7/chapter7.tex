@@ -651,19 +651,33 @@ e_{hy}=&\frac{1}{2}\mu_oH_pH_m\left[1-\frac{2H_p}{3H_m}+\frac{1}{12}\left(\frac{
 
 
 \subsection{问题7.3：磁滞能量密度——在“大”磁场时间序列的“纯”Bean板}
+对于“大”场激励，这里特指$H_m]\ge 2H_p= 2J_c a$，增加场序列中的磁化曲线$H_e = 0*\rightarrow H_m$
+基本上与问题7.2中研究的“中”场激励的磁化曲线相同， 因此，在情况1和3的增加场范围内的$e_{hy}$由7.13b给出。
 
+情况2的场的$-M(H_e)$分别由5.7a和5.7b给出，第一部分$H_e = H_m\rightarrow (H_m-2H_p)$，第二部分$H_e=(H_m-2H_p)\rightarrow 0$。
+图7.12给出了整个场范围内的$-M(H_e)$。
+
+a) 证明在情况2的第一部分$H_e = H_m\rightarrow (H_m-2H_p)$下的磁滞能量密度$e_{hy2'}$为：
 \begin{equation}% 7.16a
 e_{hy2^\prime}=\frac{1}{3}\mu_oH_{p}^{2}
 \end{equation}
-\begin{equation}% 7.16b
-e_{hy2^{\prime\prime}}=\frac{1}{2}\mu_oH_pH_m\left(1-\frac{2H_p}{H_m}\right)
-\end{equation}
-\begin{equation}% 7.14b
-e_{hy}=\frac{1}{2}\mu_oH_pH_m\left(1-\frac{4H_p}{3H_m}\right)     (H_m\geq 2H_p)
-\end{equation}
-\begin{equation}% 7.15c
-e_{hy}=\mu_oH_pH_m\left(1-\frac{H_p}{H_m}\right)      (H_m\geq 2H_p)
-\end{equation}
+
+b) 证明在情况2的第二部分$H_e=(H_m-2H_p)\rightarrow 0$下的磁滞能量密度$e_{hy2''}$为：
+\begin{align*}% 7.16b
+e_{hy2^{\prime\prime}}=\frac{1}{2}\mu_oH_pH_m\left(1-\frac{2H_p}{H_m}\right) \tag{7.16b}
+\end{align*}
+
+c) 情况2在$H_e=H_m\rightarrow 0$过程中，$e_{hy}$为：
+\begin{align*}% 7.14b
+e_{hy}=\frac{1}{2}\mu_oH_pH_m\left(1-\frac{4H_p}{3H_m}\right)  \quad   (H_m\geq 2H_p) \tag{7.14b}
+\end{align*}
+
+d) 情况3在$H_e=0*\rightarrow H_m\rightarrow 0$过程中，$e_{hy}$为：
+\begin{align*}% 7.15c
+e_{hy}=\mu_oH_pH_m\left(1-\frac{H_p}{H_m}\right) \quad   (H_m\geq 2H_p)
+\end{align*}
+
+e) 证明7.15b和7.15c在$H_m=2H_p$时是自洽的。
 
 \begin{figure}[htbp]
 	\centering
@@ -672,140 +686,218 @@ e_{hy}=\mu_oH_pH_m\left(1-\frac{H_p}{H_m}\right)      (H_m\geq 2H_p)
 \end{figure}
 
 \subsubsection{问题7.3之解}
+a) 如在“小”磁场序列下一样，$E_z(x)$由S1.3给出，其中$x_-=(H_m-H_e)/2J_c$。这样，
+$e_{hy2'}$可由S1.4给出，除了场范围是从$H_m$到$H_m-2H_p$：
+\begin{align*}% 7.16a
+e_{hy2'}=&\frac{\mu_0 J_c}{a}\int_{H_m}^{H_m-2H_p}\left[\int_{0}^{x_-}(x-x_-)dx\right]dH_e=-\frac{\mu_0 J_c}{a}\int_{H_m}^{H_m-2H_p} x_-^2 dH_e\\
+=&-\frac{\mu_0}{8H_p}\int_{H_m}^{H_m-2H_p}(H_m-H_e)^2 dH_e=-\frac{\mu_0}{8H_p}\int_{H_m}^{H_m-2H_p}(H_m^2-2H_mH_e+H_e^2) dH_e\\
+e_{hy2^\prime}=&\frac{1}{3}\mu_oH_{p}^{2} \tag{7.16a}
+\end{align*}
 
-\begin{equation}% 7.15b
-e_{hy}=\frac{1}{2}\mu_oH_pH_m\left[1-\frac{2H_p}{3H_m}+\frac{1}{12}\left(\frac{H_m}{H_p}\right)^2\right]
-=\mu_oH_{p}^{2}\left(1-\frac{1}{3}+\frac{4}{12}\right)=\mu_oH_{p}^{2}
-\end{equation}
-\begin{equation}% 7.15c
-e_{hy}=\mu_oH_pH_m\left(1-\frac{H_p}{H_m}\right) 
-=2\mu_oH_{p}^{2}\left(1-\frac{1}{2}\right)=\mu_oH_{p}^{2}
-\end{equation}
+b) 在$x_-=a$时，S1.3给出$E_z(x)$，S1.4给出$e_{hy2''}$：
+\begin{align*}% 7.16b
+e_{hy2''}=\frac{\mu_0 J_c}{a}\int_{H_m-2H_p}^{0}\left[\int_{0}^{a}(x-a)dx\right]dH_e=\frac{\mu_0J_c}{2a}\int_{H_m-2H_p}^{0}a^2 dH_e\\
+e_{hy2^{\prime\prime}}=\frac{1}{2}\mu_oH_pH_m\left(1-\frac{2H_p}{H_m}\right) \tag{7.16b}
+\end{align*}
 
+c) 将$e_{hy2'}$和$e_{hy2''}$相加：
+\begin{align*}% 7.14b
+e_{hy}&=e_{hy2'}+e_{hy2''}\\
+&=\frac{1}{3}\mu_0 H_p^2 +\frac{1}{2}\mu_0H_p H_m\left(1-\frac{2H_p}{H_m}\right)\\
+e_{hy}&=\frac{1}{2}\mu_oH_pH_m\left(1-\frac{4H_p}{3H_m}\right)  \quad   (H_m\geq 2H_p) \tag{7.14b}
+\end{align*}
 
-\subsection{讨论7.1：磁滞能量密度——磁化的Bean板}
+d) 简单的将7.13b($H_e=0\rightarrow H_m$下的$e_{hy}$)和7.14b相加：
+\begin{align*}% 7.15c
+e_{hy}=\frac{1}{2}\mu_0 H_p H_m\left(1-\frac{2H_p}{3H_m}\right)+\frac{1}{2}\mu_0 H_p H_m\left(1-\frac{4H_p}{3H_m}\right)\\
+e_{hy}=\mu_oH_pH_m\left(1-\frac{H_p}{H_m}\right) \quad   (H_m\geq 2H_p) \tag{7.15c}
+\end{align*}
 
+e) 在$H_m=2H_p$时，7.15b和7.15c均可给出$e_{hy}$：
+\begin{align*}% 7.15b
+e_{hy}=&\frac{1}{2}\mu_oH_pH_m\left[1-\frac{2H_p}{3H_m}+\frac{1}{12}\left(\frac{H_m}{H_p}\right)^2\right]\\\tag{7.15b}
+=&\mu_oH_{p}^{2}\left(1-\frac{1}{3}+\frac{4}{12}\right)=\mu_oH_{p}^{2}
+\end{align*}
+\begin{align*}% 7.15c
+e_{hy}&=\mu_oH_pH_m\left(1-\frac{H_p}{H_m}\right) \\\tag{7.15c}
+&=2\mu_oH_{p}^{2}\left(1-\frac{1}{2}\right)=\mu_oH_{p}^{2}
+\end{align*}
+
+\subsection{讨论7.1：磁滞能量密度——磁化的Bean板(情况4-6)}
+一旦置于外场中，无染的Bean板即使在磁场降至0后，仍有磁化---图7.4a、7.4b和7.4c中的方点线。
+
+对一个如情况4$H_e=0\rightarrow H_m$中的磁化Bean板，$-M(H_e)$为：
+\textbf{“小”}($H_e=0\rightarrow H_m$)
 \begin{equation}% 7.17a
 -M(H_e)=H_e-\frac{H_{e}^{2}+2H_mH_e-H_{m}^{2}}{4H_p}
 \end{equation}
-\begin{equation}% 7.17b
--M(H_e)=-\frac{1}{2}H_p+(H_m+H_e)-\frac{(H_m+H_e)^2}{4H_p}
-\end{equation}
-\begin{equation}% 5.6
--M(H_e)=\frac{1}{2}H_p
-\end{equation}
+
+\textbf{“中”}($H_e=0\rightarrow 2H_p-H_m$)
+\begin{align*}% 7.17b
+-M(H_e)=-\frac{1}{2}H_p+(H_m+H_e)-\frac{(H_m+H_e)^2}{4H_p} \tag{7.17b}
+\end{align*}
+
+\textbf{“中”}($H_e=2H_p-H_m\rightarrow H_m$)和\textbf{“大”}($H_e=0\rightarrow H_m$)
+\begin{align*}% 5.6
+-M(H_e)=\frac{1}{2}H_p \tag{5.6}
+\end{align*}
+
+类似的，对情况5$H_e=H_m\rightarrow 0$，$-M(H_e)$为下面的函数中的一个：
+
+\textbf{“小”}($H_e=H_m\rightarrow 0$)
 \begin{equation}% 7.18
 -M(H_e)=H_e+\frac{H_{e}^{2}+2H_mH_e-H_{m}^{2}}{4H_p}
 \end{equation}
 
+\textbf{“中”}($H_e=H_m\rightarrow 0$)和\textbf{“大”}($H_e=H_m\rightarrow H_m-2H_p$)
+\begin{align*}% 5.7a
+-M(H_e)=\frac{1}{2}H_p-(H_m-H_e)+\frac{(H_m-H_e)^2}{4H_p} \tag{5.7a}
+\end{align*}
 
-\begin{equation}% 5.7a
--M(H_e)=\frac{1}{2}H_p-(H_m-H_e)+\frac{(H_m-H_e)^2}{4H_p}
-\end{equation}
-
-
-\begin{equation}% 5.7b
+\textbf{“大”}($H_e=H_m-2H_p\rightarrow 0$)
+\begin{align*}% 5.7b
 -M(H_e)=-\frac{1}{2}H_p
-\end{equation}
+\end{align*}
 
+图7.13给出了磁场在$-H_m$到$H_m$范围内的$-M(H_e)$。
+点画线、虚线和实线分别对应情况6中的“小”、“中”和“大”磁场路径。
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.7]{chpt7/figs/fig7.13.eps}
-	\caption{−M(He) plots from −Hm to Hm: dash-dotted; dashed; and solid lines
-		correspond, respectively, to “small,” “medium,” and “large” field excursions。}
+	\caption{$-H_m$到$H_m$范围内的$-M(H_e)$图。}
 \end{figure}
 
-\begin{equation}% page425 S1.1b
-E_z(x)dt=\mu_oH(x_+-x)dH_e
-\end{equation}
+\textbf{情况4---“小”}\quad 可以使用问题7.1中的方法，其中$E_z(x)dt$有S1.1b给出：
+\begin{align*}% page425 S1.1b
+E_z(x)dt=\mu_oH(x_+-x)dH_e \tag{S1.1b}
+\end{align*}
+这里，如图7.4，$x_+=(H_m+H_e)/2J_c$而不是像问题7.1的$x_+=H_e/J_c$。
+S1.1b可以导出S1.2c：
+\begin{align*}% page425 S1.2c
+e_{hy}=\frac{\mu_oJ_c}{a}\int_{0}^{H_m}\left(x_{+}^{2}-\frac{x_{+}^{2}}{2}\right)dH_e \tag{S1.2c}
+\end{align*}
+然后，将$x_+=(H_m+H_e)/2J_c$代入到S1.2c，有：
+\begin{align*}% 7.19a两个
+e_{hy}&=\frac{\mu_oJ_c}{2a}\int_{0}^{H_m}\left(\frac{H_m+H_e}{2J_c}\right)^2dH_e \\
+&=\frac{\mu_o}{8H_p}\int_{0}^{H_m}(H_{m}^{2}+2H_mH_e+H_{e}^{2})dH_e\\
+&e_{hy}=\frac{7\mu_oH_{m}^{3}}{24H_p} \quad(0\le H_m\le H_p) \tag{7.19a}
+\end{align*}
 
-
-\begin{equation}% page425 S1.2c
-e_{hy}=\frac{\mu_oJ_c}{a}\int_{0}^{H_m}\left(x_{+}^{2}-\frac{x_{+}^{2}}{2}\right)dH_e
-\end{equation}
-
-
-\begin{equation}% 7.19a两个
-e_{hy}=\frac{\mu_oJ_c}{2a}\int_{0}^{H_m}\left(\frac{H_m+H_e}{2J_c}\right)^2dH_e 
-=\frac{\mu_o}{8H_p}\int_{0}^{H_m}(H_{m}^{2}+2H_mH_e+H_{e}^{2})dH_e
-e_{hy}=\frac{7\mu_oH_{m}^{3}}{24H_p}
-\end{equation}
-
-
-\begin{equation}% page425 S2.2
-E_z(x)=\mu_o\frac{dH_e}{dt}(a-x)
-\end{equation}
-
-
-\begin{equation}% 7.19b
-e_{hy}=\frac{\mu_oJ_c}{2a}\left[\int_{0}^{2H_p-H_m}\left(\frac{H_m+H_e}{2J_c}\right)^2dH_e+\int_{2H_p-H_m}^{H_m}a^2dH_e\right] 
-=\frac{\mu_o}{8H_p}\int_{0}^{2H_p-H_m}(H_{m}^{2}2H_mH_e+H_{e}^{2})dH_e+\frac{1}{2}\mu_oH_p\int_{2H_p-H_m}^{H_m}dH_e 
-=\left(\frac{1}{3}\mu_oH_{p}^{2}-\frac{\mu_oH_{m}^{3}}{24H_p}\right)+(\mu_oH_pH_m-\mu_oH_{p}^{2})
+\textbf{情况4---“中”}\quad 在图7.6b中可以看出，当$H_e$达到$H_e+H_m=2H_p$(即$H_e=2H_p-H_m$，记住此处$H_p\le H_m\le 2H_p$)，通过板(从$x=0$到$x=a$)的$H_s=H_e-J_c x$。$E_z(x)$可由问题7.2解中的S2.2给出：
+\begin{align*}% page425 S2.2
+E_z(x)=\mu_o\frac{dH_e}{dt}(a-x) \tag{S2.2}
+\end{align*}
+直到$H_e=2H_p-H_m$，$H_e$仅穿透到$x_+$。这样，$e_{hy}$必须在$H_e=0\rightarrow 2H_p-H_m$和
+$H_e=2H_p-H_m\rightarrow H_m$两个磁场范围内计算。分别使用S1.1b和S2.2的$E_z(x)dt$：
+\begin{align*}% 7.19b
+e_{hy}&=\frac{\mu_oJ_c}{2a}\left[\int_{0}^{2H_p-H_m}\left(\frac{H_m+H_e}{2J_c}\right)^2dH_e+\int_{2H_p-H_m}^{H_m}a^2dH_e\right] \\
+&=\frac{\mu_o}{8H_p}\int_{0}^{2H_p-H_m}(H_{m}^{2}2H_mH_e+H_{e}^{2})dH_e+\frac{1}{2}\mu_oH_p\int_{2H_p-H_m}^{H_m}dH_e \\
+&=\left(\frac{1}{3}\mu_oH_{p}^{2}-\frac{\mu_oH_{m}^{3}}{24H_p}\right)+(\mu_oH_pH_m-\mu_oH_{p}^{2}) 
+\end{align*}
+于是，
+\begin{align*}
 e_{hy}=\mu_oH_pH_m\left[1-\frac{2H_p}{3H_m}-\frac{1}{24}\left(\frac{H_m}{H_p}\right)^2\right]      (H_p\leq H_m\leq 2H_p)
-\end{equation}
+\end{align*}
+显然，7.19a和7.19b在$H_m=H_p$时自洽：$e_{hy}=7\mu_0 H_p^2/24$。
 
+\textbf{情况4---“大”}\quad 如图7.4c可见，整个场范围内都会穿透整个板。于是：
+\begin{align*}% 7.19c两个
+e_{hy}=&\frac{\mu_oJ_c}{2a}\left(\int_{0}^{H_m}a^2dH_e\right)=\frac{1}{2}\mu_oH_p\int_{0}^{H_m}dH_e
+e_{hy}=&\frac{1}{2}\mu_oH_pH_m \quad (H_m\geq 2H_p) \tag{7.19c}
+\end{align*}
+同样，7.19b和7.19c在$H_m=2H_p$时给出同样的结果：$e_{hy}=\mu_0 H_p^2$。
 
-\begin{equation}% 7.19c两个
-e_{hy}=\frac{\mu_oJ_c}{2a}\left(\int_{0}^{H_m}a^2dH_e\right)=\frac{1}{2}\mu_oH_p\int_{0}^{H_m}dH_e
-e_{hy}=\frac{1}{2}\mu_oH_pH_m      (H_m\geq 2H_p)
-\end{equation}
+\textbf{情况5---“小”}\quad 对比情况2下的图7.4和7.3，我们发现情况5下的$H_s(x)$在“小”、“中”、“大”场
+时和情况2对应的$H_s(x)$是一致的；
+所以，情况5下的$e_{hy}$与情况2对应相同。
 
+\textbf{情况6---“小”}\quad $e_{hy}$显然是对情况2“小”场成立的7.19a和7.14a之和的两倍：
+\begin{align}% 7.20a两个
+e_{hy}=&2\times7\left(\frac{7\mu_oH_{m}^{3}}{24H_p}+\frac{\mu_oH_{m}^{3}}{24H_p}\right)\\\notag
+e_{hy}=&\frac{2\mu_oH_{m}^{3}}{3H_p}     (0\leq H_m\leq H_p)
+\end{align}
+当然，因为磁场会经过一个完整的周期，我们可以使用7.4b从7.20中得到$e_{hy}$。
+因为$-M(H_e)$是反对称的，$-H_m$到$H_m$的积分等于从0到$H_m$的积分的两倍：
+\begin{align*}% 7.4b和7.21
+e_{hy}&=\mu_o\oint-M(H_e)dH_e \\
+&=2\mu_o\int_{0}^{H_m}-M(H_e)dH_e\\ 
+&=2\mu_o\int_{0}^{H_m}\{-[M(H_e)]_{H_e=0\rightarrow H_m}+[M(H_e)]_{H_e=H_m\rightarrow 0}\}dH_e \tag{7.21}
+\end{align*}
+将71.7a和7.18代入7.21，有：
+\begin{align*}% 7.20a两个
+e_{hy}=&2\mu_o\int_{0}^{H_m}\big[\left(H_e-\frac{H_{e}^{2}+2H_mH_e-H_{m}^{2}}{4H_p}\right) \\
+&-\left(H_e+\frac{H_{e}^{2}-2H_mH_e-H_{m}^{2}}{4H_p}\right)\big]dH_e \\
+&=2\mu_o\int_{0}^{H_m}\left(-\frac{H_{e}^{2}}{2H_p}+\frac{H_{m}^{2}}{2H_p}\right)dH_e=2\mu_o\left(-\frac{H_{m}^{3}}{6H_p}+\frac{H_{m}^{3}}{2H_p}\right)
+\end{align*}
+所以，
+\begin{align*}
+e_{hy}=\frac{2\mu_oH_{m}^{3}}{3H_p} \quad (0\leq H_m\leq H_p) \tag{7.20}
+\end{align*}
 
-\begin{equation}% 7.20a两个
-e_{hy}=2\times7\left(\frac{7\mu_oH_{m}^{3}}{24H_p}+\frac{\mu_oH_{m}^{3}}{24H_p}\right)
-e_{hy}=\frac{2\mu_oH_{m}^{3}}{3H_p}     (0\leq H_m\leq H_p)
-\end{equation}
+\textbf{情况6---“中”}\quad 类似的，$e_{hy}$为对情况4成立的7.19b和对情况2(和5)成立的7.14a对应的$e_{hy}$之和的两倍：
+\begin{align*}% page427 前7.20b两个
+e_{hy}&=2\times\{\mu_oH_pH_m\left[1-\frac{2H_p}{3H_m}-\frac{1}{24}\left(\frac{H_m}{H_p}\right)^2\right]+\frac{\mu_oH_{m}^{3}}{24H_p}\}\\
+e_{hy}&=2\mu_oH_pH_m\left(1-\frac{2H_p}{3H_m}\right)\quad (H_p\leq H_m\leq 2H_p) \tag{7.20b}
+\end{align*}
+我们可以由与7.4a等价的7.21推导出上式：
+\begin{align*}% 7.21
+e_{hy}=-2\mu_o\int_{0}^{H_m}\{[M(H_e)]_{H_e=0\rightarrow H_m}-[M(H_e)]_{H_e=H_m\rightarrow 0}\}dH_e \tag{7.21}
+\end{align*}
+因为$-M(H_e)$在$H_e=0\rightarrow 2H_p-H_m$时由71.7b给出，在$H_e=2H_p-H_m\rightarrow H_m$时
+由5.6给出，7.21的积分包括两个部分。将7.17b、5.6和5.7a代入7.21，有：
+\begin{align*}% page427倒数第二个
+e_{hy}=&2\mu_o\{\int_{0}^{2H_p-H_m}\left[-\frac{1}{2}H_p+(H_m+H_e)-\frac{(H_m+H_e)^2}{4H_p}\right]dH_e \\
+&+\int_{2H_p-H_m}^{H_m}\frac{1}{2}H_pdH_e-\int_{0}^{H_m}\left[\frac{1}{2}H_p-(H_m-H_e)+\frac{(H_m-H_e)^2}{4H_p}\right]\}dH_e
+=&2\mu_o\{\int_{0}^{2H_p-H_m}\left[-\frac{1}{2}H_p+H_m+H_e-\frac{H_{m}^{2}}{4H_p}-\frac{H_mH_e}{2H_p}-\frac{H_{e}^{2}}{4H_p}\right]dH_e 
+&+H_p(H_m-H_p)-\int_{0}^{H_m}\left[\frac{1}{2}H_p-H_m+H_e+\frac{H_{m}^{2}}{4H_p}-\frac{H_mH_e}{2H_p}+\frac{H_{e}^{2}}{4H_p}\right]\}dH_e 
+=&2\mu_o\big[\left(\frac{1}{3}H_{p}^{3}+\frac{1}{2}H_pH_m-\frac{1}{2}H_{m}^{2}+\frac{H_{m}^{3}}{12H_p}\right)\big] 
+=&2\mu_o\left(-\frac{2}{3}H_{p}^{2}+H_pH_m\right) 
+\end{align*}
+于是，
+\begin{align*}
+e_{hy}=2\mu_oH_pH_m\left(1-\frac{2H_p}{3H_m}\right)\quad (H_p\leq H_m\leq 2H_p) \tag{7.20b}
+\end{align*}
 
+\textbf{情况6---“大”}\quad 这里同样，$e_{hy}$是为对情况4成立的7.19c和对情况2(和5)成立的7.14b对应的
+$e_{hy}$之和的两倍：
+\begin{align*}% page428 7.20c两个
+e_{hy}=2\times\left[\frac{1}{2}\mu_oH_pH_m+\frac{1}{2}\mu_oH_pH_m\left(1-\frac{4H_p}{3H_m}\right)\right]\\
+e_{hy}=2\mu_oH_pH_m\left(1-\frac{2H_p}{3H_m}\right) \quad (H_m\geq 2H_p) \tag{7.20c}
+\end{align*}
 
-\begin{equation}% 7.4b和7.21
-e_{hy}=\mu_o\oint-M(H_e)dH_e 
-=2\mu_o\int_{0}^{H_m}-M(H_e)dH_e 
-=2\mu_o\int_{0}^{H_m}\{-[M(H_e)]_{H_e=0\rightarrow H_m}+[M(H_e)]_{H_e=H_m\rightarrow 0}\}dH_e
-\end{equation}
+方程7.20c也可以由7.21导出。同样，尽管5.6给出的是对增长序列(情况4)的全磁场范围的$-M(H_e)$，但因为在减小场序列(情况5)
+中，5.7a给出的是$H_e=H_m\rightarrow H_m-2H_p$范围的，5.7b给出的是$H_e=H_m-2H_p\rightarrow 0$范围的，这导致
+7.21的积分包括三个部分：
+\begin{align*}% page428 7.21和7.20c合成的
+e_{hy}=&2\mu_o\int_{0}^{H_m}\{-[M(H_e)]_{H_e=0\rightarrow H_m}+[M(H_e)]_{H_e=H_m\rightarrow 0}\}dH_e \\\tag{7.21}
+=&2\mu_o\{\int_{0}^{H_m}\frac{1}{2}H_pdH_e 
+-\int_{H_m-2H_p}^{H_m}\left[\frac{1}{2}H_p-(H_m-H_e)+\frac{(H_m-H_e)^2}{4H_p}\right]\\
+&-\int_{0}^{H_m-2H_p}(-\frac{1}{2}H_p)\}dH_e\\ 
+=&2\mu_o\big[H_p(H_m-H_p)\\ 
+&+\int_{H_m-2H_p}^{H_m}\left(-\frac{1}{2}H_p+H_m-\frac{H_{m}^{2}}{4H_p}-H_e+\frac{H_mH_e}{2H_p}-\frac{H_{e}^{2}}{4H_p}\right)dH_e\big] 
+=&2\mu_o[H_p(H_m-H_p)+\frac{1}{3}H_{p}^{2}]
+\end{align*}
+\begin{align*}
+e_{hy}=2\mu_oH_pH_m\left(1-\frac{2H_p}{3H_m}\right)   \quad  (H_m\geq 2H_p) \tag{7.20c}
+\end{align*}
 
-\begin{equation}% 7.20a两个
-e_{hy}=2\mu_o\int_{0}^{H_m}\left[\left(H_e-\frac{H_{e}^{2}+2H_mH_e-H_{m}^{2}}{4H_p}\right) 
--\left(H_e+\frac{H_{e}^{2}-2H_mH_e-H_{m}^{2}}{4H_p}\right)\right]dH_e 
-=2\mu_o\int_{0}^{H_m}\left(-\frac{H_{e}^{2}}{2H_p}+\frac{H_{m}^{2}}{2H_p}\right)dH_e=2\mu_o\left(-\frac{H_{m}^{3}}{6H_p}+\frac{H_{m}^{3}}{2H_p}\right)
-e_{hy}=\frac{2\mu_oH_{m}^{3}}{3H_p}       (0\leq H_m\leq H_p)
-\end{equation}
+注意到$H_m\gg H_p$(这是多数应用中一般能满足的条件)时，$e_{hy}$正比于$H_m$；
+因为$H_p=J_c a$，$e_{hy}$也随$J_c$和$a$增长：
+\begin{align*}% 7.20d和7.20e
+e_{hy}=2\mu_oH_pH_m \quad  (H_m\gg H_p) \tag{7.20d}
+\end{align*}
+\begin{align*}
+e_{hy}=2\mu_oJ_caH_m \quad (H_m\gg H_p) \tag{7.20e}
+\end{align*}
 
-
-\begin{equation}% page427 前7.20b两个
-e_{hy}=2\times\{\mu_oH_pH_m\left[1-\frac{2H_p}{3H_m}-\frac{1}{24}\left(\frac{H_m}{H_p}\right)^2\right]+\frac{\mu_oH_{m}^{3}}{24H_p}\}
-e_{hy}=2\mu_oH_pH_m\left(1-\frac{2H_p}{3H_m}\right)        (H_p\leq H_m\leq 2H_p)
-\end{equation}
-\begin{equation}% 7.21
-e_{hy}=-2\mu_o\int_{0}^{H_m}\{[M(H_e)]_{H_e=0\rightarrow H_m}-[M(H_e)]_{H_e=H_m\rightarrow 0}\}dH_e
-\end{equation}
-\begin{equation}% page427倒数第二个
-e_{hy}=2\mu_o\{\int_{0}^{2H_p-H_m}\left[-\frac{1}{2}H_p+(H_m+H_e)-\frac{(H_m+H_e)^2}{4H_p}\right]dH_e 
-+\int_{2H_p-H_m}^{H_m}\frac{1}{2}H_pdH_e-\int_{0}^{H_m}\left[\frac{1}{2}H_p-(H_m-H_e)+\frac{(H_m-H_e)^2}{4H_p}\right]\}dH_e
-=2\mu_o\{\int_{0}^{2H_p-H_m}\left[-\frac{1}{2}H_p+H_m+H_e-\frac{H_{m}^{2}}{4H_p}-\frac{H_mH_e}{2H_p}-\frac{H_{e}^{2}}{4H_p}\right]dH_e 
-+H_p(H_m-H_p)-\int_{0}^{H_m}\left[\frac{1}{2}H_p-H_m+H_e+\frac{H_{m}^{2}}{4H_p}-\frac{H_mH_e}{2H_p}+\frac{H_{e}^{2}}{4H_p}\right]\}dH_e 
-=2\mu_o\left[\left(\frac{1}{3}H_{p}^{3}+\frac{1}{2}H_pH_m-\frac{1}{2}H_{m}^{2}+\frac{H_{m}^{3}}{12H_p}\right)\right] 
-=2\mu_o\left(-\frac{2}{3}H_{p}^{2}+H_pH_m\right) 
-e_{hy}=2\mu_oH_pH_m\left(1-\frac{2H_p}{3H_m}\right)       (H_p\leq H_m\leq 2H_p)
-\end{equation}
-\begin{equation}% page428 7.20c两个
-e_{hy}=2\times\left[\frac{1}{2}\mu_oH_pH_m+\frac{1}{2}\mu_oH_pH_m\left(1-\frac{4H_p}{3H_m}\right)\right]
-e_{hy}=2\mu_oH_pH_m\left(1-\frac{2H_p}{3H_m}\right)     (H_m\geq 2H_p)
-\end{equation}
-\begin{equation}% page428 7.21和7.20c合成的
-e_{hy}=2\mu_o\int_{0}^{H_m}\{-[M(H_e)]_{H_e=0\rightarrow H_m}+[M(H_e)]_{H_e=H_m\rightarrow 0}\}dH_e 
-=2\mu_o\{\int_{0}^{H_m}\frac{1}{2}H_pdH_e 
--\int_{H_m-2H_p}^{H_m}\left[\frac{1}{2}H_p-(H_m-H_e)+\frac{(H_m-H_e)^2}{4H_p}\right]-\int_{0}^{H_m-2H_p}(-\frac{1}{2}H_p)\}dH_e 
-=2\mu_o\left[H_p(H_m-H_p) 
-+\int_{H_m-2H_p}^{H_m}\left(-\frac{1}{2}H_p+H_m-\frac{H_{m}^{2}}{4H_p}-H_e+\frac{H_mH_e}{2H_p}-\frac{H_{e}^{2}}{4H_p}\right)dH_e\right] 
-=2\mu_o[H_p(H_m-H_p)+\frac{1}{3}H_{p}^{2}]
-e_{hy}=2\mu_oH_pH_m\left(1-\frac{2H_p}{3H_m}\right)       (H_m\geq 2H_p)
-\end{equation}
-\begin{equation}% 7.20d和7.20e
-e_{hy}=2\mu_oH_pH_m   (H_m\gg H_p)
-=2\mu_oJ_caH_m  (H_m\gg H_p)
-\end{equation}
 
 \subsection{讨论7.2：载有直流电流的Bean板}
+当传输电流$I_t$在$2a$宽度的Bean板中沿$z$方向均匀分布流动时，板内的$y$向磁场分布$H_s(x)$
+不再关于板的中点镜像对称，如第五章的图5.5。
+注意到$I_t$是$y$方向上单位长度的电流，单位为安培/米[A/m]。
+将$i$定义为归一化传输电流：$i= I_t / I_c$，其中$I_c = 2a J_c$ [A / m]。 我们将研究暴露于外场$H_e(t)$的载流Bean板中的$H_s(x)$的分布。
+
+\textbf{情况1i和2i}
 
 
 \begin{figure}[htbp]
