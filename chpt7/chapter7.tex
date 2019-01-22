@@ -410,7 +410,7 @@ e_{hy}=\frac{5\mu_oH_{m}^{3}}{24H_p}      (0\leq H_m\leq H_p)
 \end{equation}
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.6]{chpt7/figs/fig7.10.eps}
+	\includegraphics[scale=0.7]{chpt7/figs/fig7.10.eps}
 	\caption{“小”磁场激励($H_m\le H_p$)下的$-M(H_e)$。序列A开始于原点，即“无染”Bean板。}
 \end{figure}
 
@@ -472,7 +472,7 @@ e_{py1}=\frac{\mu_oH_{m}^{3}}{3H_p} \tag{S1.6a}
 \end{align*}
 情况2中，$E_z(0)$由方程S1.3给出，此时$x_-=(H_m-H_e)/2J_c$：
 \begin{align*}% page417 S1.5b
-E_z(0)=-\mu_o\left(\frac{H_m-H_e}{2J_c}\right)\frac{dH_e}{dt} \tag{S15.b}
+E_z(0)=-\mu_o\left(\frac{H_m-H_e}{2J_c}\right)\frac{dH_e}{dt} \tag{S1.5b}
 \end{align*}
 于是，情况2的坡印廷能量密度$e_{py2}$为：
 \begin{align*}% page417 S1.6b两个
@@ -532,84 +532,122 @@ e_{py2}=\frac{\mu_oH_{m}^{3}}{24H_p}+\frac{\mu_oH_{m}^{3}}{24H_p}-\frac{\mu_oH_{
 这个能流密度加上磁滞能量流密度对应板中储存磁能的净减少量。
 
 
-\subsection{问题7.2：磁滞能量密度——在“中”磁场时间序列的“纯”Bean板}
+\subsection{问题7.2：磁滞能量密度——在“中”磁场时间序列的“无染”Bean板}
+这里，我们研究在“中”磁场激励下的情况1-3，$H_p\le H_m\le2H_p=2J_c a$。
+在增长磁场$H_e=0*\rightarrow H_m$序列中(情况1和3)，$e_{hy}$在$H_m\ge H_p$时与$H_m$无关
+---当然，Bean临界态模型中的$J_c$也与磁场无关。增长磁场和降低磁场序列中的$−M(H_e)$函数为：
 
+\begin{align*}% 5.5和5.6
+-M(H_e)=H_e-\frac{H_{e}^{2}}{2H_p}    \quad  (H_e=0*\rightarrow H_p) \tag{5.5}
+\end{align*}
+\begin{align*}
+-M(H_e)=\frac{1}{2}H_p      \quad  (H_e=H_p\rightarrow H_m) \tag{5.6}
+\end{align*}
+\begin{align*}
+-M(H_e)=\frac{1}{2}H_p-(H_m-H_e)+\frac{(H_m-H_e)^2}{4H_p} \quad   (H_e=H_m\rightarrow 0)\tag{5.7a}
+\end{align*}
 
-\begin{equation}% 5.5和5.6
--M(H_e)=H_e-\frac{H_{e}^{2}}{2H_p}                          (H_e=0*\rightarrow H_p)
-=\frac{1}{2}H_p                                      (H_e=H_p\rightarrow H_m)
-\end{equation}
-\begin{equation}% 5.7a
--M(H_e)=\frac{1}{2}H_p-(H_m-H_e)+\frac{(H_m-H_e)^2}{4H_p}   (H_e=H_m\rightarrow 0)
-\end{equation}
-\begin{equation}% 7.13b
-e_{hy}=\frac{1}{2}\mu_oH_pH_m\left(1-\frac{2H_p}{3H_m}\right)   (H_p\leq H_m\leq 2H_p)
-\end{equation}
-\begin{equation}% 7.15b
-e_{hy}=\frac{1}{2}\mu_oH_pH_m\left[1-\frac{2H_p}{3H_m}+\frac{1}{12}\left(\frac{H_m}{H_p}\right)^2\right]     (H_p\leq H_m \leq 2H_p)
-\end{equation}
+图7.11给出了方程5.5/5.6和5.7a给出的$−M(H_e)$。
+
+a) 对半板($0\le x\le a$)应用方程7.3a，证明情况1下的$e_{hy}$为：
+\begin{align*}% 7.13b
+e_{hy}=\frac{1}{2}\mu_oH_pH_m\left(1-\frac{2H_p}{3H_m}\right)\quad   (H_p\leq H_m\leq 2H_p)\tag{7.13b}
+\end{align*}
+
+b) 对情况2，解释为什么$e_{hy}$仍可以由7.14a给出。
+
+c) 使用7.3b，证明情况3下的$e_{hy}$是7.13b和7.14a之和，可由下式给出：
+\begin{align*}% 7.15b
+e_{hy}=\frac{1}{2}\mu_oH_pH_m\left[1-\frac{2H_p}{3H_m}+\frac{1}{12}\left(\frac{H_m}{H_p}\right)^2\right]     \quad (H_p\leq H_m \leq 2H_p) \tag{7.15b}
+\end{align*}
+
+d) 证明在$H_m=H_p$时，方程7.15a和7.15b给出同样的$e_{hy}$。
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.7]{chpt7/figs/fig7.11.eps}
+	\caption{“中”磁场激励($H_m\le H_p$)下的$-M(H_e)$。$H_p\le H_m\le 2H_p=2J_c a$。}
+\end{figure}
 
 \subsubsection{问题7.2之解}
-\begin{equation}% page420 S2.1
-e_{hy1^\prime}=\frac{1}{6}\mu_oH_{p}^{2}       (H_e=0\rightarrow H_p)
-\end{equation}
-\begin{equation}% page420 S2.2
-E_z(x)=\mu_o\frac{dH_e}{dt}(a-x)
-\end{equation}
-
-\begin{subequations}
+a) 情况1的前半部分中，$H_e=0*\rightarrow H_p$序列下，我们通过向方程7.13a中代入$H_m=H_p$获得
+磁滞能量密度$e_{hy1'}$：
+\begin{align*}% page420 S2.1
+e_{hy1^\prime}=\frac{1}{6}\mu_oH_{p}^{2}  \quad     (H_e=0\rightarrow H_p) \tag{S2.1}
+\end{align*}
+这里，对情况1的后半部分，$H_e=H_p\rightarrow H_m$序列下，整个板的场参数(考虑对称性，我们仅取其中的一半
+，从$x=0$到$x=a$)如图7.2b的虚线所示。$dH_e/dt$感应出的$E_z(x)$为：
+\begin{align*}% page420 S2.2
+E_z(x)=\mu_o\frac{dH_e}{dt}(a-x) \tag{S2.2}
+\end{align*}
+将方程7.3a和S2.2应用到半板上，有：
 \begin{align*}% page420 S2.3a和2.3b
-e_{hy1^\prime}&=\frac{1}{a}\int_{0}^{a}\left[\int J_cE(x)dt\right]dx=\frac{\mu_oJ_c}{a}\int_{0}^{a}\left[\int_{H_p}^{H_m}(a-x)dH_e\right]dx \\
-&=\mu_oJ_c(H_m-H_p)\int_{0}^{a}\frac{a-x}{a}dx=\frac{1}{2}\mu_oH_p(H_m-H_p)
+e_{hy1''}&=\frac{1}{a}\int_{0}^{a}\left[\int J_cE(x)dt\right]dx=\frac{\mu_oJ_c}{a}\int_{0}^{a}\left[\int_{H_p}^{H_m}(a-x)dH_e\right]dx \tag{S2.3a}
 \end{align*}
-\end{subequations}
+\begin{align*}
+e_{hy1''}=\mu_oJ_c(H_m-H_p)\int_{0}^{a}\frac{a-x}{a}dx=\frac{1}{2}\mu_oH_p(H_m-H_p)\tag{S2.3b}
+\end{align*}
+将方程S2.1和S2.3b相加，得到情况1的$e_[hy]$：
+\begin{align*}% page420 7.13b两个
+e_{hy}&=\frac{1}{6}\mu_oH_{p}^{2}+\frac{1}{2}\mu_oH_p(H_p-H_m) \\
+&=\frac{1}{2}\mu_oH_pH_m-\frac{1}{3}\mu_oH_{p}^{2}\\
+e_{hy}=&\frac{1}{2}\mu_oH_pH_m\left(1-\frac{2H_p}{3H_m}\right) \quad (H_p\leq H_m\leq 2H_p) \tag{7.13b}
+\end{align*}
 
+b) 情况2序列$H_e=H_m\rightarrow 0$中，在$0<h_e<H_m$时的$H_s$，见图7.3b中的实线，本质上和7.3a中的实线
+是一致的---两个都是板从$x=0$到$x=x_0$之间的值。
+所以，这个场序列下的$E_z(x)dt$和方程S1.3一致，最终给出和7.14a一样的$e_{hy}$。
 
-
-
-\begin{equation}% page420 7.13b两个
-e_{hy}=\frac{1}{6}\mu_oH_{p}^{2}+\frac{1}{2}\mu_oH_p(H_p-H_m) 
-=\frac{1}{2}\mu_oH_pH_m-\frac{1}{3}\mu_oH_{p}^{2}
-e_{hy}=\frac{1}{2}\mu_oH_pH_m\left(1-\frac{2H_p}{3H_m}\right)       (H_p\leq H_m\leq 2H_p)
-\end{equation}
-\begin{equation}% page420 S2.4a
-e_{py1^\prime}=\frac{1}{3}\mu_oH_{p}^{2}
-\end{equation}
-\begin{equation}% page420 S2.5
-E_z(0)=\mu_oa\frac{dH_e}{dt}
-\end{equation}
-\begin{equation}% page420 2.4b两个
-e_{pyq^{\prime\prime}}\equiv\frac{1}{a}\int\left[-\int_{S}\vec{E}(x)\times\vec{H}_e\cdot d\vec{\ \mathcal{A}}\right]dt=\mu_o\int_{H_p}^{H_m}H_edH_e
-e_{pyq^{\prime\prime}}=\frac{1}{2}\mu_o(H_{m}^{2}-H_{p}^{2})
-\end{equation}
-\begin{equation}% page421 S1.6b
-e_{py2}=-\frac{\mu_oH_{m}^{3}}{12H_p}
-\end{equation}
-\begin{equation}% page421 S2.7两个
-e_{m_f}=\frac{\mu_o}{2a}\int_{0}^{a}H_{s}^{2}(x)dx=\frac{\mu_o}{2a}\left[\int_{0}^{\frac{H_m}{2J_c}}J_{c}^{2}x^2dx+\int_{\frac{H_m}{2J_c}}^{a}(H_m-J_cx)^2dx\right]
-e_{m_f}=\frac{1}{2}\mu_oH_{m}^{2}-\frac{\mu_oH_{m}^{3}}{8H_p}-\frac{1}{2}\mu_oH_mH_p+\frac{1}{6}\mu_oH_{p}^{2}
-\end{equation}
-
+c) 在本序列的前半部分，坡印廷能量密度$e_{py1'}$是方程S1.6a在$H_m=H_p$时得到的：
+\begin{align*}% page420 S2.4a
+e_{py1^\prime}=\frac{1}{3}\mu_oH_{p}^{2} \tag{S2.4a}
+\end{align*}
+在后半部分，$H_e=H_p\rightarrow H_m$时，$E_z(0)$由S2.2给出：
+\begin{align*}% page420 S2.5
+E_z(0)=\mu_oa\frac{dH_e}{dt}  \tag{S2.5}
+\end{align*}
+方程7.3b等号右侧的第一部分坡印廷能量密度$e_{py1''}$于是可以写成：
+\begin{align*}% page420 2.4b两个
+e_{pyq^{\prime\prime}}\equiv\frac{1}{a}\int\left[-\int_{S}\vec{E}(x)\times\vec{H}_e\cdot d\vec{\ \mathcal{A}}\right]dt=\mu_o\int_{H_p}^{H_m}H_edH_e\\
+e_{pyq^{\prime\prime}}=\frac{1}{2}\mu_o(H_{m}^{2}-H_{p}^{2}) \tag{S2.4b}
+\end{align*}
+在第二个场序列$H_e=H_m\rightarrow 0$时，$E_z(0)$和方程S1.5b给出的相同；
+对应的坡印廷能量密度$e_{py2}$于是可由方程S1.6b给出：
+\begin{align*}% page421 S1.6b
+e_{py2}=-\frac{\mu_oH_{m}^{3}}{12H_p} \tag{S1.6b}
+\end{align*}
+同样，$-$号表明$e_{py2}$是返回电源的。
+在整个序列过程(情况3)最后，可从图7.11中看出，通过$H_s(x)$而储存在板内的磁场(磁化)能量密度$e_{m_f}$
+可由S1.7给出($x_0=H_m/2 J_c$)。
+使用S1.7，我们可以计算$e_{m_f}$。
+和方程S1.8的积分是从$x=0$到$x=x_0=H_m/2J_c$是重叠的不同，此处的积分必须在$x=0\rightarrow x_0$
+和$x_0\rightarrow a$两个区间(图7.3b)分别进行：
+\begin{align*}% page421 S2.7两个
+e_{m_f}=\frac{\mu_o}{2a}\int_{0}^{a}H_{s}^{2}(x)dx=\frac{\mu_o}{2a}\left[\int_{0}^{\frac{H_m}{2J_c}}J_{c}^{2}x^2dx+\int_{\frac{H_m}{2J_c}}^{a}(H_m-J_cx)^2dx\right]\\
+e_{m_f}=\frac{1}{2}\mu_oH_{m}^{2}-\frac{\mu_oH_{m}^{3}}{8H_p}-\frac{1}{2}\mu_oH_mH_p+\frac{1}{6}\mu_oH_{p}^{2}\tag{S2.7}
+\end{align*}
+联立7.3b、S2.4a、S2.4b、S1.6b和S2.7，我们得到情况3下的$e_{hy}$：
 \begin{align*}% page421 S2.8一个
-e_{hy}&=e_{py1^\prime}+e_{py1^{\prime\prime}}+e_{py}-e_{m_f} \\\notag
-&=\frac{1}{3}\mu_oH_{p}^{2}+\frac{1}{2}\mu_o(H_{m}^{2}-H_{p}^{2})-\frac{\mu_oH_{m}^{3}}{12H_p} 
--\left(\frac{1}{2}\mu_oH_{m}^{2}-\frac{\mu_oH_{m}^{3}}{8H_p}-\frac{1}{2}\mu_oH_mH_p+\frac{1}{6}\mu_oH_{p}^{2}\right) \\\notag
-&=-\frac{1}{3}\mu_oH_{p}^{2}+\frac{\mu_oH_{m}^{3}}{24H_p}+\frac{1}{2}\mu_oH_pH_m \tag{S2.8}
+e_{hy}=&e_{py1^\prime}+e_{py1^{\prime\prime}}+e_{py}-e_{m_f} \\
+=&\frac{1}{3}\mu_oH_{p}^{2}+\frac{1}{2}\mu_o(H_{m}^{2}-H_{p}^{2})-\frac{\mu_oH_{m}^{3}}{12H_p} 
+-\big(\frac{1}{2}\mu_oH_{m}^{2}-\frac{\mu_oH_{m}^{3}}{8H_p}\\
+&-\frac{1}{2}\mu_oH_mH_p+\frac{1}{6}\mu_oH_{p}^{2}\big) \\
+=&-\frac{1}{3}\mu_oH_{p}^{2}+\frac{\mu_oH_{m}^{3}}{24H_p}+\frac{1}{2}\mu_oH_pH_m \tag{S2.8}
+\end{align*}
+S2.8等价于7.15b：
+\begin{align*}% 7.15b
+e_{hy}=\frac{1}{2}\mu_oH_pH_m\left[1-\frac{2H_p}{3H_m}+\frac{1}{12}\left(\frac{H_m}{H_p}\right)^2\right] \quad (H_p\leq H_m\leq 2H_p) \tag{7.15b}
 \end{align*}
 
-\begin{equation}% 7.15b
-e_{hy}=\frac{1}{2}\mu_oH_pH_m\left[1-\frac{2H_p}{3H_m}+\frac{1}{12}\left(\frac{H_m}{H_p}\right)^2\right]     (H_p\leq H_m\leq 2H_p)
-\end{equation}
-
-\begin{equation}% 7.15a
-e_{hy}=\frac{5\mu_oH_{m}^{3}}{24H_p}    (H_m\leq H_p) 
-=\frac{5}{24}\mu_oH_{p}^{2}
-\end{equation}
-
-\begin{equation}% 7.15b
-e_{hy}=\frac{1}{2}\mu_oH_pH_m\left[1-\frac{2H_p}{3H_m}+\frac{1}{12}\left(\frac{H_m}{H_p}\right)^2\right]    (H_p\leq H_m\leq 2H_p) 
-=\frac{1}{2}\mu_oH_{p}^{2}\left[1-\frac{2}{3}+\frac{1}{12}\right]=\frac{5}{24}\mu_oH_{p}^{2}
-\end{equation}
+d) 在$H_m=H_p$时，$e_{hy}$可以写为7.15a，也可以写成7.15b：
+\begin{align*}% 7.15a
+e_{hy}&=\frac{5\mu_oH_{m}^{3}}{24H_p} \quad (H_m\leq H_p) \\ \tag{71.5a}
+&=\frac{5}{24}\mu_oH_{p}^{2}
+\end{align*}
+\begin{align*}% 7.15b
+e_{hy}=&\frac{1}{2}\mu_oH_pH_m\left[1-\frac{2H_p}{3H_m}+\frac{1}{12}\left(\frac{H_m}{H_p}\right)^2\right] \quad  (H_p\leq H_m\leq 2H_p) \\\tag{7.15b}
+=&\frac{1}{2}\mu_oH_{p}^{2}\left[1-\frac{2}{3}+\frac{1}{12}\right]=\frac{5}{24}\mu_oH_{p}^{2}
+\end{align*}
 
 
 \subsection{问题7.3：磁滞能量密度——在“大”磁场时间序列的“纯”Bean板}
