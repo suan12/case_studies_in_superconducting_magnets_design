@@ -76,6 +76,7 @@ Bean板在场方向($y$轴)是无限长的，在电流方向($z$轴)的宽度是
 \begin{equation}% 7.1
 \int\left[-\int_{S}^{}\vec{E}\times\vec{H}\cdot d\vec{\ \mathcal{A}}\right]dt=\int_{\nu}^{}\left[\int\vec{E}\cdot\vec{J}dt+\frac{1}{2}\mu_oH^2+\mu_oH\int\vec{H}\cdot d\vec{M}\right]d\nu
 \end{equation}
+
 尽管Bean在他的第II类超导体磁场行为纯唯象(临界态模型)模型中使用了定义$\vec{B}=\mu_0(\vec{H}+\vec{M})$，
 但如第五章所论及的，$B$是以超导体内磁场分布$H_s$下的“平均”磁感应强度$B_s$进行计算的，即$B_s(x)=\mu_0 H_s$。
 因为Bean板仅在一个维度(x)上有限，$H_s(x)$和板内感应的超导电流密度$J_c$(Bean模型中，是依赖于场的)
@@ -88,16 +89,19 @@ Bean板在场方向($y$轴)是无限长的，在电流方向($z$轴)的宽度是
 \begin{equation}% 7.2
 \int\left[-\int_{S}\vec{E}(x)\times\vec{H}_e\cdot d\vec{\ \mathcal{A}}\right]dt=\int_{0}^{2a}\left[\int\vec{E}(x)\cdot\vec{J}_c(x)dt+\frac{1}{2}\mu_oH_{s}^{2}(x)\right]dx
 \end{equation}
+
 式中，积分区间是$x=0$到$x=2a$(或者从$x=-a$到$x=a$)。
 因为$\vec{J_c}(x)$是由$\vec{E}(x)$感应出的，所以它平行于$E$场。7.2中的$\int E(x)\cdot J_c(x)dt$表示的是
 耗散，这个耗散被称为磁滞损耗。Bean板的磁滞损耗能量密度为：
 \begin{equation}% 7.3a
 e_{hy}=\frac{1}{2a}\int_{0}^{2a}\left[\int J_cE(x)dt\right]dx
 \end{equation}
+
 通过联立7.3和7.2，我们可以得到另一种表达式：
 \begin{align*}% 7.3b
 e_{hy}=\frac{1}{2a}\{\int\left[-\int_{S}\vec{E}(x)\times\vec{H}_e\cdot d\vec{\ \mathcal{A}}\right]dt-\frac{1}{2}\mu_oH\int_{0}^{2a}H_{s}^{2}(x)dx\} \tag{7.3'}
 \end{align*}
+
 方程7.3’表示板中的磁滞能量密度等于进入板的Poynting能量密度减去板中的磁能密度的总能量密度。
 
 当外场$\vec{H}_e$经过一个完整周期，初始和终了磁场强度$\vec{H}_{e_i}$、$\vec{H}_{e_f}$
@@ -105,10 +109,12 @@ e_{hy}=\frac{1}{2a}\{\int\left[-\int_{S}\vec{E}(x)\times\vec{H}_e\cdot d\vec{\ \
 \begin{equation}% 7.4a
 e_{hy}=\mu_o\oint\vec{H}_ed\vec{M}_e(\vec{H}_e)
 \end{equation}
+
 从代数上看，上式还可以写为：
 \begin{align*}% 7.4b
 e_{hy}=-\mu_o\oint M(H_e)dH_e \tag{7.4'}
 \end{align*}
+
 在7.4’中，去掉了矢量符号。这是因为各矢量均仅有一个方向：$H_e$和$M$都是$y$向。
 
 \subsubsection*{外磁场时间序列下的Bean板}
@@ -143,7 +149,7 @@ H_e(t)=0*(\ \mathrm{Virgin slab})\rightarrow H_m\rightarrow 0\rightarrow -H_m\ri
 \end{figure}
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.7]{chpt7/figs/fig7.4.eps}
+	\includegraphics[scale=0.6]{chpt7/figs/fig7.4.eps}
 	\caption{情况4的磁场特性。}
 \end{figure}
 
@@ -168,6 +174,7 @@ $e_{cp}$的关键参数是耦合时间常数$\tau_{cp}$。
 \begin{equation}% 7.6
 \tau_{cp}=\frac{\mu_o\ell_{p}^{2}}{8\pi\rho_{ef}}
 \end{equation}
+
 式中，$\ell_p$是超导丝的节距，$\rho_{ef}$是丝间电流用到的有效基底电阻率。
 如前所述，因为时间常数越长，能量耗散越大。故$\tau_{cp}$越大，$e_{cp}$越大。
 正如Wilson指出[1.27]的，$e_{cp}$可以视为在复合导体内总磁能密度$\mu_0 H_m^2/2$的一部分，
@@ -184,6 +191,7 @@ Carr提出了两个模型[7.18]:
 	\rho_{ef\infty}&=\frac{1+\lambda_f}{1-\lambda_f}\rho_m
 	\end{align}
 \end{subequations}
+
 式中，$\lambda_f$是超导细丝在复合导体中的体积分数，$\rho_m$是基底的电阻率。
 
 方程7.7a和7.7b基于图7.6中的两个极限电流分布：(a)中细丝表面的接触电阻是0，电流被拉入细丝中，令电路通路
@@ -222,6 +230,7 @@ Carr提出了两个模型[7.18]:
 \begin{equation}% 7.8
 R_{sd}=\frac{\rho_{sd}\delta_{sd}}{a\ell_{sp}}
 \end{equation}
+
 通常，$a$等于搭接导体的宽度。
 \begin{figure}[htbp]
 	\centering
@@ -237,6 +246,7 @@ R_{sp}&=R_{cA}+R_{sd}+R_{cB} \\
 &=\frac{R_{ct}}{A_{ct}}
 	\end{align}
 \end{subequations}
+
 式中，$R_{cA}$是导体A和焊接层之间的接触电阻，$R_{cB}$是导体B和焊接层之间的接触电阻。
 $R_{ct}$是接触电阻，单位为$[\Omega m^2]$，$A_{ct}=a\ell_{sp}$是接触面积。
 如果焊接剂“湿润”了各导体的表面，则假设$R_{cA}\simeq R_{cB}\simeq 0$是合理的，至少假设
@@ -244,14 +254,16 @@ $R_{cA}\simeq R_{cB}\ll R_{sd}$是合理的：
 \begin{align*}% 7.9c
 R_{sp}=\frac{R_{ct}}{A_{ct}}\simeq R_{sd} \tag{7.9c}
 \end{align*}
+
 通过令$\ell_{sp}$足够长，$R_{sp}$可以任意小。联立7.8和7.9c，有：
 \begin{align}% 7.10
 R_{ct}\simeq\rho_{sd}\delta_{sd}
 \end{align}
+
 因此，我们可以选择低电阻率焊料来实现“小”$R_{ct}$。同样重要的是，最小化$\delta_{sd}$，一定不要超过10-50 $\mu$m。
 实际上，如果使用“超导”焊料，则$R_{ct}$为零，只要这种接头工作在低场区，并提供了足够电流传输面积$a\ell_{sp}$。
 利用超导焊料，可以制作$\mathrm{p\Omega}$数量级的超导接头。
-这种接头必须工作于低场($\le 1$ T)和深冷($\le 9$ K)环境中，要有足够的接触面积以便在接头承载工作电流时保持焊料超导。
+这种接头必须工作于低场($\le 1$~ T)和深冷($\le 9$ K)环境中，要有足够的接触面积以便在接头承载工作电流时保持焊料超导。
 
 表7.1列出了所选锡铅焊料的$R_{ct}$值。$R_{ct}$是磁场依赖的，随B线性增加。
 在一些数据中，在0和1T之间观察到了非线性。这些数据仅作为一般指南给出。
@@ -270,7 +282,7 @@ R_{ct}\simeq\rho_{sd}\delta_{sd}
 对于某些应用，使用机械接触开关比使用热激活持续电流开关(persistent current switch, PCS)更有利。
 铜或涂铟铜表面之间的机械接触电阻虽然很小，但在4.2 K时也不超导[7.22]。
 最近，Sawa等研究了利用工作在77 K的HTS块盘之间的机械接触构建机械接触开关[7.23,7.24]。
-尽管在77 K下明显不超导，但如果在低于10 K的温度下运行，且用涂有超导焊料的HTS块材盘，
+尽管在77~ K下明显不超导，但如果在低于10 K的温度下运行，且用涂有超导焊料的HTS块材盘，
 则可以实现超导机械接触开关的盘到盘超导接触。
 
 \subsection{机械扰动}
@@ -286,7 +298,7 @@ R_{ct}\simeq\rho_{sd}\delta_{sd}
 
 
 没有冷却使绝热磁体过早地失超，有时电流远低于其预期工作电流时就失超了。
-幸运的是，这些机械事件通常遵循声发射中已知的那些“Kaiser效应”。
+幸运的是，这些机械事件通常遵循声发射中已知的那些“Kaiser~效应”。
 它描述了在一系列循环负荷过程中观察到的机械行为。过程中，机械扰动如导体运动和环氧树脂破裂仅在引起事件的负荷超过任何先前加载顺序中达到的最大水平时，才出现。
 因此，易过早失超的绝热磁体通过“锻炼”以逐渐改善其性能，使其最终达到预期的工作电流。
 显然，设计绝热磁体的目的是让它在第一次尝试时就达到工作电流；
@@ -307,7 +319,8 @@ $J_\theta= 200\times 10^6\ \mathrm{A/m^2}$，
 \begin{equation}% 7.11
 e_f=\mu_ff_{L_r}\Delta r_f
 \end{equation}
-式中，$\mu_f$是摩擦系数。代入$\mu_f=0.3$和$e_f=1300\ \mathrm{J/m^3}$(铜在4.2 K和5.2 K之间的焓差)，以及
+
+式中，$\mu_f$是摩擦系数。代入$\mu_f=0.3$和$e_f=1300\ \mathrm{J/m^3}$(铜在4.2 K和5.2~ K之间的焓差)，以及
 $f_{L_r}=2\times 10^8\ \mathrm{N/m^3}$，在7.11中解出$\Delta r_f$：
 \begin{align*}% page411最后一个
 \Delta r_f=\frac{e_f}{\mu_ff_{L_r}}=\frac{(1300\ \mathrm{J/m^3})}{(0.3)(2\times 10^8\ \mathrm{N/m^3})}\simeq 20\times 10^{-6}\ \mathrm{m}=20\ \mathrm{\mu m}
@@ -424,6 +437,7 @@ E_z(x)=\mu_o\frac{dH_e}{dt}(x_+-x) \tag{S1.1a}
 \begin{align*}% page416 2
 E_z(x)dt=\mu_o(x_+-x)dH_e \tag{S1.1b}
 \end{align*}
+
 对前半板应用方程7.3a和S1.1b，有：
 \begin{align*}% page416 3 and 4
 e_{hy}=\frac{1}{a}\int_{0}^{a}\left[\int J_cE(x)dt\right]dx \tag{S1.2a}
@@ -431,6 +445,7 @@ e_{hy}=\frac{1}{a}\int_{0}^{a}\left[\int J_cE(x)dt\right]dx \tag{S1.2a}
 \begin{align*}
 =\frac{\mu_oF_c}{a}\int_{0}^{H_m}\left[\int_{0}^{x_+(x_+-x)dx}\right]dH_e \tag{S1.2b}
 \end{align*}
+
 在方程S1.2b中，因为$x_+$依赖于$H_e$，积分顺序和S1.2a相反。方程S1.2b成为：
 \begin{align*}% page416 5 and 6
 e_{hy}=\frac{\mu_oJ_c}{a}\int_{0}^{H_m}\left(x_{+}^{2}-\frac{x_{+}^{2}}{2}\right)dH_e  \tag{S1.2c}
@@ -441,12 +456,14 @@ e_{hy}=\frac{\mu_oJ_c}{a}\int_{0}^{H_m}\left(x_{+}^{2}-\frac{x_{+}^{2}}{2}\right
 \begin{equation}% 7.13a
 e_{hy}=\frac{\mu_oH_{m}^{3}}{6H_p} \quad   (H_m\leq H_p) \tag{7.13a}
 \end{equation}
+
 $e_{hy}\propto H_m^3$；也即，在“小”磁场激励下，$e_{hy}$以$H_m$的三次方增加；这已被很多实验所验证。
 
 b) 在降低的磁场序列$H_e=H_m\rightarrow 0$中，$E_z(x)$由下式给出：
 \begin{align*}% page416 S1.3
 E_z(x)dt=\mu_o(x-x_-)dH_e \tag{S1.3}
 \end{align*}
+
 式中，$x_-=(H_m-H_e)/2J_c$，如图7.3a所示。所以，$e_{hy}$为：
 \begin{align*}% page416 S1.4
 e_{hy}&=\frac{\mu_oJ_c}{a}\int_{H_m}^{0}\left[\int_{0}^{x_-}(x-x_-)dx\right]dH_e=\frac{\mu_oJ_c}{a}\int_{H_m}^{0}\left(\frac{x_{-}^{2}}{2}-x_{-}^{2}\right)dH_e \\\tag{S1.4}
@@ -455,6 +472,7 @@ e_{hy}&=\frac{\mu_oJ_c}{a}\int_{H_m}^{0}\left[\int_{0}^{x_-}(x-x_-)dx\right]dH_e
 \begin{align*}% 7.14a
 e_{hy}=\frac{\mu_oH_{m}^{3}}{24H_p}  \quad     (0\leq H_m\leq H_p) \tag{7.14a}
 \end{align*}
+
 在降低的磁场序列中，$e_{hy}$是增长磁场序列的$1/4$。
 根据图7.2a和7.3a，这是因为情况1中$E_z$是在$x=0$和$x_m=H_m/J_c$之间感应出的，而在情况2中，
 是在$x=0$和$x_0=H_m/2J_c$之间感应出的；此时仍有$e_{hy}\propto H_m^3$。
@@ -465,21 +483,25 @@ c) 板中的E场，由它的下标$z$可知，是指向$z$向的。特别的，�
 \begin{align*}% page417 S1.5a
 E_z(0)=\mu_o\frac{H_e}{J_c}\left(\frac{dH_e}{dt}\right) \tag{S1.5a}
 \end{align*}
+
 方程7.3b的右侧第一项是情况1的坡印廷能量密度$e_{py1}$，可以写成：
 \begin{align*}% page417 S1.6a两个
 e_{py1}\equiv\frac{1}{a}\int\left[-\int_{S}\vec{E}(x)\times\vec{H}_e\cdot d\vec{\ \mathcal{A}}\right]dt=\frac{\mu_o}{aJ_c}\int_{0}^{H_m}H_{e}^{2}dH_e\\
 e_{py1}=\frac{\mu_oH_{m}^{3}}{3H_p} \tag{S1.6a}
 \end{align*}
+
 情况2中，$E_z(0)$由方程S1.3给出，此时$x_-=(H_m-H_e)/2J_c$：
 \begin{align*}% page417 S1.5b
 E_z(0)=-\mu_o\left(\frac{H_m-H_e}{2J_c}\right)\frac{dH_e}{dt} \tag{S1.5b}
 \end{align*}
+
 于是，情况2的坡印廷能量密度$e_{py2}$为：
 \begin{align*}% page417 S1.6b两个
 e_{py2}=\frac{\mu_o}{2aJ_c}\int_{H_m}^{0}(H_m-H_e)H_edH_e\\
 e_{py2}=-\frac{\mu_oH_{m}^{3}}{12H_p} \tag{S1.6b}
 \end{align*}
-方程S1.6b中的$-$号表示$e_{py2}$是流回源的。在整个序列结束$H_e=0*\rightarrow H_m\rightarrow 0$(情况3)的时候，
+
+方程S1.6b中的$-$号表示$e_{py2}$是向源回流的。在整个序列结束$H_e=0*\rightarrow H_m\rightarrow 0$(情况3)的时候，
 有方程7.12可知，$-M(0)=-H_m^2/4H_p$：
 板通过$H_s(x)$储存的磁场(或磁化)能量密度$e_{m_f}$为($x_0=H_m/2J_c$)：
 \begin{align*}% page417 S1.7a
@@ -488,12 +510,14 @@ H_s(x)=J_cx  \quad      (0\leq x\leq x_0) \tag{S1.7a}
 \begin{align*}% page417 S1.7b
 H_s(x)=H_m-J_cx  \quad  (x_0\leq x\leq H_m/J_c) \tag{S1.7b}
 \end{align*}
+
 使用方程S1.7a和S1.7b，我们可以计算$e_{m_f}$：
 \begin{align*}% page417 S1.8
 e_{m_f}=\frac{\mu_o}{2a}\int_{0}^{a}H_{s}^{2}(x)dx&=\frac{\mu_o}{2a}\left(2\times\int_{0}^{\frac{H_m}{2J_c}}J_{c}^{2}x^2dx\right)\\
 e_{m_f}&=\frac{\mu_oH_{m}^{3}}{24H_p} \tag{S1.8}
 \end{align*}
-联立7.3b/S1.6a/S1.6b/S1.8，我们得到情况3的$e_{hy}$：
+
+联立7.3b、S1.6a、S1.6b、S1.8，我们得到情况3的$e_{hy}$：
 \begin{align*}% 7.15a两个
 e_{hy}&=e_{py1}+e_{py2}-e_{m_f} \\
 &=\frac{\mu_oH_{m}^{3}}{3H_p}-\frac{\mu_oH_{m}^{3}}{12H_p}-\frac{\mu_oH_{m}^{3}}{24H_p}\\
@@ -506,6 +530,7 @@ e_{hy}&=\frac{5\mu_oH_{m}^{3}}{24H_p}   \quad    (0\leq H_m\leq H_p) \tag{7.15a}
 \begin{align*}% page418 S1.9
 e_{py}=e_{hy}+e_{m_f}-e_{m_i} \tag{S1.9}
 \end{align*}
+
 式中，$e_{m_f}$和$e_{m_i}$分别是板中终了和初始时的磁场能密。
 本质上，S1.9和7.2是一样的。
 
@@ -516,10 +541,12 @@ e_{m_{f1}}&=\frac{\mu_o}{2a}\int_{0}^{a}H_{s}^{2}(x)dx \\
 &=\frac{\mu_o}{2a}\left[\int_{0}^{\frac{H_m}{J_c}}(H_m-J_cx)^2dx\right]\\
 e_{m_{f1}}&=\frac{\mu_oH_{m}^{3}}{6H_p} \tag{S1.10}
 \end{align*}
+
 将7.13a和S1.10代入S1.9的右侧，有：
 \begin{align*}% page418 S1.11a
 e_{py1}=\frac{\mu_oH_{m}^{3}}{6H_p}+\frac{\mu_oH_{m}^{3}}{6H_p}=\frac{\mu_oH_{m}^{3}}{3H_p} \tag{S1.11a}
 \end{align*}
+
 方程S1.11a中的$e_{py1}$和方程S1.6a中的是一致的，表明在第一个过程中能量密度流是平衡的。
 
 我们还可以检视第二个过程$H_e=H_m\rightarrow 0$的能量平衡。这个过程中，S1.9方程右侧需要出现的能量密度是：
@@ -527,6 +554,7 @@ $e_{hy}$(方程7.14a),$e_{m_f}$(方程S1.8)和$e_{m_i}=e_{m_{f1}}$(方程S1.10)�
 \begin{align*}% page418 S1.11b
 e_{py2}=\frac{\mu_oH_{m}^{3}}{24H_p}+\frac{\mu_oH_{m}^{3}}{24H_p}-\frac{\mu_oH_{m}^{3}}{6H_p}=\frac{\mu_oH_{m}^{3}}{12H_p} \tag{S1.11b}
 \end{align*}
+
 方程S1.11b中的$e_{py2}$等于方程S1.6b中的$e_{py2}$，表明在第二个过程中S1.9的能量平衡是成立的。
 如前所述，$-$号表明在第二个过程中存在由板向源的净能量流：
 这个能流密度加上磁滞能量流密度对应板中储存磁能的净减少量。
@@ -575,11 +603,13 @@ a) 情况1的前半部分中，$H_e=0*\rightarrow H_p$序列下，我们通过�
 \begin{align*}% page420 S2.1
 e_{hy1^\prime}=\frac{1}{6}\mu_oH_{p}^{2}  \quad     (H_e=0\rightarrow H_p) \tag{S2.1}
 \end{align*}
+
 这里，对情况1的后半部分，$H_e=H_p\rightarrow H_m$序列下，整个板的场参数(考虑对称性，我们仅取其中的一半
 ，从$x=0$到$x=a$)如图7.2b的虚线所示。$dH_e/dt$感应出的$E_z(x)$为：
 \begin{align*}% page420 S2.2
 E_z(x)=\mu_o\frac{dH_e}{dt}(a-x) \tag{S2.2}
 \end{align*}
+
 将方程7.3a和S2.2应用到半板上，有：
 \begin{align*}% page420 S2.3a和2.3b
 e_{hy1''}&=\frac{1}{a}\int_{0}^{a}\left[\int J_cE(x)dt\right]dx=\frac{\mu_oJ_c}{a}\int_{0}^{a}\left[\int_{H_p}^{H_m}(a-x)dH_e\right]dx \tag{S2.3a}
@@ -587,6 +617,7 @@ e_{hy1''}&=\frac{1}{a}\int_{0}^{a}\left[\int J_cE(x)dt\right]dx=\frac{\mu_oJ_c}{
 \begin{align*}
 e_{hy1''}=\mu_oJ_c(H_m-H_p)\int_{0}^{a}\frac{a-x}{a}dx=\frac{1}{2}\mu_oH_p(H_m-H_p)\tag{S2.3b}
 \end{align*}
+
 将方程S2.1和S2.3b相加，得到情况1的$e_[hy]$：
 \begin{align*}% page420 7.13b两个
 e_{hy}&=\frac{1}{6}\mu_oH_{p}^{2}+\frac{1}{2}\mu_oH_p(H_p-H_m) \\
@@ -602,20 +633,24 @@ c) 在本序列的前半部分，坡印廷能量密度$e_{py1'}$是方程S1.6a�
 \begin{align*}% page420 S2.4a
 e_{py1^\prime}=\frac{1}{3}\mu_oH_{p}^{2} \tag{S2.4a}
 \end{align*}
+
 在后半部分，$H_e=H_p\rightarrow H_m$时，$E_z(0)$由S2.2给出：
 \begin{align*}% page420 S2.5
 E_z(0)=\mu_oa\frac{dH_e}{dt}  \tag{S2.5}
 \end{align*}
+
 方程7.3b等号右侧的第一部分坡印廷能量密度$e_{py1''}$于是可以写成：
 \begin{align*}% page420 2.4b两个
 e_{pyq^{\prime\prime}}\equiv\frac{1}{a}&\int\left[-\int_{S}\vec{E}(x)\times\vec{H}_e\cdot d\vec{\ \mathcal{A}}\right]dt=\mu_o\int_{H_p}^{H_m}H_edH_e\\
 &e_{pyq^{\prime\prime}}=\frac{1}{2}\mu_o(H_{m}^{2}-H_{p}^{2}) \tag{S2.4b}
 \end{align*}
+
 在第二个场序列$H_e=H_m\rightarrow 0$时，$E_z(0)$和方程S1.5b给出的相同；
 对应的坡印廷能量密度$e_{py2}$于是可由方程S1.6b给出：
 \begin{align*}% page421 S1.6b
 e_{py2}=-\frac{\mu_oH_{m}^{3}}{12H_p} \tag{S1.6b}
 \end{align*}
+
 同样，$-$号表明$e_{py2}$是返回电源的。
 在整个序列过程(情况3)最后，可从图7.11中看出，通过$H_s(x)$而储存在板内的磁场(磁化)能量密度$e_{m_f}$
 可由S1.7给出($x_0=H_m/2 J_c$)。
@@ -626,6 +661,7 @@ e_{py2}=-\frac{\mu_oH_{m}^{3}}{12H_p} \tag{S1.6b}
 e_{m_f}&=\frac{\mu_o}{2a}\int_{0}^{a}H_{s}^{2}(x)dx=\frac{\mu_o}{2a}\left[\int_{0}^{\frac{H_m}{2J_c}}J_{c}^{2}x^2dx+\int_{\frac{H_m}{2J_c}}^{a}(H_m-J_cx)^2dx\right]\\
 e_{m_f}&=\frac{1}{2}\mu_oH_{m}^{2}-\frac{\mu_oH_{m}^{3}}{8H_p}-\frac{1}{2}\mu_oH_mH_p+\frac{1}{6}\mu_oH_{p}^{2}\tag{S2.7}
 \end{align*}
+
 联立7.3b、S2.4a、S2.4b、S1.6b和S2.7，我们得到情况3下的$e_{hy}$：
 \begin{align*}% page421 S2.8一个
 e_{hy}=&e_{py1^\prime}+e_{py1^{\prime\prime}}+e_{py}-e_{m_f} \\
@@ -634,6 +670,7 @@ e_{hy}=&e_{py1^\prime}+e_{py1^{\prime\prime}}+e_{py}-e_{m_f} \\
 &-\frac{1}{2}\mu_oH_mH_p+\frac{1}{6}\mu_oH_{p}^{2}\big) \\
 =&-\frac{1}{3}\mu_oH_{p}^{2}+\frac{\mu_oH_{m}^{3}}{24H_p}+\frac{1}{2}\mu_oH_pH_m \tag{S2.8}
 \end{align*}
+
 S2.8等价于7.15b：
 \begin{align*}% 7.15b
 e_{hy}=\frac{1}{2}\mu_oH_pH_m\left[1-\frac{2H_p}{3H_m}+\frac{1}{12}\left(\frac{H_m}{H_p}\right)^2\right] \quad (H_p\leq H_m\leq 2H_p) \tag{7.15b}
@@ -690,14 +727,16 @@ a) 如在“小”磁场序列下一样，$E_z(x)$由S1.3给出，其中$x_-=(H_
 $e_{hy2'}$可由S1.4给出，除了场范围是从$H_m$到$H_m-2H_p$：
 \begin{align*}% 7.16a
 e_{hy2'}=&\frac{\mu_0 J_c}{a}\int_{H_m}^{H_m-2H_p}\left[\int_{0}^{x_-}(x-x_-)dx\right]dH_e=-\frac{\mu_0 J_c}{a}\int_{H_m}^{H_m-2H_p} x_-^2 dH_e\\
-=&-\frac{\mu_0}{8H_p}\int_{H_m}^{H_m-2H_p}(H_m-H_e)^2 dH_e=-\frac{\mu_0}{8H_p}\int_{H_m}^{H_m-2H_p}(H_m^2-2H_mH_e+H_e^2) dH_e\\
-e_{hy2^\prime}=&\frac{1}{3}\mu_oH_{p}^{2} \tag{7.16a}
+=&-\frac{\mu_0}{8H_p}\int_{H_m}^{H_m-2H_p}(H_m-H_e)^2 dH_e\\
+=&-\frac{\mu_0}{8H_p}\int_{H_m}^{H_m-2H_p}(H_m^2-2H_mH_e+H_e^2) dH_e
 \end{align*}
-
+\begin{align*}
+e_{hy2^\prime}=\frac{1}{3}\mu_oH_{p}^{2} \tag{7.16a}
+\end{align*}
 b) 在$x_-=a$时，S1.3给出$E_z(x)$，S1.4给出$e_{hy2''}$：
 \begin{align*}% 7.16b
-e_{hy2''}=\frac{\mu_0 J_c}{a}\int_{H_m-2H_p}^{0}\left[\int_{0}^{a}(x-a)dx\right]dH_e=\frac{\mu_0J_c}{2a}\int_{H_m-2H_p}^{0}a^2 dH_e\\
-e_{hy2^{\prime\prime}}=\frac{1}{2}\mu_oH_pH_m\left(1-\frac{2H_p}{H_m}\right) \tag{7.16b}
+e_{hy2''}=&\frac{\mu_0 J_c}{a}\int_{H_m-2H_p}^{0}\left[\int_{0}^{a}(x-a)dx\right]dH_e=\frac{\mu_0J_c}{2a}\int_{H_m-2H_p}^{0}a^2 dH_e\\
+e_{hy2^{\prime\prime}}=&\frac{1}{2}\mu_oH_pH_m\left(1-\frac{2H_p}{H_m}\right) \tag{7.16b}
 \end{align*}
 
 c) 将$e_{hy2'}$和$e_{hy2''}$相加：
@@ -763,7 +802,7 @@ e_{hy}&=\mu_oH_pH_m\left(1-\frac{H_p}{H_m}\right) \\\tag{7.15c}
 点画线、虚线和实线分别对应情况6中的“小”、“中”和“大”磁场路径。
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.7]{chpt7/figs/fig7.13.eps}
+	\includegraphics[scale=0.6]{chpt7/figs/fig7.13.eps}
 	\caption{$-H_m$到$H_m$范围内的$-M(H_e)$图。}
 \end{figure}
 
@@ -771,11 +810,13 @@ e_{hy}&=\mu_oH_pH_m\left(1-\frac{H_p}{H_m}\right) \\\tag{7.15c}
 \begin{align*}% page425 S1.1b
 E_z(x)dt=\mu_oH(x_+-x)dH_e \tag{S1.1b}
 \end{align*}
+
 这里，如图7.4，$x_+=(H_m+H_e)/2J_c$而不是像问题7.1的$x_+=H_e/J_c$。
 S1.1b可以导出S1.2c：
 \begin{align*}% page425 S1.2c
 e_{hy}=\frac{\mu_oJ_c}{a}\int_{0}^{H_m}\left(x_{+}^{2}-\frac{x_{+}^{2}}{2}\right)dH_e \tag{S1.2c}
 \end{align*}
+
 然后，将$x_+=(H_m+H_e)/2J_c$代入到S1.2c，有：
 \begin{align*}% 7.19a两个
 e_{hy}&=\frac{\mu_oJ_c}{2a}\int_{0}^{H_m}\left(\frac{H_m+H_e}{2J_c}\right)^2dH_e \\
@@ -787,6 +828,7 @@ e_{hy}&=\frac{\mu_oJ_c}{2a}\int_{0}^{H_m}\left(\frac{H_m+H_e}{2J_c}\right)^2dH_e
 \begin{align*}% page425 S2.2
 E_z(x)=\mu_o\frac{dH_e}{dt}(a-x) \tag{S2.2}
 \end{align*}
+
 直到$H_e=2H_p-H_m$，$H_e$仅穿透到$x_+$。这样，$e_{hy}$必须在$H_e=0\rightarrow 2H_p-H_m$和
 $H_e=2H_p-H_m\rightarrow H_m$两个磁场范围内计算。分别使用S1.1b和S2.2的$E_z(x)dt$：
 \begin{align*}% 7.19b
@@ -794,17 +836,20 @@ e_{hy}&=\frac{\mu_oJ_c}{2a}\left[\int_{0}^{2H_p-H_m}\left(\frac{H_m+H_e}{2J_c}\r
 &=\frac{\mu_o}{8H_p}\int_{0}^{2H_p-H_m}(H_{m}^{2}2H_mH_e+H_{e}^{2})dH_e+\frac{1}{2}\mu_oH_p\int_{2H_p-H_m}^{H_m}dH_e \\
 &=\left(\frac{1}{3}\mu_oH_{p}^{2}-\frac{\mu_oH_{m}^{3}}{24H_p}\right)+(\mu_oH_pH_m-\mu_oH_{p}^{2}) 
 \end{align*}
+
 于是，
 \begin{align*}
 e_{hy}=\mu_oH_pH_m\left[1-\frac{2H_p}{3H_m}-\frac{1}{24}\left(\frac{H_m}{H_p}\right)^2\right]      (H_p\leq H_m\leq 2H_p)
 \end{align*}
+
 显然，7.19a和7.19b在$H_m=H_p$时自洽：$e_{hy}=7\mu_0 H_p^2/24$。
 
 \textbf{情况4---“大”}\quad 如图7.4c可见，整个场范围内都会穿透整个板。于是：
 \begin{align*}% 7.19c两个
-e_{hy}=&\frac{\mu_oJ_c}{2a}\left(\int_{0}^{H_m}a^2dH_e\right)=\frac{1}{2}\mu_oH_p\int_{0}^{H_m}dH_e
+e_{hy}=&\frac{\mu_oJ_c}{2a}\left(\int_{0}^{H_m}a^2dH_e\right)=\frac{1}{2}\mu_oH_p\int_{0}^{H_m}dH_e\\
 e_{hy}=&\frac{1}{2}\mu_oH_pH_m \quad (H_m\geq 2H_p) \tag{7.19c}
 \end{align*}
+
 同样，7.19b和7.19c在$H_m=2H_p$时给出同样的结果：$e_{hy}=\mu_0 H_p^2$。
 
 \textbf{情况5---“小”}\quad 对比情况2下的图7.4和7.3，我们发现情况5下的$H_s(x)$在“小”、“中”、“大”场
@@ -816,6 +861,7 @@ e_{hy}=&\frac{1}{2}\mu_oH_pH_m \quad (H_m\geq 2H_p) \tag{7.19c}
 e_{hy}=&2\times7\left(\frac{7\mu_oH_{m}^{3}}{24H_p}+\frac{\mu_oH_{m}^{3}}{24H_p}\right)\\\notag
 e_{hy}=&\frac{2\mu_oH_{m}^{3}}{3H_p}     (0\leq H_m\leq H_p)
 \end{align}
+
 当然，因为磁场会经过一个完整的周期，我们可以使用7.4b从7.20中得到$e_{hy}$。
 因为$-M(H_e)$是反对称的，$-H_m$到$H_m$的积分等于从0到$H_m$的积分的两倍：
 \begin{align*}% 7.4b和7.21
@@ -823,12 +869,14 @@ e_{hy}&=\mu_o\oint-M(H_e)dH_e \\
 &=2\mu_o\int_{0}^{H_m}-M(H_e)dH_e\\ 
 &=2\mu_o\int_{0}^{H_m}\{-[M(H_e)]_{H_e=0\rightarrow H_m}+[M(H_e)]_{H_e=H_m\rightarrow 0}\}dH_e \tag{7.21}
 \end{align*}
+
 将71.7a和7.18代入7.21，有：
 \begin{align*}% 7.20a两个
-e_{hy}=&2\mu_o\int_{0}^{H_m}\big[\left(H_e-\frac{H_{e}^{2}+2H_mH_e-H_{m}^{2}}{4H_p}\right) \\
-&-\left(H_e+\frac{H_{e}^{2}-2H_mH_e-H_{m}^{2}}{4H_p}\right)\big]dH_e \\
+e_{hy}=&2\mu_o\int_{0}^{H_m}\Big[\left(H_e-\frac{H_{e}^{2}+2H_mH_e-H_{m}^{2}}{4H_p}\right) \\
+&-\left(H_e+\frac{H_{e}^{2}-2H_mH_e-H_{m}^{2}}{4H_p}\right)\Big]dH_e \\
 =&2\mu_o\int_{0}^{H_m}\left(-\frac{H_{e}^{2}}{2H_p}+\frac{H_{m}^{2}}{2H_p}\right)dH_e=2\mu_o\left(-\frac{H_{m}^{3}}{6H_p}+\frac{H_{m}^{3}}{2H_p}\right)
 \end{align*}
+
 所以，
 \begin{align*}
 e_{hy}=\frac{2\mu_oH_{m}^{3}}{3H_p} \quad (0\leq H_m\leq H_p) \tag{7.20}
@@ -836,23 +884,26 @@ e_{hy}=\frac{2\mu_oH_{m}^{3}}{3H_p} \quad (0\leq H_m\leq H_p) \tag{7.20}
 
 \textbf{情况6---“中”}\quad 类似的，$e_{hy}$为对情况4成立的7.19b和对情况2(和5)成立的7.14a对应的$e_{hy}$之和的两倍：
 \begin{align*}% page427 前7.20b两个
-e_{hy}&=2\times\{\mu_oH_pH_m\left[1-\frac{2H_p}{3H_m}-\frac{1}{24}\left(\frac{H_m}{H_p}\right)^2\right]+\frac{\mu_oH_{m}^{3}}{24H_p}\}\\
+e_{hy}&=2\times\left\{\mu_oH_pH_m\left[1-\frac{2H_p}{3H_m}-\frac{1}{24}\left(\frac{H_m}{H_p}\right)^2\right]+\frac{\mu_oH_{m}^{3}}{24H_p}\right\}\\
 e_{hy}&=2\mu_oH_pH_m\left(1-\frac{2H_p}{3H_m}\right)\quad (H_p\leq H_m\leq 2H_p) \tag{7.20b}
 \end{align*}
+
 我们可以由与7.4a等价的7.21推导出上式：
 \begin{align*}% 7.21
-e_{hy}=-2\mu_o\int_{0}^{H_m}\{[M(H_e)]_{H_e=0\rightarrow H_m}-[M(H_e)]_{H_e=H_m\rightarrow 0}\}dH_e \tag{7.21}
+e_{hy}=-2\mu_o\int_{0}^{H_m}\left\{[M(H_e)]_{H_e=0\rightarrow H_m}-[M(H_e)]_{H_e=H_m\rightarrow 0}\right\}dH_e \tag{7.21}
 \end{align*}
+
 因为$-M(H_e)$在$H_e=0\rightarrow 2H_p-H_m$时由71.7b给出，在$H_e=2H_p-H_m\rightarrow H_m$时
 由5.6给出，7.21的积分包括两个部分。将7.17b、5.6和5.7a代入7.21，有：
 \begin{align*}% page427倒数第二个
 e_{hy}=&2\mu_o\{\int_{0}^{2H_p-H_m}\left[-\frac{1}{2}H_p+(H_m+H_e)-\frac{(H_m+H_e)^2}{4H_p}\right]dH_e \\
 &+\int_{2H_p-H_m}^{H_m}\frac{1}{2}H_pdH_e-\int_{0}^{H_m}\left[\frac{1}{2}H_p-(H_m-H_e)+\frac{(H_m-H_e)^2}{4H_p}\right]\}dH_e\\
-=&2\mu_o\{\int_{0}^{2H_p-H_m}\left[-\frac{1}{2}H_p+H_m+H_e-\frac{H_{m}^{2}}{4H_p}-\frac{H_mH_e}{2H_p}-\frac{H_{e}^{2}}{4H_p}\right]dH_e \\
-&+H_p(H_m-H_p)-\int_{0}^{H_m}\left[\frac{1}{2}H_p-H_m+H_e+\frac{H_{m}^{2}}{4H_p}-\frac{H_mH_e}{2H_p}+\frac{H_{e}^{2}}{4H_p}\right]\}dH_e \\
-=&2\mu_o\big[\left(\frac{1}{3}H_{p}^{3}+\frac{1}{2}H_pH_m-\frac{1}{2}H_{m}^{2}+\frac{H_{m}^{3}}{12H_p}\right)\big] \\
+=&2\mu_o\Big\{\int_{0}^{2H_p-H_m}\left[-\frac{1}{2}H_p+H_m+H_e-\frac{H_{m}^{2}}{4H_p}-\frac{H_mH_e}{2H_p}-\frac{H_{e}^{2}}{4H_p}\right]dH_e \\
+&+H_p(H_m-H_p)-\int_{0}^{H_m}\left[\frac{1}{2}H_p-H_m+H_e+\frac{H_{m}^{2}}{4H_p}-\frac{H_mH_e}{2H_p}+\frac{H_{e}^{2}}{4H_p}\right]\Big\}dH_e \\
+=&2\mu_o\Big[\left(\frac{1}{3}H_{p}^{3}+\frac{1}{2}H_pH_m-\frac{1}{2}H_{m}^{2}+\frac{H_{m}^{3}}{12H_p}\right)\Big] \\
 =&2\mu_o\left(-\frac{2}{3}H_{p}^{2}+H_pH_m\right) 
 \end{align*}
+
 于是，
 \begin{align*}
 e_{hy}=2\mu_oH_pH_m\left(1-\frac{2H_p}{3H_m}\right)\quad (H_p\leq H_m\leq 2H_p) \tag{7.20b}
@@ -870,9 +921,9 @@ e_{hy}=2\mu_oH_pH_m\left(1-\frac{2H_p}{3H_m}\right) \quad (H_m\geq 2H_p) \tag{7.
 7.21的积分包括三个部分：
 \begin{align*}% page428 7.21和7.20c合成的
 e_{hy}=&2\mu_o\int_{0}^{H_m}\{-[M(H_e)]_{H_e=0\rightarrow H_m}+[M(H_e)]_{H_e=H_m\rightarrow 0}\}dH_e \\\tag{7.21}
-=&2\mu_o]\big\{\int_{0}^{H_m}\frac{1}{2}H_pdH_e 
+=&2\mu_o\Big\{\int_{0}^{H_m}\frac{1}{2}H_pdH_e 
 -\int_{H_m-2H_p}^{H_m}\left[\frac{1}{2}H_p-(H_m-H_e)+\frac{(H_m-H_e)^2}{4H_p}\right]\\
-&-\int_{0}^{H_m-2H_p}(-\frac{1}{2}H_p)\big\}dH_e\\ 
+&-\int_{0}^{H_m-2H_p}(-\frac{1}{2}H_p)\Big\}dH_e\\ 
 =&2\mu_o\big[H_p(H_m-H_p)\\ 
 &+\int_{H_m-2H_p}^{H_m}\left(-\frac{1}{2}H_p+H_m-\frac{H_{m}^{2}}{4H_p}-H_e+\frac{H_mH_e}{2H_p}-\frac{H_{e}^{2}}{4H_p}\right)dH_e\big] \\
 =&2\mu_o[H_p(H_m-H_p)+\frac{1}{3}H_{p}^{2}]
@@ -908,13 +959,13 @@ e_{hy}=2\mu_oJ_caH_m \quad (H_m\gg H_p) \tag{7.20e}
 当$H_m = H_p(1-i)\equiv H_m^*$时，(c)和(d)中的点划线对应于每个序列结束时的$H_s(x)$。
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.7]{chpt7/figs/fig7.14.eps}
+	\includegraphics[scale=0.6]{chpt7/figs/fig7.14.eps}
 	\caption{Graphs of Hs(x) plots for a Bean slab of width 2a carrying DC transport
 		current of It(=2iHp), subjected to He(t) of Cases 1i and 2i, where Hm is the maximum
 		external field. 。}
 \end{figure}
 
-\textbf{情况4i和5i---"小"磁场激励}
+\textbf{情况4i和5i---“小”磁场激励}
 
 我们现在考察情况4i和5i的$H_s(x)$，如图7.15所示，其中外场$H_e(t)$的最大幅值$H_m$是“小”的，
 具体而言，$H_m\le H_p(1-i)$。
@@ -929,12 +980,11 @@ e_{hy}=2\mu_oJ_caH_m \quad (H_m\gg H_p) \tag{7.20e}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.7]{chpt7/figs/fig7.15.eps}
-	\caption{Hs(x) plots for Cases 4i and
-		5i, in which Hm ≤ Hp(1−i). 。}
+	\includegraphics[scale=0.5]{chpt7/figs/fig7.15.eps}
+	\caption{情况4i和5i的$H_s(x)$图，其中$H_m\le 2H_p(1−i)$ 。}
 \end{figure}
 
-\textbf{情况4i和5i---"大"磁场激励}
+\textbf{情况4i和5i---“da”磁场激励}
 
 接下来，我们考察情况4i和5i在$H_m$是“大”的，即$H_m\ge 2H_p(1-i)$时的$H_s(x)$。
 同样，$x$轴和$\xi$轴都会使用。
@@ -957,9 +1007,8 @@ $H_s(0)= H_m^* -H_p i$，$H_s(\xi_0)= H_m^* + H_p i$；
 注意到，情况5i中在完全穿透时$H_s(x)$是情况4i的镜像。
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.7]{chpt7/figs/fig7.16.eps}
-	\caption{Hs(x) plots for Cases 4i and
-		5i, in which Hm ≥ 2Hp(1−i). 。}
+	\includegraphics[scale=0.5]{chpt7/figs/fig7.16.eps}
+	\caption{情况4i和5i的$H_s(x)$图，其中$H_m\ge 2H_p(1−i)$ 。}
 \end{figure}
 
 
@@ -987,6 +1036,7 @@ c) 证明情况6i$H_e=0\rightarrow H_m\rightarrow 0\rightarrow -H_m\rightarrow 0
 \begin{align*}% 7.22c
 e_{hy}=\frac{2\mu_oH_{m}^{3}}{3H_p} \quad  [0\leq H_m\leq H_p(1-i)] \tag{7.22c}
 \end{align*}
+
 注意到7.22c给出的$e_{hy}$和7.20a给出的无载流板情况下的是一致的：在“小”磁场偏移下，
 传输电流对磁滞损耗没影响。
 
@@ -1020,18 +1070,20 @@ E_z(x)=\mu_o\frac{dH_e}{dt}(x_+-x) \tag{S4.1a}
 \begin{align*}% page433 S4.1b
 E_z(x)dt=\mu_o(x_+-x)dH_e \tag{S4.1b}
 \end{align*}
+
 联立S4.1b和7.3a，我们得到$0\le x\le a$半板的表达式：
 \begin{align*}% 7.3a和S4.2a
 e_{hyx}&=\frac{1}{2a}\int_{0}^{a}\left[\int J_cE(x)dt\right]dx\\
 &=\frac{\mu_oJ_c}{2a}\int_{0}^{H_m}\left[\int_{0}^{x_+}(x_+-x)dx\right]dH_e \tag{S4.2a}
 \end{align*}
+
 代入入$x_+=(H_m+H_e)/2J_c$并积分，有：
 \begin{align*}% page433 S4.2b
 e_{hyx}=\frac{7\mu_oH_{m}^{3}}{48H_p} \tag{S4.2b}
 \end{align*}
 
-接下来，我们推导在$H_s(\xi)$下板的$\xi$侧磁滞能量密度$e_{hy\xi}$；$H_s(0)=\uparrow H_e+H_p i$，如图7.15a所示。
-代入$\xi_+=(H_m+H_e)/2J_c$，很明显有$e_{hy\xi}=e_{hyx}$，因此$e_{hy}=2e_{eyx}$。从而：
+接下来，我们推导在$H_s(\xi)$作用下板的$\xi$侧磁滞能量密度$e_{hy\xi}$；$H_s(0)=\uparrow H_e+H_p i$，如图7.15a所示。
+代入$\xi_+=(H_m+H_e)/2J_c$，明显有$e_{hy\xi}=e_{hyx}$，因此$e_{hy}=2e_{eyx}$。从而：
 \begin{align*}% 7.22a
 e_{hy}=\frac{7\mu_oH_{m}^{3}}{24H_p}  \quad  [0\leq H_m\leq H_p(1-i)] \tag{7.22a}
 \end{align*}
@@ -1040,6 +1092,7 @@ b) 考虑板的$x$侧。类似于S4.2a，$e_{hyx}$为：
 \begin{align*}
 e_{hyx}=\frac{\mu_0 J_c}{2a}\int_{H_m}^{0}\left[\int_{0}^{x^+}(x-x_+)dx\right]dH_e \tag{S4.3a}
 \end{align*}
+
 其中，在这个减小磁场序列中，$x_+=(H_m-H_e)/2J_c$。从而：
 \begin{align*}% page433 S4.3a
 e_{hyx}=\frac{\mu_oJ_c}{2a}\int_{H_m}^{0}x_{+}^{2}dH_e=-\frac{\mu_o}{16H_p}(H_m-H_e)^2dH_e  \tag{S4.3b}
@@ -1047,6 +1100,7 @@ e_{hyx}=\frac{\mu_oJ_c}{2a}\int_{H_m}^{0}x_{+}^{2}dH_e=-\frac{\mu_o}{16H_p}(H_m-
 \begin{align*}
 e_{hyx}=\frac{\mu_oH_{m}^{3}}{48H_p} \tag{S4.3c}
 \end{align*}
+
 同样，板的$\xi$侧和$x$侧的磁滞能量密度相同。因此，这个情况下的$e_{hy}$是S4.3c给出的$e_{hyx}$的两倍：
 \begin{align*}% 7.22b
 e_{hy}=\frac{\mu_oH_{m}^{3}}{24H_p}   \quad     [0\leq H_m\leq H_p(1-i)] \tag{7.22b}
@@ -1057,10 +1111,12 @@ c) 情况6i的磁场序列包括$H_e(t)=0\rightarrow -H_m$和$H_e(t)=-H_m\righta
 \begin{align*}% page434 S4.4
 3_{hy}=2\times\left(\frac{7\mu_oH_{m}^{3}}{24H_p}+\frac{\mu_oH_{m}^{3}}{24H_p}\right) \tag{S4.4}
 \end{align*}
+
 由S4.4，我们有：
 \begin{align*}% 7.22c
 e_{hy}=\frac{2\mu_oH_{m}^{3}}{3H_p} \quad [0\leq H_m\leq H_p(1-i)] \tag{7.22c}
 \end{align*}
+
 如前所示，在“小”的磁场偏移($H_m\le H_p(1-i)$)下，
 $e_{hy}$与板内的传输电流无关。
 
@@ -1068,18 +1124,22 @@ d) 首先考虑板内的$x$侧。和S4.2a类似，有：
 \begin{align*}% page434 S4.5a
 e_{hyx}=\frac{\mu_oJ_c}{2a}\int_{0}^{H_m}\left[\int_{0}^{\ell^*}(\ell^*-x)dx\right]dH_e \tag{4.5a}
 \end{align*}
+
 其中，从$x=0$测量，$\ell^*=a(1-i)$。于是：
 \begin{align*}% page434 S4.5b
 e_{hyx}=\frac{\mu_oJ_ca^2(1-i)^2}{4a}\int_{0}^{H_m}dH_e=\frac{1}{4}\mu_oH_pH_m(1-i)^2 \tag{S4.5b}
 \end{align*}
+
 接下来，考虑$\xi$侧。类似S4.2a，有：
 \begin{align*}% page434 S4.6a
 e_{hy\xi}=\frac{\mu_oJ_c}{2a}\int_{0}^{H_m}\left[\int_{0}^{\ell^*}(\ell^*-\xi)d\xi\right]dH_e \tag{S4.6a}
 \end{align*}
+
 其中，从$\xi$测量，$\ell^*=a(1+i)$。于是：
 \begin{align*}% page434 S4.6b
 e_{hy\xi}=\frac{\mu_oJ_ca^2(1+i)^2}{4a}\int_{0}^{H_m}dH_e=\frac{1}{4}\mu_oH_pH_m(1+i)^2\tag{S4.6b}
 \end{align*}
+
 因为$e_{hy}=e_{hyx}+e_{hy\xi}$，联立S4.5b和S4.6b，有：
 \begin{align*}% 7.23a
 e_{hy}=\frac{1}{2}\mu_oH_pH_m(1+i^2) \quad [H_m\geq 2H_p(1-i)] \tag{7.23a}
@@ -1090,32 +1150,38 @@ e) 对情况5i这样的减小磁场序列，我们首先考虑$H_m$到$H_m^*\equ
 \begin{align*}% page434 S4.7a
 e_{hyx}=\frac{\mu_oJ_c}{2a}\int_{H_m}^{H_{m}^{*}}\left[\int_{0}^{x_+}(x-x_+)dx\right]dH_e \tag{S4.7a}
 \end{align*}
+
 式中，$x_+=(H_m-H_e)/2J_c$。于是：
 \begin{align*}% page434 S4.7b
 e_{hyx}&=\frac{\mu_oJ_c}{2a}\int_{H_{m}^{*}}^{H_m}\left(\frac{H_m-H_e}{2J_c}\right)^2dH_e \\\tag{S4.7b}
 &=\frac{\mu_o}{16H_p}(H_{m}^{2}H_e-H_mH_{e}^{2}+\frac{1}{3}H_{e}^{3})\mid_{H_m-2H_p(1-i)}^{H_m} \\
 &=\frac{1}{6}\mu_oH_{p}^{2}(1-i)^3
 \end{align*}
+
 从图7.16a可以清晰看出$e_{eyx}=e_{hy\xi}$，于是在
 $H_e=H_m\rightarrow H_m-2H_p(1-i)$序列下，$e_{hy}$为：
 \begin{align*}% page435 S4.7c
 e_{hy}=\frac{1}{3}\mu_oH_{p}^{2}(1-i)^3 \tag{S4.7c}
 \end{align*}
+
 接下来，考虑序列$H_e=H_m^*\rightarrow0$。在$x$侧，有：
 \begin{align*}% page435 S4.8a
 e_{hyx}&=\frac{\mu_oJ_c}{2a}\int_{H_{m}^{*}}^{0}\left[\int_{0}^{x_+}(x-x_+)dx\right]dH_e=-\frac{\mu_oH_p(1+i)^2}{4}\int_{H_{m}^{*}}^{0}dH_e \\
 &=\frac{1}{4}\mu_oH_p(1+i)^2[H_m-2H_p(1-i)] \\
 &=\frac{1}{4}\mu_oH_pH_m(1+i)^2-\frac{1}{2}H_{p}^{2}(1+i)^2(1-i) \tag{S4.8a}
 \end{align*}
+
 在$\xi$侧，我们发现$e_{hy\xi}$非常类似于S4.8a：
 \begin{align*}% page435 S4.8b
 e_{hy\xi}=\frac{1}{4}\mu_oH_pH_m(1-i)^2-\frac{1}{2}H_{p}^{2}(1-i)^3 \tag{S4.8b}
 \end{align*}
+
 在$H_m-2H_p(1-i)$到0的区间，我们有$e_{hy}=e_{hyx}+e_{hy\xi}$；
 联立S4.8a和S4.8b，有：
 \begin{align*}% pge435 S4.8c
 e_{hy}=\frac{1}{2}\mu_oH_pH_m(1+i^2)-\mu_oH_{p}^{2}(1-i)(1+i^2) \tag{S4.8c}
 \end{align*}
+
 情况5i的$e_{hy}$是方程S4.7c和S4.8c给出的之和：
 \begin{align*}% 7.23b
 e_{hy}=\frac{1}{2}\mu_oH_pH_m(1+i^2)-\frac{2}{3}\mu_oH_{p}^{2}(1-i^3) \quad [H_m\geq H_p(1-i)] \tag{7.23b}
@@ -1126,6 +1192,7 @@ f) 情况6i($H_m\ge H_p(1-i)$)的$e_{hy}$是情况4i和情况5i给出的$e_{hy}$
 \begin{align*}% page435 S4.9
 e_{hy}=2\times\left[\frac{1}{2}\mu_oH_pH_m(1+i^2)+\frac{1}{2}\mu_oH_pH_m(1+i^2)-\frac{2}{3}\mu_oH_{p}^{2}(1-i^3)\right] \tag{S4.9}
 \end{align*}
+
 由S4.9，可得：
 \begin{align*}% 7.23c
 e_{hy}=2\mu_oH_pH_m(1+i^2)-\frac{4}{3}\mu_oH_{p}^{2}(1-i^3) \quad [H_m\geq H_p(1-i)] \tag{7.23c}
@@ -1135,6 +1202,7 @@ g) 将$i=0$代入7.23c，有：
 \begin{align*}% page435 S4.10
 e_{hy}=2\mu_oH_pH_m-\frac{4}{3}\mu_oH_{p}^{2} \tag{S4.10}
 \end{align*}
+
 我们注意到，S4.10和7.20b是等价的：
 \begin{align*}% page435 7.20b
 e_{hy}=2\mu_oH_pH_m\left(1-\frac{2H_p}{3H_m}\right) \tag{7.20b}
@@ -1145,13 +1213,14 @@ e_{hy}=2\mu_oH_pH_m\left(1-\frac{2H_p}{3H_m}\right) \tag{7.20b}
 当Bean板通过周期AC传输电流$I(t)$时，由于传输电流在板上产生周期AC表面场(外部)$H_e(t)$，它耗散能量。
 单位体积的这种耗散称为自场磁滞能量密度$e_{sf}$。 电流--时间序列如下：
 \begin{equation}% 7.25
-I(t)=0^*(\ \mathrm{Virgin slab})\rightarrow I_m\rightarrow 0\rightarrow -I_m\rightarrow 0\rightarrow I_m\rightarrow 0\rightarrow -I_m\rightarrow 0
+I(t)=0^*(\mbox{无染})\rightarrow I_m\rightarrow 0\rightarrow -I_m\rightarrow 0\rightarrow I_m\rightarrow 0\rightarrow -I_m\rightarrow 0
 \end{equation}
+
 7.25中，$I_m$是周期AC电力路的幅值。情况1st-3sf均针对非$无染$Bean板。
 情况3sf是$0\rightarrow I_m\rightarrow 0\rightarrow -I_m\rightarrow 0$。
-图7.17给出了宽$2a$的Bean板的$H_s(x)$图，图(a)和(b)分别对应情况1sf和2sf，电流序列非别为：
-情况1sf$i(t)=0\rightarrow i_m$，情况2sf$i\equiv I/I_c\le i_m\equiv I_m/I_c\le 1$。
-如图缩回，$H_s(x)$是关于板中点反对称的：为了推导下面的$e_{hy}$表达式，仅考虑板的从$x=0$到$x=a$的一半。
+图7.17给出了宽$2a$的Bean板的$H_s(x)$图，图(a)和(b)分别对应情况1sf和2sf，电流序列分别为：
+情况1sf为$i(t)=0\rightarrow i_m$，情况2sf为$i\equiv I/I_c\le i_m\equiv I_m/I_c\le 1$。
+如图所示，$H_s(x)$是关于板中点反对称的：为了推导下面的$e_{hy}$表达式，仅考虑板的从$x=0$到$x=a$的一半。
 
 a) 应用7.3a，证明情况1sf的$e_{sf}$为：
 \begin{equation}% 7.26a
@@ -1168,10 +1237,10 @@ c) 应用7.3a，证明情况3sf的$e_{sf}$为：
 e_{sf}=\frac{2}{3}\mu_oH_{p}^{2}i_{m}^{3} \tag{7.26c}
 \end{align*}
 
-d) 从7.20a推导出7.26c，$e_{hy}$对情况6("小"场)成立。
+d) 从7.20a推导出7.26c，$e_{hy}$对情况6(“小”场)成立。
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.7]{chpt7/figs/fig7.17.eps}
+	\includegraphics[scale=0.5]{chpt7/figs/fig7.17.eps}
 	\caption{情况1sf和2sf下的$H_s(x)$图。(a)对应1sf；(b)对应2sf。各图中，点线和虚线分别对应电流序列
 		开始和结束时的$H_s(x)$。}
 \end{figure}
@@ -1185,11 +1254,13 @@ e_{sfx}=\frac{\mu_oJ_c}{2a}\int_{0}^{-H_pi_m}\left[\int_{0}^{x_+}(x-x_+)dx\right
 \begin{align*}
 e_{sfx}=\frac{\mu_oJ_c}{4a}\int_{0}^{-H_pi_m}(-x_{+}^{2})dH_{sf} \tag{S5.1b}
 \end{align*}
+
 将$H_{sf}=-H_p i$代入S5.1b，考虑$x_+=H_p(i_m+i)/2J_c$，我们得到：
 \begin{align*}% page437 S5.2a和5.2b
 e_{sfx}&=\frac{\mu_oH_{p}^{2}}{16}\int_{0}^{i_m}(i_{m}^{2}+2i_mi+i^2)di \\
 &=\frac{7}{48}\mu_oH_{p}^{2}i_{m}^{3} \tag{S5.2}
 \end{align*}
+
 因为板的另一半($a\le x\le 2a$)有同等的耗散能量密度，情况1sf的$e_{sf}$是$e_{sfx}$的两倍：
 \begin{align*}% 7.26a
 e_{sf}=\frac{7}{24}\mu_oH_{p}^{2}i_{m}^{3} \tag{7.26a}
@@ -1201,6 +1272,7 @@ e_{sfx}&=\frac{\mu_oJ_c}{2a}\int_{-H_pi_m}^{0}\left[\int_{0}^{x_+}(x_+-x)dx\righ
 &=\frac{\mu_oH_{p}^{2}}{16}\int_{i_m}^{0}(i_{m}^{2}-2i_mi+i^2)di \\
 &=\frac{1}{48}\mu_oH_{p}^{2}i_{m}^{3} \tag{S5.3c}
 \end{align*}
+
 这样，情况2sf的$e_{sf}$是S5.3给出的$e_{sfx}$的两倍：
 \begin{align*}% 7.26b
 e_{sf}=\frac{1}{24}\mu_oH_{p}^{2}i_{m}^{3} \tag{7.26b}
@@ -1210,6 +1282,7 @@ c) 对情况3sf，因为其涵盖了完整周期，$e_{hy}$是情况1sf和情况
 \begin{align*}% page437 S5.4
 e_{sf}=2\times\left(\frac{7}{24}\mu_oH_{p}^{2}i_{m}^{3}+\frac{1}{24}\mu_oH_{p}^{2}i_{m}^{3}\right) \tag{S5.4}
 \end{align*}
+
 方程S5.4化简为：
 \begin{align*}% 7.26c
 e_{sf}=\frac{2}{3}\mu_oH_{p}^{2}i_{m}^{3} \tag{7.26c}
@@ -1229,7 +1302,7 @@ e_{hy}=\frac{2}{3}\mu_oH_{p}^{2}i_{m}^{3} \tag{7.26c}
 表7.3-7.9总结的交流损耗能量密度闭式解仅适用于最简单的超导体配置和工况。
 首先，超导体要是一个孤立的Bean板，其$J_c$是与场无关。
 其次，施加的外磁场均匀且指向特定方向：平行于厚度($2a$)的Bean板的表面。
-第三，如果存在传输电流，也是最简单的条件：当施加磁场时已经存在DC电流。
+第三，如果存在传输电流，也是最简单的条件：当施加磁场时已经存在直流电流。
 
 使用闭式分析表达式无法准确计算整个磁体的交流损耗。
 如果必须知道磁体的总交流损耗，例如，估计系统制冷负荷，则最好采用数值计算技术将空间相关的“局部”交流损耗做累加。
@@ -1248,7 +1321,7 @@ e_{hy}=\frac{2}{3}\mu_oH_{p}^{2}i_{m}^{3} \tag{7.26c}
 \subsection{讨论7.4：测量交流损耗的技术}
 如上所述，对于真实超导体，短样及整个磁体的交流损耗的精确计算几乎是不可能的：
 唯一的依据是测量[7.61-7.103]。
-有三种测量交流损耗的基本方法：1) 磁测法;；2) 量热法；3) 电测法。
+有三种测量交流损耗的基本方法：1) 磁测法；2) 量热法；3) 电测法。
 磁测法仅适用于不带传输电流的“短”样（公式7.4b）的磁滞损耗(问题7.6)。
 量热法将测试样品(短导体或甚至整个线圈)浸到制冷剂中(LTS为液氦，HTS为液氮)，外施周期场和/或传输电流，
 通过制冷剂的蒸发速率推导交流损耗；在该方法变体中，交流损耗引起的轻微温升用以确定损耗。
@@ -1274,7 +1347,7 @@ e_{hy}=\frac{2}{3}\mu_oH_{p}^{2}i_{m}^{3} \tag{7.26c}
 液氦在4.22 K时的汽化潜热是$h_L=20.9$ kJ/kg(J/g)；
 4.22 K的100 mW耗散能量对应液氦汽化质量流量为4.8 mg/s或液体体积蒸发率0.038 $\mathrm{cm^3/s}$(密度1.25 $g/cm^3$)。
 因为在大气压力下氦会膨胀，从4.22 K的液体到273 K的气体，膨胀倍数为700(附录II)，
-体积流量计测到的体积流量应为28.6 $cm^3/s$或1596 SCCM(standard(1 atm, 0$^\circ$C) cubic centimeter per minute， 标准立方米/分钟)
+体积流量计测到的体积流量应为28.6 $\mathrm{cm^3/s}$或1596 SCCM(standard(1 atm, 0$^\circ$C) cubic centimeter per minute， 标准立方米/分钟)
 
 \subsection{讨论7.5：CICC中的交流损耗}
 不同于超导体细丝嵌入导电基底中的导体，CIC导体因其股线可以是电磁解耦的而适用于交流应用。
@@ -1307,7 +1380,7 @@ e_{hy}=\frac{2}{3}\mu_oH_{p}^{2}i_{m}^{3} \tag{7.26c}
 $\mu_0 M$ vs. $\mu_0 H$图[7.114]。
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.7]{chpt7/figs/fig7.20.eps}
+	\includegraphics[scale=0.5]{chpt7/figs/fig7.20.eps}
 	\caption{净直径为1.0,0.8,0.6,0.4,0.3 mm$\mathrm{Nb_3 Sn}/Cu$复合导体在4.2 K下测到的
 		$\mu_0 M$ vs. $\mu_0 H$图。}
 \end{figure}
@@ -1319,7 +1392,7 @@ b) 假定线中的细丝都是圆截面的，计算0.3 mm线的有效细丝直�
 可以令$d_{eff}$等于Bean板的宽度$2a$。
 
 c) 直径为0.8,0.6,0.4,0.3 mm的导线可以由1.0 mm的导线拉拔而成，故其细丝数目一样。
-定型的解释图7.20中这些线的磁化曲线的两个重要差异。
+定性的解释图7.20中这些线的磁化曲线的两个重要差异。
 
 d) 在一个$-3$ T到3 T的完整磁场周期内，计算$\phi$0.3 mm线的磁滞能量密度$e_{hy}$。
 假定$B_p\ll$3 T。
@@ -1339,11 +1412,13 @@ b) 根据Bean模型，在$H\ge H_p=J_c a$时，$M(H)=H_p/2$，使用$a=d_{eff}/2
 \begin{align*}% page448第二个
 M(H)=\frac{1}{2}H_p=\frac{1}{2}(d_{eff}/2)J_c(H)
 \end{align*}
+
 根据图7.20和问题a)，我们分别有$\mu_0 M$(0 T)$\simeq$0.47 T和$J_c$(0 T)$\simeq 2.8\times 10^{10}\ \mathrm{ A/m^2}$。从而：
 \begin{align*}% page448第三个
 d_{eff}=\frac{4\mu_oM(0\ \mathrm{T})}{\mu_oJ_c(0\ \mathrm{T})}&\simeq\frac{4(470\times 10^{-3}\ \mathrm{T})}{(4\pi\times 10^{-7}\ \mathrm{H/m})(2.8\times10^{10}\ \mathrm{A/m^2})}\\
 &=53\ \mathrm{\mu m}
 \end{align*}
+
 可见，当$M(H)$和$J_c(H)$均已知时，任意$H$值下的$d_{eff}$都是可以计算的。
 
 c) 可从$-\mu_0 H=-$2 T时的正磁化幅值知道，幅值几乎在整个导线尺度上有$\propto d_{eff} J_c$。
@@ -1352,6 +1427,7 @@ Bean板的临界尺度$a_c$为：
 \begin{align*}% page488 5.40
 a_c=\sqrt{\frac{3\tilde{C}_s(T_c-T_{op})}{\mu_oJ_{c_o}^{2}}} \tag{5.40}
 \end{align*}
+
 为了避免磁通跳跃，$aJ_c$必须满足下面的条件：
 \begin{align*}% page488 S6.1
 aJ_{c_o}\leq\sqrt{\frac{3\tilde{C}_s(T_c-T_{op})}{\mu_o}} \tag{S6.1}
@@ -1392,7 +1468,7 @@ NbTi线圈中有32个双饼，每个双饼的冷却通道高1 mm，占双饼表�
 
 c）在应急期间，各线圈都会受到插入磁体边缘磁场快速减小的影响。
 对于磁体中点最内匝的NbTi导体($r$ = 329 mm，$z$ = 0)，
-$\delta|B_e|$在0.3 s期间内大约到$\sim$1 T或$\Delta |\.{B_e}|\sim$3 T/s。
+$\delta|B_e|$在0.3~ s期间内大约到$\sim$1 T或$\Delta |\.{B_e}|\sim$3 T/s。
 证明位于磁体中平面最内半径的单位组合体积(导体及其相邻的液氦)的平均温度将超过$T+\lambda$。
 在应用表7.8中给出的方程(实际上是根据多丝导线最外直径$D_{mf}$得到的)时，假设$D_{mf} = b = 2.60$ mm(表7.10)。
 
@@ -1409,7 +1485,7 @@ $\delta|B_e|$在0.3 s期间内大约到$\sim$1 T或$\Delta |\.{B_e}|\sim$3 T/s�
 
 这种快速放电的一个重要后果是低温恒温器压力迅速升高。
 混合III低温恒温器配有“爆破盘”，可将低温恒温器的压力增加限制到1 atm；
-将40 $\mu$m厚的铝箔盘(有效直径70 mm)安装在真空接头中（图7.21）。
+将40~ $\mu$m厚的铝箔盘(有效直径70~ mm)安装在真空接头中（图7.21）。
 当在低温恒温器的过压超过1 atm时，箔片破裂，从而减轻低温恒温器的压力。
 如图所示，扩散器安装在爆破盘出口处，以使出现的蒸汽的出口压力损失最小化。
 
@@ -1420,10 +1496,12 @@ a) 第1步中的主要耗散源是磁滞损耗。
 \begin{align*}% page451 7.28c和S7.1
 e_{hy}\simeq\frac{8}{3}\mu_oH_pH_m \tag{7.28c}
 \end{align*}
+
 其中，$B_p=\mu_0 H_p$，$B_m=\mu_0 H_m$：
 \begin{align*}
 e_{hy}=\simeq\frac{8B_pB_m}{3\mu_o} \tag{S7.1}
 \end{align*}
+
 Nb3Sn线圈的$E_{hy1}$和NbTi线圈的$E_{hy2}$的总能量耗散为：
 \begin{align*}% page451 S7.1a
 E_{hy1}=\mathcal{V}_{f1}e_{hy} \tag{S7.1a}
@@ -1431,6 +1509,7 @@ E_{hy1}=\mathcal{V}_{f1}e_{hy} \tag{S7.1a}
 \begin{align*}% page451 S7.1b
 E_{hy2}=\mathcal{V}_{f2}e_{hy} \tag{S71.b}
 \end{align*}
+
 其中，$\mathcal{V}_{f1},\mathcal{V}_{f2}$分别是Nb3Sn线圈和NbTi线圈的细丝总体积，分别是：
 \begin{align*}% page451 S7.2a
 \nu_{f1}=N_{f1}\ell_{cd1}\left(\frac{\pi d_{f1}^{2}}{4}\right) \tag{S7.2a}
@@ -1438,6 +1517,7 @@ E_{hy2}=\mathcal{V}_{f2}e_{hy} \tag{S71.b}
 \begin{align*}% page451 S7.2b
 \nu_{f2}=N_{f2}\ell_{cd2}\left(\frac{\pi d_{f2}^{2}}{4}\right) \tag{S7.2b}
 \end{align*}
+
 式中，$N_f,\ell_{cd},d_f$分别是导体中细丝总数、总导体长度和细丝直径。下标1和2分别表示Nb3Sn和NbTi线圈。
 
 将表7.10中合适的值代入S7.2a和S7.2b，加上$B_{m1}$=4.3 T以及$B_{m2}$=1.8 T，我们得到：
@@ -1454,13 +1534,13 @@ E_{hy1}&=(2500)(8100\ \mathrm{m})\frac{\pi(75\times 10^{-6}\ \mathrm{m})^2}{4}
 &\simeq 48\ \mathrm{kJ}
 \end{align*}
 
-进入液体的总磁滞损耗$\sim$53 kJ。
+所以，进入液体的总磁滞损耗$\sim$53 kJ。
 
 250 L液氦在1.70 K下的质量为37 kg。
 1 atm下，1.70 K氦的焓为1280 J/kg，1.80 K氦的焓为1530 J/kg（附录II），焓变250 J/kg。
 总质量为37 kg时，工质池温从1.70 K升至1.80 K需要的净能量输入约10 kJ；
 在1200 s的时间内，20 W的制冷机可从液体中移除约25 kJ能量：而液体从1.7 K升至1.8 K需要约35 kJ的总能量。
-所以，我们计算的耗散能量$\sim$53 kJ大约高估了两倍。
+所以，我们计算的耗散能量$\sim$53~ kJ大约高估了两倍。
 考虑到上述分析本就是为了给出一个粗略数据，这个结果不算太差；它确切的表明。磁滞损耗是耗散的主要来源。
 
 b) NbTi线圈的总磁滞能量耗散$\sim$30 kJ(如上修正，为$\sim$48 kJ的5/8)在
@@ -1474,13 +1554,14 @@ b) NbTi线圈的总磁滞能量耗散$\sim$30 kJ(如上修正，为$\sim$48 kJ�
 \begin{align*}% page452 4.6c
 X(T_b)=\frac{q_{c}^{3.4}}{4.4}L \tag{4.6c}
 \end{align*}
+
 由图4.9，我们有$X(T_b$=1.8 K)=350。代入$L$=6 cm，在4.6c中解出$q_c=5.1\ \mathrm{W/cm^2}$，
 它比最低要求值$\sim 0.2\ \mathrm{W/cm^2}$大很多。
 也就是说，通道完全可以在从0到800 A的充电时间将磁滞损耗带走。
 实际的运行也验证了这个结论。
 
-c) 在快速变化的场下，最重要的损耗是耦合损耗和涡流损耗。
-这里我们仅考虑耦合损耗，因为在没有涡流的情况下，它自身也足以令导体--氦单位体积升温至$T_\lambda$。
+c) 在快速变化的磁场下，最重要的损耗是耦合损耗和涡流损耗。
+这里我们仅考虑耦合损耗，因为在没有涡流的情况下，仅它就足以令单位体积导体--氦升温至$T_\lambda$。
 
 我们首先计算NbTi导体的耦合时间常数：
 \begin{align*}% 7.6
@@ -1501,6 +1582,7 @@ c) 在快速变化的场下，最重要的损耗是耦合损耗和涡流损耗�
 e_{cp}&=\frac{1}{2}\times 2\frac{B_{m}^{2}}{\mu_o}\left[1+\frac{1}{4}\left(\frac{\pi b}{\ell_{p}}\right)^2\right]\times\frac{2\tau_{cp}}{\tau_m}\left[1-\frac{2\tau_{cp}}{\tau_m}\tanh\left(\frac{\tau_m}{2\tau_{cp}}\right)\right] \\
 &=\frac{2B_{m}^{2}\tau_{cp}}{\mu_o\tau_m}\left[1+\frac{1}{4}\left(\frac{\pi b}{\ell_{p}}\right)^2\right]\left[1-\frac{2\tau_{cp}}{\tau_m}\tanh\left(\frac{\tau_m}{2\tau_{cp}}\right)\right] \tag{S7.5b}
 \end{align*}
+
 代入合适的值，有：
 \begin{align*}% page453第二个大公式
 e_{cp}\simeq&\frac{2(1\ \mathrm{T})^2(0.2\ \mathrm{s})}{(4\pi\times 10^{-7}\ \mathrm{H/m})(0.3\ \mathrm{s})}\times \\
@@ -1520,27 +1602,29 @@ E_{cp}=e_{cp}\mathcal{V}_{cd}
 \sim(0.16\ \mathrm{J/cm^3})\times(0.24\ \mathrm{cm^3})\sim 38\ \mathrm{mJ} \tag{S7.9}
 \end{align*}
 
-将单位导体(和响应的液氦)cong 1.8 K加热至$T_\lambda$所需总热能$\Delta E_{th}$：
+将单位导体(和相应的液氦)从1.8 K加热至$T_\lambda$所需总热能$\Delta E_{th}$：
 \begin{align*}% page453 S7.10
 E_{th}[h_{cu}(T_\lambda)-h_{cu}(1.8\ \mathrm{K})]\mathcal{V}_{cd}+[h_{he}(T_\lambda)-h_{he}(1.8\ \mathrm{K})]\mathcal{V}_{cd} \tag{S7.10}
 \end{align*}
+
 代入$\Delta h_{cu}\simeq 0.1\ \mathrm{mJ/cm^3}$和$\Delta h_{he}\simeq 290\ \mathrm{mJ/cm^3}$，有：
 \begin{align*}% page453 S7.11
 E_{th}=(0.1\ \mathrm{mJ/cm^3})(0.24\ \mathrm{cm^3})+(290\ \mathrm{mJ/cm^3})(5.2\times 10^{-3}\ \mathrm{cm^3}) \\\tag{S7.11}
 \sim 2\ \mathrm{mJ}
 \end{align*}
+
 因为$E_{cp}\gg E_{th}$，围绕单位导体的所有液氦都将被加热超过$T_\lambda$，使导体不能失超恢复。
 
 
 
 \subsection{讨论7.7：混合III NbTi线圈中的接头耗散}
 混合III磁体的NbTi线圈由32个双饼组成，每一个都是有两种等级的9.2 mm宽NbTi复合带绕成的。
-各单饼中，高场(HF)级导体和低场(LF)级导体在$r$=378 mm处以“握手”形式接头；
+各单饼中，高场~(HF)级导体和低场~(LF)级导体在$r$=378 mm处以“握手”形式接头；
 各双饼中，有两个类似的接头。
 此外，各双饼的$r$=455 mm处还有另一个接头，用以连接两个相邻的双饼。
 混合III磁体在$r$=378 mm处总共有64个接头，在$r$=455 mm处有32个接头。
 保守估计，我们选择50Sn-50Pb(表7.1)中$R_{ct}$的较高值：
-$R_{ct}$在1 T时为$3.3\times 1-^{-12}\ \mathrm{\Omega m}$，在3 T时为$4.1\times 1-^{-12}\ \mathrm{\Omega m}$。
+$R_{ct}$在1 T时为$3.3\times 10^{-12}\ \Omega\mathrm{m}$，在3 T时为$4.1\times 10^{-12}\ \Omega \mathrm{m}$。
 
 \textbf{A. 接头电阻}
 
@@ -1549,26 +1633,29 @@ $R_{ct}$在1 T时为$3.3\times 1-^{-12}\ \mathrm{\Omega m}$，在3 T时为$4.1\t
 R_{sp}=&\frac{R_{ct}}{A_{ct}}\\\tag{7.9b}
 R_{sp1}=&\frac{R_{ct}}{a\ell_{sp1}}
 \end{align*}
-在上面的方程中，$a\ell_{sp1}=A_{ct}$，$a$是导体宽度，$\ell_{sp}$是接头搭接长度，为$\pi r_{sp1}/2$，
+
+式中，$a\ell_{sp1}=A_{ct}$，$a$是导体宽度，$\ell_{sp}$是接头搭接长度，为$\pi r_{sp1}/2$，
 其中$r_{sp1}$为接头位置的绕组半径。
-代入$R_{ct}=4.1\times 10^{-12}\ \mathrm{\Omega m^2},a=9.2\times 10^{-3}$ m,$\pi/2$=1.57,,$r_{sp1}$=0.378 m，有：
+代入$R_{ct}=4.1\times 10^{-12}\ \Omega\mathrm{ m^2}$,$a=9.2\times 10^{-3}\ \mathrm{m}$,$\pi/2$=1.57,,$r_{sp1}$=0.378 m，有：
 \begin{align*}% page454 第三个
-R_{sp1}=\frac{(4.1\times 10^{-12}\ \mathrm{\Omega m^2})}{(9.2\times 10^{-3}\ \mathrm{m})(1.57\times 0.378\ \mathrm{m})}=0.75\ \mathrm{n\Omega}
+R_{sp1}=\frac{(4.1\times 10^{-12}\ \Omega\mathrm{ m^2})}{(9.2\times 10^{-3}\ \mathrm{m})(1.57\times 0.378\ \mathrm{m})}=0.75\ \mathrm{n}\Omega
 \end{align*}
+
 类似的，在$r$=455 mm处：
 \begin{align*}% page454第四个
-R_{sp2}=\frac{(3.3\times 10^{-12}\ \mathrm{\Omega m^2})}{(9.2\times 10^{-3}\ \mathrm{m})(1.57\times 0.455\ \mathrm{m})}=0.50\ \mathrm{n\Omega}
+R_{sp2}=\frac{(3.3\times 10^{-12}\ \Omega \mathrm{m^2})}{(9.2\times 10^{-3}\ \mathrm{m})(1.57\times 0.455\ \mathrm{m})}=0.50\ \mathrm{n}\Omega
 \end{align*}
+
 总的接头电阻为：
 \begin{align*}% page454 第五个
-R_{sp}=64R_{sp1}+32R_{sp2}=48\ \mathrm{n\Omega}+16\ \mathrm{n\Omega}=64\ \mathrm{n\Omega}
+R_{sp}=64R_{sp1}+32R_{sp2}=48\ \mathrm{n}\Omega+16\ \mathrm{n}\Omega=64\ \mathrm{n}\Omega
 \end{align*}
 
 \textbf{B. 总接头损耗}
 
 在$I_{op}=$2100 A时的总接头损耗$P_{sp}$为：
 \begin{align*}% page454 S8.5
-P_{sp}=R_{sp}I_{op}^{2}=(64\times 10^{-9}\ \mathrm{\Omega})(2.1\times 10^3\ \mathrm{A})=0.28\ \mathrm{W}\tag{S8.5}
+P_{sp}=R_{sp}I_{op}^{2}=(64\times 10^{-9}\ \Omega)(2.1\times 10^3\ \mathrm{A})=0.28\ \mathrm{W}\tag{S8.5}
 \end{align*}
 
 在2100 A时不足1 W的接头损耗与混合III运行获得的数据一致。
@@ -1584,7 +1671,7 @@ P_{sp}=R_{sp}I_{op}^{2}=(64\times 10^{-9}\ \mathrm{\Omega})(2.1\times 10^3\ \mat
 然而，真正的持续模式磁体包含一个小但非零的电阻，这是一个导致磁场衰减的主体。
 一般的，这些磁体允许的场衰减率不大于$\sim$0.01 ppm/h(每小时百万分之0.01)。
 该衰减率等价的时间常数为$10^8$小时或$\sim$10,000年。
- 对于电感为360 H的磁体，衰减率为0.01 ppm/h意味着总电阻为$10^{-9}\ \mathrm{\Omega}$。
+ 对于电感为360 H的磁体，衰减率为0.01 ppm/h意味着总电阻为$10^{-9}\ \Omega$(1 n$\Omega$)。
  
 \subsubsection*{A. 电路和运行}
 \textbf{电路}
@@ -1602,7 +1689,7 @@ P_{sp}=R_{sp}I_{op}^{2}=(64\times 10^{-9}\ \mathrm{\Omega})(2.1\times 10^3\ \mat
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.7]{chpt7/figs/fig7.22.eps}
+	\includegraphics[scale=0.6]{chpt7/figs/fig7.22.eps}
 	\caption{持续模式超导体的基本电路模型。}
 \end{figure}
 
@@ -1658,33 +1745,39 @@ PCS的设计有三个问题：1) 正常态电阻；2) 稳定性和保护；3) �
 \begin{align*}% page457 6.25b
 E_s=E_c\left(\frac{J_s}{J_c}\right)^n \tag{6.25b}
 \end{align*}
+
 考虑一个用指数为$n$的超导体绕制的持续模式超导磁体。
 因为磁场强度随远离最大场区域(绕组最内侧半径处的中平面附近)而衰减，
-导体的$Jc_$会增加，$J_{op}/J_c$随远离最大场区域而减小。
+导体的$J_c$会增加，$J_{op}/J_c$随远离最大场区域而减小。
 因此，只需仅在最大场区域考虑指数电压。
 设$\ell_{mx}$为该区域的总导体长度。
 
-同构在导体长度$\ell_{mx}$范围内积分$E$，我们得到$I_{op}$下的总指数感应电压：
+通过在导体长度$\ell_{mx}$范围内积分$E$，我们得到$I_{op}$下的总指数感应电压：
 \begin{align*}% 7.44
 V_n=E\ell_{mx}=E_c\left(\frac{I_{op}}{I_c}\right)^n\ell_{mx} \tag{7.44}
 \end{align*}
+
 电阻性电压导致电感为$L_m$的磁体的电流衰减：
 \begin{align*}% 7.45
 \frac{dI_{op}}{dt}=-\frac{V_n}{L_m}=-\frac{E_c}{L_m}\left(\frac{I_{op}}{I_c}\right)^n\ell_{mx} \tag{7.45}
 \end{align*}
+
 因为$I_{op}$和$H_o$成比例，有：
 \begin{align*}% 7.46两个
 \frac{dH}{dt}&\equiv-\left(\frac{\Delta H}{\tau_p}\right)\propto-\frac{E_c}{L_m}\left(\frac{I_{op}}{I_c}\right)^n\ell_{mx}\\
 &\left(\frac{\Delta H}{H_o\tau_p}\right)=\frac{E_c}{L_m I_{op}}\left(\frac{I_{op}}{I_c}\right)^n\ell_{mx}\tag{7.46}
 \end{align*}
+
 从7.46解出$I_{op}/I_c$，有：
 \begin{align*}%  7.47a
 \frac{I_{op}}{I_c}\leq\left[\frac{L_mI_{op}}{E_c\ell_{mx}}\left(\frac{\Delta H}{H_o\tau_p}\right)\right]^{1/n} \tag{7.47a}
 \end{align*}
+
 向7.47a中代入$\Delta H/(H_o \tau_p)=10^{-8}$/hr=2.78$\times 10^{-12}$/s和其他参数值，有：
 \begin{align*}% 7.47b
 \frac{I_{op}}{I_c}=\left[\frac{(300\ \mathrm{A})(100\ \mathrm{H})}{(10^{-7}\ \mathrm{V/cm})(10^5\ \mathrm{cm})}(2.78\times 10^{-12}\ \mathrm{/s})\right]^{1/n} \tag{7.47b}
 \end{align*}
+
 根据7.47b，我们有：$n=10$时$I_{op}/I_c$=0.31；$n=20$时$I_{op}/I_c$=0.56；$n=30$时$I_{op}/I_c$=0.68；
 $n=50$时$I_{op}/I_c$=0.79。
 
@@ -1700,14 +1793,14 @@ NMR磁体配置“数字磁通注入器”(周期性注入
 向NMR磁体泵入mA电流的数字磁通注入器与磁通泵的逆过程，磁通泵用于向磁体电路泵入kA级电流。
 
 \subsubsection*{D. 指数的实验确定}
-确定超导体指数$n$的广为使用的方法是测得超导体的$V$和$I$，如图7.23。于是，
+确定超导体指数$n$的广为使用的方法是测得超导体的$V$ vs. $I$图，如图7.23。于是，
 \begin{align*}% 7.48
 n=\frac{\ln(V_2/V_1)}{\ln(I_2/I_1)} \tag{7.48}
 \end{align*}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.7]{chpt7/figs/fig7.23.eps}
+	\includegraphics[scale=0.6]{chpt7/figs/fig7.23.eps}
 	\caption{确定指数的典型$V$ vs. $I$曲线。}
 \end{figure}
 
