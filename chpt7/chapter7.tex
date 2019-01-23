@@ -965,183 +965,264 @@ $H_s(0)= H_m^* -H_p i$，$H_s(\xi_0)= H_m^* + H_p i$；
 
 
 \subsection{问题7.4：磁滞能量密度——载有直流电流的Bean板(情况4i--6i)}
+在这里，我们研究承载DC传输电流$I_t$(沿$y$方向单位长度)在$y$向外施均匀磁场$H_e(t)$下的
+Bean板在4i-6i的时间序列下的磁滞耗散。
+如上所述，$I_t$也可以表示为$H_pi$，其中$i\equiv I_t/ I_c$。
+使用7.3a中的$J_c E(x)dt$方法导出下面的$e_{hy}$表达式。
 
-
+a) 证明情况4i$H_e=0\rightarrow H_m$在“小”磁场偏移($H_m\le H_p(1-i)$)
+下的磁滞能量密度为：
 \begin{equation}% 7.22a
-e_{hy}=\frac{7\mu_oH_{m}^{3}}{24H_p}      [0\leq H_m\leq H_p(1-i)]
+e_{hy}=\frac{7\mu_oH_{m}^{3}}{24H_p} \quad  [0\leq H_m\leq H_p(1-i)]
 \end{equation}
-\begin{equation}% 7.22b
-e_{hy}=\frac{\mu_oH_{m}^{3}}{24H_p}       [0\leq H_m\leq H_p(1-i)]
-\end{equation}
-\begin{equation}% 7.22c
-e_{hy}=\frac{2\mu_oH_{m}^{3}}{3H_p}       [0\leq H_m\leq H_p(1-i)]
-\end{equation}
+
+b) 证明情况5i$H_e=H_m\rightarrow 0$在“小”磁场($H_m\le H_p(1-i)$)偏移
+施加之后的磁滞能量密度为：
+\begin{align*}% 7.22b
+e_{hy}=\frac{\mu_oH_{m}^{3}}{24H_p} \quad   [0\leq H_m\leq H_p(1-i)] \tag{7.22b}
+\end{align*}
+
+c) 证明情况6i$H_e=0\rightarrow H_m\rightarrow 0\rightarrow -H_m\rightarrow 0$
+在“小”磁场偏移($H_m\le H_p(1-i)$)后的磁滞能量密度为：
+\begin{align*}% 7.22c
+e_{hy}=\frac{2\mu_oH_{m}^{3}}{3H_p} \quad  [0\leq H_m\leq H_p(1-i)] \tag{7.22c}
+\end{align*}
+注意到7.22c给出的$e_{hy}$和7.20a给出的无载流板情况下的是一致的：在“小”磁场偏移下，
+传输电流对磁滞损耗没影响。
+
+d) 证明情况4i$H_e=0\rightarrow H_m$在“大”磁场偏移($H_m\ge 2H_p(1-i)$)下
+的磁滞能量密度为：
 \begin{equation}% 7.23a
-e_{hy}=\frac{1}{2}\mu_oH_pH_m(1+i^2)      [H_m\geq2H_p(1-i)]
+e_{hy}=\frac{1}{2}\mu_oH_pH_m(1+i^2) \quad [H_m\geq2H_p(1-i)]
 \end{equation}
-\begin{equation}% 7.23b
-e_{hy}=\frac{1}{2}\mu_oH_pH_m(1+i^2)-\frac{2}{3}\mu_oH_{p}^{2}(1-i^3)   [H_m\geq2H_p(1-i)]
-\end{equation}
+
+e) 证明情况5i$H_e=H_m\rightarrow 0$在“大”磁场偏移($H_m\ge 2H_p(1-i)$)后
+的磁滞能量密度为：
+\begin{align*}% 7.23b
+e_{hy}=\frac{1}{2}\mu_oH_pH_m(1+i^2)-\frac{2}{3}\mu_oH_{p}^{2}(1-i^3) \quad [H_m\geq2H_p(1-i)]\tag{7.23b}
+\end{align*}
+
+f) 证明情况6i$H_e=0\rightarrow H_m\rightarrow 0\rightarrow -H_m\rightarrow 0$
+在“大”磁场偏移($H_m\ge 2H_p(1-i)$)下后的磁滞能量密度为：
 \begin{equation}% 7.23c
-e_{hy}=2\mu_oH_pH_m(1+i^2)-\frac{4}{3}\mu_oH_{p}^{2}(1-i^3)     [H_m\geq2H_p(1-i)]
+e_{hy}=2\mu_oH_pH_m(1+i^2)-\frac{4}{3}\mu_oH_{p}^{2}(1-i^3)\quad  [H_m\geq2H_p(1-i)] \tag{7.23c}
 \end{equation}
+
+g) 证明72.3c在没有传输电流($i=0$)时退化为板内无传输电流的7.20c。
 
 
 \subsubsection{问题7.4之解}
-\begin{equation}% page433 S4.1a
-E_z(x)=\mu_o\frac{dH_e}{dt}(x_+-x)
-\end{equation}
-\begin{equation}% page433 S4.1b
-E_z(x)dt=\mu_o(x_+-x)dH_e
-\end{equation}
-\begin{equation}% 7.3a和S4.2a
-e_{hyx}=\frac{1}{2a}\int_{0}^{a}\left[\int J_cE(x)dt\right]dx
-=\frac{\mu_oJ_c}{2a}\int_{0}^{H_m}\left[\int_{0}^{x_+}(x_+-x)dx\right]dH_e
-\end{equation}
-\begin{equation}% page433 S4.2b
-e_{hyx}=\frac{7\mu_oH_{m}^{3}}{48H_p}
-\end{equation}
-\begin{equation}% 7.22a
-e_{hy}=\frac{7\mu_oH_{m}^{3}}{24H_p}      [0\leq H_m\leq H_p(1-i)]
-\end{equation}
-\begin{equation}% page433 S4.3a
-e_{hyx}=\frac{\mu_oJ_c}{2a}\int_{H_m}^{0}x_{+}^{2}dH_e=-\frac{\mu_o}{16H_p}(H_m-H_e)^2dH_e 
-=\frac{\mu_oH_{m}^{3}}{48H_p}
-\end{equation}
-\begin{equation}% 7.22b
-e_{hy}=\frac{\mu_oH_{m}^{3}}{24H_p}        [0\leq H_m\leq H_p(1-i)]
-\end{equation}
-\begin{equation}% page434 S4.4
-3_{hy}=2\times\left(\frac{7\mu_oH_{m}^{3}}{24H_p}+\frac{\mu_oH_{m}^{3}}{24H_p}\right)
-\end{equation}
-\begin{equation}% 7.22c
-e_{hy}=\frac{2\mu_oH_{m}^{3}}{3H_p}         [0\leq H_m\leq H_p(1-i)]
-\end{equation}
-\begin{equation}% page434 S4.5a
-e_{hyx}=\frac{\mu_oJ_c}{2a}\int_{0}^{H_m}\left[\int_{0}^{\ell^*}(\ell^*-x)dx\right]dH_e
-\end{equation}
-\begin{equation}% page434 S4.5b
-e_{hyx}=\frac{\mu_oJ_ca^2(1-i)^2}{4a}\int_{0}^{H_m}dH_e=\frac{1}{4}\mu_oH_pH_m(1-i)^2
-\end{equation}
-\begin{equation}% page434 S4.6a
-e_{hy\xi}=\frac{\mu_oJ_c}{2a}\int_{0}^{H_m}\left[\int_{0}^{\ell^*}(\ell^*-\xi)d\xi\right]dH_e
-\end{equation}
-\begin{equation}% page434 S4.6b
-e_{hy\xi}=\frac{\mu_oJ_ca^2(1+i)^2}{4a}\int_{0}^{H_m}dH_e=\frac{1}{4}\mu_oH_pH_m(1+i)^2
-\end{equation}
-\begin{equation}% 7.23a
-e_{hy}=\frac{1}{2}\mu_oH_pH_m(1+i^2)    [H_m\geq 2H_p(1-i)]
-\end{equation}
-\begin{equation}% page434 S4.7a
-e_{hyx}=\frac{\mu_oJ_c}{2a}\int_{H_m}^{H_{m}^{*}}\left[\int_{0}^{x_+}(x-x_+)dx\right]dH_e
-\end{equation}
+a) 首先推导在$H_s(x)$下板的$x$侧的磁滞能量密度$e_{hyx}$；$H_s(0)=\uparrow H_e-H_p i$，如图7.15a所示。
+在板内的$x=0$和$x=x_+$之间，代入$x_+=(H_m+H_e)/2J_c$，由$dH_e/dt$感应出的$E_z(x)$为：
+\begin{align*}% page433 S4.1a
+E_z(x)=\mu_o\frac{dH_e}{dt}(x_+-x) \tag{S4.1a}
+\end{align*}
+\begin{align*}% page433 S4.1b
+E_z(x)dt=\mu_o(x_+-x)dH_e \tag{S4.1b}
+\end{align*}
+联立S4.1b和7.3a，我们得到$0\le x\le a$半板的表达式：
+\begin{align*}% 7.3a和S4.2a
+e_{hyx}&=\frac{1}{2a}\int_{0}^{a}\left[\int J_cE(x)dt\right]dx\\
+&=\frac{\mu_oJ_c}{2a}\int_{0}^{H_m}\left[\int_{0}^{x_+}(x_+-x)dx\right]dH_e \tag{S4.2a}
+\end{align*}
+代入入$x_+=(H_m+H_e)/2J_c$并积分，有：
+\begin{align*}% page433 S4.2b
+e_{hyx}=\frac{7\mu_oH_{m}^{3}}{48H_p} \tag{S4.2b}
+\end{align*}
 
+接下来，我们推导在$H_s(\xi)$下板的$\xi$侧磁滞能量密度$e_{hy\xi}$；$H_s(0)=\uparrow H_e+H_p i$，如图7.15a所示。
+代入$\xi_+=(H_m+H_e)/2J_c$，很明显有$e_{hy\xi}=e_{hyx}$，因此$e_{hy}=2e_{eyx}$。从而：
+\begin{align*}% 7.22a
+e_{hy}=\frac{7\mu_oH_{m}^{3}}{24H_p}  \quad  [0\leq H_m\leq H_p(1-i)] \tag{7.22a}
+\end{align*}
 
+b) 考虑板的$x$侧。类似于S4.2a，$e_{hyx}$为：
+\begin{align*}
+e_{hyx}=\frac{\mu_0 J_c}{2a}\int_{H_m}^{0}\left[\int_{0}^{x^+}(x-x_+)dx\right]dH_e \tag{S4.3a}
+\end{align*}
+其中，在这个减小磁场序列中，$x_+=(H_m-H_e)/2J_c$。从而：
+\begin{align*}% page433 S4.3a
+e_{hyx}=\frac{\mu_oJ_c}{2a}\int_{H_m}^{0}x_{+}^{2}dH_e=-\frac{\mu_o}{16H_p}(H_m-H_e)^2dH_e  \tag{S4.3b}
+\end{align*}
+\begin{align*}
+e_{hyx}=\frac{\mu_oH_{m}^{3}}{48H_p} \tag{S4.3c}
+\end{align*}
+同样，板的$\xi$侧和$x$侧的磁滞能量密度相同。因此，这个情况下的$e_{hy}$是S4.3c给出的$e_{hyx}$的两倍：
+\begin{align*}% 7.22b
+e_{hy}=\frac{\mu_oH_{m}^{3}}{24H_p}   \quad     [0\leq H_m\leq H_p(1-i)] \tag{7.22b}
+\end{align*}
+
+c) 情况6i的磁场序列包括$H_e(t)=0\rightarrow -H_m$和$H_e(t)=-H_m\rightarrow 0$，
+其$e_{hy}$是情况4i和情况5i之和的二倍：
+\begin{align*}% page434 S4.4
+3_{hy}=2\times\left(\frac{7\mu_oH_{m}^{3}}{24H_p}+\frac{\mu_oH_{m}^{3}}{24H_p}\right) \tag{S4.4}
+\end{align*}
+由S4.4，我们有：
+\begin{align*}% 7.22c
+e_{hy}=\frac{2\mu_oH_{m}^{3}}{3H_p} \quad [0\leq H_m\leq H_p(1-i)] \tag{7.22c}
+\end{align*}
+如前所示，在“小”的磁场偏移($H_m\le H_p(1-i)$)下，
+$e_{hy}$与板内的传输电流无关。
+
+d) 首先考虑板内的$x$侧。和S4.2a类似，有：
+\begin{align*}% page434 S4.5a
+e_{hyx}=\frac{\mu_oJ_c}{2a}\int_{0}^{H_m}\left[\int_{0}^{\ell^*}(\ell^*-x)dx\right]dH_e \tag{4.5a}
+\end{align*}
+其中，从$x=0$测量，$\ell^*=a(1-i)$。于是：
+\begin{align*}% page434 S4.5b
+e_{hyx}=\frac{\mu_oJ_ca^2(1-i)^2}{4a}\int_{0}^{H_m}dH_e=\frac{1}{4}\mu_oH_pH_m(1-i)^2 \tag{S4.5b}
+\end{align*}
+接下来，考虑$\xi$侧。类似S4.2a，有：
+\begin{align*}% page434 S4.6a
+e_{hy\xi}=\frac{\mu_oJ_c}{2a}\int_{0}^{H_m}\left[\int_{0}^{\ell^*}(\ell^*-\xi)d\xi\right]dH_e \tag{S4.6a}
+\end{align*}
+其中，从$\xi$测量，$\ell^*=a(1+i)$。于是：
+\begin{align*}% page434 S4.6b
+e_{hy\xi}=\frac{\mu_oJ_ca^2(1+i)^2}{4a}\int_{0}^{H_m}dH_e=\frac{1}{4}\mu_oH_pH_m(1+i)^2\tag{S4.6b}
+\end{align*}
+因为$e_{hy}=e_{hyx}+e_{hy\xi}$，联立S4.5b和S4.6b，有：
+\begin{align*}% 7.23a
+e_{hy}=\frac{1}{2}\mu_oH_pH_m(1+i^2) \quad [H_m\geq 2H_p(1-i)] \tag{7.23a}
+\end{align*}
+
+e) 对情况5i这样的减小磁场序列，我们首先考虑$H_m$到$H_m^*\equiv H_m-2H_p(1-i)$区间。
+考虑板的$x$侧，有：
+\begin{align*}% page434 S4.7a
+e_{hyx}=\frac{\mu_oJ_c}{2a}\int_{H_m}^{H_{m}^{*}}\left[\int_{0}^{x_+}(x-x_+)dx\right]dH_e \tag{S4.7a}
+\end{align*}
+式中，$x_+=(H_m-H_e)/2J_c$。于是：
 \begin{align*}% page434 S4.7b
-e_{hyx}&=\frac{\mu_oJ_c}{2a}\int_{H_{m}^{*}}^{H_m}\left(\frac{H_m-H_e}{2J_c}\right)^2dH_e \\
+e_{hyx}&=\frac{\mu_oJ_c}{2a}\int_{H_{m}^{*}}^{H_m}\left(\frac{H_m-H_e}{2J_c}\right)^2dH_e \\\tag{S4.7b}
 &=\frac{\mu_o}{16H_p}(H_{m}^{2}H_e-H_mH_{e}^{2}+\frac{1}{3}H_{e}^{3})\mid_{H_m-2H_p(1-i)}^{H_m} \\
 &=\frac{1}{6}\mu_oH_{p}^{2}(1-i)^3
 \end{align*}
-
-\begin{equation}% page435 S4.7c
-e_{hy}=\frac{1}{3}\mu_oH_{p}^{2}(1-i)^3
-\end{equation}
-
+从图7.16a可以清晰看出$e_{eyx}=e_{hy\xi}$，于是在
+$H_e=H_m\rightarrow H_m-2H_p(1-i)$序列下，$e_{hy}$为：
+\begin{align*}% page435 S4.7c
+e_{hy}=\frac{1}{3}\mu_oH_{p}^{2}(1-i)^3 \tag{S4.7c}
+\end{align*}
+接下来，考虑序列$H_e=H_m^*\rightarrow0$。在$x$侧，有：
 \begin{align*}% page435 S4.8a
 e_{hyx}&=\frac{\mu_oJ_c}{2a}\int_{H_{m}^{*}}^{0}\left[\int_{0}^{x_+}(x-x_+)dx\right]dH_e=-\frac{\mu_oH_p(1+i)^2}{4}\int_{H_{m}^{*}}^{0}dH_e \\
 &=\frac{1}{4}\mu_oH_p(1+i)^2[H_m-2H_p(1-i)] \\
-&=\frac{1}{4}\mu_oH_pH_m(1+i)^2-\frac{1}{2}H_{p}^{2}(1+i)^2(1-i)
+&=\frac{1}{4}\mu_oH_pH_m(1+i)^2-\frac{1}{2}H_{p}^{2}(1+i)^2(1-i) \tag{S4.8a}
+\end{align*}
+在$\xi$侧，我们发现$e_{hy\xi}$非常类似于S4.8a：
+\begin{align*}% page435 S4.8b
+e_{hy\xi}=\frac{1}{4}\mu_oH_pH_m(1-i)^2-\frac{1}{2}H_{p}^{2}(1-i)^3 \tag{S4.8b}
+\end{align*}
+在$H_m-2H_p(1-i)$到0的区间，我们有$e_{hy}=e_{hyx}+e_{hy\xi}$；
+联立S4.8a和S4.8b，有：
+\begin{align*}% pge435 S4.8c
+e_{hy}=\frac{1}{2}\mu_oH_pH_m(1+i^2)-\mu_oH_{p}^{2}(1-i)(1+i^2) \tag{S4.8c}
+\end{align*}
+情况5i的$e_{hy}$是方程S4.7c和S4.8c给出的之和：
+\begin{align*}% 7.23b
+e_{hy}=\frac{1}{2}\mu_oH_pH_m(1+i^2)-\frac{2}{3}\mu_oH_{p}^{2}(1-i^3) \quad [H_m\geq H_p(1-i)] \tag{7.23b}
 \end{align*}
 
-\begin{equation}% page435 S4.8b
-e_{hy\xi}=\frac{1}{4}\mu_oH_pH_m(1-i)^2-\frac{1}{2}H_{p}^{2}(1-i)^3
-\end{equation}
-\begin{equation}% pge435 S4.8c
-e_{hy}=\frac{1}{2}\mu_oH_pH_m(1+i^2)-\mu_oH_{p}^{2}(1-i)(1+i^2)
-\end{equation}
-\begin{equation}% 7.23b
-e_{hy}=\frac{1}{2}\mu_oH_pH_m(1+i^2)-\frac{2}{3}\mu_oH_{p}^{2}(1-i^3)     [H_m\geq H_p(1-i)]
-\end{equation}
-\begin{equation}% page435 S4.9
-e_{hy}=2\times\left[\frac{1}{2}\mu_oH_pH_m(1+i^2)+\frac{1}{2}\mu_oH_pH_m(1+i^2)-\frac{2}{3}\mu_oH_{p}^{2}(1-i^3)\right]
-\end{equation}
-\begin{equation}% 7.23c
-e_{hy}=2\mu_oH_pH_m(1+i^2)-\frac{4}{3}\mu_oH_{p}^{2}(1-i^3)     [H_m\geq H_p(1-i)]
-\end{equation}
-\begin{equation}% page435 S4.10
-e_{hy}=2\mu_oH_pH_m-\frac{4}{3}\mu_oH_{p}^{2}
-\end{equation}
-\begin{equation}% page435 7.20b
-e_{hy}=2\mu_oH_pH_m\left(1-\frac{2H_p}{3H_m}\right)
-\end{equation}
+f) 情况6i($H_m\ge H_p(1-i)$)的$e_{hy}$是情况4i和情况5i给出的$e_{hy}$之和的两倍，包括$H_e(t)=0\rightarrow-H_m$
+和$H_e(t)=-H_m\rightarrow 0$两个序列：
+\begin{align*}% page435 S4.9
+e_{hy}=2\times\left[\frac{1}{2}\mu_oH_pH_m(1+i^2)+\frac{1}{2}\mu_oH_pH_m(1+i^2)-\frac{2}{3}\mu_oH_{p}^{2}(1-i^3)\right] \tag{S4.9}
+\end{align*}
+由S4.9，可得：
+\begin{align*}% 7.23c
+e_{hy}=2\mu_oH_pH_m(1+i^2)-\frac{4}{3}\mu_oH_{p}^{2}(1-i^3) \quad [H_m\geq H_p(1-i)] \tag{7.23c}
+\end{align*}
+
+g) 将$i=0$代入7.23c，有：
+\begin{align*}% page435 S4.10
+e_{hy}=2\mu_oH_pH_m-\frac{4}{3}\mu_oH_{p}^{2} \tag{S4.10}
+\end{align*}
+我们注意到，S4.10和7.20b是等价的：
+\begin{align*}% page435 7.20b
+e_{hy}=2\mu_oH_pH_m\left(1-\frac{2H_p}{3H_m}\right) \tag{7.20b}
+\end{align*}
 
 
 \subsection{问题7.5：自场磁滞能量密度——Bean板}
+当Bean板通过周期AC传输电流$I(t)$时，由于传输电流在板上产生周期AC表面场(外部)$H_e(t)$，它耗散能量。
+单位体积的这种耗散称为自场磁滞能量密度$e_{sf}$。 电流--时间序列如下：
 \begin{equation}% 7.25
 I(t)=0^*(\ \mathrm{Virgin slab})\rightarrow I_m\rightarrow 0\rightarrow -I_m\rightarrow 0\rightarrow I_m\rightarrow 0\rightarrow -I_m\rightarrow 0
 \end{equation}
+7.25中，$I_m$是周期AC电力路的幅值。情况1st-3sf均针对非$无染$Bean板。
+情况3sf是$0\rightarrow I_m\rightarrow 0\rightarrow -I_m\rightarrow 0$。
+图7.17给出了宽$2a$的Bean板的$H_s(x)$图，图(a)和(b)分别对应情况1sf和2sf，电流序列非别为：
+情况1sf$i(t)=0\rightarrow i_m$，情况2sf$i\equiv I/I_c\le i_m\equiv I_m/I_c\le 1$。
+如图缩回，$H_s(x)$是关于板中点反对称的：为了推导下面的$e_{hy}$表达式，仅考虑板的从$x=0$到$x=a$的一半。
+
+a) 应用7.3a，证明情况1sf的$e_{sf}$为：
 \begin{equation}% 7.26a
 e_{sf}=\frac{7}{24}\mu_oH_{p}^{2}i_{m}^{3}
 \end{equation}
-\begin{equation}% 7.26b
-e_{sf}=\frac{1}{24}\mu_oH_{p}^{2}i_{m}^{3}
-\end{equation}
-\begin{equation}% 7.26c
-e_{sf}=\frac{2}{3}\mu_oH_{p}^{2}i_{m}^{3}
-\end{equation}
 
+b) 应用7.3a，证明情况2sf的$e_{sf}$为：
+\begin{align*}% 7.26b
+e_{sf}=\frac{1}{24}\mu_oH_{p}^{2}i_{m}^{3} \tag{7.26b}
+\end{align*}
+
+c) 应用7.3a，证明情况3sf的$e_{sf}$为：
+\begin{align*}% 7.26c
+e_{sf}=\frac{2}{3}\mu_oH_{p}^{2}i_{m}^{3} \tag{7.26c}
+\end{align*}
+
+d) 从7.20a推导出7.26c，$e_{hy}$对情况6("小"场)成立。
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.7]{chpt7/figs/fig7.17.eps}
-	\caption{Hs(x) plots for Cases 1sf and 2sf, 。}
+	\caption{情况1sf和2sf下的$H_s(x)$图。(a)对应1sf；(b)对应2sf。各图中，点线和虚线分别对应电流序列
+		开始和结束时的$H_s(x)$。}
 \end{figure}
 
 
 \subsubsection{问题7.5之解}
+a) 对情况1sf，应用7.3a到$0\le x\le a$半板，随着传输电流从0增长到$i_m$，$x=0$自场$H_{sf}$从0减小到$-H_p i_m$：
 \begin{align*}% page437 S5.1a和S5.1b
-e_{sfx}&=\frac{\mu_oJ_c}{2a}\int_{0}^{-H_pi_m}\left[\int_{0}^{x_+}(x-x_+)dx\right]dH_{sf} \\
-&=\frac{\mu_oJ_c}{4a}\int_{0}^{-H_pi_m}(-x_{+}^{2})dH_{sf}
+e_{sfx}=\frac{\mu_oJ_c}{2a}\int_{0}^{-H_pi_m}\left[\int_{0}^{x_+}(x-x_+)dx\right]dH_{sf}  \tag{S5.1a}
+\end{align*}
+\begin{align*}
+e_{sfx}=\frac{\mu_oJ_c}{4a}\int_{0}^{-H_pi_m}(-x_{+}^{2})dH_{sf} \tag{S5.1b}
+\end{align*}
+将$H_{sf}=-H_p i$代入S5.1b，考虑$x_+=H_p(i_m+i)/2J_c$，我们得到：
+\begin{align*}% page437 S5.2a和5.2b
+e_{sfx}&=\frac{\mu_oH_{p}^{2}}{16}\int_{0}^{i_m}(i_{m}^{2}+2i_mi+i^2)di \\
+&=\frac{7}{48}\mu_oH_{p}^{2}i_{m}^{3} \tag{S5.2}
+\end{align*}
+因为板的另一半($a\le x\le 2a$)有同等的耗散能量密度，情况1sf的$e_{sf}$是$e_{sfx}$的两倍：
+\begin{align*}% 7.26a
+e_{sf}=\frac{7}{24}\mu_oH_{p}^{2}i_{m}^{3} \tag{7.26a}
 \end{align*}
 
-\begin{equation}% page437 S5.2a和5.2b
-e_{sfx}=\frac{\mu_oH_{p}^{2}}{16}\int_{0}^{i_m}(i_{m}^{2}+2i_mi+i^2)di 
-=\frac{7}{48}\mu_oH_{p}^{2}i_{m}^{3}
-\end{equation}
-
-\begin{equation}% 7.26a
-e_{sf}=\frac{7}{24}\mu_oH_{p}^{2}i_{m}^{3}
-\end{equation}
-
-
+b) 类似于情况1sf，情况2sf有$H_+=H_p(i_m-i)/2J_c$，于是：
 \begin{align*}% page437 S5.3a和S5.3b和S5.3c
 e_{sfx}&=\frac{\mu_oJ_c}{2a}\int_{-H_pi_m}^{0}\left[\int_{0}^{x_+}(x_+-x)dx\right]dH_{sf} \\
 &=\frac{\mu_oH_{p}^{2}}{16}\int_{i_m}^{0}(i_{m}^{2}-2i_mi+i^2)di \\
-&=\frac{1}{48}\mu_oH_{p}^{2}i_{m}^{3}
+&=\frac{1}{48}\mu_oH_{p}^{2}i_{m}^{3} \tag{S5.3c}
+\end{align*}
+这样，情况2sf的$e_{sf}$是S5.3给出的$e_{sfx}$的两倍：
+\begin{align*}% 7.26b
+e_{sf}=\frac{1}{24}\mu_oH_{p}^{2}i_{m}^{3} \tag{7.26b}
 \end{align*}
 
+c) 对情况3sf，因为其涵盖了完整周期，$e_{hy}$是情况1sf和情况2sf之和的两倍，
+\begin{align*}% page437 S5.4
+e_{sf}=2\times\left(\frac{7}{24}\mu_oH_{p}^{2}i_{m}^{3}+\frac{1}{24}\mu_oH_{p}^{2}i_{m}^{3}\right) \tag{S5.4}
+\end{align*}
+方程S5.4化简为：
+\begin{align*}% 7.26c
+e_{sf}=\frac{2}{3}\mu_oH_{p}^{2}i_{m}^{3} \tag{7.26c}
+\end{align*}
 
-\begin{equation}% 7.26b
-e_{sf}=\frac{1}{24}\mu_oH_{p}^{2}i_{m}^{3}
-\end{equation}
-\begin{equation}% page437 S5.4
-e_{sf}=2\times\left(\frac{7}{24}\mu_oH_{p}^{2}i_{m}^{3}+\frac{1}{24}\mu_oH_{p}^{2}i_{m}^{3}\right)
-\end{equation}
-\begin{equation}% 7.26c
-e_{sf}=\frac{2}{3}\mu_oH_{p}^{2}i_{m}^{3}
-\end{equation}
-
-
-\begin{equation}% page438 7.20a和7.26c
-e_{hy}=\frac{2\mu_oH_{m}^{3}}{3H_p} 
-=\frac{2\mu_o(H_pi_m)^3}{3H_p} 
-=\frac{2}{3}\mu_oH_{p}^{2}i_{m}^{3}
-\end{equation}
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[scale=0.7]{chpt7/figs/fig7.18.eps}
-	\caption{He(t) functions for coupling and eddy-current energy densities. 。}
-\end{figure}
+d) 图7.17中的$H_p i_m$替换为$H_m$后，对磁滞能量密度计算而言，图7.17所示的场特征和对应情况4(“小”场)图7.4a所示的场特征是一致的。于是：
+\begin{align*}% page438 7.20a和7.26c
+e_{hy}&=\frac{2\mu_oH_{m}^{3}}{3H_p} \\ \tag{7.20a}
+&=\frac{2\mu_o(H_pi_m)^3}{3H_p} 
+\end{align*}
+\begin{align*}
+e_{hy}=\frac{2}{3}\mu_oH_{p}^{2}i_{m}^{3} \tag{7.26c}
+\end{align*}
 
 
 \subsection{讨论7.3：磁体整体的交流损耗}
