@@ -1325,6 +1325,9 @@ d) 在一个$-3$ T到3 T的完整磁场周期内，计算$\phi$0.3 mm线的磁�
 假定$B_p\ll$3 T。
 
 \subsubsection{问题7.6之解}
+a) 如图5.3所示的无磁通跳跃$M(\mu_0 H,T)$曲线所围区域正比于$J_c(\mu_0 H,T)$。
+由7.20中$\phi$0.3 mm线的曲线可知，$|\mu_0$M(0 T,4.2 K)$|\simeq$0.47 T，
+$|\mu_0$M(3 T,4.2 K)$|\simeq$0.12 T。于是：
 \begin{align*}% page448第一个
 J_c(0\ \mathrm{T},4.2\ \mathrm{K})&=J_c(3\ \mathrm{T},4.2\ \mathrm{K})\times\left| \frac{M(0\ \mathrm{T},4.2\ \mathrm{K})}{M(3\ \mathrm{T},4.2\ \mathrm{K})}\right| \\ 
 &\simeq J_c(3\ \mathrm{T},4.2\ \mathrm{K})\times\frac{(0.47\ \mathrm{T})}{(0.12\ \mathrm{T})}\\
@@ -1332,23 +1335,30 @@ J_c(0\ \mathrm{T},4.2\ \mathrm{K})&=J_c(3\ \mathrm{T},4.2\ \mathrm{K})\times\lef
 &\simeq 2.8\times 10^{10}\ \mathrm{A/m^2}
 \end{align*}
 
-
-\begin{equation}% page448第二个
+b) 根据Bean模型，在$H\ge H_p=J_c a$时，$M(H)=H_p/2$，使用$a=d_{eff}/2$，有：
+\begin{align*}% page448第二个
 M(H)=\frac{1}{2}H_p=\frac{1}{2}(d_{eff}/2)J_c(H)
-\end{equation}
-
+\end{align*}
+根据图7.20和问题a)，我们分别有$\mu_0 M$(0 T)$\simeq$0.47 T和$J_c$(0 T)$\simeq 2.8\times 10^{10}\ \mathrm{ A/m^2}$。从而：
 \begin{align*}% page448第三个
 d_{eff}=\frac{4\mu_oM(0\ \mathrm{T})}{\mu_oJ_c(0\ \mathrm{T})}&\simeq\frac{4(470\times 10^{-3}\ \mathrm{T})}{(4\pi\times 10^{-7}\ \mathrm{H/m})(2.8\times10^{10}\ \mathrm{A/m^2})}\\
 &=53\ \mathrm{\mu m}
 \end{align*}
+可见，当$M(H)$和$J_c(H)$均已知时，任意$H$值下的$d_{eff}$都是可以计算的。
 
-\begin{equation}% page488 5.40
-a_c=\sqrt{\frac{3\tilde{C}_s(T_c-T_{op})}{\mu_oJ_{c_o}^{2}}}
-\end{equation}
-\begin{equation}% page488 S6.1
-aJ_{c_o}\leq\sqrt{\frac{3\tilde{C}_s(T_c-T_{op})}{\mu_o}}
-\end{equation}
+c) 可从$-\mu_0 H=-$2 T时的正磁化幅值知道，幅值几乎在整个导线尺度上有$\propto d_{eff} J_c$。
+这表明$d_{eff}$随导线直径减小而减小，尽管不是精确的正比。
+Bean板的临界尺度$a_c$为：
+\begin{align*}% page488 5.40
+a_c=\sqrt{\frac{3\tilde{C}_s(T_c-T_{op})}{\mu_oJ_{c_o}^{2}}} \tag{5.40}
+\end{align*}
+为了避免磁通跳跃，$aJ_c$必须满足下面的条件：
+\begin{align*}% page488 S6.1
+aJ_{c_o}\leq\sqrt{\frac{3\tilde{C}_s(T_c-T_{op})}{\mu_o}} \tag{S6.1}
+\end{align*}
 
+在这些导线中，当磁场在$-1.5$ T$\le \mu_0 H\le$1.5 T区间时，除了0.3 mm线，都存在部分磁通跳跃。
+这意味着除了0.3 mm的导线，都不满足S6.1给出的磁通跳跃标准。
 
 \subsection{问题7.7：混合III SCM中的交流损耗}
 \begin{figure}[htbp]
