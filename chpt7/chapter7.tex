@@ -1577,45 +1577,138 @@ P_{sp}=R_{sp}I_{op}^{2}=(64\times 10^{-9}\ \mathrm{\Omega})(2.1\times 10^3\ \mat
 
 
 \subsection{讨论7.8：持续模式运行\&“指数”}
+在这里，我们讨论与NMR和MRI等持续模式磁体的运行有关的关键问题。
+通过超导磁体可以产生的一个远大于永磁体可能产生的持续永恒磁场无疑超导电性的独特特征之一。
+商业化的NMR和MRI超导磁体的持续增长清楚地反映了这一点。
+
+然而，真正的持续模式磁体包含一个小但非零的电阻，这是一个导致磁场衰减的主体。
+一般的，这些磁体允许的场衰减率不大于$\sim$0.01 ppm/h(每小时百万分之0.01)。
+该衰减率等价的时间常数为$10^8$小时或$\sim$10,000年。
+ 对于电感为360 H的磁体，衰减率为0.01 ppm/h意味着总电阻为$10^{-9}\ \mathrm{\Omega}$。
+ 
+\subsubsection*{A. 电路和运行}
+\textbf{电路}
+
+图7.22给出了持续模式磁体的电路模型的基本元素，其中L代表磁体。
+在实际的持续模式NMT磁体---比如问题8.6---中，电路中包含很多电感，每一个代表磁体中线圈的一个，
+每个线圈都有一个旁路电阻。$r$是总电路电阻，理想情况下$r = 0$，但如上所述，在实际磁体中不是完全为零。
+如图所示，持续电流开关PCS与磁体的端子并联，如图中的黑点；理想情况下，这些接头必须是超导的；
+如果不是超导，则每个端子处的接头电阻成为$r$的一部分。
+两个极性相反的功率二极管旁路PCS，保护其在磁体失超时不受损害[7.115]。
+当工作在4.2 K时，功率二极管的“正向”阈值电压从室温下的$\sim$10 V降低到$\le$1 V，使电路中的正向二极管可
+在磁体励磁电压低于10 V时有效地打开。
+对运行温度高于4.2 K的持续模式HTS磁体，这个阈值电压也会很小。
+然而，在更高的工作温度下，PCS也可以在没有二极管保护的情况下承受磁体失超冲击。
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.7]{chpt7/figs/fig7.22.eps}
-	\caption{Basic circuit diagram for a persistent-mode superconducting magnet。}
+	\caption{持续模式超导体的基本电路模型。}
 \end{figure}
 
+\textbf{运行}
 
+当PCS闭合(且超导，即$R_{pc} = 0$)时，磁体段子被短接，不能对磁体励磁(问题1.2)。
+为了使用“可拆卸”电流引线对磁体励磁，PCS必须通过加热器变为电阻性的(即$R_{cp} = 0$)。
+图中的虚线包围的元件是位于低温运行环境内的。
 
+当达到工作电流后，可以关闭加热器，而后PCS开关变为超导。
+电路现在完全(如果$r$ = 0)或接近(如果$r\simeq 0$)超导；
+供电电流可以减小到0---磁体被PCS短路，与电源实现了隔离。
+为了最小化从无电流的引线传导至冷环境的热，
+电流引线通常在磁体端子处断开连接。
+ 在某些情况下，引线从低温恒温器中完全拆除。
 
-\begin{equation}% page457 6.25b
-E_s=E_c\left(\frac{J_s}{J_c}\right)^n
-\end{equation}
-\begin{equation}% 7.44
-V_n=E\ell_{mx}=E_c\left(\frac{I_{op}}{I_c}\right)^n\ell_{mx}
-\end{equation}
-\begin{equation}% 7.45
-\frac{dI_{op}}{dt}=-\frac{V_n}{L_m}=-\frac{E_c}{L_m}\left(\frac{I_{op}}{I_c}\right)^n\ell_{mx}
-\end{equation}
-\begin{equation}% 7.46两个
-\frac{dH}{dt}=-\left(\frac{\Delta H}{\tau_p}\right)\propto-\frac{E_c}{L_m}\left(\frac{I_{op}}{I_c}\right)^n\ell_{mx}
-\left(\frac{\Delta H}{H_o\tau_p}\right)=\frac{E_c}{L_m I_{op}}\left(\frac{I_{op}}{I_c}\right)^n\ell_{mx}
-\end{equation}
-\begin{equation}%  7.47a
-\frac{I_{op}}{I_c}\leq\left[\frac{L_mI_{op}}{E_c\ell_{mx}}\left(\frac{\Delta H}{H_o\tau_p}\right)\right]^{1/n}
-\end{equation}
-\begin{equation}% 7.47b
-\frac{I_{op}}{I_c}=\left[\frac{(300\ \mathrm{A})(100\ \mathrm{H})}{(10^{-7}\ \mathrm{V/cm})(10^5\ \mathrm{cm})}(2.78\times 10^{-12}\ \mathrm{/s})\right]^{1/n}
-\end{equation}
-\begin{equation}% 7.48
-n=\frac{\ln(V_2/V_1)}{\ln(I_2/I_1)}
-\end{equation}
+\subsubsection*{B. PCS设计}
+PCS的设计有三个问题：1) 正常态电阻；2) 稳定性和保护；3) 绝热。
 
+\textbf{正常态电阻}
 
+理想情况下，开关的正常态电阻应当无限大；实际中，它应足够大以使通过电阻性开关的电流$I_{pc}$不超过
+磁体运行电流$I_{op}$的$\sim 10\%$。
+当磁体由很多线圈组成时，各线圈由电阻器旁路(图8.27)。此时，$R_{pc}$必须必旁路电阻之和大，因为$I_{pc}=V_{ch}/R_{pc}$，
+其中$V_{ch}$是磁体端子上施加的励磁电压。
+加热器功率之外，还存在由$R_{pc}$和$I_{pc}$确定的开关耗散功率$R_{pc}I_{pc}^2=V_{ch}^2/R_{pc}$。
+于是对PCS有两个要求：1) $V_{ch}/R_{pc}<\sim 0.1 I_{op}$(或$R_{pc}$应等于或大于多线圈磁体中旁路电阻之和)；
+2) $V_{ch}^2/R_{pc}$最好不大于1 W，或在任何情况下都不超过几瓦。
+
+实践中，由NbTi/Cu复合导线做成的LTS开关并不合适，因为在磁体的低温环境下，铜的导电性太好；
+通常使用的是一种特殊的NbTi与Cu-Ni合金基底组成的复合导线。
+在4.2 K时，Cu-Ni的电阻率是铜的1000倍以上(附录)。
+类似的，由Bi2223/Ag制作的HTS开关也不合适，因为纯银也时导电性太好了，达不到$R_{pc}$的要求。
+对PCS，应用Ag-Au合金代替纯银。
+根据图4.24中的数据，30 K时，纯银的电阻率比Ag-2.9at\%Au(Ag-5wt\%Au)小约40倍。
+
+\textbf{稳定性和保护}
+
+因为PCS通常位于磁体的低场区域中，所以开关中的超导体即使没有“尺寸过大”，
+其温度裕度也远大于绕组中的超导体的温度裕度。
+为了保护它，采用“反向”二极管旁路电阻性的PCS(图7.22)。
+在各线圈均有分流电阻的多线圈磁体中，开关可以在磁体失超的整个期间内保持超导。
+如果开关损坏，简单更换即可，就像换掉烧坏的灯泡一样。
+该开关差不多是多线圈磁体磁体中最便宜的部件了。
+
+\textbf{绝热}
+
+进入开关以保持其电阻性的加热是低温恒温器的制冷负荷。
+开关与冷环境绝热越好，制冷负荷越小。
+
+\subsubsection*{C. 指数损耗}
+如6.25b，对磁体级超导体，电场和电流密度近似有：
+\begin{align*}% page457 6.25b
+E_s=E_c\left(\frac{J_s}{J_c}\right)^n \tag{6.25b}
+\end{align*}
+考虑一个用指数为$n$的超导体绕制的持续模式超导磁体。
+因为磁场强度随远离最大场区域(绕组最内侧半径处的中平面附近)而衰减，
+导体的$Jc_$会增加，$J_{op}/J_c$随远离最大场区域而减小。
+因此，只需仅在最大场区域考虑指数电压。
+设$\ell_{mx}$为该区域的总导体长度。
+
+同构在导体长度$\ell_{mx}$范围内积分$E$，我们得到$I_{op}$下的总指数感应电压：
+\begin{align*}% 7.44
+V_n=E\ell_{mx}=E_c\left(\frac{I_{op}}{I_c}\right)^n\ell_{mx} \tag{7.44}
+\end{align*}
+电阻性电压导致电感为$L_m$的磁体的电流衰减：
+\begin{align*}% 7.45
+\frac{dI_{op}}{dt}=-\frac{V_n}{L_m}=-\frac{E_c}{L_m}\left(\frac{I_{op}}{I_c}\right)^n\ell_{mx} \tag{7.45}
+\end{align*}
+因为$I_{op}$和$H_o$成比例，有：
+\begin{align*}% 7.46两个
+\frac{dH}{dt}&\equiv-\left(\frac{\Delta H}{\tau_p}\right)\propto-\frac{E_c}{L_m}\left(\frac{I_{op}}{I_c}\right)^n\ell_{mx}\\
+&\left(\frac{\Delta H}{H_o\tau_p}\right)=\frac{E_c}{L_m I_{op}}\left(\frac{I_{op}}{I_c}\right)^n\ell_{mx}\tag{7.46}
+\end{align*}
+从7.46解出$I_{op}/I_c$，有：
+\begin{align*}%  7.47a
+\frac{I_{op}}{I_c}\leq\left[\frac{L_mI_{op}}{E_c\ell_{mx}}\left(\frac{\Delta H}{H_o\tau_p}\right)\right]^{1/n} \tag{7.47a}
+\end{align*}
+向7.47a中代入$\Delta H/(H_o \tau_p)=10^{-8}$/hr=2.78$\times 10^{-12}$/s和其他参数值，有：
+\begin{align*}% 7.47b
+\frac{I_{op}}{I_c}=\left[\frac{(300\ \mathrm{A})(100\ \mathrm{H})}{(10^{-7}\ \mathrm{V/cm})(10^5\ \mathrm{cm})}(2.78\times 10^{-12}\ \mathrm{/s})\right]^{1/n} \tag{7.47b}
+\end{align*}
+根据7.47b，我们有：$n=10$时$I_{op}/I_c$=0.31；$n=20$时$I_{op}/I_c$=0.56；$n=30$时$I_{op}/I_c$=0.68；
+$n=50$时$I_{op}/I_c$=0.79。
+
+这些数值表明对一个$n=10$的超导体，$I_{op}$必须保持在$I_c$的31\%之下---
+相当低效的导体使用；$n=50$的超导体，$I_{op}$可增至$I_c$的79\%。
+最近的实验结果[6.18]表明，由V-I图确定的$n$值，在低于$I_c$的电流下是增加的，并非常数。
+在一个测试导体中，发现$n$从$I_c$时的约30，增加值$I/I_c$下的145。
+也就是说，只要$I_{op}$选择的不是特别接近$I_c$，甚至在$I_c$时$n\sim 20$的导体也可以用于持续模式超导磁体。
+
+使有小电阻的NMR磁体在持续模式下高效运行的新技术已经开发出来。这些技术为有小电阻的
+NMR磁体配置“数字磁通注入器”(周期性注入
+定量的且可控的磁通)[7.116-7.121]，磁通泵[7.122-7.124]或电源控制[7.125]。
+向NMR磁体泵入mA电流的数字磁通注入器与磁通泵的逆过程，磁通泵用于向磁体电路泵入kA级电流。
+
+\subsubsection*{D. 指数的实验确定}
+确定超导体指数$n$的广为使用的方法是测得超导体的$V$和$I$，如图7.23。于是，
+\begin{align*}% 7.48
+n=\frac{\ln(V_2/V_1)}{\ln(I_2/I_1)} \tag{7.48}
+\end{align*}
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.7]{chpt7/figs/fig7.23.eps}
-	\caption{Typical V vs. I trace from which to determine an index number.。}
+	\caption{确定指数的典型$V$ vs. $I$曲线。}
 \end{figure}
 
 
