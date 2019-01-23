@@ -1361,85 +1361,175 @@ aJ_{c_o}\leq\sqrt{\frac{3\tilde{C}_s(T_c-T_{op})}{\mu_o}} \tag{S6.1}
 这意味着除了0.3 mm的导线，都不满足S6.1给出的磁通跳跃标准。
 
 \subsection{问题7.7：混合III SCM中的交流损耗}
+该问题研究混合III超导磁体(SCM)中的交流损耗，它运行的典型顺序如下。
+\begin{description}
+	\item[第1步] SCM在1200秒内从0充电到800 A。
+	该充电速率对应于磁体中平面处最内部绕组半径处的场扫描速率4 mT/s。
+	在此过程中，显然会发生耗散，导致冷却工质温升约0.1 K，从1.70 K到1.80 K。
+	\item[第2步] SCM在900秒内从800 A充电到1800 A。没有观察到可测量温升。
+	\item[第3步] 在充电的最后一个阶段，SCM在600秒内从1800 A充电到2100 A。同样，
+	温升可忽略不计。 此时，SCM在中心产生12.3 T磁场。
+	\item[第4步] 当SCM保持在2100 A时，内插磁体通电，以恒定速率放电到0和22.7 T之间典型值。
+	同样，在该充--放电序列期间，未观察到可测量的温升。
+	\item[应急] 在插入磁体故障时，插入磁体“跳闸”迫使其磁场在大约0.3秒内从22.7 T衰减到0。
+	由于在这种紧急情况下，SCM中预期会出现很大的交流损耗，因此SCM会自动“停运”，
+	导致其电流在$\sim$10 s的时间常数下从2100 A衰减到0。	
+\end{description}
+
+如上所述，交流损耗仅在步骤1中重要。由于在应急期间插入磁体的边缘场迅速减小，SCM(特别是NbTi线圈)
+被驱至正常态，迫使SCM“停运”。表7.10给出了混合III SCM的相关导体参数。
+
+表7.10.。。。。。。。。。。。。。。。。。
+
+a）当SCM从0到800 A充电时，证明温度增加$\sim$0.1 K(在1个大气压下从1.70 K到1.80 K)，
+对应产生4.8 T的中心磁场。
+为了计算Nb3Sn和NbTi线圈(分别记为线圈1和2)的磁滞损耗，假设线圈1中的整个Nb3Sn导体置于于从0增加到3.8T($B_{m1}$)的磁场中，线圈2中的NbTi导体置于从0增加2.4 T($B_{m2}$)的磁场中。
+如讨论4.5，磁体容器包含250 L超流液氦，1.8 K氦气以20 W的制冷量制冷。
+
+b） 证明每个双饼中提供的狭窄冷却通道足以将双饼中产生的交流损失传输到i.d.和o.d.处的环形空间。
+NbTi线圈中有32个双饼，每个双饼的冷却通道高1 mm，占双饼表面积$\sim 40\%$（图6.17）。
+双饼i.d.和o.d.分别为658 mm和907 mm。
+
+c）在应急期间，各线圈都会受到插入磁体边缘磁场快速减小的影响。
+对于磁体中点最内匝的NbTi导体($r$ = 329 mm，$z$ = 0)，
+$\delta|B_e|$在0.3 s期间内大约到$\sim$1 T或$\Delta |\.{B_e}|\sim$3 T/s。
+证明位于磁体中平面最内半径的单位组合体积(导体及其相邻的液氦)的平均温度将超过$T+\lambda$。
+在应用表7.8中给出的方程(实际上是根据多丝导线最外直径$D_{mf}$得到的)时，假设$D_{mf} = b = 2.60$ mm(表7.10)。
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.7]{chpt7/figs/fig7.21.eps}
-	\caption{Burst disk (with diffuser) arrangement for HybridIII cryostat。}
+	\caption{混合III低温容器的爆破盘(带扩散器)布置方式。}
 \end{figure}
 
+\textbf{混合III低温容器的“爆破盘”和扩散器}
 
+如第3章所述，混合磁体的主要故障是由内插磁体烧坏引发的；
+如果应对内插磁体烧坏事件---应急事件，混合III SCM设计了快速放电(这种快速放电模式将在第8章进一步讨论)。
+
+这种快速放电的一个重要后果是低温恒温器压力迅速升高。
+混合III低温恒温器配有“爆破盘”，可将低温恒温器的压力增加限制到1 atm；
+将40 $\mu$m厚的铝箔盘(有效直径70 mm)安装在真空接头中（图7.21）。
+当在低温恒温器的过压超过1 atm时，箔片破裂，从而减轻低温恒温器的压力。
+如图所示，扩散器安装在爆破盘出口处，以使出现的蒸汽的出口压力损失最小化。
 
 \subsubsection{问题7.7之解}
-\begin{equation}% page451 7.28c和S7.1
-e_{hy}\simeq\frac{8}{3}\mu_oH_pH_m 
-\simeq\frac{8B_pB_m}{3\mu_o}
-\end{equation}
-\begin{equation}% page451 S7.1a
-E_{hy1}=\nu_{f1}e_{hy}
-\end{equation}
-\begin{equation}% page451 S7.1b
-E_{hy2}=\nu_{f2}e_{hy}
-\end{equation}
-\begin{equation}% page451 S7.2a
-\nu_{f1}=N_{f1}\ell_{cd1}\left(\frac{\pi d_{f1}^{2}}{4}\right)
-\end{equation}
-\begin{equation}% page451 S7.2b
-\nu_{f2}=N_{f2}\ell_{cd2}\left(\frac{\pi d_{f2}^{2}}{4}\right)
-\end{equation}
+a) 第1步中的主要耗散源是磁滞损耗。 
+我们计算了Nb3Sn线圈的$E_{hy1}$和NbTi线圈的$E_{hy2}$。
+ 虽然存在传输电流(高达800 A)，但我们对各线圈使用方程7.28c($H_m\gg H_p$):
+\begin{align*}% page451 7.28c和S7.1
+e_{hy}\simeq\frac{8}{3}\mu_oH_pH_m \tag{7.28c}
+\end{align*}
+其中，$B_p=\mu_0 H_p$，$B_m=\mu_0 H_m$：
+\begin{align*}
+e_{hy}=\simeq\frac{8B_pB_m}{3\mu_o} \tag{S7.1}
+\end{align*}
+Nb3Sn线圈的$E_{hy1}$和NbTi线圈的$E_{hy2}$的总能量耗散为：
+\begin{align*}% page451 S7.1a
+E_{hy1}=\mathcal{V}_{f1}e_{hy} \tag{S7.1a}
+\end{align*}
+\begin{align*}% page451 S7.1b
+E_{hy2}=\mathcal{V}_{f2}e_{hy} \tag{S71.b}
+\end{align*}
+其中，$\mathcal{V}_{f1},\mathcal{V}_{f2}$分别是Nb3Sn线圈和NbTi线圈的细丝总体积，分别是：
+\begin{align*}% page451 S7.2a
+\nu_{f1}=N_{f1}\ell_{cd1}\left(\frac{\pi d_{f1}^{2}}{4}\right) \tag{S7.2a}
+\end{align*}
+\begin{align*}% page451 S7.2b
+\nu_{f2}=N_{f2}\ell_{cd2}\left(\frac{\pi d_{f2}^{2}}{4}\right) \tag{S7.2b}
+\end{align*}
+式中，$N_f,\ell_{cd},d_f$分别是导体中细丝总数、总导体长度和细丝直径。下标1和2分别表示Nb3Sn和NbTi线圈。
 
-
-
+将表7.10中合适的值代入S7.2a和S7.2b，加上$B_{m1}$=4.3 T以及$B_{m2}$=1.8 T，我们得到：
 \begin{align*}% page451 S7.3a
 E_{hy1}&=(1000)(1700\ \mathrm{m})\frac{\pi(50\times 10^{-6}\ \mathrm{m})^2}{4} 
 \times\left(\frac{8}{3}\right)\times\frac{(0.16\ \mathrm{T})(4.3\ \mathrm{T})}{(4\pi\times 10^{-7}\ \mathrm{H/m})} \\
-&=(3.3\times 10^{-3}\ \mathrm{m^3})(1.46\times 10^6\ \mathrm{J/m^3})\\
+&=(3.3\times 10^{-3}\ \mathrm{m^3})(1.46\times 10^6\ \mathrm{J/m^3})\\ \tag{S7.3a}
 &\simeq 4.9\ \mathrm{kJ}
 \end{align*}
-
-
 \begin{align*}% page451 S7.3b
 E_{hy1}&=(2500)(8100\ \mathrm{m})\frac{\pi(75\times 10^{-6}\ \mathrm{m})^2}{4} 
 \times\left(\frac{8}{3}\right)\times\frac{(0.14\ \mathrm{T})(1.8\ \mathrm{T})}{(4\pi\times 10^{-7}\ \mathrm{H/m})} \\
-&=(89.4\times 10^{-3}\ \mathrm{m^3})(0.53\times 10^6\ \mathrm{J/m^3})\\
+&=(89.4\times 10^{-3}\ \mathrm{m^3})(0.53\times 10^6\ \mathrm{J/m^3})\\ \tag{S7.3b}
 &\simeq 48\ \mathrm{kJ}
 \end{align*}
 
+进入液体的总磁滞损耗$\sim$53 kJ。
 
-\begin{equation}% page452 4.6c
-X(T_b)=\frac{q_{c}^{3.4}}{4.4}L
-\end{equation}
-\begin{equation}% 7.6
-\tau_{cp}=\frac{\mu_o\ell_{p}^{2}}{8\pi^2\rho_{ef}}
-\end{equation}
-\begin{equation}% page452 7.7b和S7.4
-\rho_{ef}=\frac{1+\lambda_f}{1-\lambda_f}\rho_{m} 
-=\frac{\gamma_{c/s}+2}{\gamma_{c/s}}\rho_{m}
-\end{equation}
+250 L液氦在1.70 K下的质量为37 kg。
+1 atm下，1.70 K氦的焓为1280 J/kg，1.80 K氦的焓为1530 J/kg（附录II），焓变250 J/kg。
+总质量为37 kg时，工质池温从1.70 K升至1.80 K需要的净能量输入约10 kJ；
+在1200 s的时间内，20 W的制冷机可从液体中移除约25 kJ能量：而液体从1.7 K升至1.8 K需要约35 kJ的总能量。
+所以，我们计算的耗散能量$\sim$53 kJ大约高估了两倍。
+考虑到上述分析本就是为了给出一个粗略数据，这个结果不算太差；它确切的表明。磁滞损耗是耗散的主要来源。
 
-\begin{equation}% page453 S7.5a和7.5b
-e_{cp}=\frac{1}{2}\times 2\frac{B_{m}^{2}}{\mu_o}\left[1+\frac{1}{4}\left(\frac{\pi b}{\ell_{p}}\right)^2\right]\times\frac{2\tau_{cp}}{\tau_m}\left[1-\frac{2\tau_{cp}}{\tau_m}\tanh\left(\frac{\tau_m}{2\tau_{cp}}\right)\right] 
-=\frac{2B_{m}^{2}\tau_{cp}}{\mu_o\tau_m}\left[1+\frac{1}{4}\left(\frac{\pi b}{\ell_{p}}\right)^2\right]\left[1-\frac{2\tau_{cp}}{\tau_m}\tanh\left(\frac{\tau_m}{2\tau_{cp}}\right)\right]
-\end{equation}
+b) NbTi线圈的总磁滞能量耗散$\sim$30 kJ(如上修正，为$\sim$48 kJ的5/8)在
+1200 s内释放，即整体磁滞耗散率为$\sim$25 W。
+对线圈2中32个双饼中的每一个，耗散率约0.8 W。
+在最保守的条件下，每个双饼的总通道横截面为$\sim 4\ \mathrm{cm^2}$(最内直径658 mm对应的周长乘上通道高度0.5 mm的40\%)---
+注意，1 mm高的通道是由两个饼共用的。所以，等效热通量为$\sim 0.2\ \mathrm{W/cm^2}$。
+由于热量在径向可以向内也可向外流动，因此通道长度的适当值是o.d和i.d.之间差值的四分之一或$\sim$6 cm。
 
-\begin{equation}% page453第二个大公式
-e_{cp}\simeq\frac{2(1\ \mathrm{T})^2(0.2\ \mathrm{s})}{(4\pi\times 10^{-7}\ \mathrm{H/m})(0.3\ \mathrm{s})}\times 
-\{1+\frac{1}{4}\left[\frac{\pi(2.6\times 10^{-3}\ \mathrm{m})}{0.1\ \mathrm{m}}\right]^2\}\{1-\frac{2(0.2\ \mathrm{s})}{(0.3\ \mathrm{s})}\tanh\left[\frac{(0.3\ \mathrm{s})}{2(0.2\ \mathrm{s})}\right]\}  
-\simeq(1.05\times 10^6\ \mathrm{J/m^3})(1)(0.15)\sim 0.16\times 10^6\ \mathrm{J/m^3}
-\end{equation}
+因为耗散发生在整个通道长度内，可以使用4.6c，即：
+\begin{align*}% page452 4.6c
+X(T_b)=\frac{q_{c}^{3.4}}{4.4}L \tag{4.6c}
+\end{align*}
+由图4.9，我们有$X(T_b$=1.8 K)=350。代入$L$=6 cm，在4.6c中解出$q_c=5.1\ \mathrm{W/cm^2}$，
+它比最低要求值$\sim 0.2\ \mathrm{W/cm^2}$大很多。
+也就是说，通道完全可以在从0到800 A的充电时间将磁滞损耗带走。
+实际的运行也验证了这个结论。
 
+c) 在快速变化的场下，最重要的损耗是耦合损耗和涡流损耗。
+这里我们仅考虑耦合损耗，因为在没有涡流的情况下，它自身也足以令导体--氦单位体积升温至$T_\lambda$。
 
-\begin{equation}% page453 S7.9
-E_{cp}=e_{cp}\nu_{cd} 
-\sim(0.16\ \mathrm{J/cm^3})\times(0.24\ \mathrm{cm^3})\sim 38\ \mathrm{mJ}
-\end{equation}
-\begin{equation}% page453 S7.10
-E_{th}[h_{cu}(T_\lambda)-h_{cu}(1.8\ \mathrm{K})]\nu_{cd}+[h_{he}(T_\lambda)-h_{he}(1.8\ \mathrm{K})]\nu_{he}
-\end{equation}
-\begin{equation}% page453 S7.11
-E_{th}=(0.1\ \mathrm{mJ/cm^3})(0.24\ \mathrm{cm^3})+(290\ \mathrm{mJ/cm^3})(5.2\times 10^{-3}\ \mathrm{cm^3}) 
+我们首先计算NbTi导体的耦合时间常数：
+\begin{align*}% 7.6
+\tau_{cp}=\frac{\mu_o\ell_{p}^{2}}{8\pi^2\rho_{ef}} \tag{7.6}
+\end{align*}
+
+对NbTi复合导体，方程7.7b给出的$\rho_{ef}$常被使用。
+以铜-超导体比率$\gamma_{c/s}$表示的$\rho_{ef}$为：
+\begin{align*}% page452 7.7b和S7.4
+\rho_{ef}&=\frac{1+\lambda_f}{1-\lambda_f}\rho_{m} \\
+&=\frac{\gamma_{c/s}+2}{\gamma_{c/s}}\rho_{m} \tag{S7.4}
+\end{align*}
+
+由$\gamma_{c/s}=2.2$(从表7.10中给出的导体参数得到)，并代入合适的值，由7.6，我们有$\tau_{cp}\simeq 0.17\simeq 0.2$ s，和内插放电的$\tau_m$=0.3 s有可比性。
+
+应用表7.8中的方程7.36和7.39a，将因子$1/2$(仅放电)和$H_m=B_m/\mu_0$以及$D_{mf}=b$代入7.36，有：
+\begin{align*}% page453 S7.5a和7.5b
+e_{cp}&=\frac{1}{2}\times 2\frac{B_{m}^{2}}{\mu_o}\left[1+\frac{1}{4}\left(\frac{\pi b}{\ell_{p}}\right)^2\right]\times\frac{2\tau_{cp}}{\tau_m}\left[1-\frac{2\tau_{cp}}{\tau_m}\tanh\left(\frac{\tau_m}{2\tau_{cp}}\right)\right] \\
+&=\frac{2B_{m}^{2}\tau_{cp}}{\mu_o\tau_m}\left[1+\frac{1}{4}\left(\frac{\pi b}{\ell_{p}}\right)^2\right]\left[1-\frac{2\tau_{cp}}{\tau_m}\tanh\left(\frac{\tau_m}{2\tau_{cp}}\right)\right] \tag{S7.5b}
+\end{align*}
+代入合适的值，有：
+\begin{align*}% page453第二个大公式
+e_{cp}\simeq&\frac{2(1\ \mathrm{T})^2(0.2\ \mathrm{s})}{(4\pi\times 10^{-7}\ \mathrm{H/m})(0.3\ \mathrm{s})}\times \\
+&\{1+\frac{1}{4}\left[\frac{\pi(2.6\times 10^{-3}\ \mathrm{m})}{0.1\ \mathrm{m}}\right]^2\}\{1-\frac{2(0.2\ \mathrm{s})}{(0.3\ \mathrm{s})}\tanh\left[\frac{(0.3\ \mathrm{s})}{2(0.2\ \mathrm{s})}\right]\}  \\
+\simeq&(1.05\times 10^6\ \mathrm{J/m^3})(1)(0.15)\sim 0.16\times 10^6\ \mathrm{J/m^3}
+\end{align*}
+
+考虑单位长度(1 cm)的导体。
+由于其横截面为(0.92 cm)$\times$(0.26 cm)=0.24 $\mathrm{cm^2}$，
+故导体体积$\mathcal{V}_{cd}=0.24\ \mathrm{cm^3}$。
+在该导体长度上，氦在2.6 mm宽的导体上占据0.4 cm长度(40\%填充)和0.5 mm通道深度(1 mm深
+的通道由顶部和底部饼导体共享)。
+因此，对于单位导体长度，氦占据的体积$\mathcal{V}_{he}=5.2\times 10^{-3}\ \mathrm{cm^3}$。
+所以，单位导体长度上的总耗散能量$E_{cp}$将由下式给出：
+\begin{align*}% page453 S7.9
+E_{cp}=e_{cp}\mathcal{V}_{cd}
+\sim(0.16\ \mathrm{J/cm^3})\times(0.24\ \mathrm{cm^3})\sim 38\ \mathrm{mJ} \tag{S7.9}
+\end{align*}
+
+将单位导体(和响应的液氦)cong 1.8 K加热至$T_\lambda$所需总热能$\Delta E_{th}$：
+\begin{align*}% page453 S7.10
+E_{th}[h_{cu}(T_\lambda)-h_{cu}(1.8\ \mathrm{K})]\mathcal{V}_{cd}+[h_{he}(T_\lambda)-h_{he}(1.8\ \mathrm{K})]\mathcal{V}_{cd} \tag{S7.10}
+\end{align*}
+代入$\Delta h_{cu}\simeq 0.1\ \mathrm{mJ/cm^3}$和$\Delta h_{he}\simeq 290\ \mathrm{mJ/cm^3}$，有：
+\begin{align*}% page453 S7.11
+E_{th}=(0.1\ \mathrm{mJ/cm^3})(0.24\ \mathrm{cm^3})+(290\ \mathrm{mJ/cm^3})(5.2\times 10^{-3}\ \mathrm{cm^3}) \\\tag{S7.11}
 \sim 2\ \mathrm{mJ}
-\end{equation}
-
+\end{align*}
+因为$E_{cp}\gg E_{th}$，围绕单位导体的所有液氦都将被加热超过$T_\lambda$，使导体不能失超恢复。
 
 \subsection{讨论7.7：混合III NbTi线圈中的分段耗散}
 \begin{equation}% page454 7.9b两个
