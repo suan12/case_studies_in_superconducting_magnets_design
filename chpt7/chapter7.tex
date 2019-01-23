@@ -1531,25 +1531,49 @@ E_{th}=(0.1\ \mathrm{mJ/cm^3})(0.24\ \mathrm{cm^3})+(290\ \mathrm{mJ/cm^3})(5.2\
 \end{align*}
 因为$E_{cp}\gg E_{th}$，围绕单位导体的所有液氦都将被加热超过$T_\lambda$，使导体不能失超恢复。
 
-\subsection{讨论7.7：混合III NbTi线圈中的分段耗散}
-\begin{equation}% page454 7.9b两个
-R_{sp}=\frac{R_{ct}}{A_{ct}}
-R_{sp1}=\frac{R_{ct}}{a\ell_{sp1}}
-\end{equation}
-\begin{equation}% page454 第三个
+
+
+\subsection{讨论7.7：混合III NbTi线圈中的接头耗散}
+混合III磁体的NbTi线圈由32个双饼组成，每一个都是有两种等级的9.2 mm宽NbTi复合带绕成的。
+各单饼中，高场(HF)级导体和低场(LF)级导体在$r$=378 mm处以“握手”形式接头；
+各双饼中，有两个类似的接头。
+此外，各双饼的$r$=455 mm处还有另一个接头，用以连接两个相邻的双饼。
+混合III磁体在$r$=378 mm处总共有64个接头，在$r$=455 mm处有32个接头。
+保守估计，我们选择50Sn-50Pb(表7.1)中$R_{ct}$的较高值：
+$R_{ct}$在1 T时为$3.3\times 1-^{-12}\ \mathrm{\Omega m}$，在3 T时为$4.1\times 1-^{-12}\ \mathrm{\Omega m}$。
+
+\textbf{A. 接头电阻}
+
+应用方程7.9b，计算$r$=378 mm处的电阻$R_{sp1}$：
+\begin{align*}% page454 7.9b两个
+R_{sp}=&\frac{R_{ct}}{A_{ct}}\\\tag{7.9b}
+R_{sp1}=&\frac{R_{ct}}{a\ell_{sp1}}
+\end{align*}
+在上面的方程中，$a\ell_{sp1}=A_{ct}$，$a$是导体宽度，$\ell_{sp}$是接头搭接长度，为$\pi r_{sp1}/2$，
+其中$r_{sp1}$为接头位置的绕组半径。
+代入$R_{ct}=4.1\times 10^{-12}\ \mathrm{\Omega m^2},a=9.2\times 10^{-3}$ m,$\pi/2$=1.57,,$r_{sp1}$=0.378 m，有：
+\begin{align*}% page454 第三个
 R_{sp1}=\frac{(4.1\times 10^{-12}\ \mathrm{\Omega m^2})}{(9.2\times 10^{-3}\ \mathrm{m})(1.57\times 0.378\ \mathrm{m})}=0.75\ \mathrm{n\Omega}
-\end{equation}
-\begin{equation}% page454第四个
+\end{align*}
+类似的，在$r$=455 mm处：
+\begin{align*}% page454第四个
 R_{sp2}=\frac{(3.3\times 10^{-12}\ \mathrm{\Omega m^2})}{(9.2\times 10^{-3}\ \mathrm{m})(1.57\times 0.455\ \mathrm{m})}=0.50\ \mathrm{n\Omega}
-\end{equation}
-\begin{equation}% page454 第五个
+\end{align*}
+总的接头电阻为：
+\begin{align*}% page454 第五个
 R_{sp}=64R_{sp1}+32R_{sp2}=48\ \mathrm{n\Omega}+16\ \mathrm{n\Omega}=64\ \mathrm{n\Omega}
-\end{equation}
-\begin{equation}% page454 S8.5
-P_{sp}=R_{sp}I_{op}^{2}=(64\times 10^{-9}\ \mathrm{\Omega})(2.1\times 10^3\ \mathrm{A})=0.28\ \mathrm{W}
-\end{equation}
+\end{align*}
 
+\textbf{B. 总接头损耗}
 
+在$I_{op}=$2100 A时的总接头损耗$P_{sp}$为：
+\begin{align*}% page454 S8.5
+P_{sp}=R_{sp}I_{op}^{2}=(64\times 10^{-9}\ \mathrm{\Omega})(2.1\times 10^3\ \mathrm{A})=0.28\ \mathrm{W}\tag{S8.5}
+\end{align*}
+
+在2100 A时不足1 W的接头损耗与混合III运行获得的数据一致。
+系统无传输电流时，系统可达到的最低温度为1.65 K；在2100 A时也是如此。
+也就是说，与1.65 K时的静态制冷负荷相比，接头损耗可忽略不计。
 
 
 \subsection{讨论7.8：持续模式运行\&“指数”}
