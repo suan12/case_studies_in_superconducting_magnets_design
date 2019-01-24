@@ -191,7 +191,7 @@ Z(T_f,T_i)\simeq\frac{1}{\tilde{\rho}_m}\int_{T_i}^{T_f}C_m(T_f)dT=\frac{H_m(T_f
 
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.6]{chpt8/figs/fig8.1.eps}
+	\includegraphics[scale=0.5]{chpt8/figs/fig8.1.eps}
 	\caption{电路模型：电感为$L$的超导磁体，有依赖于温度的正常区电阻$r(T)$，连基于恒流$I_{op}$源。}
 \end{figure}
 图8.2给出了银(0$^\circ$C和4$^\circ$C的电阻率RRR=1000；100)、铜(200；100；50)、铝(级别：1000)和黄铜(70Cu-30Zn)的$Z(T,0)$。
@@ -214,7 +214,7 @@ J_{m_o}^{i}(T_f,T_i)=\sqrt{\left(\frac{1+\gamma_{m/s}}{\gamma_{m/s}}\right)\frac
 
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.6]{chpt8/figs/fig8.2.eps}
+	\includegraphics[scale=0.5]{chpt8/figs/fig8.2.eps}
 	\caption{几种常用金属材料的$Z(T, 0)$图。}
 \end{figure}
 
@@ -243,16 +243,16 @@ J_m(t)=J_{m_o}e^{-t/\tau_{dg}}
 \end{equation}
 式中，$J_{m_o}\equiv J_{m}(t=0)$。联立8.13和8.15，使用$Z(T_f,T_i)$的定义，有：
 \begin{subequations}% 8.16a 8.16b 8.16c
-	\begin{align*}
+	\begin{align}
 Z(T_f,T_i)&=\left(\frac{A_m}{A_{cd}}\right)\int_{0}^{\infty}J_{m_o}^{2}e^{-2t/\tau_{dg}}dt=\left(\frac{A_m}{A_{cd}}\right)J_{m_o}^{2}\times\frac{1}{2}\tau_{dg} \\
 &=\left(\frac{A_m}{A_{cd}}\right)J_{m_o}^{2}\left(\frac{L}{2R_D}\right)\\ 
 &=\left(\frac{\gamma_{m/s}}{1+\gamma_{m/s}}\right)J_{m_o}^{2}\left(\frac{L}{2R_D}\right)
-\end{align*}
+\end{align}
 \end{subequations}
 
 \begin{figure}
 \centering
-\includegraphics[scale=0.6]{chpt8/figs/fig8.3.eps}
+\includegraphics[scale=0.5]{chpt8/figs/fig8.3.eps}
 \caption{电路模型：电感为$L$的超导磁体，有依赖于$T(t)$的正常区电阻$r(t)$，在放电模式下绝热加热。
 	放电电阻$R_D$旁路磁体端子。$V_D\equiv R_d I_m(0)$是$t=0$时刻$R_D$上的放电电压}
 \end{figure}
@@ -284,124 +284,160 @@ J_{m_o}^{D}=\frac{A_{cd}V_DZ(T_f,T_i)}{E_m}
 方程8.19给出了完全不同于6.22所给的低温稳定性判据的$J_{m_o}$判据。
 
 \subsection{引线短接的磁体的绝热加热}
-
-
-
+假设一个电感为$L$的磁体端子短接，在$t=0$时刻绕组中出现了一小块正常区域，如图8.4；
+电流$I_m(t)$在电阻为$r(T)$的正常区基底金属流动。
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.6]{chpt8/figs/fig8.4.eps}
-	\caption{Circuit representing a shorted superconducting magnet of inductance.}
+	\includegraphics[scale=0.5]{chpt8/figs/fig8.4.eps}
+	\caption{电路模型：电感为$L$的磁体端子短接，有依赖于温度的正常态区域电阻$r(T)$，绝热加热。
+	正常态区域的电流为$I_m(t)$。}
 \end{figure}
 
+基底金属电流$I_m(t)$的控制方程为：
 \begin{equation}% 8.20
 L\frac{dI_m(t)}{dt}+r(T)I_m(t)=0
 \end{equation}
-
+温度依赖的$r(T)$显然随时间增加。有两个原因：1) 磁场能被转化为热能，使正常态区域温度升高；2)
+正常态区域自身在绕组内扩散。
+为了我们的分析，使用\textit{最简单}的假设：正常态区域电阻为常数，$r(T)=R_{nz}$：
 \begin{equation}% 8.21
 R_{nz}=\frac{\rho_m(T_f)\ell_{nz}}{4A_m}
 \end{equation}
-
+式中，$\rho_m(T_f)$是正常态最终温度下的基底电阻率；
+$\ell_{nz}$是电流衰减到零时处于电阻态的总导体长度。
+分母中的因子4来源于正常态区域温度$T_i$和$T_f$之间在空间(2)和时间(2)上的“平均”。
+方程8.21同时假定了$\rho_m(T_f)\gg \rho_m(T_i)$，在一些特定的$T_i$和$T_f$组合下可能是不成立的，
+但这个简化引入的不确定性相比8.21给出的基本假设引起的不确定性要小得多。
+在$R_{nz}$时，$J_m(t)=I_m(t)/A_m$，由$J_m(t=0)=I_{op}/A_m=J_{m_o}$，得：
 \begin{equation}% 8.22
 J_m(t)=J_{m_o}e^{-t/(L/R_{nz})}
 \end{equation}
 
-
+在绝热加热时，我们得到：
 \begin{subequations}% 8.23a，b,c
-	\begin{align*}
+	\begin{align}
 Z(T_f,T_i)&=\left(\frac{A_m}{A_{cd}}\right)\int_{0}^{\infty}J_{m_o}^{2}e^{-2t/(L/R_{nz})}dt\\
 Z(T_f,T_i)&=\frac{1}{2}\left(\frac{A_m}{A_{cd}}\right)J_{m_o}^{2}\left(\frac{L}{R_{nz}}\right) \\
 &=\frac{1}{2}\left(\frac{A_m}{A_{cd}}\right)J_{m_o}^{2}\tau_{dg}
-\end{align*}
+\end{align}
 \end{subequations}
-
+式中，$\tau_{dg}=L/R_{nz}$是有效放电时间常数。
+对一个参数为$a_1,\alpha$，总匝数为$N$的螺管线圈，驱动到正常态的总复合导体长度$\ell_{nz}$为：
 \begin{equation}% 8.24
 \ell_{nz}=f_r\pi a_1(\alpha+1)N
 \end{equation}
-
-
+式中，$f_r$是出于电阻态的绕组体积分数，与8.6同。
+联立8.21和8.24，有：
 \begin{equation}% 8.25
 R_{nz}=f_r\frac{\rho_m(T_f)\pi a_1(\alpha+1)N}{4A_m}
 \end{equation}
 
-
+我们可以用$L$和其他磁体参数(方程3.81)表示$N$：
 \begin{equation}% 8.26
 N=\sqrt{\frac{L}{\mu_oa_1\ \mathcal{L}(\alpha,\beta)}}
 \end{equation}
 
-
+于是，$R_{nz}$可以写为：
 \begin{equation}% 8.27
 R_{nz}=f_r\frac{\pi(\alpha+1)\rho_m(T_f)}{4A_m}\sqrt{\frac{a_1L}{\mu_o\ \mathcal{L}(\alpha,\beta)}}
 \end{equation}
 
+这样，我们可以得到放电时间常数$\tau_{dg}$：
 \begin{subequations}% 8.28a，b
-	\begin{align*}
+	\begin{align}
 \tau_{dg}&=\frac{L}{R_{nz}}=\frac{4A_m}{f_r\pi(\alpha+1)\rho_m(T_f)}\sqrt{\frac{\mu_o\ \mathcal{L}(\alpha,\beta)L}{a_1}}\\
 \tau_{dg}=\frac{4}{f_r\pi(\alpha+1)\rho_m(T_f)J_{m_o}}\sqrt{\frac{2\mu_o\ \mathcal{L}(\alpha,\beta)E_m}{a_1}}
-\end{align*}
+\end{align}
 \end{subequations}
+式中，$J_{m_o}=I_{op}/A_m, L=2E_m/I_{op}^2$，其中$E_m$是磁体的初始磁场能储量。
 
+联立8.23c和8.28b，有：
 \begin{equation}% 8.29
 \rho_m(T_f)Z(T_f,T_i)=\left(\frac{A_m}{A_{cd}}\right)\frac{2J_{m_o}}{f_r\pi(\alpha+1)}\sqrt{\frac{2\mu_o\ \mathcal{L}(\alpha,\beta)E_m}{a_1}}
 \end{equation}
 
+方程8.29中可以解出$T$。
+如前面8.1.2所提及的，$T_f$严重依赖于$f_r$。对于8.1.2中的实例，为了在$B_o\ge 5$ T时确保$T_f$低于200 K，$f_r$至少$\sim 0.1$。
+这个条件对具有小正常区传播(NZP)速度的HTS是很难满足的，8.4会继续讨论。
+
+尽管$f_r$是未知的，但对一个给定的$T_f$和$T_i$组合，存在一个最大基底电流密度$J_{m_o}^{sh}$限制了短接磁体的过热：
 \begin{subequations}% 8.30a，b
-	\begin{align*}
+	\begin{align}
 J_{m_o}^{sh}&=\frac{1}{2}\left(\frac{A_{cd}}{A_m}\right)f_r\pi(\alpha+1)\rho_m(T_f)Z(T_f,T_i)\sqrt{\frac{a_1}{2\mu_o\ \mathcal{L}(\alpha,\beta)E_m}}\\
 J_{m_o}^{sh}(T_f,T_i)&=\frac{1}{2}\left(\frac{A_{cd}}{A_m}\right)\frac{f_r\pi(\alpha+1)\rho_m(T_f)Z(T_f,T_i)}{\mu_o\ \mathcal{L}(\alpha,\beta)NI_{op}}
-\end{align*}
+\end{align}
 \end{subequations}
+b式是在a式中代入$E_m=\mu_o a_1\mathcal{L}(\alpha,\beta)N^2 I_{op}^2/2$得到的。
+如我们所料，$J_{m_o}^{sh}$在大$f_r$和$T_f$以及小$E_m$组合下为增函数。
+8.30b表明，大安匝数的螺管线圈必须在小$J_{m_o}^{sh}$下运行。
 
 
 \subsection{恒定电压模式下的绝热加热}
-
+最后，考虑一个超导磁体，整个绕组全部为电阻性，导体总长度为$\ell_{cd}$，电阻为$R_m(T)$，连接于恒定电压源，如图8.5所示。
+这里，整个绕组的温度为$T(t)$。
+考虑$R_m(T)=\rho_m(T)\ell_{cd}/A_m$，功率密度方程类似于8.9a：
 \begin{subequations}% 8.31a，b
-	\begin{align*}
+	\begin{align}
 A_{cd}\ell_{cd}C_{cd}(T)\frac{dT}{dt}&=\frac{V_{op}^{2}}{R_n(T)}=\frac{V_{op}^{2}A_m}{\rho_m(T)\ell_{cd}}
-C_m(T)\frac{dT}{dt}\\\notag
+C_m(T)\frac{dT}{dt}\\
 &\simeq\left(\frac{A_m}{A_{cd}}\right)\frac{V_{op}^{2}}{\rho_m(T)\ell_{cd}^{2}}\\
 \int_{T_i}^{T_f}C_m(T)\rho_m(T)dT&=\left(\frac{A_m}{A_{cd}}\right)\frac{V_{op}^{2}}{\ell_{cd}^{2}}\tau_{ah}
-\end{align*}
+\end{align}
 \end{subequations}
-
-
+式中，$\tau_{ah}$是在恒定电压模式下的加热时间。
+根据$Z(T_f,T_i)$，我们可以定义函数$Y(T_f,T_i)$。类似于8.10b，可以针对合金基底金属作简化。类似于$Z(T_f,T_i)$，$Y(T_f,T_i)$
+也可以写成两个单一温度的函数。
 \begin{subequations}% 8.32a，b,c
-	\begin{align*}
+	\begin{align}
 Y(T_f,T_i)&\equiv\int_{T_i}^{T_f}C_m(T)\rho_m(T)dT\\
 Y(T_f,T_i)&\simeq\tilde{\rho}_m[H_m(T_f)-H_m(T_i)]\\
 Y(T_f,T_i)&=Y(T_f)-Y(T_i)
-\end{align*}
+\end{align}
 \end{subequations}
 
+图8.6给出了$Y(T,0)$图，该图中的金属和图8.2中的$Z(T,0)$所对应的相同。
+金属的纯度，通常在$\sim$50 K之下对$\rho_m$影响很大。
+于是，纯度对$Z(T,0)$想想很大，而对$T>\sim$100 K时的$Y(T,0)$影响很小。
 
-
-\begin{figure}
-	\centering
-	\includegraphics[scale=0.6]{chpt8/figs/fig8.5.eps}
-	\caption{Circuit for a superconducting magnet (L) with the entire winding}
-\end{figure}
-
-
+类似于8.9c，我们从8.31b可以导出：
 \begin{equation}% 8.33
 Y(T_f,T_i)=\left(\frac{A_m}{A_{cd}}\right)\frac{V_{op}^{2}\tau_{ah}}{\ell_{cd}^{2}}
 \end{equation}
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{chpt8/figs/fig8.5.eps}
+	\caption{电路模型：电感为$L$的超导磁体，全部绕组处于正常态，电阻为$R_m(T)$，在恒压源加热模式。}
+\end{figure}
+
+注意到螺管线圈在$f_r=1$的$\ell_{cd}$已由8.24给出，使用8.26，我们得到：
 \begin{equation}% 8.34
 \ell_{cd}=\pi(\alpha+1)\sqrt{\frac{a_1L}{\mu_o\ \mathcal{L}(\alpha,\beta)}}
 \end{equation}
+
+将8.34中的$\ell_{cd}$代入8.33，有：
 \begin{equation}% 8.35
 Y(T_f,T_i)=\left(\frac{A_m}{A_{cd}}\right)\frac{\mu_o\ \mathcal{L}(\alpha,\beta)V_{op}^{2}\tau_{ah}}{\pi^2(\alpha+1)^2a_1L}
 \end{equation}
 
+对任意$T_f$和$T_i$组合，在恒压加热模式下，存在一个加热时间极限$\tau_{ah}^v$：
 \begin{equation}% 8.36
 \tau_{ah}^{\upsilon}=\left(\frac{A_{cd}}{A_m}\right)\frac{\pi^2(\alpha+1)^2a_1L}{\mu_o\ \mathcal{L}(\alpha,\beta)}\left[\frac{Y(T_f,T_i)}{V_{op}^{2}}\right]
 \end{equation}
 
-
+因为$\rho_m(T)$随温度$T$增加，$Y(T,0)$在$T$超过300 K之后继续增加。
+因为超导磁体处于正常态的总电阻$R_m(T)$正比于$\rho_m(T)\ell_{cd}$，
+通过磁体的加热电流由$V_{op}/R_m(T)$给出，它随$T$增加而减小。
+这意味着$\tau_{ah}^v$比$T_f$增加的更快；也即在恒压加热模式下，比在恒流模式下更不容易热失控。
+因此，就加热超导磁体而言，恒压模式要比恒流模式更安全。本问题将在问题8.1中进一步研究。
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.6]{chpt8/figs/fig8.6.eps}
-	\caption{Y (T,0) plots. Left-hand vertical scal}
+	\caption{$Y(T,0)$图。左侧纵轴是Ag、Cu、Al的刻度，右侧纵轴是黄铜的刻度。
+	在温度超过约100 K后，$Y(T,0)$几乎与Ag和Cu的纯度无关。}
 \end{figure}
+
+
 
 \section{高电压}
 
