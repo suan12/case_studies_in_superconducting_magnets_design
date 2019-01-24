@@ -440,16 +440,31 @@ Y(T_f,T_i)=\left(\frac{A_m}{A_{cd}}\right)\frac{\mu_o\ \mathcal{L}(\alpha,\beta)
 
 
 \section{高电压}
+大多数超导磁体的一个吸引人的特征是励磁所需的“低”电压，即$\sim$10 V。对于产生相同场强的普通金属磁体该值$>100$ V。
+磁体运行包括三个时间区间：1）充电励磁； 2）恒定磁场静态运行； 3）放电去磁。 
+不幸的是，这种低电压充足性通常仅在前两个时间区间可以保证；
+区间3可能遇到非常高的电压，特别是它处于故障模式的时候。
+ 当然，由于磁体失超，在区间1和区间2期间可能会突然进入区间3。
+ 由于超导磁体是电感器，其端电压包含一个电感分量，由下式给出：
+ \begin{align}
+V=L\frac{dI}{dt}
+ \end{align}
+注意到$L=2E_m/I_o^2$，其中$I_o$是区间3开始时的磁体电流。
+因为在这个区间，磁体电流下降$\Delta I$通常等于$I_o$，我们可以将8.37改写为：
+\begin{align*}
+V=\frac{2E_m}{I_{o}^{2}}\left(\frac{\Delta I}{\Delta t}\right)\approx\frac{2E_m}{I_o\Delta t}\tag{8.37b}
+\end{align*}
 
+保护主要在那些$E_m$超过$\sim$ 100 kJ的磁体才非常关键；
+储能量小于这个级别的磁体是可以补救的，或者至少不会引起严重的困难。
+如果我们设定实际超导磁体的危险电压等级是1 kV，那么根据8.37b，
+在$E_m=100$ kJ时，任意小于200 As的$I_o\Delta t$组合值都会产生高于1 kV
+的电压，磁体中的能量将足以引起严重破坏。
+一个实例：运行于$I_o=1$ kA的100 kJ磁体，如果电流在$\sim$200 ms级别放电。
+随着储能量的增加，问题越来越严重[8.17]。
 
-\begin{subequations}% 8.37a，b
-	\begin{align*}
-V&=L\frac{dI}{dt}\\
-V&=\frac{2E_m}{I_{o}^{2}}\left(\frac{\Delta I}{\Delta t}\right)\approx\frac{2E_m}{I_o\Delta t}
-	\end{align*}
-\end{subequations}
-
-
+根据8.37b，我们还可以看到，电流引线必须承受较高的放电电压。
+Anishchenko、Heller等[8.18]和Gerhold[8.19]已开发出可以承受高压的电流引线。
 
 \subsection{电弧环境}
 
