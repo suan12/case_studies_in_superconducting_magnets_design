@@ -554,24 +554,34 @@ J_{m_o}^{V}=\frac{2}{f_r(1-f_r)}\left[\frac{\sqrt{\ \mathcal{L}(\alpha,\beta)}}{
 为了保护，多数“实际”大小的HTS磁体都必须依赖于一类或另一类主动技术，其中的一些将在后文讨论。
 不过，对任何主动保护技术，因为在非恢复正常区的检测和电流退降之间存在不可避免的延迟，所以令磁体的正常区域传播(NZP)
 速度“加快”，进而扩大其$f_r$(它限制$e_{mr}$(方程8.7)，加强$J_{m_o}^{sh}$(方程8.30)和$J_{m_o}^V$(方程8.40))就很重要了。
-
-
+一个具有快NZP速度(三个方向)的磁体可以成为“自保护”的；
+自保护磁体的更多细节后文将讨论。
+因为NZP速度在HTS绕组中通常比在LTS绕组中慢很多，故“自保护”HTS磁体几乎不可能实现：
+\textit{所有}的HTS磁体都需要主动保护。
 
 \subsection{轴向NZP速度}
+自1960年代以来，LTS和HTS测试样品、模型绕组和磁体在绝热、准绝热、冷却条件下的长度方向
+(沿着导体轴向)的NZP速度$U_\ell$得到了全面的研究[8.1, 8.2, 8.25–8.75]。
+它是高性能(绝热)磁体保护的重要参数之一。
+在那些绝热或准绝热的绕组中，NZP不仅限于导体轴向，而是三维扩散的：$U_t\propto U_\ell$，
+其中$U_t$是“横向”传播速度。
 
+\subsubsection*{绝热条件下的NZP}
+图8.8给出了绝热条件下载流为$I$的导体示意图，正常-超导边界在$x=0$处，边界以恒定速度$U_\ell$沿$+x$方向移动。
+正常态超导体的功率密度方程由不含扰动和冷却项的方程6.1的一维($x$)形式给出：
 \begin{equation}% 8.41a
 C_n(T)\frac{\partial T_n}{\partial t}=\frac{\partial}{\partial x}\left[k_n(T)\frac{\partial T_n}{\partial x}\right]+\rho_n(T)J^2
 \end{equation}
-
-
+其中，$C_n(T),k_n(T)$和$\rho_n(T)$分别是正常态超导体的热容、热导率和电阻率。
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.6]{chpt8/figs/fig8.8.eps}
-	\caption{One-dimensional normal-to-superconducting boundary}
+	\caption{一维正常-超导边界($x=0$)以恒定速度$U_\ell$沿长度方向(轴向)移动。阴影部分($x<0$)
+		为正常态区域，右侧为超导区域。}
 \end{figure}
 
-
+类似的，
 
 
 
