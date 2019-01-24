@@ -728,32 +728,53 @@ NbTi的“恢复”[8.36]将在8.4.2讨论。
 类似的非NZP行为在Bi2223-Ag[8.55]带和YBCO带[8.64,8.69,8.73]中都观察到了。
 
 \subsection{“制冷”条件下的NZP}
+尽管在冷却磁体中的NZP保护不及绝热磁体中那么重要，
+但在有冷却条件下的NZP也获得了广泛的研究。
+如表8.5中给出NbTi复合导体中观察到的，实际上存在一个“恢复”电流，低于
+这个电流，正常态会缩小而不是扩大。
 
-
-\subsection{横向匝间速度}
-
-
-
+\subsection{横向(匝间)速度}
+现在我们关注主要针对超导带材的横向(匝间)NZP速度$U_t$。
+$\mathrm{Nb_3Sn}$带材曾一度很流行，但现在已不再用。
+现在最广泛使用的复合超导体带材是HTS的Bi2223-Ag和YBCO，两者都可绕成饼式线圈。
+此类HTS磁体的绕组尽管由制冷工质或制冷机冷却，但本质上是绝热的。
+$U_\ell$的绝热分析可以用于导出$U_t$[8.57]：
 \begin{equation}% 8.52
 U_t=U_\ell\sqrt{\frac{1}{2}\left(\frac{\delta_{cd}}{\delta_i}\right)\left[\frac{k_i(\tilde{T})}{k_m(\tilde{T})}\right]}
 \end{equation}
+式中，$k_i(\tilde{T})$是相邻厚度为$\delta_{cd}$超导带之间的厚度为$\delta_i$的绝缘层的温度平均热导率。
+方程8.52中，一般$\delta_{cd}>\delta_i$，倍数通常在3-10之间，但是$k_m\gg k_i$的倍数在1000或更大，
+甚至在77 K时也是如此；所以，$U_t$至少比$U_\ell$小1到2个数量级。
+Bi2223-Ag和YBCO模型线圈的测试实际上已经表明$U_t$至少比$U_\ell$小一个数量级。
+因为有高导电基底的HTS的$U_\ell$本身仅为1-10 mm/s，$U_t$则更小。
+如下面将讨论的，在2D和3D绕组中，接触热阻能进一步降低有效$U_t$。
 
-
+\subsubsection*{接触热阻}
+因为$U_t\propto \sqrt{k_i}$，使用高热导材料做匝间绝缘可以提高$U_t$。
+一种这样的材料是钻石；液氮温区中钻石的体热导率是铜的10-100倍[8.54]。
+不过，方程8.52忽略了导体和绝缘体之间的接触热阻。
+实际上，由绝缘垫片隔开的相邻导体之间存在两个接触热阻$R_{th_{ct}^1}$和$R_{th_{ct}^2}$。
+于是，方程8.52中的$k_i$应被$k_i^\prime$替换：
 \begin{equation}% 8.53
 \frac{1}{k_{i}^{\prime}}=\frac{1}{k_i}+R_{th_{ct}^{1}}+R_{th_{ct}^{2}}
 \end{equation}
 
-
-
+使用8.53中的$k_i^\prime$代入8.52，得到：
 \begin{equation}% 8.54
 U_t=U_\ell\sqrt{\frac{1}{2}\left(\frac{\delta_{cd}}{\delta_i}\right)\frac{k_i}{k_m[1+k_i(R_{th_{ct}^{1}}+R_{th_{ct}^{1}})]}}
 \end{equation}
 
-
-
+方程8.54表明当接触热阻是主要项，即$k_i(R_{th_{ct}^{1}}+R_{th_{ct}^{1}})\gg 1$时，
+8.54中的$k_i$可以消去，使绝缘体的热导率与$U_t$无关。于是，在该条件下：
 \begin{equation}% 8.55
 U_t=U_\ell\sqrt{\frac{1}{2}\left(\frac{\delta_{cd}}{\delta_i}\right)\frac{1}{k_m(R_{th_{ct}^{1}}+R_{th_{ct}^{1}})}}
 \end{equation}
+
+Bi2223-Ag超导带间用250 $\mu$m垫片隔开情况下的$U_t$实测基本证实了8.55的适用性；
+类似的结果也在YBCO带材之间的Nomex和Mylar隔层中观察到了[8.74,8.75]。
+
+\subsubsection*{实验结果}
+
 
 \begin{figure}
 	\centering
