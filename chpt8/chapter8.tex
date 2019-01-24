@@ -346,7 +346,7 @@ R_{nz}=f_r\frac{\pi(\alpha+1)\rho_m(T_f)}{4A_m}\sqrt{\frac{a_1L}{\mu_o\ \mathcal
 \begin{subequations}% 8.28a，b
 	\begin{align}
 \tau_{dg}&=\frac{L}{R_{nz}}=\frac{4A_m}{f_r\pi(\alpha+1)\rho_m(T_f)}\sqrt{\frac{\mu_o\ \mathcal{L}(\alpha,\beta)L}{a_1}}\\
-\tau_{dg}=\frac{4}{f_r\pi(\alpha+1)\rho_m(T_f)J_{m_o}}\sqrt{\frac{2\mu_o\ \mathcal{L}(\alpha,\beta)E_m}{a_1}}
+\tau_{dg}&=\frac{4}{f_r\pi(\alpha+1)\rho_m(T_f)J_{m_o}}\sqrt{\frac{2\mu_o\ \mathcal{L}(\alpha,\beta)E_m}{a_1}}
 \end{align}
 \end{subequations}
 式中，$J_{m_o}=I_{op}/A_m, L=2E_m/I_{op}^2$，其中$E_m$是磁体的初始磁场能储量。
@@ -363,8 +363,8 @@ R_{nz}=f_r\frac{\pi(\alpha+1)\rho_m(T_f)}{4A_m}\sqrt{\frac{a_1L}{\mu_o\ \mathcal
 尽管$f_r$是未知的，但对一个给定的$T_f$和$T_i$组合，存在一个最大基底电流密度$J_{m_o}^{sh}$限制了短接磁体的过热：
 \begin{subequations}% 8.30a，b
 	\begin{align}
-J_{m_o}^{sh}&=\frac{1}{2}\left(\frac{A_{cd}}{A_m}\right)f_r\pi(\alpha+1)\rho_m(T_f)Z(T_f,T_i)\sqrt{\frac{a_1}{2\mu_o\ \mathcal{L}(\alpha,\beta)E_m}}\\
-J_{m_o}^{sh}(T_f,T_i)&=\frac{1}{2}\left(\frac{A_{cd}}{A_m}\right)\frac{f_r\pi(\alpha+1)\rho_m(T_f)Z(T_f,T_i)}{\mu_o\ \mathcal{L}(\alpha,\beta)NI_{op}}
+J_{m_o}^{sh}=\frac{1}{2}\left(\frac{A_{cd}}{A_m}\right)f_r\pi(\alpha+1)\rho_m(T_f)Z(T_f,T_i)\sqrt{\frac{a_1}{2\mu_o\ \mathcal{L}(\alpha,\beta)E_m}}\\
+J_{m_o}^{sh}(T_f,T_i)=\frac{1}{2}\left(\frac{A_{cd}}{A_m}\right)\frac{f_r\pi(\alpha+1)\rho_m(T_f)Z(T_f,T_i)}{\mu_o\ \mathcal{L}(\alpha,\beta)NI_{op}}
 \end{align}
 \end{subequations}
 b式是在a式中代入$E_m=\mu_o a_1\mathcal{L}(\alpha,\beta)N^2 I_{op}^2/2$得到的。
@@ -432,7 +432,7 @@ Y(T_f,T_i)=\left(\frac{A_m}{A_{cd}}\right)\frac{\mu_o\ \mathcal{L}(\alpha,\beta)
 
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.6]{chpt8/figs/fig8.6.eps}
+	\includegraphics[scale=0.5]{chpt8/figs/fig8.6.eps}
 	\caption{$Y(T,0)$图。左侧纵轴是Ag、Cu、Al的刻度，右侧纵轴是黄铜的刻度。
 	在温度超过约100 K后，$Y(T,0)$几乎与Ag和Cu的纯度无关。}
 \end{figure}
@@ -507,7 +507,7 @@ Paschen电压试验是放电电压超过1 kV的超导磁体的例行试验。
 
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.6]{chpt8/figs/fig8.7.eps}
+	\includegraphics[scale=0.5]{chpt8/figs/fig8.7.eps}
 	\caption{电压分布。}
 \end{figure}
 
@@ -602,16 +602,16 @@ $\partial T_n/\partial t$可以写为：
 整理8.43a和8.43b，我们得到超导体分别在超导区($z>0$)和正常区($z<0$)的能量密度方程：
 \begin{subequations}
 	\begin{align}
-(z<0)&\quad      \frac{d}{dz}\left[k_n(T)\frac{dT_n}{dz}\right]+C_n(T)U_\ell\frac{dT_n}{dz}+\rho_n(T)J^2&=0\\
-(z>0)&\quad      \frac{d}{dz}\left[k_s(T)\frac{dT_s}{dz}\right]+C_s(T)U_\ell\frac{dT_s}{dz}&=0
+&(z<0)\quad      \frac{d}{dz}\left[k_n(T)\frac{dT_n}{dz}\right]+C_n(T)U_\ell\frac{dT_n}{dz}+\rho_n(T)J^2&=0\\
+&(z>0)\quad      \frac{d}{dz}\left[k_s(T)\frac{dT_s}{dz}\right]+C_s(T)U_\ell\frac{dT_s}{dz}&=0
 	\end{align}
 \end{subequations}
 令$C_n(T),k_n(T), C_s(T)$和$k_s(T)$均为常数，分别记为$C_n,k_n, C_s$和$k_s$。假设$d^2 T_n/dz^2\simeq 0$，
 我们可以重写8.44：
 \begin{subequations}
 	\begin{align}
-	(z<0)&\quad     C_nU_\ell\frac{dT_n}{dz}+\rho_nJ^2&=0\\
-	(z>0)&\quad     k_s\frac{d^2T_s}{dz^2}+C_sU_\ell\frac{dT_s}{dz}&=0
+	&(z<0)\quad     C_nU_\ell\frac{dT_n}{dz}+\rho_nJ^2&=0\\
+&	(z>0)\quad     k_s\frac{d^2T_s}{dz^2}+C_sU_\ell\frac{dT_s}{dz}&=0
 	\end{align}
 \end{subequations}
 
@@ -695,7 +695,7 @@ U_\ell\simeq\frac{J_m}{C_m}(\tilde{T})\sqrt{\frac{\rho_m(\tilde{T})k_m(\tilde{T}
 
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.6]{chpt8/figs/fig8.9.eps}
+	\includegraphics[scale=0.5]{chpt8/figs/fig8.9.eps}
 	\caption{(a) 测量长度方向NZP速度的实验装置示意图；
 		(b) NZP时间下的电压记录波形图。}
 \end{figure}
@@ -711,7 +711,7 @@ b)中的$V(t)$曲线是15 cm长带材在60 K的；c)中的是在70 K的。
 
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.6]{chpt8/figs/fig8.10.eps}
+	\includegraphics[scale=0.5]{chpt8/figs/fig8.10.eps}
 	\caption{YBCO测试样品在长度方向的NZP信号。}
 \end{figure}
 
@@ -761,25 +761,38 @@ Bi2223-Ag和YBCO模型线圈的测试实际上已经表明$U_t$至少比$U_\ell$
 
 使用8.53中的$k_i^\prime$代入8.52，得到：
 \begin{equation}% 8.54
-U_t=U_\ell\sqrt{\frac{1}{2}\left(\frac{\delta_{cd}}{\delta_i}\right)\frac{k_i}{k_m[1+k_i(R_{th_{ct}^{1}}+R_{th_{ct}^{1}})]}}
+U_t=U_\ell\sqrt{\frac{1}{2}\left(\frac{\delta_{cd}}{\delta_i}\right)\frac{k_i}{k_m[1+k_i(R_{th_{ct}^{1}}+R_{th_{ct}^{2}})]}}
 \end{equation}
 
-方程8.54表明当接触热阻是主要项，即$k_i(R_{th_{ct}^{1}}+R_{th_{ct}^{1}})\gg 1$时，
+方程8.54表明当接触热阻是主要项，即$k_i(R_{th_{ct}^{1}}+R_{th_{ct}^{2}})\gg 1$时，
 8.54中的$k_i$可以消去，使绝缘体的热导率与$U_t$无关。于是，在该条件下：
 \begin{equation}% 8.55
-U_t=U_\ell\sqrt{\frac{1}{2}\left(\frac{\delta_{cd}}{\delta_i}\right)\frac{1}{k_m(R_{th_{ct}^{1}}+R_{th_{ct}^{1}})}}
+U_t=U_\ell\sqrt{\frac{1}{2}\left(\frac{\delta_{cd}}{\delta_i}\right)\frac{1}{k_m(R_{th_{ct}^{1}}+R_{th_{ct}^{2}})}}
 \end{equation}
 
 Bi2223-Ag超导带间用250 $\mu$m垫片隔开情况下的$U_t$实测基本证实了8.55的适用性；
 类似的结果也在YBCO带材之间的Nomex和Mylar隔层中观察到了[8.74,8.75]。
 
 \subsubsection*{实验结果}
+尽管在LTS和HTS存在$U_t\ll U_\ell$，但在多数LTS绕组中，NZP的主要方向还是导体轴横向的，
+因为多数绕组中，导体长度$\ell_{cd}$比绕组的尺度(例如在螺管中$a_2-a_1$)要大得多:
+在LTS和HTS绕组中，条件$(a_2-a_1)/U_t\ll \ell_{cd}/2U_\ell$通常是都满足的。
+不过，如8.6将深入讨论的，这个条件并保证LTS和HTS磁体的保护有效。
 
+图8.11给出了YBCO样品在77 K下的四组横向NZP信号：
+a) 两个用38 $\mu$m厚Nomex隔层绝缘的绕组模型测量的$V(t)$曲线---实线是“干”隔层，虚线是浸渍过的隔层[8.75]；
+b) 同一个浸渍绕组的$V(t)$曲线，测量曲线似乎实线，与a)中的虚线相同，虚线是$R_{th_{ct}^{1}}=R_{th_{ct}^{2}}=0$
+时的仿真曲线；
+c)和d) 分布为对i.d.=100 mm, o.d.=120 mm的10层环氧浸渍模型饼式线圈的$V(t)$和$T(t)$的预测曲线---
+传输电流在$t=20$ s是切断[8.76]。
 
+数据给出的$U_t$在0.1-1 mm/s范围，至少比$U_\ell$小一个数量级。
+在干绕组[8.75]中，测到的$U_t$在接触压力为10 MPa时为$\sim$0.1 mm/s，在接触压力25 MPa时为$\sim$0.2 mm/s，
+浸渍的绕组，横向速度为$\sim$1 mm/s。
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.6]{chpt8/figs/fig8.11.eps}
-	\caption{Transverse NZP signals from YBCO test asse}
+	\includegraphics[scale=0.5]{chpt8/figs/fig8.11.eps}
+	\caption{YBCO测试样品在77 K时得到的横向NZP信号，失超是由加热脉冲触发的。}
 \end{figure}
 
 
