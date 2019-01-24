@@ -581,82 +581,151 @@ C_n(T)\frac{\partial T_n}{\partial t}=\frac{\partial}{\partial x}\left[k_n(T)\fr
 		为正常态区域，右侧为超导区域。}
 \end{figure}
 
-类似的，
-
-
-
-
-
-
-\begin{equation}% 8.41b
-C_s(T)\frac{\partial T_s}{\partial t}=\frac{\partial}{\partial x}\left[k_s(T)\frac{\partial T_s}{\partial x}\right]
-\end{equation}
+类似的，超导区域在绝热条件下的$x$方向的功率密度方程为：
+\begin{align*}% 8.41b
+C_s(T)\frac{\partial T_s}{\partial t}=\frac{\partial}{\partial x}\left[k_s(T)\frac{\partial T_s}{\partial x}\right] \tag{8.41b}
+\end{align*}
+其中，$C_s(T),k_s(T)$是超导态的热容和热导率。
+当正常-超导边界在$+x$方向以恒定速度$U_\ell$移动时，我们可以将$x$坐标变换为$z$坐标：$z=x-U_\ell t$。
+$\partial T_n/\partial t$可以写为：
 \begin{equation}% 8.42
 \frac{\partial T_n}{\partial t}=\frac{\partial T}{\partial z}\frac{\partial z}{\partial t}=-U_\ell\frac{dT}{dz}
 \end{equation}
-\begin{equation}% 8.43a
--C_n(T)U_\ell\frac{dT_n}{dz}=\frac{d}{dz}\left[k_n(T)\frac{dT_n}{dz}\right]+\rho_n(T)J^2
-\end{equation}
-\begin{equation}% 8.43b
--C_s(T)U_\ell\frac{dT_s}{dz}=\frac{d}{dz}\left[k_s(T)\frac{dT_s}{dz}\right]
-\end{equation}
-\begin{equation}% 8.44a
-(z<0)      \frac{d}{dz}\left[k_n(T)\frac{dT_n}{dz}\right]+C_n(T)U_\ell\frac{dT_n}{dz}+\rho_n(T)J^2=0
-\end{equation}
-\begin{equation}% 8.44b
-(z>0)      \frac{d}{dz}\left[k_s(T)\frac{dT_s}{dz}\right]+C_s(T)U_\ell\frac{dT_s}{dz}=0
-\end{equation}
-\begin{equation}% 8.45a
-(z<0)      C_nU_\ell\frac{dT_n}{dz}+\rho_nJ^2=0
-\end{equation}
-\begin{equation}% 8.45b
-(z>0)     k_s\frac{d^2T_s}{dz^2}+C_sU_\ell\frac{dT_s}{dz}=0
-\end{equation}
+
+于是，我们可以吧8.41写成：
+\begin{subequations}
+	\begin{align}
+-C_n(T)U_\ell\frac{dT_n}{dz}=&\frac{d}{dz}\left[k_n(T)\frac{dT_n}{dz}\right]+\rho_n(T)J^2\\
+-C_s(T)U_\ell\frac{dT_s}{dz}=&\frac{d}{dz}\left[k_s(T)\frac{dT_s}{dz}\right]
+	\end{align}
+\end{subequations}
+整理8.43a和8.43b，我们得到超导体分别在超导区($z>0$)和正常区($z<0$)的能量密度方程：
+\begin{subequations}
+	\begin{align}
+(z<0)&\quad      \frac{d}{dz}\left[k_n(T)\frac{dT_n}{dz}\right]+C_n(T)U_\ell\frac{dT_n}{dz}+\rho_n(T)J^2&=0\\
+(z>0)&\quad      \frac{d}{dz}\left[k_s(T)\frac{dT_s}{dz}\right]+C_s(T)U_\ell\frac{dT_s}{dz}&=0
+	\end{align}
+\end{subequations}
+令$C_n(T),k_n(T), C_s(T)$和$k_s(T)$均为常数，分别记为$C_n,k_n, C_s$和$k_s$。假设$d^2 T_n/dz^2\simeq 0$，
+我们可以重写8.44：
+\begin{subequations}
+	\begin{align}
+	(z<0)&\quad     C_nU_\ell\frac{dT_n}{dz}+\rho_nJ^2&=0\\
+	(z>0)&\quad     k_s\frac{d^2T_s}{dz^2}+C_sU_\ell\frac{dT_s}{dz}&=0
+	\end{align}
+\end{subequations}
+
+从8.45b中可以直接解出$T_s(z)$：
 \begin{equation}% 8.46a
 T_s(z)=Ae^{-cz}+T_{op}
 \end{equation}
-\begin{equation}% 8.46b
-T_s(z)=(T_t-T_{op})\exp\left(-\frac{C_sU_\ell}{k_s}z\right)+T_{op}
-\end{equation}
+式中，$T_{op}$是远离$z=0$($z\gg 0$)处的运行温度，
+$c=C_s U_\ell/k_s$。
+我们还知道$z=0$时由$T_s=T_t$，其中$T_t$是载流为$I$的超导体的转变温度。于是：
+\begin{align*}% 8.46b
+T_s(z)=(T_t-T_{op})\exp\left(-\frac{C_sU_\ell}{k_s}z\right)+T_{op} \tag{8.46b}
+\end{align*}
+
+另一个边界条件是各区域的$k(dT/dz)$应该在$z=0$处相等---
+热流必须在边界上连续：
 \begin{equation}% 8.47a
 k_n\frac{dT_n}{dz}\mid_0=k_s\frac{dT_s}{dz}\mid_0
 \end{equation}
-\begin{equation}% 8.47b
--\frac{k_n\rho_nJ^2}{C_nU_\ell}=-C_sU_\ell(T_t-T_{op})
-\end{equation}
+联立8.45a，8.46b和8.47a，有：
+\begin{align*}% 8.47b
+-\frac{k_n\rho_nJ^2}{C_nU_\ell}=-C_sU_\ell(T_t-T_{op}) \tag{8.47b}
+\end{align*}
+在8.47b中解出$U_\ell$，有：
 \begin{equation}% 8.48
 U_\ell=J\sqrt{\frac{\rho_nk_n}{C_nC_s(T_t-T_{op})}}
 \end{equation}
+
+方程8.48中重要的几点包括$U_\ell$直接正比于电流密度$J$，而反比于两个区域热容的几何平均$\sqrt{C_n C_s}$。
+8.48给出的$U_\ell$对绝热条件下的裸超导体有效。
+由于材料物性是温度依赖的，使用$U_\ell$的精确表达式没什么必要。不过出于完整性，我们给出下面的精确表达式[8.47]：
 \begin{equation}% 8.49
 U_\ell=J\sqrt{\frac{\rho_n(T_t)k_n(T_t)}{\left[C_n(T_t)-\frac{1}{k_n(T_t)}\frac{dk_n}{dT}\mid_{T_t}\int_{T_{op}}^{T_t}C_s(T)dT\right]\int_{T_{op}}^{T_t}C_s(T)dT}}
 \end{equation}
+
+方程8.49给出的$U_\ell$值与YBCO带材短样在45-77 K的实测值吻合很好[8.66]。
+
+取材料物性为常数，我们发现8.49退化为8.48。
+在$C_n=C_s=C_o$时，方程8.48可以写为：
 \begin{equation}% 8.50a
 U_\ell=\frac{J}{C_o}\sqrt{\frac{\rho_nk_n}{(T_t-T_{op})}}
 \end{equation}
-\begin{equation}% 8.50b
-U_\ell=\frac{J}{C_o(\tilde{T})}\sqrt{\frac{\rho_n(\tilde{T})k_n(\tilde{T})}{(T_t-T_{op})}}
-\end{equation}
+在$(T_t-T_{op})/T_{op}\ll 1$时(一个通常可用于LTS而不能用于HTS的条件)，我们可以修正8.50a，让它包含
+温度依赖的$C_o,\rho_n$和$k_n$：
+\begin{align*}% 8.50b
+U_\ell=\frac{J}{C_o(\tilde{T})}\sqrt{\frac{\rho_n(\tilde{T})k_n(\tilde{T})}{(T_t-T_{op})}} \tag{8.50b}
+\end{align*}
+式中，$\tilde{T}=(T_t+T_{op})/2$。
+方程8.48到8.50对没有基底金属的超导体有效；
+实际中，磁体级导体都是复合的，我们可以用基底金属材料的物性近似上述材料属性。
+
+\subsubsection*{复合超导体}
+对于有截面为$A_m$的基底金属的复合导体，在$(T_t-T_{op})/T_{op}\ll 1$时(同样，只适用于LTS)，
+引入温度依赖的参数，利用$\tilde{T}=(T_t+T_{op})/2$，将8.50b推广为：
 \begin{equation}% 8.51a
 U_\ell=\frac{J_m}{C_{cd}}(\tilde{T})\sqrt{\frac{\rho_m(\tilde{T})k_m(\tilde{T})}{T_t-T_{op}}}
 \end{equation}
-\begin{equation}% 8.51b
-U_\ell\simeq\frac{J_m}{C_m}(\tilde{T})\sqrt{\frac{\rho_m(\tilde{T})k_m(\tilde{T})}{T_t-T_{op}}}
-\end{equation}
+式中，$C_{cd}(\tilde{T})$是导体在$T_{op}$和$T_t$区间的单位体积平均热容，
+$J_m$是基底金属截面上的电流密度。
+因为$\rho_m$(基底金属电阻率)远小于$\rho_n$，
+$k_m$(基底金属热导率)远大于$k_n$，
+8.51a中使用$k_m(\tilde{T})$和$\rho_m(\tilde{T})$是非常合适的。
+方程8.51a中，Joshi建议转变温度$T_t\equiv (T_{cs}+T_{c})/2$[8.45]，或简单的$T_t= (T_{cs}$。
+试验数据很难验证这个微小的差异。
+基于和方程8.9b相同的近似方法，我们使用$C_{cd}(\tilde{T})\simeq C_m(\tilde{T})$，有：
+\begin{align*}% 8.51b
+U_\ell\simeq\frac{J_m}{C_m}(\tilde{T})\sqrt{\frac{\rho_m(\tilde{T})k_m(\tilde{T})}{T_t-T_{op}}} \tag{8.51b}
+\end{align*}
 
+方程8.48-8.51的一般适用性已被大量LTS和最近的HTS试验证实。
+
+\subsubsection*{长度方向NZP速度的实验确定}
+确定$U_\ell$的实验基本装置很简单。
+一般的，如图8.9所示，在一个长直样品上，测量很多短距离(10-20 cm)的局部电压信号；
+在一些实验中，还监测了局部的温度。
+如果测试样品处于磁体室温孔中，样品更倾向于环形或螺旋形而非平直的。
+测试样品载流$I$时，由加热器等制造一个局部失超区域。
+其过程通过电压信号$V_1,V_2,V_3$以及$V_\Sigma =V_1+V_2+V_3$监测；
+明显，$U_\ell$可以从相邻电压(和/或温度)信号间距以及时间获得。
+图8.9b给出了一段10 cm长Nb3Sn带的$V_1,V_2,V_3$以及$V_\Sigma =V_1+V_2+V_3$的记录波形[8.55]。
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.6]{chpt8/figs/fig8.9.eps}
-	\caption{(a) Schematic drawing of a setup to experimental}
+	\caption{(a) 测量长度方向NZP速度的实验装置示意图；
+		(b) NZP时间下的电压记录波形图。}
 \end{figure}
 
+使用类似于LTS测试所用的实验技术，在20实际初测量了上面描述的一个样品。
+这里，不涉及实验设置的细节，我们仅在图8.10给出YBCO带材NZP速度测量的电压和温度的共四组曲线：
+a)，b)和c)是测试样品长度分别为20 cm[8.65]，15 cm[8.70]和18 cm[8.74]情况下的$V(t)$曲线。
+在20 cm场YBCO带材中，初始温度为50 K的样品的局部正常区域的产生依赖于在20 cm长度上的临界电流的非均匀分布。
+72 A的过流脉冲(图8.10a和8.10d)触发了区域5的失超(相应的，$V_5$和$T_5$)，导致恒定电流为30 A的NZP(图8.10a);
+a)中的$V(t)$的时间刻度和d)中$T(t)$的时间刻度是一致的。
+b)中的$V(t)$曲线是15 cm长带材在60 K的；c)中的是在70 K的。
+测到的NZP速度在2-10 mm/s之间，总结如表8.5。
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.6]{chpt8/figs/fig8.10.eps}
-	\caption{Longitudinal NZP signals from YBCO test sample}
+	\caption{YBCO测试样品在长度方向的NZP信号。}
 \end{figure}
 
+表8.5.。。。。。。。。。。。。。。。。
+
+表8.5列出了LTS和HTS的$U_\ell$测量值。
+尽管由液氦冷却，Nb-Zr单丝的$U_\ell\propto J$，因为没有基底金属(Stekly之前时代的超导体)，
+正常态焦耳热完全超过了冷量。
+一般的，这些数据表明HTS(Bi2223-Ag；YBCO)的NZP速度比LTS的小2-4个数量级。
+NbTi的“恢复”[8.36]将在8.4.2讨论。
+铁基底的MgB2[8.70]，NZP速度和LTS的具有可比性，主要因为没有高导电基底金属。
+这里，在总导体电流密度$J_{cd}$为$26\ \mathrm{ A/mm^2}$或更低时，
+不会发生NZP：正常态超导体不产生足够的焦耳热，主要原因是其指数很低($n\simeq 15$)。
+类似的非NZP行为在Bi2223-Ag[8.55]带和YBCO带[8.64,8.69,8.73]中都观察到了。
 
 \subsection{“制冷”条件下的NZP}
 
