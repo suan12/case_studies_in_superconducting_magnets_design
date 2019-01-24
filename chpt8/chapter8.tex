@@ -141,71 +141,107 @@ $e_{mr}$不依赖于磁体体积，而是依赖于$f_r,\alpha,\beta$和$B_o$。
 
 
 \section{绝热加热}
+超导磁体中永久性损坏的主要形式之一是其复合导体的过度加热(“过热”)。
+如果严重，过热可能会使复合材料熔化或在绕组中产生热梯度，在超导体内形成过应力，不可逆地降低其$J_c$性能。
+1960年代以来，过热问题得到了实验和分析的研究。
 
-\begin{equation}% 8.8a和8.8b
-C_{cd}(T)\frac{dT}{dt}\simeq\rho_{cd}(T)J_{cd_o}^{2}(t) 
-\simeq\rho_m(T)J_{cd_o}^{2}(t)
-\end{equation}
+如上所述，即使磁体与其电源隔离并且以持续模式运行，超导磁体中的过热仍可能通过在磁体中存储的总磁能在绕组的小体积内耗散而发生。
+在带电磁体中，在磁体被驱动到正常态后，电源的电阻性加热也可能发生过热；
+这种加热可以是局域的，也可能是包括整个绕组的全局的。
+忽略方程6.1中的热传导、扰动和冷却项，我们来分析单位复合导体体积的绝热加热。
+\begin{subequations}
+	\begin{align}
+	C_{cd}(T)\frac{dT}{dt}&\simeq\rho_{cd}(T)J_{cd_o}^{2}(t) \\
+	&\simeq\rho_m(T)J_{cd_o}^{2}(t)
+	\end{align}
+\end{subequations}
+
+方程8.8b中，如图6.5的电路模型一样，导体的电阻率$\rho_{cd}$由基底电阻率$\rho_m$近似(或方程6.25的$n=\infty$)。
+注意到，方程8.8出现在第六章表6.1的第七行。
 
 \subsection{恒定电流模式下的绝热加热}
+首先我们研究图如8.1所示的恒电流模式的绝热加热：
+超导磁体(电感$L$)内的电阻性区域$r(T)$与提供磁体运行电流$I_{op}$的恒流源相连。
+假设电阻性区域如8.8b载有\textit{全部}电流，单位导体长度的功率密度方程称为：
 \begin{equation}% 8.9a
 A_{cd}C_{cd}(T)\frac{dT}{dt}=\frac{\rho_m(T)}{A_m}I_{op}^{2}(t)
 \end{equation}
-\begin{equation}% 8.9b
-C_m(T)\frac{dT}{dt}=\left(\frac{A_m}{A_{cd}}\right)\rho_m(T)J_{m_o}^{2}=\left(\frac{\gamma_{m/s}}{1+\gamma_{m/s}}\right)\rho_m(T)J_{m_o}^{2}
-\end{equation}
-\begin{equation}% 8.9c和8.9d
-\int_{T_i}^{T_f}\frac{C_m(T)}{\rho_m(T)}dT=\left(\frac{A_m}{A_{cd}}\right)J_{m_o}^{2}\tau_{ah} 
-=\left(\frac{\gamma_{m/s}}{1+\gamma_{m/s}}\right)J_{m_o}^{2}\tau_{ah}
-\end{equation}
+代入$I_{op}/A_m=J_m$(方程6.7c)，以及$C_{sc}(T)\simeq C_{\bar{m}}(T)\simeq C_m(T)$，$A_m/A_{cd}=\gamma_{m/s}/(\gamma_{m/s}+1)$(其中，$\gamma_{m/s}\equiv A_m/(A_{sc}+A_{\bar{m}})$，方程6.21b)，
+得到：
+\begin{align*}% 8.9b
+C_m(T)\frac{dT}{dt}=\left(\frac{A_m}{A_{cd}}\right)\rho_m(T)J_{m_o}^{2}=\left(\frac{\gamma_{m/s}}{1+\gamma_{m/s}}\right)\rho_m(T)J_{m_o}^{2} \tag{8.9b}
+\end{align*}
+整理8.9b，在初始值($t=0$时，$T=T_i$)和最终值($t=\tau_{ah}$时，$T=T_f$)，有：
+\begin{align*}% 8.9c和8.9d
+\int_{T_i}^{T_f}\frac{C_m(T)}{\rho_m(T)}dT=\left(\frac{A_m}{A_{cd}}\right)J_{m_o}^{2}\tau_{ah} \tag{8.9c}
+\end{align*}
+\begin{align*}
+\int_{T_i}^{T_f}\frac{C_m(T)}{\rho_m(T)}dT=\left(\frac{\gamma_{m/s}}{1+\gamma_{m/s}}\right)J_{m_o}^{2}\tau_{ah} \tag{8.9d}
+\end{align*}
+
+方程8.9c和8.9d左侧的温度积分单调的依赖于$T$；我们定义$Z(T_f,T_i)$函数：
 \begin{equation}% 8.10a
 Z(T_f,T_i)\equiv\int_{T_i}^{T_f}\frac{C_m(T)}{\rho_m(T)}dT
 \end{equation}
-\begin{equation}% 8.10b
-Z(T_f,T_i)\simeq\frac{1}{\tilde{\rho}_m}\int_{T_i}^{T_f}C_m(T_f)dT=\frac{H_m(T_f)-H_m(T_i)}{\tilde{\rho}_m}
-\end{equation}
-
+对于$\rho_m(T)$比较恒定的合金基底金属，可用温度区间平均值$\tilde{\rho}_m$近似替代，方程8.10可以简化为：
+\begin{align*}% 8.10b
+Z(T_f,T_i)\simeq\frac{1}{\tilde{\rho}_m}\int_{T_i}^{T_f}C_m(T_f)dT=\frac{H_m(T_f)-H_m(T_i)}{\tilde{\rho}_m}\tag{8.10b}
+\end{align*}
+其中，$H_m(T)$是温度$T$时基地金属单位体积焓。
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.6]{chpt8/figs/fig8.1.eps}
-	\caption{Circuit representing a superconducting magnet of inductance L with a normal
-		zone of T-dependent resistance r(T), connected to a supply of constant-current Iop..}
+	\caption{电路模型：电感为$L$的超导磁体，有依赖于温度的正常区电阻$r(T)$，连基于恒流$I_{op}$源。}
 \end{figure}
-
-
+图8.2给出了银(0$^\circ$C和4$^\circ$C的电阻率RRR=1000；100)、铜(200；100；50)、铝(级别：1000)和黄铜(70Cu-30Zn)的$Z(T,0)$。
+虚线(不易看出)是$\tilde{\rho}_m=5.5\times 10^{-8}\Omega$m(方程8.10b)的黄铜。对任意的$T_i,T_f$组合，有：
 \begin{equation}% 8.11
 Z(T_f,T_i)=Z(T_f,0)-Z(T_i,0)=Z(T_f)-Z(T_i)
 \end{equation}
+对任意的$T_i,T_f$组合，存在一个加热时间$\tau_{ah}^i(T_f，T_I)$---
+角标$i$表示恒电流加热---有下式给出：
 \begin{equation}% 8.12a
 \tau_{ah}^{i}(T_f,T_i)=\left(\frac{1+\gamma_{m/s}}{\gamma_{m/s}}\right)\frac{Z(T_f,T_i)}{J_{m_o}^{2}}
 \end{equation}
-\begin{equation}% 8.12b
-J_{m_o}^{i}(T_f,T_i)=\sqrt{\left(\frac{1+\gamma_{m/s}}{\gamma_{m/s}}\right)\frac{Z(T_f,T_i)}{\tau_{ah}}}
-\end{equation}
+类似的，对任意的$T_i,T_f$组合，在恒电流加热时间$\tau_{ah}$内存在一个基底电流密度$J_{m_o}^i(T_f，T_i)$：
+\begin{align*}% 8.12b
+J_{m_o}^{i}(T_f,T_i)=\sqrt{\left(\frac{1+\gamma_{m/s}}{\gamma_{m/s}}\right)\frac{Z(T_f,T_i)}{\tau_{ah}}} \tag{8.12b}
+\end{align*}
 
+因为在$\sim 300$ K以上，$C_m(T)$存在渐近线，而$\rho_m(T)$却继续随$T$增长。被积函数$C_m(T)/\rho_m(T)$随$T$减小，
+所以$Z(T_f,T_i)$的很小增量会引起(多数实际损坏的)绕组$T_f$的剧烈增加：保持$T_f$不大于200 K。
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.6]{chpt8/figs/fig8.2.eps}
-	\caption{Z(T, 0) plots. .}
+	\caption{几种常用金属材料的$Z(T, 0)$图。}
 \end{figure}
 
-\subsection{恒定放电模式下的绝热加热}
+\subsection{放电模式下的绝热加热}
+本节我们研究超导磁体($L$)中正常电阻区域$r(t)$---或$r(T)$---在放电模式下的绝热加热，
+这种模式在超导磁体保护中经常遇到。
+实际的例子在后面的专题中给出。
 
+磁体最初($t=0$)由电流$I_{op}$供电，由泄流(放电)电阻($R_D$)将之旁路。
+图8.3给出了电路图，其中，$I_m(t)$是时变基底金属电流。
+$V_D\equiv R_d I_m(0)=R_d I_{op})$是$t=0$时刻放电电阻上的放电电压。
+
+和方程8.9的绝热加热假设相同，但$J_{m_o}=I_{op}/A_m$(常数)由$J_m(t)\equiv I_m(t)/A_m$代替：
 \begin{equation}% 8.13
 C_m(T)\frac{dT}{dt}=\left(\frac{A_m}{A_{cd}}\right)\rho_m(T)J_{m}^{2}(t)
 \end{equation}
 
+$I_m(t)$的电路方程为：
 \begin{equation}% 8.14
 L\frac{dI_m(t)}{dt}+[R_D+r(t)]I_m(t)=0
 \end{equation}
 
+对多数情况，简化假设$R_D\gg r(t)$成立。方程8.14中解出$I_m(t)$。考虑到$\tau_{dg}=L/R_D$，可以得到$J_m(t)$：
 \begin{equation}% 8.15
 J_m(t)=J_{m_o}e^{-t/\tau_{dg}}
 \end{equation}
-
-
+式中，$J_{m_o}\equiv J_{m}(t=0)$。联立8.13和8.15，使用$Z(T_f,T_i)$的定义，有：
 \begin{subequations}% 8.16a 8.16b 8.16c
 	\begin{align*}
 Z(T_f,T_i)&=\left(\frac{A_m}{A_{cd}}\right)\int_{0}^{\infty}J_{m_o}^{2}e^{-2t/\tau_{dg}}dt=\left(\frac{A_m}{A_{cd}}\right)J_{m_o}^{2}\times\frac{1}{2}\tau_{dg} \\
@@ -217,29 +253,35 @@ Z(T_f,T_i)&=\left(\frac{A_m}{A_{cd}}\right)\int_{0}^{\infty}J_{m_o}^{2}e^{-2t/\t
 \begin{figure}
 \centering
 \includegraphics[scale=0.6]{chpt8/figs/fig8.3.eps}
-\caption{Circuit representing a superconducting magnet of inductance L.}
+\caption{电路模型：电感为$L$的超导磁体，有依赖于$T(t)$的正常区电阻$r(t)$，在放电模式下绝热加热。
+	放电电阻$R_D$旁路磁体端子。$V_D\equiv R_d I_m(0)$是$t=0$时刻$R_D$上的放电电压}
 \end{figure}
 
+磁体电感$L$和放电电阻$R_D$可以分别由磁体初始存储磁能$E_m$和$R_D$上的初始放电电压$V_D$表示。即：
+\begin{subequations}
+	\begin{align}
+	L&=\frac{2E_m}{I_{op}^{2}}\\
+	R_D&=\frac{V_D}{I_{op}}
+	\end{align}
+\end{subequations}
 
-\begin{equation}% 8.17a
-L=\frac{2E_m}{I_{op}^{2}}
-\end{equation}
-
-\begin{equation}% 8.17b
-R_D=\frac{V_D}{I_{op}}
-\end{equation}
-
+联立8.16b，8.17a和8.17b，得到：
 \begin{equation}% 8.18a
 Z(T_f,T_i)=\left(\frac{A_m}{A_{cd}}\right)\frac{J_{m_o}^{2}E_m}{V_DI_{op}}
 \end{equation}
+该方程表明，$T_f$在大$J_{m_o}$和/或$E_m$以及小$V_D$和/或$I_{op}$的组合下较大。
+我们可以考虑将比值$E_m/V_D I_{op}$作为有效放电时间，其中$V_D I_{op}$是有效放电功率。
+由$J_{m_o}=I_{op}/A_m$，我们将8.18化简为：
+\begin{align*}% 8.18b
+Z(T_f,T_i)=\frac{J_{m_o}^{2}E_m}{A_{cd}V_D} \tag{8.18b}
+\end{align*}
 
-\begin{equation}% 8.18b
-Z(T_f,T_i)=\frac{J_{m_o}^{2}E_m}{A_{cd}V_D}
-\end{equation}
-
+在放电模式下，对任意绕组温度极限$T_f$，存在一个最大的基底电流密度$J_{m_o}^D$：
 \begin{equation}% 8.19
 J_{m_o}^{D}=\frac{A_{cd}V_DZ(T_f,T_i)}{E_m}
 \end{equation}
+
+方程8.19给出了完全不同于6.22所给的低温稳定性判据的$J_{m_o}$判据。
 
 \subsection{引线短接的磁体的绝热加热}
 
