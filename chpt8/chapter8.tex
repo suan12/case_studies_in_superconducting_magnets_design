@@ -934,83 +934,151 @@ $C_m(\tilde{T})$和$(T_t-T_{op})$的依赖性意味着对同样的$J_{m_o}$和$T
 时刻$t=0$，线圈1内形成了小正常区；它由一个定值小电阻表示(图8.13未画出)。
 
 系统的总磁能为：$E_m=(L+M)I_0^2$。
-
+电阻$r$上耗散的总磁能与系统总磁能之比$E_r/E_m$用$\zeta=r/R$表示为：
 \begin{equation}% 8.61
 \frac{E_r}{E_m}=\frac{0.5\zeta(1-k)+(1+k)}{\zeta+(1+k)}
 \end{equation}
 
-
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.6]{chpt8/figs/fig8.13.eps}
-	\caption{Circuit for an “isolated,” persistent-mode 2-coil magnet.}
+	\caption{“孤立”的持续模式2线圈磁体的电路模型。}
 \end{figure}
 
+多数高性能线圈都能满足$r\gg R(1+k)$条件，此时给出的$I_1(t)$和$I_2(t)$为：
+\begin{subequations}
+	\begin{align}
+\frac{I_1(t)}{I_0}=&\frac{R(1+k)^2}{2r}\exp\left(-\frac{Rt}{2L}\right)\left[1-\frac{R(1+k)^2}{2r}\right]\exp\left[-\frac{rt}{(1-k^2)L}\right]\\
+	\frac{I_2(t)}{I_0}=&(1+k)\exp\left(-\frac{Rt}{2L}\right)-k\exp\left[-\frac{rt}{(1-k^2)L}\right]
+	\end{align}
+\end{subequations}
 
+由8.62，我们可以得到如下结论：
+\begin{itemize}
+		\item 方程8.61表明，当$r\rightarrow 0$时，$E_r/E_m\rightarrow 1$。
+		这是由于为了将能量转移到旁路电阻---唯一的可以用于吸收耗散能量的元件---
+		必须在各旁路电阻上形成电压。
+		如果正常区域电阻$r$很小，旁路电阻$R_1$上的电压也很小。
+		当$r\rightarrow 0$时，各旁路电阻上仅有很小的电压，而整个磁场能量被正常区耗散，从而$E_r/E_m\rightarrow 1$；
+		幸好，这种情况不会发生于绝热绕组，因为在绝热绕组中一旦形成正常态区域，$r$迅速增加，在各旁路电阻上提供
+		足够的电压。
+		\item 方程8.61还表明，当$r\rightarrow\infty$时，$E_r/E_m\rightarrow 0.5(1-k)$，$k=1$意味着
+		$E_r/E_m=0$。在这个条件下，各旁路电阻上出现很高的电压，总能量的大部分耗散于旁路电阻上。
+		如果两个线圈耦合很好$(k\rightarrow 1)$，储存与线圈1的能量被转移到线圈2，通过旁路电阻耗散。
+		
+		注意到因为跨过两个旁路电阻的总电压必须总是为零，两个旁路电阻中必然流过相同(但反向)的电流；
+		两个电阻的耗散相同。也即，若$R_1=R_2$，则各旁路电阻耗散相同的能量。
+		\item 方程8.62b给出，在$r/R\gg (1-k^2)/2$时，仍处于超导态的线圈2的电流$I_2(t)$开始增加。
+		线圈1中出现的$r$迫使电流流过旁路电阻$R_1$。
+		因为磁体端子之间的电压必须为零---PCS是超导态---
+		在旁路电阻$R_2(=R_1)$中必须流过一个相等但反向的电流。
+		各旁路电阻中的电流最终会进入线圈2，导致$I_2(t)$增加，$I_1(t)$则减少相同的电流，保持磁体中磁通不变。
+		\item $I_2(t)$的增加一致持续到它达到超导体在线圈中平面处最内层绕组半径处临界电流，
+		导致线圈2失超，这会促进正常区的快速扩展。
+		这个过程将在下一个问题中进一步考察，届时我们将更细致的研究一个真实的线圈工况。
+		\item  有利于触发失超的$I_2(t)$大幅度增加可能带来问题。因为如上所述，磁通保持不变，
+		这导致绕组中应力大幅升高。这意味着设计使用旁路电阻保护的线圈时，他们必须设计具有承受失超中可能
+		出现的最大应力的能力。
+		失超过程中的一个重要参数是$I_2(t)\times B_2(t)$。
+	\end{itemize}
 
+\subsubsection*{两线圈磁体}
+作为一个实例，这里研究如图8.14所示的两线圈磁体。
+两个串联的线圈均由带绝缘的NbTi导线绕成(密排六边形)，各线圈分别并联0.5 $\Omega$旁路电阻。
+电源可以建模为最高电压10 V的恒流源。
 
+分析中，我们假设正常区传播主要由横向热传导决定。
+正常区在整个圆周上沿径向和轴向三维扩大。
+尽管因为$2\pi a_{1_1} U_\ell d_1 U_t$(其中$a_{1_1}$和$d_1$分别是线圈1的内绕组半径和导体直径。)，
+导致$U_\ell\gg U_t$，但横向传播在两部分都是主要部分。
 
-\begin{equation}% 8.62a
-\frac{I_1(t)}{I_0}=\frac{R(1+k)^2}{2r}\exp\left(-\frac{Rt}{2L}\right)\left[1-\frac{R(1+k)^2}{2r}\right]\exp\left[-\frac{rt}{(1-k^2)L}\right]
+表8.6给出了线圈参数。总电感是1.52 H。
+因为线圈2是直接绕在线圈1上的，两线圈界面上的热接触良好：整个线圈可以视为均一的热单元。(如表8.6所给的，
+两个线圈的导线直径不同，于是NZP速度不同。)
+
+线圈1中平面上最内直径处放置一个用于制造失超的加热器。
+于是，我们可以结社正常区开始于线圈1中平面上最内直径的环上，如图8.12那样扩展到线圈2。
+
+图8.15给出了加热器驱动的失超的电流电压随时间变化的曲线，该磁体初始电流100 A；
+电源电压极限为10 V。
+电流和电压图都包含四条线：实线(实验)和虚线(仿真)。
+电流和电压曲线中，标为1的表示第1部分，标为2的表示第2部分。
+在回答下列问题时，可以忽略分析曲线。
+
+\begin{itemize}
+\item 从图8.15曲线中，可以得到如下结论：
+	\begin{enumerate}
+		\item  因为第1部分最早出现失超，$I_1$首先下降。
+		\item $I_2$开始上升以保持磁通不变。
+		\item $I_1$和$I_2$的行为也反映在$V_1,V_2$上。
+		$V_2$升高，因为$\Delta I_1$不是通过第1部分，而是通过$R_1$。
+		\item 为保持端子电压为0(至少在初始时)，$V_2$变为负的。这些初始响应与问题8.9的结果一致。
+		最终$V_1+V_2$爬升至电源极限10 V。
+		\item 在$t\sim$0.2 s，$V_2$开始爬升，明确表明正常区域已经进入线圈2。
+		\item $I_2$因此开始下降，$I_1$升高，以保持磁通不变。
+		\item 在$t\sim$0.4 s，$V_1+V_2$达到10 V，$I_1$必须开始下降。
+		\item 在$t>$0.4 s后，$V_1+V_2=10$ V。
+	\end{enumerate}
+\item 磁体中耗散的总能量$E_d$可由下式给出：
+\begin{equation}% 8.63
+E_d=E_m+E_s-E_{R1}-E_{R2}
 \end{equation}
-\begin{equation}% 8.62b
-\frac{I_2(t)}{I_0}=(1+k)\exp\left(-\frac{Rt}{2L}\right)-k\exp\left[-\frac{rt}{(1-k^2)L}\right]
-\end{equation}
+式中，$E_m$是磁体初始的总储能量，$E_s$是$t=0$到$t=2$ s时间内电源提供的能量，
+$E_{R1}$和$E_{R2}$分别是耗散于$R_1$和$R_1$的能量。
+$E_m$=7600 J$[(0.5)(1.52)(100)^2]$。
+$E_s$由$V_s(t)I_s(t)$在$0\le t\le 2$之间的积分得到。
+$V_s(t)$和$I_s(t)$分别是电源的电压和电流。
+电源在$0\le t\0.4$ s间可以建模为恒流源(100 A)，$t\ge 0.4$ s后，可以建模为恒压源(10 V)。
+在$0\le t\0.4$ s，我们有$V_s(t)=V_1(t)+V_2(t)$，在$t\ge 0.4$ s，有$I_s(t)=I_1(t)+I_2(t)/R_1$。
+(涉及更多线圈的类似关系的证明见问题8.11.)
+
+使用图8.15中的曲线，我们计算$E_s,E_{R1}$和$E_{R2}$：
+\begin{align*}
+E_s&=(100\ \mathrm{A})\int_{0}^{0.4\ \mathrm{s}}[V_1(t)+V_2(t)]dt+(10\ \mathrm{V})\int_{0.4\ \mathrm{s}}^{2\ \mathrm{s}}\left[I_1(t)+\frac{V_1(t)}{R_1}\right]dt \\
+&\simeq 200\ \mathrm{J}+650\ \mathrm{J}\simeq 850\ \mathrm{J}\\
+E_{R1}&=\frac{1}{R_1}\int_{0}^{2\ \mathrm{s}}V_1(t)^2dt\simeq 50\ \mathrm{J} \\
+E_{R2}&=\frac{1}{R_2}\int_{0}^{2\ \mathrm{s}}V_2(t)^2dt\simeq 300\ \mathrm{J}
+\end{align*}
+于是，磁体中耗散的总磁能约为5500 J。
+
+\item 如果$I_0=50$ A，正常态将在$\sim 0.4$ s或更晚达到线圈2，因为$U_t\propto U_\ell\propto I_t$。
+同时，$B$减半或$T_c$提高使达到时间比0.4 s更晚。
+因为旁路电压降低2分之一，端子电压达到10 V所需的时间会更长：长于0.4 s，或许长达0.8 s。
+
+\item 总绕组体积(导体和环氧填充物)是694 $\mathrm{cm^3}$。假设全绕组的热容$C_{wd}$以铜代表，有：
+\begin{align*}% page500第四个
+\mathcal{V}_{cd}[h_{cu}(T_f)-h_{cu}(T_{op})]\simeq(694\ \mathrm{cm^3})[h_{cu}(T_f)]=5500\ \mathrm{J}
+\end{align*}
+其中，$\mathcal{V}_{cd}$是绕组体积，$h_{cu}$是铜的单位体积焓。
+$T_f>T_{op}=4.2$ K时，$h_{cu}(T_f)\gg h_{cu}(T_{op})$。
+从图A3.3中，我们发现$T_f\simeq$50 K，与47 K(图8.16)仿真数据大致吻合。
+
+\item 使用铝替换铜，图A3.3给出$T_f=75$ K。仿真给出的温度是57 K。
+\end{itemize}
 
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.6]{chpt8/figs/fig8.14.eps}
-	\caption{2-Coil Magnet circuit}
+	\caption{两线圈磁体电路模型}
 \end{figure}
 
-
-
-
+表8.6.。。。。。。。。。。。。。。。
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.6]{chpt8/figs/fig8.15.eps}
-	\caption{Current and voltage vs. time traces of Coil 1 }
+	\caption{线圈1(标号1)和线圈2(标号2)的电流电压的时间曲线)：实验值为实线，仿真值是虚线。 }
 \end{figure}
 
-
-
-
-
-
-
-\begin{equation}% 8.63
-E_d=E_m+E_s-E_{R1}-E_{R2}
-\end{equation}
-
-\begin{align*}% page500第一个
-E_s&=(100\ \mathrm{A})\int_{0}^{0.4\ \mathrm{s}}[V_1(t)+V_2(t)]dt+(10\ \mathrm{V})\int_{0.4\ \mathrm{s}}^{2\ \mathrm{s}}\left[I_1(t)+\frac{V_1(t)}{R_1}\right]dt \\
-&\simeq 200\ \mathrm{J}+650\ \mathrm{J}\simeq 850\ \mathrm{J}
-\end{align*}
-
-
-\begin{equation}% page500 第二个和第三个
-E_{R1}=\frac{1}{R_1}\int_{0}^{2\ \mathrm{s}}V_1(t)^2dt\simeq 50\ \mathrm{J} 
-E_{R2}=\frac{1}{R_2}\int_{0}^{2\ \mathrm{s}}V_2(t)^2dt\simeq 300\ \mathrm{J}
-\end{equation}
-
-\begin{equation}% page500第四个
-\mathcal{V}_{cd}[h_{cu}(T_f)-h_{cu}(T_{op})]\simeq(694\ \mathrm{cm^3})[h_{cu}(T_f)]=5500\ \mathrm{J}
-\end{equation}
-
-
-
+图8.16给出了磁体的第1部分和第2部分的空间平均温度。实线对应的是NbTi/Cu导线，
+虚线对应的是NbTi/Al导线[8.46]。
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.6]{chpt8/figs/fig8.16.eps}
 	\caption{Spatially averaged temperature vs. time plots for Coils 1 and 2 }
 \end{figure}
-
-
-
-
 
 
 
