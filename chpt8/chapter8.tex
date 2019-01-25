@@ -798,47 +798,122 @@ c)和d) 分布为对i.d.=100 mm, o.d.=120 mm的10层环氧浸渍模型饼式线�
 
 
 \subsection{热-流体失超恢复(THQB)}
+对于迫流氦冷却的CIC导体，在局部正常区传播速度比迫流氦快时，
+会出现热-流体失超恢复(thermal-hydraulic quenchback, THQB)现象。
+Luongo等[8.76–8.78; 1.23]最初将之视为CIC导体中失超的其他现象
+(内部压力升高、导体末端氦排除等)有关系的一种现象。它通常发生于CIC导体运行在基底电流密度$J_m$
+很高，接近导体临界电流的时候。
+如讨论6.6将讨论到的，因为在聚变磁体中---CIC导体最重要的大型应用---
+CIC导体设计运行在小于$I_m$(方程6.30)良好冷却区间，THQB应该不会成为严重的保护问题。
 
 \subsection{交流损耗诱导的NZP}
+到目前为止，我们将焦耳损耗视为绝热绕组中NZP的唯一源。
+当非恢复正常区产生并进入故障模式后，磁体电流随时间衰减，衰减电流幅值在$\sim 100$ A/s，进而在绕组中产生时变磁场$dB/dt$---NMR磁体的情况将在问题8.6研究。
+时变磁场的存在导致交流损耗的产生；方程6.1中，$g_d(t)\neq 0$。
+在没有局部冷却的时候，这个$dB/dt$感应的$g_d(t)$导致在绕组中$\Delta T_{op}>0$。
+$g_d(t)$越大，$\Delta T_{op}>0$越大。如6.2.6所述，甚至绝热绕组也能承受一个极限$\Delta T_{op}$，
+具体可高至温度裕度极限$[\Delta T_{op}]_{mx}$。
+因为这个$g_d(t)$加热，一些NMR磁体以很慢的速率励磁，某些时候会经历一个星期才达到运行电流，
+以确保满足绝热稳定性条件$\Delta T_{op}<[\Delta T_{op}]_{mx}$。
+
+因此，$dB/dt$感应的加热令$U_\ell$和$U_t$的视在值明显大于仅有焦耳耗散作为驱动力的NZP。
+$dB/dt$感应的加热可以设计用来加速故障事件下的NZP，此时快速扩大正常区并将电流快速降低是很重要的[8.79-8.81]。
+为了保护，一些NMR和MRI磁体还使用特殊选定的长绞合节距多丝导体来提高耦合损耗。
+
+在更大的电流衰减率幅值下，比如$\sim 0.1-1$ MA(尽管明显不可能在高感性MRI和NMR磁体中出现，
+但在电阻性设备比如限流器中会遇到)，Vysotsky等人发现快速NZP接近 1km/s[8.82]；
+在这种快速电流变化下，失超成为全局的，而不是从局部开始传播的。
+
 
 \section{计算机仿真}
+由于绝热磁体中失超过程的耦合特定，特别是那些多线圈系统，失超分析最好借助计算机来进行。
+Wilson在1968年做了早期尝试[8.83]，失超仿真工作(一些还引入了实验结果)持续进行[1.5–1.23;8.84–8.100]，
+一些工作专门针对HTS绕组。
+
+这里我们简要描述FBNML涉及的绝热、螺管绕组的失超仿真程序，该程序的最初工作是1985年Williams[8.101]做的。
+FBNML程序简单的认为绕组内控制正常区域传播的复杂热扩散过程可以简化为一个单一参数横向传播速度$U_t$，该参数
+依赖于磁场、温度和基底电流密度。
+将绕组的热属性的复杂效应归结为$U_t$，极大的简化了程序且没有牺牲很大的准确性[8.45,8.101]。
+如8.4.3中讨论的，$U_t$与长度方向的传播速度$U_\ell$有关；
+于是，$U_t$在绕组内既与时间有关，也与位置有关。
+
+图8.12给出了绝热螺管绕组内的失超传播示意图，图中的绕组为圆线密排六边形并浸渍了环氧。
+图中的失超开始于绕组中平面的最内半径处。
+因为下面的对多数磁体都成立的条件，
+横向传播速度$U_t$确定的匝间输运时间或通常小于由长度方向传播速度$U_\ell$确定的周向输运时间：
 \begin{equation}% 8.56
 \frac{d_{cd}}{U_t}\ll\frac{2\pi a_1}{U_\ell}
 \end{equation}
 
-
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.6]{chpt8/figs/fig8.12.eps}
-	\caption{Quenching in an adiabatic, solenoidal winding}
+	\includegraphics[scale=0.5]{chpt8/figs/fig8.12.eps}
+	\caption{绝热螺管绕组中的失超}
 \end{figure}
 
 \section{自保护磁体}
+如果超导磁体在过热时无需依赖于外部干预即可将正常区域快速扩展到整个绕组，那就称为是自保护的。
+根据8.1.2，多数绝热磁体为了保证最高温度低于$\sim 200$ K，至少需要$\sim 10\%$的绕组体积来吸收磁能。
+该过程发展的发生快慢可以用NZP速度来衡量。
+下面的定性分析将表明，自保护磁体必须有很快的NZP速度且很小。
+不过，如后面将讨论的，磁体尽管可以对过热自保护，但不一定能对应力过大保护。
 
-\subsection{尺度限制}
+\subsection{尺寸限制}
+由8.1.2中的标8.1可见，磁体的初始储能如果完全耗散为绕组中的热量，
+为了保持$T_f$在$\sim$200 K以下，绕组的至少$\sim 10\%$($f_r=\sim 0.1$必须
+在电流衰减时间$\tau_{dg}$内转变为正常态来吸收能量。
 
+如果在磁体的最内半径$a_1$处产生小正常区，我们需要满足磁体绕组半径$a_1(\alpha-1)$的理想要求来
+确保$f_r$足以实现自保护。条件如下：
 \begin{equation}% 8.57
 \frac{a_1(\alpha-1)}{U_t}<\tau_{dg}
 \end{equation}
+
+方程8.57表明整个径向的传播时间$a_1(\alpha-1)/U_t$必须小于$\tau_{dg}$。
+实际上，如前所述，不太大的绕组体积分数即足够保持$T_f$在$\sim 200$ K之下。
+在这里的“幅值量级”讨论中，我们使用8.57给出的理想条件。
+
+\subsubsection*{恒电流加热下的尺寸限制}
+在绝热、恒电流加热模式(8.2.1)下，我们有$\tau_{dg}=\tau_{ah}^i(T_f,T_i)$，其中
+$\tau_{ah}^i(T_f,T_i)$由8.12a给出，是绝热恒电流($J_{m_o}$)加热下的最长时间。联立8.57和8.12a，有：
 \begin{equation}% 8.58
 \frac{a_1(\alpha-1)}{U_t}=\frac{Z(T_f,T_i)}{J_{m_o}^{2}}
 \end{equation}
+
+联立8.51b和8.52和8.58，并令$J_m=J_{m_o}$，我们得到绝热恒电流加热条件下的自保护磁体的
+绕组尺寸极限$[a_1(\alpha-1)]_{ah}^i$：
 \begin{equation}% 8.59
 [a_1(\alpha-1)]_{ah}^{i}=\frac{Z(T_f,T_i)}{J_{m_o}C_m(\tilde{T})}\sqrt{\frac{\rho_m(\tilde{T})k_i(\tilde{T})\delta_{cd}}{2\delta_i(T_t-T_{op})}}
 \end{equation}
 
+方程8.59表明，允许的磁体尺寸随$J_{m_o}$和$C_m(\tilde{T})$而减小，随$Z(T_f,T_i)$而增大。
+它还表明，尺寸极限随$\rho_m(\tilde{T})$和$k_i(\tilde{T})$而增大，随$(T_t-T_{op})$而缩小。
+$C_m(\tilde{T})$和$(T_t-T_{op})$的依赖性意味着对同样的$J_{m_o}$和$T_f$，
+自保护HTS磁体如果要可以实际应用的话，必须要比LTS更为紧凑才行。
 
+\subsubsection*{端子短接磁体的尺寸限制}
+从保护的角度看，让端子短接磁体可以自保护是很有价值的。
+实际上，多数NMR和MRI磁体都设计为自保护的。自保护不一定用NZP扩散正常区，而是用
+感应交流损耗和二连接于磁体端子的二极管和电阻器。
+
+这里，我们使用仅用NZP的端子短接磁体实现自保护的尺寸极限：
+磁体在端子短接下的绝热加热见8.2.3的讨论。
+这里，$\tau_{dg}=R_{nz}/L$，其中$R_{nz}$有方程8.27或8.25给出。
+联立8.57和8.27，使用8.52和8.51b给出的$U_t$，
+解得端子短接自保护磁体在绝热加热时的绕组限制$[a_1(\alpha-1)]_{ah}^{sh}$：
 \begin{subequations}% 8.60a 8.60b 8.60c
-	\begin{align*}
-[a_1(\alpha-1)]_{ah}^{sh}=U_t\left(\frac{L}{R_{nz}}\right) \\
-&=\frac{J_{m_o}}{C_n(\tilde{T})}\sqrt{\frac{\rho_m(\tilde{T})k_i(\tilde{T})\delta_{cd}}{2\delta_i(T_t-T_{op})}}\left(\frac{L}{R_{nz}}\right)  \\
-&=\frac{J_{m_o}}{C_n(\tilde{T})}\sqrt{\frac{\rho_m(\tilde{T})k_i(\tilde{T})\delta_{cd}}{2\delta_i(T_t-T_{op})}}\times 
-\frac{4A_m}{f_r\pi(\alpha+1)\rho_m(T_f)}\sqrt{\frac{\mu_o\mathcal{L}(\alpha,\beta)L}{a_1}}\\
-[a_1(\alpha-1)]_{ah}^{sh}&=\frac{1}{C_m(\tilde{T})}\sqrt{\frac{\rho_m(\tilde{T})k_i(\tilde{T})\delta_{cd}}{2\delta_i(T_t-T_{op})}}\times 
-\frac{4}{f_r\pi(\alpha+1)\rho_m(T_f)}\sqrt{\frac{2\mu_o\mathcal{L}(\alpha,\beta)E_m}{a_1}}
-\end{align*}
+	\begin{align}
+[a_1(\alpha-1)]_{ah}^{sh}=&U_t\left(\frac{L}{R_{nz}}\right) \\
+=&\frac{J_{m_o}}{C_n(\tilde{T})}\sqrt{\frac{\rho_m(\tilde{T})k_i(\tilde{T})\delta_{cd}}{2\delta_i(T_t-T_{op})}}\left(\frac{L}{R_{nz}}\right)  \\
+=&\frac{J_{m_o}}{C_n(\tilde{T})}\sqrt{\frac{\rho_m(\tilde{T})k_i(\tilde{T})\delta_{cd}}{2\delta_i(T_t-T_{op})}}\times \\\notag
+&\frac{4A_m}{f_r\pi(\alpha+1)\rho_m(T_f)}\sqrt{\frac{\mu_o\mathcal{L}(\alpha,\beta)L}{a_1}}\\
+[a_1(\alpha-1)]_{ah}^{sh}=&\frac{1}{C_m(\tilde{T})}\sqrt{\frac{\rho_m(\tilde{T})k_i(\tilde{T})\delta_{cd}}{2\delta_i(T_t-T_{op})}}\times \\\notag
+&\frac{4}{f_r\pi(\alpha+1)\rho_m(T_f)}\sqrt{\frac{2\mu_o\mathcal{L}(\alpha,\beta)E_m}{a_1}}
+\end{align}
 \end{subequations}
 
+类似的，在如上面处理的恒电流加热模式下，因为$C_m(\tilde{T})$和$(T_t-T_{op})$出现在8.60c和8.60d的分母中，
+在同样的运行参数下，自保护HTS磁体必须要比运行于液氦温度的LTS尺寸更小。
 
 
 \section{孤立磁体的被动保护}
