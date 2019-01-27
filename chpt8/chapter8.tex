@@ -1704,7 +1704,7 @@ b) 证明导体的横截面应为：
 \end{align*}
 $\ell$和$w\delta$对这些参数的依赖性容易理解。
 
-c) 计算混合II参数下的$\ell$和$w\delta$：
+c) 计算混合III参数下的$\ell$和$w\delta$：
 $E_m\simeq$20 MJ；$R_D=0.3\ \Omega$；
 对钢，有$\rho\simeq10^{-6}\ \Omega$m，$C_p\simeq 4\times 10^6\ \mathrm{J/m^2K}$；以及
 $\Delta T\simeq$200 K。
@@ -1715,30 +1715,46 @@ $\Delta T\simeq$200 K。
 \end{figure}
 
 \subsubsection{问题8.5之解}
+a) 泄放电阻的$R_D$由下式给出：
+\begin{align*}% page518 S5.1a
+R_D-\frac{\rho\ell}{\omega\delta} \tag{S5.1a}
+\end{align*}
+或
+\begin{align*}% page518 S5.1b
+\omega\delta=\frac{\rho\ell}{R_D} \tag{S5.1b}
+\end{align*}
 
-\begin{equation}% page518 S5.1a
-R_D-\frac{\rho\ell}{\omega\delta}
-\end{equation}
-\begin{equation}% page518 S5.1b
-\omega\delta=\frac{\rho\ell}{R_D}
-\end{equation}
-\begin{equation}% page518 S5.2a
-E_m=\ell\omega\delta C_p\Delta T
-\end{equation}
-\begin{equation}% page518 S5.2b
-\omega\delta=\frac{E_m}{\ell C_p\Delta T}
-\end{equation}
-\begin{equation}% 8.76a
-\omega\delta=\sqrt{\frac{\rho E_m}{R_DC_p\Delta T}}
-\end{equation}
-\begin{equation}% page518 倒数第二个
-\ell\simeq\sqrt{\frac{(2\times 10^7\ \mathrm{J})(0.3\Omega)}{(10^{-6}\ \mathrm{\Omega m})(4\times 1066\ \mathrm{J/m^2K})(200\ \mathrm{K})}} 
-=86.6\ \mathrm{m}
-\end{equation}
-\begin{align*}% page518 最后一个
+绝热吸收的$E_m$令电阻升温$\Delta T$：
+\begin{align*}% page518 S5.2a
+E_m=\ell\omega\delta C_p\Delta T \tag{S5.2a}
+\end{align*}
+或
+\begin{align*}% page518 S5.2b
+\omega\delta=\frac{E_m}{\ell C_p\Delta T} \tag{S5.2b}
+\end{align*}
+
+令S5.1b和S5.2b相等，解出$\ell$，有：
+\begin{align*}% 8.76a
+\omega\delta=\sqrt{\frac{\rho E_m}{R_DC_p\Delta T}} \tag{8.76a}
+\end{align*}
+
+b)将8.76a给出的$\ell$代入S5.1b，得到：
+\begin{align*}
+w\delta=\sqrt{\frac{\rho E_m}{R_D C_p \Delta T}} \tag{8.76b}
+\end{align*}
+
+c) 我们计算混合III磁体的$\ell$和$w\delta$，有：
+\begin{align*}
+\ell&\simeq\sqrt{\frac{(2\times 10^7\ \mathrm{J})(0.3\Omega)}{(10^{-6}\ \mathrm{\Omega m})(4\times 1066\ \mathrm{J/m^2K})(200\ \mathrm{K})}} \\
+&=86.6\ \mathrm{m}\\
 \omega\delta&\simeq\sqrt{\frac{(10^{-6}\ \mathrm{\Omega m})(2\times 10^7\ \mathrm{J})}{(0.3\Omega)(4\times 10^6\ \mathrm{J/m^2K})(200\ \mathrm{K})}} \\
 &\simeq 2.9\times 10^{-4}\ \mathrm{m^2}\simeq 290\ \mathrm{mm^2}
 \end{align*}
+
+混合III磁体的泄放电阻器包括电气上串联的近90个钢条，
+每根长约1 m，宽约5 cm，厚6 mm。
+如果$\Delta T$被限定于100 K，$\ell$和$w\delta$将增加约40\%：
+$\ell\simeq$120 m，$w\delta\simeq 410\ \mathrm{mm^2}$ 。
 
 
 \subsection{讨论8.2：磁体的“缓慢”放电模式}
