@@ -1880,25 +1880,31 @@ $I_{op}$=300 A。
 对本铜复合超导体，设$\gamma_{m/s}=1$。
 我们还将使用$\rho_m(T_f=200\ \mathrm{K})=1.11\times 10^{-8}\ \Omega$m。根据图8.2，
 有$Z(T_f=200\ \mathrm{K},T_i=4.2\ \mathrm{K})=10.5\times 10^{16}\ \mathrm{A^2 s/m^4}$。
-
-
-
+将这些参数代入8.30a，我们得到了基底电流密度$J_{m_{op}}^{sh}$在$T_f$允许值为200 K时的
+上限：
 \begin{align*}% page522 8.30a
-J_{m_{op}}^{sh}&=\left(\frac{1+\gamma_{m/s}}{\gamma_{m/s}}\right)\frac{f_r\pi(\alpha+1)\rho_m(T_f)Z(T_f,T_i)}{2}\sqrt{\frac{a_1}{2\mu_o\ \mathcal{L}(\alpha,\beta)E_m}} \\
+J_{m_{op}}^{sh}&=\left(\frac{1+\gamma_{m/s}}{\gamma_{m/s}}\right)\frac{f_r\pi(\alpha+1)\rho_m(T_f)Z(T_f,T_i)}{2}\sqrt{\frac{a_1}{2\mu_o\ \mathcal{L}(\alpha,\beta)E_m}} \\ \tag{8.30a}
 &=\left(\frac{1+1}{1}\right)\frac{(0.5)\pi(1.3+1)(1.11\times 10^{-8}\ \mathrm{\Omega m})(10.5\times 10^{16}\ \mathrm{A^2s/m^4})}{2}\times \\
-&=\sqrt{\frac{0.15\ \mathrm{m}}{2(4\pi\times 10^{-7}\ \mathrm{H/m})(0.54)(3\times 10^6\ \mathrm{J})}} \\
-&\simeq 2(21.1\times 10^8\ \mathrm{J/m^3})(0.19\ \mathrm{Am/J})\\
-&\simeq 805\ \mathrm{MA/m^2}=805\ \mathrm{A/mm^2}
+&\sqrt{\frac{0.15\ \mathrm{m}}{2(4\pi\times 10^{-7}\ \mathrm{H/m})(0.54)(3\times 10^6\ \mathrm{J})}} \\
+&\simeq 2(21.1\times 10^8\ \mathrm{J/m^3})(0.19\ \mathrm{Am/J})\simeq 805\ \mathrm{MA/m^2}=805\ \mathrm{A/mm^2}
 \end{align*}
 
+$J_{m_{op}}^{sh}\simeq 805\ \mathrm{ A/mm^2}$甚至比高性能磁体中使用的基底电流密度都高。
+这意味着，由于$J_{m_{op}}^{sh}\propto f_r$，在$J_{m_{op}}^{sh}=300\ \mathrm{ A/mm^2}$时，
+$f_r\simeq 0.2$足以限制$T_f$到200 K。
 
-
+现在应用内部电压标准，对同一个磁体，解出基底电流密度需要满足的电压判据$J_{m_{op}}^V$。
+我们取$V_{bk}$=10 kV。
 \begin{align*}% 8.40b
-J_{m_{op}}^{V}&=\frac{2}{f_r(1-f_r)}\left[\frac{\sqrt{\mathcal{L}(\alpha,\beta)}}{\pi(\alpha+1)}\right]\left[\frac{V_{bk}I_{op}}{\rho_m(T_f)}\sqrt{\frac{2\mu_o}{a_1E_m}}\right] \\
+J_{m_{op}}^{V}&=\frac{2}{f_r(1-f_r)}\left[\frac{\sqrt{\mathcal{L}(\alpha,\beta)}}{\pi(\alpha+1)}\right]\left[\frac{V_{bk}I_{op}}{\rho_m(T_f)}\sqrt{\frac{2\mu_o}{a_1E_m}}\right] \\ \tag{8.40b}
 &=\frac{2}{0.5(1-0.5)}\left[\frac{\sqrt{0.54}}{\pi(1.3+1)}\right]\left[\frac{(10^4\ \mathrm{V})(300\ \mathrm{A})}{(1.11\times 10^{-8}\ \mathrm{\Omega m})}\sqrt{\frac{2(4\pi\times 10^{-7}\ \mathrm{H/m})}{(0.15\ \mathrm{m})(3\times 10^6\ \mathrm{J})}}\right] \\
 &=8(0.102)(2.70\times 10^{14}\ \mathrm{A^2/m})(2.36\times 10^{-6}\ \mathrm{A^{-1}m^{-1}}) \\
 &=5.2\times 10^8\ \mathrm{A/m^2}=520\ \mathrm{A/mm^2}
 \end{align*}
+
+由上面得到的$J_{m_{op}}^{sh}\simeq 805\ \mathrm{ A/mm^2}$和$J_{m_{op}}^{V}=520\ \mathrm{A/mm^2}$，
+我们可以得到如下结论：
+限制磁体基底电流密度的是内部电压标准---至少对我们这个实例如此。
 
 
 \subsection{讨论8.5：Bi2223带电流引线的保护}
