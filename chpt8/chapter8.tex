@@ -1142,7 +1142,7 @@ Z(T_f,T_i)=\frac{J_{m_o}E_m}{A_{cd}V_D}\tag{8.18b}
 
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.6]{chpt8/figs/fig8.17.eps}
+	\includegraphics[scale=0.5]{chpt8/figs/fig8.17.eps}
 	\caption{检测-泄放主动保护的磁体电路模型。}
 \end{figure}
 
@@ -1455,19 +1455,52 @@ $\tau_{dl}+\tau_{dg}/2\simeq$14 s；$\tau_{dl}\simeq$6.5 s。
 
 
 \subsection{问题8.3：制冷机制冷的NbTi磁体的保护}
+考虑一个由NbTi复合带绕成的低温稳定磁体，$a=$10 mm，$b=$3 mm，$\gamma_{m/s}=4$
+(铜基底RRR=50)。
+在 $f_p=0.5$和$q_{fm}=0.36\ \mathrm{W/cm^2}$，方程6.22给出：
+$[J_{m_o}]_{Sk}=6.25\times 10^7\ \mathrm{ A/m^2}$，$I_{op}$下的基底金属电流密度
+满足Stekly低温稳定性判据。
+磁体由检测--泄放法保护。
+
+a) 首先证明$I_{op}$=1500 A，然后计算$E_m$=10 MJ和$T_f$=100 K下的$V_D$。
+为了使得磁体泄放后能更简单的回冷到4.2 K，$T_f$有时候设定到低于过应力
+温度极限200 K之下很多(如本例)。这里$J_{m_o}^D=[J_{m_o}]_{Sk}$。
+
+b) 重复a)中$V_D$的计算，此时$E_m$=100 MJ和$T_f$=100 K。
 
 \subsubsection{问题8.3之解}
-\begin{equation}% page511 第一个
+a) 根据$I_{op}==[J_{m_o}]_{Sk} A_m$，其中$A_m=(a\times b)\gamma_{m/s}/(1+\gamma_{m/s})$为复合导体基底金属横截面积。我们计算得到：
+\begin{align*}% page511 第一个
 I_{op}=(6.25\times 10^7\ \mathrm{A/m^2})\frac{(10\times 10^{-3}\ \mathrm{m})(3\times 10^{-3}\ \mathrm{m})4}{(1+4)}=1500\ \mathrm{A}
-\end{equation}
+\end{align*}
+
+由方程8.19，我们解出$V_D$：
 \begin{equation}% 8.72
 V_D=\frac{J_{m_o}E_m}{A_{cd}Z(T_f,T_i)}
 \end{equation}
-\begin{equation}% page511 S3.1
-V_D=\frac{(6.25\times 10^7\ \mathrm{A/m^2})^2(10\times 10^6\ \mathrm{J})}{(3\times 10^{-5}\ \mathrm{m^2})(6.7\times 10^{16}\ \mathrm{A^2s/m^4})} 
-=310\ \mathrm{V}
-\end{equation}
 
+代入$J_{m_o}^D=[J_{m_o}[_{Sk}=J_{m_o}, E_m=10\times 10^6\ \mathrm{J}$,
+$A_{cd}=(10\times 10^{-3})(3\times 10^{-3})=3\times 10^{-5}\ \mathrm{m}$以及
+$Z(100\ \mathrm{K},4.2\ \mathrm{K})=6.7\times 10^{16}\ \mathrm{A^2 s/m^4}$到
+方程8.72中去，有：
+\begin{align*}% page511 S3.1
+V_D&=\frac{(6.25\times 10^7\ \mathrm{A/m^2})^2(10\times 10^6\ \mathrm{J})}{(3\times 10^{-5}\ \mathrm{m^2})(6.7\times 10^{16}\ \mathrm{A^2s/m^4})} \\\tag{S3.1}
+&=310\ \mathrm{V} 
+\end{align*}
+
+放电电压310 V是安全的，不会带来难以解决的困难。
+
+b) 在方程8.72中，替换$E_m$=100 MJ，我们有：
+$V_D$=3100 V。该电压在低温容器内是非常危险的。
+一个广为使用的降低磁体及其低温容器之间电压的方法是将泄放电阻的中点接地，当然
+多数低温容器也是接地的。
+这种方法将相对电位限制到$\pm$1550 V。
+这当然没有降低磁体端间的电压。
+对一些大型磁体，如Tokamak聚变磁体，高达5-20 kV的放电电压不可避免。
+图8.8.3A指出的，降低$V_D$的一个方法是增加$A_{cd}$(即$I_{op}$)。
+这就是大型聚变磁体运行在50-100 kA的原因。
+如果本磁体($E_m$=100 MJ和$T_f$=100 K)选择$I_{op}$=15 kA(是源$A_{cd}$的10倍)，
+有$V_D$=310 V。
 
 
 \subsection{问题8.4：混合III SCM的“热点”温度}
