@@ -1503,45 +1503,111 @@ $V_D$=3100 V。该电压在低温容器内是非常危险的。
 有$V_D$=310 V。
 
 
-\subsection{问题8.4：混合III SCM的“热点”温度}
+\subsection{问题8.4：混合III磁体“热点”的温度}
+本问题处理混合III磁体的保护。
+表8.7列出了导体的必要参数。
+磁体采用的是8.8.3A讨论的检测-泄放保护技术。
+
+混合III磁体的泄放电阻$R_D=0.3\ \Omega$。
+磁体电感$L=8.0$ H。
+在2230 A(最大运行电流)时，磁体储能量为19.9 MJ(系统额定运行电流为2100 A)。
+
+a) 计算各梯度Nb3Sn和NbTi复合导体在磁体从2230 A泄放电流时发生失超处的热点最终温度$T_f$。
+假设在泄放过程中，四种导体热点外的部分仍超导，各热点部位满足绝热条件。
+进一步还假设各热点几乎引起电路中电阻的增加。
+使用图8.2给出的铜(RRR=50)的Z函数。
+
+磁体在泄放开始的$t=0$实际发生的是整个磁体大部分在$t=0$时刻被驱动至正常态，
+主要原因是绕组内快速变化磁场产生的交流损耗加热导致的。
+绕组接下来又进一步被焦耳耗散加热。
+因此，在电流衰减分析中，将$r(t)$包括进来是更实际的。
+为了简化，我们将$r(t)$写为：
 \begin{equation}% 8.73
 r(t)=r_0+\eta t
 \end{equation}
+式中，$r_0$和$\eta$都是常数。
+
+b) 证明在放电期间($t\ge 0$)，磁体的电流$I(t)$可写为：
 \begin{equation}% 8.74
 I(t)=I_{op}\exp\left[-\frac{(R_D+r_0)}{L}t-\frac{\eta}{2L}t^2\right]
 \end{equation}
+其中，$I(t=0)=I_{op}$。
+
+c) 使用上面的模型，计算磁体中耗散的总能量$E_{sm}$。相关参数如下：
+$I_{op}$=2230 A；$L$=8 H；$R_D=0.3\ \Omega$；$r_0=0.3\ \Omega$；$\eta=0.04\ \Omega/s$。
+和8.4.2中讨论的低温稳定性条件不同，这里的正常态区域是增长的而不是缩小的，所以
+$\eta>0$，因为泄放引起的$dB/dt$加热在绕组中产生蒸汽，扰乱了绕组中的冷却条件。
+
+表8.7.。。。。。。。。。。。。。。
 
 
 \subsubsection{问题8.4之解}
-
-\begin{equation}% page513 8.16c
-Z(T_f,T_i)=\left(\frac{\gamma_{m/s}}{1+\gamma_{m/s}}\right)J_{m_o}^{2}\left(\frac{L}{2R_D}\right)
-\end{equation}
-\begin{equation}% page513 S4.1
+a) 一般的，当放电时间常数$\tau_{dg}$完全由磁体电感$L$和泄放电阻$R_D$决定后，
+根据8.16c，有：
+\begin{align*}% page513 8.16c
+Z(T_f,T_i)=\left(\frac{\gamma_{m/s}}{1+\gamma_{m/s}}\right)J_{m_o}^{2}\left(\frac{L}{2R_D}\right)\tag{8.16c}
+\end{align*}
+其中，$J_{m_o}$由下式给出：
+\begin{align*}% page513 S4.1
 J_{m_o}=\frac{I_{op}}{A_m}=\left(\frac{\gamma_{m/s}+1}{\gamma_{m/s}}\right)\frac{I_{op}}{ab}
-\end{equation}
-\begin{equation}% page513 S4.2
-J_{m_o}=\left(\frac{5.1}{4.1}\right)\frac{(2230\ \mathrm{A})}{(9.49\times 10^{-3}\ \mathrm{m})(4.52\times 10^{-3}\ \mathrm{m})} 
-=6.47\times 10^7\ \mathrm{A/m^2}
-\end{equation}
-\begin{equation}% page513 S4.2后第一个
-Z(T_f,4\ \mathrm{K})=\left(\frac{5.1}{4.1}\right)(6.47\times 10^7\ \mathrm{A/m^2})^2\left(\frac{8\ \mathrm{H}}{2\times 0.3\Omega}\right)
-\end{equation}
-\begin{equation}% page513 S4.2后第二个
-Z(T_f,4\ \mathrm{K})=4.5\times 10^{16}\ \mathrm{A^2s/m^4}
-\end{equation}
-\begin{equation}% page513 S4.3
+\end{align*}
+
+\textbf{Nb3Sn 高场区：}\quad 我们有： 
+\begin{align*}% page513 S4.2
+J_{m_o}&=\left(\frac{5.1}{4.1}\right)\frac{(2230\ \mathrm{A})}{(9.49\times 10^{-3}\ \mathrm{m})(4.52\times 10^{-3}\ \mathrm{m})} \\
+&=6.47\times 10^7\ \mathrm{A/m^2} \tag{S4.1}
+\end{align*}
+
+联立方程8.16c和S4.2，有：
+\begin{align*}% page513 S4.2后第一个
+Z(T_f,4\ \mathrm{K})=&\left(\frac{5.1}{4.1}\right)(6.47\times 10^7\ \mathrm{A/m^2})^2\left(\frac{8\ \mathrm{H}}{2\times 0.3\Omega}\right)\\
+Z(T_f,4\ \mathrm{K})=&4.5\times 10^{16}\ \mathrm{A^2s/m^4}
+\end{align*}
+
+由图8.2(紫铜RRR=50)，我们得到热点的温度$T_f\sim 65$ K。
+
+表8.8给出了四种导体的小结。从表8.8，我们发现由于过高的热点温度，两种等级NbTi导体
+都可能严重损坏。
+
+b) $t\ge 0$时的电路微分模型为：
+\begin{align*}% page513 S4.3
 L\frac{dI(t)}{dt}+(R_D+R_0+\eta t)I(t)=0
-\end{equation}
-\begin{equation}% page513 S4.4
-\frac{dI(t)}{dt}=-\frac{(R_D+R_0+\eta t)}{L}dt
-\end{equation}
-\begin{equation}% page513 S4.5
-\ln\left[\frac{I(t)}{I_{op}}\right]=-\frac{(R_D+R_0)}{L}t-\frac{\eta}{2L}t^2
-\end{equation}
-\begin{equation}% 8.74
-I(t)=I_{op}\exp\left[-\frac{(R_D+R_0)}{L}t-\frac{\eta}{2L}t^2\right]
-\end{equation}
+\end{align*}
+
+方程S4.3可按下式解出：
+\begin{align*}% page513 S4.4
+\frac{dI(t)}{dt}=-\frac{(R_D+R_0+\eta t)}{L}dt \tag{S4.4}
+\end{align*}
+\begin{align*}% page513 S4.5
+\ln\left[\frac{I(t)}{I_{op}}\right]=-\frac{(R_D+R_0)}{L}t-\frac{\eta}{2L}t^2 \tag{S4.5}
+\end{align*}
+
+表8.8.。。。。。。。。。。。。。
+
+在S4.5中解出$I(t)$，有：
+\begin{align*}% 8.74
+I(t)=I_{op}\exp\left[-\frac{(R_D+R_0)}{L}t-\frac{\eta}{2L}t^2\right] ]\tag{8.74}
+\end{align*}
+
+c) 本问题有两种解法。
+
+\textbf{方法1：}\quad 计算$E_m$最简单、最快捷的方法是估算$r(t)$在电流延迟期间的
+平均值$\tilde{r}$，并使用简单的“分压器”方法确定磁体内的能量耗散：
+$E_{sm}=E_m\tilde{r}/(\tilde{r}+R_D)$，这里$E_m$=19.9 MJ。
+
+若无$r(t)$，电路时间常数由$L/R_D$给出，约为$\tau_D\sim$27 s。
+根据方程8.73，我们有：$r_(0)=0.3\ \Omega;r(5\ \mathrm{s})=0.5\ \Omega;
+r(10\ \mathrm{s})=0.7\ \Omega;r(15\ \mathrm{s})=0.9\ \Omega;
+r(20\ \mathrm{s})=1.1\ \Omega$。
+
+上述时段内的$r(t)$平均值为$0.7\ \Omega$，对应新的泄放时间常数$\sim8$ s[$=L/(R_D+0.7)$]。
+这意味着时间平均应在0和$\sim$10 s之间进行，对应新的$\tilde{r}$为$0.5\ \Omega$。
+也即，19.9 MJ的$\sim 63\%$耗散于磁体内：$E_{scm}\simeq$12.4 MJ。
+
+\textbf{方法2：}\quad
+
+
+
 \begin{equation}% page514 S4.6
 E_{sm}\int_{0}^{\infty}r(t)I_{0}^{2}\exp\left[-\frac{2(R_D+R_0)}{L}t-\frac{\eta}{L}t^2\right]dt
 \end{equation}
