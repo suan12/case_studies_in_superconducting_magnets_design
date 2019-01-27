@@ -1758,25 +1758,55 @@ $\ell\simeq$120 m，$w\delta\simeq 410\ \mathrm{mm^2}$ 。
 
 
 \subsection{讨论8.2：磁体的“缓慢”放电模式}
+在实验室环境中最广泛使用的电源是仅在$+ V / + I$象限中运行。
+如果使用这种电源来运行电感为$L$的超导磁体，
+则可能需要数小时才能使磁体放电，当然，除了通过泄放电阻器放电。
+
+这里，我们讨论两种简单的技术来实现可粗略设定放电率的“缓慢”放电模式。
+两种技术的电路图如图8.23；各电路中，$r_\ell$r代表电路的总线电阻，
+通常不大于$\sim 1\ \mathrm{m}\Omega$ 。
+
+当两种技术要求磁体电流$I_m(t)$缓慢放电时，开关S打开，令低阻电阻器$r_d$(图8.23a)
+或一组串联的二极管(图8.23b)接入电路。
+这些元件在放电模式不接入电阻时，由于$+V/+I$象限的电源下$V_p\simeq 0$，
+有$V_m(t)=-r_\ell I_m(t)$，并且$I_m(t)$以时间常数$\tau_m=L/r_\ell$衰减。
+对电路中的$L=$100 H和$r_\ell=1\ \mathrm{m}\Omega$而言，有$\tau_m\simeq 10^5$ s；
+磁体放电至少需要好几天。
+
+\subsubsection*{A. 低阻电阻器}
+当$r_d$被接入电路后，$V_m(t)=-(r_d+r_\ell)I_m(t)$：$I_m(t)$以时间常数$\tau_m=L/((r_\ell+r_d))$
+指数衰减。显然，不管电流衰减的速率如何，$dI_m(t)/dt$肯定不是常数，而是随$I_m(t)$减小：
 \begin{equation}% 8.77a
 \frac{dI_m(t)}{dt}=-\frac{I_m(t)}{\tau_m}
 \end{equation}
 
+举例来说，对于运行电流250 A的磁体，使用的$r_d$要高达10 m$\Omega$。
+所以，100 H的磁体的时间常数$\tau_m\simeq 10^4$ s；
+磁体在大约半天的时间内完成放电。
+
+$r_d$的设计标准在天伦8.3中研究。
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.6]{chpt8/figs/fig8.23.eps}
-	\caption{Circuits for “slow” discharge modes: (a}
+	\caption{缓慢放电模式的电路：(a)低阻值电阻器；(b)一组串联二极管。
+		两个电路中，$r_\ell$都表示总的线电阻，$V_p\simeq 0$。}
 \end{figure}
 
+\subsubsection*{B. 串联二极管}
+虽然理想二极管工作时的正向电压为零，但实际二极管却不是。
+通常，二极管在有电流时产生0.1-0.5 V的压降。
+ 与电阻器不同，该电压在电流高于$\sim$1 A后，几乎与电流无关。
+  因此，磁体可以几乎恒定的衰减速率衰减。
+  于一组串联二极管的总电压$V_{dd}$，在满足$r_\ell I_m(t)\ll V_{dd}$时，
+  电流衰减率由下式给出：
+\begin{align*}% 8.77b
+\frac{dI_m(t)}{dt}=-\frac{V_{dd}}{L} \tag{8.77b}
+\end{align*}
 
-
-
-
-
-\begin{equation}% 8.77b
-\frac{dI_m(t)}{dt}=-\frac{V_{dd}}{L}
-\end{equation}
+如前所举例子中的100 H磁体，有$V_{dd}$=2.5 V(5-10个二极管)，
+磁体电流从250 A衰减到0需要10,000 s或$\sim$3小时。
+这里用到的二极管，无论是气冷还是水冷，都必须承受$\sim$25 W到$\sim$125 W的功率。
 
 
 \subsection{讨论8.3：低阻电阻器设计}
