@@ -1604,56 +1604,115 @@ r(20\ \mathrm{s})=1.1\ \Omega$。
 这意味着时间平均应在0和$\sim$10 s之间进行，对应新的$\tilde{r}$为$0.5\ \Omega$。
 也即，19.9 MJ的$\sim 63\%$耗散于磁体内：$E_{scm}\simeq$12.4 MJ。
 
-\textbf{方法2：}\quad
+\textbf{方法2：}\quad 确定$E_{sm}$更严格的方法是对$r(t)I^2(t)$积分，即：
+\begin{align*}% page514 S4.6
+E_{sm}\int_{0}^{\infty}r(t)I_{0}^{2}\exp\left[-\frac{2(R_D+R_0)}{L}t-\frac{\eta}{L}t^2\right]dt\tag{S4.6}
+\end{align*}
+
+方程S4.6涉及$erf$函数。它还以图示的方式积分；结果如表8.9。
+在$t=0$到$t=20$ s范围内对$r(t)I^2(t)$积分，得到$E_{sm}\simeq$12.2 MJ，
+大约是初始储能的60\%；12.2 MJ与上面计算得到的12.4 MJ基本是一致的。
+
+高场NbTi的$Z(T_f)$现在变为$\sim 8\times 10^{16}\ \mathrm{A^2 s/m^4}$，
+给出$T_f\sim$125 K；
+低场NbTi的$Z(T_f)$现在变为$\sim 9\times 10^{16}\ \mathrm{A^2 s/m^4}$，
+给出$T_f\sim$150 K---两者均在安全极限$\sim$200 K之下。
 
 
+表8.9.。。。。。。。。。。。。。。。。。。
 
-\begin{equation}% page514 S4.6
-E_{sm}\int_{0}^{\infty}r(t)I_{0}^{2}\exp\left[-\frac{2(R_D+R_0)}{L}t-\frac{\eta}{L}t^2\right]dt
-\end{equation}
 
 \subsection{讨论8.1：失超电压探测——一个变种}
+图8.20给出了曾运行于FNNML的另一个混合磁体---混合II磁体的示意图[3.17]。
+该磁体由22个双饼NbTi线圈构成。
+此外，图中还包括了水冷内插磁体和铜辐射板以强调该磁体是一个“真实”的系统；
+磁耦合不仅限于双饼，所有的线圈都是耦合的。
+这些线圈之间的磁耦合增加了8.8.5中讨论过的电桥电路平衡的复杂性。
 
+混合II的超导磁体分为四个部分：部分$B'$(双饼1到7)；部分$A'$(双饼8到11)；
+部分$A$(双饼12到15)；部分$B$(双饼16到22)。该磁体用了两种失超电压检测技术。
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.6]{chpt8/figs/fig8.20.eps}
-	\caption{Schematic arrangement of Hybrid II with a Bitter insert}
+	\caption{混合II磁体的结果示意图，包括Bitter内插磁体，22个双饼超导磁体和辐射屏蔽板。}
 \end{figure}
 
+\textbf{A. 技术I}
 
+本技术中，磁体被分为两组：A+A'和B+B'。
+本技术相比传统技术将磁体分为B'+A'和B+A，能更好的消除电感电压，但仍不能完全令人满意。
+本技术不能消除水冷磁体或NbTi线圈励磁时的全部的电感电压。
 
+\textbf{B. 技术II}
 
+由Ishigohka[8.114]提出的第二种技术所有22个双饼上的电压抽头，将他们组合成两个主要部分：
+一部分包括偶数双饼，$V_{2n-1}(t)$；另一部分包括奇数双饼，$V_{2n}(t)$。
+通过调整22个独立放大器的增益，可以在没有电阻性电压的情况下调节各双饼的电压以最小化$V_{out}(t)$。于是：
 \begin{equation}% 8.75
 V_{out}(t)=\sum_{n=1}^{11}[\alpha_{2n-1}V_{2n-1}(t)-\alpha_{2n}V_{2n}(t)]
 \end{equation}
+式中，$\alpha_{2n-1}$是第$(2n-1)^{th}$个双饼的放大器增益，
+$\alpha_{2n}$是第$(2n)^{th}$个双饼的放大器增益。
+
+使用技术I消除感性电压的成功与否取决于两部分的与电流水平或电流变化率无关电感电压的接近程度。
+混合II中，因为容纳NbTi的低温容器并不关于线圈中平面对称，
+电压平衡不能做到与电流水平或电流变化率无关。
+
+同时，更严重的，单独针对NbTi线圈充电优化的电桥在插入磁体充电时不再最优，
+优化的设置随自场变化率和内插磁体变化率而变化。
+
+技术II极大的减小了包括超导线圈、内插磁体、辐射屏蔽板和低温容器其他部件在内的整个系统的不对称性。
+这令总不平衡感性电压比那些中平面/末端条件下的电压有数量级的下降。
+
+图8.21给出了25 kA[8.114]下插入内插磁体下的3个平衡电压$V_{AA'},V_{BB'}$和奇偶差分电压$V_{\delta}$
+可以看到，$V_{BB'}-V_{AA'}$比$V_\delta$的峰值大100倍以上。
+
+于是，$V_\delta$仅在检测超导线圈运行条件时是一个更敏感的方法。
+提高敏感性的代价是需要大量的差分放大器，并且要求每一个都不能失效。
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.6]{chpt8/figs/fig8.21.eps}
-	\caption{Measured unbalanced voltages from an insert trip in Hybrid II}
+	\caption{混合II磁体在内插磁体时测到不平衡电压。}
 \end{figure}
 
 
+\subsection{问题8.5：泄放电阻的设计}
+在这里，我们研究主动保护中使用的泄放电阻$R_D$的设计标准[8.115,8.116]。
+ 两个参数很重要：1) $R_D$本身的值； 2) 储能$E_m$。
+  $E_m$之所以重要，是因为在几乎每个泄放电阻都必须吸收$E_m$的大部分；
+   显然，谨慎的设计假设是100\%的$E_m$被电阻器绝热吸收。 
+   如图8.22所示，这里让我们假设我们的电阻是一个长条形，长$\ell$，截面为矩形，宽$w$，厚$\delta$。
+   
+由于泄放电阻经常承受远高于100 V的泄放电压且吸收的能量远大于1 MJ，
+在加热到200 K甚至高于室温的过程中，必须慎重选择其在磁体系统中位置，其中，安全是最重要的标准。
+泄放电阻通常放置在有围栏的隔离区域，以使其远离人员和其他设备。
 
-\subsection{问题8.5：抑制电阻的设计}
+a) 证明电阻器的长度$\ell$为：
 \begin{equation}% 8.76a
 \ell=\sqrt{\frac{E_mR_D}{\rho C_p\Delta T}}
 \end{equation}
-\begin{equation}% 8.76b
-\omega\delta=\sqrt{\frac{\rho E_m}{R_DC_p\Delta T}}
-\end{equation}
+其中，$\rho$是电阻器材料(通常是钢)的电阻率。
+因为电阻器绝热吸收$E_m$，它的温度显然会升高。
+$C_p$是电阻器材料的热容，假设为常数。在这里是一个可以接受的界定，特别是在300 K以上的温区。
+$\Delta T$是电阻器在绝热吸收$E_m$后的总温升。
 
+b) 证明导体的横截面应为：
+\begin{align*}% 8.76b
+\omega\delta=\sqrt{\frac{\rho E_m}{R_DC_p\Delta T}} \tag{8.76b}
+\end{align*}
+$\ell$和$w\delta$对这些参数的依赖性容易理解。
+
+c) 计算混合II参数下的$\ell$和$w\delta$：
+$E_m\simeq$20 MJ；$R_D=0.3\ \Omega$；
+对钢，有$\rho\simeq10^{-6}\ \Omega$m，$C_p\simeq 4\times 10^6\ \mathrm{J/m^2K}$；以及
+$\Delta T\simeq$200 K。
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.6]{chpt8/figs/fig8.22.eps}
-	\caption{Schematic drawing of a dump resistor in the form of a}
+	\caption{长条泄放电阻器的示意图。长$\ell$，截面为$w\delta$。}
 \end{figure}
-
-
-
-
-
 
 \subsubsection{问题8.5之解}
 
