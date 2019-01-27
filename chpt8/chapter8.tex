@@ -1907,28 +1907,78 @@ J_{m_{op}}^{V}&=\frac{2}{f_r(1-f_r)}\left[\frac{\sqrt{\mathcal{L}(\alpha,\beta)}
 限制磁体基底电流密度的是内部电压标准---至少对我们这个实例如此。
 
 
-\subsection{讨论8.5：Bi2223带电流引线的保护}
+\subsection{讨论8.5：Bi2223超导带电流引线的保护}
+现在，在“干式”(无制冷剂)超导磁体($T_{cl}$)端子到(通常是)一级冷头的部分($T_{wm}$)使用HTS电流引线已经很常见。
+在很多适合HTS的材料中，我们此处考虑Bi2223超导带制成的HTS引线，与问题4.4、4.5和4.6C中研究的气冷HTS电流引线一样。
+如那里曾讨论的，必须用Ag-Au替换纯Ag，以降低进入冷环境的热传导。
 
+考虑一根长$\ell$、总Ag-Au截面积为$a_m$的Bi2223/Ag-Au电流引线，
+绝热运行在冷端为$T_{cl}$($z=0$)热端为$T_{wm}$($z=\ell$)之间。
+
+\subsubsection*{A. 均匀加热下的峰值温度点}
+我们首先给出，若此载有传输电流$I_t$的超导带在整个长度上成为电阻性的，在轴向($z$)中点$z\simeq\ell/2$处最可能发生
+熔化或严重过热。
+在下面的热分析中，基底热导率$k_m$和电阻率$\rho_m$假定温度无关。
+(Ag-Au的热导率和电阻率数据如图4.23和4.24所示，从中可知这里的假设是基本成立的。)
+
+绝热条件下的单位导体长度功率方程为：
 \begin{equation}% 8.80
 a_mk_m\frac{d^2T}{dz^2}+\frac{\rho_mI_{t}^{2}}{a_m}=0
 \end{equation}
+
+代入$T(0)=T_{cl},T(\ell)=T_{wm}$，定义$\zeta\equiv z/\ell$，$T(\zeta)$可写为：
 \begin{equation}% 8.81
 T(\zeta)=T_{cl}+(T_{wm}-T_{cl})\zeta+\frac{\rho_m\ell^2I_{t}^{2}}{2a_{m}^{2}k_m}(\zeta-\zeta^2)
 \end{equation}
+
+峰值温度$T_{pk}$发生的轴向位置($\zeta(T_{pk})$)为：
 \begin{equation}% 8.82a
 \zeta(T_{pk})=\frac{1}{2}+\frac{a_{m}^{2}k_m}{\rho_mI_{t}^{2}\ell^2}(T_{wm}-T_{cl})
 \end{equation}
-\begin{equation}% 8.82b
-T_{pk}\simeq \frac{1}{2}(T_{cl}+T_{wm})+\frac{\rho_mI_{t}^{2}\ell^2}{8a_{m}^{2}k_m}
-\end{equation}
-\begin{equation}% page523 最后一个
-\frac{a_{m}^{2}k_m}{\rho_mI_{t}^{2}\ell^2}(T_{wm}-T_{cl})=\frac{(8\times 10^{-3}\ \mathrm{cm^2})^2(2\ \mathrm{W/cm K})}{(1\times 10^{-6}\ \mathrm{\Omega cm})(50\ \mathrm{A})^2(15\ \mathrm{cm})^2} 
-\simeq 0.01
-\end{equation}
-\begin{equation}% page524 第一个
-T_{pk}\simeq\frac{1}{2}(T_{cl}+\frac{\rho_mI_{t}^{2}\ell^2}{8a_{m}^{2}k_m} 
-=\frac{1}{2}(10\ \mathrm{K}+70\ \mathrm{K})+\frac{(1\times 10^{-6}\ \mathrm{\Omega cm})(50\ \mathrm{A})^2(15\ \mathrm{cn})^2}{8(8\times 10^{-3}\ \mathrm{cm^2})^2(2\ \mathrm{W/cm K})}\simeq 590\ \mathrm{K}
-\end{equation}
+
+考虑$\zeta(T_{pk})\simeq 0.5$，$T_{pk}$由下式给出：
+\begin{align*}% 8.82b
+T_{pk}\simeq \frac{1}{2}(T_{cl}+T_{wm})+\frac{\rho_mI_{t}^{2}\ell^2}{8a_{m}^{2}k_m} \tag{8.82b}
+\end{align*}
+
+我们可以证明，对“典型”的参数，方程8.82等号右侧的第二项是比0.5小很多，可以忽略：
+实际上，超导带中的$T_{pk}$就是出现在引线中点。
+在$k_m$=2 W/mK和$\rho_m=1\times 10^{-6}\ \Omega$cm---
+这些值大致对应Ag-5.3wt\%(3at\%)Au在70 K的情况(图4.23和4.24)；
+$a_m=8\times 10^{-3}\ \mathrm{cm^2}$(4 mm宽Bi2223/Ag-Au超导带的截面积)；
+$\ell$=15 cm；
+$I_t$=50 A;
+$T_{cl}$=10 K；以及$T_{pk}=70$ K时，有：
+\begin{align*}% page523 最后一个
+\frac{a_{m}^{2}k_m}{\rho_mI_{t}^{2}\ell^2}(T_{wm}-T_{cl})&=\frac{(8\times 10^{-3}\ \mathrm{cm^2})^2(2\ \mathrm{W/cm K})}{(1\times 10^{-6}\ \mathrm{\Omega cm})(50\ \mathrm{A})^2(15\ \mathrm{cm})^2} \\
+&\simeq 0.01
+\end{align*}
+
+所以，峰值温度点确实出现于带材轴向中点附近。
+
+由方程8.82b，我们得到：
+\begin{align*}% page524 第一个
+T_{pk}&\simeq\frac{1}{2}(T_{cl}+\frac{\rho_mI_{t}^{2}\ell^2}{8a_{m}^{2}k_m} \\
+&=\frac{1}{2}(10\ \mathrm{K}+70\ \mathrm{K})+\frac{(1\times 10^{-6}\ \mathrm{\Omega cm})(50\ \mathrm{A})^2(15\ \mathrm{cn})^2}{8(8\times 10^{-3}\ \mathrm{cm^2})^2(2\ \mathrm{W/cm K})}\simeq 590\ \mathrm{K}
+\end{align*}
+
+\subsubsection*{熔化时间}
+将银从70 K升高到熔点1223 K需要的能量密度为$\simeq 2900\ \mathrm{J/cm^3}$。
+(在估算带材熔化时间，我们假定银-金合金的焓用银代替。)
+我们取这种基底在70 K和1200 K之间的平均电阻率为$\sim 5\times 10^{-6}\ \mathrm{\Omega$cm，
+基底电流密度为常数$\sim 6000\ \mathrm{ A/cm^2}$($=I_t/a_m$，其中$I_t$=50 A，$a_m=0.008\ \mathrm{cm^2}$)，
+基底加热的平均焦耳热密度为$\sim 200\ \mathrm{A/cm^3}$。
+所以，在这种引线所应用的制冷机制冷磁体的真空、绝热环境条件下，熔化带材只需不到15 s[2900/200]；
+带材需要连续监测和保护。
+	
+\subsubsection*{C. 其他评论}
+正如本书中经常提到的，HTS非常稳定，不应发生如上所述的事件。
+不过，尽管可以容易且低成本地更换Bi2223 / Ag-Au短带，
+但是如果具有较大电感的磁体的电流引线发生突然断路，后果可能是非常危险，且可能损坏对磁体系统---
+注意到$V\propto L(dI/dt)$：引线绝不允许开路，除非磁体端子被一个足够鲁棒的电阻器分流能够吸收磁铁能量且在此过程不受损坏。
+
+正如在讨论4.15中已经讨论并在问题4.6B和4.6C中进一步研究的那样，这些超导带需要
+用具有“低”导热率（以保持传导热输入低）和“低” 电阻率的额外普通金属带“保护”。
 
 
 
