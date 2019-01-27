@@ -1286,69 +1286,172 @@ V_{out}(t)=\left(\frac{R_2}{R_1+R_2}\right)rI(t)
 \section{专题}
 
 \subsection{问题8.1：大型超导磁体的回温}
-\begin{equation}% 8.71a 8.71b
-\mathcal{V}C_{cd}(T)\frac{dT}{dt}=\frac{\rho_m(T)\ell_{cd}}{A_m}I_{o}^{2} 
-=\frac{A_m}{\rho_m(T)\ell_{cd}}V_{o}^{2}
-\end{equation}
+超导磁体的测试过程中，将之从低温4.2 K回温到室温通常是很必要的。
+如果浸泡于制冷剂的磁体是小的，我们可以简单的排空低温容器中的制冷剂后不管它，
+等待几个小时到几天的时间，磁体即可回温到室温。
+
+本问题中，我们考虑两种回温大型磁体的方法。首先考虑一个在4.2 K液氦中运行的磁体，
+接下来考虑一个在77 K液氮中运行的磁体。
+对一个液氦浸泡的大型磁体，常用的方法是将磁体端子连接到电源上加热磁体。
+这里，我们考虑两种电源：1) 恒流源(8.2.1)；2) 恒压源(8.2.4)。
+
+回温过程可以用下面的微分方程描述，其中$T$是磁体温度。
+\begin{subequations}
+	\begin{align}
+\mathcal{V}C_{cd}(T)\frac{dT}{dt}=&\frac{\rho_m(T)\ell_{cd}}{A_m}I_{o}^{2} \\
+=&\frac{A_m}{\rho_m(T)\ell_{cd}}V_{o}^{2}
+	\end{align}
+\end{subequations}
+式中，$\mathcal{V}_{cd}$是磁体全部导体的体积，这里假设热仅存储与导体中；
+$C_{cd}(T)$是导体热容，这里假设等于铜的热容，$C_{cd}(T)=C_{cu}(T)$；
+$\rho_m(T)$是铜的电阻率，$\rho_m(T)=\rho_{cu}(T)$；
+$\ell_{cd}$是磁体中导体总长度；
+$A_m$是铜的横截面积；
+$I_o$是恒流源的电流；
+$V_o$是恒压源的电压。
+
+假设在两种加热模式下，磁体都没有其他热输入源。
+(有时候，会破坏低温容器真空以加速回温过程，但这种操作一般不推荐：它会导致容器表面结霜，
+很难看。在CIC磁体中，可以通过在绕组内循环氦气促进回温过程。)
+
+对这个特定的磁体：$\mathcal{V}_{cd}=0.4\ \mathrm{m^3};\ell_{cd}=10^4\ \mathrm{m};A_m=1.5\times 10^{-5}\ \mathrm{m^2}$。(多数使用梯度导体的磁体中，$A_m$并不像这里假设的这样在全绕组内都是定值。)
+
+a) 计算当恒流$I_o$=25 A加热时，从10 K回温到300 K的近似($\pm 20\%$不确定性之下)回温时间。
+
+b) 计算当恒压$V_o$=25 V加热时，从10 K回温到300 K的近似($\pm 20\%$不确定性之下)回温时间。
+
+c) 讨论一个实际的案例，由于实际电源的限制，其在整个温度区间，既不是恒流也不是恒压。
+
+d) 重复a)，初始温度变为80 K。
+
+e) 重复b)，初始温度变为80 K。
 
 \subsubsection{问题8.1之解}
+a) 我们可以使用方程8.71a来计算在恒流加热条件下从10 K到300 K的回温时间$\Delta t_w^I|_{10\ \mathrm{K}^{300\ \mathrm{K}}$：
 \begin{align*}% page508 S1.1
 \Delta t_{\omega}^{I}\mid_{10\ \mathrm{K}}^{300\ \mathrm{K}}&=\frac{\mathcal{V}_{cd}A_m}{\ell_{cd}I_{o}^{2}}\int_{10\ \mathrm{K}}^{300\ \mathrm{K}}\frac{C_{cu}(T)}{\rho_m{cu}(T)}dT \\
-&=\frac{\mathcal{V}_{cd}A_m}{\ell_{cd}I_{o}^{2}}Z(T_f=300\ \mathrm{K},T_i=10\ \mathrm{K})
+&=\frac{\mathcal{V}_{cd}A_m}{\ell_{cd}I_{o}^{2}}Z(T_f=300\ \mathrm{K},T_i=10\ \mathrm{K}) \tag{S1.1}
 \end{align*}
 
-
+对青铜，RRR=100，图8.2给出的$Z(T_f,T_i)$为：
+$Z(T_f=300\ \mathrm{K},T_i=10\ \mathrm{K})=15.1\times 10^{16}\ \mathrm{A^2 s/m^4}$。
+解出$\Delta t_w^I|_{10\ \mathrm{K}^{300\ \mathrm{K}}$，有：
 \begin{align*}% page508 S1.2
 \Delta t_{\omega}^{I}\mid_{10\mathrm{K}}^{300\mathrm{K}}&=\frac{(0.4\ \mathrm{m^3})(1.5\times 10^{-5}\ \mathrm{m^2})(15.1\times 10^{16}\ \mathrm{A^2s/m^4})}{(1\times 10^4\ \mathrm{m})(25\ \mathrm{A})^2} \\
-&\simeq 1.45\times 10^5\ \mathrm{s}\simeq 40\ \mathrm{h}\simeq 1\frac{2}{3}\ \mathrm{days} 
+&\simeq 1.45\times 10^5\ \mathrm{s}\simeq 40\ \mathrm{h}\simeq 1\frac{2}{3}\ \mathrm{days}  \tag{S1.2}
 \end{align*}
 
+在恒流25 A下，磁体从10 K到300 K的回温时间略小于2天。
 
+b) 我们可以使用8.71b计算在恒压加热条件下从10 K到300 K的回温时间$\Delta t_w^V|_{10\ \mathrm{K}^{300\ \mathrm{K}}$：
 \begin{align*}% page508 S1.3
 \Delta t_{\omega}^{I}\mid_{10\mathrm{K}}^{300\mathrm{K}}&=\frac{\mathcal{V}_{cd}\ell_{cd}}{A_mV_{o}^{2}}\int_{10\ \mathrm{K}}^{300\ \mathrm{K}}C_{cu}(T)\rho_m{cu}(T)dT \\
-&=\frac{\mathcal{V}_{cd}\ell_{cd}}{A_mV_{o}^{2}}Y(T_f=300\ \mathrm{K},T_i=10\ \mathrm{K})
+&=\frac{\mathcal{V}_{cd}\ell_{cd}}{A_mV_{o}^{2}}Y(T_f=300\ \mathrm{K},T_i=10\ \mathrm{K})\tag{S1.3}
 \end{align*}
 
-
+对青铜，RRR=100，图8.6给出的$Y(T_f,T_i)$为：
+$Y(T_f=300\ \mathrm{K},T_i=10\ \mathrm{K})=7.25\ \mathrm{V^2 s/m^2}$。
+解出$\Delta t_w^V|_{10\ \mathrm{K}^{300\ \mathrm{K}}$，有：
 \begin{align*}% page508 S1.4
 \Delta t_{\omega}^{I}\mid_{10\mathrm{K}}^{300\mathrm{K}}&=\frac{(0.4\ \mathrm{m^3})(1\times 10^4\ \mathrm{m})(7.25\ \mathrm{V^2s/m^2})}{(1.5\times 10^{-5}\ \mathrm{m^2})(25\ \mathrm{V})^2} \\
-&=3.1\times 10^6\ \mathrm{s}\simeq 860\ \mathrm{h}\simeq 36\ \mathrm{days} 
+&=3.1\times 10^6\ \mathrm{s}\simeq 860\ \mathrm{h}\simeq 36\ \mathrm{days} \tag{S1.4}
 \end{align*}
 
+在恒压25 V下，磁体从10 K到300 K的回温时间大约是36天。
 
+可以算的，10 K时磁体的电阻为$0.32\ \Omega$，在300 K时为$17.2\ \Omega$。
+这意味着在25 A的电源下，电压和响应的功率分别为：10 K时为8 V和200 W；300 K时为430 V和$\sim$11 kW。
+类似的，在25 V电源下，10 K时为78 A和$\sim 2$ kW；300 K时为$\sim$1.5 A和$\sim$35 W。
+
+大部分恒流电源不能提供无限的电压；同样，大部分恒压源也不能提供无限的电流。
+因此，25 A模式的实际回温时间要长于上面计算得到的$\sim 2$天，25 V模式要长于36天。
+
+c) 多数电源通常即允许恒流模式也允许恒压模式运行。
+不过，恒流模式有电压极限，恒压模式有电流极限。
+假定本例所用电源的电压极限是100 V，电流极限是100 A，即一个10 kW功率匹配负荷1 $\Omega$的电源。
+因为磁体电阻可变，从10 K的0.32 $\Omega$到300 K时的17.2 $\Omega$，
+该电源不可能在整个回温时间提供它的最大功率10 kW。
+
+将初始电流设置为100 A($V$=1.6 V)，在磁体电阻达到1 $\Omega$前一直以100 A模式加热磁体；
+接下来以100 V模式将磁体一直加热到300 K---这将得到最快的回温时间。
+
+\textbf{10-50 K}\quad 电阻达到1 $\Omega$的温度是50 K(图A4.1)。
+于是，在100 A模式下的该段回温时间$\Delta t_w^I|_{10\ \mathrm{K}^{50\ \mathrm{K}}$
+	($Z(T_f=50\ \mathrm{K},T_i=10\ \mathrm{K})=4.5\times 10^{16}\ \mathrm{A^2 s/m^4}$)为：
 \begin{align*}% page509 S1.5
 \Delta t_{\omega}^{I}\mid_{10\mathrm{K}}^{50\mathrm{K}}&=\frac{(0.4\ \mathrm{m^3})(1.5\times 10^{-5}\ \mathrm{m^2})(4.5\times 10^{16}\ \mathrm{A^2s/m^4})}{(1\times 10^4\ \mathrm{m})(100\ \mathrm{A})^2} \\
-&\simeq 2.7\times 10^3\ \mathrm{s}=45\ \mathrm{min}
+&\simeq 2.7\times 10^3\ \mathrm{s}=45\ \mathrm{min} \tag{S1.5}
 \end{align*}
 
+\textbf{50-300 K}\quad 从50 K直到300 K，都使用100 V加热模式。
+由于$Y(T_f=300\ \mathrm{K},T_i=50\ \mathrm{K})=7.25\ \mathrm{V^2 s/m^2}$，
+该模式相应的加热时间$\Delta t_w^V|_{50\ \mathrm{K}^{300\ \mathrm{K}}$为：
+\begin{align*}% page509 S1.6
+\Delta t_{\omega}^{I}\mid_{50\mathrm{K}}^{300\mathrm{K}}&=\frac{(0.4\ \mathrm{m^3})(1\times 10^4\ \mathrm{m})(7.25\ \mathrm{J\Omega/m^2})}{(1.5\times 10^{-5}\ \mathrm{m^2})(100\ \mathrm{V})^2} \\
+&=1.93\times 10^5\ \mathrm{s}=54\ \mathring{h} \tag{S1.6}
+\end{align*}
 
-\begin{equation}% page509 S1.6
-\Delta t_{\omega}^{I}\mid_{50\mathrm{K}}^{300\mathrm{K}}=\frac{(0.4\ \mathrm{m^3})(1\times 10^4\ \mathrm{m})(7.25\ \mathrm{J\Omega/m^2})}{(1.5\times 10^{-5}\ \mathrm{m^2})(100\ \mathrm{V})^2} 
-=1.93\times 10^5\ \mathrm{s}=54\ \mathring{h}
-\end{equation}
-\begin{equation}% page509 S1.7
-\Delta t_{\omega}^{I}\mid_{80\mathrm{K}}^{300\mathrm{K}}\simeq 0.7\times 10^5\ \mathrm{s}\sim 20\ \mathrm{h}
-\end{equation}
-\begin{equation}% page509 S1.8
-\Delta t_{\omega}^{I}\mid_{80\mathrm{K}}^{300\mathrm{K}}\simeq 3\times 10^6\ \mathrm{s}\simeq 830\ \mathrm{h}\simeq 35\ \mathrm{days}
-\end{equation}
+这种组合模式下，总回温时间$\sim$55 h。
+因为随着磁体的回温，恒压模式提供的能量会越来越少，这样要比恒流模式更安全(尽管通常更慢)。
 
+d) 如果我们认为磁体热等效为基底金属，LTS磁体和HTS磁体除了$T_i$外没区别。
+使用$T_i$=80 K和$Z(300\ \mathrm{K},80\ \mathrm{K})=7.7\times 10^{16}\ \mathrm{A^2 s/m^4}$，代入S1.1，有：
+\begin{align*}% page509 S1.7
+\Delta t_{\omega}^{I}\mid_{80\mathrm{K}}^{300\mathrm{K}}\simeq 0.7\times 10^5\ \mathrm{s}\sim 20\ \mathrm{h}\tag{S1.7}
+\end{align*}
 
+e) 使用$T_i$=80 K和$Y(300\ \mathrm{K},80\ \mathrm{K})=7\ \mathrm{V^2 s/m^2}$代入S1.4有：
+\begin{align*}% page509 S1.8
+\Delta t_{\omega}^{I}\mid_{80\mathrm{K}}^{300\mathrm{K}}\simeq 3\times 10^6\ \mathrm{s}\simeq 830\ \mathrm{h}\simeq 35\ \mathrm{days} \tag{S1.8}
+\end{align*}
+
+由于在10 K和80 K之间存储的热量不多，恒压模式下的该区段回温时间在$T_i=10$ K和$T_i=80$ K
+下是几乎一致的。
 
 \subsection{问题8.2：6 kA气冷HTS引线的保护}
+本问题处理问题4.6B中研究过的6 kA气冷HTS电流引线的保护。
+
+考虑以下情景。一对这样的气冷引线连接于电感为$L$的超导磁体，磁体运行于4.2 K液氦环境。
+故障---这里为一个引线的流动阻塞---时，磁体通过连接于磁体端子，即电流引线室温端的泄放电阻$R_D$放电。
+也就是说，磁体和电流引线系统由检测-泄放技术得到了保护。
+这里有两个重要的时间过程：1) 故障检测并打开磁体从$I_{op}=$6 kA开始放电的开关；
+2) 放电本身。
+第一个过程存在延迟时间$\tau_{dl}$，第二个过程有放电时间常数$\tau_{dg}=L/R_D$。
+
+a) 证明，在流动阻塞故障$\tau_{dl}$=5 s和$\tau_{dg}$=15 s条件下，
+$A_m=1.735\ \mathrm{cm^2}$将闲置这根6 kA引线的$T_f$到180 K。
+在问题4.6B中表示引线截面的特殊符号$[A_n]_{fs}$和$[A_n]_{cs}$用于表示
+复合导体中基底金属截面积$A_m$。
+假设流动阻塞后，全部电流均由基底金属承担，焦耳热是绝热的。
+同时假设$T_i$=80 K，$\gamma_{m/s}=2$。
+
+b) 计算$T_f$=300 K对应的最大延迟时间$\tau_{dl}$。
+(和绕组内的情况不同，这里假设$T_f$超过200 K也能安全。)
 
 
 \subsubsection{问题8.2之解}
-\begin{equation}% 8.66b
-Z(T_f,T_i)=\left(\frac{A_m}{A_{cd}}\right)(\tau_{dl}+\frac{1}{2}\tau_{dg})J_{o}^{2}
-\end{equation}
-\begin{equation}% page510 S.1
-Z(T_f,T_i)=\left(\frac{\gamma_{m/s}}{1+\gamma_{m/s}}\right)(\tau_{dl}+\frac{1}{2}\tau_{dg})J_{o}^{2}
-\end{equation}
-\begin{equation}% page510 第三个
+a) 类似于8.8.3中讨论的带有开关延迟的检测-泄放保护技术，
+基底金属的焦耳热包括两种模式：1) $\tau_{dl}$期间的恒流模式；2)
+时间常数为$\tau_{dg}$的电流放电。
+于是，使用8.66b，我们有：
+\begin{align*}% 8.66b
+Z(T_f,T_i)=\left(\frac{A_m}{A_{cd}}\right)(\tau_{dl}+\frac{1}{2}\tau_{dg})J_{o}^{2} ]\tag{8.66b}
+\end{align*}
+代入$A_m/A_{cd}=\gamma_{m/s}/(\gamma_{m/s}+1)$，有：
+\begin{align*}% page510 S.1
+Z(T_f,T_i)=\left(\frac{\gamma_{m/s}}{1+\gamma_{m/s}}\right)(\tau_{dl}+\frac{1}{2}\tau_{dg})J_{o}^{2} \tag{S2.1}
+\end{align*}
+将$\tau_{dl}$=5 s，$\tau_{dg}$=15 s，$J_{m_o}=6000/1.735\times 10^{-4}=3.46\times 10^7\ \mathrm{ A/m^2}$和$\gamma_{m/s}=2$代入S2.1，$Z(T_f,T_i)$成为：
+\begin{align*}% page510 第三个
 Z(T_f,T_i)=(12.5\ \mathrm{s})\left(\frac{2}{3}\right)(3.46\times 10^7\ \mathrm{A/m^2})^2\simeq 1\times 10^{16}\ \mathrm{A^2s/m^4}
-\end{equation}
+\end{align*}
 
+从图8.2，我们发现黄铜对应$T_f$=250 K的
+$Z(300\ \mathrm{K},80\ \mathrm{K})=1\times 10^{16}\ \mathrm{A^2 s/m^4}$，
+在该6 kA电流引线安全极限内。
+
+b) 代入铜的$Z(300\ \mathrm{K},80\ \mathrm{K})\simeq 1.1\times 10^{16}\ \mathrm{A^2 s/m^4}$(图S2.1)，解出$\tau_{dl}$，有：
+$\tau_{dl}+\tau_{dg}/2\simeq$14 s；$\tau_{dl}\simeq$6.5 s。
 
 
 \subsection{问题8.3：制冷机制冷的NbTi磁体的保护}
