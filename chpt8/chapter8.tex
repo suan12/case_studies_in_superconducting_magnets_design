@@ -1036,8 +1036,8 @@ $V_s(t)$和$I_s(t)$分别是电源的电压和电流。
 \begin{align*}
 E_s&=(100\ \mathrm{A})\int_{0}^{0.4\ \mathrm{s}}[V_1(t)+V_2(t)]dt+(10\ \mathrm{V})\int_{0.4\ \mathrm{s}}^{2\ \mathrm{s}}\left[I_1(t)+\frac{V_1(t)}{R_1}\right]dt \\
 &\simeq 200\ \mathrm{J}+650\ \mathrm{J}\simeq 850\ \mathrm{J}\\
-E_{R1}&=\frac{1}{R_1}\int_{0}^{2\ \mathrm{s}}V_1(t)^2dt\simeq 50\ \mathrm{J} \\
-E_{R2}&=\frac{1}{R_2}\int_{0}^{2\ \mathrm{s}}V_2(t)^2dt\simeq 300\ \mathrm{J}
+E_{R1}&=\frac{1}{R_1}\int_{0}^{2\ \mathrm{s}}V_1(t)^2dt\simeq 50\ \mathrm{J} \qquad
+E_{R2}=\frac{1}{R_2}\int_{0}^{2\ \mathrm{s}}V_2(t)^2dt\simeq 300\ \mathrm{J}
 \end{align*}
 于是，磁体中耗散的总磁能约为5500 J。
 
@@ -1252,28 +1252,28 @@ V_{cl}(t)=L_1\frac{dI(t)}{dt}+rI(t)+L_2\frac{dI(t)}{dt}
 \end{equation}
 同样条件下，通过$R_1$和$R_2$的电流$i_R(t)$由下式给出：
 \begin{align*}% 8.67b
-i_R(t)=\frac{V_{cl}(t)}{R_1+R_2} \tag{8.67b}
+i_R(t)=\frac{V_{cl}(t)}{R_1+R_2} \tag{8.66b}
 \end{align*}
 从图8.19的电路中，我们有：
 \begin{align*}% 8.67c
-V_{out}(t)=L_1\frac{dI(t)}{dt}+rI(t)-R_1i_R(t) \tag{8.67c}
+V_{out}(t)=L_1\frac{dI(t)}{dt}+rI(t)-R_1i_R(t) \tag{8.66c}
 \end{align*}
 
 联立上面三式，我们有：
 \begin{align}% 8.68
-V_{out}(t)=&L_1\frac{dI(t)}{dt}+rI(t) \\
+V_{out}(t)=&L_1\frac{dI(t)}{dt}+rI(t) \\\notag
 &-\frac{R_1}{R_1+R_2}\left[L_1\frac{dI(t)}{dt}+rI(t)+L_2\frac{dI(t)}{dt}\right] \\\notag
-=&\left(\frac{R_2}{R_1+R_2}\right)L_1\frac{dI(t)}{dt} \\
+=&\left(\frac{R_2}{R_1+R_2}\right)L_1\frac{dI(t)}{dt} \\\notag
 &-\left(\frac{R_1}{R_1+R_2}\right)L_2\frac{dI(t)}{dt}+\left(\frac{R_2}{R_1+R_2}\right)rI(t)
 \end{align}
 
-为了使$V_{out}(t)$仅正比于$rI(t)$，方程8.69等号右侧前两项必须为零：
+为了使$V_{out}(t)$仅正比于$rI(t)$，方程8.68等号右侧前两项必须为零：
 \begin{equation}% 8.69
 \left(\frac{R_2}{R_1+R_2}\right)L_1\frac{dI(t)}{dt}-\left(\frac{R_1}{R_1+R_2}\right)L_2\frac{dI(t)}{dt}=0
 \end{equation}
 
-化简方程8.69得到以下条件：$R_2L_1=R_1L_2$。
-8.68消去前两项，成为：
+化简方程8.68得到以下条件：$R_2L_1=R_1L_2$。
+8.67消去前两项，成为：
 \begin{equation}% 8.70
 V_{out}(t)=\left(\frac{R_2}{R_1+R_2}\right)rI(t)
 \end{equation}
@@ -1327,7 +1327,7 @@ d) 重复a)，初始温度变为80 K。
 e) 重复b)，初始温度变为80 K。
 
 \subsubsection{问题8.1之解}
-a) 我们可以使用方程8.71a来计算在恒流加热条件下从10 K到300 K的回温时间$\Delta t_w^I|_{10\ \mathrm{K}}^{300\ \mathrm{K}}$：
+a) 我们可以使用方程8.70a来计算在恒流加热条件下从10 K到300 K的回温时间$\Delta t_w^I|_{10\ \mathrm{K}}^{300\ \mathrm{K}}$：
 \begin{align*}% page508 S1.1
 \Delta t_{\omega}^{I}\mid_{10\ \mathrm{K}}^{300\ \mathrm{K}}&=\frac{\mathcal{V}_{cd}A_m}{\ell_{cd}I_{o}^{2}}\int_{10\ \mathrm{K}}^{300\ \mathrm{K}}\frac{C_{cu}(T)}{\rho_m{cu}(T)}dT \\
 &=\frac{\mathcal{V}_{cd}A_m}{\ell_{cd}I_{o}^{2}}Z(T_f=300\ \mathrm{K},T_i=10\ \mathrm{K}) \tag{S1.1}
@@ -1343,7 +1343,7 @@ $Z(T_f=300\ \mathrm{K},T_i=10\ \mathrm{K})=15.1\times 10^{16}\ \mathrm{A^2 s/m^4
 
 在恒流25 A下，磁体从10 K到300 K的回温时间略小于2天。
 
-b) 我们可以使用8.71b计算在恒压加热条件下从10 K到300 K的回温时间$\Delta t_w^V|_{10\ \mathrm{K}}^{300\ \mathrm{K}}$：
+b) 我们可以使用8.70b计算在恒压加热条件下从10 K到300 K的回温时间$\Delta t_w^V|_{10\ \mathrm{K}}^{300\ \mathrm{K}}$：
 \begin{align*}% page508 S1.3
 \Delta t_{\omega}^{I}\mid_{10\mathrm{K}}^{300\mathrm{K}}&=\frac{\mathcal{V}_{cd}\ell_{cd}}{A_mV_{o}^{2}}\int_{10\ \mathrm{K}}^{300\ \mathrm{K}}C_{cu}(T)\rho_m{cu}(T)dT \\
 &=\frac{\mathcal{V}_{cd}\ell_{cd}}{A_mV_{o}^{2}}Y(T_f=300\ \mathrm{K},T_i=10\ \mathrm{K})\tag{S1.3}
@@ -1482,7 +1482,7 @@ V_D=\frac{J_{m_o}E_m}{A_{cd}Z(T_f,T_i)}
 代入$J_{m_o}^D=[J_{m_o}[_{Sk}=J_{m_o}, E_m=10\times 10^6\ \mathrm{J}$,
 $A_{cd}=(10\times 10^{-3})(3\times 10^{-3})=3\times 10^{-5}\ \mathrm{m}$以及
 $Z(100\ \mathrm{K},4.2\ \mathrm{K})=6.7\times 10^{16}\ \mathrm{A^2 s/m^4}$到
-方程8.72中去，有：
+方程8.71中去，有：
 \begin{align*}% page511 S3.1
 V_D&=\frac{(6.25\times 10^7\ \mathrm{A/m^2})^2(10\times 10^6\ \mathrm{J})}{(3\times 10^{-5}\ \mathrm{m^2})(6.7\times 10^{16}\ \mathrm{A^2s/m^4})} \\\tag{S3.1}
 &=310\ \mathrm{V} 
@@ -1490,7 +1490,7 @@ V_D&=\frac{(6.25\times 10^7\ \mathrm{A/m^2})^2(10\times 10^6\ \mathrm{J})}{(3\ti
 
 放电电压310 V是安全的，不会带来难以解决的困难。
 
-b) 在方程8.72中，替换$E_m$=100 MJ，我们有：
+b) 在方程8.71中，替换$E_m$=100 MJ，我们有：
 $V_D$=3100 V。该电压在低温容器内是非常危险的。
 一个广为使用的降低磁体及其低温容器之间电压的方法是将泄放电阻的中点接地，当然
 多数低温容器也是接地的。
@@ -1586,7 +1586,7 @@ L\frac{dI(t)}{dt}+(R_D+R_0+\eta t)I(t)=0
 
 在S4.5中解出$I(t)$，有：
 \begin{align*}% 8.74
-I(t)=I_{op}\exp\left[-\frac{(R_D+R_0)}{L}t-\frac{\eta}{2L}t^2\right] ]\tag{8.74}
+I(t)=I_{op}\exp\left[-\frac{(R_D+R_0)}{L}t-\frac{\eta}{2L}t^2\right] \tag{8.74}
 \end{align*}
 
 c) 本问题有两种解法。
@@ -1596,9 +1596,9 @@ c) 本问题有两种解法。
 $E_{sm}=E_m\tilde{r}/(\tilde{r}+R_D)$，这里$E_m$=19.9 MJ。
 
 若无$r(t)$，电路时间常数由$L/R_D$给出，约为$\tau_D\sim$27 s。
-根据方程8.73，我们有：$r_(0)=0.3\ \Omega;r(5\ \mathrm{s})=0.5\ \Omega;
-r(10\ \mathrm{s})=0.7\ \Omega;r(15\ \mathrm{s})=0.9\ \Omega;
-r(20\ \mathrm{s})=1.1\ \Omega$。
+根据方程8.73，我们有：$r(0)=0.3\ \Omega;r(5\ \mathrm{s})=0.5\ \Omega;
+r(0)\ \mathrm{s})=0.7\ \Omega;r(15\ \mathrm{s})=0.9\ \Omega;
+r(0)\ \mathrm{s})=1.1\ \Omega$。
 
 上述时段内的$r(t)$平均值为$0.7\ \Omega$，对应新的泄放时间常数$\sim8$ s[$=L/(R_D+0.7)$]。
 这意味着时间平均应在0和$\sim$10 s之间进行，对应新的$\tilde{r}$为$0.5\ \Omega$。
@@ -1700,7 +1700,7 @@ $\Delta T$是电阻器在绝热吸收$E_m$后的总温升。
 
 b) 证明导体的横截面应为：
 \begin{align*}% 8.76b
-\omega\delta=\sqrt{\frac{\rho E_m}{R_DC_p\Delta T}} \tag{8.76b}
+w\delta=\sqrt{\frac{\rho E_m}{R_DC_p\Delta T}} \tag{8.75b}
 \end{align*}
 $\ell$和$w\delta$对这些参数的依赖性容易理解。
 
@@ -1735,19 +1735,19 @@ E_m=\ell\omega\delta C_p\Delta T \tag{S5.2a}
 
 令S5.1b和S5.2b相等，解出$\ell$，有：
 \begin{align*}% 8.76a
-\omega\delta=\sqrt{\frac{\rho E_m}{R_DC_p\Delta T}} \tag{8.76a}
+w\delta=\sqrt{\frac{\rho E_m}{R_DC_p\Delta T}} \tag{8.75}
 \end{align*}
 
-b)将8.76a给出的$\ell$代入S5.1b，得到：
+b)将8.75a给出的$\ell$代入S5.1b，得到：
 \begin{align*}
-w\delta=\sqrt{\frac{\rho E_m}{R_D C_p \Delta T}} \tag{8.76b}
+w\delta=\sqrt{\frac{\rho E_m}{R_D C_p \Delta T}} \tag{8.75b}
 \end{align*}
 
 c) 我们计算混合III磁体的$\ell$和$w\delta$，有：
 \begin{align*}
 \ell&\simeq\sqrt{\frac{(2\times 10^7\ \mathrm{J})(0.3\Omega)}{(10^{-6}\ \mathrm{\Omega m})(4\times 1066\ \mathrm{J/m^2K})(200\ \mathrm{K})}} \\
 &=86.6\ \mathrm{m}\\
-\omega\delta&\simeq\sqrt{\frac{(10^{-6}\ \mathrm{\Omega m})(2\times 10^7\ \mathrm{J})}{(0.3\Omega)(4\times 10^6\ \mathrm{J/m^2K})(200\ \mathrm{K})}} \\
+w\delta&\simeq\sqrt{\frac{(10^{-6}\ \mathrm{\Omega m})(2\times 10^7\ \mathrm{J})}{(0.3\Omega)(4\times 10^6\ \mathrm{J/m^2K})(200\ \mathrm{K})}} \\
 &\simeq 2.9\times 10^{-4}\ \mathrm{m^2}\simeq 290\ \mathrm{mm^2}
 \end{align*}
 
@@ -1758,7 +1758,7 @@ $\ell\simeq$120 m，$w\delta\simeq 410\ \mathrm{mm^2}$ 。
 
 
 \subsection{讨论8.2：磁体的“缓慢”放电模式}
-在实验室环境中最广泛使用的电源是仅在$+ V / + I$象限中运行。
+在实验室环境中最广泛使用的电源是仅在$+V/+I$象限中运行。
 如果使用这种电源来运行电感为$L$的超导磁体，
 则可能需要数小时才能使磁体放电，当然，除了通过泄放电阻器放电。
 
@@ -1774,7 +1774,7 @@ $\ell\simeq$120 m，$w\delta\simeq 410\ \mathrm{mm^2}$ 。
 磁体放电至少需要好几天。
 
 \subsubsection*{A. 低阻电阻器}
-当$r_d$被接入电路后，$V_m(t)=-(r_d+r_\ell)I_m(t)$：$I_m(t)$以时间常数$\tau_m=L/((r_\ell+r_d))$
+当$r_d$被接入电路后，$V_m(t)=-(r_d+r_\ell)I_m(t)$：$I_m(t)$以时间常数$\tau_m=L/(r_\ell+r_d)$
 指数衰减。显然，不管电流衰减的速率如何，$dI_m(t)/dt$肯定不是常数，而是随$I_m(t)$减小：
 \begin{equation}% 8.77a
 \frac{dI_m(t)}{dt}=-\frac{I_m(t)}{\tau_m}
@@ -1801,7 +1801,7 @@ $r_d$的设计标准在天伦8.3中研究。
   于一组串联二极管的总电压$V_{dd}$，在满足$r_\ell I_m(t)\ll V_{dd}$时，
   电流衰减率由下式给出：
 \begin{align*}% 8.77b
-\frac{dI_m(t)}{dt}=-\frac{V_{dd}}{L} \tag{8.77b}
+\frac{dI_m(t)}{dt}=-\frac{V_{dd}}{L} \tag{8.76b}
 \end{align*}
 
 如前所举例子中的100 H磁体，有$V_{dd}$=2.5 V(5-10个二极管)，
@@ -1816,21 +1816,21 @@ $r_d$的设计标准在天伦8.3中研究。
 对于和$R_D$同样的电阻器几何形状，在$w\gg \delta$时，$r_d$的两个设计式为：
 \begin{subequations}
 	\begin{align}
-r_d=&\frac{\rho\ell}{\omega\delta}\\
-r_dI_m(0)^2\simeq& 2\omega\ell g_{cv}
+r_d=&\frac{\rho\ell}{w\delta}\\
+r_dI_m(0)^2\simeq& 2w\ell g_{cv}
 	\end{align}
 \end{subequations}
 式中，$I_m(0)$是电阻器接入时刻磁体的电流，$g_{cv}$是电阻器表面的自然对流热通量[$W/m^2$]，假定为常数。
 电阻器表面通常处于静止空气(本例)或静止水池中---水池需要足够大，保证水能够吸收总的耗散能量而不产生明显的温升。
 
-方程8.78b表明，电阻器中产生的总焦耳热$r_d I_m(0)^2$和电阻器表面的总对流热释放平衡，在$w\gg \delta$时，
+方程8.77b表明，电阻器中产生的总焦耳热$r_d I_m(0)^2$和电阻器表面的总对流热释放平衡，在$w\gg \delta$时，
 近似为$2w\ell g_{cv}$。
-同时还注意到，$I_m(t)$假定其为常数，且等于8.78b中的$I_m(0)$---尽管实际它的缓慢衰减的。
+同时还注意到，$I_m(t)$假定其为常数，且等于8.77b中的$I_m(0)$---尽管实际它的缓慢衰减的。
 在两个方程中，解出$\ell$，得到：
 \begin{subequations}
 	\begin{align}
 \ell\simeq& r_dI_m(0)\sqrt{\frac{\delta}{2\rho g_{cv}}}\\
-\omega\simeq& I_m(0)\sqrt{\frac{\rho}{2\delta g_{cv}}}
+w\simeq& I_m(0)\sqrt{\frac{\rho}{2\delta g_{cv}}}
 	\end{align}
 \end{subequations}
 
@@ -1842,11 +1842,11 @@ $r_d=10\ \mathrm{m}\Omega$；$I_m(0)$=250 A；$\rho=10^{-6}\ \Omega$m；
 尽管$g_{cv}$依赖于表面的温度和朝向以及冷却介质，这里我们队静止空气取$g_{cv}\simeq 20\ \mathrm{W/m^2}$，
 对静止水取$g_{cv}\simeq 20\ \mathrm{W/m^2}$。
 
-气冷\qquad 使用8.79a和8.79b，有：
+气冷\qquad 使用8.78a和8.78b，有：
 \begin{align*}% page521 第一个
 \ell&\simeq(0.01\Omega)(250\ \mathrm{A})\sqrt{\frac{(250\times 10^{-6}\ \mathrm{m})}{2(10^{-6}\ \mathrm{\Omega m})(20\ \mathrm{W/m^2})}} \\
 &\simeq 6.3\ \mathrm{m}\\
-\omega&\simeq(250\ \mathrm{A})\sqrt{\frac{(10^{-6}\ \mathrm{\Omega m})}{2(250\times 10^{-6}\ \mathrm{m})(20\ \mathrm{W/m^2})}} \\
+w&\simeq(250\ \mathrm{A})\sqrt{\frac{(10^{-6}\ \mathrm{\Omega m})}{2(250\times 10^{-6}\ \mathrm{m})(20\ \mathrm{W/m^2})}} \\
 &\simeq 2.5\ \mathrm{m}
 \end{align*}
 
@@ -1859,13 +1859,13 @@ $r_d=10\ \mathrm{m}\Omega$；$I_m(0)$=250 A；$\rho=10^{-6}\ \Omega$m；
 \begin{align*}% page521第三个
 \ell&\simeq(0.01\Omega)(250\ \mathrm{A})\sqrt{\frac{(250\times 10^{-6}\ \mathrm{m})}{2(10^{-6}\ \mathrm{\Omega m})(20\times 10^3\ \mathrm{W/m^2})}} \\
 &\simeq 20\ \mathrm{cm}\\
-\omega&\simeq(250\ \mathrm{A})\sqrt{\frac{(10^{-6}\ \mathrm{\Omega m})}{2(250\times 10^{-6}\ \mathrm{m})(20\times 10^3\ \mathrm{W/m^2})}} \\
+w&\simeq(250\ \mathrm{A})\sqrt{\frac{(10^{-6}\ \mathrm{\Omega m})}{2(250\times 10^{-6}\ \mathrm{m})(20\times 10^3\ \mathrm{W/m^2})}} \\
 &\simeq 8\ \mathrm{cm}
 \end{align*}
 
-可从8.79a和8.79b可以看出的，$\ell$和$w$随$g_{cv}$增加而趋向于0；
+可从8.78a和8.78b可以看出的，$\ell$和$w$随$g_{cv}$增加而趋向于0；
 不过，$\ell/w$无$g_{cv}$(和$r_d$)无关。
-于是，如果一个$I_m(0),g_{cv}$和$r_d$的组合给出$\ell$=5 cm和$w$=2 cm的过小的气冷设计值，
+于是，如果一个$I_m(0),g_{cv}$和$r_d$的组合给出$\ell$=5~ cm和$w$=2 cm的过小的气冷设计值，
 一个“实用”的水冷版本更好：两个250 $\mu$m厚的钢条并联，各条25 cm长，5 cm宽。
 
 \subsection{讨论8.4：过热\& 内部电压判据}
@@ -1938,10 +1938,10 @@ T(\zeta)=T_{cl}+(T_{wm}-T_{cl})\zeta+\frac{\rho_m\ell^2I_{t}^{2}}{2a_{m}^{2}k_m}
 
 考虑$\zeta(T_{pk})\simeq 0.5$，$T_{pk}$由下式给出：
 \begin{align*}% 8.82b
-T_{pk}\simeq \frac{1}{2}(T_{cl}+T_{wm})+\frac{\rho_mI_{t}^{2}\ell^2}{8a_{m}^{2}k_m} \tag{8.82b}
+T_{pk}\simeq \frac{1}{2}(T_{cl}+T_{wm})+\frac{\rho_mI_{t}^{2}\ell^2}{8a_{m}^{2}k_m} \tag{8.81b}
 \end{align*}
 
-我们可以证明，对“典型”的参数，方程8.82等号右侧的第二项是比0.5小很多，可以忽略：
+我们可以证明，对“典型”的参数，方程8.81等号右侧的第二项是比0.5小很多，可以忽略：
 实际上，超导带中的$T_{pk}$就是出现在引线中点。
 在$k_m$=2 W/mK和$\rho_m=1\times 10^{-6}\ \Omega$cm---
 这些值大致对应Ag-5.3wt\%(3at\%)Au在70 K的情况(图4.23和4.24)；
@@ -1962,15 +1962,15 @@ T_{pk}&\simeq\frac{1}{2}(T_{cl}+\frac{\rho_mI_{t}^{2}\ell^2}{8a_{m}^{2}k_m} \\
 &=\frac{1}{2}(10\ \mathrm{K}+70\ \mathrm{K})+\frac{(1\times 10^{-6}\ \mathrm{\Omega cm})(50\ \mathrm{A})^2(15\ \mathrm{cn})^2}{8(8\times 10^{-3}\ \mathrm{cm^2})^2(2\ \mathrm{W/cm K})}\simeq 590\ \mathrm{K}
 \end{align*}
 
-\subsubsection*{熔化时间}
+\subsubsection*{B. 熔化时间}
 将银从70 K升高到熔点1223 K需要的能量密度为$\simeq 2900\ \mathrm{J/cm^3}$。
 (在估算带材熔化时间，我们假定银-金合金的焓用银代替。)
-我们取这种基底在70 K和1200 K之间的平均电阻率为$\sim 5\times 10^{-6}\ \mathrm{\Omega$cm，
-基底电流密度为常数$\sim 6000\ \mathrm{ A/cm^2}$($=I_t/a_m$，其中$I_t$=50 A，$a_m=0.008\ \mathrm{cm^2}$)，
+我们取这种基底在70 K和1200 K之间的平均电阻率为$\sim 5\times 10^{-6}\ \mathrm{\Omega}$cm，
+基底电流密度为常数$\sim 6000\ \mathrm{ A/cm^2}$($=I_t/A_m$，其中$I_t$=50 A，$A_m=0.008\ \mathrm{cm^2}$)，
 基底加热的平均焦耳热密度为$\sim 200\ \mathrm{A/cm^3}$。
-所以，在这种引线所应用的制冷机制冷磁体的真空、绝热环境条件下，熔化带材只需不到15 s[2900/200]；
-带材需要连续监测和保护。
-	
+所以，在这种引线所应用的制冷机制冷磁体的真空、绝热环境条件下，
+熔化带材只需不到15 s$[2900/200]$；带材需要连续监测和保护。
+
 \subsubsection*{C. 其他评论}
 正如本书中经常提到的，HTS非常稳定，不应发生如上所述的事件。
 不过，尽管可以容易且低成本地更换Bi2223 / Ag-Au短带，
@@ -2043,154 +2043,347 @@ T_{pk}&\simeq\frac{1}{2}(T_{cl}+\frac{\rho_mI_{t}^{2}\ell^2}{8a_{m}^{2}k_m} \\
 
 
 \subsubsection*{D. 保护加热器}
+我们讨论这个三线圈磁体的保护加热器的关键设计问题：1) 位置；2) 功率要求；3) 加热丝及其布局；4) 加热器电阻及其电源。
+
+\textbf{位置}\qquad 如前所述，保护加热器的位置没限制：设计者可以将之放在实际磁体组装条件下最容易安装的位置。
+本磁体中最可能的位置是线圈M的第5层或线圈C1和C2的第3层的外侧的全部或部分。
+这个讨论中，我们将保护加热器放在线圈C1和C2上。
+加热丝绕在线圈C1和C2第3层外。
+各线圈的第3层均有88匝(表8.10)，包括78 m长的MgB2导线。
+两个第3层的总体积为86 $\mathrm{cm^3}$。
+两个第3层的能量总输入3.9 kJ折合能量密度45 $\mathrm{J/cm^3}$(或5 J/g)：
+各第三层都将被加热到75 K。
+
+\textbf{功率要求}\qquad 对于这个运行于10 K的磁体，保护加热器必须将每个第3层加热到电流共享温度$T_{cs}$---
+实际上，这个温度是沿轴向变化的。对于此例，我们对整个轴向都取$T_{cs}$ = 30 K；
+需要的总热输入为150 J---
+ 30 K时的铜焓密度为1.74 $\mathrm{J /cm^3}J$，体积为86 $\mathrm{cm^3}$。
+ 在检测到失超后，该能量将在$\sim$0.2 s内进入保护加热器中，然后通过热扩散进入MgB2层，
+ 在$\sim$0.1 s内将之强迫进入到电阻态：
+ 被加热的超导层将在检测到失超后不迟于$\sim$0.3 s时间内被强迫进入正常态。
+ 保护加热器需要的功率为375 W（= 75 J/0.2 s）。
+
+我们注意到，如果保护加热器安装在磁体的高场区域中，
+该功率要求可以降低。
+此时，$T_{cs}$可以是25 K（对相同的热点体积，对应345 W）或甚至20 K（对应130 W）。
+最高磁场区域位于线圈M的第一层之下，在第1层绕制前绕制加热丝。之后进行整个磁体的热处理。
+
+\textbf{加热丝及其位置}\qquad 为确保保护加热器和线圈C1和C2的第3层MgB2超导线的紧密接触，
+可以使用Cu90-Ni10导线 AWG\#20(裸直径0.81~ mm，包绝缘后$\sim$0.9 mm)，绕在改成的匝间，
+保证保护加热丝形成密排六边形布局的第4层。
+为了改善热接触，保护导线可以湿绕。
+
+\textbf{加热器电阻及其电源}\qquad 每一个保护加热器在10 K时的电阻均为25 $\Omega$(10 K电阻率$16.7\ \mu\Omega$cm)。
+一个10 A/100 V的电源可以为两个25 $\Omega$加热器提供800 W功率，单个为400 W。
+各保护加热器的电感(主要是由线圈M和线圈C1或C2之间的互感引起的)为$\sim 0.03$ H：
+加热器电流在0.1~ s内升高至4 A所要求的$\sim$1 V感应电压和100 V的电阻电压相比是可忽略的。
+加热器的在电流密度为$\sim 8\ \mathrm{A/mm^2}$时，哪怕接入时间$>10$ s，也不会过热。
 
 \subsubsection*{E. 失超检测：加热过程\& 要求的检测时间}
+在检测--激活加热器保护技术中，首先关键的异步是失超检测。
+我们假设一个热点被绝热加热。
+进一步假设在$I_{op}$或其密度下基底电流保持不变，$J_m(t)=J_{m_o}=I_{op}/A_m$。
+由8.9c，我们可以计算热点从$T_i$绝热加热到$T_f$的时间：
+\begin{align*}% page528 8.9c
+\int_{T_i}^{T_f}\frac{C_m(T)}{\rho_m(T)}dT=\left(\frac{A_m}{A_{cd}}\right)J_{m_o}^{2}\tau_{ah} \tag{8.9c}
+\end{align*}
 
-
-
-
-
-\begin{equation}% page528 8.9c
-\int_{T_i}^{T_f}\frac{C_m(T)}{\rho_m(T)}dT=\left(\frac{A_m}{A_{cd}}\right)J_{m_o}^{2}\tau_{ah}
-\end{equation}
-
+代入$\rho_m=0.017\ \mu\Omega$cm(铜，$T_i$=10 K)，$A_m/A_{cd}=0.19$，和$J_{m_o}=762\ \mathrm{A/mm^2}$，
+计算得到在绝对极限$T_f$=300 K下，$\tau_{ah}\simeq 0.5$ s。
+失超必须在0.5 s之内检测到。
 
 \subsubsection*{F. 热点尺寸}
+热点尺寸可通过方程6.33给出的MPZ的尺寸来估计：
+\begin{align*}% page528 6.33
+R_{mz}=\sqrt{\frac{3k_{wd}(T_c-T_{op})}{\rho_mJ_{m}^{2}}} \tag{6.33}
+\end{align*}
 
-\begin{equation}% page528 6.33
-R_{mz}=\sqrt{\frac{3k_{wd}(T_c-T_{op})}{\rho_mJ_{m}^{2}}}
-\end{equation}
+式中，$R_{mz}$是球状MPZ的半径，其热导率$k_{wd}$在三个正交方向相等；
+$T_c=T_{cs}$，其中$T_{cs}$是电流分享温度，另有$J_m=J_{m_o}$。
+对我们这个应用，我们假设$k_{wd}=k_m=$10 W/mK(铜，10 K)，假设热传导仅沿导线轴向---
+MPZ是针型的。
+对80 A的MgB2导线，$T_{cs}\simeq$30 K，$\rho_m=0.017\ \mu\Omega$cm，$J_{m_o}=762\ \mathrm{A/mm^2}$，
+我们得到$R_{mz}\simeq 2.5$ cm，也即热点在导线上长为5 cm。
+也就是说，任何短于$\sim$5 cm的热点都将因轴向的热传导冷却而收缩，进而恢复超导。
+在下面的分析中，我们假设热点在接下来的1 s左右的绝热加热期间保持5 cm长度不变。
+(实际中，因为MgB2的NZP速度和LTS具有可比性，如表8.5所列，MgB2上的电阻性区域的实际长度可能远大于$R_{mz}$：
+保护加热器于是要比上面的计算的更短。)
 
 
 \subsubsection*{G. 热点电阻和电压随时间的增大}
+保护加热器$t=0.5$ s被接入电路之前，我们都可以假设磁体电流保持80 A。
+方程8.9c可用来计算$T(t)$，将$\tau_{ah}$替换为$t$即可。
+表8.1给出了在达到265 K的1.3 s内热点与时间有关的参数的值。
 
-
+表8.11.。。。。。。。。。。。。。。。。。。。。。。。。。。。
 
 \subsubsection*{H. 失超检测技术}
+可用于激活保护加热器的电压信号包括：1)线圈M、C1和C2的端电压；
+2) 持续电流开关上的略带感性的电压；3) 置于磁体腔内，测量磁体电流的Rogowski线圈的电压(问题2.9)。
 
+线圈M、C1和C2的端电压分别为：
+\begin{subequations}
+	\begin{align}
+V_M(t)=&V_r(t)+(L_M+M_{MC1}+M_{MC2})\frac{dI_{op}(t)}{dt}\\
+V_{C1}(t)=&(L_{C1}+M_{C1M}+M_{C1C2})\frac{dI_{op}}{dt}=V_{C2}(t)=-\frac{1}{2}V_M(t)
+	\end{align}
+\end{subequations}
+式中，$M_{MC1}$和$M_{MC2}$是线圈M分别和C1、C2之间的互感，均为0.061 H；
+$L_M$=0.925 H(表8.10)。
+类似的，$L_{C1}$=0.024~ H(表8.10)，$M_{C1M}=0.061$~ H，$M_{C1C2}$=0.004~ H。
+注意到，只要PCS保持超导，就有：
+\begin{align*}% 8.83c
+V_M(t)+V_{C1}(t)+V_{C2}(t)=0 \tag{8.82c}
+\end{align*}
 
-\begin{equation}% 8.83a
-V_M(t)=V_r(t)+(L_M+M_{MC1}+M_{MC2})\frac{dI_{op}(t)}{dt}
-\end{equation}
-\begin{equation}% 8.83b
-V_{C1}(t)=(L_{C1}+M_{C1M}+M_{C1C2})\frac{dI_{op}}{dt}=V_{C2}(t)=-\frac{1}{2}V_M(t)
-\end{equation}
-\begin{equation}% 8.83c
-V_M(t)+V_{C1}(t)+V_{C2}(t)=0
-\end{equation}
+例如，在$t$ = 1.0 s时，我们得到$V_r(t)$= 274 mV（表8.11）。
+将适当的值代入 8.82a和8.82b，我们得到：$V_M$ = 38.6 mV和$V_{C1}$ = -20.0 mV（$V_{C1}\simeq -1/2 V_M$），
+每个电压值都足以用于触发保护加热器。
 
+我们注意到，如果在线圈M上放置更多的电压抽头，每个电压抽头跨过小部分绕组，
+则这些电压中的一个可能由$V_r(t)$占主导，因为对于相同的$V_r(t)$，
+在更少的绕组上负电感电压会更小，例如，在$t$ = 1时，$V_r(t)$为274mV。
+作为和跨过整个线圈M的一个对比，该电压值在$t=1$ s时，接近274 mV而不是38.4 mV。
 
+持续模式运行广泛使用的一种应用是MRI磁体，MRI迄今为都是基于LTS的，未来可能会有基于HTS的。
+如果线圈电压将触发保护加热器，则当在MRI测量期间，激励MRI磁体中的脉冲梯度线圈时，这些电压可能包括非常大的误差信号。
+尽管梯度线圈的轴向场为零，“不平衡”电压信号在两端间被平均，但仍可能可能大到被误认为是真正失超电压。
+
+在这方面，可以采取方法，让PCS和Rogowski线圈上的电压不易受梯度线圈激励的影响。
+这可以通过将之放置在磁体外壳内与梯度线圈的磁耦合最小的地方实现。
 
 \subsection{问题8.6：NMR磁体的被动保护}
+使用在FBML开发的750 MHz(17.6 T)NbTi线圈超导磁体记录的实验结果作为示例[8.101]，
+我们研究在持续模式下多线圈内插NMR磁体产生的电压和电流信号的细节。
+磁体由12个嵌套的螺线管线圈组成，其中最里面的7个线圈用Nb3Sn导体绕成，
+最外面的5个线圈用NbTi导体绕成。
+ 每个线圈都用环氧树脂浸渍，并采用“浮动缠绕”技术[7.31,7.32]。 图8.26给出了12个线圈的位置。
 
+从图8.26可以看出，线圈10，11和12是所谓的“校正”线圈，其主要功能是改善磁场中心的场均匀性。
+ 它们可视为问题3.7中研究的缺口螺线管的变体。 
+ 绕在同一个骨架上的圈9有两个部分组成，两部分均有旁路电阻。
+ 线圈11和12共用一个旁路电阻，如图8.27所示。
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.6]{chpt8/figs/fig8.26.eps}
-	\caption{Drawing showing the locations of 12 coils in }
+	\caption{由12个线圈组成的750 MHz(17.6 T)磁体中各线圈的位置示意图。图中的水平尺度是轴向尺度的4.5倍。 }
 \end{figure}
-
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.6]{chpt8/figs/fig8.27.eps}
-	\caption{Circuit for the NbTi coils}
+	\caption{NbTi线圈的电路模型。}
+\end{figure}
+
+图8.27既不包括持续开关，也不包括整个系统的分流二极管，
+因为这里的讨论主要涉及当开关和二极管都“开路”时，系统充电期间发生的过早失超。
+由于电源的存在，整个系统是“短接”的，与系统处于持续模式的情况一样。
+
+电感矩阵和分流电阻的值分别在表8.12和8.13中给出。
+从表8.12可以看出，线圈11和12实际上具有略微不同的电感值---虽然理想情况下应该相同。
+
+在这种多线圈磁体系统中确定旁路电阻值的经验法则是首先从电压出发，选择旁路电阻的总值。
+在本示例中，选择$\sim 1.5\ \Omega$，因为在310 A的工作电流下，它对应$\sim$500 V的电压---一个安全电压。
+然后选择每个旁路电阻器的值，令其与对应的线圈的总存储能量大致成比例。
+
+表8.12.。。。。。。。。。。。。。
+
+表8.13.。。。。。。。。。。。。。。
+
+图8.28给出了磁体在227 A过早失超时记录的一组电压曲线。
+从曲线可以看出，失超开始于线圈9a中；
+ 来自AE传感器（此处未示出）的信号表明过早失超是由磁体中发生的机械事件引起的。
+  因为电阻性线圈电压首先出现在线圈9a中，所以机械事件最可能发生在线圈9a中。
+   我们注意到，在$t$ = 1.6 s和$t$ = 2.25 s之间，线圈11和12的记录电压之和$V_{11/12}$饱和。
+
+图8.29给出了一组基于图8.28所示电压曲线的线圈电流计算曲线；
+ 表8.14给出了图8.29所示电流曲线在选定时间的一组$dI / dt$值。
+ 
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.4]{chpt8/figs/fig8.28.eps}
+	\caption{227 A失超后线圈8,9a,9b,10,11/12的电压记录波形。}
 \end{figure}
 
 
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.6]{chpt8/figs/fig8.28.eps}
-	\caption{Voltage traces recorded acro}
+	\includegraphics[scale=0.4]{chpt8/figs/fig8.29.eps}
+	\caption{对应图8.28线圈8,9a,9b,10,11/12的电压记录波形的电流波形。虚线是电源电流$I_0$。}
 \end{figure}
 
+表8.14.。。。。。。。。。。。。。。。。
 
-\begin{figure}
-	\centering
-	\includegraphics[scale=0.6]{chpt8/figs/fig8.29.eps}
-	\caption{Current traces through Coils 8, 9a, 9b, 10, and 11/12 corresponding}
-\end{figure}
+a) 证明，各线圈的电流通过以下方程可由对应的电压曲线确定：
+\begin{subequations}
+	\begin{align}
+I_8&=I_0-\frac{V_8}{S_8}\\
+I_{9a}&=I_0-\frac{V_{9a}}{S_{9a}}\\
+I_{9b}&=I_0-\frac{V_{9b}}{S_{9b}}\\
+I_{10}&=I_0-\frac{V_{10}}{S_{10}}\\
+I_{11/12}&=I_0\frac{V_{11/12}}{S_{11/12}}
+	\end{align}
+\end{subequations}
+其中，$I_0$是电源电流。
 
+b) 差不多线圈9a进入正常态后的同时(从图8.28中的电压上升的曲线可明显看出)，线圈9b紧跟着进入正常态，在其他线圈中
+感应出大电流(图8.29)。
+线圈10是紧接着进入正常态的，随后是线圈8，它的电流在$t=1.2$~ s开始下降。
+计算线圈8在$t$=0.5 s出现的感应电压之和，说明线圈8此时仍完全处于超导态。
 
+c) 说明线圈在$t$=1.0 s时，尽管其电压仍下降，但已经出现正常态区域，估算它的电阻。
+同时讨论，如何准确的确定线圈8出现正常区的精确时间。
 
-\begin{equation}% 8.84a
-I_8=I_0-\frac{V_8}{S_8}
-\end{equation}
-\begin{equation}% 8.84b
-I_{9a}=I_0-\frac{V_{9a}}{S_{9a}}
-\end{equation}
-\begin{equation}% 8.84c
-I_{9b}=I_0-\frac{V_{9b}}{S_{9b}}
-\end{equation}
-\begin{equation}% 8.84d
-I_{10}=I_0-\frac{V_{10}}{S_{10}}
-\end{equation}
-\begin{equation}% 8.84e
-I_{11/12}=I_0\frac{V_{11/12}}{S_{11/12}}
-\end{equation}
+d) 计算$t$=4.0 s整个磁体(线圈8-12)产生的净焦耳热的\textit{近似}值。
 
+e) 在$t\sim$1 s时，此时线圈8已被迫使进入正常态，它的峰值磁场约为6 T，导体的临界电流(4.2 K)约为900 A，远大于
+观察到的失超电流约270 A(线圈8在$t=0.5$ s和$t=1.0$ s的电流平均值，如图8.29)。
+给出一个合理的源，解释为什么线圈8在如此小电流下发生了失超。
+
+f) 解释为什么线圈11和12没有分别接旁路电阻。
+
+g) 对线圈11和12没有分别接旁路电阻的风险，给出一个一般性的评论。
 
 \subsubsection{问题8.6之解}
+a) 从图8.27，很显然$I_8=I_0-I_{r8}$，其中
+$I_{r8}$是旁路电阻8中的电流：$I_{r8}=V_8/S_8$。于是：
+\begin{align*}% page535 8.84a
+I_8&=I_0-I_{r8} \\
+& =I_0-\frac{V_8}{S_8} \tag{8.83a}
+\end{align*}
 
-\begin{equation}% page535 8.84a
-I_8=I_0-I_{r8}  
-=I_0-\frac{V_8}{S_8}
-\end{equation}
-\begin{equation}% page535 8.84b
-I_{9a}=I_8+I_{r8}-I_{r9a}=I_0-\frac{V_8}{S_8}+\frac{V_8}{S_8}-\frac{V_{9a}}{S_{9a}}
-=I_0-\frac{V_{9a}}{S_{9a}}
-\end{equation}
-\begin{equation}% page535 8.84c
-I_{9b}=I_{9a}+\frac{V_{9a}}{S_{9a}}-\frac{V_{9b}}{S_{9b}}=I_0-\frac{V_{9a}}{S_{9a}}+\frac{V_{9a}}{S_{9a}}-\frac{V_{9b}}{S_{9b}} 
-=I_0\frac{V_{9b}}{S_{9b}}
-\end{equation}
-\begin{equation}% page535 8.84d
-I_{10}=I_{9b}+\frac{V_{9b}}{S_{9b}}-\frac{V_{10}}{S_{10}}=I_0-\frac{V_{9b}}{S_{9b}}+\frac{V_{9b}}{S_{9b}}-\frac{V_{10}}{S_{10}}
-=I_0-\frac{V_{10}}{S_{10}}
-\end{equation}
-\begin{equation}% page535 8.84e
-I_{11/12}=I_{10}+\frac{V_{10}}{S_{10}}-\frac{V_{11/12}}{S_{11/12}}=I_0-\frac{V_{10}}{S_{10}}+\frac{V_{10}}{S_{10}}-\frac{V_{11/12}}{S_{11/12}}
-=I_0-\frac{V_{11/12}}{S_{11/12}}
-\end{equation}
-\begin{equation}% page535 S6.1
-V_8=V_r\mid_8+L_8\frac{dI_8}{dt}+M_{8,9a}\frac{dI_{9a}}{dt}+M_{8,9b}\frac{dI_{9b}}{dt} 
-+M_{8,10}\frac{dI_{10}}{dt}+M_{8,11}\frac{dI_{11}}{dt}+M_{8,12}\frac{dI_{12}}{dt}
-\end{equation}
-\begin{equation}% page535 S6.2a
-V_8\simeq V_r\mid_8+(4.413\ \mathrm{H})(84.5\ \mathrm{A/s})+(2.268\ \mathrm{H})(-154.1\ \mathrm{A/s}) 
-+(2.243\ \mathrm{H})(-107.1\ \mathrm{A/s})+(0.715\ \mathrm{H})(41.3\ \mathrm{A/s}) 
-+(2.747\ \mathrm{H})(33.6\ \mathrm{A/s})+(2.755\ \mathrm{H})(33.6\ \mathrm{A/s})
-\end{equation}
-\begin{equation}% page535 S6.2b
-V_8=V_r\mid_8+372.9-349.5-240.2+39.4+92.4+92.6 
-=V_r\mid_8-2.5\ \mathrm{V}
-\end{equation}
-\begin{equation}% page536 S6.3a
-V_8=V_r\mid_8+(4.413\ \mathrm{H})(147.2\ \mathrm{A/s})+(2.268\ \mathrm{H})(-234.7\ \mathrm{A/s}) 
-+(2.243\ \mathrm{H})(-198.1\ \mathrm{A/s})+(0.715\ \mathrm{H})(-44.8\ \mathrm{A/s}) 
-+(2.747\ \mathrm{H})(19.3\ \mathrm{A/s})+(2.755\ \mathrm{H})(19.3\ \mathrm{A/s})
-\end{equation}
-\begin{equation}% page536 S6.3b
-V_8=V_r\mid_8+(649.6-532.3-444.3-32.0+53.0+53.2)[\mathrm{V}]
-=V_r\mid_8-252.9[\mathrm{V}]
-\end{equation}
-\begin{equation}% page536 S6.4
-P_{mg}=\sum_{n=8}^{12}V_r\mid_n\times I_n
-\end{equation}
-\begin{equation}% page536 S6.5
-P_{mg}\simeq\left(\tilde{V}-\sum_{m,n=8}^{12}L_{m,n}\frac{d\tilde{I}}{dt}\right)\times \tilde{I}
-\end{equation}
-\begin{equation}% page536 S6.6
-P_{mg}\simeq[0-(60.25\ \mathrm{H})(-50\ \mathrm{A/s})](90\ \mathrm{A})\simeq 270,000\ \mathrm{W}
-\end{equation}
+类似的，
+\begin{align*}% page535 8.84b
+I_{9a}&=I_8+I_{r8}-I_{r9a}=I_0-\frac{V_8}{S_8}+\frac{V_8}{S_8}-\frac{V_{9a}}{S_{9a}}\\
+&=I_0-\frac{V_{9a}}{S_{9a}} \tag{8.83b}
+\end{align*}
+\begin{align*}
+I_{9b}&=I_{9a}+\frac{V_{9a}}{S_{9a}}-\frac{V_{9b}}{S_{9b}}=I_0-\frac{V_{9a}}{S_{9a}}+\frac{V_{9a}}{S_{9a}}-\frac{V_{9b}}{S_{9b}} \\
+&=I_0\frac{V_{9b}}{S_{9b}}\tag{8.83c}
+\end{align*}
+\begin{align*}
+I_{10}&=I_{9b}+\frac{V_{9b}}{S_{9b}}-\frac{V_{10}}{S_{10}}=I_0-\frac{V_{9b}}{S_{9b}}+\frac{V_{9b}}{S_{9b}}-\frac{V_{10}}{S_{10}}\\
+&=I_0-\frac{V_{10}}{S_{10}}\tag{8.83d}
+\end{align*}
+\begin{align*}
+I_{11/12}&=I_{10}+\frac{V_{10}}{S_{10}}-\frac{V_{11/12}}{S_{11/12}}=I_0-\frac{V_{10}}{S_{10}}+\frac{V_{10}}{S_{10}}-\frac{V_{11/12}}{S_{11/12}}\\
+&=I_0-\frac{V_{11/12}}{S_{11/12}} \tag{8.83e}
+\end{align*}
 
+b) 线圈8的端间电压为：
+\begin{align*}% page535 S6.1
+V_8=&V_r\mid_8+L_8\frac{dI_8}{dt}+M_{8,9a}\frac{dI_{9a}}{dt}+M_{8,9b}\frac{dI_{9b}}{dt} \\
+&+M_{8,10}\frac{dI_{10}}{dt}+M_{8,11}\frac{dI_{11}}{dt}+M_{8,12}\frac{dI_{12}}{dt}
+\end{align*}
+其中，$V_{r|8}$是由于正常态区域出现线圈8端间产生的电阻性电压。
+向方程S6.1等号右侧代入表8.12和8.14中给出的$t=0.5$ s时的合适的值，得到：
+\begin{align*}% page535 S6.2a
+V_8\simeq& V_r\mid_8+(4.413\ \mathrm{H})(84.5\ \mathrm{A/s})+(2.268\ \mathrm{H})(-154.1\ \mathrm{A/s}) \\
+&+(2.243\ \mathrm{H})(-107.1\ \mathrm{A/s})+(0.715\ \mathrm{H})(41.3\ \mathrm{A/s}) \\
+&+(2.747\ \mathrm{H})(33.6\ \mathrm{A/s})+(2.755\ \mathrm{H})(33.6\ \mathrm{A/s}) \tag{S6.2a}
+\end{align*}
+\begin{align*}% page535 S6.2b
+V_8&=V_r\mid_8+372.9-349.5-240.2+39.4+92.4+92.6 \\
+&=V_r\mid_8-2.5\ \mathrm{V} \tag{S6.2b}
+\end{align*}
 
+从图8.28，我们得到在$t=0.5$ s时有$V_8\simeq -2.3$ V，这差不多和方程S6.2b给出的净感性电压相等，
+使得$t=0.5$ s时有$V_{r|8}\simeq 0$ V。
+于是，线圈8在$t=0.5$ s时仍超导。
 
+c) 同样，向S6.1中代入合适的值，我们得到$t=1.0$ s时的$V_8$：
+\begin{align*}% page536 S6.3a
+V_8=&V_r\mid_8+(4.413\ \mathrm{H})(147.2\ \mathrm{A/s})+(2.268\ \mathrm{H})(-234.7\ \mathrm{A/s}) \\
+&+(2.243\ \mathrm{H})(-198.1\ \mathrm{A/s})+(0.715\ \mathrm{H})(-44.8\ \mathrm{A/s}) \\
+&+(2.747\ \mathrm{H})(19.3\ \mathrm{A/s})+(2.755\ \mathrm{H})(19.3\ \mathrm{A/s})
+\end{align*}
+\begin{align*}% page536 S6.3b
+V_8=&V_r\mid_8+(649.6-532.3-444.3-32.0+53.0+53.2)[\mathrm{V}]\\
+=&V_r\mid_8-252.9[\mathrm{V}]
+\end{align*}
+
+根据图8.28的电压曲线，在$t$=1.0 s时有$V_8=-23$ V。于是，根据S6.3b，我们有$V_{r|8}\simeq 230$ V。
+根据图8.29，我们得到$I_8\simeq$306 A，于是$R_8=230/306=0.75\ \Omega$。
+
+我们通过找到线圈8$V_{r|8}$恰好开始成为非零值的时刻可以确定正常区出现的精确时点。
+
+d) 整个磁体产生的焦耳热$P_{mg}$由下式给出：
+\begin{align*}% page536 S6.4
+P_{mg}=\sum_{n=8}^{12}V_r\mid_n\times I_n \tag{S6.4}
+\end{align*}
+
+于是，如b)或c)那样计算每一个线圈的$V_r$十分必要。
+不过，在$t=4.0$~ s时，我们注意到各线圈几乎有相同的值：1) 电压，$\tilde{V}\sim 0$ V(图8.28)；
+2) 电流，$\tilde{I}\sim 90$ A(图8.29)；
+3) 电流的时间变化率，$d\tilde{I}/dt\sim -50$ A/s(表8.14)。
+于是，方程S6.4的特定时间可以由下式近似：
+\begin{align*}% page536 S6.5
+P_{mg}\simeq\left(\tilde{V}-\sum_{m,n=8}^{12}L_{m,n}\frac{d\tilde{I}}{dt}\right)\times \tilde{I} \tag{S6.5}
+\end{align*}
+
+注意到方程S6.5的括号中的项近似等于磁体端间的电阻性电压。
+从表8.12我们可以得到，电感之和为60.25 H。
+在$d\tilde{I}/dt\sim -50$ A/s和$\tilde{I}\sim 90$~ A下，我们有：
+\begin{align*}% page536 S6.6
+P_{mg}\simeq[0-(60.25\ \mathrm{H})(-50\ \mathrm{A/s})](90\ \mathrm{A})\simeq 270,000\ \mathrm{W} \tag{S6.6}
+\end{align*}
+
+因为$\tilde{V}\sim 0$，电感电压和电阻电压几乎平衡，此时总电阻电压的幅值为$\sim$3000 V($\sim$270,000 W / 90 A)---
+这是一个8.3.3中讨论过的失超磁体内部过电压产生的例子。
+根据这个电压，我们估计磁体总电阻已经增长到$\sim 33\ \Omega$($\sim$3000 V/90 A)。
+
+e) 根据我们的标准，并结合过去大约10年在FBNML开发的失超程序成功应用的经验[8.45,8.47,8.55,8.85]，
+当目标线圈的传输电流[这里是$I_8(t)$]达到对应于温度$T_{op}$(4.2 K)和线圈内最大磁场的临界电流后，
+将导致线圈失超。
+根据这一标准，观察到的过早失超不应该发生在270 A；它远低于失超的线圈8的估计临界电流900 A。
+显然，该标准适用于在接近设计工作电流的相对高的电流下(接近目标线圈的临界电流$T_{op}$)发生的过早失超。
+
+应该注意的是，恒定导体温度$T_{op}$条件是在处于时变磁场或电流下的绝热绕组是不成立的[8.79]。
+交流损耗会提高局部导体温度，从而降低目标线圈中的临界电流。
+因此，确实可以使目标线圈在接近观察值$\sim$270 A的电流下失超。
+
+在失超绝热绕组中，耦合损耗是另一个非常重要的加热源
+因为细丝扭绞节距($\ell_p$)是控制耦合损耗的关键参数，
+所以它意味着$\ell_p$是与保护高性能磁体有关的另一个关键设计参数；
+在合理范围内，为了保护目的，$\ell_p$应特别加长。
+
+f) 线圈11和12都位于磁铁中平面之外。
+因此，存在一个作用在线圈11（位于中平面下方）朝向中平面（$+z$方向）的净轴向力和
+一个作用在线圈12（位于中平面上方）朝向中平面（$-z$方向）的净轴向力 。
+只要通过线圈11和线圈12的电流相同，就不会有作用在系统上的不平衡净轴向力。
+只有当两个线圈串联并共用一个旁路电阻器时，才可以保持这种力平衡条件。
+
+如果每个线圈使用独立的旁路电阻，
+则每个线圈中感应的电流将不同，
+可能在系统上产生巨大的净不平衡力。
+在$t$ =1 s时，
+假设两个线圈不再如图8.29所示都承载250 A的电流，
+而是线圈11承载275 A，线圈12承载225 A。
+在这种情况下，向上推动线圈11的力将达到581 kN，推动线圈12的力将达到525 kN，
+产生的净不平衡向上轴力为56 kN---近6吨！
+
+g）虽然从这些电压和电流曲线中不能明显看出，特别是当线圈11/12的电压曲线在$t$ = 1.3 s和$t$ = 2 s之间饱和时，
+串联线圈11和12共用的分旁路电阻器的最关键危险是在线圈11或线圈12失超的情况下，
+在组合线圈内可以产生非常高的感应电压。
 
 \subsection{讨论8.7：HTS磁体到底要不要保护？}
-\begin{equation}% 8.85a
-\$_{T/w}=\$_M+\$_{qp}
-\end{equation}
-\begin{equation}% 8.85b
-\$_{T/wo}=\$_M+P_{dm}(\$_M+\$_{ra})
-\end{equation}
+是否对HTS磁体进行保护以防止失超引起的损坏是一个而难问题，因为在正常运行条件下，HTS磁体不太可能失超。
+一个决策指引就是经济性：
+我们令无保护HTS磁体的费用、失超监测/保护系统费用、使用另一个无保护磁体替换损坏的磁体的费用分别为
+$\$_M$、$\$_{qp}$和$\$_{rp}$。$\$_{rp}$不仅包含$\$_M$，还包括与磁体替换相关费用$\$_{ra}$。
+假设$P_{dm}$为替换失超损坏的原始无保护磁体的可能性。
+配备了失超监测/保护的HTS磁体的总费用$\$_{T/w}$和
+无保护但需要后期增加$\$_{rp}$的HTS磁体费用$\$_{T/wo}$分别为：
+\begin{subequations}
+	\begin{align}
+\$_{T/w}&=\$_M+\$_{qp}\\
+\$_{T/wo}&=\$_M+P_{dm}(\$_M+\$_{ra})
+	\end{align}
+\end{subequations}
+
+方程8.85a中，假设了有保护HTS磁体永远无需因失超导致大损坏而被替换。
+于是，要不要保护HTS磁体取决于$\$_M,\$_{qp},\$_{ra}$和$P_{dm}$。
+如果$\$_{qp}$大而$P_{dm}$足够小，能满足$\$_{qp}>P_{dm}(\$_M+\$_{ra})$，
+那么有$\$_{T/w}>\$_{T/wo}$。
+在这个条件下，经济性给出的结论是不要对HTS进行失超事件的保护。
