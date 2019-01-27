@@ -1810,35 +1810,63 @@ $r_d$的设计标准在天伦8.3中研究。
 
 
 \subsection{讨论8.3：低阻电阻器设计}
-\begin{equation}% 8.78a
-r_d=\frac{\rho\ell}{\omega\delta}
-\end{equation}
-\begin{equation}% 8.78b
-r_dI_m(0)^2\simeq 2\omega\ell g_{cv}
-\end{equation}
-\begin{equation}% 8.79a
-\ell\simeq r_dI_m(0)\sqrt{\frac{\delta}{2\rho g_{cv}}}
-\end{equation}
-\begin{equation}% 8.79b
-\omega\simeq I_m(0)\sqrt{\frac{\rho}{2\delta g_{cv}}}
-\end{equation}
-\begin{equation}% page521 第一个
-\ell\simeq(0.01\Omega)(250\ \mathrm{A})\sqrt{\frac{(250\times 10^{-6}\ \mathrm{m})}{2(10^{-6}\ \mathrm{\Omega m})(20\ \mathrm{W/m^2})}} 
-\simeq 6.3\ \mathrm{m}
-\end{equation}
-\begin{equation}% page521 第二个
-\omega\simeq(250\ \mathrm{A})\sqrt{\frac{(10^{-6}\ \mathrm{\Omega m})}{2(250\times 10^{-6}\ \mathrm{m})(20\ \mathrm{W/m^2})}} 
-\simeq 2.5\ \mathrm{m}
-\end{equation}
-\begin{equation}% page521第三个
-\ell\simeq(0.01\Omega)(250\ \mathrm{A})\sqrt{\frac{(250\times 10^{-6}\ \mathrm{m})}{2(10^{-6}\ \mathrm{\Omega m})(20\times 10^3\ \mathrm{W/m^2})}} 
-\simeq 20\ \mathrm{cm}
-\end{equation}
-\begin{equation}% page521 第四个
-\omega\simeq(250\ \mathrm{A})\sqrt{\frac{(10^{-6}\ \mathrm{\Omega m})}{2(250\times 10^{-6}\ \mathrm{m})(20\times 10^3\ \mathrm{W/m^2})}} 
-\simeq 8\ \mathrm{cm}
-\end{equation}
+地阻值电阻器$r_d$的设计类似于问题8.5中研究过的泄放电阻器的设计。
+一个重要的不同时这个电阻器必须具有应对大功率而不是大能量的能力，因为这里的$I_m(t)$
+衰减的时间尺度是小时，至少是分钟，几乎不能是秒。
+对于和$R_D$同样的电阻器几何形状，在$w\gg \delta$时，$r_d$的两个设计式为：
+\begin{subequations}
+	\begin{align}
+r_d=&\frac{\rho\ell}{\omega\delta}\\
+r_dI_m(0)^2\simeq& 2\omega\ell g_{cv}
+	\end{align}
+\end{subequations}
+式中，$I_m(0)$是电阻器接入时刻磁体的电流，$g_{cv}$是电阻器表面的自然对流热通量[$W/m^2$]，假定为常数。
+电阻器表面通常处于静止空气(本例)或静止水池中---水池需要足够大，保证水能够吸收总的耗散能量而不产生明显的温升。
 
+方程8.78b表明，电阻器中产生的总焦耳热$r_d I_m(0)^2$和电阻器表面的总对流热释放平衡，在$w\gg \delta$时，
+近似为$2w\ell g_{cv}$。
+同时还注意到，$I_m(t)$假定其为常数，且等于8.78b中的$I_m(0)$---尽管实际它的缓慢衰减的。
+在两个方程中，解出$\ell$，得到：
+\begin{subequations}
+	\begin{align}
+\ell\simeq& r_dI_m(0)\sqrt{\frac{\delta}{2\rho g_{cv}}}\\
+\omega\simeq& I_m(0)\sqrt{\frac{\rho}{2\delta g_{cv}}}
+	\end{align}
+\end{subequations}
+
+$\ell$和$w$对这些参数的依赖性是可以理解的。
+
+\textbf{实例}\qquad 计算$\ell$和$w$：1)气冷电阻器；2)水冷电阻器。使用以下参数：
+$r_d=10\ \mathrm{m}\Omega$；$I_m(0)$=250 A；$\rho=10^{-6}\ \Omega$m；
+以及$\delta=250\times 10^{-6}$ m。
+尽管$g_{cv}$依赖于表面的温度和朝向以及冷却介质，这里我们队静止空气取$g_{cv}\simeq 20\ \mathrm{W/m^2}$，
+对静止水取$g_{cv}\simeq 20\ \mathrm{W/m^2}$。
+
+气冷\qquad 使用8.79a和8.79b，有：
+\begin{align*}% page521 第一个
+\ell&\simeq(0.01\Omega)(250\ \mathrm{A})\sqrt{\frac{(250\times 10^{-6}\ \mathrm{m})}{2(10^{-6}\ \mathrm{\Omega m})(20\ \mathrm{W/m^2})}} \\
+&\simeq 6.3\ \mathrm{m}\\
+\omega&\simeq(250\ \mathrm{A})\sqrt{\frac{(10^{-6}\ \mathrm{\Omega m})}{2(250\times 10^{-6}\ \mathrm{m})(20\ \mathrm{W/m^2})}} \\
+&\simeq 2.5\ \mathrm{m}
+\end{align*}
+
+可以看到，这个10 m$\Omega$的电阻器最开始必须承受625 W的总功率。
+满足上面两个条件的10 m$\Omega$的气冷电阻器可以造出，例如，
+使用50根钢条，每根250 $\mu$m厚，6.3m长和5 cm宽，电气上并联而成。
+
+水冷\qquad 
+
+\begin{align*}% page521第三个
+\ell&\simeq(0.01\Omega)(250\ \mathrm{A})\sqrt{\frac{(250\times 10^{-6}\ \mathrm{m})}{2(10^{-6}\ \mathrm{\Omega m})(20\times 10^3\ \mathrm{W/m^2})}} \\
+&\simeq 20\ \mathrm{cm}\\
+\omega&\simeq(250\ \mathrm{A})\sqrt{\frac{(10^{-6}\ \mathrm{\Omega m})}{2(250\times 10^{-6}\ \mathrm{m})(20\times 10^3\ \mathrm{W/m^2})}} \\
+&\simeq 8\ \mathrm{cm}
+\end{align*}
+
+可从8.79a和8.79b可以看出的，$\ell$和$w$随$g_{cv}$增加而趋向于0；
+不过，$\ell/w$无$g_{cv}$(和$r_d$)无关。
+于是，如果一个$I_m(0),g_{cv}$和$r_d$的组合给出$\ell$=5 cm和$w$=2 cm的过小的气冷设计值，
+一个“实用”的水冷版本更好：两个250 $\mu$m厚的钢条并联，各条25 cm长，5 cm宽。
 
 \subsection{讨论8.4：过热\& 内部电压判据}
 
