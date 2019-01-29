@@ -652,43 +652,48 @@ b) 通过将低温容器中液氦压力降低到12.6 torr，进行1.8 K测量。
 当样品取向如图5.17b时，相比于图5.17a的取向，由于液氦蒸发率增加，压力控制更加越困难。
 他的观察确实是否合理？试解释。
 
-c) The z-component of the external induction Be over the radial space occupied
-by the search coil may be approximated to vary as:
+c) 探测线圈检测到的外场$B_e$的$z$分量在整个径向空间可近似表示为：
 \begin{equation}%page333 第1个
 B_{e}(z)\simeq B_{e}(0)[1-c(\frac{z}{z_{o}})^{2}]\qquad(5.30)
 \end{equation}
-where z◦ = 75 mm. Based on information you have, compute the value of c.
+其中，$z_o$ = 75 mm。
+基于你有的信息，计算$c$值。 
 
 \subsubsection{问题5.1之解}
-a) 方程5.13表明搜索线圈需要平衡；否则，正比于外施磁场的那一项会对视在磁化作贡献。既然图5.8中给出的$−M(H)$迹线并非上翘，可见搜索线圈已经获得平衡。
+a) 方程5.13表明探测线圈需要平衡；否则，正比于外施磁场的那一项会对视在磁化作贡献。
+既然图5.8中给出的$−M(H)$迹线并非上翘，可见搜索线圈已经获得平衡。
 
 由方程5.14b有：
 \begin{align*}%page334 第1个
 V_{bg}(t)=(k-1)\mu_{o}N_{pc}A_{pc}\frac{dM}{dt}\tag{5.14b}
 \end{align*}
+
 由方程5.16c，我们有：
 \begin{align*}%page334 第2个
 \Delta V_{mz}=-f_{m}\frac{(k-1)\mu_{o}N_{pc}A_{pc}}{\tau_{it}}J_{c}a\tag{5.16c}
 \end{align*}
+
 我们有：$k$ = 0.5; $\tau_{it}$ = 1 s; $N_{pc}$ = 500; $A_{pc}$ = (13)(0.1 m)(2.6$\times 10^{−3}$ m) = 3.38$\times 10^{−3}\ \mathrm{m^2}$ 
 [(0.1 m)$\times$(38$\times 10^{−3}$ m) = 3.8$\times 10^{−3}\ \mathrm{m^2}$也是可以接受的]; $f_m$ =(NbTi体积)/(总体积)= $1/(\gamma_{c/s} + 1)$ = 0.25。
 
-\textbf{$J_c$的估计(4.2 K，2.5 T)}
+\textbf{$J_c$的估算(4.2 K，2.5 T)}
 
 从表5.1可知，在4.2 K和5 T时的$J_c$为$2.0\times 10^9\ \mathrm{A/m^2}$。
 在给定温度下，基于方程1.3获得$J_c(B_e)$的近似值是业界普遍接受的：
 \begin{align*}%page334 第3个
-2.0\times10^{9}\ \mathrm{A/m^{2}}=\frac{J_{0}B_{0}}{5T+0.3T}\Rightarrow J_{0}B_{0}=10.6\times 10^{9}\ \mathrm{AT/m^{2}}
+2.0\times10^{9}\ \mathrm{A/m^{2}}=\frac{J_{0}B_{0}}{5T+0.3T}\Rightarrow J_{0}B_{0}=10.6\times 10^{9}\ \mathrm{AT/m^{2}} \tag{S1.1}
 \end{align*}
 式中，对NbTi，$B_0\sim$ 0.3 T。$J_0$是零场下的临界电流密度——通常是很难测量的。
 于是，由5 T的$J_c$和$B_0$ = 0.3 T，我们首先可以得到$J_0 B_0$：
 \begin{align*}%page334 第4个
 2.0\times 10^{9}\ \mathrm{A/m^{2}}=\frac{J_{0}B_{0}}{5T+0.3T}\Rightarrow J_{0}B_{0}=10.6\times 10^{9}\ \mathrm{A/m^{2}}
 \end{align*}
+
 一旦获得了$J_0 B_0$，可以解出2.5 T时的$J_c$：
 \begin{align*}%page334 第5个
 J_{c}(2.5T)=\frac{10.6\times10^{9}\ \mathrm{AT/m^{2}}}{2.8T}=3.8\times 10^{9}\ \mathrm{A/m^{2}}
 \end{align*}
+
 向方程5.16c代入合适的值，有：
 \begin{align*}%page334 第6个
 \Delta V_{mz}&=-0.25\frac{(-0.5)(4\pi\times 10^{-7}\ \mathrm{H/m})(500)(3.38\times 10^{-3}\ \mathrm{m^{2}})}{1\ \mathrm{s}}\\
@@ -696,38 +701,36 @@ J_{c}(2.5T)=\frac{10.6\times10^{9}\ \mathrm{AT/m^{2}}}{2.8T}=3.8\times 10^{9}\ \
 &\simeq 50\ \mathrm{mV}
 \end{align*}
 
-Because the strip is flattened from a round conductor by a process that squeezes
-the conductor between rollers, the projected diameter of filaments in the direction
-parallel to Be would be actually slightly less than the equivalent circular-area
-radius, a = 50 $\mathrm{\mu m}$, which is used in the above computation for ΔVmz. If a radius
-less than 50 $\mathrm{\mu m}$is used, ΔVmz would be less than 50 mV.
+因为条带是使用圆导体经过挤压过程得到的，细丝直径在平行于$B_e$的方向实际上略小于等价
+圆截面半径，即上文用于计算$\Delta V_{mz}$的a = 50 $\mathrm{\mu m}$。
+ 如果使用小50 $\mathrm{\mu m}$的半径， $\Delta V_{mz}$将小于50 mV。
 
-b) The anisotropic shape of the NbTi filaments makes magnetization in the orientation
-of Fig. 5.17b greater than that in the orientation of Fig. 5.17a—the “effective”
-a is greater. Thus there will be more magnetization loss.
+b) NbTi细丝的各向异性的形状导致图5.17b取向下的磁化大于图5.17a取向下的磁化
+---因“有效”$a$更大。
+于是，会有更多大的磁化损耗。
 
-If the aspect ratio of the filaments is the same as for the conductor, eddy current
-loss will be proportional to$(a\.{H}_e)^2$in the orientation of Fig. 5.17b and$(b\.{H}_e)^2$
-in the orientation Fig. 5.17a—review PROBLEM 2.8. Thus eddy current loss is
-greater by a factor of (9.2/2.6)2 = 12.5 for Fig. 5.17b than for Fig. 5.17a.
+如果细丝的纵横比和导体一样，图5.17b中的涡流损耗将正比于$(a\.{H}_e)^2$，
+图5.17b中的会正比于$(b\.{H}_e)^2$---回顾问题2.8。
+于是，图5.17b的涡流损耗要比图5.17a情况大$(9.2/2.6)2 = 12.5$倍。
 
-The increased heat load on the helium due to higher magnetization and eddy
-current losses causes a higher liquid helium boil-off rate; thus the technician’s
-observation makes sense.
+因更高磁化损耗和涡流损耗为液氦带来的热负荷将导致更高的液氦蒸发率；
+所以，技术员的观察是有道理的。
 
-c) With balanced search coils, we have:
+c) 探测线圈平衡时，有：
 \begin{align*}%page335 第1个
 N_{pc}A_{pc}(\frac{d\tilde{B}_{e}}{dt})_{pc}=N_{sc}A_{sc}(\frac{d\tilde{B}_{e}}{dt})_{sc}\tag{S1.2}
 \end{align*}
-%Because Apc = Asc, we have: Npc[˜Be]pc = Nsc[˜Be]sc. From symmetry, we consider
-only the upper half (the unit mm is omitted in the following equations):
+
+因为$A_{pc} = A_{sc}$，我们有$N_{pc}[\tilde{B}_e]_{pc}=N_{sc}[\tilde{B}_e]_{sc}$。
+根据对称性，我们仅考虑上半部分(下面的问题中省去了单位mm)：
 \begin{align*}%page335 第2个
 [\tilde{B}_{e}]_{pc}=\frac{B_{e}(0)}{20}\int_{0}^{20}[1-c(\frac{z}{z_{0}})^{2}]dz\tag{S1.3a}
 \end{align*}
 \begin{align*}%page335 第3个
 [\tilde{B}_{e}]_{sc}=\frac{B_{e}(0)}{20}\int_{60}^{80}[1-c(\frac{z}{z_{0}})^{2}]dz\tag{S1.3b}
 \end{align*}
-The Npc%[˜Be]pc = Nsc[˜Be]sc equality gives:
+
+$N_{pc}[\tilde{B}_e]_{pc}=N_{sc}[\tilde{B}_e]_{sc}$等式给出：
 \begin{align*}%page335 第4个
 \frac{250}{20}\int_{0}^{20}[1-c(\frac{z}{z_{0}})^{2}]dz&=\frac{280}{20}\int_{60}^{80}[1-c(\frac{z}{z_{0}^{2}})]dz\\\tag{S1.4}
 250[20-\frac{c}{3}\frac{(20)^{3}}{(75)^{2}}]dz&=280[80-\frac{c}{3}\frac{(80)^{3}}{(75)^{2}}-60+\frac{c}{3}\frac{(60)^{3}}{(75)^{2}}]\\
@@ -737,55 +740,53 @@ c&\simeq\frac{600}{4793}\simeq 0.125
 
 
 \subsection{讨论5.5：磁扩散和热扩散}
-Before studying the flux jump criterion next in PROBLEM 5.2, we derive here basic
-equations of magnetic and thermal diffusion to identify two diffusivities: magnetic
-diffusivity, Dmg, and thermal diffusivity, Dth. The relative sizes of these two
-diffusivities are quite different for electrically conductive normal metals ($D_{th}\gg D_{mg}$) and for Type II superconductors ($D_{th}\ll D_{mg}$). This condition of $D_{th}\ll D_{mg}$
-in Type II superconductors makes the penetration of flux into a superconductor
-an adiabatic process, leading, as we shall study in PROBLEM 5.2, to the criterion
-for flux jumping.
+在进入问题5.2研究磁通跳跃判据之前，我们先推导定义磁扩散和热扩散的基本方程：
+磁扩散系数$D_{mg}$，热扩散系数$D_{th}$。
+两种扩散的相对大小在正常金属中($D_{th}\gg D_{mg}$)和第II类超导体中($D_{th}\ll D_{mg}$)很不同。
+第II类超导体中的$D_{th}\gg D_{mg}$使得磁通进入超导体为绝热过程，引起了磁通跳跃的判据，这将在问题5.2中研究。
 
-To derive the magnetic diffusion equation, the applicable Maxwell’s equations are
-Ampere’s law and Faraday’s law, both in differential forms:
+为了推导磁扩散方程，要用到微分形式的Maxwell方程的安培定律和法拉第定律：
 \begin{align*}%page336 第1个
-Ampere's\quad law:\quad \nabla\times\vec{H}=\vec{J}_{f}\tag{2.5}
+\mbox{安培定律}:\quad \nabla\times\vec{H}=\vec{J}_{f}\tag{2.5}
 \end{align*}
 \begin{align*}%page336 第2个
-Faraday's\quad law:\quad\nabla\times\vec{E}=-\frac{\partial\vec{B}}{\partial t}\tag{2.8}
+\mbox{法拉第定律}:\quad\nabla\times\vec{E}=-\frac{\partial\vec{B}}{\partial t}\tag{2.8}
 \end{align*}
-For the slab (width 2a) geometry, we can express Eqs. 2.5 and 2.8 as:
+
+对板状(宽度$2a$)几何，上面的方程改写为：
 \begin{equation}%page336 第3个
-Amperer's\quad law:\frac{\partial H_{y}}{\partial x}=J_{z}=\frac{E_{z}}{\rho_{e}}
+\mbox{安培定律}: \frac{\partial H_{y}}{\partial x}=J_{z}=\frac{E_{z}}{\rho_{e}}
 \end{equation}
 \begin{equation}%page336 第4个
-Faraday's\quad law:\frac{\partial E_{z}}{\partial x}=\frac{\partial B_{y}}{\partial t}=\mu_{o}\frac{\partial H_{y}}{\partial t}
+\mbox{法拉第定律}:\frac{\partial E_{z}}{\partial x}=\frac{\partial B_{y}}{\partial t}=\mu_{o}\frac{\partial H_{y}}{\partial t}
 \end{equation}
-where$\rho_e$is the material’s electrical resistivity. From Eqs. 5.31 and 5.32, we obtain:
-\begin{align*}%page336 第5个
-\rho_{e}\frac{\partial^{2}H_{y}}{\partial x^{2}}=\mu_{o}\frac{\partial H_{y}}{\partial t}
-\end{align*}
-\begin{equation}%page336 第6个
-\frac{\rho_{e}}{\mu_{o}}\frac{\partial^{2}H_{y}}{\partial x^{2}}\equiv D_{mg}\frac{\partial^{2}H_{y}}{\partial x^{2}}=\frac{\partial H_{y}}{\partial t}
-\end{equation}
-Equation 5.33 is a magnetic diffusion equation, for which:
+其中，$\rho_e$是材料的电阻率。根据方程5.31和5.32，我们有：i
+\begin{align}%page336 第5个
+\rho_{e}\frac{\partial^{2}H_{y}}{\partial x^{2}}&=\mu_{o}\frac{\partial H_{y}}{\partial t}\\\notag
+\frac{\rho_{e}}{\mu_{o}}\frac{\partial^{2}H_{y}}{\partial x^{2}}&\equiv D_{mg}\frac{\partial^{2}H_{y}}{\partial x^{2}}=\frac{\partial H_{y}}{\partial t}
+\end{align}
+
+方程5.33即磁扩散方程，其中：
 \begin{equation}%page336 第7个
 D_{mg}=\frac{{\rho}_{e}}{\mu_{o}}
 \end{equation}
-Similarly, the one-dimensional thermal diffusion equation having constant thermal
-properties is given by:
+
+类似的，热物性为常数的一维热扩散方程为：
 \begin{equation}%page336 第8个
 k\frac{\partial^{2}T}{\partial x^{2}}=C\frac{\partial T}{\partial t}
 \end{equation}
-where k and C are, respectively, the material’s thermal conductivity and heat
-capacity. Dividing both sides of Eq. 5.35a by C, we obtain:
+其中，$k$和$C$分别是材料的热导率和热容。
+方程5.35两侧分别除以$C$，有：
 \begin{align*}%page336 第9个
 \frac{k}{C}\frac{\partial^{2}T}{\partial x^{2}}\equiv D_{th}\frac{\partial^{2}T}{\partial x^{2}}=\frac{\partial T}{\partial t}\tag{5.35b}
 \end{align*}
-Equation 5.35b is a thermal diffusion equation, for which:
+
+方程5.35b即热扩散方程，其中：
 \begin{equation}%page336 第10个
 D_{th}=\frac{k}{C}\qquad(5.36)
 \end{equation}
-Note that Eq. 5.36 and 4.20 are equivalent, because$C=\rho c_p$
+
+我们注意到方程5.36和4.20是等价的，因为$C=\rho c_p$。
 
 \colorbox{red}{表5.2}
 
