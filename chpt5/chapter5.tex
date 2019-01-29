@@ -575,40 +575,34 @@ H_{p}&=(\frac{8}{3\pi})J_{c}(\frac{d_{f}}{2})
 \end{figure}
 
 \subsection{讨论5.4：磁化中的$J_c$}
-We demonstrate here how critical current density (Jc) data may be extracted
-from magnetization (M) data. This method of extracting Jc data from M data
-is quite useful when dealing with superconductor test samples too short for a
-standard voltage vs. current measurement technique. Test samples too small for
-V (I) measurement were common in the early days of HTS, and Bean’s model
-discussed above was extremely useful.
+我们在此说明如何从​​磁化$M$数据中提取临界电流密度$J_c$数据。
+当处理对于标准电压与电流测量技术而言太短的超导体样本时，
+这种从$M$数据中提取$J_c$数据的方法非常有用。
+在HTS发展的早期，测试样品因太小而不能进行$V(I)$测量，
+上面讨论的Bean模型非常有用。
 
-In a V (I) measurement the sample must be “long” to: 1) generate a detectable
-voltage with the very low electric field that defines the superconducting-to-normal
-transition—the typical criterion is between 0.1 to $1\ \mathrm{\mu V/cm}$; and 2) keep the contact
-resistance to the lead wires at each end of the test sample “low,” thereby preventing
-excessive heating at the ends which might cause a premature normal transition.
-The test samples should normally be at least 10mm long; perhaps under certain
-circumstances they can be as short as 5 mm, but not much shorter than this. It
-depends largely on the level of critical current.
+在$V(I)$测量中，样品必须够“长”以便：
+1) 产生极小但可检测的电场，该电场定义了超导-正常转变，典型值为0.1到1 $\mu$V/ cm之间；
+2) 保持测试样品两端的引线接触电阻足够“低”以防止可能导致过早正常转变的端部过热。
+试样通常应至少长10 mm；某些情况下可以短到不能更短的5 mm。
+最短长度在很大程度上取决于临界电流水平。
 
-Figure 5.8 presented the magnetization vs. applied field traces at 10 K, 20 K, and
-30K of a short length (15mm) of copper/MgB2 composite wire of an equivalent
-circular diameter of 1.038 mm[5.7]; the MgB2 itself has a diameter of 0.531 mm.
-Here, the unit of magnetization is given in emu/cm3 corresponding to the total
-wire diameter of 1.038 mm. The external field is along the wire axis, i.e., the same
-configuration as in DISCUSSION 5.3 Part 1. To compute the superconductor’s Jc,
-for example, at 10K in zero field, we treat the wire as a Bean rod of infinite length
-and 0.531mm diameter. First, we convert emu/cm3 into the SI unit equivalent,
-A/m, by multiplying it by 1000. (See Appendix I.)
+图5.8给出了10 K，20 K和30 K下的铜/$\mathrm{MgB_2}$复合线短样
+(15 mm长，$\mathrm{MgB_2}$本身直径为0.531 mm，当量直径1.038 mm)[5.7]的磁化强度 vs. 外施磁场曲线。
+这里，磁化单位以emu/$\mathrm{cm^3}$给出，对应直径为1.038 mm。
+外场沿导线轴向，与讨论5.3第1部分中条件相同。
+比如，为了计算超导体在零场、10 K下的的$J_c$，
+我们将导线视为0.531 mm的无限长Bean杆。
+首先，我们通过乘以系数1000将emu/$\mathrm{cm^3}$转换为SI单位(附录I)。
 
-At 10K in zero field, the magnetization, from Fig. 5.8, is 60 emu/cm3 or 60 kA/m.
-To translate this to M corresponding to the volume of just the MgB2, we must
-multiply 60 kA/m by (1.038/0.531)2 = 4.0. Solving Eq. 5.26 for Jc with M =
-240 kA/m and df =5.31×10−4 m, we obtain:
+由图5.8可知，在零场和10K时，磁化强度为60 emu/$\mathrm{cm^3}$60 kA/m。
+为了将其转换为仅对应于$\mathrm{MgB_2}$的体积的$M$，
+我们必须将60 kA/m乘以$(1.038/0.531)^2 = 4.0$。
+在$M$=240 kA/m，$d_f = 5.31\times10^{-4}$ m下解方程5.26，有：
 \begin{align*}%page331 第5个
 J_{c}(0\ \mathrm{T};10\ \mathrm{K})&=\frac{6\ \mathrm{M}(0\ \mathrm{T};10\ \mathrm{K})}{d_{f}}\\
 &=\frac{6(240\times10^{3}\ \mathrm{A/m})}{(0.531\times10^{-3}\ \mathrm{m})}\\
-&a=2.7\times10^{9}\ \mathrm{A/m^{2}}
+&=2.7\times10^{9}\ \mathrm{A/m^{2}}
 \end{align*}
 
 
