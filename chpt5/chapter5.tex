@@ -1,6 +1,6 @@
 \chapter{励磁}
 \section{引言}
-本章我们使用Bean于1962年提出的唯象磁化理论来讨论第II类超导体的磁化问题。如第一章指出的，对多数超导磁体应用所关注的磁场范围（$>\sim 0.5T$），第II类超导体
+本章我们使用Bean于1962年提出的唯象磁化理论来讨论第II类超导体的磁化问题。如第一章指出的，对多数超导磁体应用所关注的磁场范围（$>\sim 0.5$ T），第II类超导体
 处于混合态，即在超导态的“海”中还存在正常态的“岛”。当第II类超导体处于时变磁场或时变传输电流中时，这些岛中将产生耗散，体现为磁通跳跃（一种暂态现象）或交流损耗。
 所谓的Bean临界态模型，以闭式表达式阐明了消除磁通跳跃和最小化交流损耗的必要条件。
 
@@ -10,7 +10,7 @@
 \section{第II类超导体的Bean理论}
 \subsection{无传输电流}
 和很多成功的理论一样，Bean模型通过一些假设，可用简单的数学推导出闭式表达式，与实验结果取得了很好的一致性。在Bean模型中，超导体有最简单的几何结构——
-$x$方向宽度为$2a$，$y$和$z$向无限长。磁场（$H, B, M$）指向y向，而电流（$I, J$）在z向流动。在Bean模型中，$J=J_c$（临界电流密度），并假定其不依赖于磁场和温度。
+$x$方向宽度为$2a$，$y$和$z$向无限长。磁场（$H, B, M$）指向$y$向，而电流（$I, J$）在$z$向流动。在Bean模型中，$J=J_c$（临界电流密度），并假定其不依赖于磁场和温度。
 
 于是，磁场本构关系可以简化为下式：
 \begin{equation}
@@ -29,13 +29,13 @@ $x$方向宽度为$2a$，$y$和$z$向无限长。磁场（$H, B, M$）指向y向
 根据安培定律$\nabla \times H = J=J_c$，我们可以得到超导体内的磁场$H_s(x)$：
 \begin{subequations}
 \begin{align}
- H_s(x)&=0, & \mbox{x*\le x \le x+ }  \\
-H_s(x)&= H_e - J_c x, & \mbox{0\le x \le x* } \\
- H_s(x)&=H_e + J_c (x-2a), & \mbox{x+ \le x \le 2a}
+H_s(x)&=0,  \quad(x*\le x \le x+)  \\
+H_s(x)&= H_e - J_c x,  \quad(0\le x \le x* ) \\
+H_s(x)&=H_e + J_c (x-2a),  \quad(x+ \le x \le 2a)
 \end{align}
 \end{subequations}
 
-注意到，$H_s(x)$的斜率等于$J_c$，当$J_c$大于0时（z向，朝向纸面外）大于0，$J_c$小于0时小于0。$x*$和$2a-x^+$给出磁场的穿透程度，表示为
+注意到，$H_s(x)$的斜率等于$J_c$，当$J_c$大于0时（$z$向，朝向纸面外）大于0，$J_c$小于0时小于0。$x*$和$2a-x^+$给出磁场的穿透程度，表示为
 \begin{equation}
   x*=\frac{H_e}{J_c}
 \end{equation}
@@ -59,7 +59,7 @@ H_s(x)&= H_e - J_c x, & \mbox{0\le x \le x* } \\
   -M=H_e-\frac{H_e^2}{2H_p}，(0\le H_e \le H_p)
 \end{equation}
 
-超导体是抗磁性的，-M是它的磁化强度。
+超导体是抗磁性的，$-$M是它的磁化强度。
 
 随着外磁场的进一步增加，磁场将最终穿透整个板（$H_e\ge H_p$），根据$~{B}_s=H_e-H_p/2$，有
 \begin{equation}
@@ -168,7 +168,7 @@ $\~{H}_e$是磁场在各线圈内的空间平均值。
 
 其中，k是一个介于0-1的常数，表示分压计在初级线圈侧的分压系数（图5.7）。联立上两式，可得
 \begin{align}
-  V_{bg}(t)=&(k-1)\mu_0 N_{pc}A_{pc}\frac{dM}{dt}\\
+  V_{bg}(t)=&(k-1)\mu_0 N_{pc}A_{pc}\frac{dM}{dt}\\\notag
   &+(k-1)\mu_0 N_{pc}A_{pc}(\frac{d\~{H}_e}{dt})_{pc}+k\mu_0 N_{sc}A_{sc}(\frac{d\~{H}_e}{dt})_{sc}
 \end{align}
 
@@ -252,7 +252,7 @@ H_{s2_{3}}(s)&=H_{p}+J_{c}x=J_{c}a+J_{c}x\qquad&(x+\leq x\leq 2a)
 $H_{s1}(x+)=H_{s2_3}(x+)$：$x*=0.25a$，$x+=0.75a$。
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.6]{chpt5/figs/fig5.9.eps}
+	\includegraphics[scale=0.5]{chpt5/figs/fig5.9.eps}
 	\caption{在$H_e=2.5H_p$下的磁场特征。首先，$I_t$=0(点线)，然后$I_t=J_c a=I_c/2$(实线)，最后$I_t=2J_c a=I_c$(虚线)。}
 \end{figure}
 
@@ -323,9 +323,6 @@ A_{3}&=\frac{1}{2}(2a-x+)[H_{s2}(x+)+H_{s3}(2a)]\\
 &=-M(0)f_{1}(i)
 	\end{align}
 \end{subequations}
-\begin{align*}% page323 第4个
-
-\end{align*}
 式中，$f_1(i) = 1 − i$。$−M(i)$线性随$i$减小，当$i=1$时为零。 
 
 \textbf{B. 先通电流后加磁场}
