@@ -790,204 +790,190 @@ D_{th}=\frac{k}{C}\qquad(5.36)
 
 \colorbox{red}{表5.2}
 
-Table 5.2 presents approximate values of electrical and thermal properties and
-corresponding diffusivities at 4K and 80K for stainless steel and copper. From
-Table 5.2 we can clearly see that stainless steel, a stand-in for normal-state superconductors,
-and copper are opposite with respect to magnetic and thermal
-diffusivities. Specifically, changes in magnetic field propagate quickly through
-stainless steel, whereas temperature gradients are relatively slow to propagate;
-hence, large nonuniform temperature distributions can be created in stainless steel
-during changing magnetic fields. Physically, it means that magnetic heating happens
-essentially adiabatically in Type II superconductors. In copper, the reverse
-is true: the magnetic field diffuses very slowly, while any nonuniformity in temperature
-is quickly “evened out.” Therefore, copper in intimate contact with Type
-II superconductor can alleviate field-motion-induced instability in Type II superconductors.
-This thinking is the essence of dynamic stability, one of the stability
-criteria developed during the 1960s and 1970s [5.8] and applied also to HTS in the
-late 1980s [5.9].
+
+表5.2列出了不锈钢和铜在​​4 K和80 K时的电气和热物性以及相应的扩散系数的近似值。
+从表5.2中我们可以清楚地看到，
+不锈钢(用于近似正常态超导体)和铜在磁性和热扩散性方面是相反的。
+具体而言，磁场的变化在不锈钢中传播快，而温度梯度的传播相对较慢；
+因此，在磁场变化期间，锈钢中将产生很大的不均匀温度分布。
+物理上看，这意味着在第II类超导体中的磁加热基本是绝热进行的。
+在铜中，情况正好相反：磁场扩散非常缓慢，而温度的任何不均匀性都很快“被均化”。
+因此，与第II类超导体紧密接触的铜可以减轻第II类超导体因磁场变化引起的不稳定性。
+这种考虑是动态稳定性的本质，是1960和1970年代发展起来的稳定性标准之一[5.8]，
+也适用于1980年代后期的HTS [5.9]。
 
 \subsection{问题5.2：磁通跳跃判据}
-This problem deals with the derivation of the critical conductor size above which
-flux jumping will occur. Flux jumping was once a major source of instabilities in
-the first superconducting magnets of engineering significance in the early 1960s
-[5.10]. Flux jumping is a thermal instability peculiar to a Type II superconductor
-that permits the magnetic field to penetrate its interior. A time-varying magnetic
-field,$\.{H}_e$, at the conductor surface induces an electric field$\vec{E}$in the conductor,
-which interacts with the supercurrent (density Jc). This$\vec{E}\cdot \vec{J}_c$interaction heats
-the conductor. Since Jc decreases with temperature, the field (flux) penetrates
-further into the conductor, generating more heat, which further decreases Jc. The
-field penetration and temperature rise can cascade until the conductor loses its
-superconductivity. This thermal runaway event is called a flux jump.
+本问题推导产生磁通跳跃的导体的临界导尺寸。
+1960年代早期，磁通跳跃曾经是第一个具有工程意义的超导磁体的不稳定性的主要来源[5.10]。
+ 磁通跳跃是允许磁场穿透其内部的第II类超导体特有的热不稳定性，
+ 导体表面上的时变磁场$\.{H}_e$在导体内感应出电场$\vec{E}$，
+ 电场与超导电流(密度$J_c$)相互作用($\vec{E}\cdot \vec{J}_c$)会加热超导体。
+由于$J_c$随温度升高而降低，磁场(磁通量)进一步进入到超导体中，产生更多热量，这又进一步降低$J_c$。
+ 场穿透和温升可以交叠，直到超导体失去其超导电性。 这种热失控事件称为磁通跳跃。
 
-a) Using the Bean model and computing the $\vec{E}\cdot \vec{J}_c$ interaction over the positive
-half (0 ≤ x ≤ a) of the slab, show that an expression for the dissipative energy
-density,$e_\phi$[J/m3], generated within the slab when the critical current density
-Jc is suddenly decreased by |ΔJc| is given by:
+
+a) 使用Bean模型，计算板正半部分($0\le x\le a$)的$\vec{E}\cdot \vec{J}_c$，
+证明在临界电流密度$J_c$突然减掉$|\Delta J_c|$时，，板内部耗散能量密度$e_\phi$[J/m3]为：
 \begin{equation}%page338 第1个
 e_{\phi}=\frac{\mu_{o}J_{c}|\Delta J_{c}|a^{2}}{3}
 \end{equation}
-Note that the entire slab is in the critical state with its surface (±a) exposed
-to an external field of$H_e\vec{i}_y$.
 
-b) Derive Eq. 5.37 by computing the Poynting energy flow into the slab at x = a
-and equating it with the change in magnetic energy storage and dissipation
-energy$E_\phi$in the positive half of the slab.
+我们注意到，处于临界态的整个板的表面($\pm a$)暴露于外场$H_e\vec{i}_y$中。
 
-c) To relate ΔJc to an equivalent temperature rise in the conductor, we may
-assume a linear temperature dependence for Jc(T):
+b) 通过计算流入板$x=a$处的Poynting能流，并令之与板的正半部分的储存和耗散能量$\mathcal{E}_\phi$相等
+推导出5.37。 
+
+c) 为了将$\Delta J_c$与导体的等效温升联系起来，我们可以假设$J_c(T)$与温度为线性关系：
 \begin{equation}%page338 第2个
 J_{c}(T)=J_{c_{o}}(\frac{T_{c}-T}{T_{c}-T_{op}})
 \end{equation}
-where Jc◦ is the critical current density at the operating temperature Top. Tc
-is the critical temperature at a given magnetic induction B◦. From Eq. 5.38,
-ΔJc in Eq. 5.37 may be related to an equivalent temperature rise ΔT:
+其中，$J_{c_o}$是运行温度$T_{op}$下的临界电流密度。
+$T_c$是给定磁场$B_{o}$下的临界温度。
+由5.38，方程5.37中的$\Delta J_c$可以与等效温升$\Delta T$联系起来：
 \begin{equation}%page338 第3个
 \Delta J_{c}=-J_{c_{o}}(\frac{\Delta T}{T_{c}-T_{op}}
 \end{equation}
-Now, by requiring that $\Delta T_s=e_\phi/\~{C}_s\le \Delta T$, where$\~{C}_s$is the superconductor’s
-average heat capacity [J/m3 K] in the range from Top to Tc, show thermal
-stability implies a critical slab half width ac of:
+现在，通过要求 $\Delta T_s=e_\phi/\~{C}_s\le \Delta T$，说明
+热稳定性要求板的临界宽度$a_c$为下式。其中，$\~{C}_s$是超导体在温度$T_{op}$和$T_c$之间
+的平均热容：
 \begin{equation}%page338 第4个
 a_{c}=\sqrt{\frac{3\tilde{C}_{s}(T_{c}-T_{op})}{\mu_{o}J_{c_{o}}^{2}}}
 \end{equation}
 
 
 \subsubsection{问题5.2之解}
-a) Because of symmetry about x = 0, we
-shall consider only one half of the slab, between
-x = 0 and x = a. As illustrated in Fig. 5.18,
-the solid line corresponds to Hs1(x), which
-gives the initial field distribution within the
-slab, with J =Jc. The dotted line corresponds
-to Hs2(x) for the slab carrying Jc−|ΔJc|. Note
-that the field at the surface is He in both cases.
-We thus have:
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[scale=0.5]{chpt5/figs/fig5.18.eps}
-	\caption{磁场特征。}
-\end{figure}
-
+a) 因为关于$x=0$对称，我们仅考虑板在$x=0$和$x=a$之间的部分。
+如图5.18所示，实线对应$H_{s1}(x)$，它给出了在$J=J_c$下板内的初始场分布。
+点线对应板载流为$J_c-|\Delta J_c|$时的$H_{s2}(x)$。
+注意到两种情况下，在表面上磁场均为$H_e$。于是我们有：
 \begin{align*}%page339 第1个
 H_{s1}(x)=H_{e}+J_{c}(x-a)\tag{S2.1a}
 \end{align*}
 \begin{align*}%page339 第2个
 H_{s2}(x)=H_{e}+(J_{c}-| \Delta J_{c}|)(x-a)\tag{S2.1b}
 \end{align*}
-Because there is a change in magnetic field
-within the slab, an electric field$\vec{E}$is generated,
-which from Faraday’s law of induction is
-given by:
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.5]{chpt5/figs/fig5.18.eps}
+	\caption{磁场特征。}
+\end{figure}
+
+因为板内有磁场的变化，将产生电场$\vec{E}$。根据Faraday感应定律，有：
 \begin{align*}%page339 第3个
 \oint_{C}\vec{E}\cdot d\vec{s}=-\mu_{o}\int_{S}\frac{\triangle H_{s}(x)\vec{\imath}_{y}\cdot d\vec{A}}{\Delta t} \tag{S2.2}
 \end{align*}
-From symmetry we have$\vec{E}(x = 0) = 0$ and$\vec{E}$points in the z-direction. ΔHs(x)
-is given by:
+
+根据对称性，我们有$\vec{E}(x = 0) = 0$，$\vec{E}$指向$z$向。
+$\Delta H_s(x)$由下式给出：
 \begin{align*}%page339 第4个
 \Delta H_{s}(x)&=H_{s2}(x)-H_{s1}(x)\\
 &=|\Delta J_{c}|(a-x)\tag{S2.3}
 \end{align*}
+
 联立方程S2.2和S2.3，有：
 \begin{align*}%page339 第5个
 E_{z}(x)&=\mu_{o}\frac{|\Delta J_{c}|}{\Delta t}\int_{0}^{x}(a-x)dx\\
 &=\mu_{o}\frac{|\Delta J_{c}|}{\Delta t}(ax-\frac{x^{2}}{2})\tag{S2.4}
 \end{align*}
-Dissipation power density, p(x), is given by Ez(x)Jc; the total energy density per
-unit length dissipated in the slab or per unit slab surface area in the y-z plane,$E_\phi$
-[J/m2], is given by:
+
+耗散能量密度$p(x)$为$E_z(x)J_c$；
+板内耗散的单位长度能量密度或$y-z$平面上的单位表面积能量密度$\mathcal{E}_\phi[\mathrm{J/m^2}]$]为：
 \begin{align*}%page339 第6个
 \varepsilon_{\phi}&=\int_{0}^{a}p(x)\Delta tdx\\
 &=\mu_{o}J_{c}|\Delta J_{c}|\int_{0}^{a}(ax-\frac{x^{2}}{2})dx=\frac{\mu_{o}J_{c}|\Delta J_{c}|a^{3}}{3}\tag{S2.5}
 \end{align*}
-The average dissipation energy density,$e_\phi$ is given by$E_\phi/a$:
+
+平均耗散能量密度$e_\phi$由$\mathcal{E}_\phi/a$ 给出：
 \begin{align*}%page339 第7个
 e_{\phi}=\frac{\mu_{o}J_{c}|\Delta J_{c}|a^{2}}{3}\tag{5.37}
 \end{align*}
 
-b) The Poynting energy flux [J/m2] in the y-z plane into the slab (in the −xdirection)
-at x = a is equal to the change in magnetic energy storage flux ΔEm
-[J/m2] and dissipation energy flux$E_\phi$ in the slab. Thus:
+b) $y-z$平面上在$x=a$处进入板($+x$方向)的Poynting能流
+等于板内储存的磁能$\delta E_m$的变化量和板内耗散的能流$\mathcal{E}_\phi$： 
 \begin{align*}%page340 第1个
 \int S_{x}(a)dt=\Delta E_{m}+\varepsilon_{\phi}\tag{S2.6}
 \end{align*}
+
 通过在$x=a$处计算$\vec{S}=\vec{E}\times\vec{H}$可以确定$\vec{S}$的方向。在$x=a$处，
 $\vec{H}=H_e \vec{i_y}$；由方程S2.4得到的$E_z(x)$，可得：
 \begin{align*}%page340 第2个
 E_{z}(a)=\mu_{o}\frac{|\Delta J_{c}|a^{2}}{2\Delta t}\tag{S2.7}
 \end{align*}
+
 于是：
 \begin{align*}%page340 第3个
 \vec{S}(a)=\mu_{o}\frac{|\Delta J_{c}|a^{2}}{2\Delta t}\vec{\imath}_{z}\times H_{e}\vec{\imath}_{y}=-\mu_{o}\frac{H_{e}|\Delta J_{c}|a^{2}}{2\Delta t}\tag{S2.8}
 \end{align*}
-As expected,$\vec{S}(a)$points in the −x-direction; energy indeed flows into the slab.
-Thus:
+
+如我们所料，$\vec{S}(a)$指向$−x$向；能流流入板内。于是：
 \begin{align*}%page340 第4个
 \int S_{x}(a)dt=\mu_{o}\frac{H_{e}|\Delta J_{c}|a^{2}}{2}\tag{S2.9}
 \end{align*}
-The difference in magnetic energy flux ΔEm in the slab is given by:
+
+板内磁能通量的差值$\Delta E_m$为：
 \begin{align*}%page340 第5个
 \Delta E_{m}&=\frac{\mu_{o}}{2}\int_{0}^{a}[H_{s2}^{a}(x)-H_{s1}^{2}(x)]dx\\\tag(S2.10)
 &=\frac{\mu_{o}}{2}\int_{0}^{a}\{[H_{e}+(J_{c}-|\Delta J_{c}|)(x-a)]^{2}-[H_{e}+J_{c}(x-a)]^{2}\}dx\\
 &=\frac{\mu_{o}}{2}\int_{0}^{a}[-2H_{e}|\Delta J_{c}|(x-a)-2J_{C}|\Delta J_{c}|(x-a)^{2}+|\Delta J_{c}|^{2}(x-a)^{2}]dx
 \end{align*}
-Neglecting the |ΔJc|2 term in the above integral, we obtain:
+
+忽略上面的积分中的$|\Delta J_c|^2$项，有：
 \begin{align*}%page340 第6个
 \Delta E_{m}=\mu_{o}(\frac{H_{e}|\Delta J_{c}|a^{2}}{2}-\frac{J_{c}|\Delta J_{c}|a^{3}}{3})\tag{S2.11}
 \end{align*}
-From Eq. S2.6, we have:
+
+从S2.6，我们有：
 \begin{align*}%page340 第7个
 \varepsilon_{\phi}=\int S_{x}(a)dt-\Delta E_{m}\tag{S2.12}
 \end{align*}
-Combining Eqs. S2.9, S2.11, and S2.12, we obtain:
+
+联立S2.9，S2.11和S2.12，我们得到：
 \begin{align*}%page340 第8个
 \varepsilon_{\phi}&=\mu_{o}\frac{H_{e}|\Delta J_{c}|a^{2}}{2}-\mu_{o}(\frac{H_{e}|\Delta J_{c}|a^{2}}{2}-\frac{J_{c}|\Delta J_{c}|a^{3}}{3})\\
 &=\mu_{O}\frac{J_{c}|\Delta J_{c}|a^{3}}{3}\tag{S2.13}
 \end{align*}
-Equation S2.13 leads directly to Eq. 5.37:
+方程S2.13直接可以导出5.37：
 \begin{align*}%page340 第9个
 e_{\phi}=\frac{\varepsilon_{\phi}}{a}=\frac{\mu_{o}J_{c}|\Delta J_{c}|a^{2}}{3}\tag{5.37}
 \end{align*}
 
-c) As given by Eq. 5.38, Jc(T) is a decreasing function of temperature. We thus
-have:
+c)  5.38已给出，$J_c(T)$是随温度增加而减小的。于是，我们有
 \begin{align*}%page341 第1个
 \Delta J_{c}=-J_{c_{c}}(\frac{\Delta T}{T_{c}-T_{op}})\tag{5.39}
 \end{align*}
-From Eq. 5.39, we have:
+
+由5.39，得：
 \begin{align*}%page341 第2个
 |\Delta J_{c}|=\frac{J_{c_{o}}\Delta T}{T_{c}-T_{op}}\tag{S2.14}
 \end{align*}
-Replacing Jc with Jc◦ in Eq. 5.37 and combining it with Eq. S2.14, we obtain:
+
+在方程5.37中，使用$J_{c_o}$代替$J_c$。与S2.14联立，得到：
 \begin{align*}%page341 第3个
 e_{\phi}=\frac{\mu_{o}J_{c_{o}}^{2}\Delta T a^{2}}{3(T_{c}-T_{op})}\tag{S2.15}
 \end{align*}
-Note that$e_{\phi}$is proportional not only to ΔT but also, more importantly, to a2.
-Under adiabatic conditions, the dissipation energy density$e_{\phi}$increases the superconductor’s
-temperature by ΔTs, given by:
+
+注意到，$e_{\phi}$不仅正比于$\Delta T$，而且正比于$a^2$(更重要)。
+在绝热条件下，耗散能量密度$e_{\phi}$引起超导体温度升高$\Delta T_s$：
 \begin{align*}%page341 第4个
 \Delta T_{s}=\frac{e_{\phi}}{\tilde{C}_{s}}>0\tag{S2.16}
 \end{align*}
-$\tilde{C}_{s}$is the superconductor’s average heat capacity [J/m3 K] in the temperature
-range from Top to Tc. Combining Eqs. S2.15 and S2.16, and requiring ΔTs < ΔT
-for thermal stability, we have:
+其中，$\tilde{C}_{s}$是超导体在温度$T_{op}$到$T_c$之间的平均热容。
+联立S2.15和S2.16，热稳定要求$\Delta T_s <\Delta T$，于是有：
 \begin{align*}%page341 第5个
 \frac{\Delta T_{s}}{\Delta T}<\frac{\mu_{o}J_{c_{o}}^{2}a^{2}}{3\tilde{C}_{s}(T_{c}-T_{op})}\tag{S2.17}
 \end{align*}
-For a given superconducting material and operating temperature, a is the only
-parameter that can be varied by the magnet designer to satisfy Eq. S2.17. That
-is, thermal stability can be satisfied only if the slab half-width a is less than the
-critical size ac, given by:
+
+对一个给定的超导材料和运行温度，$a$是用以满足S2.17的唯一可变的磁体设计参数。
+也即，热稳定性仅在板的半宽度$a$小于临界尺寸$a_c$时才能满足：
 \begin{align*}%page341 第6个
 a_{C}=\sqrt{\frac{3\tilde{C}_{s}(T_{c}-T_{op})}{\mu_{o}J_{c_{o}}^{2}}}\tag{5.40}
 \end{align*}
-Equation 5.40 is applied to compute approximate values of ac for NbTi (LTS) operating
-at 4.2K and YBCO (HTS) operating at 77.3 K. Table 5.3 lists approximate
-values of parameters appearing in Eq. 5.40 for both superconductors.
 
-We may conclude that for a circular filament of NbTi, ac=140 $\mu m$means a critical
-diameter of ∼300 $\mu m$(Eq. 5.29) and a coated YBCO tape of width 8 mm.
+将方程5.40应用于计算运行于4.2 K的NbTi和运行于77.3 K的YBCO的近似$a_c$值。
+ 表5.3列出了上述两种超导体与方程5.40有关的近似参数。
 
+我们可以得到如下结论：NbTi圆形细丝，$a_c=140\ \mathrm{\mu m}$意味着临界直径为
+$\sim 300\ \mathrm{\mu m}$；对图层YBCO带材，临界宽度为8 mm。
 
 \colorbox{red}{表5.3}
 
