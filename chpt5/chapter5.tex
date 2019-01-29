@@ -1132,174 +1132,165 @@ e) 计算临界电流为100 A的0.2 $\mu$m细丝所要求的微丝数量。
 和d)使用相同的参数值。
 
 \subsubsection{问题5.4之解}
-a) From Faraday’s law, applied under the quasi-static assumption, we have:
+a) 根据Faraday定律，在准静态假设下，有：
 \begin{align*}%page346 第1个
 \frac{\partial E_{1y}}{\partial x}-\frac{\partial E_{1x}}{\partial y}=-\mu_{o}\dot{H}_{0z}\tag{S4.1}
 \end{align*}
-Because$\vec{E}$is zero in the superconducting slabs, Ey = 0 at x = ±w, forcing E1y = 0
-everywhere in the copper slab. Thus:
+
+因为在超到板中$\vec{E}$为零，即在$x =\pm w$时有$E_y = 0$。这会迫使在铜板内处处$E_{1y} = 0$。
+所以：
 \begin{align*}%page346 第2个
 E_{1x}=\mu_{o}\dot{H}_{0z}y\tag{5.42}
 \end{align*}
 
-b) Once the E field is known, the current density Jcu in the copper slab is given
-by: Jcu = E1x/ρcu. The net current flowing in the copper from one superconducting
-slab to the other over half the conductor length is given by:
+b) 电场E已知后，铜板中的电流密度$J_{cu}$由下式给出：$J_{cu} = E_{1x}/\rho_{cu}$。
+在导体长度的一半上，从一个超到板经铜板流入另一个超到板的净电流为：
 \begin{align*}%page346 第3个
 I_{cp}=\int_{0}^{\ell}J_{cu}dy=\frac{\mu_{o}\dot{H}_{0z}}{\rho_{cu}}\int_{0}^{\ell}ydy=\frac{\mu_{o}\dot{H}_{0z}\ell^{2}}{2\rho_{cu}}\tag{5.43}
 \end{align*}
 
-c) Equating Icp given by Eq. 5.43 with Jcdf and solving for$\ell_c$, we have:
+c) 令5.43给出的$I_{cp}$与$J_c d_f$相等，解出$\ell_c$，我们有：
 \begin{align*}%page346 第4个
 \ell_{c}=\sqrt{\frac{2\rho_{cu}J_{c}d_{f}}{\mu_{o}\dot{H}_{0z}}}\tag{5.44}
 \end{align*}
 
-d) Inserting appropriate values into Eq. 5.44, we obtain:
+d) 向5.44中代入合适的值，有：
 \begin{align*}%page346 第4个
 \ell_{c}=110\ \mathrm{\mu m}
 \end{align*}
-In typical submicron strands, the twist pitch length is thus ∼100$\mu m$. This means
-that the diameter of such strands, by mechanical requirements, should be ∼1$\mu m$;
-actually a thermal-magnetic stability criterion, similar to the flux jump criterion,
-requires it to be even smaller than 1$\mu m$. This is because the strands, to reduce
-coupling losses, use Cu-Ni alloys as the matrix materials, resulting in a magnetic
-diffusion time constant that is smaller than the thermal diffusion time constant.
 
-e) Critical current (Ic), critical current density (Jc), filament number (Nf ) and
-diameter (df ) in a multifilamentary conductor are related by:
+于是，在典型的微丝中绞合长度为$\sim$100 $\mu$m。
+这意味着出于机械性要求，细丝直径应该$\sim$1 $\mu$m；
+实际上，一个类似于磁通跳跃标准的热-磁稳定性标准要求它甚至要比$\sim$1 $\mu$m还细。
+这是由于为了降低耦合损耗，细丝使用了Cu-Ni合金作为基底材料，导致磁扩散时间常数
+小于热扩散时间常数。
+
+e) 临界电流($I_c$)，临界电流密度($J_c$)，细丝数 ($N_f$ )和直径($d_f$)通过下式联系在一起：
 \begin{align*}%page346 第4个
 I_c=N_f\frac{\pi d_f^2}{4} J_c \tag{S4.2}
 \end{align*}
-Solving for Nf from Eq. S4.2 with appropriate values of parameters, we obtain:
+
+向S4.2代入合适的参数，解出$N_f$：
 \begin{align*}%page346 第5个
 N_{f}&=\frac{4I_{c}}{\pi d_{f}^{2}J_{c}}=\frac{4(100A)}{\pi(0.2\times10^{-6}m)^{2}(2\times10^{9}A/m^{2})}\\
 &=1.6\times 10^{6}
 \end{align*}
-In submicron strands, the number of filaments may approach ten million.
+
+为微丝导体中，微丝的数量要求接近1000万。
 
 
 
 \subsection{问题5.5：导体磁化}
-This problem illustrates the effect of filament size and twisting on magnetization.
-In the late 1960s, three NbTi composite superconductors of equal volume were
-subjected to magnetization measurements [5.12]. Conductors 1, 2, and 3, respectively,
-are: twisted multifilamentary wire with a twist pitch length$\ell_{p1}$; twisted
-multifilamentary wire with a twist pitch length$\ell_{p2}>\ell_{p1}$; and a monofilament.
+本问题示例了细丝的尺寸各绞绕对磁化的影响。
+1960年代末，对同体积的三种NbTi复合导体进行了磁化测量[5.12]。
+导体1,2，和3分别是：绞合的多丝线，节距长度$\ell_{p1}$；绞合的多丝线，节距长度$\ell_{p2}>\ell_{p1}$；
+单丝。
 
+图5.21给出的三种NbTi导体的磁化曲线对应，标记为A，B和C。
+各导体置于图中用箭头标识的磁场脉冲中。
+曲线A，B和C不一定分别对应导体1，2和3。
+注意曲线B($B_1,B_2,B_3$)显示了磁场扫描速度的影响；
+曲线C与磁场扫描速度无关；
+曲线A也与磁场扫描速度无关，但显示了磁场脉冲引起的部分磁通跳跃。
 
-Figure 5.21 presents three magnetization curves, labeled A, B, and C, for the
-three NbTi composite conductors. Each conductor was subjected to field pulses
-indicated by arrows in the figure. Traces A, B, and C do not necessarily correspond
-to Conductors 1, 2, and 3, respectively. Note that Traces B (B1, B2, B3) show a
-dependence on field sweep rate; Trace C is independent of field sweep rate; Trace
-A also is independent of field sweep rate, but shows “partial” flux jumps induced
-by the field pulses.
+a) 指出各曲线分别对应哪个导体。
 
-a) Identify which magnetization trace corresponds to which conductor.
+b) 估算单丝导体与多丝导体的直径比。
 
-b) Estimate the ratio of filament diameter in the monofilament conductor to
-that in the multifilament conductors.
-
-c) Estimate the value of$\ell_{p2}$. Take Jcdf = 4×104 A/m for Conductors 1 and 2.
-Also comment on$\ell_{p1}$.
+c) 估算$\ell_{p2}$。导体1和2的$J_cd_f = 4\times 10^4$ A/m。
+同时评价$\ell_{p1}$。
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.4]{chpt5/figs/fig5.21.eps}
-	\caption{导体1,2,3的磁化迹线}
+	\caption{导体1,2,3的磁化曲线。}
 \end{figure}
 
 
 \subsubsection{问题5.5之解}
-a) Note that Traces A and C are independent of field sweep rate and that the
-corresponding magnetization—an indication of filament diameter—is much greater
-for Trace A than that for Trace C. We therefore conclude that Trace A is for
-Conductor 3 (monofilament) and that Trace C is for Conductor 1 ($\ell_{p1}$). That
-leaves Trace B for Conductor 2 ($\ell_{p2}$). (Remember that each conductor has the
-same volume of NbTi superconductor, and thus its measured magnetization should
-be directly proportional to filament diameter.)
+a) 曲线A和C与磁场扫描速率无关，对应的磁化---
+可以反映出细丝直径---A比C更大。
+因此，可以得出，曲线A对应导体3(单丝)，曲线C对应导体1($\ell_{p1}$).。
+另一个曲线B则为导体2 ($\ell_{p2}$)。 (各导体体积相同，于是，测到的磁化应该直接正比于细丝直径。)
 
-b) The ratio of magnetization width, ($M(H_e\uparrow) − M(H_e\downarrow)$) of Conductor 3
-(monofilament, Trace A) to that of Conductor 1 (Trace C), is roughly 10 for μ◦He
-below ∼1T (10 kilo-oersted). Therefore, we conclude that the filament diameter
-ratio is roughly 10.
+b) 导体3的磁化宽度($M(H_e\uparrow) − M(H_e\downarrow)$，曲线A) 与导体1的(曲线C)之比
+在$\mu_o H_e$小于$\sim 1$ T时，约为10.
+因此，我们的结论是细丝直径比约为10。
 
-c) Because a field sweep-rate of 900 oersted/sec ($\mu_0 \.{H}_{0z}$= 0.09 T/s) makes the
-magnetization of Conductor 2 (Trace B3) nearly equal to that of Conductor 3
-(Trace A), we may conclude that this sweep rate makes Conductor 2’s filament
-twist pitch length$\ell_{p2}$critical. Thus from Eq. 5.44:
+c) 因为在900 oersted/s ($\mu_0 \.{H}_{0z}$= 0.09 T/s) 的磁场扫描速度下，导体2的曲线$B_3$
+与导体3的曲线A近似相等，于是，我们得到这个磁场扫描速率对应导体2的细丝临界节距$\ell_{p2}$。
+于是，由方程5.44得：
 \begin{align*}%page348 第1个
 \ell_{p2}=2\sqrt{\frac{2\rho_{cu}J_{c}d_{f}}{\mu_{o}\dot{H}_{0z}}} \tag{S5.1}
 \end{align*}
-代入$\rho_{cu}= 2\times 10^{−10}\ \mathrm{\Omega m}$%; Jcdf = 4×104 A/m; and μ◦ ˙H0z = 0.09 T/s, we obtain:
+
+代入$\rho_{cu}= 2\times 10^{−10}\ \mathrm{\Omega m}$；
+$J_cd_f = 4\times 10^4$ A/m；
+以及$\mu_o \.{H}_{0z}$= 0.09 T/s，我们得到：
 \begin{align*}%page348 第2个
 \ell_{p2}&=2\sqrt{\frac{(2)(2\times 10^{10}\ \mathrm{\Omega m})(4\times 10^{4}\ \mathrm{A/m})}{0.09\ \mathrm{T/S}}}\\
 &=2.7\times 10^{-2}\ \mathrm{m}=27\ \mathrm{mm}
 \end{align*}
-This value is close enough to the actual twist pitch of 10 mm. Because the magnetization
-of Conductor 1 (Trace C) at a sweep rate of 320 oersted/sec is considerably
-smaller than that of Conductor 2 for the same field sweep rate, we conclude that$\ell_{p1}$is significantly shorter than$\ell_{p2}$
+
+这个值与实际节距值10 mm很接近。
+因为导体1在扫描速率320 oersted/s下的磁化远小于导体2在同等磁场扫描速率下的值，我们
+得到$\ell_{p1}$远小于$\ell_{p2}$。
 
 \subsection{讨论5.6：换位}
-An important implication of the condition Icp = Jcdf , used to derive Eq. 5.44
-(PROBLEM 5.4), is that the two superconducting slabs are electrically coupled.
-Were the conductor length substantially shorter than$2\ell_{c}$, on the other hand, the
-two would be decoupled. In reality, these slabs may be decoupled, even if each one
-is much longer than$2\ell_{c}$, if they are alternated in their positions with a pitch length
-less than$2\ell_{c}$. In multifilamentary conductors, we can achieve partial decoupling
-by twisting the wires with a pitch length$\ell_p\ll 2\ell_{c}$;$2\ell_{c}$must be small when$\.{H}_{0z}$is large. Note that in a twisted conductor each filament remains at a fixed radial
-distance from the strand axis. By contrast, in a cable of transposed strands, more
-complete decoupling is possible, because when strands are transposed each strand
-is made to occupy every radial position across the cable diameter as it spirals along
-the cable’s transposition length.
+
+推导5.44的条件$I_{cp} = J_c d_f$的一个重要内涵是两个超导板是电气耦合的。
+换句话说，如果导体长度远小于$2\ell_{c}$，两导体将解耦。
+实际上，哪怕各板长度远长于$2\ell_{c}$，只要他们以小于$2\ell_{c}$的节距换位，也能解耦。
+在多丝导体中，我们通过以$\ell_p\ll 2\ell_{c}$的节距绞合细丝实现部分解耦；
+$2\ell_{c}$在$\.{H}_{0z}$大的时候足够小。
+注意到，一个绞合导体中，各细丝从保持一个与轴固定的径向距离。
+反过来，在一个换位股线的电缆中，可以实现更彻底的解耦，因为当股线换位时，
+各股线在电缆的螺旋时，会占据电缆直径上的每一个径向位置。
 
 
 \subsection{讨论5.7：HTS中的磁通跳跃？}
-\textbf{A. “完全”磁通跳跃的尺度判据}
+\subsubsection*{A. “完全”磁通跳跃的尺度判据}
 
-The conductor size criterion (Eq. 5.40) was originally derived for LTS in the limit
-$\Delta e_\phi/\Delta T=C_s$, where Cs is the superconductor heat capacity per unit volume,
-assumed constant. Because in LTS, the temperature excursion in a complete flux
-jump, i.e., Tc−Top, is small, this size criterion is adequate.
+LTS的导体尺寸标准(方程5.40)最初是在$\Delta e_\phi/\Delta T=C_s$极限下得到的，
+其中，$C_s$导体单位体积的热容，假定为常数。
+因为LTS中，在一个完全的磁通跳跃下，温度漂移$T_c−T_{op}$很小，
+这个尺寸判据足够了。
 
-A general condition for suppression of flux jumping, under adiabatic conditions, is
-that the superconductor’s magnetic energy must be less than its thermal density.
-Under adiabatic conditions a flux jump can proceed to completion only if the
-initial magnetic energy density at $T_{op}, e_\phi(T_{op})$, exceeds the thermal energy density
-required to heat the superconductor from Top to Tc:
+在绝热情况下抑制磁通跳跃的一般条件是超导体的磁能必须小于其热能。
+在绝热情况下，除非$T_{op}$下的初始磁能密度$e_\phi(T_{op})$超过
+将超导体从$T_{op}$加热到$T_c$所需的热能，否则磁通跳跃不会发展完全。
 \begin{equation}%page349 5.45
 e_{\phi}(T_{op})\geq h_{s}(T_{c})-h_{s}(T_{op})
 \end{equation}
-where hs(Tc) and hs(Top) are the superconductor enthalpies, respectively, at Tc and
-Top. Because eφ(Top)=[μ◦Hp(Top)]2/6μ◦, and for Bean slab, Hp(Top)=aJc(Top),
-the conductor size criterion, ac, for suppressing complete flux jumping is given by:
+式中，$h_s(T_c)$和$h_s(T_{op})$分别是在$T_c$和$T_{op}$时的超导体的焓。
+因为$e_\phi(T_{op})=[\mu_o H_p(T_{op})]^2/6\mu_o$ ，
+对Bean板有$H_p(T_{op})=aJ_c(T_{op})$，所以，
+为了抑制完全磁通跳跃，导体尺寸判据为：
 \begin{equation}%page349 第2个
 a_{c}=\sqrt{\frac{6[h_{s}(T_{c})-h_{s}(T_{op})]}{\mu_{o}J_{c}^{2}(T_{op})}}
 \end{equation}
-Comparing these two size criteria (Eqs. 5.40 and 5.46), we may conclude that under
-adiabatic conditions, a flux jump may initiate if the conductor size is greater than
-that specified by Eq. 5.40, but it may be only “partial” if the size does not exceed
-that of Eq. 5.46. Thus, flux jumps will be only partial in a superconductor that
-either violates the size criterion of Eq. 5.40 but not Eq. 5.46, or the process is not
-adiabatic. Note that even those flux jumps seen in Fig. 5.19 are, strictly speaking,
-not complete, most probably because the process was not perfectly adiabatic.
 
-\textbf{B. HTS中的磁通跳跃}
+对比这两个尺寸判据(方程5.40和5.46)，我们可以得出，
+在绝热情况下，如果导体尺寸大于方程5.40给出的值，可能会发生磁通跳跃，
+但如果其尺寸不超过方程5.46给出的值，它仅会发生部分磁通跳跃。
+于是，如果超导体尺寸超过了5.40标准，但没超过5.46标准或过程非绝热，磁通跳跃仅会在部分超导体发生。
+注意到，严格来说，如图5.19所示的这些磁通跳跃都不是完全的，多可能是因为
+过程非完全绝热。 
 
-Because Tc is ∼100K in HTS, under adiabatic conditions the energy condition of
-Eq. 5.45 is unlikely to be satisfied. Flux jumping is unlikely in HTS.
+\subsubsection*{B. HTS中的磁通跳跃}
 
-For YBCO with Top=77K and Tc=93K (zero field and current), for example, the
-enthalpy difference is$\simeq$20MJ/m3 (60\% of the enthalpy difference for copper—
-from Cp differences of the two materials at 120 K), and with Jc(Top)=1010 A/m2,
-we compute, from Eq. 5.46: ac$\simeq$1mm (∼2mm diameter). Note that a YBCO
-wire of 2-mm diameter will have a “Bean” magnetization, μ◦M=μ◦aJc(Top)∼2T.
+因为HTS的$T_c\sim 100$ K，在绝热情况下，
+方程5.45给出的能量情况不可能满足。\textit{HTS中不太可能出现磁通跳跃。}
 
-Despite our expectation for HTS, flux jumps, not merely partial but also complete,
-have been observed in HTS, for example, in “thin” crystals, 2a=4.2 mm,
-with a y-axis extent of 0.2mm (thus “thin” rather than$\infty$as in a Bean slab) of
-BSCCO-2212 [5.13] and thin (∼100-μm) films of Type II superconductors including
-YBCO[5.14]. Nevertheless, in a real magnet-grade-superconductor, even of
-HTS, because it must satisfy many requirements, including limiting AC losses, the
-requirement that imposes, among other conditions, a severe size restriction, flux
-jumping should be one of the least troubling aspects for HTS magnets.
+例如，对于YBCO，$T_{op}$=77K，$T_c$=93 K (零场无电流)，
+焓差$\simeq$20 MJ/$\mathrm{m^3}$
+(铜的焓差的60\%---由两种材料在120 K时的$C_p$差计算)，
+又有$J_c(T_{op})=1010\ \mathrm{A/m^2}$，
+我们根据方程5.46计算得到：$a_c\simeq$1mm ($\sim$2 mm直径)。
+注意到，2 mm直径的YBCO线会有“Bean”磁化强度$\mu_o M=\mu_o a J_c（T_{op})\sim$ 2T。
+
+出乎我们的期望，HTS的磁通部分(极少)和完全跳跃都在Bi2212“薄”晶体($2a$=4.2 mm，$y$轴0.2 mm，
+相比Bean板的$\infty$这里是“薄”的)
+[5.13]和YBCO薄膜($\sim 100\ \mathrm{\mu}$m)[5.14]中观察到过。
+然而，在实际的磁体级超导体中(可包括HTS)，因为它必须满足许多要求，包括限制交流损耗。
+相比其他条件，交流损耗提出了更严格的尺寸要求，此时，磁通跳跃或许是HTS磁体中最不重要方面了。
