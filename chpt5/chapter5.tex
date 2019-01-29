@@ -27,33 +27,32 @@ $x$方向宽度为$2a$，$y$和$z$向无限长。磁场（$H, B, M$）指向y向
 \end{figure}
 图\ref{fig:slabinfield}展示了第无限高（$y$向）、无限深（$z$向）、$2a$宽（$x$向）第II类超导体板的。板此前未处于磁场中，外磁场$H_e$平行于板施加，将在板内产生$H_s(x)$。
 根据安培定律$\nabla \times H = J=J_c$，我们可以得到超导体内的磁场$H_s(x)$：
-%\begin{equation}
-%  H_s(x)=
-%  \begin{cases}
-%           0, & \mbox{x*\le x \le x+ }  \\
-%           H_e - J_c x, & \mbox{0\le x \le x* } \\
-%           H_e + J_c (x-2a), & \mbox{x+ \le x \le 2a}
-%   \end{cases}
-%\end{equation}
+\begin{subequations}
+\begin{align}
+ H_s(x)&=0, & \mbox{x*\le x \le x+ }  \\
+H_s(x)&= H_e - J_c x, & \mbox{0\le x \le x* } \\
+ H_s(x)&=H_e + J_c (x-2a), & \mbox{x+ \le x \le 2a}
+\end{align}
+\end{subequations}
+
 注意到，$H_s(x)$的斜率等于$J_c$，当$J_c$大于0时（z向，朝向纸面外）大于0，$J_c$小于0时小于0。$x*$和$2a-x^+$给出磁场的穿透程度，表示为
 \begin{equation}
   x*=\frac{H_e}{J_c}
 \end{equation}
 
 在$H_e=H_p\equiv J_c a$时，$x^*=x^+=a$，整个板处于临界态。$H_p$是所谓的穿透磁场，定义为
-\begin{equation}
-  H_p\equiv J_c a
-\end{equation}
+\begin{align*}
+  H_p\equiv J_c a \tag{5.3b}
+\end{align*}
 
 板内的平均磁感应强度由下式给出：
-\begin{equation}
-\begin{split}
-\~{B}_s&=\frac{\mu_0}{2a}\int_{0}^{2a} H_s(x)dx \\
-&=\frac{\mu_0}{2a}\times <\mbox{图5.1中的阴影面积}> \\
+\begin{subequations}
+	\begin{align}
+\~{B}_s&=\frac{\mu_0}{2a}\int_{0}^{2a} H_s(x)dx =\frac{\mu_0}{2a}\times <\mbox{图5.1中阴影面积}> \\
 &=2\times \frac{\mu_0}{2a}\times \frac{H_e x^*}{2}=\frac{\mu_0 H_e^2}{2aJ_c}\\
 &=\frac{\mu_0 H_e^2}{2H_p}
-\end{split}
-\end{equation}
+	\end{align}
+\end{subequations}
 
 根据定义$M=~{B}_s / \mu_0-H_e$，可得
 \begin{equation}
@@ -79,12 +78,15 @@ $x$方向宽度为$2a$，$y$和$z$向无限长。磁场（$H, B, M$）指向y向
 
 当$H_e$从$H_m$减至0的过程中，$H_s(x)$如图\ref{fig:hreturn}中的实线所示。当$H_e=H_m-2H_p$时，$-M$成为$-H_p /2$。
 可以看到，外场从$H_m$到$H_e\downarrow=0$的退场过程中，$-M(H_e)$由下式给出
-\begin{eqnarray}
-% \nonumber % Remove numbering (before each equation)
-  -M(H_e) =&\frac{1}{2}H_p-(H_m-H_e)+\frac{(H_m-H_e)^2}{4H_p}\\ \nonumber
-                 & ,(H_e\downarrow=H_m\rightarrow H_m-2H_p) \\ \nonumber
-  -M(H_e) =&-\frac{1}{2}H_p,\quad (H_e\downarrow=H_m-2H_p\rightarrow 0)
-\end{eqnarray}
+
+\begin{subequations}
+\begin{align}
+  -M(H_e) =&\frac{1}{2}H_p-(H_m-H_e)+\frac{(H_m-H_e)^2}{4H_p}\
+\quad& (H_e\downarrow=H_m\rightarrow H_m-2H_p) \\
+-M(H_e) =&-\frac{1}{2}H_p\quad &(H_e\downarrow=H_m-2H_p\rightarrow 0)
+\end{align}
+\end{subequations}
+
 
 当外场施于“纯”板时，$-M$是$H_e$的二次函数。而在$H_e$退回0时，$-M(H_e)=-H_p /2$。“剩余”磁化如图\ref{fig:hreturn}中的虚划线所示。可知当置于外场中，
 第II类超导体将会被磁化。剩余磁场不能通过外施磁场的方法去除。一种去除它的方法是加热超导体至临界温度$T_c$以上。
@@ -114,45 +116,48 @@ $H_p<H_e<H_m-2H_p,\quad \Delta M=-M(H_e\uparrow)+M(H_e\downarrow)$范围内，�
 当有传输电流$I_t$（$y$向单位长度）在板中沿$+z$方向（流出纸面）时，我们看到在$x=2a$处磁场有一个$I_t/2$的增长，在$x=0$处有一个$I_t/2$的减少。
 
 因为板内屏蔽电流是从每一个表面逐渐进入内部的，板内的场分布$H_s(x)$如图\ref{fig:hwithi}所示。图中的$x^*$和$x^+$由下式给出：
-\begin{eqnarray}
-% \nonumber % Remove numbering (before each equation)
-  -\frac{1}{2}I_t + J_c x^* = 0 \\ \nonumber
-  J_c(x^*-2a)+\frac{1}{2}I_t = 0 \\ \nonumber
-  x^*=\frac{I_t}{2J_c}\quad \& \quad x^+ = 2a-\frac{I_t}{2J_c}
-\end{eqnarray}
+\begin{subequations}
+	\begin{align}
+  -\frac{1}{2}I_t + J_c x^* = 0 \\ 
+J_c(x^*-2a)+\frac{1}{2}I_t = 0 \\ 
+x^*=\frac{I_t}{2J_c}\quad \& \quad x^+ = 2a-\frac{I_t}{2J_c}
+	\end{align}
+\end{subequations}
 
-%%%%图5.5
 \begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.8]{chpt5/figs/fig5.5.eps}
-  \caption{板内存在传输电流$I_t$时的磁场$H_s(x)$}\label{fig:hwithi}
+  \caption{板内存在传输电流$I_t$时的磁场$H_s(x)$。}\label{fig:hwithi}
 \end{figure}
 
 图5.6给出了板内的电流分布$J(x)$。沿着板宽度方向积分，我们可以得到板内的净电流就是$I_t$：
-\begin{equation}
-  I=\int_{0}^{2a}J(x)dx=J_c x^*+J_c(2a-x^+)=1/2 I_t +1/2 I_t=I_t
-\end{equation}
+\begin{subequations}
+	\begin{align}
+  I&=\int_{0}^{2a}J(x)dx=J_c x^*+J_c(2a-x^+)\\
+  &=1/2 I_t +1/2 I_t=I_t
+	\end{align}
+\end{subequations}
 
 \begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.8]{chpt5/figs/fig5.6.eps}
-  \caption{在图5.5给出的磁场$H_s(x)$下的$J(x)$}\label{fig:jtoh5.5}
+  \caption{在图5.5给出的磁场$H_s(x)$下的$J(x)。$}\label{fig:jtoh5.5}
 \end{figure}
 
 也即，板内的净电流就是外施电流。注意到，若外磁场$H_e\vec{i_y}$在$I_t$通入后施加，基本不会改变电流的分布（图5.5和5.6）；但若外磁场
-先于电流施加，则会出现不同的$H_s(x)$和$J(x)$。
+先于电流施加，则会出现不同的$H_s(x)$和$J(x)$。讨论5.1中将详细研究传输电流对磁化的影响。
 
 \section{测量技术}
 这里我们描述最经常使用的测量磁化的技术。图5.7指示了本项技术的关键组件：1）初级探测线圈；2）次级探测线圈；3）平衡分圧计。
 图中未画出但也同等重要的是积分器，它将桥路输出电压$V_bg$转换为直接正比于$M(H_e)$的电压信号。测试样品置于初级探测线圈内，。
 当初级探测线圈和次级探测线圈置于在两个线圈所占的空间内基本均匀的时变外磁场$H_e(t)$中，各查找线圈的端子上将出现感应
 电压$V_{pc}(t)$和$V_{sc}(t)$：
-\begin{eqnarray}
-% \nonumber % Remove numbering (before each equation)
-  V_{pt}(t) &=& \mu_0 N_{pc} A_{pc}\left[ \frac{dM}{dt}+(\frac{d\~{H}_e}{dt})_{pc}\right] \\ \nonumber
-  V_{sc}(t) &=& \mu_0 N_{sc} A_{sc}\left( \frac{d\~{H}_e}{dt}\right)_{sc}
-\end{eqnarray}
-
+\begin{subequations}
+	\begin{align}
+  V_{pt}(t) &=\mu_0 N_{pc} A_{pc}\left[\frac{dM}{dt}+(\frac{d\~{H}_e}{dt})_{pc}\right] \\ 
+V_{sc}(t) &= \mu_0 N_{sc} A_{sc}\left( \frac{d\~{H}_e}{dt}\right)_{sc}
+	\end{align}
+\end{subequations}
 下标pc和sc分别表示初级线圈（primary coil）和次级线圈（second coil）。N是各线圈的匝数。A是耦合$H_e(t)$的每一匝线圈的有限面积。
 $\~{H}_e$是磁场在各线圈内的空间平均值。
 
@@ -162,9 +167,10 @@ $\~{H}_e$是磁场在各线圈内的空间平均值。
 \end{equation}
 
 其中，k是一个介于0-1的常数，表示分压计在初级线圈侧的分压系数（图5.7）。联立上两式，可得
-\begin{equation}
-  V_{bg}(t)=(k-1)\mu_0 N_{pc}A_{pc}\frac{dM}{dt}+(k-1)\mu_0 N_{pc}A_{pc}(\frac{d\~{H}_e}{dt})_{pc}+k\mu_0 N_{sc}A_{sc}(\frac{d\~{H}_e}{dt})_{sc}
-\end{equation}
+\begin{align}
+  V_{bg}(t)=&(k-1)\mu_0 N_{pc}A_{pc}\frac{dM}{dt}\\
+  &+(k-1)\mu_0 N_{pc}A_{pc}(\frac{d\~{H}_e}{dt})_{pc}+k\mu_0 N_{sc}A_{sc}(\frac{d\~{H}_e}{dt})_{sc}
+\end{align}
 
 %%图5.7
 \begin{figure}[htbp]
@@ -174,35 +180,35 @@ $\~{H}_e$是磁场在各线圈内的空间平均值。
 \end{figure}
 
 通过调节分压系数k可以满足以下条件，令$V_{bg}(t)$正比于$dM/dt$：
-\begin{eqnarray}
-% \nonumber % Remove numbering (before each equation)
-  &(k-1)\mu_0 N_{pc}A_{pc}(\frac{d\~{H}_e}{dt})_{pc}+k\mu_0 N_{sc}A_{sc}(\frac{d\~{H}_e}{dt})_{sc}=0 \\ \nonumber
-  &V_{bg}(t)=(k-1)\mu_0 N_{pc}A_{pc}\frac{dM}{dt}
-\end{eqnarray}
+\begin{subequations}
+	\begin{align}
+  (k-1)\mu_0 N_{pc}A_{pc}(\frac{d\~{H}_e}{dt})_{pc}+k\mu_0 N_{sc}A_{sc}(\frac{d\~{H}_e}{dt})_{sc}=0 \\ 
+V_{bg}(t)=(k-1)\mu_0 N_{pc}A_{pc}\frac{dM}{dt}
+	\end{align}
+\end{subequations}
 
 尽管实际上上式第一式所给的归零条件在很大范围内不是总能满足，但是第二式对多数情况都是很好的近似。
 一般，$k$接近0.5。$V_bg{t}$馈入一个积分器，其输出正比于$M$。特别的，如果样品是“纯”的（$M=0$），磁场
-$H_e(t)$从0（$t=0$）增（$\uparrow$）至$H_e$（$t=t_1$）时，我们有
+$H_e(t)$从0（$t=0$）增($\uparrow$)至$H_e$（$t=t_1$）时，我们有
 \begin{equation}
   V_{mz}(H_e\uparrow)=\frac{1}{\tau_{it}}\int_{0}^{t_1}V_bg(t)dt=\frac{(k-1)\mu_0 N_{pc}A_{pc}}{\tau_{it}}M(H_e)
 \end{equation}
-
 式中，$\tau_{it}$是有效积分常数。如果$H_e>H_p$，此时有$M(H_e)=-H_p / 2=-J_c a / 2$，则上式简化为
 \begin{equation}
-    V_{mz}(H_e\uparrow>H_p)=-f_m \frac{(k-1)\mu_0 N_{pc}A_{pc}}{\tau_{it}}(\frac{J_c a}{2})
+    V_{mz}(H_e\uparrow>H_p)=-f_m \frac{(k-1)\mu_0 N_{pc}A_{pc}}{\tau_{it}}\left(\frac{J_c a}{2}\right)
 \end{equation}
 
 因数$f_m$是磁性材料体积与样品总体积之比。之所以需要这个因数是因为待磁化测试的样品一般不全是由磁性材料组成。
 比如多丝（层）导体，样品除了超导丝（层）外，还存在基底金属和其他非磁性材料。如果外场按$0\rightarrow H_m>H_p\rightarrow H_e\downarrow <H_m-2H_p$顺序，
-我们有
-\begin{equation}
-    V_{mz}(H_e\downarrow<H_m-2H_p)=-f_m \frac{(k-1)\mu_0 N_{pc}A_{pc}}{\tau_{it}}(\frac{J_c a}{2})
-\end{equation}
+我们有：
+\begin{align*}
+    V_{mz}(H_e\downarrow<H_m-2H_p)=-f_m \frac{(k-1)\mu_0 N_{pc}A_{pc}}{\tau_{it}}(\frac{J_c a}{2}) \tag{5.16b}
+\end{align*}
 
 于是，$\Delta V_{mz}=V_{mz}(H_e>H_p)-V_{mz}(H_e\downarrow<H_m-2H_p)$正比于在$H_e$处磁化曲线的“宽度”：
-\begin{equation}
-    \Delta V_{mz}=-f_m \frac{(k-1)\mu_0 N_{pc}A_{pc}}{\tau_{it}} J_c a
-\end{equation}
+\begin{align*}
+    \Delta V_{mz}=-f_m \frac{(k-1)\mu_0 N_{pc}A_{pc}}{\tau_{it}} J_c a \tag{5.16c}
+\end{align*}
 
 上式我们看出，$\Delta V_{mz}$是直接正比于$J_c$和$a$的。
 %%图5.8
@@ -309,11 +315,16 @@ A_{3}&=\frac{1}{2}(2a-x+)[H_{s2}(x+)+H_{s3}(2a)]\\
 \end{align*}
 
 一旦阴影面积已知，$M$可快速算出：
-\begin{align*}% page323 第4个
--M(i)&=H_{e}-\frac{1}{2a}\times(Shaded\quad area)\\
-&=H_{e}-H_{e}+\frac{1}{2}H_{p}-\frac{1}{2}H_{p}i\\
+\begin{subequations}
+	\begin{align}
+-M(i)&=H_{e}-\frac{1}{2a}\mbox{阴影面积}\\\notag
+&=H_{e}-H_{e}+\frac{1}{2}H_{p}-\frac{1}{2}H_{p}i\\\notag
 &=\frac{1}{2}H_{p}(1-i)\\
 &=-M(0)f_{1}(i)
+	\end{align}
+\end{subequations}
+\begin{align*}% page323 第4个
+
 \end{align*}
 式中，$f_1(i) = 1 − i$。$−M(i)$线性随$i$减小，当$i=1$时为零。 
 
@@ -375,7 +386,7 @@ A_{2}&=\frac{1}{2}(2a-a+ai)(H_{e}+H_{p}i+H_{e}-H_{P})\\
 计算了阴影面积后，我们有$M$：
 \begin{subequations}
 	\begin{align}
--M(i)&=H_{e}-\frac{1}{2}(2H_{e}-H_{p}+H_{P}i^{2}\\\notag
+-M(i)&=H_{e}-\frac{1}{2}(2H_{e}-H_{p}+H_{p}i^{2}\\\notag
 &=\frac{1}{2}H_{p}(1-i^{2})\\
 &=-M(0)f_{2}(i)
 	\end{align}
@@ -441,13 +452,15 @@ $A_1$、$A_2$、$A_3$和$A_4$面积之和为：
 \end{align*}
 
 于是，磁化$−M(i)$可如下给出：
-\begin{subequations}
-\begin{align}% page327 第6个
--M(i)=&H_{e}-\frac{1}{2a}[2aH_{e}-a \grave{}H_{p}(1-i)^{2}]\\\notag
+\begin{align*}% page327 第6个
+-M(i)=&H_{e}-\frac{1}{2a}[2aH_{e}-a \grave{}H_{p}(1-i)^{2}]\\
 =&\frac{1}{2}H_{p}(1-i)^{2}\\\notag
--M(i)=&-M(0)(1-i)^{2}\\
-=&-M(0)f_{3}(i)
-\end{align}
+\end{align*}
+\begin{subequations}
+	\begin{align}% page327 第6个
+	-M(i)=&-M(0)(1-i)^{2}\\
+	=&-M(0)f_{3}(i)
+	\end{align}
 \end{subequations}
 式中，$f_3(i) = (1 − i)^2$。
 
@@ -465,7 +478,7 @@ $A_1$、$A_2$、$A_3$和$A_4$面积之和为：
 
 \textbf{磁化函数---总结}
 
-图5.15给出三个归一化磁化函数$f1(i), f2(i)$和$f3(i)$。其中，$i = I_t/I_c$。
+图5.15给出三个归一化磁化函数$f_1(i), f_2(i)$和$f_3(i)$。其中，$i = I_t/I_c$。
 很有意思的是，传输电流和外部磁场施加的不同顺序影响$M(i)$。
 这些$f(i)$函数已得到试验验证[5.3, 5.4]，故而Bean模型在提出之后很快就被人们接受了。
 
@@ -506,7 +519,7 @@ H_{p}=\frac{1}{2}J_{c}d_{f}
 
 使用方程5.4那里类似的步骤，我们可以计算细丝内的平均磁感应$\tilde{B}_s$：
 \begin{align}% page329 第4个
-\tilde{B_{s}}&=\frac{4\mu_{o}}{\pi d_{f}^{2}}\int_{r*}^{\frac{d_{f}}{2}}H_{e}\frac{r-r*}{\frac{d_{f}}{2}-r*}(2\pi r)dr\\\notag
+\tilde{B_{s}}&=\frac{4\mu_{o}}{\pi d_{f}^{2}}\int_{r*}^{\frac{d_{f}}{2}}H_{e}\frac{r-r*}{\frac{d_{f}}{2}-r*}(2\pi r)dr\\
 &=\frac{8\mu_{o}H_{e}}{d_{f}^{2}(\frac{d_{f}}{2}-r*)}(\frac{1}{24}d_{f}^{3}-\frac{1}{8}d_{f}^{2}r*+\frac{1}{6}r*^{3})
 \end{align}
 
@@ -1292,5 +1305,5 @@ a_{c}=\sqrt{\frac{6[h_{s}(T_{c})-h_{s}(T_{op})]}{\mu_{o}J_{c}^{2}(T_{op})}}
 出乎我们的期望，HTS的磁通部分(极少)和完全跳跃都在Bi2212“薄”晶体($2a$=4.2 mm，$y$轴0.2 mm，
 相比Bean板的$\infty$这里是“薄”的)
 [5.13]和YBCO薄膜($\sim 100\ \mathrm{\mu}$m)[5.14]中观察到过。
-然而，在实际的磁体级超导体中(可包括HTS)，因为它必须满足许多要求，包括限制交流损耗。
+然而，在实际的磁体级超导体中(可包括HTS)，因为它必须满足许多要求，包括有限的交流损耗。
 相比其他条件，交流损耗提出了更严格的尺寸要求，此时，磁通跳跃或许是HTS磁体中最不重要方面了。
