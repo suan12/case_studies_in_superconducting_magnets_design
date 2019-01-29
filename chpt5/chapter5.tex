@@ -493,86 +493,85 @@ SQUID (Superconducting Quantum Interference Device，超导量子干涉仪)是�
 
 \textbf{A. 初始态}
 
-在$H_e \le H_p$时，where Hp is the critical-state field, the field within the filament,
-Hs(r), is zero from r=0 to r∗=(df/2−He/Jc) and varies as Jcr from r∗ to df /2:
+在$H_e \le H_p$时，($H_p$是临界态磁场)，细丝内的磁场$H_s(r)$从$r=0$到$r*=(d_f/2-H_e/J_c)$之间为零，
+并从$r*$到$d_f/2$随$J_c r$变化： 
 \begin{equation}% page329 第2个
 H_{s}(r)=H_{e}\frac{r-r*}{\frac{d_{f}}{2}-r*}
 \end{equation}
-Note that r∗=0 when He=Hp, where Hp is the critical-state field:
+
+我们注意到在$H_e=H_p$时，$r*=0$。其中，$H_p$是临界态磁场。
 \begin{equation}% page329 第3个
 H_{p}=\frac{1}{2}J_{c}d_{f}
 \end{equation}
-Using steps similar to those taken with Eq. 5.4, we may compute the average
-magnetic induction within the filament,$\~{B}_s$：
+
+使用方程5.4那里类似的步骤，我们可以计算细丝内的平均磁感应$\tilde{B}_s$：
 \begin{align}% page329 第4个
-\tilde{B_{s}}&=\frac{4\mu_{o}}{\pi d_{f}^{2}}\int_{r*}^{\frac{d_{f}}{2}}H_{e}\frac{r-r*}{\frac{d_{f}}{2}-r*}(2\pi r)dr\\
+\tilde{B_{s}}&=\frac{4\mu_{o}}{\pi d_{f}^{2}}\int_{r*}^{\frac{d_{f}}{2}}H_{e}\frac{r-r*}{\frac{d_{f}}{2}-r*}(2\pi r)dr\\\notag
 &=\frac{8\mu_{o}H_{e}}{d_{f}^{2}(\frac{d_{f}}{2}-r*)}(\frac{1}{24}d_{f}^{3}-\frac{1}{8}d_{f}^{2}r*+\frac{1}{6}r*^{3})
 \end{align}
-Unlike in the case of a slab, where the integration may be performed geometrically
-from Hs(x), here the “area” integration must be performed mathematically. By
-inserting r∗=(df/2−He/Jc) into Eq. 5.23 and noting that Hp=Jcdf/2, we obtain:
+
+和板的情况不同，那里积分可以$H_s(x)$几何的形式得到。这里，“面积”积分必须
+用数学的方法进行。向5.23中代入$r*=(d_f/2−H_e/J_c)$，并注意到$H_p=J_cd_f/2$，我们有：
 \begin{equation}%page329 第5个
 \frac{\tilde{B}_{s}}{\mu_{o}}=\frac{2H^{2}_{e}}{d_{f}J_{c}}-\frac{4H^{3}_{e}}{3(d_{f}J_{c})^{2}}=\\frac{H^{2}_{e}}{H_{P}}-\frac{H_{e}^{3}}{3H^{2}_{p}}
 \end{equation}
-根据定义$M=\~{B}_s/\mu_{0}-H_e$，我们有：
+
+根据$M=\~{B}_s/\mu_{0}-H_e$，我们有：
 \begin{equation}%page329 第6个
 -M=H_{e}-\frac{H^{2}_{e}}{H_{P}}+\frac{H^{3}_{e}}{3H^{2}_{p}}\quad(0\leq H_{e}\leq H_{P})
 \end{equation}
-Note that Eq. 5.25 is similar to, but clearly different from, Eq. 5.5 for the slab.
+
+可见，方程5.25与板情况的方程5.5类似，但也存在明显的不同。
 
 \textbf{B. 临界态及以上}
 
-For He≥Hp the filament is in the critical state, and its magnetization is constant
-and given from Eq. 5.25 with He=Hp:
+在$H_e\ge H_p$时，细丝为临界态，其磁化是定值，可由方程5.25在$H_e=H_p$时得到：
 \begin{equation}%page329 第7个
 -M=\frac{1}{3}H_{p}=\frac{1}{3}(\frac{J_{c}d_{f}}{2})\quad(H_{e}\geq H_{p})
 \end{equation}
-The “magnetization factor” for the filament is 1/3; for the slab it is 1/2 (Eq. 5.6).
+
+细丝的“磁化因子”是$1/3$；板是$1/2$ (方程5.6)。
 
 \subsubsection{第二部分：磁场垂直于细丝轴}
 当外施场垂直于直径为$d_f$的细丝的轴，细丝内部的电流分布在$H_e\le H_p$时较为复杂；
 $H_e\ge H_p$时，在$+z$向感应出的总电流为$J_c \pi d^2 f/8$，$-z$向感应电流幅值相等
-图5.16给出几种电流分布：a) $2a$的Bean薄板；b) 直径为$d_f$的细丝。
+图5.16给出几种电流分布：a) $2a$的Bean板；b) 直径为$d_f$的细丝。
 
-We may compute the magnetization, M, by integrating the magnetic moment, mA,
-per unit volume. Here, we derive expressions for the critical state magnetization
-for a Bean slab of width 2a and a filament of diameter df .
+我们可以通过对单位体积的磁矩$\mathbf{m_A}$得到磁化强度$M$。
+这里，我们宽度为$2a$的Bean板和直径为$d_f$的细丝的临界态磁化表达式。
 
 \textbf{A. Bean板}
 
-For a Bean slab in the critical state, the magnetic moment mA per unit length in
-both z- and y-directions, from Jc(x) shown in Fig. 5.16a, is given by:
+对处于临界态的Bean板，$z$向和$y$向的单位长度磁矩$\mathbf{m_A}$由图5.16a中的$J_c(x)$可知，为：
 \begin{equation}%page330 第1个
 m_{A}=\int_{0}^{a}2xJ_{c}(x)dx=J_{c}a^{2}
 \end{equation}
-The conductor volume per unit length in both z- and y-directions is 2a. Thus:
+$z$向和$y$向单位长度的体积为$2a$。于是：
 \begin{align*}%page330 第2个
-M=\frac{m_{A}}{2a}=\frac{1}{2}J_{c}a\tag{5.27b}
+M=\frac{m_{A}}{2a}=\frac{1}{2}J_{c}a \tag{5.27b}
 \end{align*}
-M given by Eq. 5.27b, except for the sign, is identical to that given by Eq. 5.6.
+方程5.27b给出的$M$除了符号，和方程5.6一致。
 
 \textbf{B. 细丝}
 
-For a filament of diameter df , the magnetic moment mA per unit length in the
-z-direction, from Jc(x, y) shown in Fig. 5.16b, is given by:
+对直径为$d_f$的细丝，$z$向单位长度的磁矩$\mathbf{m_A}$由图5.16b的$J_c(x,y)$可知，为：
 \begin{equation}%page330 第3个
 m_{A}=\int_{-\frac{d_{f}}{2}}^{\frac{d_{f}}{2}}2xJ_{c}(x,y)dxdy=\frac{1}{6}J_{c}d_{f}^{2}
 \end{equation}
-The conductor volume per unit length in the z-direction is πd2
-f /4. Thus:
+$z$向单位长度导体体积为$\pi d_f^2/4$。于是：
 \begin{subequations}
-	\begin{align*}
+	\begin{align}
 M&=\frac{\mathbf{4m_{A}}}{\pi d_{f}^{2}}=(\frac{4}{3\pi})J_{c}(\frac{d_{f}}{2})\simeq0.424J_{c}(\frac{d_{f}}{2})\sim0.5J_{c}a\\
 H_{p}&=(\frac{8}{3\pi})J_{c}(\frac{d_{f}}{2})
-	\end{align*}
+	\end{align}
 \end{subequations}
-This is nearly the same (8/3π∼1) as that for a Bean slab of thickness df .
+
+这个结果和厚度为$d_f$的Bean板几乎相同($8/3\pi \sim 1$)。
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.5]{chpt5/figs/fig5.16.eps}
-	\caption{Induced current distributions in a) Bean slab of width 2a and b) an infinitely
-		long filament of diameter dd, both subjected to an external field He in the y-direction.。}
+	\caption{感应电流分布：a) 宽度为$2a$的Bean板；b)直径为$d_f$的无限长细丝。两者均置于$y$向的外场$H_e$中。}
 \end{figure}
 
 \subsection{讨论5.4：磁化中的$J_c$}
