@@ -1071,82 +1071,65 @@ $250\ \mathrm{\mu m}$直径的线的临界电流仅为$\sim 100$ A——如果�
 1960s末提出了使用多根线制造导体的思想：每一根线足够细以避免产生磁通跳跃，而后附着与常规金属上。
 这种方法当时就造出来高达1000 A临界电流的线。现在已经可以造出50 kA的导体了。
 
-In early (c. 1969) “multifilamentary” conductors, wires were untwisted. Coupling
-between filaments caused the wire as a whole to flux jump, despite each filament
-being small enough to satisfy the size criterion (Eq. 5.40). PROBLEM 5.5 deals
-with such conductors. Results of a study of multifilamentary conductors, analytical
-and experimental, by Wilson and others at the Rutherford Laboratory in the late
-1960s launched a new era of multifilamentary conductors [5.11].
+在早期(约1969年)的“复丝”导体中，导线未加捻。
+尽管每根细丝足够小以满足尺寸标准（方程5.40），但细丝之间的耦合会导致导线整体的磁通跳跃。
+问题5.5涉及此类导体。
+Wilson等1960年代后期在卢瑟福实验室进行的多层导体的分析和实验研究的结果开启了多丝导体的新时代[5.11]。
 
-Simply stated, when filaments are embedded in a conductive metal (e.g., copper)
-and subjected to a time-varying magnetic field, the filaments are electrically coupled
-according to Faraday’s law. They then act as a single entity with an effective
-conductor diameter nearly as great as that of the entire conductor. The basic
-premise of the flux jumping criterion for isolated filaments is thus violated in an
-untwisted multifilamentary conductor. In order to eliminate flux jumping in multifilamentary
-conductors, filaments must be decoupled. Twisting of the wires, or
-more ideally transposition of the filaments (or strands of a multi-strand conductor),
-can do the trick of filament decoupling.
+简单地说，当细丝嵌入导电金属(例如铜)内置于时变磁场中时，
+根据Faraday定律，细丝之间是电耦合的。
+然后它们作为单个实体，其有效导体直径几乎与整个导体的直径一样大。
+因此，孤立细丝的磁通跳跃标准的基本前提不适用于无捻多丝导体。
+为了消除多丝导体中的磁通跳跃，必须将细丝去耦。
+细丝绞合，或者更理想地，将长丝（或多股导体的股线）换位可以实现细丝去耦。
 
-Consider a two-dimensional conductor model comprised of two Bean slabs, each
-df wide, separated by a copper slab of width 2w and electrical resistivity ρcu.
-Figure 5.20 shows the conductor as seen looking down the z-axis. Note that unlike
-the one-dimensional Bean slab which extends into infinity in both the y- and zdirections,
-this conductor is$2\ell$long in the y-direction.
+考虑一个由两个宽为$d_f$的Bean板组成的二维导体模型，由宽度为$2w$、电阻率为$\rho_{cu}$的铜板
+隔开。图5.20给出了从z轴向下看的导体几何。
+我们注意到，与在$y$和$z$方向都无限延伸的一维Bean板不同，该导体在$y$向长$2\ell$。
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.6]{chpt5/figs/fig5.20.eps}
-	\caption{Two-dimensional conductor consisting of a normal
-		metal slab sandwiched between two Bean slabs.}
+	\caption{两个Bean板间夹正常金属板的三明治形状的二维导体。}
 \end{figure}
 
-Suppose the conductor is subjected to a spatially uniform, time-varying magnetic
-field pointed in the z-direction,$\.{H}_{0z}\vec{i_z}$
+假设导体置于指向$z$向的空间均匀时变磁场$\.{H}_{0z}\vec{i_z}$中。
 
-a) Show that the x-directed electric field within the copper slab, E1x, varies
-with y as given by:
+a) 证明铜板内的$x$向电场$E_{1x}$按下式随$y$变化：
 \begin{equation}%page345 第1个
 E_{1x}=\mu_{o}\dot{H}_{0z}y\qquad(5.42)
 \end{equation}
-Assume the electric field in each superconducting slab to be zero—strictly
-speaking it is not, but compared with that in the copper, it is extremely
-small; hence the approximation of zero$\vec{E}$field is valid. Also assume the field
-to be quasi-static. Under these assumptions, it is apparent that the$\vec{E}$field
-in the copper, as indicated in Eq. 5.42, has only an x component.
+假设各超导板中的电场为零---严格说，并不是零，但与铜比，远小于铜；
+因此，将电场近似为零时合理的。
+同时假设场是准静态的。在这些假设下，很明显，方程5.42给出的铜中的电场仅有$x$分量。
 
-b) Show that the net current flowing through the copper (per unit conductor
-depth in the z-direction), Icp [A/m], from one superconducting slab to the
-other superconducting slab, over one half conductor length (from y = 0 to$y=\ell$), is given by:
+b) 证明在一半导体长度上(从$y=0$到$y=\ell$)，
+从一个超导体板通过铜($z$向单位导体深度)的流向另一个超到板的净电流$I_{cp}$为：
 \begin{equation}%page345 第2个
 I_{cp}=\int_{0}^{\ell}J_{cu}dy=\frac{\mu_{o}\dot{H}_{0z}}{\rho_{cu}}\int_{0}^{\ell}ydy=\frac{\mu_{o}\dot{H}_{0z}\ell^{2}}{2\rho_{cu}}\quad(5.43)
 \end{equation}
 
-c) At a critical length$\ell_c$, the net current Icp given by Eq. 5.43, becomes equal
-to Jcdf , the slab’s critical current (per unit conductor depth). Show that
-the critical length$\ell_c$is:
+c) 在临界长度 $\ell_c$时，5.43给出的净电流等于板(单位导体深度)的临界电流$J_cd_f$。
+证明临界长度$\ell_c$为：
 \begin{equation}%page345 第3个
 \ell_{c}=\sqrt{\frac{2\rho_{cu}J_{c}d_{f}}{\mu_{o}\dot{H}_{0z}}}\qquad(5.44)
 \end{equation}
 
-d) Multifilamentary superconductors for 60-Hz power applications must have a
-filament size (df ) that is extremely small, in the range 0.1∼0.5 μm, which
-is even smaller than the wavelength of visible light (∼0.7$\mu m$). This extremely
-small size is required to keep “manageable” the hysteresis energy,
-generated within each filament every time a magnetic field is cycled. (As
-will be discussed in CHAPTER 6, hysteresis loss per cycle of field excitation
-is proportional to filament diameter.)
+d) 应用于60 Hz的多丝超导体的实习尺寸$d_f$必须很小，
+在$0.1\sim 0.5\ \mathrm{\mu m}$之间，这比可见光的波长($\sim 0.7\ \mathrm{\mu m}$)都小。
+要求这么小的尺寸是为了各细丝在时变磁场下产生的的磁滞能量可控。
+(第六章将讨论，磁场一个周期内的磁滞损耗正比于细丝直径。)
 
-Compute$\ell_c$for a typical “submicron” superconductor having the following
-parameters:
-% ρm = 30nΩm; Jc = 2GA/m2; df = 0.2 μm; μ◦ ˙H0z = 2 kT/s
-(equivalent to a sinusoidal excitation of 5-T amplitude magnetic induction
-at 60 Hz).$\rho_m$is the electric resistivity of the matrix, which is generally a
-copper-nickel alloy.
+计算一个典型的微丝超导体的$\ell_c$，其参数为：
+$\rho_m=$ n$\Omega$m；$J_c=2\ \mathrm{GA/m^2}$；
+$d_f=0.2\ \mathrm{\mu m}$；
+$\mu_o \.{H}_{0z}$=2 kT/s
+(等价于60 Hz的幅值为5 T的磁场正弦激励)。
+$\rho_m$是基底(通常是铜-镍合金)的电阻率。
 
-e) Compute the number of filaments required for a submicron multifilamentary
-conductor with a filament diameter of 0.2$\mu m$ having a critical current of
-100 A. Use the same values of parameters given in d).
+
+e) 计算临界电流为100 A的0.2 $\mu$m细丝所要求的微丝数量。
+和d)使用相同的参数值。
 
 \subsubsection{问题5.4之解}
 a) From Faraday’s law, applied under the quasi-static assumption, we have:
