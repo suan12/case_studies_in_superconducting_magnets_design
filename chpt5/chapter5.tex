@@ -978,81 +978,85 @@ $\sim 300\ \mathrm{\mu m}$；对图层YBCO带材，临界宽度为8 mm。
 \colorbox{red}{表5.3}
 
 \subsection{问题5.3：磁通跳跃}
-The magnetization vs. ambient field trace shown in Fig. 5.19 was obtained with a
-monofilament Nb-Zr wire (0.5mm$\phi$) at 4.2K carrying no transport current. (In
-the early 1960s, superconductors based on alloys of niobium and zirconium, Nb-Zr,
-preceeded Nb-Ti. Shortly after a composite superconductor became the standard
-form for magnet-grade superconductors in the mid 1960s, Nb-Ti (now more commonly
-designated NbTi), being much easier to co-process with copper than Nb-Zr,
-replaced Nb-Zr.) Note that both ordinate (magnetization) and abscissa (field) are
-given in non-SI units. Use Bean’s model and treat the wire, of diameter df, as a
-slab of thickness 2a.
+图5.19所示的磁化 vs. 外场曲线是Nb-Zr单丝($\phi=$0.5 mm)在4.2 K无传输电流
+的条件下获得的。 (1960年代早期，Nb-Zr合金超导体要比Nb-Ti更早。
+在1960年代中期复合超导体成为磁体级超导体的标准形式后，
+Nb-Ti(现在更习惯写成NbTi)，NbTi因其和铜更容易一起处理，取代了Nb-Zr。
+注意到，纵坐标(磁化)和横坐标(磁场)都是以非SI单位给出的。
+使用Bean模型，将直径为$d_f$的金属丝视为厚度为$2a$的板。
 
-a) Show that the field interval, ΔHf , indicated in the trace, is consistent with
-the measured magnitude of magnetization.
+a) 证明曲线中的磁场区间$\Delta H_f$与测到的磁化强度幅值一致。
 
-b) Estimate the dissipation energy density,$e_{\phi}$[J/m3], resulting from the flux
-jump labeled A in Fig. 5.19. First, show that$e_{\phi}$is given by:
+b) 估算图5.19中标A处磁通跳跃因其的耗散能量密度$e_{\phi}\ [\mathrm{J/m^3}]$。
+首先，证明$e_{\phi}$可由下式给出：
 \begin{equation}%page342 第1个
 e_{\phi}=\frac{(\mu_{o}J_{p})^{2}}{6\mu_{o}}
 \end{equation}
 
-c) Estimate the temperature rise for flux jump A. Assume the heat capacity of
-Nb-Zr to be independent of temperature and equal to 6 kJ/m3 K.
+c) 估计磁通跳跃A因其的温升。
+假设Nb-Zr热容与温度无关，为6 $\mathrm{kJ/m^3 K}$。
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.5]{chpt5/figs/fig5.19.eps}
-	\caption{Magnetization vs. ambient field trace for a 0.5-mm dia. Nb-Zr monofilament。}
+	\caption{0.5 mm直径Nb-Zr单丝的磁化 vs. 外场曲线。}
 \end{figure}
 
 
 \subsubsection{问题5.3之解}
-a) From Bean’s model, flux jumping can occur every Hp. Clearly, Hp = ΔHf ,
-where ΔHf is indicated in Fig. 5.19. Also, full magnetization for a slab is Hp/2.
+a) 根据Bean模型，磁通跳跃可在任意$H_p$下发生。
+显然，有$H_p = \Delta H_f$，其中,$\Delta H_f$如图5.19所示。
+同时，板的完全磁化为$H_p/2$。
 
-从图5.19可知，$\Delta H_f\simeq$ 5k gauss，$\mu_{0}\Delta H_f$=0.5 T。图中还给出，
-$H_p/2\simeq$ 2.5k gauss，是$\Delta H_f$的一半。他们是一致的。
+从图5.19可知，$\Delta H_f\simeq$ 5 k gauss，$\mu_{0}\Delta H_f$=0.5 T。图中还给出，
+$H_p/2\simeq$ 2.5 k gauss，是$\Delta H_f$的一半。他们是一致的。
 
-b) We can derive the flux jump energy density,$e_{\phi}$, using the Poynting energy
-balance:$e_s=e_{\phi}+\Delta e_m$, where es is the Poynting energy density entering the
-superconductor at x=a, and$\Delta e_m$is its change in stored magnetic energy density.
-Let’s consider only 0 ≤ x ≤ a. ΔH(x) within the slab is given by:
+b) 我们可以使用Poynting能量平衡$e_s=e_{\phi}+\Delta e_m$推导出磁通跳跃能量密度$e_{\phi}$，
+其中，$e_s$是在$x=a$处进入超导体的Poynting能量密度， $\Delta e_m$是储存的能量密度的变化量。
+我们仅考虑$0\le x\le a$部分。板内的$\Delta H(x)$为：
 \begin{align*}%page343 第1个
 \Delta H(x)=H_{p}\frac{(a-x)}{a}\tag{S3.1}
 \end{align*}
+
 由S3.1，可得：
 \begin{align*}%page343 第2个
 E(x)=\mu_{o}\frac{H_{p}}{\Delta t}\int_{0}^{x}\frac{a-x}{a}dx=\frac{\mu_{o}H_{p}}{a\Delta t}(ax-\frac{x^{2}}{2})\tag{S3.2}
 \end{align*}
+
 这样，在$x=a$处$\vec{S}$为：
 \begin{align*}%page343 第3个
 \vec{S}(a)=-\frac{\mu_{o}}{2\Delta t}H_{p}aH_{e}\vec{\imath}_{x}\tag{S3.3}
 \end{align*}
-$\vec{S}(a)$is directed towards the slab, and the Poynting energy density es is given by:
+
+$\vec{S}(a)$朝向板，Poynting能量密度由下式给出：
 \begin{align*}%page343 第4个
 e_{s}=\frac{\int S_{x}(a)dt}{a}=\frac{\mu_{o}}{2}H_{p}H_{e}\qquad(S3.4)
 \end{align*}
-The stored magnetic energy density after flux jumping (em2) is μ◦H2
-e /2. The stored magnetic energy density before flux jumping, em1, is given by:
+
+磁通跳跃($e_{m2}$)后储存的磁能密度为$\mu_o H_e^2/2$。
+磁通跳跃前储存的磁能密度$e_{m1}$为： 
 \begin{align*}%page343 第5个
 e_{m1}=\frac{\mu_{o}}{2a}\int_{0}^{a}[H_{e}+J_{c}(x-a)]^{2}dx\tag{S3.5}
 \end{align*}
+积分展开，
 \begin{align*}%page343 第6个
-=\frac{\mu_{o}}{2a}(H_{e}^{2}a-H_{e}J_{c}a^{2}+\frac{J_{c}^{2}a^{3}}{3})=\frac{\mu_{o}}{2}H_{e}^{2}-\frac{\mu_{o}}{2}H_{e}H_{p}+\frac{\mu_{o}}{6}H_{p}^{2}\tag{S3.6}
+e_{m1}=\frac{\mu_{o}}{2a}(H_{e}^{2}a-H_{e}J_{c}a^{2}+\frac{J_{c}^{2}a^{3}}{3})=\frac{\mu_{o}}{2}H_{e}^{2}-\frac{\mu_{o}}{2}H_{e}H_{p}+\frac{\mu_{o}}{6}H_{p}^{2}\tag{S3.6}
 \end{align*}
 \begin{align*}%page343 第7个
 \Delta e_{m}=e_{m2}-e_{m1}=\frac{\mu_{o}}{2}H_{e}H_{p}-\frac{\mu_{o}}{6}H_{p}^{2}\tag{S3.7}
 \end{align*}
+
 因为$e_\phi=e_s-\Delta e_m$，我们有：
 \begin{align*}%page343 第8个
 e_{\phi}=\frac{\mu_{o}}{2}H_{p}H_{e}-\frac{\mu_{o}}{2}H_{e}H_{p}+\frac{\mu_{o}}{6}H_{p}^{2}=\frac{\mu_{o}}{6}H_{p}^{2}\tag{S3.8}
 \end{align*}
-Equation S3.8 may be expressed as:
+
+方程S3.8可以写为：
 \begin{align*}%page343 第9个
 e_{\phi}=\frac{(\mu_{o}H_{p})^{2}}{6\mu_{o}}\tag{5.41}
 \end{align*}
-Inserting μ◦Hp=0.5T into Eq. 5.41:
+
+将$\mu_o H_p$=0.5 T代入方程5.41：
 \begin{align*}%page343 第10个
 e_{\phi}\simeq\frac{(0.5T)^{2}}{(6)(4\pi\times10^{-7}\ \mathrm{H/m})}\simeq33\times10^{3}\ \mathrm{J/m^{3}}
 \end{align*}
