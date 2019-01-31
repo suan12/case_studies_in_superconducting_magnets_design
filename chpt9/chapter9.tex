@@ -30,59 +30,81 @@
 4) 层叠HTS环组成的“螺管”磁体，HTS环由块材加工或图层导体板构成。 
 
 
-\subsection{例A：串联混合磁体(SCH)}
-
+\subsection{例A：串联混合磁体}
+NHMFL建造的中心轴向场35-40 T(取决于室温孔大小，32-50 mm)的高场磁体，由
+一个超导磁体和一个5线圈高均匀电阻性(水冷)内插磁体组成。
+因为超导磁体和5线圈电阻性内插磁体电气上串联且由同一个DC电源供电，
+磁体被称为“串联混合磁体”(series-connected-hybrid, SCH)。
+SCH产生的中心场大于NHMFL所有的电阻性磁体的磁场(35 T)或全超导磁体的磁场(21 T)。
+图9.1给出了SCH磁体的剖面示意图---
+参数值与SCH磁体的最终采纳值略有不同。
 
 \subsubsection{Q/A A：SCH超导磁体}
 
 \begin{equation}% page548 第1个
 \lambda J_{op}=\frac{NI}{2b(a_2-a_1)}
 \end{equation}
+
 \begin{equation}% page548 第2个
 =\frac{756(20\times10^3\ \mathrm{A})}{(942.0\ \mathrm{mm})(610.1\ \mathrm{mm}-305.0\ \mathrm{mm})}=52.6\ \mathrm{A/mm^2}
 \end{equation}
+
 \begin{equation}% page548 第3个
 B_{z}(0,0)=\frac{\mu_oNI}{2a_1(\alpha-1)}\ln(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}})
 \end{equation}
+
 \begin{equation}% page548 第4个
 B_z(0,0)=\frac{(4\pi\times10^{-7}\ \mathrm{H/m})(756)(20\times10^3\ \mathrm{A})}{(0.610\ \mathrm{m})(2.00-1)}\ln(\frac{2.00+\sqrt{(2.00)^2+(1.544)^2}}{1+\sqrt{1+(1.544)^2}})
 \end{equation}
+
 \begin{equation}% page548 第4个
 =14.52\ \mathrm{T}
 \end{equation}
+
 \begin{equation}% page548 第5个
 L=\mu_oa_1N^2\ \mathcal{L}(\alpha,\beta)
 \end{equation}
+
 \begin{equation}% page548 第6个
 L_s=(4\pi\times10^{-7}\ \mathrm{H/m})(0.305\ \mathrm{m})(756)^2(1.2)=263\ \mathrm{mH}
 \end{equation}
+
 \begin{equation}% page548 第7个
 E_{ms}=\frac{1}{2}(L_s+M_{sr})I_{op}^2
 \end{equation}
+
 \begin{equation}% page548 第8个
 =\frac{1}{2}(260\ \mathrm{mH}+17\ \mathrm{mH})(20\ \mathrm{kA})^2=55.4\ \mathrm{MJ}
 \end{equation}
+
 \begin{equation}% page549 第1个
 V_S=L_s\frac{dI_s}{dt}+M_{sr}\frac{dI_r}{dt}+M_{sr}\frac{dI_s}{dt}+L_r\frac{dI_r}{dt}+R_rL_r
 \end{equation}
+
 \begin{equation}% page549 第2个
 =(L_s+2M_{sr}+L_r)\frac{dI_s}{dt}+R_rI_S
 \end{equation}
+
 \begin{equation}% page549 第3个
 V_S=(260\ \mathrm{mH}+2\times17\ \mathrm{mH}+10\ \mathrm{mH})(400\ \mathrm{A/s})+(30\ \mathrm{m\Omega})(10\ \mathrm{kA})=421.6\ \mathrm{kA}
 \end{equation}
+
 \begin{equation}% page549 第4个
 V_S=(L_s+2M_{sr}+L_r)\frac{dI_S}{dt}+R_rI_S
 \end{equation}
+
 \begin{equation}% page549 第5个
 =421.6\ \mathrm{V}
 \end{equation}
+
 \begin{equation}% page550 第1个
 V_{ind}=(L_s+2M_{sr}+L_r)\frac{dI_S}{dt}
 \end{equation}
+
 \begin{equation}% page550 第2个
 V_{ind}=(260\ \mathrm{mH}+2\times17\ \mathrm{mH}+10\ \mathrm{mH})(400\ \mathrm{A/s})=121.6\ \mathrm{V}
 \end{equation}
+
 \begin{equation}% page550 第3个
 m_{he}=\varrho_{he}A_{cl}v_{he}
 \end{equation}
