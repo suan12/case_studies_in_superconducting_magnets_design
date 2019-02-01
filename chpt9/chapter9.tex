@@ -71,72 +71,99 @@ SCH还包括一个薄($\alpha\simeq 1$)的超导屏蔽线圈，绕组半径约1 
 表9.1.。。。。。。。。。。。。。。
 
 \subsubsection{Q/A A：SCH超导磁体}
+\textbf{a) 总体电流密度}\qquad 超导磁体在其运行电流$I_{op}$=20 kA时的总体临界电流密度$\lambda J_{op}$是多少？
 
+\textbf{解：}应用方程3.108a，代入$N$=756和$I=I_{op}$=20 kA，我们得到：
+\begin{align*}% page548 第1个
+\lambda J_{op}&=\frac{NI}{2b(a_2-a_1)}\\ \tag{3.108a}
+&=\frac{756(20\times10^3\ \mathrm{A})}{(942.0\ \mathrm{mm})(610.1\ \mathrm{mm}-305.0\ \mathrm{mm})}=52.6\ \mathrm{A/mm^2}
+\end{align*}
 
+\textbf{b) 中心场}\qquad 超导磁体在$I_{op}$=20 kA时，在中心位置产生的磁场(磁感应强度)$B_z(0,0)$是多少？
 
-\begin{equation}% page548 第1个
-\lambda J_{op}=\frac{NI}{2b(a_2-a_1)}
-\end{equation}
+\textbf{解：}类似的，由表9.1，我们有$\alpha=$1220.2/610.0=2.00；$\beta$=942.0/610.0=1.544。
+使用方程3.110，有：
+\begin{align*}% page548 第3个
+B_{z}(0,0)=\frac{\mu_oNI}{2a_1(\alpha-1)}\ln(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}) \tag{3.110}
+\end{align*}
 
-\begin{equation}% page548 第2个
-=\frac{756(20\times10^3\ \mathrm{A})}{(942.0\ \mathrm{mm})(610.1\ \mathrm{mm}-305.0\ \mathrm{mm})}=52.6\ \mathrm{A/mm^2}
-\end{equation}
+于是，
+\begin{align*}% page548 第4个
+B_z(0,0)&=\frac{(4\pi\times10^{-7}\ \mathrm{H/m})(756)(20\times10^3\ \mathrm{A})}{(0.610\ \mathrm{m})(2.00-1)}\ln(\frac{2.00+\sqrt{(2.00)^2+(1.544)^2}}{1+\sqrt{1+(1.544)^2}})\\
+&=14.52\ \mathrm{T}
+\end{align*}
 
-\begin{equation}% page548 第3个
-B_{z}(0,0)=\frac{\mu_oNI}{2a_1(\alpha-1)}\ln(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}})
-\end{equation}
+\textbf{c) 中平面径向场}\qquad 超导磁体在中平面($z=0$)的$R=a_2$处产生的磁场的径向分量$B_r(z=0,r=2a_2)$是多少？
 
-\begin{equation}% page548 第4个
-B_z(0,0)=\frac{(4\pi\times10^{-7}\ \mathrm{H/m})(756)(20\times10^3\ \mathrm{A})}{(0.610\ \mathrm{m})(2.00-1)}\ln(\frac{2.00+\sqrt{(2.00)^2+(1.544)^2}}{1+\sqrt{1+(1.544)^2}})
-\end{equation}
+\textbf{解：}理想螺管磁体或嵌套线圈磁体产生的磁场的径向分量关于中平面对称，所以总是零：$B_r(0,a_2)=0$
 
-\begin{equation}% page548 第4个
-=14.52\ \mathrm{T}
-\end{equation}
+\textbf{d) 电感}\qquad 使用方程3.81和3.14计算磁体自感$L_s$的近似值。如前所述，准确值是260 mH。
 
-\begin{equation}% page548 第5个
-L=\mu_oa_1N^2\ \mathcal{L}(\alpha,\beta)
-\end{equation}
+\textbf{解：}使用方程3.81和3.14，$\mathcal{L}(\alpha=2.00,\beta=1.544)\simeq 1.2$，我们有：
+\begin{align*}% page548 第5个
+L&=\mu_oa_1N^2\ \mathcal{L}(\alpha,\beta) \\\tag{3.81}
+L_s&=(4\pi\times10^{-7}\ \mathrm{H/m})(0.305\ \mathrm{m})(756)^2(1.2)=263\ \mathrm{mH}
+\end{align*}
 
-\begin{equation}% page548 第6个
-L_s=(4\pi\times10^{-7}\ \mathrm{H/m})(0.305\ \mathrm{m})(756)^2(1.2)=263\ \mathrm{mH}
-\end{equation}
+\textbf{e) 储存的磁能}\qquad 超导磁体在运行电流$I_{op}$=20 kA时储存的总磁能$E_{ms}$是多少？
 
-\begin{equation}% page548 第7个
-E_{ms}=\frac{1}{2}(L_s+M_{sr})I_{op}^2
-\end{equation}
+\textbf{解：}此处我们必须考虑互感的影响。所以：
+\begin{align*}% page548 第7个
+E_{ms}=&\frac{1}{2}(L_s+M_{sr})I_{op}^2\\
+=&\frac{1}{2}(260\ \mathrm{mH}+17\ \mathrm{mH})(20\ \mathrm{kA})^2=55.4\ \mathrm{MJ}
+\end{align*}
 
-\begin{equation}% page548 第8个
-=\frac{1}{2}(260\ \mathrm{mH}+17\ \mathrm{mH})(20\ \mathrm{kA})^2=55.4\ \mathrm{MJ}
-\end{equation}
+\textbf{f) 二极管}\qquad 解释与电阻$R_D$串联的二极管的两个功能。
 
-\begin{equation}% page549 第1个
-V_S=L_s\frac{dI_s}{dt}+M_{sr}\frac{dI_r}{dt}+M_{sr}\frac{dI_s}{dt}+L_r\frac{dI_r}{dt}+R_rL_r
-\end{equation}
+\textbf{解：}反向串联的二极管有两个作用：1) 当磁体励磁时，防止电流通过$R_D$，即令100\%的电源电流都进入磁体；
+2) 当开关打开时，允许电流通过$R_D$放电。
 
-\begin{equation}% page549 第2个
-=(L_s+2M_{sr}+L_r)\frac{dI_s}{dt}+R_rI_S
-\end{equation}
+\textbf{g) 充电电压}\qquad 恒充电速率400 A/s，$dI_s/dt=dI_r/dt=dI_S/dt$=400 A/s，其中，$I_s$是通过超导
+磁体的电流，$I_r$是通过电阻性磁体的电流，$I_S$是电源电流。那么，$I_s=I_r=I_S$=10 kA时，要求的电源电压$V_S$是多少？
 
-\begin{equation}% page549 第3个
+\textbf{解：}电源电压为：
+\begin{align*}% page549 第1个
+V_S&=L_s\frac{dI_s}{dt}+M_{sr}\frac{dI_r}{dt}+M_{sr}\frac{dI_s}{dt}+L_r\frac{dI_r}{dt}+R_rL_r\\
+&=(L_s+2M_{sr}+L_r)\frac{dI_s}{dt}+R_rI_S \tag{g.1}
+\end{align*}
+
+代入合适的值，有：
+\begin{align*}% page549 第3个
 V_S=(260\ \mathrm{mH}+2\times17\ \mathrm{mH}+10\ \mathrm{mH})(400\ \mathrm{A/s})+(30\ \mathrm{m\Omega})(10\ \mathrm{kA})=421.6\ \mathrm{kA}
-\end{equation}
+\end{align*}
 
-\begin{equation}% page549 第4个
-V_S=(L_s+2M_{sr}+L_r)\frac{dI_S}{dt}+R_rI_S
-\end{equation}
+\textbf{h) 功率}\qquad 当充电速率为$dI_S/dt$=400 A/s，$I_S$=10 kA时，电源供给磁体(含超导和电阻部分)的总的瞬时功率$P_S$为多少？
 
-\begin{equation}% page549 第5个
-=421.6\ \mathrm{V}
-\end{equation}
+\textbf{解：}如\textbf{g)}，我们有：
+\begin{align*}% page549 第4个
+V_S&=(L_s+2M_{sr}+L_r)\frac{dI_S}{dt}+R_rI_S\\ \tag{g.1}
+&=421.6\ \mathrm{V}
+\end{align*}
 
-\begin{equation}% page550 第1个
+$P_S=V_S I_S$；于是，$P_S$=4.216 MW。
+我们注意到，4.216 MW中的1.216 MW[=4.216 MW-(30 m$\Omega$)$\times(10\ \mathrm{kA})^2$]
+是无功功率，即存储于两个磁体中的磁能。
+随着电源的电流减为零，磁能会“返回”到电源中。
+
+\textbf{i) 600 V电源电压}\qquad 证明在这个电流增长率(400 A/s)下，电源
+最大电压600 V在$I_S\simeq$16 kA时达到。
+
+\textbf{解：}要求的总感性电压$V_{ind}$为：
+\begin{align*}% page550 第1个
 V_{ind}=(L_s+2M_{sr}+L_r)\frac{dI_S}{dt}
-\end{equation}
-
-\begin{equation}% page550 第2个
+\end{align*}
+其中，在$dI_S/dt$=400 A/s时，上式成为：
+\begin{align*}% page550 第2个
 V_{ind}=(260\ \mathrm{mH}+2\times17\ \mathrm{mH}+10\ \mathrm{mH})(400\ \mathrm{A/s})=121.6\ \mathrm{V}
-\end{equation}
+\end{align*}
+
+同时我们还有：$V_S=V_{ind}+R_rI_r$。代入相应的值，有：$I_r$=15946.7 A；$I_S\simeq$16 kA。
+
+\textbf{j) 16 kA$\rightarrow$20 kA充电时间}\qquad 证明在电流超过16 kA($I_{16}$)之后，
+如果电源电压维持600 V，电流将在约1分钟内达到运行电流20 kA($I_{20}$)的$\sim$10 A偏差限内。
+
+\textbf{解：}当电流达到16 kA时，电源的电压不能维持充电速率400 A/s。
+
 
 \begin{equation}% page550 第3个
 m_{he}=\varrho_{he}A_{cl}v_{he}
