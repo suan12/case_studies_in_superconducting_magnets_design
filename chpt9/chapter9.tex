@@ -163,29 +163,54 @@ V_{ind}=(260\ \mathrm{mH}+2\times17\ \mathrm{mH}+10\ \mathrm{mH})(400\ \mathrm{A
 如果电源电压维持600 V，电流将在约1分钟内达到运行电流20 kA($I_{20}$)的$\sim$10 A偏差限内。
 
 \textbf{解：}当电流达到16 kA时，电源的电压不能维持充电速率400 A/s。
+在$I_s(t)\ge I_{16}$=16 kA时，$I_s(t)=I_{20}+(I_{20}-I_{16}[1-e*(-t/\tau)])$。
+其中，$I_{20}$=20 kA，$\tau$是有效电路时间常数，约为10 s，由总有效电感304 mH(=260 mH+(2$\times$17 mH)+10 mH)
+除以30 m$\Omega$得到。
+在6个时间常数，也即1分钟内，总电流将达到20 kA的10 A($\simeq 4000 e^{-6}$)偏差限内。
+
+\textbf{k) CIC---氦流量}\qquad CIC导体的氦流截面积为$A_{cl}=76.0\ \mathrm{ mm^2}$(表9.1)。
+通道中流过3.5 atm和4.5 K的超临界氦，流量为$\.{m}_{he}$=5 g/s。
+证明，流动是湍流，雷诺数Re$\simeq 10^5$。
+使用下面的参数：氦密度$\rho_{he}=0.132\ \mathrm{g/cm^3}$；
+氦黏度$\nu_{he}=35.9\times 10^{-6}\ \mathrm{g/cm\cdot s}$；
+水力直径$D_{he}=$1 cm。
+
+\textbf{解：} 流体速度$\v_{he}$由$\.{m}_{he}=\varrho_{he}A_{cl}v_{he}$给出。于是：
+\begin{align*}% page550 第4个
+v_{he}&=\frac{\.{m}_{he}}{\varrho_{he}A_{cd}}\\
+&=\frac{(5\ \mathrm{g/s})}{(0.132\ \mathrm{g/cm^3})(0.760\ \mathrm{cm^2})}\simeq50\ \mathrm{cm/s}
+\end{align*}
+
+雷诺数Re为：
+\begin{align*}% page550 第6个
+R_e&=\frac{\varrho_{he}v_{he}D_{he}}{\nu_{he}}\\
+&\simeq\frac{(0.132\ \mathrm{g/cm^3})(50\ \mathrm{cm/s})(1\ \mathrm{cm})}{35.9\times 10^{-6}\ \mathrm{g/cm\ s}}\simeq 1.8\times 10^5
+\end{align*}
+
+当Re超过$\sim$2300后，流动成为湍流。
+
+\textbf{l) CIC---低温稳定性}\qquad 在运行电流为$I_{op}$=20 kA时，CIC导体低温稳定吗？
+使用下列参数值：$A_m=57.4\ \mathrm{ mm^2}$；
+$f_d \mathcal{P}_D$=30 mm；
+$T_c$=10.3 K；
+$\rho_m=2\times 10^{-8}\ \Omega$cm；
+氦流量$\.{m}_{he}$=5 g/s。
+
+\textbf{解：}根据方程6.30，我们有：
+\begin{align*}% page551 第1个
+I_{lim}=\sqrt{\frac{A_mf_p\ \mathcal{P}_Dh_{he}(T_c-T_{op})}{\rho_m}}\tag{6.30}
+\end{align*}
+
+图6.30给出了液氦的传热系数。
+从图中，我们找到在$P$=3.5 atm，$T_{op}$=4.5 K，$\Delta T$=5.8 K时，对应Re=$10^5$的传热系数为$h_q\simeq 0.26\ \mathrm{W/cm^2 K}$。
+根据方程6.29，$h_{he}\propto \mathrm{Re}^{0.8}$，于是在Re=$1.8\times 10^5$时，$h_q\simeq 0.42\ \mathrm{W/cm^2 K}$。于是：
+\begin{align*}% page551 第2个
+I_{lim}=\sqrt{\frac{(57.4\times 10^{-2}\ \mathrm{cm^2})(3\ \mathrm{cm})(0.42\ \mathrm{W/cm^2K})(5.8\ \mathrm{K})}{2\times 10^{-8}\ \Omega\mathrm{cm}}}\simeq 14.4\ \mathrm{kA}<20\ \mathrm{kA}
+\end{align*}
+
+也即，该超导磁体运行于Stekly电流14.4 kA以上$\sim 40\%$，所以，CIC导体在20 kA时不是低温稳定的。
 
 
-\begin{equation}% page550 第3个
-m_{he}=\varrho_{he}A_{cl}v_{he}
-\end{equation}
-\begin{equation}% page550 第4个
-v_{he}=\frac{m_{he}}{\varrho_{he}A_{cd}}
-\end{equation}
-\begin{equation}% page550 第5个
-=\frac{(5\ \mathrm{g/s})}{(0.132\ \mathrm{g/cm^3})(0.760\ \mathrm{cm^2})}\simeq50\ \mathrm{cm/s}
-\end{equation}
-\begin{equation}% page550 第6个
-R_e=\frac{\varrho_{he}v_{he}D_{he}}{\nu_{he}}
-\end{equation}
-\begin{equation}% page550 第7个
-\simeq\frac{(0.132\ \mathrm{g/cm^3})(50\ \mathrm{cm/s})(1\ \mathrm{cm})}{35.9\times10^{-6}\ \mathrm{g/cm\ s}}\simeq1.8\times10^5
-\end{equation}
-\begin{equation}% page551 第1个
-I_{lim}=\sqrt{\frac{A_mf_p\ \mathcal{P}_Dh_{he}(T_c-T_{op})}{\rho_m}}
-\end{equation}
-\begin{equation}% page551 第2个
-I_{lim}=\sqrt{\frac{(57.4\times10^{-2}\ \mathrm{cm^2})(3\ \mathrm{cm})(0.42\ \mathrm{W/cm^2K})(5.8\ \mathrm{K})}{2\times10^{-8}\ \mathrm{\Omega cm}}}\simeq 14.4\ \mathrm{kA}<20\ \mathrm{kA}
-\end{equation}
 \begin{equation}% page551 第3个
 L_s\frac{dI_s(t)}{t}+M_{sr}\frac{dI_r(t)}{dt}+R_DI_s(t)=0
 \end{equation}
