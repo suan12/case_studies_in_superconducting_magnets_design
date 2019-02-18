@@ -210,28 +210,45 @@ I_{lim}=\sqrt{\frac{(57.4\times 10^{-2}\ \mathrm{cm^2})(3\ \mathrm{cm})(0.42\ \m
 
 也即，该超导磁体运行于Stekly电流14.4 kA以上$\sim 40\%$，所以，CIC导体在20 kA时不是低温稳定的。
 
+\textbf{m) 电流衰减}\qquad 假设两个磁体都运行于20 kA，保护系统在$t=0$时刻在任一磁体中检测到故障，并无延迟的打开了
+20 kA/2 kV断路器。为了快速估算$I_s(t)$和$I_r(t)$，假定$M_{sr}=0$(两磁路无耦合)，解出$I_s(t)$和$I_r(t)$。
+实际上，耦合并不可忽略，$k_{sr}=M_{sr}/\sqrt{L_sL_r}$=0.017/(0.260$\times$0.010)=0.333；
+不过，假定$M_{sr}=0$的计算结果对我们感知时间尺度是颇为有益的。
 
-\begin{equation}% page551 第3个
-L_s\frac{dI_s(t)}{t}+M_{sr}\frac{dI_r(t)}{dt}+R_DI_s(t)=0
-\end{equation}
-\begin{equation}% page551 第4个
-M_{sr}\frac{dI_s(t)}{dt}+L_r\frac{dI_r(t)}{dt}+R_rI_r(T)=0
-\end{equation}
-\begin{equation}% page551 第5个
-L_s\frac{dI_s(t)}{dt}+R_DI_s(t)=0
-\end{equation}
-\begin{equation}% page551 第6个
-L_r\frac{dI_r(t)}{dt}+R_rI_r(t)=0
-\end{equation}
-\begin{equation}% page551 第7个
-I_s(t)=I_oe^{-tR_D/L_s}
-\end{equation}
-\begin{equation}% page551 第8个
-I_r(t)=I_oe^{-tR_r/L_r}
-\end{equation}
-\begin{equation}% page552 第1个
-L_s\frac{dI_s(t)}{dt}=-R_DI_s(t)-M_{sr}\frac{dI_r(t)}{dt}
-\end{equation}
+\textbf{解：}在$M_{sr}\ne 0$时，每个磁体的电路方程为：
+\begin{align*}% page551 第3个
+L_s\frac{dI_s(t)}{t}+M_{sr}\frac{dI_r(t)}{dt}+R_DI_s(t)&=0\\
+M_{sr}\frac{dI_s(t)}{dt}+L_r\frac{dI_r(t)}{dt}+R_rI_r(T)&=0 \tag{m.1}
+\end{align*}
+若令$M_{sr}=0$，上式成为：
+\begin{align*}% page551 第5个
+L_s\frac{dI_s(t)}{dt}+R_DI_s(t)&=0\\
+L_r\frac{dI_r(t)}{dt}+R_rI_r(t)&=0\tag{m.2}
+\end{align*}
+这样，m.2的两个式子可以分别求解：
+\begin{align*}% page551 第7个
+I_s(t)&=I_oe^{-tR_D/L_s}\\
+I_r(t)&=I_oe^{-tR_r/L_r} \tag{m.3}
+\end{align*}
+式中，$I_o$=20 kA，$L_s/R_D$=2.6 s(=260 mH/0.1 $\Omega$)，$L_r/R_r$=0.33 s(=10 mH/30 m$\Omega$)。
+方程m.3的图示见图9.3。
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{chpt9/figs/fig9.3.eps}
+	\caption{方程m.3两式在$M_{sr}=0$的曲线，实心点为$I_s(t)$，空心点为$I_r(t)$。各点列旁边的曲线是$M_{sr}$=0.017 H对应的解。}
+\end{figure}
+
+\textbf{n) 耦合效应}\qquad 两磁体显然是感性耦合的---$M_{sr}\neq 0$。
+解释图9.3中，为什么$M_{sr}$=0.017 H对应的$I_s(t)$解在$M_{sr}=0$的实心点列上方。
+
+\textbf{解：}我们可以把m.1的第一式写为
+\begin{align*}% page552 第1个
+L_s\frac{dI_s(t)}{dt}=-R_DI_s(t)-M_{sr}\frac{dI_r(t)}{dt} \tag{n.1}
+\end{align*}
+因为
+
+
 \begin{equation}% page552 第2个
 E_s=R_D\int_{0}^{\infty}I_s^2(t)dt
 \end{equation}
