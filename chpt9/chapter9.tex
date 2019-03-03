@@ -251,16 +251,27 @@ L_s\frac{dI_s(t)}{dt}=-R_DI_s(t)-M_{sr}\frac{dI_r(t)}{dt} \tag{n.1}
 也即，$M_{sr}\neq 0$时的$I_s(t)$要比$M_{sr}=0$时衰减的更慢。
 但是，因为$k_{sr}$并不很大，假定$M_{sr}=0$的快速解偏离并不大，至少对$I_s(t)$是如此。
 
+\textbf{o) 有效衰减时间常数}\qquad 如上文n)中所述，当将两个磁体之间的电感耦合考虑进来后，
+$I_s(t)$和$I_r(t)$相比m)中的不耦合系统衰减的更慢。
+假设超导磁体在20 kA时储存的总磁能是55.4 MJ(按e)的计算)全部耗散于电阻$R_D$，
+耦合系统中的$I_s(t)$使用“有效”时间常数$\tau_{eff}$表示，计算$\tau_{eff}$。
 
-\begin{equation}% page552 第2个
-E_s=R_D\int_{0}^{\infty}I_s^2(t)dt
-\end{equation}
-\begin{equation}% page552 第3个
-E_s=R_D\int_{0}^{\infty}I_{o}^2e^{-2t/\tau_{eff}}dt=\frac{R_DI_o^2\tau_{eff}}{2}
-\end{equation}
-\begin{equation}% page552 第4个
+\textbf{解：}超导磁体的总磁能耗散于$R_D$，有：
+\begin{align*}% page552 第2个
+E_s=R_D\int_{0}^{\infty}I_s^2(t)dt \tag{o.1a}
+\end{align*}
+因为$I_s(t)=I_o e^{-t/\tau_{eff}}$，上式成为：
+\begin{align*}% page552 第3个
+E_s=R_D\int_{0}^{\infty}I_{o}^2e^{-2t/\tau_{eff}}dt=\frac{R_DI_o^2\tau_{eff}}{2} \tag{o.1b}
+\end{align*}
+解出上式的$\tau_{eff}$，有：
+\begin{align*}% page552 第4个
 \tau_{eff}=\frac{2E_s}{R_DI_o^2}=\frac{2(55.4\times10^6\ \mathrm{J})}{(0.1\ \mathrm{\Omega})(2\times10^4\ \mathrm{A})^2}=2.77\ \mathrm{s}
-\end{equation}
+\end{align*}
+可见，计算值比不耦合系统的计算值2.6 s略大$\sim6\%$。
+
+
+
 \begin{equation}% page553 第1个
 e_{hy}=\frac{1}{2}\mu_oH_pH_m(1+i)^2\     \ [H_m\geq H_p(1-i)]
 \end{equation}
