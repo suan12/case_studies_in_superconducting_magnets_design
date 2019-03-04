@@ -271,26 +271,55 @@ E_s=R_D\int_{0}^{\infty}I_{o}^2e^{-2t/\tau_{eff}}dt=\frac{R_DI_o^2\tau_{eff}}{2}
 \end{align*}
 可见，计算值比不耦合系统的计算值2.6 s略大$\sim6\%$。
 
+\textbf{p) 磁滞损耗}\qquad 磁体从0到$B_m$励磁过程中，各超导丝中产生磁滞损耗。
+估计一根直径为$d_f$=42 $\mu$m，位于CIC导体最内层之中的Nb2Sn细丝的空间平均磁滞能量密度$e_{hy1}$，
+磁体缓慢通电流到20 kA，对应磁场为$B_m$=14 T。
+从方程7.23a着手，该方程适用于存在传输电流下的Bean板(案例4i)：
+\begin{align*}% page553 第1个
+e_{hy}=\frac{1}{2}\mu_oH_pH_m(1+i)^2\     \ [H_m\geq H_p(1-i)] \tag{7.23a}
+\end{align*}
+因为我们处理的导线假定为圆截面，直径为$d_f$，使用$H_p=(8/3\pi)J_c(d_f/2)$，该式
+适用于垂直磁场下的导线(方程5.29b)。
+接下来，因为$I_t$自0始，到20 kA止，远小于将近40 kA的$I_c$，令$(1+i)^2\simeq 1$可化简方程。
+决定$H_p$的$J_c$在0和14 T之间宽幅变动。
+也即，我们必须从$\mu_o H_m=B_m=0$到$B_m$=14 T对方程7.23a积分，
+得到20 kA下最内层内的平均场：
+\begin{align*}% page553 第2个
+e_{hy1}\simeq\frac{2d_f}{3\pi}\int_{0}^{B_m}J_c(B,t,\epsilon)dB \tag{p.1}
+\end{align*}
+这里，$J_c(B,t,\epsilon)$是Nb3Sn的临界电流密度，其依赖性不仅考虑了B和T，还包括了
+应力$\epsilon$。这是因为磁体在充磁和退磁过程中，作用于每一根导体丝上的应力是变化的。
+对T的依赖也是很重要的，因为如果磁体充磁或退磁的过程不是足够缓慢从而导体可以在
+可以忽略的温升下将热传给制冷剂，导体的温度降升高。
+通常，p.1以闭式解积分将非常复杂。
 
+不过，我们将在这里使用闭式解，通过：1) 以足够缓慢的速度改变磁场，维持导体温度为4.5 K；
+2) 忽略应力对$J_c$的效应。对处于磁体中平面和最内层的Nb3Sn复合导体丝，我们可以使用
+平均电流密度$\tilde{J}_c(B,4.5K0)$：
+\begin{align*}% page553 第3个
+\tilde{J}_c(B,4.5K,\epsilon=0)=\tilde{J}_c(0,4.5K)\frac{b_o}{b_o+B} \tag{p.2}
+\end{align*}
+式中，$\tilde{J}_c(0,4.5K)=42\times 10^9\ \mathrm{ A/m^2}$，
+$b_o$=1 T。
+方程p.2是Nb3Sn在4.5 K和$\epsilon=0$下的$\tilde{J}_c(B,T,\epsilon)$的粗略近似。
 
-\begin{equation}% page553 第1个
-e_{hy}=\frac{1}{2}\mu_oH_pH_m(1+i)^2\     \ [H_m\geq H_p(1-i)]
-\end{equation}
-\begin{equation}% page553 第2个
-e_{hy1}\simeq\frac{2d_f}{3\pi}\int_{0}^{B_m}J_c(B,t,\epsilon)dB
-\end{equation}
-\begin{equation}% page553 第3个
-\tilde{J}_c(B,4.5K,\epsilon=0)=\tilde{J}_c(0,4.5K)\frac{b_o}{b_o+B}
-\end{equation}
-\begin{equation}% page553 第4个
-\int_{0}^{B_m}\tilde{J}_c(B,4.5\ \mathrm{K})dB=\tilde{J}(0,4.5\ \mathrm{K})b_o\int_{0}^{B_m}\frac{dB}{b_o+B}=\tilde{J}_c(0,4.5\ \mathrm{K})b_o\ln(\frac{b_o+B_m}{b_o})
-\end{equation}
-\begin{equation}% page553 第5个
-=(42\times10^9\ \mathrm{J/m^2})(1\ \mathrm{T})\ln15=113.7\times10^9\ \mathrm{J/m^4}
-\end{equation}
-\begin{equation}% page553 第6个
+\textbf{解：}使用p.2，我们首先积分：
+\begin{align*}% page553 第4个
+\int_{0}^{B_m}\tilde{J}_c(B,4.5\ \mathrm{K})dB&=\tilde{J}(0,4.5\ \mathrm{K})b_o\int_{0}^{B_m}\frac{dB}{b_o+B}=\tilde{J}_c(0,4.5\ \mathrm{K})b_o\ln(\frac{b_o+B_m}{b_o})\\
+&=(42\times10^9\ \mathrm{J/m^2})(1\ \mathrm{T})\ln15=113.7\times10^9\ \mathrm{J/m^4}
+\end{align*}
+将上式结果代入p.1，有：
+\begin{align*}% page553 第6个
 e_{hy1}\simeq\frac{2(42\times10^{-6}\ \mathrm{m})}{3\pi}(113.7\times10^9\ \mathrm{J/m^4})\simeq1014\ \mathrm{kJ/m^3}
-\end{equation}
+\end{align*}
+使用GRANDLF，Gavrilin根据p.1得到$e_{hy1}=1039\ \mathrm{kJ/m^3}$；
+在我们的简化模型下，他得到$1122\ \mathrm{kJ/m^3}$---
+该值略大因为$J_c(B,4.5\ \mathrm{K},\epsilon=0)>J_c(B,T>4.5\ \mathrm{K},\epsilon>0)$[9.2]。
+
+\textbf{q) 充电速率 vs. 氦温升}\qquad 流体力学上看，该磁体的隔层是并联的。
+
+
+
 \begin{equation}% page554 第1个
 E_{hy1}=e_{hy}(A_{sc}+A_{\bar{m}})\ell_1
 \end{equation}
