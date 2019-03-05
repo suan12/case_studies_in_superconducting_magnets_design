@@ -316,49 +316,85 @@ e_{hy1}\simeq\frac{2(42\times10^{-6}\ \mathrm{m})}{3\pi}(113.7\times10^9\ \mathr
 在我们的简化模型下，他得到$1122\ \mathrm{kJ/m^3}$---
 该值略大因为$J_c(B,4.5\ \mathrm{K},\epsilon=0)>J_c(B,T>4.5\ \mathrm{K},\epsilon>0)$[9.2]。
 
-\textbf{q) 充电速率 vs. 氦温升}\qquad 流体力学上看，该磁体的隔层是并联的。
+\textbf{q) 充电速率 vs. 氦温升}\qquad 流体力学上看，该磁体的各层是并联的。
+假定进入制冷工质的唯一热源是空间平均分布的磁滞损耗，计算磁体从0到20 kA
+最大的恒电流充电速度$(dI_s/dt)_{mx}$，在该速度下，氦质量流量若为5 g/s，
+氦的时间平均温升极限为$\Delta\tilde{T}_{he}\simeq 4.0$ K($=\tilde{T}_{cs}-T_{op}$)。
+这里，$\tilde{T}_{cs}$是时间平均的电流分享温度，在$I_{op}$=0时，$T_{cs}$=10.3 K；
+在$I_{op}$=20 kA时，$T_{cs}$=6.7 K：$\tilde{T}_{cs}$=8.5 K。
+此处计算使用p)中在恒定温度下得到的$e_{hy}=1014\ \mathrm{kJ/m^3}$。
 
+氦在4.5 K和3.5 atm下的物性如下：定压比热$C_{he}$=4.28 J/gK；
+密度$\rho_{he}=0.132\ \mathrm{g/cm^3}$，且认为其在最内层与温度和压力无关。
+首先，证明在最内层释放的磁滞损耗总能量$E_{hy1}$为3.5 kJ。
 
-
-\begin{equation}% page554 第1个
+\textbf{解：}最内层释放的磁滞损耗总能量为：
+\begin{align*}% page554 第1个
 E_{hy1}=e_{hy}(A_{sc}+A_{\bar{m}})\ell_1
-\end{equation}
-\begin{equation}% page554 第2个
-\ell_1\simeq2\pi(0.305\ \mathrm{m}+0.017\ \mathrm{m})42\simeq85\ \mathrm{m}
-\end{equation}
-\begin{equation}% page554 第3个
-E_{hy1}=(1014\times10^3\ \mathrm{J/m^3})(40.2\times10^{-6}\ \mathrm{m^2})(85\ \mathrm{m})\simeq 3.5\ \mathrm{kJ}
-\end{equation}
-\begin{equation}% page554 第4个
-\frac{dH_{he}}{dt}=C_{he}m_{he}\Delta\tilde{T}_{he}
-\end{equation}
-\begin{equation}% page554 第5个
-=(4.28\ \mathrm{J/gK})(5\ \mathrm{g/s})(4.0\ \mathrm{K})\simeq86\ \mathrm{W}
-\end{equation}
-\begin{equation}% page554 第6个
-P_{hy1_{mx}}\simeq\frac{E_{hy1}}{\Delta t_{mn}}=86\ \mathrm{W}
-\end{equation}
-\begin{equation}% page554 第7个
-\Delta t{mn}=\frac{E_{hy1}}{P_{hy1_{mx}}}\simeq\frac{3.5\ \mathrm{kJ}}{86\ \mathrm{W}}\simeq41\ \mathrm{s}
-\end{equation}
-\begin{equation}% page554 第8个
-(\frac{dI_s}{dt})_{mx}=\frac{\Delta I_s}{\Delta t_{mn}}\simeq\frac{20\times10^3\ \mathrm{A}}{41\ \mathrm{s}}\simeq490\ \mathrm{A/s}
-\end{equation}
-\begin{equation}% page555 第1个
-e_{cp}=2\mu_oH_{m}^2[1+\frac{1}{4}(\frac{\pi D_{mf}}{\ell_p})^2]\Gamma
-\end{equation}
-\begin{equation}% page555 第2个
-\Gamma\simeq\frac{4\tau_{cp}}{\tau_m}\   \  (\tau_m\gg \tau_{cp})
-\end{equation}
-\begin{equation}% page555 第3个
-e_{cp}\simeq\frac{1}{2}(2\frac{B_m^2}{\mu_o})\Gamma
-\end{equation}
-\begin{equation}% page555 第4个
-=\frac{4B_m^2\tau_{cp}}{\mu_o\tau_m}
-\end{equation}
-\begin{equation}% page555 第5个
-e_{cp}=\frac{4(14\ \mathrm{T})^2(30\times10^{-3}\ \mathrm{s})}{(4\pi\times10^{-7}\ \mathrm{T})(50\ \mathrm{s})}\simeq357\ \mathrm{kJ/m^3}
-\end{equation}
+\end{align*}
+式中，$(A_{sc}+A_{\bar{m}})=40.2\ \mathrm{ mm^2}$，$\ell_1$是最内层的导体总长度。
+我们有$\ell_1\simeq 2\pi(a_1+w)(42)$，其中，$a_1$是绕组的内径，$w$是槽的径向深度，
+42是每层的匝数---上述数据可从表9.1查得。
+从图9.1和表9.1我们知道，磁体绕组的径向尺度$a_2-a_1$是305.1 mm，
+包括18层CIC导体：$w$=(305.1 mm)/18$\simeq$17 mm。于是：
+\begin{align*}% page554 第2个
+\ell_1\simeq 2\pi(0.305\ \mathrm{m}+0.017\ \mathrm{m})42\simeq 85\ \mathrm{m}
+\end{align*}
+\begin{align*}% page554 第3个
+E_{hy1}=(1014\times 10^3\ \mathrm{J/m^3})(40.2\times 10^{-6}\ \mathrm{m^2})(85\ \mathrm{m})\simeq 3.5\ \mathrm{kJ}
+\end{align*}
+
+在流量$\.{m}_{he}$=5 g/s下，氦的焓在最内层入口到出口的时间平均变化率$dH_{he}/dt$为：
+\begin{align*}% page554 第4个
+\frac{dH_{he}}{dt}&=C_{he}m_{he}\Delta\tilde{T}_{he}\\
+&=(4.28\ \mathrm{J/gK})(5\ \mathrm{g/s})(4.0\ \mathrm{K})\simeq 86\ \mathrm{W}
+\end{align*}
+也即，在时间平均温升为4.0 K时，最内层的氦的冷却功率为86 W。
+该冷却功率必须与最大耗散率$P_{hy1}_{mx}$相匹配：
+\begin{align*}% page554 第5个
+ P_{hy1_{mx}}\simeq\frac{E_{hy1}}{\Delta t_{mn}}=86\ \mathrm{W} \tag{q.1}
+\end{align*}
+在方程q.1中解出$\Delta t_{mn}$，我们得到：
+\begin{align*}% page554 第7个
+\Delta t{mn}=\frac{E_{hy1}}{P_{hy1_{mx}}}\simeq\frac{3.5\ \mathrm{kJ}}{86\ \mathrm{W}}\simeq 41\ \mathrm{s}
+\end{align*}
+于是：
+\begin{align*}% page554 第8个
+(\frac{dI_s}{dt})_{mx}=\frac{\Delta I_s}{\Delta t_{mn}}\simeq\frac{20\times 10^3\ \mathrm{A}}{41\ \mathrm{s}}\simeq 490\ \mathrm{A/s}
+\end{align*}
+
+这样，额定充电速度400 A/s可以保证导体低于其电流分享温度，该温度在$I_{op}=0$时
+为10.3 K，在$I_{op}=20$ kA时为6.7 K。
+
+\textbf{r) 耦合损耗}\qquad 使用方程7.36和7.39c (表7.8)，计算耦合耗散能量密度$e_{cp}$。
+计算条件为：导体细丝直径$D_{mf}$=0.6 mm，$\ell_p$=10 mm，
+以很定充电速率400 A/s线性或$\tau_m$=50 s(如图7.18的三角形场激励)
+将磁体由0充电至20 kA($B_m$=14 T)。
+对于本Nb3Sn细丝，$\tau_{cp}$=30 ms[9.2]。
+
+\textbf{解：}在$\tau_m\gg \tau_{cp}$下，三角波激励下的时间平均$e_{cp}$由7.36和7.39c的组合形式给出：
+\begin{align*}% page555 第1个
+e_{cp}=2\mu_oH_{m}^2[1+\frac{1}{4}(\frac{\pi D_{mf}}{\ell_p})^2]\Gamma \tag{7.36}
+\end{align*}
+\begin{align*}% page555 第2个
+\Gamma\simeq\frac{4\tau_{cp}}{\tau_m}\   \  (\tau_m\gg \tau_{cp}) \tag{7.39c}
+\end{align*}
+方程7.36中，$(\pi D_{mf}/\ell_p)^2\ll 1$，$H_m=B_m/\mu_o$；
+充电时间周期仅包括整个三角波的1/2(图7.18)，
+所以方程7.36中必须加入因子1/2。这样，$e_{cp}$成为：
+\begin{align*}% page555 第3个
+e_{cp}&\simeq\frac{1}{2}(2\frac{B_m^2}{\mu_o})\Gamma\\
+&=\frac{4B_m^2\tau_{cp}}{\mu_o\tau_m} \tag{r.1}
+\end{align*}
+
+代入$B_m$=14 T，$\tau_{cp}$=30 ms以及$\tau_m$=50 s，我们得到：
+\begin{align*}% page555 第5个
+e_{cp}=\frac{4(14\ \mathrm{T})^2(30\times 10^{-3}\ \mathrm{s})}{(4\pi\times 10^{-7}\ \mathrm{T})(50\ \mathrm{s})}\simeq 357\ \mathrm{kJ/m^3}
+\end{align*}
+
+可见，耦合损耗约为磁滞损耗的$\sim 1/3$。
+
+
 \begin{equation}% page556 第1个
 Z(T_f,T_i)=(\frac{A_m}{A_{cd}})\int_{0}^{\infty}J_{m_o}^2e^{-2t/\tau_{dg}}dt=(\frac{A_m}{A_{cd}})J_{m_o}^2\times\frac{1}{2}\tau_{dg}
 \end{equation}
