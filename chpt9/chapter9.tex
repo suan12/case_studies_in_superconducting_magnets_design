@@ -394,25 +394,68 @@ e_{cp}=\frac{4(14\ \mathrm{T})^2(30\times 10^{-3}\ \mathrm{s})}{(4\pi\times 10^{
 
 可见，耦合损耗约为磁滞损耗的$\sim 1/3$。
 
+\textbf{s) 热点温度}\qquad 假定$t=0$时，超导磁体中检测到失超，断路器无时延打开---
+即在$t=0$时刻打开。假定超导磁体中的电流$I_s(t)$以指数衰减，等效衰减常数$\tau_{eff}$=2.77 s
+(如o)中所得)。同时假定初始失超点---“热点”---由焦耳热绝热加热。
+计算热点的最终温度$T_f$。
+同时假设，仅由CIC导体---超导体、非基底金属、基底(铜，RRR=100)---吸收焦耳热，
+铜的热容量可用来代表全部导体的热容量。
 
-\begin{equation}% page556 第1个
-Z(T_f,T_i)=(\frac{A_m}{A_{cd}})\int_{0}^{\infty}J_{m_o}^2e^{-2t/\tau_{dg}}dt=(\frac{A_m}{A_{cd}})J_{m_o}^2\times\frac{1}{2}\tau_{dg}
-\end{equation}
+\textbf{解：}根据方程8.16a，我们有：
+\begin{align*}% page556 第1个
+Z(T_f,T_i)=(\frac{A_m}{A_{cd}})\int_{0}^{\infty}J_{m_o}^2e^{-2t/\tau_{dg}}dt=(\frac{A_m}{A_{cd}})J_{m_o}^2\times\frac{1}{2}\tau_{dg} \tag{8.16a}
+\end{align*}
+
+将表9.1中的参数代入8.16a，$A_m=57.4\ \mathrm{mm^2}$；
+$A_{cd}=A_m+A_{sc}+A_{\bar{m}}=97.6\ \mathrm{ mm^2}$；
+$J_{m_{op}=I_{op}/A_m=20000/57.4\times 10^{-6}=3.48\times 10^8\ \mathrm{ A/m^2}$；
+将$\tau_{dg}=\tau_{eff}$=2.77 s代入s.1，解铜的$Z_{cu}(T_f，T_i)$，$Z(T_f,T_i)$：
+\begin{align*}% page556 第2个
+Z_{cu}(T_f,T_i)&=(\frac{57.4\times 10^{-6}\ \mathrm{m^2}}{97.6\times 10^{-6}\ \mathrm{m^2}})(3.48\times 10^8\ \mathrm{A/m^2})^2(\frac{2.77\ \mathrm{s}}{2})\\
+&\simeq 9.9\times 10^{16}\ \mathrm{A^2s/m^4}
+\end{align*}
+
+从图8.2，我们找到$Z_{cu}(T_f，T_i=4.5\ \mathrm{K})=9.9\times 10^{16}\ \mathrm{A^2 s/m^4}$对应
+铜(RRR=100)的$T_f\simeq 125$ K。
+
+\textbf{t) 起始延时}\qquad 一个更贴近实际的场景应考虑从$t=0$热点出现到断路器实际打开的延时$\tau_{dl}$。
+这是因为热点电压升高到触发断路器打开所需的水平需要一定时间。
+假设这个期间$t_d$内，超导磁体的电流保持20 kA，估算热点最终温度$T_f$。除$\tau_{dl}$=0.5 s外，
+条件假设同s)。
+
+\textbf{解：}使用方程8.66b，并使用$\tau_{eff}$代替$\tau_{dg}$，有：
+\begin{align*}% page557 第1个
+Z(T_f,T_i)&=(\frac{A_m}{A_{cd}})(\tau_{dl}+\frac{1}{2}\tau_{eff})J_{m_{op}}^2\\
+&\simeq 13.5\times 10^{16}\ \mathrm{A^2s/m^4}
+\end{align*}
+
+从图8.2，我们找到$Z_{cu}(T_f,T_i=4.5\ \mathrm{K})=13.5\times 10^{16}\ \mathrm{A^2 s/m^4}$
+对应铜(RRR=100)的$T_f\simeq 225$ K，这几乎是可接受的热点温度的极限了。
+尽管实际中由于制冷工质的冷却，$T_f$应能<225 K，但出于谨慎考虑，磁体产生热点后断路器应
+确保在0.5 s内打开。
+这意味着热点产生后，必须在远小于0.5 s的时间内将之检测到。
+
+图9.4给出了温度(实线)和压力(虚线)与时间的关系图。该图由Gavrilin[9.2]制作，他使用GANDALF
+计算了类似于s)的案例，他的计算中除了使用了$I_s(t)$的准确解，还考虑了氦的冷却效果和交流损耗。
+大体上说，由于氦的冷却，热点温度$T_f$仅上升到$\sim$95 K，而不是s)中在绝热和$\tau_{dl}=0$
+条件下计算的125 K。
+分析还表明，通道内氦的压力峰值达到了23.5 atm。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.6]{chpt9/figs/fig9.4.eps}
+	\caption{温度(实线，左y轴)和压力(虚线，右y轴)与时间的关系。}
+\end{figure}
+
+表9.2.。。。。。。。。。。。。。。。。。。。。
 
 
+\textbf{u) 故障模式轴向力}\qquad SCH磁体的一个可能故障模式就在额定运行电流20 kA下，
+5个电阻型插入线圈(图9.1)的各线圈的一半损坏(最恶劣情景)而形成电气短接，剩余一半继续工作产生磁场。
+各线圈的上半部分短接时，各线圈的轴向场中心下移$b/2$；
+对线圈5(最外侧)，由图9.1可见，该值为$151\frac{1}{4}$ mm。
+表9.2给出了5线圈电阻型插入磁体的关键参数[9.3]。
 
-\begin{equation}% page556 第2个
-Z_{cu}(T_f,T_i)=(\frac{57.4\times10^{-6}\ \mathrm{m^2}}{97.6\times10^{-6}\ \mathrm{m^2}})(3.48\times10^8\ \mathrm{A/m^2})^2(\frac{2.77\ \mathrm{s}}{2})
-\end{equation}
-\begin{equation}% page556 第3个
-\simeq9.9\times10^{16}\ \mathrm{A^2s/m^4}
-\end{equation}
-\begin{equation}% page557 第1个
-Z(T_f,T_i)=(\frac{A_m}{A_{cd}})(\tau_{dl}+\frac{1}{2}\tau_{eff})J_{m_{op}}^2
-\end{equation}
-\begin{equation}% page557 第2个
-\simeq13.5\times10^{16}\ \mathrm{A^2s/m^4}
-\end{equation}
+
 \begin{equation}% page559 第1个
 F_{AZ}(\rho)=\frac{\mu_o}{2}(N_AI_A)(N_BI_B)\frac{\rho\sqrt{(a_A+a_B)^2+\rho^2}}{(a_A-a_B)^2+\rho^2}
 \times\{k^2K(k)+(k^2-2)[K(k)-E(k)]\}
