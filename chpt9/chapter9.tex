@@ -455,28 +455,71 @@ Z(T_f,T_i)&=(\frac{A_m}{A_{cd}})(\tau_{dl}+\frac{1}{2}\tau_{eff})J_{m_{op}}^2\\
 对线圈5(最外侧)，由图9.1可见，该值为$151\frac{1}{4}$ mm。
 表9.2给出了5线圈电阻型插入磁体的关键参数[9.3]。
 
+当这种情况发生后，超导磁体承受向下的轴向力，该力与电阻型磁体的承受向上力一致。
+从图9.1我们可以看到，超导磁体承受的最大力来自线圈5，尽管其中心场是最小的。主要原因是：
+1) 线圈5最大；2）它与超导磁体耦合最紧密。
+参照下面给出的逐步的“简单”但“理由充分”的步骤，粗略计算线圈5和4对超导磁体的力。
+这里的目标是让一个设计小组的非专家获得大致认知，组内的专家则会使用程序计算得到“精确”的数值。
 
-\begin{equation}% page559 第1个
-F_{AZ}(\rho)=\frac{\mu_o}{2}(N_AI_A)(N_BI_B)\frac{\rho\sqrt{(a_A+a_B)^2+\rho^2}}{(a_A-a_B)^2+\rho^2}
-\times\{k^2K(k)+(k^2-2)[K(k)-E(k)]\}
-\end{equation}
-\begin{equation}% page559 第2个
-k^2=\frac{4a_Aa_B}{(a_A+a_B)^2+\rho^2}
-\end{equation}
-\begin{equation}% page559 第3个
-B_z(0,0)=\frac{\mu_oNI}{2a_1}
-\end{equation}
-\begin{equation}% page559 第4个
-N_A=\frac{2a_AB_Z(0,0)}{\mu_oI_A}=\frac{2(0.458\ \mathrm{m})(14.52\ \mathrm{T})}{(4\pi\times10^{-7}\ \mathrm{H/m})(2\times10^4\ \mathrm{A})}=529
-\end{equation}
-\begin{equation}% page559 第5个
-[F(\alpha,\beta)]_B=\ln(\alpha\frac{\beta+\sqrt{1+\beta^2}}{\beta+\sqrt{\alpha^2+\beta^2}})
-\end{equation}
-\begin{equation}% page559 第6个
+3.5节，我们讨论了计算“简单”螺管线圈组合，特别是“环”线圈，薄壁线圈等的解析方法。
+这些组合中，最简单的是两个环形线圈之间的力的计算(图3.5)：
+线圈A，直径$a_A$，总匝数$N_A$，电流$I_A$；线圈B，直径$a_B$，总匝数$N_B$，电流$I_B$。
+
+\textbf{逐步过程}
+
+过程包括两步。
+\begin{description}
+	\item[第一步] 将各线圈建模为环形线圈，使其产生和原始线圈相同的中心场。计算环形线圈在运行电流
+	20 kA下的总匝数$N$。尽管超导磁体和电阻型线圈建模为薄壁螺管线圈更准确(图3.7)，
+	但相应的轴向力表达式更复杂，对评估大致情况显得不必要。
+\item[第二步] 使用方程3.34计算两个环线圈之间的轴向力：首先是超导环线圈(线圈A)和电阻型环线圈5(线圈B)
+之间的力；接下来计算超导环线圈(线圈A)和电阻型线圈4(线圈B)之间的力。
+\end{description}
+
+\textbf{两个环线圈之间的轴向力：复习}
+
+对两个轴向距离$\rho$的环形线圈A和线圈B，两线圈之间的轴向力$F_{zA}(\rho)$为：
+\begin{align*}% page559 第1个
+F_{AZ}(\rho)=&\frac{\mu_o}{2}(N_AI_A)(N_BI_B)\frac{\rho\sqrt{(a_A+a_B)^2+\rho^2}}{(a_A-a_B)^2+\rho^2}\\
+&\times\{k^2K(k)+(k^2-2)[K(k)-E(k)]\} \tag{3.34}
+\end{align*}
+$K(k)$和$E(k)$分别是第一类和第二类完全椭圆积分。
+该系统椭圆积分的模量$k$为：
+\begin{align*}% page559 第2个
+k^2=\frac{4a_Aa_B}{(a_A+a_B)^2+\rho^2} \tag{3.36}
+\end{align*}
+
+\textbf{解：}使用方程3.111a给出的场表达式计算超导环形线圈A的匝数$N_A$：
+\begin{align*}% page559 第3个
+B_z(0,0)=\frac{\mu_oNI}{2a_1} \tag{3.111a}
+\end{align*}
+这里，$N=N_A,I=I_A, a_1=a_A$。
+超导线圈的$a_A$的一个合适的值时平均绕组半径(表9.1)：$a_A\simeq$458 mm。
+于是，代入$B_Z(0,0)$=14.52 T和$I_A$=20 kA，我们有：
+\begin{align*}% page559 第4个
+N_A=\frac{2a_AB_Z(0,0)}{\mu_oI_A}=\frac{2(0.458\ \mathrm{m})(14.52\ \mathrm{T})}{(4\pi\times 10^{-7}\ \mathrm{H/m})(2\times 10^4\ \mathrm{A})}=529
+\end{align*}
+
+我们注意到$N_A$比磁体实际的匝数756小，这是由于产生相同的中心场，环形线圈要比
+各匝分布于很大的绕组截面上的实际磁体效率高。
+
+将线圈5建模为环形线圈B需要更加的小心：中心场3.72 T不能直接使用，因为这是线圈5在故障前
+产生的中心场。现在，轴向距离$2b$折半了，于是，我们必须首先计算线圈5在$\beta'=\beta/2$
+时产生的中心场。
+对于Bitter磁体，场因子$[F(\alpha,\beta)]_B$由方程3.115b给出：
+\begin{align*}% page559 第5个
+[F(\alpha,\beta)]_B=\ln(\alpha\frac{\beta+\sqrt{1+\beta^2}}{\beta+\sqrt{\alpha^2+\beta^2}}) \tag{3.115b}
+\end{align*}
+
+因为损坏线圈中的“健康”的一半线圈的参数不变，新的中心场$[B_Z'(0,0)]_B$
+可以由原中心场$[B_Z(0,0)]_B$给出：
+\begin{align*}% page559 第6个
 \frac{[B_Z'(0,0)]_B}{[B_Z(0,0)]_B}
 =\frac{[F(\alpha,\beta')]_B}{[F(\alpha,\beta)]_B}
-=\frac{\ln(\alpha\frac{\beta'+\sqrt{1+\beta'^2}}{\beta'+\sqrt{\alpha^2+\beta'2}})}{\ln(\alpha\frac{\beta+\sqrt{1+\beta^2}}{\beta+\sqrt{\alpha^2+\beta^2}})}
-\end{equation}
+=\frac{\ln(\alpha\frac{\beta'+\sqrt{1+\beta'^2}}{\beta'+\sqrt{\alpha^2+\beta'2}})}{\ln(\alpha\frac{\beta+\sqrt{1+\beta^2}}{\beta+\sqrt{\alpha^2+\beta^2}})} \tag{u.1}
+\end{align*}
+
+
 \begin{equation}% page560 第1个
 N_B=\frac{2(0.174\ \mathrm{m})(2.66\ \mathrm{T})}{(4\pi\times10^{-7}\ \mathrm{H/m})(2\times10^4\ \mathrm{A})}\simeq37
 \end{equation}
