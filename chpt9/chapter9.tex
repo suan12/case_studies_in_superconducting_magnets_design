@@ -519,27 +519,46 @@ N_A=\frac{2a_AB_Z(0,0)}{\mu_oI_A}=\frac{2(0.458\ \mathrm{m})(14.52\ \mathrm{T})}
 =\frac{\ln(\alpha\frac{\beta'+\sqrt{1+\beta'^2}}{\beta'+\sqrt{\alpha^2+\beta'2}})}{\ln(\alpha\frac{\beta+\sqrt{1+\beta^2}}{\beta+\sqrt{\alpha^2+\beta^2}})} \tag{u.1}
 \end{align*}
 
+将线圈5的以下值代入方程u.1：$[B_z(0,0)]_B=3.72$ T，$\alpha\simeq$1.44(=500.0 mm/347.8 mm)，
+$\beta\simeq$1.74(=605 mm/347.8 mm)，$\beta'=\beta/2\simeq$1.74/2=0.87。
+解出$[B'_z(0,0)]_B$，我们得$[B'_z(0,0)]_B$=2.66 T。
 
-\begin{equation}% page560 第1个
-N_B=\frac{2(0.174\ \mathrm{m})(2.66\ \mathrm{T})}{(4\pi\times10^{-7}\ \mathrm{H/m})(2\times10^4\ \mathrm{A})}\simeq37
-\end{equation}
-\begin{equation}% page560 第2个
-k^2=\frac{4a_Aa_B}{(a_A+a_B)^2+\rho^2}
-\end{equation}
-\begin{equation}% page560 第3个
-=\frac{4(0.458\ \mathrm{m})(0.174\ \mathrm{m})}{(0.632\ \mathrm{m})^2+(0.151\ \mathrm{m})^2}
-\end{equation}
-\begin{equation}% page560 第4个
-\simeq0.7550\ \ (k\simeq0.8689)
-\end{equation}
-\begin{equation}% page560 第5个
-F_{zA}(454\ \mathrm{mm})=\frac{4\pi\times10^{-7}\ \mathrm{H/m}}{2}(529)(2\times10^4\ \mathrm{A})(37)(2\times10^4\ \mathrm{A})\
-\times[\frac{(0.151\ \mathrm{m}\sqrt{(0.632\ \mathrm{m})^2+(0.151 \ \mathrm{m})^2})}{(0.284\ \mathrm{m})^2+(0.151\ \mathrm{m})^2}\
-\times\{0.7550(2.1655)+(0.7550-2)(2.1655-1.2079)\}]
-\end{equation}
-\begin{equation}% page560 第6个
-=(4.92\ \mathrm{MN})\times[0.948\times0.443]=2.06\ \mathrm{MN}
-\end{equation}
+线圈5'的$a_B$一个合理值是其几何平均值$a_B=\sqrt{a_1 a_2}$=208.5 mm而不是算术平均值
+$(a_1+a_2)/2$=212.0 mm。这是因为Bitter线圈中电流密度是不均匀的，而是随$\propto 1/r$变动(方程3.114)。
+为了简化，我们取$a_B$=174 mm。这样，代入$[B'_z(0,0)]_B$=2.66 T和$I_B=$20 kA：
+\begin{align*}% page560 第1个
+N_B=\frac{2(0.174\ \mathrm{m})(2.66\ \mathrm{T})}{(4\pi\times 10^{-7}\ \mathrm{H/m})(2\times 10^4\ \mathrm{A})}\simeq 37
+\end{align*}
+代入$a_A$=0.458 m，$a_B$=0.174 m，$a_A+a_B$=0.632 m和$\rho=$0.151 m(线圈5原始值的1/4)，
+首先计算出模量$k$：
+\begin{align*}% page560 第2个
+k^2&=\frac{4a_Aa_B}{(a_A+a_B)^2+\rho^2}\\ \tag{3.36}
+&=\frac{4(0.458\ \mathrm{m})(0.174\ \mathrm{m})}{(0.632\ \mathrm{m})^2+(0.151\ \mathrm{m})^2}\\
+&\simeq 0.7550\ \ (k\simeq 0.8689)
+\end{align*}
+向方程3.34中代入$K(0.8689)=2.1655, E(0.8689)=1.2079, a_A-a_B=0.284$ m和其他参数，
+我们得到线圈B(线圈5的一半)施于线圈A(超导磁体)的力$F_{zA}(\rho=151\ \mathrm{mm})$为：
+\begin{align*}% page560 第5个
+F_{zA}(151\ \mathrm{mm})=&\frac{4\pi\times10^{-7}\ \mathrm{H/m}}{2}(529)(2\times 10^4\ \mathrm{A})(37)(2\times 10^4\ \mathrm{A})\\
+&\times[\frac{(0.151\ \mathrm{m}\sqrt{(0.632\ \mathrm{m})^2+(0.151 \ \mathrm{m})^2})}{(0.284\ \mathrm{m})^2+(0.151\ \mathrm{m})^2}\\
+&\times\{0.7550(2.1655)+(0.7550-2)(2.1655-1.2079)\}]\\
+=&(4.92\ \mathrm{MN})\times[0.948\times 0.443]=2.06\ \mathrm{MN}
+\end{align*}
+
+为了计算线圈B(线圈4的一半)施于线圈A的力，我们有线圈B的以下新参数：
+$\alpha=1.41;\beta=1.46;\beta'=0.73;B'_z(0,0)$=2.96 T;$N_B\simeq 28; a_B=0.121$ m。
+代入$\rho$=0.088 m; $a_A+a_B$=0.579 m; $a_A-a_B$=0.337 m，我们有：
+$k^2\simeq 0.6463(k\simeq 0.8039)$，对应给出的$K(0.8039)\simeq 2.0030, E(0.8039)\simeq 1.2728$。
+将这些值代入方程3.34，我们得到$F_{zA}(88\ \mathrm{mm})=0.49$ MN。
+该值比线圈5初始所施的力的1/4，意味着线圈1-3的贡献可以忽略。
+
+采用程序计算的线圈1-5的合力是1.9 MN[9.3]。
+我们的基于简化模型的方法需要用计算器按上一段时间，最终给出的结果似乎2.06 MN(仅来自线圈5)，
+这个值作为估算来讲已经够好。
+
+\textbf{磁场屏蔽}
+
+
 \begin{equation}% page562 第1个
 \vec{H}_f=H_0(\frac{R_e}{r})^3(\cos\theta{\vec{\imath}_r}+\frac{1}{2}\sin\theta\vec{\imath}_\theta)
 \end{equation}
