@@ -636,11 +636,25 @@ B_z^{as}(0,0)&=\frac{(4\pi\times 10^{-7}\ \mathrm{H/m})(78)(20\times 10^3\ \math
 因为若无主动屏蔽线圈，20 kA的超导主磁体的中心场是14.52 T(Q/A 9.1的问题b)计算所得)，
 主动线圈将之降低了0.75 T，约为5\%。总的来看，已经不能忽视。
 
-\textbf{x1) 主动屏蔽线圈---作用力：1}\qquad
+\textbf{x1) 主动屏蔽线圈---作用力：1}\qquad 如果屏蔽线圈建模为单线圈，那么它和主磁体之间不会有
+净作用力。在原始系统中，屏蔽线圈被分为两个子线圈。
+此时，作为整体的屏蔽线圈和主磁体之间仍无净作用力，
+但是各子线圈与主磁体之间均存在作用力。
+这里我们将主磁体和其中一个子线圈均建模为“环线圈”，计算其作用力的大致幅值。
+取$\rho$=0.227 m(中心对中心距离)。
+由于图9.5中的$\delta_{ab}=2\rho$，$\delta_{ab}$=0.554 m。
 
-\begin{equation}% page563 第3个
-N_B\simeq\frac{(0.375\ \mathrm{T})2(1.227\ \mathrm{})}{(4\pi\times10^{-7}\ \mathrm{H/m})(20\times10^3\ \mathrm{A})}\simeq37
-\end{equation}
+\textbf{解：}在前文t)中，主磁体已被建模为环形线圈：$N_A$=529；$a_A\simeq$458 mm。
+类似的，我们可以将其中的一个子线圈建模为环线圈，使其产生中心场0.375 T(0.75 T的一半，
+尽管两者是垂直放置的)：
+$a_B$=1.227 m($a_{1as}$和$a_{2as}$的平均值)，$N_B$为：
+\begin{align*}% page563 第3个
+N_B\simeq\frac{(0.375\ \mathrm{T})2(1.227\ \mathrm{})}{(4\pi\times 10^{-7}\ \mathrm{H/m})(20\times 10^3\ \mathrm{A})}\simeq 37
+\end{align*}
+
+
+
+
 \begin{equation}% page563 第4个
 k^2=\frac{4a_Aa_B}{(a_A+a_B)^2+\rho^2}=\frac{4(0.458\ \mathrm{m})(1.227\ \mathrm{m})}{(0.458\ \mathrm{m+1.227\ \mathrm{m}})^2+(0.227\ \mathrm{m})^2}\simeq0.7709\   \ (k\simeq0.8780)
 \end{equation}
