@@ -652,24 +652,59 @@ $a_B$=1.227 m($a_{1as}$和$a_{2as}$的平均值)，$N_B$为：
 N_B\simeq\frac{(0.375\ \mathrm{T})2(1.227\ \mathrm{})}{(4\pi\times 10^{-7}\ \mathrm{H/m})(20\times 10^3\ \mathrm{A})}\simeq 37
 \end{align*}
 
+由于各子线圈的$\alpha=1.04$和很小的$\beta$表明它们非常接近环形线圈($\alpha=1,\beta=0$)，
+所以“有效匝数”37与实际匝数39如此接近并不令人惊讶。
+首先，我们使用t)节用到的方程3.36计算模量常数$k$：
+\begin{align*}% page563 第4个
+k^2&=\frac{4a_Aa_B}{(a_A+a_B)^2+\rho^2}\\ \tag{3.36}
+&=\frac{4(0.458\ \mathrm{m})(1.227\ \mathrm{m})}{(0.458\ \mathrm{m+1.227\ \mathrm{m}})^2+(0.227\ \mathrm{m})^2}\simeq 0.7709\   \ (k\simeq 0.8780)
+\end{align*}
 
+两个环线圈之间的作用力由3.34给出：
+\begin{align*}% page564 第1个
+F_{ZA}(\rho)=&\frac{\mu_o}{2}(N_AI_A)(N_BI_B)\frac{\rho\sqrt{(a_A+a_B)^2+\rho^2}}{(a_A-a_B)^2+\rho^2}\\
+&\times\{k^2K(k)+(k^2-2)[K(k)-E(k)]\} \tag{3.34}
+\end{align*}
+代入$K(0.8780)=2.1957,E(0.8780)=1.1977,a_A+a_B=$1.685 m, $a_A-a_B=$-0.769 m，
+我们得到线圈B(上方子线圈)对线圈A(主磁体)的力$F_{ZA}(\rho=0.227\ \mathrm{m})$：
+\begin{align*}% page564 第2个
+F_{ZA}(0.277\ \mathrm{m})=&\frac{4\pi\times 10^{-7}\ \mathrm{H/m}}{2}(529)(2\times 10^4\  \mathrm{A})(37)(-2\times 10^{4}\ \mathrm{A})\\
+&\times \big[\frac{(0.277\ \mathrm{m})\sqrt{(1.685\ \mathrm{m})^2+(0.277\ \mathrm{m}^2)}}{(-0.769\ \mathrm{m})^2+(0.277\ \mathrm{m})^2}\\
+&\times\{0.7709(2.1957)+(0.7709-2)(2.1957-1.1977)\}\big]\\
+=&-(4.91\ \mathrm{MN})\times(0.7080\times 0.4660)=-1.62\ \mathrm{MN}
+\end{align*}
 
+作用在主磁体上的力是负值(向下)；同样大小的力作用在中平面上方的屏蔽子线圈，向上；也即，
+如果线圈没有约束，它将被推离中平面。
+当然，上下两个子线圈对主磁体的合力为零。
 
-\begin{equation}% page563 第4个
-k^2=\frac{4a_Aa_B}{(a_A+a_B)^2+\rho^2}=\frac{4(0.458\ \mathrm{m})(1.227\ \mathrm{m})}{(0.458\ \mathrm{m+1.227\ \mathrm{m}})^2+(0.227\ \mathrm{m})^2}\simeq0.7709\   \ (k\simeq0.8780)
-\end{equation}
-\begin{equation}% page564 第1个
-F_{ZA}(\rho)=\frac{\mu_o}{2}(N_AI_A)(N_BI_B)\frac{\rho\sqrt{(a_A+a_B)^2+\rho^2}}{(a_A-a_B)^2+\rho^2}\times\{k^2K(k)+(k^2-2)[K(k)-E(k)]\}
-\end{equation}
-\begin{equation}% page564 第2个
-F_{ZA}(0.277\ \mathrm{m})=\frac{4\pi\times10^{-7}\ \mathrm{H/m}}{2}(529)(2\times10^4\ \mathrm{A})(37)(-2\times10^{4}\ \mathrm{A})\times[\frac{(0.277\ \mathrm{m})\sqrt{(1.685\ \mathrm{m})^2+(0.277\ \mathrm{m}^2)}}{(-0.769\ \mathrm{m})^2+(0.277\ \mathrm{m})^2}\times\{0.7709(2.1957)+(0.7709-2)(2.1957-1.1977)\}]
-\end{equation}
-\begin{equation}% page564 第2个
-=-(4.91\ \mathrm{MN})\times(0.7080\times0.4660)=-1.62\ \mathrm{MN}
-\end{equation}
-\begin{equation}% page564 第3个
-F_{ZA}(\rho)\simeq\mu_o(N_AI_A)(N_BI_B)(\frac{a}{\rho})-\mu_o(N_AI_A)^2(\frac{a}{\rho})=(4\pi10^{-7}\ \mathrm{H/m})[(37)(-2\times10^4\ \mathrm{A})]^2(\frac{1.227\ \mathrm{m}}{0.554\ \mathrm{m}})\simeq1.5\ \mathrm{MN}
-\end{equation}
+\textbf{x2) 主动屏蔽线圈---作用力：2}\qquad 这里我们计算两个子线圈之间的引力。将两个线圈建模为
+相同的环形线圈，直径1.227 m，匝数37，电流-20 kA。这里$\rho$=0.554 m，等于图9.5中的$\delta_{ab}$。
+
+\textbf{解：}因为环形线圈直径相同($a$)，尽管在这里条件$\rho(=0.554)\ll 2a(=2.454)$并不严格满足，
+我们仍使用方程3.34在$\rho\ll 2a$条件下的简化版本3.39d。本例中，$N_B I_B=N_A I_A$：
+\begin{align*}% page564 第3个
+F_{ZA}(\rho)&\simeq\mu_o(N_AI_A)(N_BI_B)(\frac{a}{\rho})\\ \tag{3.39d}
+&=\mu_o(N_AI_A)^2(\frac{a}{\rho})\\
+&=(4\pi10^{-7}\ \mathrm{H/m})[(37)(-2\times 10^4\ \mathrm{A})]^2(\frac{1.227\ \mathrm{m}}{0.554\ \mathrm{m}})\\
+&\simeq 1.5\ \mathrm{MN}
+\end{align*}
+
+这和用程序[9.3]计算得到的1.6 MN非常吻合。
+
+\textbf{y1) 被动屏蔽壳：1}\qquad 除主动屏蔽外，还可以采用被动屏蔽。被动屏蔽使用铁磁材料，通常
+是软铁(见问题2.3和表2.5)来实现。
+被动屏蔽的优势主要是费用低，但对于“大型”和“高场”磁体，费用优势就没有了。
+另一个经常被忽视的优势是它的“逆向屏蔽”能力，即它还能屏蔽相邻磁体的外围磁场对主磁体的影响。
+笨重是被动屏蔽的最大劣势。
+
+这里，我们考虑一个钢制圆柱筒，内半径$a_1\equiv a_{1as}=1.203$ m，高$2b_s=2a_{1as}$(图9.5)。
+假定主磁体($N=756;I_{op}$=20 kA)可以建模为偶极矩，其$B_0R_e^3$由方程v.1给出(忽略电阻内插磁体)，
+估算圆柱筒的外半径$a_{2as}$，使其壁厚度足够保证刚的磁化$\mu_o M_s$在1.25 T时仍有较高的值
+$(\mu/\mu_o)_{dif}:(\mu/\mu_o)_{dif}=180$(表2.5中的as-cast钢)。
+
+\textbf{解：}
+
 \begin{equation}% page565 第1个
 \Phi(r_{th}/\infty,z=0)=\frac{1}{2}[\frac{\mu_oa_1^2(1+\alpha^2+\alpha)NII_{op}}{6}]\int_{r_{th}}^{\infty}\frac{2\pi r}{r^3}dr
 \end{equation}
