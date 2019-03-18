@@ -703,23 +703,45 @@ F_{ZA}(\rho)&\simeq\mu_o(N_AI_A)(N_BI_B)(\frac{a}{\rho})\\ \tag{3.39d}
 估算圆柱筒的外半径$a_{2as}$，使其壁厚度足够保证刚的磁化$\mu_o M_s$在1.25 T时仍有较高的值
 $(\mu/\mu_o)_{dif}:(\mu/\mu_o)_{dif}=180$(表2.5中的as-cast钢)。
 
-\textbf{解：}
+\textbf{解：}$(\mu/\mu_o)_{dif}=180$时，我们可以将之视为理想的$(\mu/\mu_o)_{dif}=\infty$。
+由于主磁体的所有磁通都从磁体室温孔发出，位于$r\ge a_{1as}$的磁通将在上方穿入钢制圆柱筒，并在其下方穿出
+返回磁体室温孔。
+稍微复杂的是磁体外半径$a_2\simeq0.610$ m与钢制圆柱筒内半径$a_{1ps}=1.203$ m之间的环形空间的磁通线。
 
-\begin{equation}% page565 第1个
-\Phi(r_{th}/\infty,z=0)=\frac{1}{2}[\frac{\mu_oa_1^2(1+\alpha^2+\alpha)NII_{op}}{6}]\int_{r_{th}}^{\infty}\frac{2\pi r}{r^3}dr
-\end{equation}
-\begin{equation}% page565 第2个
-\Phi_{z}(z=0)=\pi(a_{2ps}^2-a_{1ps}^2)(\mu_oM_s)
-\end{equation}
-\begin{equation}% page565 第3个
-\frac{\mu_oa_1^2(1+\alpha^2+\alpha)NI_{op}}{6r_{th}}=(a_{2ps}^2-a_{1ps}^2)(\mu_oM_s)
-\end{equation}
-\begin{equation}% page565 第4个
-a_{2ps}=\sqrt{a_{1ps}^2+\frac{\mu_oa_1^2(1+\alpha^2+\alpha)NI_{op}}{6r_{th}(\mu_oM_s)}}
-\end{equation}
-\begin{equation}% page566 第1个
-a_{2ps}=\sqrt{(1.203\ \mathrm{m})^2+\frac{(4\pi\times10^{-7}\ \mathrm{H/m})(0.305\ \mathrm{m})^2(7)(756)(20\times10^3\ \mathrm{A})}{6(0.732\ \mathrm{m})(1.25\ \mathrm{T})}}=\sqrt{1.447\ \mathrm{m^2}+2.254\ \mathrm{m^2}}=1.942
-\end{equation}
+因钢的磁阻小于空气，磁通线选择通过钢。这样，$r=a_2$之外的磁通线要么直接垂直进入空气
+经$b=0.471$ m到达中平面(表9.1)，要么首先径向走过距离$a_{1ps}-a_2=0.593$ m达到钢制
+圆柱筒上方，而后垂直“无阻”的进入钢内到达中平面。因为0.471 m<0.593 m，
+所以这些磁通不会进入钢内。
+根据这个判断，我们可以给出一个半径的阈值$r_{th}$，超过该值，磁通线将改路进入钢圆柱筒内，
+该值大概是$a_{1ps}-b=0.732$ m。也即，所有的位于$r_{th}$ m到$r=\infty$之间的磁通线
+将进入钢制圆柱筒。于是，中平面上在$r_{th}$ m到$\infty$的总磁通$\Phi(r_{th/\infty,z=0})$和中平面上
+通过钢的磁通$\Phi_s(z=0)$分别由下式给出，其中$\alpha=a_2/a_1$：
+\begin{align*}% page565 第1个
+\Phi(r_{th}/\infty,z=0)=\frac{1}{2}[\frac{\mu_oa_1^2(1+\alpha^2+\alpha)NII_{op}}{6}]\int_{r_{th}}^{\infty}\frac{2\pi r}{r^3}dr \tag{y1.1a}}
+\end{align*}
+\begin{align*}
+\Phi_{z}(z=0)=\pi(a_{2ps}^2-a_{1ps}^2)(\mu_oM_s) \tag{y1.1b}
+\end{align*}
+因为上述两个磁通相等，我们有：
+\begin{align*}% page565 第3个
+\frac{\mu_oa_1^2(1+\alpha^2+\alpha)NI_{op}}{6r_{th}}=(a_{2ps}^2-a_{1ps}^2)(\mu_oM_s) \tag{y1.2}
+\end{align*}
+在上式中解出$a_{2ps}$，我们得到：
+\begin{align*}% page565 第4个
+a_{2ps}=\sqrt{a_{1ps}^2+\frac{\mu_oa_1^2(1+\alpha^2+\alpha)NI_{op}}{6r_{th}(\mu_oM_s)}} \tag{y1.3}
+\end{align*}
+向y1.3中代入合适的值，计算得：
+\begin{align*}% page566 第1个
+a_{2ps}&=\sqrt{(1.203\ \mathrm{m})^2+\frac{(4\pi\times 10^{-7}\ \mathrm{H/m})(0.305\ \mathrm{m})^2(7)(756)(20\times 10^3\ \mathrm{A})}{6(0.732\ \mathrm{m})(1.25\ \mathrm{T})}}\\
+&=\sqrt{1.447\ \mathrm{m^2}+2.254\ \mathrm{m^2}}=1.942
+\end{align*}
+
+钢制圆柱筒的壁厚$a_{2ps}-a_{1ps}$于是为72 cm。
+这样的一个高为2.4 m的圆柱筒总重量约为133000 kg，超过100吨。
+
+因为
+
+
 \begin{equation}% page566 第2个
 a_{2ps}=\sqrt{(1.805\ \mathrm{m})^2+\frac{(4\pi\times10^{-7}\ \mathrm{H/m})(0.305\ \mathrm{m})^2(7)(756)(20\times10^3\ \mathrm{A})}{6(1.334\ \mathrm{m})(1.25\ \mathrm{T})}}=\sqrt{3.258\ \mathrm{m^2}+1.237\ \mathrm{m^2}}=2.120
 \end{equation}
