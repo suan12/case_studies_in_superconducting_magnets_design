@@ -950,7 +950,7 @@ $\int 2B_z rdr$由图9.10给出的$2B_z(5\ \mathrm{mm},r)r$线得到。
 为了满足上述条件，$r_{od}$有约60 mm就够了。
 
 
-\subsection{例C：平面HTS板的悬浮}
+\subsection{例C：平HTS扁平板的悬浮}
 图9.11给出了一个厚为$\delta_d$、半径为$R_d$的HTS扁平板悬浮于两个嵌套线圈中心之上$z_\ell$的
 系统截面图。嵌套线圈1和2的通流方向相反。
 两个线圈均无骨架，置于钢板上。
@@ -967,106 +967,217 @@ HTS扁平板、线圈和钢板轴向对齐。
 		两个线圈均无骨架，置于钢板上。该图在尺度上为近似值。}
 \end{figure}
 
-图9.12给出了
-
+图9.12给出了在$z=0,5,7.5,10,12.5,15,17.5,20$ mm处的$B_z(z,r)$ vs. $r$曲线，
+线圈1通流25 A，线圈2通流-15 A；
+图9.13给出了在$r=5,10,12.5,15,17.5$ mm处的$B_z(z,r)$ vs. $z$曲线，线圈通流情况与9.12同。
+这些图线都是不包括钢板的。
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.5]{chpt9/figs/fig9.12.eps}
-	\caption{$B_z(z,r)$ vs. $r$曲线。。}
+	\caption{线圈1通流25 A，线圈2通流-15 A时，在$z=0,5,7.5,10,12.5,15,17.5,20$ mm处的$B_z(z,r)$ vs. $r$曲线。}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.5]{chpt9/figs/fig9.13.eps}
-	\caption{$B_z(z,r)$ vs. $z$曲线。。}
+	\caption{线圈1通流25 A，线圈2通流-15 A时，在$r=5,10,12.5,15,17.5$ mm处的$B_z(z,r)$ vs. $z$曲线。}
 \end{figure}
 
+\subsubsection{Q/A C：HTS扁平板的悬浮}
+\textbf{a) 悬浮力---托举力}\qquad 假定HTS扁平板中感应出的超流电流$I_s$被约束在平板边缘内，
+首先证明将平板悬浮于中心轴上方$z_\ell$的悬浮力$F_z(z_\ell)$可由下式给出：
+\begin{align*}%page574 第一个
+F_{z}(z_{\ell})=2\pi R_{d}I_{s}B_{r}(z_{\ell},R_{d})\tag{9.3a}
+\end{align*}
+式中，$B_{r}(z_{\ell},R_{d})$是在$(z_{\ell},R_{d})$处由两个线圈产生的径向场。
 
+接下来，将平板建模为半径相同的无限长的圆柱，使其置于均匀轴向场中，轴向场
+与Bean临界态场满足$H_z(z_\ell,R_d)\ll J_c R_d$。证明$F_z(z_\ell,R_d)$显式
+依赖于$\delta_d$和$B_z(z_\ell,R_d)$。
 
-\subsubsection{Q/A C：平面HTS板的悬浮}
-\begin{equation}%page574 第一个
-F_{z}(z_{\ell})=2\pi R_{d}I_{s}B_{r}(z_{\ell},R_{d})\qquad(9.3a)
-\end{equation}
-\begin{equation}%page574 第二个
-F_{z}(z_{\ell})=2\pi R_{d}I_{s}B_{r}(z_{\ell},R_{d})\qquad(9.3a)
-\end{equation}
-\begin{equation}%page574 第三个
-\delta_{s}=\frac{H_{z}(z_{\ell},R_{d})}{J_{c}}=\frac{1}{J_{c}}[\frac{B_{z}(z_{\ell},R_{d})}{\mu_{o}}]\quad(a.1)
-\end{equation}
-\begin{equation}%page574 第四个
-I_{s}=\delta_{d}\delta_{s}J_{c}=\delta_{d}[\frac{B_{z}(z_{\ell},R_{d})}{\mu_{o}}]\quad(a.2)
-\end{equation}
-\begin{equation}%page574 第五个
-F_{z}(z_{\ell})=2\pi R_{d}\delta_{d}[\frac{B_{z}(z_{\ell},R_{d})B_{r}(z_{\ell},R_{d})}{\mu_{o}}]\quad(9.3b)
-\end{equation}
-\begin{equation}%page575 第一个
-F_{z}(z_{\ell})=2\pi R_{d}\delta_{d}[\frac{B_{z}(z_{\ell},R_{d})B_{r}(z_{\ell},R_{d})}{\mu_{o}}]\qquad(9.36b)
-\simeq\frac{2\pi(15\times10^{-3}\ \mathrm{m})(5\times10^{-3}\ \mathrm{m})(0.070\ \mathrm{T})(0.0181\ \mathrm{T})}{(4\pi\times10^{-7}\ \mathrm{H/m})}
-\simeq0.475\ \mathrm{N}(\simeq48.5\ \mathrm{g})
-\end{equation}
-\begin{equation}%page575 第二个
-m_{p}=\pi R^{2}_{d}\delta_{d\varrho}\\
-=\pi(1.5\ \mathrm{cm})^{2}(0.5\ \mathrm{cm})(6.4\ \mathrm{g/cm^{3}})\simeq23g
-\end{equation}
-\begin{equation}%page575 第三个
-\delta_{s}=\frac{H_{z}(z_{\ell},R_{d})}{J_{c}}=\frac{1}{J_{c}}[\frac{B_{z}(z_{\ell},R_{d})}{\mu_{o}}]\qquad(a.1)
-\simeq\frac{(0.070\ \mathrm{T})}{(10^{8}\ \mathrm{A/m^{2}})(4\pi\times10^{-7}\ \mathrm{H/m})}\simeq0.56\ \mathrm{mm}
-\end{equation}
-\begin{equation}%page575 第四个
-I_{s}=\delta_{d}\delta_{s}J_{c}\qquad(a.2)\\
-\simeq(5\times10^{-3}\ \mathrm{m})(0.56\times10^{-3}\ \mathrm{m})(10^{8}\ \mathrm{A/m^{2}})\simeq280A
-\end{equation}
-\begin{equation}%page576 第一个
-k_{z}=-frac{\partial F_{z}(z,R_{d})}{\partial_{z}}|_{z_{\ell}}\quad(d.q)
-\end{equation}
-\begin{equation}%page576 第二个
-k_{z}=-2\pi R_{d}\delta_{d}\{[\frac{B_{r}(z_{\ell},R_{d})}{\mu_{o}}]\frac{\partial B_{z}(z,R_{d})}{\partial_{z}}|_{\ell}+[\frac{B_{z}(z_{\ell},R_{d})}{\mu_{o}}]\frac{\partial B_{r}(z,R_{d})}{\partial z}|_{\ell}\}(9.4)
-\end{equation}
-\begin{equation}%page576 第三个
-k_{z}\simeq-2\pi(15\times10^{-3}\ \mathrm{m})(5\times10^{-3}\ \mathrm{m})\\
-\times[(\frac{0.181\ \mathrm{T}}{4\pi\times10^{-7}\ \mathrm{H/m}})(-5.2\ \mathrm{T/m})+(\frac{0.070\ \mathrm{T}}{4\pi\times10^{-7}\ \mathrm{H/m}})(1.1\ \mathrm{T/m})]\\
-=-2\pi(75\times10^{-6}\ \mathrm{m^{2}})(\frac{10^{7}}{4\pi}\ \mathrm{m/H})(-0.0943\ \mathrm{T^{2}/M}+0.758\ \mathrm{T^{2}/m})\\
-\simeq6.9\ \mathrm{N/m}
-\end{equation}
-\begin{equation}%page576 第四个
+\textbf{解：}在$H_z(z_\ell,R_d)\ll J_c R_d$条件下(其中，$J_c$是板材料的临界电流密度)，
+超流电流$I_s$被限制在厚度为$\delta_d$的表面薄层内。
+假定该表面电流是均匀的，并止于其边缘。
+我们可以令悬浮力$F_z(z_\ell,R_d)$与边缘处($r=R_d$)电流$I_s$上的洛伦兹力相等，其中后者定义为
+$2\pi R_d，I_s$和$B_r(z_\ell,R_d)$之积。
+\begin{align*}%page574 第二个
+F_{z}(z_{\ell})=2\pi R_{d}I_{s}B_{r}(z_{\ell},R_{d})\tag{9.3a}
+\end{align*}
+根据Bean临界态模型，在$H_z(z_\ell,R_d)<H_p$(其中，$H_p=J_c R_d$为临界态场)时，
+超流层厚度$\delta_{s}$为：
+\begin{align*}%page574 第三个
+\delta_{s}=\frac{H_{z}(z_{\ell},R_{d})}{J_{c}}=\frac{1}{J_{c}}[\frac{B_{z}(z_{\ell},R_{d})}{\mu_{o}}]\tag{a.1}
+\end{align*}
+也即，板内感应的总超流电流为：
+\begin{align*}%page574 第四个
+I_{s}=\delta_{d}\delta_{s}J_{c}=\delta_{d}[\frac{B_{z}(z_{\ell},R_{d})}{\mu_{o}}]\tag{a.2}
+\end{align*}
+联立方程9.3a和a.2，有：
+\begin{align*}%page574 第五个
+F_{z}(z_{\ell})=2\pi R_{d}\delta_{d}[\frac{B_{z}(z_{\ell},R_{d})B_{r}(z_{\ell},R_{d})}{\mu_{o}}]\tag{9.3b}
+\end{align*}
+方程9.3b表明，$F_z(z_\ell)\propto B_z(z_\ell,R_d)B_r(z_\ell,R_d)$。
+也即，在这悬浮系统，两个线圈电流可以为不同的值来设定一个悬浮高度[9.5--9.9]。
+同时注意到，只要满足$\delta_{s}\ll R_d$，即“大”$J_c$，$F_z(z_\ell)$就与$J_c$无关。
+
+\textbf{b) YBCO板}\qquad 仍假定无钢板，使用图9.12和9.13中的$B_z(z,r)$和$B_r(z,r)$以及方程9.3b，
+计算$R_d=15$ mm，$\delta_d=5$ mm的YBCO板，悬浮高度为$z_\ell=10$ mm时的悬浮力$F_z(z_\ell)$。
+同时，计算该板的质量。证明在这个高度上，悬浮力可以撑起板的质量。YBCO的密度为$\rho=6.4\ \mathrm{g/cm^3}$。
+
+\textbf{解：}由图9.12和9.13，我们有$B_z(z=10\ \mathrm{mm},r=15\ \mathrm{mm})\simeq 0.070$ T以及
+$B_r(z=10\ \mathrm{mm},r=15\ \mathrm{mm})\simeq 0.0181$ T。于是：
+\begin{align*}%page575 第一个
+F_{z}(z_{\ell})&=2\pi R_{d}\delta_{d}[\frac{B_{z}(z_{\ell},R_{d})B_{r}(z_{\ell},R_{d})}{\mu_{o}}]\\ \tag{9.3b}
+&\simeq\frac{2\pi(15\times 10^{-3}\ \mathrm{m})(5\times 10^{-3}\ \mathrm{m})(0.070\ \mathrm{T})(0.0181\ \mathrm{T})}{(4\pi\times 10^{-7}\ \mathrm{H/m})}\\
+&\simeq 0.475\ \mathrm{N}(\simeq 48.5\ \mathrm{g})
+\end{align*}
+
+YBCO板的质量$m_p$为：
+\begin{align*}%page575 第二个
+m_{p}&=\pi R^{2}_{d}\delta_{d\varrho}\\
+&=\pi(1.5\ \mathrm{cm})^{2}(0.5\ \mathrm{cm})(6.4\ \mathrm{g/cm^{3}})\simeq 23g
+\end{align*}
+可见，即使没有钢板，在$z_\ell$=10 mm处对板的悬浮力也两倍于板的质量。
+
+\textbf{c) 感应超流}\qquad 继续假定无钢板，计算对同一个YBCO板，悬浮于$z_\ell$=10 mm处时的超流层厚度$\delta_s$。证明$\delta_s\ll R_d$。计算时取$J_c=10^8\ \mathrm{A/m}$。
+同时计算$I_s$。
+
+\textbf{解：}使用方程a.1，注意到$B_z(z_\ell,R_d)\simeq 0.070$ T，我们有：
+\begin{align*}%page575 第三个
+\delta_{s}=\frac{H_{z}(z_{\ell},R_{d})}{J_{c}}&=\frac{1}{J_{c}}[\frac{B_{z}(z_{\ell},R_{d})}{\mu_{o}}]\\\tag{a.2}
+&\simeq\frac{(0.070\ \mathrm{T})}{(10^{8}\ \mathrm{A/m^{2}})(4\pi\times 10^{-7}\ \mathrm{H/m})}\simeq 0.56\ \mathrm{mm}
+\end{align*}
+所要求的条件$\delta_s\ll R_d$显然满足。
+使用方程a.2的前两个方程，有：
+\begin{align*}%page575 第四个
+I_{s}&=\delta_{d}\delta_{s}J_{c}\qquad(a.2)\\\tag{a.2}
+&\simeq(5\times 10^{-3}\ \mathrm{m})(0.56\times 10^{-3}\ \mathrm{m})(10^{8}\ \mathrm{A/m^{2}})\simeq 280A
+\end{align*}
+当板置于轴向场$B_z(R_d,z_\ell)$=0.07 T中，YBCO板内感应出超流电流280 A。
+
+\textbf{d) 悬浮刚度}\qquad
+推导$z=z_\ell$处悬浮刚度$k_z$的表达式。
+计算$R_d$=15 mm; $\delta_s$=5 mm;$z_\ell$=10 mm条件下的$k_z$。
+
+\textbf{解：}$z=z_\ell$处悬浮刚度为：
+\begin{align*}%page576 第一个
+k_{z}=-frac{\partial F_{z}(z,R_{d})}{\partial_{z}}|_{z_{\ell}}\tag{d.1}
+\end{align*}
+负号表示$F_{z}(z,R_{d})$随$z$减小而增大。
+联立方程9.3b和d.1，我们有：
+\begin{align*}%page576 第二个
+k_{z}=-2\pi R_{d}\delta_{d}\{[\frac{B_{r}(z_{\ell},R_{d})}{\mu_{o}}]\frac{\partial B_{z}(z,R_{d})}{\partial_{z}}|_{\ell}+[\frac{B_{z}(z_{\ell},R_{d})}{\mu_{o}}]\frac{\partial B_{r}(z,R_{d})}{\partial z}|_{\ell}\}\tag{9.4}
+\end{align*}
+向方程9.4中代入合适的参数值，有：
+\begin{align*}%page576 第三个
+k_{z}\simeq&-2\pi(15\times 10^{-3}\ \mathrm{m})(5\times 10^{-3}\ \mathrm{m})\\
+&\times[(\frac{0.181\ \mathrm{T}}{4\pi\times 10^{-7}\ \mathrm{H/m}})(-5.2\ \mathrm{T/m})+(\frac{0.070\ \mathrm{T}}{4\pi\times 10^{-7}\ \mathrm{H/m}})(1.1\ \mathrm{T/m})]\\
+=&-2\pi(75\times 10^{-6}\ \mathrm{m^{2}})(\frac{10^{7}}{4\pi}\ \mathrm{m/H})(-0.0943\ \mathrm{T^{2}/M}+0.758\ \mathrm{T^{2}/m})\\
+\simeq &6.9\ \mathrm{N/m}
+\end{align*}
+由图9.12知，在$R_d=15$ mm和$z_\ell=$10 mm时，$k_z>0$；
+于是我们得到，在小的轴向位移下，板的悬浮是稳定的，也即，
+如果将板往下推，悬浮力会增加。
+
+\textbf{e) 共振频率}\qquad 计算悬浮于$z_\ell$=10 mm时，该YBCO板轴向运动的共振频率$\nu_z$。
+使用b)中计算得到的YBCO板质量$m_p$=23 g。
+
+\textbf{解：}对一个简单的质量($m$)--弹簧($k$)系统，共振频率$\nu$为：
+\begin{align*}%page576 第四个
 \nu=\frac{1}{2\pi}\sqrt{\frac{k}{m}}
-\end{equation}
-\begin{equation}%page576 第五个
-\nu_{z}\simeq\frac{1}{2\pi}\sqrt{\frac{(6.9\ \mathrm{N/m})}{(23\times10^{-3}\ \mathrm{kg})}}\\
-\simeq3\ \mathrm{Hz}
-\end{equation}
-\begin{equation}%page577 第一个
-F_{x}(z_{\ell},R_{d})+F_{x}(z_{\ell},-R_{d})\propto-I_{s}(z_{\ell},R_{d})+I_{s}(z_{\ell},R_{d})B_{z}(z_{\ell},-R_{d})\\
-=0
-\end{equation}
-\begin{equation}%page577 第二个
-F_{x}(z_{\ell},R_{d}+\Delta x)+F_{x}(z_{\ell},-R_{d}+\Delta x)\propto-I_{s}(R_{d}+\Delta x)B_{z}(z_{\ell},R_{d}+\Delta x)\\
-+I_{s}(-R_{d}+\Delta x)B_{z}(z_{\ell},-R_{d}+\Delta x)(f1.1)
-\end{equation}
-\begin{equation}%page577 第三个
-F_{x}(z_{\ell},R_{d}+\Delta x)+F_{x}(z_{\ell},-R_{d}+\Delta x)\propto-I_{s}(R_{d})[B_{z}(z_{\ell},R_{d}+\Delta x)\\
--B_{z}(z_{\ell},-R_{d}+\Delta x)](f1.2)
-\end{equation}
+\end{align*}
+于是，
+\begin{align*}%page576 第五个
+\nu_{z}&\simeq\frac{1}{2\pi}\sqrt{\frac{(6.9\ \mathrm{N/m})}{(23\times 10^{-3}\ \mathrm{kg})}}\\
+&\simeq 3\ \mathrm{Hz}
+\end{align*}
+当板垂直位移时，在频率为3 Hz时会发生振荡。
 
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{chpt9/figs/fig9.14.eps}
+	\caption{悬浮的HTS板在水平向($+x$)移动$\Delta x$时的截面图。$y$方向为纸面向内。}
+\end{figure}
 
+\textbf{f1) 水平稳定性1}\qquad
+证明HTS板在悬浮于$z_\ell$=10 mm时，对小水平位移($r$轴或这里的$x$轴)是稳定的。
+假设板内感应超流电流限制在边缘的一个薄层$\delta_s$内。
+同时，不计钢板。
 
-\begin{equation}% page578 f2.2
-\Delta f_x(z,R_d)=2I_s\Delta y\frac{\partial B_z(z,r)}{\partial r}\mid_{R_d}\Delta x
-\end{equation}
-\begin{equation}% page578 第二个f2.2
-\Delta F_x(z,R_d)=\pi R_dI_s\frac{\partial B_z(z,r)}{\partial r}\mid_{R_d}\Delta x
-\end{equation}
-\begin{equation}% page578第三个
+\textbf{解：}在水平($x$轴)方向，$F_x$正比于$I_s$和$B_z$的叉积。
+考虑如图9.11所示的与线圈轴向对齐悬浮的HTS板。
+$F_x(z_\ell,R_d)$是$-x$方向的，因为$I_s(z_\ell,R_d)$是$-y$方向的、$B_z(x=0)$是$+z$方向的：
+$F_x(z_\ell,R_d)\propto -I_s(z_\ell,R_d)B_z(z_\ell,R_d)\vec{i_x}$。
+另一方面，$F_x(z_\ell,-R_d)$是$+x$方向的，因为$I_s(z_\ell,R_d)$是$+y$方向的、$B_z(x=0)$仍是$+z$方向的：
+$F_x(z_\ell,-R_d)\propto +I_s(z_\ell,R_d)B_z(z_\ell,R_d)\vec{i_x}$。
+因为$B_z(z_\ell,R_d)=B_z(z_\ell,-R_d)$，$I_s(z_\ell,R_d)=-I_s(z_\ell,-R_d)$，我们有：
+\begin{align*}%page577 第一个
+F_{x}(z_{\ell},R_{d})+F_{x}(z_{\ell},-R_{d})&\propto-I_{s}(z_{\ell},R_{d})+I_{s}(z_{\ell},R_{d})B_{z}(z_{\ell},-R_{d})\\
+&=0
+\end{align*}
+也即，在$x=0$处板中心的净水平力为零。
+
+现在考虑板在$+x$向的微小位移$\Delta x$，如图9.14所示。这时，我们有：
+\begin{align*}%page577 第二个
+F_{x}(z_{\ell},R_{d}+\Delta x)+F_{x}(z_{\ell},-R_{d}+\Delta x)\propto-&I_{s}(R_{d}+\Delta x)B_{z}(z_{\ell},R_{d}+\Delta x)\\
+&+I_{s}(-R_{d}+\Delta x)B_{z}(z_{\ell},-R_{d}+\Delta x)\tag{f1.1}
+\end{align*}
+我们可以假设$I_{s}(z_{\ell},R_{d}+\Delta x)\simeq I_{s}(z_{\ell},R_{d})$，
+$I_{s}(z_{\ell},-R_{d}+\Delta x)\simeq I_{s}(z_{\ell},-R_{d})$。
+同时，因为$I_{s}(z_{\ell},R_{d})=-I_{s}(z_{\ell},-R_{d})$，方程f1.1可以化简为：
+\begin{align*}%page577 第三个
+F_{x}(z_{\ell},R_{d}+\Delta x)+F_{x}(z_{\ell},-R_{d}+\Delta x)\propto-I_{s}(R_{d})&[B_{z}(z_{\ell},R_{d}+\Delta x)\\
+&-B_{z}(z_{\ell},-R_{d}+\Delta x)]\tag{f1.2}
+\end{align*}
+
+由图9.12，我们注意到在$z=10$ mm($z_\ell$)和$R_d$=15 mm附近，
+在“小”$\Delta$下有$B_z(z_\ell,R_d+\Delta x)>B_z(z_\ell,-R_d+\Delta x)$。
+于是，在小的水平为以下，水平力可令之恢复。
+注意到图9.12中，$z=10$ mm的迹线峰值出现在$r=16.5$ mm；
+$\partial B_z/\partial r$随后改变符号，当$\Delta x> 4$ mm后，板不再稳定。
+图9.12中对应$z\ge 12.5$ mm的迹线表明，板在$z_\ell\simeq 12.5$ mm时临界稳定，
+在$z_\ell> 12.5$ mm后不稳定。
+
+\textbf{f2) 水平稳定性2}\qquad
+通过展示水平弹性常数$k_x$在$r=R_d$时为正，即$k_x\equiv -\partial F_x（z_\ell,r)/\partial x>0$，
+证明板对小的径向位移是稳定的。
+同时确定在$z=10$ mm和$x=$15 mm时，$k_x$和水平方向自然频率$\nu_x$的数值。
+
+\textbf{解：}为了量化f1)中的分析，考虑作用于最右侧电流长度微元$\Delta y$上的力微元$\Delta f_{x+}$：
+$\Delta f_{x+}=I_s\Delta y B_z(R_d+\Delta x)$。
+$\Delta f_{x+}$仅由对应最左侧元素上的力$\Delta f_{x-}$部分平衡：
+$\Delta f_{x-}=I_s\Delta y B_z(R_d-\Delta x)$。
+净力微元$\Delta f_{x}=\Delta f_{x+}+\Delta f_{x-}$为：
+\begin{align*}% page578 f2.2
+\Delta f_x(z,R_d)=2I_s\Delta y\frac{\partial B_z(z,r)}{\partial r}\mid_{R_d}\Delta x \tag{f2.2}
+\end{align*}
+单位电流长度的净力为$\Delta f_{x}/\Delta y$。
+如果该力在周向是恒定的，合力$\Delta F_x$将为$2R_d\times \Delta f_x$。
+实际上，$\Delta f_{x}/\Delta y$在周向随$\sqrt{1-(r/R)^2}$变化；
+平均值是峰值的$\pi/4$：
+\begin{align*}% page578 第二个f2.2
+\Delta F_x(z,R_d)=\pi R_dI_s\frac{\partial B_z(z,r)}{\partial r}\mid_{R_d}\Delta x \tag{f2.2}
+\end{align*}
+于是，$k_x$由下式给出：
+\begin{align*}% page578第三个
 k_x(z,R_d)=\frac{\Delta F_x(z,R_d)}{\Delta x}=\pi R_dI_s\frac{\partial B_z(z,r)}{\partial r}\mid_{R_d}
-\end{equation}
-\begin{equation}% page578 第四个
+\end{align*}
+在以下条件下计算$k_x$：$R_d$=15 mm；$I_s$=280 A；$\partial B_z(z_\ell,r)/\partial r$=1.08 T/m(在$z_\ell=10$ mm和$R_d=15$ mm时)。
+\begin{align*}% page578 第四个
 k_x(z_\ell,R_d)=2(15\times 10^{-3}\ \mathrm{m})(280\ \mathrm{A})(1.08\ \mathrm{T/m})\simeq 14.2\ \mathrm{N/m}
-\end{equation}
-\begin{equation}% page578 f2.4
-\upsilon_x=\frac{1}{2\pi}\sqrt{\frac{k_x}{m_p}} 
-\simeq\frac{1}{2\pi}\sqrt{\frac{14.2\ \mathrm{N/m}}{(23\times 10^{-3}\ \mathrm{kg})}}\simeq 4\ \mathrm{Hz}
-\end{equation}
+\end{align*}
+与$k_z(z_\ell,R_d)$相比，水平刚度$k_x(z_\ell,R_d)$差不多翻倍。
+
+水平方向的自然频率$\nu_x$为：
+\begin{align*}% page578 f2.4
+\upsilon_x=&\frac{1}{2\pi}\sqrt{\frac{k_x}{m_p}}  \\\tag{f2.4}
+\simeq&\frac{1}{2\pi}\sqrt{\frac{14.2\ \mathrm{N/m}}{(23\times 10^{-3}\ \mathrm{kg})}}\simeq 4\ \mathrm{Hz}
+\end{align*}
+这些数值和实测值在同一量级[9.5,9.6]。
+
+\textbf{g) 功率需求}\qquad
+
 \begin{equation}% page579 3.112
 P=\rho_{cd}J^2\lambda a_{1}^{3}2\pi\beta(\alpha^2-1) 
 =\rho_{cd}\frac{(\lambda J)^2}{\lambda}a_{1}^{3}2\pi\beta(\alpha^2-1)
