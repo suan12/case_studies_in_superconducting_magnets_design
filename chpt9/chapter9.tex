@@ -819,28 +819,72 @@ L\simeq\frac{2N\pi}{I}\int_{0}^{a_2}B_z(z=0,r)dr \tag{9.2}
 
 
 \subsubsection{Q/A B：钢板上的超导线圈}
+\textbf{a) 线圈电感}\qquad 使用方程9.2和图9.7的$B_z(0,r)$图，计算线圈自感(无钢板)。
+使用$B_z(0,r=20)$=0.158 T和$B_z(0,r=35)$=-0.068 T。
+
+\textbf{解：}首先，$B_z(0,r)$和$B_z(0,r)r$的数据已列于表9.4。图9.8给出了$B_z(0,r)r$ vs. $r$曲线，
+从中可知$\int B_z(0,r)rdr$和$\Phi$可以如下计算：
+\begin{align*}% page569 第1个
+\int_{0}^{a_2}B_z(0,r)dr&\simeq 38.0\ \mathrm{T mm^2}\mbox{图9.8中阴影部分}\\
+&=3.80\times 10^{-5}\ \mathrm{Tm^2}\\
+\Phi&=2\pi(3.80\times 10^{-5}\ \mathrm{Tm^2})\simeq 23.9\times 10^{-5}\ \mathrm{Tm^2}
+\end{align*}
+于是，
+\begin{align*}% page569 第2个
+L=\frac{N\Phi}{I}\simeq\frac{150(23.9\times 10^{-5}\ \mathrm{Tm^2})}{25\ \mathrm{A}}\simeq 1.43\ \mathrm{mH}
+\end{align*}
+该值比实际值1.33 mH大$\sim 10\%$。
+由于在$-5\le z\le 5$ mm范围内，$B_z(0,r)$要比$B_z(z,r)$的平均值大，故方程9.2高估了$L$。
+注意到，因为$B_z(0,r)r$在$r\simeq31$ mm和$a_2$之间积分为负，并且它与$(a_1+a_2)/2=27.5$ mm到
+31 mm之间的积分制很接近，所以从0到$a_2$的积分最终与从0到$(a_1+a_2)/2$(上文提出的
+更合适的积分限)之间的积分值近乎相等。
+
+如3.7.2部分讨论的，对于一个参数为$a_1,\alpha,\beta,N$的螺管，其自感可由下式计算：
+\begin{align*}% page569 第3个
+L=\mu_oa_1N^2\mathcal{L}(\alpha,\beta) \tag{3.81}
+\end{align*}
+其中，$\mathcal{L}(\alpha,\beta)$如图3.14所示，仅依赖于$\alpha,\beta$。
+
+由表9.3可知，$a_1$=0.02 m；$\alpha=70/40=1.75$；$\beta=10/40=0.25$；
+$N=150$。
+使用图3.14中的$\mathcal{L}(\alpha,\beta)$，当$\alpha=1.75$时，在$\beta=0.2$和$\beta=0.4$
+之间做线性插值，我们有$\mathcal{L}(1.75,0.25)\simeq2.35$。于是：
+\begin{align*}% page569 第4个
+L\simeq(4\pi\times 10^{-7}\ \mathrm{H/m})(0.02\ \mathrm{m})(150)^2(2.35)=1.33\ \mathrm{mH}
+\end{align*}
+这与实际值完全相同。
 
 
-\begin{equation}% page569 第1个
-\int_{0}^{a_2}B_z(0,r)dr\simeq38.0\ \mathrm{T mm^2}=3.80\times10^{-5}\ \mathrm{T\ \ m^2}
-\end{equation}
-\begin{equation}% page569 第2个
-L=\frac{N\Phi}{I}\simeq\frac{150(23.9\times10^{-5}\ \mathrm{Tm^2})}{25\ \mathrm{A}}\simeq1.43\ \mathrm{mH}
-\end{equation}
-\begin{equation}% page569 第3个
-L=\mu_oa_1N^2\mathcal{L}(\alpha,\beta)
-\end{equation}
-\begin{equation}% page569 第4个
-L\simeq(4\pi\times10^{-7}\ \mathrm{H/m})(0.02\ \mathrm{m})(150)^2(2.35)=1.33\ \mathrm{mH}
-\end{equation}
+表9.4.。。。。。。。。。。。。。。。。。
 
 
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{chpt9/figs/fig9.8.eps}
+	\caption{$B_z(0,r)r$ vs. $r$曲线。}
+\end{figure}
+
+\textbf{b) 钢板}\qquad 下面我们考虑钢板。
+为了简化问题，我们首先假定钢板的磁导率无限大，即$\mu/\mu_o=\infty$。
+接下来，为了模拟钢板对其上(即$z\ge -5$ mm)磁场的作用，
+我们将钢板替换为一个和原线圈完全一样但至于板下的对称虚拟线圈，如图9.9所示。
 
 
 \begin{equation}%page570 第一个
 [B_{z}(0,0)]_{with}=[B_{z}(0,0)+B(z=10mm,0)]_{w/o}\\
 \simeq0.0863+0.711\simeq0.1574T
 \end{equation}
+
+
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{chpt9/figs/fig9.9.eps}
+	\caption{为建模钢板的效应而做的线圈安排。尺寸与图9.6相同。与原线圈等同的虚拟线圈置于
+	原线圈下方，替代$\mu/\mu_o=\infty$的理想钢板。}
+\end{figure}
+
+
 \begin{equation}%page571 第一个
 \int_{0}^{r\pm}2B_{z}(z=5mm,r)r\quad dr\simeq7.22\times10^{-5}\ \mathrm{TM^{2}}(from\quad Fig.9.10)
 \end{equation}
