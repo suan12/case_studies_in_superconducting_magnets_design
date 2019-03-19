@@ -768,17 +768,54 @@ a_{2ps}&=\sqrt{(1.805\ \mathrm{m})^2+\frac{(4\pi\times 10^{-7}\ \mathrm{H/m})(0.
 
 
 \subsection{例B：钢板上的超导线圈}
+在这个螺管磁体系统案例中，我们应用铁磁球体对场屏蔽(问题2.3)和理想偶极子中的铁扼效应(问题3.8)
+中用到的基本规律来研究圆形钢板如何影响置于其上的超导线圈的磁场。
+我们将看到，钢板显著增强了上方的磁场，且几乎消除了钢板下的磁场。
+在场屏蔽和偶极磁体的案例中，钢同样被建模为理想铁磁材料，即$\mu/mu_o=\infty$。
 
-\begin{equation}% page568 第1个
-\Phi=LI
-\end{equation}
-\begin{equation}% page568 第2个
-\Phi=2\pi\sum_{j=1}^{N}\int_{0}^{R_j}rB_z(z_i,r)dr
-\end{equation}
-\begin{equation}% page568 第3个
-L\simeq\frac{2N\pi}{I}\int_{0}^{a_2}B_z(z=0,r)dr
-\end{equation}
+图9.6给出了置于大直径、厚为$\delta_{st}$的圆形钢板上的超导磁体的截面图。
+$z-r$坐标的中心与线圈中心重合。图中线圈未画出其骨架。
+表9.3列出了线圈的参数。
 
+图9.7画出了线圈通流25 kA且无钢板时在$z$=0,5,7.5,10,12.5,15,17.5和20 mm时的$B_z(z,r)$。
+
+表9.3.。。。。。。。。。。。。。。。
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{chpt9/figs/fig9.6.eps}
+	\caption{置于钢板上的超导线圈的截面图。尺寸单位为mm。}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{chpt9/figs/fig9.7.eps}
+	\caption{线圈通流25 kA且无钢板时在$z$=0,5,7.5,10,12.5,15,17.5和20 mm时产生的磁场$B_z(z,r)$。
+		$B_z(0,20)$=0.158 T，$B_z(0，35)$=-0.068 T。}
+\end{figure}
+
+\textbf{电感回顾}
+
+如3.7节所讨论的，线圈的自感$L$可以由$\Phi$和$I$的关系给出：
+\begin{align*}% page568 第1个
+\Phi=LI \tag{3.78}
+\end{align*}
+其中$\Phi$是电流$I$时的总磁链：
+\begin{align*}% page568 第2个
+\Phi=2\pi\sum_{j=1}^{N}\int_{0}^{R_j}rB_z(z_i,r)dr \tag{9.1}
+\end{align*}
+式中，$R_j$是轴向距离$z=z_j$处的第$j$匝的半径。
+明显这个积分手算起来很麻烦。但如今因为有了大量可以计算电感的程序，手算已不再必要。
+
+这里我们针对图9.6所给的线圈，通过联立方程3.78和方程9.1的简化版本来计算电感的"说得过去精确"的值。
+\begin{align*}% page568 第3个
+L\simeq\frac{2N\pi}{I}\int_{0}^{a_2}B_z(z=0,r)dr \tag{9.2}
+\end{align*}
+方程9.2中，9.1的被积函数由一个仅涉及线圈中平面磁场的简单积积分项$B_z(0,r)$近似。
+方程9.2给出了$L$的上限，因为并非所有$N$匝都在$r=a_2$交链；
+实际上一些磁通仅交链于$a_1$内。
+或许中间点$()a_1+a_2)/2$是径向积分限的一个很好的折中。
 
 
 \subsubsection{Q/A B：钢板上的超导线圈}
