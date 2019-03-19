@@ -900,26 +900,54 @@ L\simeq(4\pi\times 10^{-7}\ \mathrm{H/m})(0.02\ \mathrm{m})(150)^2(2.35)=1.33\ \
 
 \textbf{d) 钢板厚度}\qquad 为了确保我们对钢板的$\mu/mu_o\gg 1$假设有效，需保持钢板磁化强度$\mu_o M_{st}$小于1.25 T。计算所需钢板的最小厚度。
 
-\textbf{解：}我们采用如下步骤：1) 假定钢板为
+\textbf{解：}我们采用如下步骤：
+1) 假定钢板为理想$\mu/\mu_o=\infty$；
+2) 由图9.7，确定$z=-5$ mm处的径向位置$r=r_{\pm}$，在该处总$B_z$(实线圈和虚线圈)的方向改变---
+在$0\le r\le r_{\pm}$区间$B_z$离开钢板，在$r\ge r_{\pm}$区间进入钢板；
+3) 确定在$0\le r\le r_{\pm}$区间离开钢板的总磁通；
+4) 令$\Phi_r(r=r_{\pm})$与在钢板$r=r_{\pm}$处径向总磁通相等。
 
-
-
-\begin{equation}%page571 第一个
-\int_{0}^{r\pm}2B_{z}(z=5mm,r)r\quad dr\simeq7.22\times10^{-5}\ \mathrm{TM^{2}}(from\quad Fig.9.10)
-\end{equation}
-\begin{equation}%page571 第二个
-\Phi_{r\pm}=2\pi(7.22\times10^{-5}\ \mathrm{Tm^{2}})\simeq45.4\times10^{-5}\ \mathrm{Tm^{2}}
-\end{equation}
-\begin{equation}%page571 第三个
+理想钢板中总的轴向磁场是实线圈$B_z(-5\ \mathrm{mm},r)$的二倍---
+因为虚线圈给出了等量的贡献。
+注意到，$B_z(-5\ \mathrm{mm},r)=B_z(5\ \mathrm{mm},r)$。
+$2 B_z(5\ \mathrm{mm},r)$和$2 B_z(5\ \mathrm{mm},r)r$的值在表9.5中给出。
+$\int 2B_z rdr$由图9.10给出的$2B_z(5\ \mathrm{mm},r)r$线得到。
+\begin{align*}%page571 第一个
+\int_{0}^{r\pm}2B_{z}(z=5mm,r)r\quad dr\simeq 7.22\times10^{-5}\ \mathrm{TM^{2}}\mbox{由图9.10}
+\end{align*}
+在$0\le r\le r_{\pm}$=31.56 mm区间穿出钢板的总磁通$Phi_{r_{\pm}}$于是为：
+\begin{align*}%page571 第二个
+\Phi_{r\pm}=2\pi(7.22\times 10^{-5}\ \mathrm{Tm^{2}})\simeq 45.4\times 10^{-5}\ \mathrm{Tm^{2}}
+\end{align*}
+这个磁通在$r=r_{\pm}$流入，等于通过钢板的总磁通$\Phi_{st}$：
+\begin{align*}%page571 第三个
 \Phi_{st}=\pi r_{\pm}\delta_{st}(\mu_{o}M_{st})=\Phi_{r\pm}
-\end{equation}
-\begin{equation}%page571 第四个
-\delta_{st}=\frac{\Phi_{r\pm}}{2r_{\pm}(\mu_{o}M_{st})}=\frac{45.4\times10^{-5}\ \mathrm{Tm^{2}}}{2\pi(0.03156m)(1.25T)}\simeq1.8mm
-\end{equation}
-\begin{equation}%page572 第一个
-\int_{r\pm}^{r_{od}}B_{z}(r,z=5mm)d\quad dr>\sim(0.8)\int_{0}^{r\pm}B_{z}(r,z=5mm)r\quad dr
-\end{equation}
+\end{align*}
+解出$\delta_{st}$：
+\begin{align*}%page571 第四个
+\delta_{st}=\frac{\Phi_{r\pm}}{2r_{\pm}(\mu_{o}M_{st})}=\frac{45.4\times 10^{-5}\ \mathrm{Tm^{2}}}{2\pi(0.03156\ \mathrm{m})(1.25\ \\mathrm{T})}\simeq 1.8\ \mathrm{ mm}
+\end{align*}
+也即，$\sim$2 mm厚的钢板应当足够满足要求。
+从表2.5，我们注意到as-cast钢在$\mu_o M$=1.25 T时有$(\mu/\mu_o)_{dif}=180$。
 
+表9.5。。。。。。。。。。。。。。。。。。。
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{chpt9/figs/fig9.10.eps}
+	\caption{$B_z(5\ \mathrm{mm},r)r$ vs. $r$曲线。}
+\end{figure}
+
+那么钢板的外径$r_{od}$应当是多少呢？
+理论上来说应该是无限大---当然不具操作性。
+需要我们做的就是从$r_{pm}$到$r_{od}$积分$rB_z(r,5\ \mathrm{mm})$，
+并令之满足如下条件：
+\begin{align*}%page572 第一个
+\int_{r\pm}^{r_{od}}B_{z}(r,z=5\ \mathrm{ mm})d\quad dr>\sim(0.8)\int_{0}^{r\pm}B_{z}(r,z=5\ \mathrm{ mm})r\quad dr
+\end{align*}
+
+也就是收，钢板应该能捕获至少内部区域($0\le r\le r_{\pm}$)穿出的磁通的80\%。
+为了满足上述条件，$r_{od}$有约60 mm就够了。
 
 
 \subsection{例C：平面HTS板的悬浮}
