@@ -1176,42 +1176,80 @@ k_x(z_\ell,R_d)=2(15\times 10^{-3}\ \mathrm{m})(280\ \mathrm{A})(1.08\ \mathrm{T
 \end{align*}
 这些数值和实测值在同一量级[9.5,9.6]。
 
-\textbf{g) 功率需求}\qquad
+\textbf{g) 功率需求}\qquad 如果忽略液化氮的功率可以忽略，
+将铜线圈浸泡于一个大气压下的液氮池中是节能的。
+计算通流为25 A的线圈1和通流为15 A的线圈2，运行于77.3 K液氮中所需的总电功率$P_T=P_1+P_2$。
+假定各线圈的空间因数$\lambda$均为0.785。
+导体铜在77 K时的电阻率取为$\rho_{cd}$=2.5 n$\Omega$。
 
-\begin{equation}% page579 3.112
-P=\rho_{cd}J^2\lambda a_{1}^{3}2\pi\beta(\alpha^2-1) 
-=\rho_{cd}\frac{(\lambda J)^2}{\lambda}a_{1}^{3}2\pi\beta(\alpha^2-1)
-\end{equation}
-\begin{equation}% page579 g.1
-P=\frac{\pi\rho_{cd}(NI)^2(\alpha+1)}{2\lambda a_1\beta(\alpha-1)}
-\end{equation}
-\begin{equation}% page579 第三个
+\textbf{解：}由方程3.112，我们有：
+\begin{align*}% page579 3.112
+P&=\rho_{cd}J^2\lambda a_{1}^{3}2\pi\beta(\alpha^2-1) \\\tag{3.112}
+&=\rho_{cd}\frac{(\lambda J)^2}{\lambda}a_{1}^{3}2\pi\beta(\alpha^2-1)
+\end{align*}
+代入$\lambda J=NI/2b(a_2-a_1)=NI/2a_1^2\beta(\alpha-1)$，$P$成为：
+\begin{align*}% page579 g.1
+P=\frac{\pi\rho_{cd}(NI)^2(\alpha+1)}{2\lambda a_1\beta(\alpha-1)} \tag{g.1}
+\end{align*}
+
+对线圈1有$a_1=20\times 10^{-3}$ m; $\alpha=2a_2/2a_1$=70 mm/40 mm=1.75;
+$\beta=2b/2a_1=$10 mm/40 mm=0.25。方程g.1给出：
+\begin{align*}% page579 第三个
 P_1=\frac{\pi(2.5\times 10^{-9}\ \mathrm{\Omega m})(150\times 25\ \mathrm{A})^2(1.75+1)}{2(0.785)(20\times 10^{-3}\ \mathrm{m})(0.25)(1.75-1)}\simeq 52\ \mathrm{W}
-\end{equation}
-\begin{equation}% page579第四个
+\end{align*}
+类似的，线圈2：
+\begin{align*}% page579第四个
 P_2=\frac{\pi(2.5\times 10^{-9}\ \mathrm{\Omega m})(50\times 15\ \mathrm{A})^2(1.5+1)}{2(0.785)(10\times 10^{-3}\ \mathrm{m})(0.5)(1.5-1)}\simeq 3\ \mathrm{W}
-\end{equation}
-\begin{equation}% page579 h.1
-\dot{Q}_\ell=\frac{P}{h_L}
-\end{equation}
-\begin{equation}% page579 最后一个
-\dot{Q}_\ell=\frac{(55\ \mathrm{W})}{(161\ \mathrm{J/cm^3})}=0.34\ \mathrm{cm^3/s}=1224\ \mathrm{cm^3/h} 
-\sim 1\ \mathrm{liter/h}
-\end{equation}
-\begin{equation}% page580 第一个
-[B_z(z_\ell,R_d)]_{\mathrm{with}}=[B_z(z_\ell,R_d)+B_z(z\ell+10.0\ \mathrm{mm},R_d)]_{\mathrm{w/o}} 
-\simeq(0.070\ \mathrm{T})+(0.036\ \mathrm{T})=0.106\ \mathrm{T}
-\end{equation}
-\begin{equation}% page580 第二个
-[B_r(z_\ell,R_d)]_{\mathrm{with}}=[B_r(z_\ell,R_d)+B_r(z\ell+10.0\ \mathrm{mm},R_d)]_{\mathrm{w/o}} 
-\simeq(0.018\ \mathrm{T})+(0.015\ \mathrm{T})=0.033\ \mathrm{T}
-\end{equation}
-\begin{equation}% page580 9.3b
-F_z(z_\ell,R_d)=2\pi R_d\delta_d\left[\frac{B_z(z_\ell,R_d)B_r(z_\ell,R_d)}{\mu_o}\right] 
-\simeq\frac{2\pi(15\times 10^{-3}\ \mathrm{m})(5\times 10^{-3}\ \mathrm{m})(0.106\ \mathrm{T})(0.033\ \mathrm{T})}{(4\pi\times 10^{-7}\ \mathrm{H/m})} 
-\simeq 1.31\ \mathrm{N}(\simeq 134\ \mathrm{g})
-\end{equation}
+\end{align*}
+于是，两线圈的总功耗为约55 W。
 
+\textbf{h) 液氮挥发率}\qquad 在功耗为55 W条件下，计算液氮的近似挥发率$\dot{Q}_\ell$。
+
+\textbf{解：}一定功率下的液氮挥发率为：
+\begin{align*}% page579 h.1
+\dot{Q}_\ell=\frac{P}{h_L} \tag{h.1}
+\end{align*}
+式中，$h_L$为液氮的汽化潜热。由表4.2知$h_L=161\ \mathrm{J/cm^3}$，方程h.1成为：
+\begin{align*}% page579 最后一个
+\dot{Q}_\ell&=\frac{(55\ \mathrm{W})}{(161\ \mathrm{J/cm^3})}=0.34\ \mathrm{cm^3/s}=1224\ \mathrm{cm^3/h} \\
+&\sim 1\ \mathrm{liter/h}
+\end{align*}
+本系统长期运行时，安装线圈的低温容器需要以约1 L/h的速率补充液氮。
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{chpt9/figs/fig9.15.eps}
+	\caption{将图9.11建模为存在钢板时的线圈排列。}
+\end{figure}
+
+我们现在开始研究图9.11中的钢板的影响。
+为了简化问题，我们首先假设钢板为无限磁导率的，即$\mu/\mu_o=\infty$。
+接下来，为了计入钢板对板上部(即$z\ge-5$ mm)的磁场的影响，
+我们将钢板替换为与原始线圈组一致的虚线圈组，安装方法如图9.15所示。
+注意到，各线圈均假定为不含骨架。
+
+\textbf{i) 有钢板}\qquad 现在我们计算存在理想钢板时对$z_\ell=10$ mm处悬浮板的力。
+同时，讨论轴向和径向的稳定性。
+
+\textbf{解：}无钢板时，由图9.12和9.13我们有$[B_z(z_\ell,R_d)]_{w/o}\simeq 0.070$ T和
+$[B_r(z_\ell,R_d)]_{w/o}\simeq 0.019$ T。
+有理想钢板时，位于$z=-10$ mm的虚线圈的贡献也必须计入。
+\begin{align*}% page580 第一个
+[B_z(z_\ell,R_d)]_{\mathrm{with}}&=[B_z(z_\ell,R_d)+B_z(z\ell+10.0\ \mathrm{mm},R_d)]_{\mathrm{w/o}} \\
+&\simeq(0.070\ \mathrm{T})+(0.036\ \mathrm{T})=0.106\ \mathrm{T}\\
+[B_r(z_\ell,R_d)]_{\mathrm{with}}&=[B_r(z_\ell,R_d)+B_r(z\ell+10.0\ \mathrm{mm},R_d)]_{\mathrm{w/o}} \\
+&\simeq(0.018\ \mathrm{T})+(0.015\ \mathrm{T})=0.033\ \mathrm{T}
+\end{align*}
+向方程9.3b中代入上述磁场值，我们得到：
+\begin{align*}% page580 9.3b
+F_z(z_\ell,R_d)=&2\pi R_d\delta_d\left[\frac{B_z(z_\ell,R_d)B_r(z_\ell,R_d)}{\mu_o}\right]  \\\tag{9.3b}
+\simeq&\frac{2\pi(15\times 10^{-3}\ \mathrm{m})(5\times 10^{-3}\ \mathrm{m})(0.106\ \mathrm{T})(0.033\ \mathrm{T})}{(4\pi\times 10^{-7}\ \mathrm{H/m})} \\
+\simeq& 1.31\ \mathrm{N}(\simeq 134\ \mathrm{g})
+\end{align*}
+
+于是，存在理想钢板时，系统产生了一个六倍于板重量的悬浮力，也即，
+板能够撑起大于110 g的负载。
+该系统在轴向是稳定的($k_z\simeq$6.9 N/m)，在水平向也是稳定的($k_x\simeq$9.1 N/m)。
 
 
 \section{例D：HTS“环形”磁体}
