@@ -925,7 +925,7 @@ $\int 2B_z rdr$由图9.10给出的$2B_z(5\ \mathrm{mm},r)r$线得到。
 \end{align*}
 解出$\delta_{st}$：
 \begin{align*}%page571 第四个
-\delta_{st}=\frac{\Phi_{r\pm}}{2r_{\pm}(\mu_{o}M_{st})}=\frac{45.4\times 10^{-5}\ \mathrm{Tm^{2}}}{2\pi(0.03156\ \mathrm{m})(1.25\ \\mathrm{T})}\simeq 1.8\ \mathrm{ mm}
+\delta_{st}=\frac{\Phi_{r\pm}}{2r_{\pm}(\mu_{o}M_{st})}=\frac{45.4\times 10^{-5}\ \mathrm{Tm^{2}}}{2\pi(0.03156\ \mathrm{m})(1.25\ \mathrm{T})}\simeq 1.8\ \mathrm{mm}
 \end{align*}
 也即，$\sim$2 mm厚的钢板应当足够满足要求。
 从表2.5，我们注意到as-cast钢在$\mu_o M$=1.25 T时有$(\mu/\mu_o)_{dif}=180$。
@@ -1252,17 +1252,96 @@ F_z(z_\ell,R_d)=&2\pi R_d\delta_d\left[\frac{B_z(z_\ell,R_d)B_r(z_\ell,R_d)}{\mu
 该系统在轴向是稳定的($k_z\simeq$6.9 N/m)，在水平向也是稳定的($k_x\simeq$9.1 N/m)。
 
 
-\section{例D：HTS“环形”磁体}
+\section{例D：HTS“环”磁体}
+有一种只有HTS可能而LTS不可能的磁体设计，它由许多HTS块或环形版堆叠而成。
+图9.16给出了示意截面图，各单元内径$2a_1$而外径$2a_2$。分别是：
+a) 块材环片，厚度为$\delta_b$；b) 薄板环片，总厚度$\delta_p$，超导薄膜厚度$\delta_f$；
+c) "环"磁体，总高度为$2b$，由一些块材环片或薄板环片堆叠而成。
+注意到环磁体既无分段，也无终端。
 
-\subsubsection{Q/A D：HTS“环形”磁体}
+对YBCO和其他稀土类HTS块材[9.10-9.14]，$2a_1,2a_2$的实际可得值分别为40-60 mm
+和70-100 mm，这使得采用这种块材环片来开发小型NMR磁体具有了现实可行性[9.15]。
+同时，因为宽为40-100 mm的涂层YBCO导体已开发出来[9.16,9.17]，
+在不久的将来，在一根宽的涂层导体用模具压出环片是可能的。
 
+典型的，块材环片厚度$\delta_b\sim 10$ mm，
+板环片厚度$\delta_p\sim 100\ \mathrm{\mu m}$，$\delta_f\sim 1\ \mathrm{\mu m}$。
+这样，一个$2b$=300 mm的环形磁体将包括30个块材环片或约3000个板环片。
+因为各环片都是回环，环磁体的励磁过程和线绕磁体存在很大的不同---参见问题1.2。
 
-\begin{equation}% page582 3.111e
-B_z(0,0)=\mu_o\lambda Ja_1(\alpha-1)
-\end{equation}
-\begin{equation}% page582 第二个
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{chpt9/figs/fig9.16.eps}
+	\caption{示意截面图，各单元内径$2a_1$而外径$2a_2$。分别是：
+		a) 块材环片，厚度为$\delta_b$；b) 薄板环片，总厚度$\delta_p$，超导薄膜厚度$\delta_f$；
+		c) "环"磁体，总高度为$2b$，由一些块材环片或薄板环片堆叠而成。}
+\end{figure}
+
+\subsubsection{Q/A D：HTS“环”磁体}
+\textbf{a) 总(工程)电流密度}\qquad 假定环磁体是“长”的，即$\beta\gg 1$，计算
+在$2a_1$=50 mm, $2a_2$=75 mm, $2b$=300 mm时，
+产生轴向中心场$B_o=11.74$ T(对应500 MHz的NMR)所需的总电流密度$\lambda J$或$J_e$。
+
+\textbf{解：}由于$\alpha=1.5,\beta=6$，这个“螺管”磁体可以视为“长”的，
+即磁体中心场$B_o=B_z(0,0)$可由方程3.111e给出：
+\begin{align*}% page582 3.111e
+B_z(0,0)=\mu_o\lambda Ja_1(\alpha-1) \tag{3.111e}
+\end{align*}
+注意到$B_z(0,0)$与磁体长度无关，正比于“绕组”构造。
+从方程3.111e中解出$\lambda J$，我们得到：
+\begin{align*}% page582 第二个
 \lambda J=\frac{B_z(0,0)}{\mu_oa_1(\alpha-1)}=\frac{(11.74\ \mathrm{T})}{(4\pi\times 10^{-7}\ \mathrm{H/m})(0.025\ \mathrm{m})(1.5-1)}=7.5\times 10^8\ \mathrm{A/m^2}
-\end{equation}
+\end{align*}
+
+\textbf{b) 电流密度要求---块材片 vs. 板片}\qquad
+讨论块材片和板片的总(工程)电流密度。
+
+\textbf{解：} 尽管图9.16c给出了的绕组空间完全由块材片或板填满，
+但实际的环磁体中，相邻片间还有一个“薄”的垫片。
+这些垫片不仅加强了绕组对磁场力的强度，还以沿轴向不同位置采用不同厚度垫子
+的形式用来调节轴向场分布。
+
+\textbf{块材片}\qquad 因为垫片占据不超过总绕组空间的$\sim 10\%$，
+$\lambda J\simeq J_c$，其中$J_c$是块材临界电流密度。
+也即，在块材片磁体中，材料临界电流密度应当不是限制产生11.74 T或更大中心场的因素。
+
+\textbf{板片}\qquad 以涂层YBCO导体为例，它还复合有其他非超导材料(如缓冲层、基底，其厚度
+表示为$\delta_p-\delta_f$)。$\delta_p$和$\delta_f$的典型值分别是
+75-100 $\mu$m和1 $\mu$m。于是，为了实现总电流密度$10^8--10^9\ \mathrm{ A/m^2}$，
+YBCO膜的$J_c$必须至少达到$10^{10}\ \mathrm{ A/m^2}$，
+该值仅在温度低于77 K时才能达到。
+
+\textbf{c) 励磁技术}\qquad 讨论励磁一个“大型”和“高场”的环磁体的方法。
+
+\textbf{解：}通常来讲，改变超导回路的磁通是不可能的，除非部分回路处于正常态---
+“磁通门”必须要打开。
+于是，甚至不可能励磁一个超导环(问题1.2)，更遑论一个完全闭合的、保持超导态超导磁体。
+
+如讨论7.4所研究的，励磁“常规”持续运行模式的磁体的一个方法是使用持续电流开关(PCS)。
+
+另一个经常使用的技术是将未励磁且已处于超导态的线绕超导磁体(或块材片)置于一个脉冲场磁体的
+室温孔中。
+升降脉冲磁场的快速变化加热部分或大部分超导磁体，从而允许磁通进入。
+确保超导磁体充分冷却后，可让磁体回到完全超导态，捕获部分脉冲磁场，成为持续模式的磁场。
+本技术的缺点是：1) 难于精确控制最终持续模式磁场的水平，因为它苛刻的依赖于加热/冷却条件；
+2) 对一个大型高场磁体，该脉冲磁体自身将变得很大，且需精心制作。
+
+为了励磁大型高场环磁体，DC超导外场是一个最好的选项。
+图9.17给出了本技术励磁环磁体的一个步骤的以试图，这里给出的是无垫片的环片堆叠磁体，
+中心部分为槽型(参见问题3.7)。
+励磁环磁体的步骤分为以下5步：
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{chpt9/figs/fig9.17.eps}
+	\caption{第2步之后。}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{chpt9/figs/fig9.16.eps}
+	\caption{示意截面图，各单元内径$2a_1$而外径$2a_2$。分别是：
+		a) 块材环片，厚度为$\delta_b$；b) 薄板环片，总厚度$\delta_p$，超导薄膜厚度$\delta_f$；
+		c) "环"磁体，总高度为$2b$，由一些块材环片或薄板环片堆叠而成。}
+\end{figure}
 \begin{equation}% page584 d.1
 \frac{\pi}{3}(a_{2}^{2}+a_2a_1+a_{1}^{2})B_o\simeq\frac{\pi}{4}(D_{so}^{2}-D_{si}^{2})\mu_oM_s
 \end{equation}
