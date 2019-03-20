@@ -1,6 +1,6 @@
 \chapter{电磁场}
 \section{引言}
-本章我们通过Maxwell方程组来回顾电磁理论。这个回顾是为了"唤起"读者对电磁理论的理解，以便本书的主题---超导磁体---可以
+本章我们通过Maxwell方程组来回顾电磁理论。这个回顾是为了``唤起"读者对电磁理论的理解，以便本书的主题---超导磁体---可以
 用量化的方式展开。之后，给出了几个在的大多数磁体应用中用得到，并可以用解析方法进行分析的特例，作为专题研究材料。
 \section{Maxwell方程}
 Maxwell方程组包括四个基本方程：1)Gauss定律；2)Ampere定律；3)Faraday定律；4)磁通连续定律。此外，我们还会常用到电荷守恒方程
@@ -58,13 +58,13 @@ $\epsilon_0\vec{E}$场的面积分等于表面S围成的体积V内的净电荷�
 \oint_C \vec{H}\cdot d\vec{S}=\int_S \vec{J}_f d\vec{A}
 \end{equation}
 
-方程表明，$\vec{H}$场的线积分等于C围成的面S内的总的"自由"电流，即不含有磁化电流。微分形式：
+方程表明，$\vec{H}$场的线积分等于C围成的面S内的总的``自由"电流，即不含有磁化电流。微分形式：
 \begin{equation}\label{eqn:amperelaw diff}
    \nabla \times \vec{H}=\vec{J}_f
 \end{equation}
 
 上述两个方程都没有计入$\vec{H}$的另一个可忽略的源：$\frac{\partial{\vec{E}}}{\partial{t}}$
-\textbf{边界条件}：如果存在"自由"面电流密度$\vec{K}_f[A/m]$，则通过区域1到区域2的磁场在切向不连续，满足：
+\textbf{边界条件}：如果存在``自由"面电流密度$\vec{K}_f[A/m]$，则通过区域1到区域2的磁场在切向不连续，满足：
 \begin{equation}\label{eqn:ampere bc}
   \vec{n}_{12}\times (\vec{H}_2-\vec{H}_1)=\vec{K}_f
 \end{equation}
@@ -105,7 +105,7 @@ $\epsilon_0\vec{E}$场的面积分等于表面S围成的体积V内的净电荷�
 $\vec{B}$场在两种介质中的法向分量连续性都可以保持。
 
 \subsection{电荷守恒}
-"自由"电流密度$\vec{J}_f$与"自由"电荷密度$\rho_{cf}$的时变率有关。积分形式为：
+``自由"电流密度$\vec{J}_f$与``自由"电荷密度$\rho_{cf}$的时变率有关。积分形式为：
 \begin{equation}\label{eqn:chargelaw}
 \oint_S \vec{J}_f\cdot d\vec{A}=-\frac{d}{dt}\int_V \rho_{cf}d\vec{V}
 \end{equation}
@@ -122,7 +122,7 @@ $\vec{B}$场在两种介质中的法向分量连续性都可以保持。
 \end{equation}
 
 在同质、各向同性、线性介质(本书通常以此设定为前提)中，$\vec{B}=\mu \vec{H}=\mu_0(1+\chi)\vec{H}$。式中的磁导率$\mu$和磁化系数$\chi$
-我们一般假定其与磁场无关。铁磁材料如"高$\mu$"屏蔽材料的$\chi$可高达$10^6$。典型的顺磁材料，例如氧，$\chi=10^{-6}$；抗磁材料如单原子气体、多数液体的
+我们一般假定其与磁场无关。铁磁材料如``高$\mu$"屏蔽材料的$\chi$可高达$10^6$。典型的顺磁材料，例如氧，$\chi=10^{-6}$；抗磁材料如单原子气体、多数液体的
 磁化系数是负值。第I类超导体具有完全抗磁性，有$\chi=-1, \mu=0$。
 
 导体材料如金属中，电场$\vec{E}$会激发出电流密度$\vec{J}$，其关系为
@@ -142,7 +142,7 @@ $\vec{B}$场在两种介质中的法向分量连续性都可以保持。
 \nabla \cdot \vec{J}_f &=&-\frac{\partial{\rho_{cf}}}{\partial{t}}
 \end{eqnarray}
 
-如果电场$\vec{E}$和磁场$\vec{B}$能够解耦，将大大简化解方程组\ref{eqn:maxwelleqns}的难度。"准静态"分析可以满足很多重要的实际应用。
+如果电场$\vec{E}$和磁场$\vec{B}$能够解耦，将大大简化解方程组\ref{eqn:maxwelleqns}的难度。``准静态"分析可以满足很多重要的实际应用。
 最简单的做法就是先解静态方程，即$0^{th}$阶近似：
 \begin{subequations}\label{eqn:maxwelleqns 0th}
 	\begin{align}
@@ -293,7 +293,7 @@ Poynting定理可用下式表示：
 
 其中，$A_1, A_2, C, D_1, D_2$都是常数。$P_n^0(\cos \theta)$，或者其简写$P_n(\cos\theta)$，就是所为的Legendre函数。
 它在设计空间部分均匀的螺管磁体时很有用，设计阶段可以假定场关于z轴($\theta=0$)对称。$P_n^m(\cos\theta)$，被称为
-伴随Legendre函数。它在最小化一个实际螺管磁体的设计"误差"时很有用。后面给出了一些有代表性的Legendre函数的表达式。
+伴随Legendre函数。它在最小化一个实际螺管磁体的设计``误差"时很有用。后面给出了一些有代表性的Legendre函数的表达式。
 
 \subsubsection{特例}
 \begin{description}
@@ -463,7 +463,7 @@ $r=R$处的$\theta$分量不连续将要求存在表面电流(被限制在一个
 
 \textbf{特例3：$\mu/\mu_0=\infty$}
 
-这时表示的是一个理想铁磁材料。软铁的性质与此接近。磁场被"吸"如球内，代入2.41中，有
+这时表示的是一个理想铁磁材料。软铁的性质与此接近。磁场被``吸"如球内，代入2.41中，有
 	\begin{align}
 \vec{B}_1&= \mu_0 H_0(−\cos\theta\vec{i_r} + \sin\theta\vec{i_\theta}) -
 \mu_0 H_0\left(\frac{R}{r}\right)^3 (2 \cos\theta\vec{i_r} + \sin\theta\vec{i_\theta})\tag{S1.10a}\\
@@ -541,7 +541,7 @@ A=R^2 H_0 \tag{S2.6}
 \vec{H}_1=H_0(-\cos \theta \vec{i}_r+\sin \theta \vec{i}_\theta) +H_0 \left(\frac{R}{r}\right)^2(\cos\theta \vec{i}_r+\sin\theta \vec{i}_\theta ) \tag{2.42}
 \end{equation*}
 
-注意到，在$r=R,\theta=90^\circ$时，$|\vec{H}_1|=2H_0$；也即此处的幅值是远场的两倍。物理上看，圆棒处于正常态时场本是在其内部的，进入超导态后，场被"推"出，挤压在$\theta=90^\circ$附近。
+注意到，在$r=R,\theta=90^\circ$时，$|\vec{H}_1|=2H_0$；也即此处的幅值是远场的两倍。物理上看，圆棒处于正常态时场本是在其内部的，进入超导态后，场被``推"出，挤压在$\theta=90^\circ$附近。
 
 
 b) 因为$2H_0\sin \theta$中的$\vec{H}$在$r=R$处的切向分量不连续，所以肯定存在表面电流密度$\vec{K}_f$流过超导棒。我们有：
@@ -550,7 +550,7 @@ b) 因为$2H_0\sin \theta$中的$\vec{H}$在$r=R$处的切向分量不连续，�
   \vec{K}_f=\vec{i}_r \times 2H_0\sin\theta \vec{i}_\theta=2H_0\sin\theta\vec{i}_z\tag{2.43}
 \end{equation*}
 
-这个正弦电流分布式高能物理设施中被称为"核粒子加速器"内所用的大多数双极磁体的基础。
+这个正弦电流分布式高能物理设施中被称为``核粒子加速器"内所用的大多数双极磁体的基础。
 
 
 c) 根据超导电性的London理论，第I类超导体的超导电流密度$J_s$由$J_s=en_{se}v$给出。其中，$e$是电荷量($e=1.6\times 10^{-19}\ \mathrm{C}$)，$n_{se}$是超导电子的密度，$v$是超导电子的漂移速度。
@@ -622,7 +622,7 @@ $$
   \vec{K}_f=\vec{i_r}\times \left[H_0 \sin\theta \vec{i_\theta}-(-\frac{1}{2}H_0 \sin\theta \vec{i_\theta})\right]=\frac{3}{2}H_0\sin\theta\vec{i_\theta}
 \end{equation}
 
-值得一提的是，这个$\sin\theta$分布，可以用一个绕在球上的在$z$轴均匀匝密度的"薄"线圈来近似。
+值得一提的是，这个$\sin\theta$分布，可以用一个绕在球上的在$z$轴均匀匝密度的``薄"线圈来近似。
 
 
 
@@ -744,7 +744,7 @@ c)我们假设$\mu$为无限大。这要求B线在$r=R$处垂直于球壳。这�
 	\caption{通过球壳$\pm \theta$边界内区域进入壳的磁通。}
 \end{figure}
 
-B线局限在壳内，不会"逸"至区域3。也即，壳内的B仅有$\vec{i}_\theta$分量。应用磁通连续性($\nabla \cdot \vec{B}=0$)并在$\mu=\infty$条件下解$B_2$。解出$B_2$
+B线局限在壳内，不会``逸"至区域3。也即，壳内的B仅有$\vec{i}_\theta$分量。应用磁通连续性($\nabla \cdot \vec{B}=0$)并在$\mu=\infty$条件下解$B_2$。解出$B_2$
 后，可以得到$\mu \neq \infty$但$\mu/\mu_0 \gg 1$时$\vec{H}_3$的近似表达式。
 
 首先，计算通过表面区域$\pm \theta$边界内进入壳的总磁通(图2.5)。根据图中的微元积分
@@ -962,7 +962,7 @@ H_{m_A z}=\frac{\vec{m_A}}{r^3}(\cos^2\theta-\frac{1}{2}\sin^2\theta) \tag{S5.1}
 我们注意到，对阴影区中基线之上的磁矩均有$\theta_{tp}>54^\circ 44^\prime$。由于随$\theta$值的增加，$\cos\theta$递减而$\sin\theta$递增，
 在$\theta_{tp}>54^\circ 44^\prime$时，$H_{m_A z}$为负。以$\theta_{tp}=54^\circ 44^\prime$倒角磁极可以消除这种负的贡献，最大化中心场。
 
-值得一提的是，NMR质谱仪中的"神奇角"(magic angle)也是$54^\circ 44^\prime$。通常，NMR样品以这个"神奇角"与主轴场取向放置以减少各向异性的作用。
+值得一提的是，NMR质谱仪中的``神奇角"(magic angle)也是$54^\circ 44^\prime$。通常，NMR样品以这个``神奇角"与主轴场取向放置以减少各向异性的作用。
 
 \begin{figure}[htbp]
   \centering
@@ -1072,7 +1072,7 @@ V_1 |_{\theta=-\pi/2}^{\theta=+\pi/2}=-\frac{1}{2}j\omega \pi R^2 \mu_0 H_0   \t
 感应加热在电炉中广泛使用，用以在导体材料内获得高温。有时，也用来作为研究超导线圈热行为的研究工具。
 在超导磁体技术研究中，感应加热最常以脉冲场形式在其他超导线圈中产生小的正常区域，模拟暂态扰动。
 
-图2.11给出一个"长"金属圆柱壳，其电导率为$\rho_e$，外径为$2R$，厚度$d\ll R$，置于正弦时变磁场中。磁场的0阶分量在z向均匀。即
+图2.11给出一个``长"金属圆柱壳，其电导率为$\rho_e$，外径为$2R$，厚度$d\ll R$，置于正弦时变磁场中。磁场的0阶分量在z向均匀。即
 \begin{equation*}
 \vec{\mathcal{H}}_\infty(t)=Re[H_0 e^{j\omega t}] \vec{i}_z \tag{2.54}
 \end{equation*}
@@ -1103,7 +1103,7 @@ b)证明：在$r\le R-d$区域，一阶磁场$\vec{H}_1$可以表示为
 \vec{H}_1=-\frac{j\omega \mu_0 R d H_0}{2\rho_e}\vec{i}_z
 \end{equation} 
 
-c)上面三式，在准静态近似条件下得出，仅在"低"频下成立，或者说仅在频率远小于"趋肤深度"频率$f_{sk}$下成立。证明：
+c)上面三式，在准静态近似条件下得出，仅在``低"频下成立，或者说仅在频率远小于``趋肤深度"频率$f_{sk}$下成立。证明：
 \begin{equation}
 f_{sk}=\frac{\rho_e}{\pi \mu_0 R d}
 \end{equation}
