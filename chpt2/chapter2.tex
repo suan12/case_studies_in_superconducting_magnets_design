@@ -1,12 +1,12 @@
 \chapter{电磁场}
 \section{引言}
-本章我们通过Maxwell方程组来回顾电磁理论。这个回顾是为了“唤起”读者对电磁理论的理解，以便本书的主题——超导磁体——可以
+本章我们通过Maxwell方程组来回顾电磁理论。这个回顾是为了"唤起"读者对电磁理论的理解，以便本书的主题---超导磁体---可以
 用量化的方式展开。之后，给出了几个在的大多数磁体应用中用得到，并可以用解析方法进行分析的特例，作为专题研究材料。
 \section{Maxwell方程}
-Maxwell方程组包括四个基本方程：1）Gauss定律；2）Ampere定律；3）Faraday定律；4）磁通连续定律。此外，我们还会常用到电荷守恒方程
+Maxwell方程组包括四个基本方程：1)Gauss定律；2)Ampere定律；3)Faraday定律；4)磁通连续定律。此外，我们还会常用到电荷守恒方程
 和其他本构关系。以下简要的逐一讨论。
 
-本书中如非指明，电磁量都采用SI单位（表\ref{emquantity}）。磁体界常常将磁场强度$\vec{H}$和磁通密度（或磁感应强度）$\vec{B}$混用，尽管这个做法
+本书中如非指明，电磁量都采用SI单位(表\ref{emquantity})。磁体界常常将磁场强度$\vec{H}$和磁通密度(或磁感应强度)$\vec{B}$混用，尽管这个做法
 无伤大雅，也基本不会导致混淆，但我们应该提起注意，比如从$\vec{M} vs. \vec{H}$图计算能量的时候。
 
 自由空间的磁导率$\mu_0=4\pi \times 10^{-7} H/m$；自由空间磁导率$\epsilon_0=\frac{1}{\mu_0c^2}$，近似值为$8.85\times 10^{-12} F/m$。
@@ -58,13 +58,13 @@ $\epsilon_0\vec{E}$场的面积分等于表面S围成的体积V内的净电荷�
 \oint_C \vec{H}\cdot d\vec{S}=\int_S \vec{J}_f d\vec{A}
 \end{equation}
 
-方程表明，$\vec{H}$场的线积分等于C围成的面S内的总的“自由”电流，即不含有磁化电流。微分形式：
+方程表明，$\vec{H}$场的线积分等于C围成的面S内的总的"自由"电流，即不含有磁化电流。微分形式：
 \begin{equation}\label{eqn:amperelaw diff}
    \nabla \times \vec{H}=\vec{J}_f
 \end{equation}
 
 上述两个方程都没有计入$\vec{H}$的另一个可忽略的源：$\frac{\partial{\vec{E}}}{\partial{t}}$
-\textbf{边界条件}：如果存在“自由”面电流密度$\vec{K}_f[A/m]$，则通过区域1到区域2的磁场在切向不连续，满足：
+\textbf{边界条件}：如果存在"自由"面电流密度$\vec{K}_f[A/m]$，则通过区域1到区域2的磁场在切向不连续，满足：
 \begin{equation}\label{eqn:ampere bc}
   \vec{n}_{12}\times (\vec{H}_2-\vec{H}_1)=\vec{K}_f
 \end{equation}
@@ -105,7 +105,7 @@ $\epsilon_0\vec{E}$场的面积分等于表面S围成的体积V内的净电荷�
 $\vec{B}$场在两种介质中的法向分量连续性都可以保持。
 
 \subsection{电荷守恒}
-“自由”电流密度$\vec{J}_f$与“自由”电荷密度$\rho_{cf}$的时变率有关。积分形式为：
+"自由"电流密度$\vec{J}_f$与"自由"电荷密度$\rho_{cf}$的时变率有关。积分形式为：
 \begin{equation}\label{eqn:chargelaw}
 \oint_S \vec{J}_f\cdot d\vec{A}=-\frac{d}{dt}\int_V \rho_{cf}d\vec{V}
 \end{equation}
@@ -121,8 +121,8 @@ $\vec{B}$场在两种介质中的法向分量连续性都可以保持。
 \vec{B}=\mu_0(\vec{H}+\vec{M})
 \end{equation}
 
-在同质、各向同性、线性介质（本书通常以此设定为前提）中，$\vec{B}=\mu \vec{H}=\mu_0(1+\chi)\vec{H}$。式中的磁导率$\mu$和磁化系数$\chi$
-我们一般假定其与磁场无关。铁磁材料如“高$\mu$”屏蔽材料的$\chi$可高达$10^6$。典型的顺磁材料，例如氧，$\chi=10^{-6}$；抗磁材料如单原子气体、多数液体的
+在同质、各向同性、线性介质(本书通常以此设定为前提)中，$\vec{B}=\mu \vec{H}=\mu_0(1+\chi)\vec{H}$。式中的磁导率$\mu$和磁化系数$\chi$
+我们一般假定其与磁场无关。铁磁材料如"高$\mu$"屏蔽材料的$\chi$可高达$10^6$。典型的顺磁材料，例如氧，$\chi=10^{-6}$；抗磁材料如单原子气体、多数液体的
 磁化系数是负值。第I类超导体具有完全抗磁性，有$\chi=-1, \mu=0$。
 
 导体材料如金属中，电场$\vec{E}$会激发出电流密度$\vec{J}$，其关系为
@@ -142,7 +142,7 @@ $\vec{B}$场在两种介质中的法向分量连续性都可以保持。
 \nabla \cdot \vec{J}_f &=&-\frac{\partial{\rho_{cf}}}{\partial{t}}
 \end{eqnarray}
 
-如果电场$\vec{E}$和磁场$\vec{B}$能够解耦，将大大简化解方程组\ref{eqn:maxwelleqns}的难度。“准静态”分析可以满足很多重要的实际应用。
+如果电场$\vec{E}$和磁场$\vec{B}$能够解耦，将大大简化解方程组\ref{eqn:maxwelleqns}的难度。"准静态"分析可以满足很多重要的实际应用。
 最简单的做法就是先解静态方程，即$0^{th}$阶近似：
 \begin{subequations}\label{eqn:maxwelleqns 0th}
 	\begin{align}
@@ -261,10 +261,10 @@ Poynting定理可用下式表示：
 
 \subsubsection{特例}
 \begin{description}
-  \item[n=0] 最简单的情况。场量在空间上仅依赖于$1/r$。满足这个条件的示例包括线电荷（$\lambda=2\pi \epsilon_0$）产生的电场以及
-  线电流（$I=2\pi$）产生的磁场。这样，由$[\phi_0]_E=\ln r$可以得到$\vec{E}=\frac{\vec{i}_r}{r} $；由$[\phi_0]_H=\theta$可以得到$\vec{E}=\frac{\vec{i}_{\theta}}{r} $。
+  \item[n=0] 最简单的情况。场量在空间上仅依赖于$1/r$。满足这个条件的示例包括线电荷($\lambda=2\pi \epsilon_0$)产生的电场以及
+  线电流($I=2\pi$)产生的磁场。这样，由$[\phi_0]_E=\ln r$可以得到$\vec{E}=\frac{\vec{i}_r}{r} $；由$[\phi_0]_H=\theta$可以得到$\vec{E}=\frac{\vec{i}_{\theta}}{r} $。
   不难看出，场强在远离源时，以$1/r$衰减。
-\item[n=1] 电势$\phi_1=\sin \frac{\phi}{r}$ 和$\phi_{1^\prime}=\cos \theta/r$与二维电/磁偶电场/磁场相联系。注意到两种形式在原点处（r=0）都有奇点，故它们通常用于表示
+\item[n=1] 电势$\phi_1=\sin \frac{\phi}{r}$ 和$\phi_{1^\prime}=\cos \theta/r$与二维电/磁偶电场/磁场相联系。注意到两种形式在原点处(r=0)都有奇点，故它们通常用于表示
 不含原点的偶极子场。究竟是选$\sin$还是$\cos$，取决于坐标系中场的取向。
 此外，$\phi_1^\prime=r \sin \phi$和$\phi_{1^\prime}^\prime=r \cos \theta$与均匀矢量场有关。
  \item[n=2] 电势$\phi_2=\cos 2\theta/r^2$和$\phi_2^\prime= r^2 \cos 2\theta$与二维四极电场相联系。前者在原点有奇点，仅用于不含原点的空间；后者可用于
@@ -292,18 +292,18 @@ Poynting定理可用下式表示：
 \end{subequations}
 
 其中，$A_1, A_2, C, D_1, D_2$都是常数。$P_n^0(\cos \theta)$，或者其简写$P_n(\cos\theta)$，就是所为的Legendre函数。
-它在设计空间部分均匀的螺管磁体时很有用，设计阶段可以假定场关于z轴（$\theta=0$）对称。$P_n^m(\cos\theta)$，被称为
-伴随Legendre函数。它在最小化一个实际螺管磁体的设计“误差”时很有用。后面给出了一些有代表性的Legendre函数的表达式。
+它在设计空间部分均匀的螺管磁体时很有用，设计阶段可以假定场关于z轴($\theta=0$)对称。$P_n^m(\cos\theta)$，被称为
+伴随Legendre函数。它在最小化一个实际螺管磁体的设计"误差"时很有用。后面给出了一些有代表性的Legendre函数的表达式。
 
 \subsubsection{特例}
 \begin{description}
-  \item[n=0, m=0] 最简单的情况，$\phi_0\propto 1/r$。一个熟知的例子是点电荷（$4\pi\epsilon_0$）产生的电场$\vec{E}=1/r^2 \vec{i_r}$（$r>0$）。
+  \item[n=0, m=0] 最简单的情况，$\phi_0\propto 1/r$。一个熟知的例子是点电荷($4\pi\epsilon_0$)产生的电场$\vec{E}=1/r^2 \vec{i_r}$($r>0$)。
   \item[n=1, m=0] 有两个解，分别是$\phi_1 \propto \cos\theta /r^2$和$\phi_1^\prime\propto r\cos\theta$。前者表示球外的偶极场，该场由球面上的电荷产生；
   后者是球内的均匀场。磁矩的偶极场亦可由$\phi_1$导出。
 \end{description}
 
 \subsection{正交坐标系下的微分算符}
-下面将给出四个矢量微分算符——grad（$\nabla$）、div（$\nabla\cdot$）、curl（$\nabla\times$）、div grad（$\nabla^2$）——在正交坐标系下的表达式。
+下面将给出四个矢量微分算符---grad($\nabla$)、div($\nabla\cdot$)、curl($\nabla\times$)、div grad($\nabla^2$)---在正交坐标系下的表达式。
 \subsubsection{笛卡尔坐标}
 三个正交坐标是：$x, y, z$
 \begin{subequations}\label{eqn:field cart}
@@ -343,13 +343,13 @@ Poynting定理可用下式表示：
 \end{subequations}
 
 \subsection{Legendre函数}
-方程2.33c中的$P_n^m(\cos\theta)$在$m=0$时被称为n阶Legendre函数，即$P_n^0(\cos\theta)\equiv P_n(\cos\theta)\equiv P_n(u)$（此处
-令$u=\cos\theta$）。在$1\le m \le n$时，被称为伴随Legendre函数。$P_n^m(\cos\theta)\equiv P_n^m(u)$满足下面的微分方程：
+方程2.33c中的$P_n^m(\cos\theta)$在$m=0$时被称为n阶Legendre函数，即$P_n^0(\cos\theta)\equiv P_n(\cos\theta)\equiv P_n(u)$(此处
+令$u=\cos\theta$)。在$1\le m \le n$时，被称为伴随Legendre函数。$P_n^m(\cos\theta)\equiv P_n^m(u)$满足下面的微分方程：
 \begin{equation}\label{eqn:legendre diff}
   \frac{d}{du}[(1-u^2)\frac{dv}{du}]+[n(n+1)-\frac{m^2}{1-u^2}]v=0
 \end{equation}
 
-如前所述，$P_n(u)$在解具有一定相对对称性的磁场（比如理想螺管）时特别有用。$P_n^m(u)$则在实际螺管（不完全、缺少旋转对称性）分析中十分有用。
+如前所述，$P_n(u)$在解具有一定相对对称性的磁场(比如理想螺管)时特别有用。$P_n^m(u)$则在实际螺管(不完全、缺少旋转对称性)分析中十分有用。
 \begin{subequations}\label{eqn:legendre function1}
 	\begin{align}
 P_n(u)=&\left(\frac{1}{2^n n!}\right)\frac{d^n(u^2-1)^n}{du^n} \\
@@ -394,7 +394,7 @@ a) 证明磁性球内($B_2$)、外($B_1$)的磁感应强度分别为：
 
 b)在头脑中画出$\mu=0.1\mu_0, \mu=100\mu_0$时$\vec{B}$的场分布，然后和图2.2对照。
 
-\begin{figure}
+\begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.8]{chpt2/figs/fig2.1.eps}
   \caption{均匀场中的磁性球}
@@ -407,7 +407,7 @@ $$\vec{H}=-\nabla \phi \eqno (S1.1)$$
 对线性、各向同性介质，磁场和磁感应强度的关系为
 $$\vec{B}=\mu \vec{H} \eqno (S1.2)$$
 
-问题可以分为两个区域：区域1（$r\ge R$）和区域2（$r\le R$）。因为在$r=\infty$时，$H_\infty=H_0$，
+问题可以分为两个区域：区域1($r\ge R$)和区域2($r\le R$)。因为在$r=\infty$时，$H_\infty=H_0$，
 在$r=0$时，$H\neq \pm \infty$，每个区域的标量势可选为：
 	\begin{align}
 \phi_1&=H_0 r\cos\theta+\frac{A}{r^2}\cos\theta \tag{S1.3a}\\
@@ -423,10 +423,10 @@ $$\vec{B}=\mu \vec{H} \eqno (S1.2)$$
 
 \textbf{边界条件}
 
-1）在$r=R$处，$\vec{H}$的切向分量连续，故无表面电流。这等价于在$r=R$时，有$\phi_1=\phi_2$：
+1)在$r=R$处，$\vec{H}$的切向分量连续，故无表面电流。这等价于在$r=R$时，有$\phi_1=\phi_2$：
 $$H_0 + \frac{A}{R^3} = C \eqno (S1.5)$$
 
-2）在$r=R$处，$\vec{B}$的法向连续：
+2)在$r=R$处，$\vec{B}$的法向连续：
 $$\mu_0\left(-H_0 + 2\frac{A}{R^3} \right)= -\mu C \eqno (S1.6)$$
 
 从S1.5和S1.6式，解出A和C两个常数：
@@ -452,8 +452,8 @@ $$A=(C-H_0)R^3=H_0\left(\frac{\mu_0-\mu}{2\mu_0+\mu}\right)R^3 \eqno (S1.8)$$
 \vec{B}_2&=0 \tag{S1.9b}
   	\end{align}
 
-这个球像第I类超导体。球内不允许有磁通密度存在（Meissner效应）。问题2.2将会讨论到，$\vec{H}$在
-$r=R$处的$\theta$分量不连续将要求存在表面电流（被限制在一个薄层内）。因为这个电流一旦建立起来，
+这个球像第I类超导体。球内不允许有磁通密度存在(Meissner效应)。问题2.2将会讨论到，$\vec{H}$在
+$r=R$处的$\theta$分量不连续将要求存在表面电流(被限制在一个薄层内)。因为这个电流一旦建立起来，
 会一直流下去，这就表明了球对电流是无电阻的。如第一章所言的，存在Meissner效应的材料必须同时是理想导体：
 那这种材料其实就是超导体。
 
@@ -463,7 +463,7 @@ $r=R$处的$\theta$分量不连续将要求存在表面电流（被限制在一�
 
 \textbf{特例3：$\mu/\mu_0=\infty$}
 
-这时表示的是一个理想铁磁材料。软铁的性质与此接近。磁场被“吸”如球内，代入2.41中，有
+这时表示的是一个理想铁磁材料。软铁的性质与此接近。磁场被"吸"如球内，代入2.41中，有
 	\begin{align}
 \vec{B}_1&= \mu_0 H_0(−\cos\theta\vec{i_r} + \sin\theta\vec{i_\theta}) -
 \mu_0 H_0\left(\frac{R}{r}\right)^3 (2 \cos\theta\vec{i_r} + \sin\theta\vec{i_\theta})\tag{S1.10a}\\
@@ -501,7 +501,7 @@ b) 证明在穿透深度$\lambda\ll R$内的电流密度$K_f [\mathrm{A/m}]$的�
   \vec{K}_f=2H_0 \sin\theta\vec{i_z}
 \end{equation}
 
-c)将表面电流密度幅值转换为（体）电流密度$J_f [\mathrm{A/m^2}]$。证明用London超导理论导出的电流密度值和这个值是一致的。
+c)将表面电流密度幅值转换为(体)电流密度$J_f [\mathrm{A/m^2}]$。证明用London超导理论导出的电流密度值和这个值是一致的。
 
 \begin{figure}[htbp]
 	\centering
@@ -541,7 +541,7 @@ A=R^2 H_0 \tag{S2.6}
 \vec{H}_1=H_0(-\cos \theta \vec{i}_r+\sin \theta \vec{i}_\theta) +H_0 \left(\frac{R}{r}\right)^2(\cos\theta \vec{i}_r+\sin\theta \vec{i}_\theta ) \tag{2.42}
 \end{equation*}
 
-注意到，在$r=R,\theta=90^\circ$时，$|\vec{H}_1|=2H_0$；也即此处的幅值是远场的两倍。物理上看，圆棒处于正常态时场本是在其内部的，进入超导态后，场被“推”出，挤压在$\theta=90^\circ$附近。
+注意到，在$r=R,\theta=90^\circ$时，$|\vec{H}_1|=2H_0$；也即此处的幅值是远场的两倍。物理上看，圆棒处于正常态时场本是在其内部的，进入超导态后，场被"推"出，挤压在$\theta=90^\circ$附近。
 
 
 b) 因为$2H_0\sin \theta$中的$\vec{H}$在$r=R$处的切向分量不连续，所以肯定存在表面电流密度$\vec{K}_f$流过超导棒。我们有：
@@ -550,7 +550,7 @@ b) 因为$2H_0\sin \theta$中的$\vec{H}$在$r=R$处的切向分量不连续，�
   \vec{K}_f=\vec{i}_r \times 2H_0\sin\theta \vec{i}_\theta=2H_0\sin\theta\vec{i}_z\tag{2.43}
 \end{equation*}
 
-这个正弦电流分布式高能物理设施中被称为“核粒子加速器”内所用的大多数双极磁体的基础。
+这个正弦电流分布式高能物理设施中被称为"核粒子加速器"内所用的大多数双极磁体的基础。
 
 
 c) 根据超导电性的London理论，第I类超导体的超导电流密度$J_s$由$J_s=en_{se}v$给出。其中，$e$是电荷量($e=1.6\times 10^{-19}\ \mathrm{C}$)，$n_{se}$是超导电子的密度，$v$是超导电子的漂移速度。
@@ -592,10 +592,10 @@ J_f=\frac{2H_0}{\lambda}=\frac{2\mu_0 H_0}{\mu_0 \lambda}\simeq 4\times 10^{12} 
 
 
 \subsection{讨论2.1：均匀场中的理想导体球}
-本题我们推导理想导体（$\rho=0$）球置于磁场中的定量磁场表达。特别是针对图 1.1c中的$C\Rightarrow D$转变过程。
-点C处，包括球内的整个空间处于均匀外场中（问题1，eq. 2.40）。外施场合问题1中的图 2.1相同。
+本题我们推导理想导体($\rho=0$)球置于磁场中的定量磁场表达。特别是针对图 1.1c中的$C\Rightarrow D$转变过程。
+点C处，包括球内的整个空间处于均匀外场中(问题1，eq. 2.40)。外施场合问题1中的图 2.1相同。
 
-当均匀外场降至$0$（图1.1c中的D点），由于球内的磁感应无法改变，其磁场$\vec{H_2}$必保持不变。远离球中心（$r\rightarrow \infty$）处的外场$\vec{H_1}$为0。靠近球处的磁场可由标量势$\phi_1=(A/r^2)\cos\theta$导出。
+当均匀外场降至$0$(图1.1c中的D点)，由于球内的磁感应无法改变，其磁场$\vec{H_2}$必保持不变。远离球中心($r\rightarrow \infty$)处的外场$\vec{H_1}$为0。靠近球处的磁场可由标量势$\phi_1=(A/r^2)\cos\theta$导出。
 在$\phi_1$上应用$\nabla$算符，可得到球坐标下的偶极场。
 \begin{subequations}
 	\begin{align}
@@ -622,14 +622,14 @@ $$
   \vec{K}_f=\vec{i_r}\times \left[H_0 \sin\theta \vec{i_\theta}-(-\frac{1}{2}H_0 \sin\theta \vec{i_\theta})\right]=\frac{3}{2}H_0\sin\theta\vec{i_\theta}
 \end{equation}
 
-值得一提的是，这个$\sin\theta$分布，可以用一个绕在球上的在$z$轴均匀匝密度的“薄”线圈来近似。
+值得一提的是，这个$\sin\theta$分布，可以用一个绕在球上的在$z$轴均匀匝密度的"薄"线圈来近似。
 
 
 
 
 \subsection{问题2.3：球壳的磁屏蔽}
 本问题处理被动磁屏蔽。在MRI、磁悬浮等一些人和磁场敏感设备必须暴露于磁场外缘的高场系统中磁屏蔽是非常重要的课题。
-美国食药局（FDA）规定，MRI中的最大外缘磁场为5高斯($0.5\ \mathrm{mT}$)。
+美国食药局(FDA)规定，MRI中的最大外缘磁场为5高斯($0.5\ \mathrm{mT}$)。
 
 在空间中的球星区域，屏蔽一个均匀磁场$\vec{H}_\infty$：
 \begin{equation*}
@@ -648,9 +648,9 @@ b)证明，在极限情况$\mu/\mu_0\gg 1$和$d/R\ll 1$下，$H_{ss}/H_0$可约�
 \frac{H_{ss}}{H_0}\simeq \frac{3}{2}(\frac{\mu_0}{\mu})(\frac{R}{d})
 \end{equation}
 
-c)用微扰法得到上式。首先，在$\mu=\infty$条件下解出壳上（$R-d\le r\le R$）的磁场。接着，用微扰法在$\mu/\mu_0 \gg 1$条件下得到上式。
+c)用微扰法得到上式。首先，在$\mu=\infty$条件下解出壳上($R-d\le r\le R$)的磁场。接着，用微扰法在$\mu/\mu_0 \gg 1$条件下得到上式。
 
-d)实践中，屏蔽材料中的磁通必须控制在材料的饱和磁通（$\mu_0 M_{sa}$）之下。证明，可保持壳不饱和的$d/R$表达式为
+d)实践中，屏蔽材料中的磁通必须控制在材料的饱和磁通($\mu_0 M_{sa}$)之下。证明，可保持壳不饱和的$d/R$表达式为
 \begin{equation}
 \frac{d}{R} \ge \frac{3H_0}{2M_{sa}}
 \end{equation}
@@ -744,7 +744,7 @@ c)我们假设$\mu$为无限大。这要求B线在$r=R$处垂直于球壳。这�
 	\caption{通过球壳$\pm \theta$边界内区域进入壳的磁通。}
 \end{figure}
 
-B线局限在壳内，不会“逸”至区域3。也即，壳内的B仅有$\vec{i}_\theta$分量。应用磁通连续性($\nabla \cdot \vec{B}=0$)并在$\mu=\infty$条件下解$B_2$。解出$B_2$
+B线局限在壳内，不会"逸"至区域3。也即，壳内的B仅有$\vec{i}_\theta$分量。应用磁通连续性($\nabla \cdot \vec{B}=0$)并在$\mu=\infty$条件下解$B_2$。解出$B_2$
 后，可以得到$\mu \neq \infty$但$\mu/\mu_0 \gg 1$时$\vec{H}_3$的近似表达式。
 
 首先，计算通过表面区域$\pm \theta$边界内进入壳的总磁通(图2.5)。根据图中的微元积分
@@ -829,7 +829,7 @@ $\mu_0 M_{sa} $                     & \multicolumn{2}{c|}{2.13[T]}             &
 
 e) $\mu/\mu_0=100$磁性球壳置于均匀场中的磁场分布如图2.6所示。
 
-\begin{figure}
+\begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.7]{chpt2/figs/fig2.6.eps}
   \caption{$\mu/\mu_0=100$磁性球壳置于均匀场中的磁场分布。注意到进出球壳的磁场线是近乎垂直于壳的。}
@@ -962,7 +962,7 @@ H_{m_A z}=\frac{\vec{m_A}}{r^3}(\cos^2\theta-\frac{1}{2}\sin^2\theta) \tag{S5.1}
 我们注意到，对阴影区中基线之上的磁矩均有$\theta_{tp}>54^\circ 44^\prime$。由于随$\theta$值的增加，$\cos\theta$递减而$\sin\theta$递增，
 在$\theta_{tp}>54^\circ 44^\prime$时，$H_{m_A z}$为负。以$\theta_{tp}=54^\circ 44^\prime$倒角磁极可以消除这种负的贡献，最大化中心场。
 
-值得一提的是，NMR质谱仪中的“神奇角”(magic angle)也是$54^\circ 44^\prime$。通常，NMR样品以这个“神奇角”与主轴场取向放置以减少各向异性的作用。
+值得一提的是，NMR质谱仪中的"神奇角"(magic angle)也是$54^\circ 44^\prime$。通常，NMR样品以这个"神奇角"与主轴场取向放置以减少各向异性的作用。
 
 \begin{figure}[htbp]
   \centering
@@ -975,9 +975,9 @@ H_{m_A z}=\frac{\vec{m_A}}{r^3}(\cos^2\theta-\frac{1}{2}\sin^2\theta) \tag{S5.1}
 
 \subsection{讨论2.3：永磁体}
 永磁磁体是日常生活中大量设备如汽车、电视、电脑、手机、冰箱等的关键部件。实际上，如果没有永磁体，今日的现代生活将难以存续。
-在低场（$<1$）T的MRI中，永磁体是超导体的竞争对手。由于永磁磁体既无需制冷也很便宜，永磁MRI很受欢迎。
+在低场($<1$)T的MRI中，永磁体是超导体的竞争对手。由于永磁磁体既无需制冷也很便宜，永磁MRI很受欢迎。
 
-表2.6给出了90年（1910s-1990s）间永磁体和超导体的发展。永磁体性能以最大磁能$BH|_{mx}$表示，而超导体以最高临界温度$T_c|_{mx}$表示。
+表2.6给出了90年(1910s-1990s)间永磁体和超导体的发展。永磁体性能以最大磁能$BH|_{mx}$表示，而超导体以最高临界温度$T_c|_{mx}$表示。
 这期间，$BH|_{mx}$提高了约30倍，$T_c|_{mx}$提高了约20倍。
 
 永磁体照这个步调发展下去，在不久的将来，永磁体MRI将能达到$\sim 1\ $T。
@@ -1016,7 +1016,7 @@ a)忽略$\delta/R$阶项。证明：跨窄缝短边的一阶复电压幅值为�
 V_{1|0}\equiv V_{1|\theta=0}=-j\omega \pi R^2 \mu_0 H_0
 \end{equation}
 
-b)一个电阻率为$\rho[\Omega\cdot m]$的正常金属板置于窄缝将圆柱开缝恰好连接起来。推导通过该板的一阶复电流密度（轴向单位长度）$J_1 [\mathrm{A/m}]$的表达式。
+b)一个电阻率为$\rho[\Omega\cdot m]$的正常金属板置于窄缝将圆柱开缝恰好连接起来。推导通过该板的一阶复电流密度(轴向单位长度)$J_1 [\mathrm{A/m}]$的表达式。
 假定：驱动频率($\omega/2\pi$)足够小，磁场仍保持原准静态形式；电流在板截面上均匀流过。
 
 c)在无金属板存在(或$\rho_s=\infty$)条件下，在圆柱腔内画出6条一阶复电场矢量($\vec{E}_1$)线，指明电场的重要特征。
@@ -1059,7 +1059,7 @@ V_1 |_{\theta=-\pi/2}^{\theta=+\pi/2}=-\frac{1}{2}j\omega \pi R^2 \mu_0 H_0   \t
 
 \begin{figure}[htbp]
   \centering
- \includegraphics[scale=0.3]{chpt2/figs/fig2.10.eps}
+ \includegraphics[scale=0.4]{chpt2/figs/fig2.10.eps}
   \caption{$\vec{E}_1$线垂直于理想导体圆柱。注意到，从$x=R$到$x=-R$，$|E_1|$是减小的。}
 \end{figure}
 
@@ -1072,7 +1072,7 @@ V_1 |_{\theta=-\pi/2}^{\theta=+\pi/2}=-\frac{1}{2}j\omega \pi R^2 \mu_0 H_0   \t
 感应加热在电炉中广泛使用，用以在导体材料内获得高温。有时，也用来作为研究超导线圈热行为的研究工具。
 在超导磁体技术研究中，感应加热最常以脉冲场形式在其他超导线圈中产生小的正常区域，模拟暂态扰动。
 
-图2.11给出一个“长”金属圆柱壳，其电导率为$\rho_e$，外径为$2R$，厚度$d\ll R$，置于正弦时变磁场中。磁场的0阶分量在z向均匀。即
+图2.11给出一个"长"金属圆柱壳，其电导率为$\rho_e$，外径为$2R$，厚度$d\ll R$，置于正弦时变磁场中。磁场的0阶分量在z向均匀。即
 \begin{equation*}
 \vec{\mathcal{H}}_\infty(t)=Re[H_0 e^{j\omega t}] \vec{i}_z \tag{2.54}
 \end{equation*}
@@ -1083,7 +1083,7 @@ V_1 |_{\theta=-\pi/2}^{\theta=+\pi/2}=-\frac{1}{2}j\omega \pi R^2 \mu_0 H_0   \t
 
 \begin{figure}[htbp]
   \centering
- \includegraphics[scale=0.3]{chpt2/figs/fig2.11.eps}
+ \includegraphics[scale=0.4]{chpt2/figs/fig2.11.eps}
   \caption{圆柱金属壳置于均匀正弦时变磁场之中。}
 \end{figure}
 
@@ -1103,7 +1103,7 @@ b)证明：在$r\le R-d$区域，一阶磁场$\vec{H}_1$可以表示为
 \vec{H}_1=-\frac{j\omega \mu_0 R d H_0}{2\rho_e}\vec{i}_z
 \end{equation} 
 
-c)上面三式，在准静态近似条件下得出，仅在“低”频下成立，或者说仅在频率远小于“趋肤深度”频率$f_{sk}$下成立。证明：
+c)上面三式，在准静态近似条件下得出，仅在"低"频下成立，或者说仅在频率远小于"趋肤深度"频率$f_{sk}$下成立。证明：
 \begin{equation}
 f_{sk}=\frac{\rho_e}{\pi \mu_0 R d}
 \end{equation}
@@ -1210,7 +1210,7 @@ $\vec{J}$和$\vec{H}_R$通过$\nabla\times \vec{H}=\vec{J}$相联系，又$\vec{
 \textbf{方法一}
 
 e)我们可以直接计算$<p>=\vec{E}\cdot \vec{J}^* /2=\rho_e |J|^2 /2$而得到圆柱壳的电阻功率损耗。式中的$\vec{J}$已在前文求出。
-证明：在$d\ll R$条件下，壳内的时均总损耗（单位长度）的表达式为
+证明：在$d\ll R$条件下，壳内的时均总损耗(单位长度)的表达式为
 \begin{equation}
 <P>=2\pi R d<p>=\frac{\pi \rho_e \omega^2 \mu_0^2 R^3 d}{4\rho_e^2+\omega^2\mu_)^2 R^2 d^2} |H_0|^2
 \end{equation}
@@ -1219,7 +1219,7 @@ e)我们可以直接计算$<p>=\vec{E}\cdot \vec{J}^* /2=\rho_e |J|^2 /2$而得�
 
 相同的施于圆柱的复功率也可以视为从$r>R$处的源在$r=R$处进入圆柱内的Poynting能流。
 
-f)证明：在$r=R$处，进入圆柱的一阶复Poynting矢量$\vec{S}_1$的面积分（单位长度）为：
+f)证明：在$r=R$处，进入圆柱的一阶复Poynting矢量$\vec{S}_1$的面积分(单位长度)为：
 \begin{equation}
 -\oint_{\mathcal{S}}\vec{S}_1 \cdot d\mathcal{A}=\frac{1}{2}(2\pi P)E_{1\theta} H_)^*=\frac{j\pi\rho_e\omega\mu_0 R^2}{2\rho_e+j\omega\mu_0 R d}|H_0|^2
 \end{equation}
@@ -1245,7 +1245,7 @@ e)正弦情况下，时均能耗(单位长度)功率可以表示为$<p>=\vec{E}\
 <p>=\rho_e |J|^2 /2=\frac{\rho_e}{2}(\frac{\omega^2 \mu_0^2 R^2}{4\rho_e^2+\omega^2 \mu_0^2 R^2 d^2})|H_0|^2 \tag{S7.9}
 \end{equation*}
 
-于是，壳内总的能耗（单位长度）可以能耗功率乘以截面积得到
+于是，壳内总的能耗(单位长度)可以能耗功率乘以截面积得到
 \begin{equation*}
 <P>=2\pi R d<P>=\frac{\pi \rho_e \omega^2 \mu_0^2 R^3 d}{4\rho_e^2+\omega^2 \mu_0^2 R^2 d^2}|H_0|^2 \tag{2.63}
 \end{equation*}
@@ -1304,7 +1304,7 @@ f_{sk}=\frac{\rho_{e_c}}{\pi\mu_0 R d}\simeq 10Hz \tag{2.59}
 
 \begin{figure}[htbp]
   \centering
- \includegraphics[scale=0.3]{chpt2/figs/fig2.12.eps}
+ \includegraphics[scale=0.4]{chpt2/figs/fig2.12.eps}
   \caption{感应加热圆柱壳的功率耗散和电阻率的关系。}
 \end{figure}
 
@@ -1321,7 +1321,7 @@ a)证明一阶电场$\vec{E}_1$为
 E_{1x}=y\dot{B_0}
 \end{equation}
 
-b)证明空间平均能耗密度$\tilde{p}$（单位体积）为：
+b)证明空间平均能耗密度$\tilde{p}$(单位体积)为：
 \begin{equation}
 \tilde{p}=\frac{(b\dot{B_0})^2}{12\rho_e}
 \end{equation}
@@ -1433,7 +1433,7 @@ b)因为$H_\phi (t)$在每一个环上并非常数，每一匝包围的总磁通
 =&\frac{\mu_0 I(t)}{\pi}\int_{-c}^{c}\frac{\sqrt{c^2-y^2}}{R+y}dy\nonumber\tag{S9.3}
 \end{align}
 
-上式可以使用新变量$\xi\equiv R+y$得到闭式解（注意：$d\xi=dy$）。于是，有：
+上式可以使用新变量$\xi\equiv R+y$得到闭式解(注意：$d\xi=dy$)。于是，有：
 \begin{align}
 \Phi_1 (t)=&\frac{\mu_0 I(t)}{\pi} \int_{R-c}^{R+c}\frac{\sqrt{c^2-R^2+2R\xi-\xi^2}}{\xi}d\xi\nonumber\\
 =&\mu_0(R-\sqrt{R^2-c^2})I(t)\nonumber\tag{S9.4}
@@ -1457,7 +1457,7 @@ c)上式可以写为：
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.3]{chpt2/figs/fig2.15.eps}
+	\includegraphics[scale=0.4]{chpt2/figs/fig2.15.eps}
 	\caption{$(x,y)$面上的横截面视图。}
 \end{figure}
 
@@ -1500,5 +1500,5 @@ $$\int V(t)dt=\frac{\mu_0 N c^2 \Delta I}{2R}\simeq 41\ \mathrm{mVs}$$
 在一个噪音环境中，比如典型的试验聚变机器中，测到$40\ \mathrm{mVs}$级别的信号水平并不简单，但也不是完全得不到。
 
 \begin{quotation}
-\kaishu 正如我们所知，有已知的已知，他们是我们知道我们知道的；我们也知道有些是已知的未知。这就是说我们知道有些事情我们是不知道的。但是还有未知的未知——这些事我们不知道我们不知道。——Donald Rumsfeld，2002
+\kaishu 正如我们所知，有已知的已知，他们是我们知道我们知道的；我们也知道有些是已知的未知。这就是说我们知道有些事情我们是不知道的。但是还有未知的未知---这些事我们不知道我们不知道。---Donald Rumsfeld，2002
 \end{quotation}
