@@ -379,96 +379,122 @@ GANDALF和THEA都是商业软件。GANDALF最初是用来分析ITER导体的热-
 \mbox{正常态：} C_n(T)&= bT^3+\gamma T	
 	\end{align}
 \end{subequations}
-
 式中，$a,b,\gamma$都是常数。
 
-a)证明零场时的转变温度为：
+a) 证明零场时的临界温度为：
 \begin{equation}\label{eqn:1.5}
   T_c=\sqrt{\frac{3\gamma}{a-b}}
 \end{equation}
+提示：1) 熵的表达式$C(T)=T\frac{\partial S(T)}{\partial T}$；2) $H=0$时，有$S_n(T_c)-S_s(T_c)=0$。
 
-可采取下列步骤：1)熵的表达式$C(T)=T\partial S(T)/\partial T$；2)注意到$H=0$时，有$S_n(T_c)-S_s(T_c)=0$。
-
-b)证明$H_{c0}$在$T=0K, H_{c0}\equiv H_c(0)$时，由下式给出：
+b) 证明$H_{c0}$在$T$=0 K，$H_{c0}\equiv H_c(0)$时，可由下式给出：
 \begin{equation}\label{eqn:1.6}
   H_{c0}=T_c \sqrt{\frac{\gamma}{2\mu_0}}
 \end{equation}
 
 证明临界磁场$H_c(T)$是$T$的二次函数：
 \begin{equation}\label{eqn:1.7}
-  H_c(T)=H_{c0}\left[1-(\frac{T}{T_c})^2\right]
+  H_c(T)=H_{c0}\left[1-\left(\frac{T}{T_c}\right)^2\right]
 \end{equation}
-
-注意到零场时单位体积的吉布斯自由能关系：
+提示：零场时单位体积的吉布斯自由能关系为：
 \begin{equation}\label{eqn:1.8}
   G_n(T)-G_s(T)=\frac{1}{2}\mu_0 H_c^2(T)
 \end{equation}
+根据1.8式以及$S(T)=-\partial G(T)/\partial T$，可以推导出1.6式。
 
-根据方程1.8以及$S(T)=-\partial G(T)/\partial T$，可以推导出方程1.6。
-
-c)证明内能密度差$U_n-U_s$在自场下于$T_{ux}$时取最大：
+c) 证明内能密度差$U_n-U_s$在自场下于$T_{ux}$时取最大：
 \begin{equation}
   T_{ux}=\frac{T_c}{\sqrt{3}}
 \end{equation}
+提示：在零场时有$U(T)=\int C(T)dT$。
 
-注意到，在零场时有：$U(T)=\int C(T)dT$
-
-d)缓慢绝热施加磁场(初始温度为$T_i$，$0<T_i<T_c$)，磁场加至略大于临界值，此时相变至正常态，降低导体温度到$T_j (<T_i)$。给出$T_i$和$T_j$的关系，并
+d) 缓慢绝热地向超导磁体施加磁场(初始温度为$T_i$，$0<T_i<T_c$)至略大于其临界值，
+此时超导体相变为正常态。降低导体温度到$T_j (<T_i)$，给出$T_i$和$T_j$的关系，并
 画出本过程的热力学相图。
 
-e)对于同一个初始温度为$T_i$($0<T_i<T_c$)的超导体，位于零场中突然施加$H_e$，如果$H_e$超过临界值$H_{ec}$，材料将被加热，证明
+e) 同样对d)中的超导体，初始温度为$T_i$($0<T_i<T_c$)，置于零场中，突然施加$H_e$。
+如果$H_e$超过临界值$H_{ec}$，材料将被加热。证明
 \begin{equation}
   H_{ec}(T_i)=H_c(T _i)\sqrt{\frac{1+3(T_i/T_c)^2}{1-(T_i/T_c)^2}}
 \end{equation}
 
 \subsubsection{问题1.1之解答}
-a) 由于$C(T)=TdS(T)/dT $以及$S(T = 0)=0$，我们有
- $$S(T) =\int_{0}^{T}C(T)dT \eqno (S1.1) $$
+a) 由于$C(T)=T\frac{\partial S(T)}{\partial T}$以及$S(T=0)=0$，我们有
+\begin{align*}
+S(T) =\int_{0}^{T}C(T)dT \tag{S1.1} 
+\end{align*} 
 
-将\ref{eqn:1.4ab}代入上式，有：
-$$S_s(T) =\int_{0}^{T}\frac{C_s(T)}{T}dT=\frac{1}{3}aT^3 \eqno (S1.2a)$$
-$$S_n(T) =\int_{0}^{T}\frac{C_n(T)}{T}dT = \frac{1}{3}bT^3 + \gamma T \eqno (S1.2b)$$
+将1.4式代入，有：
+\begin{align*}
+S_s(T) =\int_{0}^{T}\frac{C_s(T)}{T}dT=\frac{1}{3}aT^3 \tag{S1.2a}
+\end{align*} 
+\begin{align*}
+S_n(T) =\int_{0}^{T}\frac{C_n(T)}{T}dT = \frac{1}{3}bT^3 + \gamma T \tag{S1.2b}
+\end{align*} 
 
 于是，
-$$S_n(T) − S_s(T) =\gamma T − \frac{1}{3} (a − b)T^3 \eqno (S1.3)$$
+\begin{align*}
+S_n(T) − S_s(T) =\gamma T − \frac{1}{3} (a − b)T^3\tag{S1.3}
+\end{align*} 
 
-由于上面已经指出，在$H=0$时，有$S_n(T_c)−S_s(T_c)=0$，所以，
-$$\gamma= \frac{1}{3} (a − b)T^2 \eqno (S1.4)$$
+上文已指出，在$H=0$时，有$S_n(T_c)−S_s(T_c)=0$，所以
+\begin{align*}
+\gamma= \frac{1}{3} (a − b)T^2 \tag{S1.4}
+\end{align*}
 
 解出$T_c$，有
-$$T_c=\sqrt{\frac{3\gamma}{a-b}}\eqno (1.5)$$
+\begin{align*}
+T_c=\sqrt{\frac{3\gamma}{a-b}} \tag{1.5}
+\end{align*}
 
-b) 从式\ref{eqn:1.8}以及$S(T)=−\partial G(T)/\partial T$，我们有
-$$S_n(T) − S_s(T) = −\mu_0 H_c(T)\frac{\partial H_c(T)}{\partial T} \eqno (S1.5)$$
+b) 从式1.8以及$S(T)=−\partial G(T)/\partial T$，有
+\begin{align*}
+S_n(T) − S_s(T) = −\mu_0 H_c(T)\frac{\partial H_c(T)}{\partial T}\tag{S1.5}
+\end{align*}
 
-联立S1.3和S1.4，重写$(a-b)/3=\gamma/T_c^2$，我们有
-$$S_n(T) − S_s(T)=\gamma T\left[1-\left(\frac{T}{T_c}\right)^2\right] \eqno (S1.6)$$
+联立S1.3和S1.4，并利用$(a-b)/3=\gamma/T_c^2$，有
+\begin{align*}
+S_n(T) − S_s(T)=\gamma T\left[1-\left(\frac{T}{T_c}\right)^2\right]  \tag{S1.6}
+\end{align*}
 
-联立上面粮食，对T积分，有
-$$−\frac{1}{2}\mu_0 H_c^2(T) =\frac{1}{2}\gamma T_c^2-
-\frac{1}{4}\gamma T_c^2 \left(\frac{T}{T_c}\right)^4+A \eqno (S1.7)$$
-
-式中，A是常数。由于$H_c(T =0)\equiv H_{c_0}$，我们有$A=−\mu_0 H_{c_0}^2 / 2$。在
+联立上面两式，对$T$积分，有
+\begin{align*}
+−\frac{1}{2}\mu_0 H_c^2(T) =\frac{1}{2}\gamma T_c^2-
+\frac{1}{4}\gamma T_c^2 \left(\frac{T}{T_c}\right)^4+A \tag{S1.7}
+\end{align*}
+式中，$A$是常数。由于$H_c(T =0)\equiv H_{c_0}$，我们有$A=−\mu_0 H_{c_0}^2 / 2$。在
 $T=T_c$时，由于$H_c(T_c)=0$，上式成为
-$$0=\frac{1}{2}\gamma T_c^2-\frac{1}{4}\gamma T_c^2-\frac{1}{2}\mu_0 H_{c_0}^2 \eqno (S1.8)$$
+\begin{align*}
+0=\frac{1}{2}\gamma T_c^2-\frac{1}{4}\gamma T_c^2-\frac{1}{2}\mu_0 H_{c_0}^2\tag{S1.8}
+\end{align*}
 
 解出$H_{c_0}$，有
-$$H_{c_0}=T_c\sqrt{\frac{\gamma}{2\mu_0}}\eqno (1.6)$$
+\begin{align*}
+H_{c_0}=T_c\sqrt{\frac{\gamma}{2\mu_0}}\tag{1.6}
+\end{align*}
 
-从上式，我们可以得到
-$$\gamma=\frac{2\mu_0 H_{c_0}^2}{T_c^2} \eqno (S1.9)$$
+从上式，可以得到
+\begin{align*}
+\gamma=\frac{2\mu_0 H_{c_0}^2}{T_c^2}\tag{S1.9}
+\end{align*}
 
 联立S1.7和上式，得到
-$$-\frac{1}{2}\mu_0 H_c^2(T)=\mu_0 H_{c_0}^2 (\frac{T}{T_c})^2-\frac{1}{2}\mu_0 H_{c_0}^2 (\frac{T}{T_c})^4-\frac{1}{2}\mu_0 H_{c_0}^2  \eqno (S1.10)$$
+\begin{align*}
+-\frac{1}{2}\mu_0 H_c^2(T)=\mu_0 H_{c_0}^2 \left(\frac{T}{T_c}\right)^2-\frac{1}{2}\mu_0 H_{c_0}^2 \left(\frac{T}{T_c}\right)^4-\frac{1}{2}\mu_0 H_{c_0}^2\tag{S1.10}
+\end{align*}
 
 上式可以重写为：
-$$H_c^2(T)=H_{c_0}^2\left[1-2(\frac{T}{T_c})^2+(\frac{T}{T_c})^4\right]=H_{c_0}^2\left[1-(\frac{T}{T_c})^2\right]^2 \eqno (S1.11)$$
+\begin{align*}
+H_c^2(T)=H_{c_0}^2\left[1-2\left(\frac{T}{T_c}\right)^2+\left(\frac{T}{T_c}\right)^4\right]=H_{c_0}^2\left[1-\left(\frac{T}{T_c}\right)^2\right]^2\tag{S1.11}
+\end{align*}
 
-从上式，我们可以得到：
-$$H_c(T)=H_{c_0}\left[1-\frac{T}{T_c}\right]\eqno (1.7)$$
+从上式，可以得到：
+\begin{align*}
+H_c(T)=H_{c_0}\left[1-\left(\frac{T}{T_c}\right)^2 \right]\tag{1.7}
+\end{align*}
 
-由\ref{eqn:1.6}，我们可以根据第一类超导体实验测得的$\gamma$和$T_c$计算预测$H_{c_0}$。下表给出了通过公式
-计算和实测的$\mu_0 H_{c_0}$数据。同时还给出了一些其他实测数据。
+我们可以根据第I类超导体实验测得的$\gamma$和$T_c$通过1.6式预测$H_{c_0}$。
+下表给出了由公式计算的和实测的$\mu_0 H_{c_0}$数据；同时还给出了一些其他实测数据。
 %表1.5
 \begin{table}[htbp]\small
   \centering
@@ -494,7 +520,7 @@ c) 由零场时的$dU(T)=C(T)dT$，我们可以得到
 U(T) =\int_{0}^{T}C(T) dT  \tag{S1.12}
 \end{equation*}
 
-代入式\ref{eqn:1.4ab}，得到
+代入1.4式，得
 \begin{equation*}
 U_n(T) =\int_{0}^{T}(bT^3 +\gamma T)dT = \frac{1}{4}bT^4 +\frac{1}{2}\gamma T^2 \tag{S1.13a}
 \end{equation*}
@@ -520,12 +546,12 @@ U_n(T) − U_s(T) =&\frac{1}{4} (b − a)T^4 + \frac{1}{2}\gamma T^2\\
 \frac{4\gamma}{a-b}T_{ux}-4T_{ux}^3=0 \tag{S1.16}
 \end{equation*}
 
-利用\ref{eqn:1.5}，解出$T_{ux}$，可得
+结合1.5式，解出$T_{ux}$，得
 \begin{equation*}
 T_{ux}=\sqrt{\frac{\gamma}{a-b}}=\frac{T_c}{\sqrt{3}} \tag{1.9}
 \end{equation*}
 
-d) 由于这个过程是绝热和可逆的，那么如果场是缓慢施加的，有$S_n(T)=S_s(T)$。从S1.2可以得到
+d) 由于这个过程是绝热和可逆的，那么如果磁场是缓慢施加的，有$S_n(T)=S_s(T)$。从S1.2可以得到
 \begin{equation*}
 S_n(T_f ) − S_s(T_i) =\frac{1}{3}bT_f^3 +\gamma T_f −\frac{1}{3}aT_i^3 \tag{S1.17}
 \end{equation*}
@@ -544,19 +570,22 @@ b = a − \frac{3\gamma}{T_c^2} \tag{S1.19}
 $$\frac{1}{3}a(T_f^3-T_i^3)=-\gamma T_f\left[ 1-\left(\frac{T_f}{T_c}\right)^2\right] \eqno (S1.20)$$
 
 由于$T_f<T_c$，上式的右侧是负值，于是可知$T_f<T_i$。图1.7给出了超导态(实线)和正常态(虚线)
-的T-S图。$T_i\rightarrow T_f$转变在途中用竖实线表示。
+的T-S图。$T_i\rightarrow T_f$转变在图中用竖实线表示。
+
 \begin{figure}
   \centering
  \includegraphics[scale=0.7]{chpt1/figs/fig1.7.eps}
   \caption{超导态(实线)和正常态(虚线)的T-S图}\label{fig:tsplot}
 \end{figure}
 
-e) 超导体被加热，首先必须先进入正常态。外场需提供磁场能$\mu_0 H_c^2(T_i)/2$。由于转变过程要吸热
-$T_i[S_n(T-i)-S_s(T_i)]$，故还必须提供吸收能$H_{ec}$。图\ref{fig:tsplot}中的虚横线就是转变过程。于是，
-$$\frac{1}{2}\mu_0 H_{ec}^2(T_i)=\frac{1}{2}\mu_0 H_c^2(T_i)+T_i[S_n(T-i)-S_s(T_i)] \eqno (S.1.21)$$
+e) 超导体被加热，首先必须先进入正常态。外场提供磁能$\mu_0 H_c^2(T_i)/2$；由于转变过程要吸热
+$T_i[S_n(T-i)-S_s(T_i)]$，故还必须提供吸收能$H_{ec}$。图\ref{fig:tsplot}中的横虚线就是转变过程。于是，
+\begin{align*}
+\frac{1}{2}\mu_0 H_{ec}^2(T_i)=\frac{1}{2}\mu_0 H_c^2(T_i)+T_i[S_n(T_i)-S_s(T_i)]\tag{S1.21}
+\end{align*}
 
 上式和S1.1联立，得到
-$$\frac{1}{2}\mu_0 H_{ec}^2(T_i)=\frac{1}{2}\mu_0 H_c^2(T_i)+T_i[\frac{1}{3}(b-a)T_i^3+\gamma T_i] \eqno (S1.22)$$
+$$\frac{1}{2}\mu_0 H_{ec}^2(T_i)=\frac{1}{2}\mu_0 H_c^2(T_i)+T_i\left[\frac{1}{3}(b-a)T_i^3+\gamma T_i\right] \eqno (S1.22)$$
 
 把S1.9代入上式，并应用S1.19，得到
 $$\frac{1}{2}\mu_0 H_{ec}^2(T_i)=\frac{1}{2}\mu_0 H_c^2(T_i)+2\mu_0 H_{c_0}^2\left(\frac{T_i}{T_c}\right)^2 \left[1-\left(\frac{T_i}{T_c}\right)^2 \right]\eqno (S1.23)$$
