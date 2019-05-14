@@ -4155,6 +4155,8 @@ e) 两个磁体采用相同的模型，使用方程3.60来计算当HTS内插磁�
 
 \subsubsection{问题3.17之解}
 \begin{table}[]%表3.11
+	  \centering
+	\caption{沸腾传热参数}
 	\begin{tabular}{|l|l|l|}
 		\hline
 		$k^2$      & $K(k)$     &$ E(k)$     \\ \hline
@@ -4191,6 +4193,8 @@ F_z(0)=XXXXXX=-6.2\ \mathrm{kN}
 这个计算值相比程序值低估了28\%。
 
 \begin{table}[]%表3.12
+	  \centering
+	\caption{沸腾传热参数} 
 	\begin{tabular}{|l|l|l|}
 		\hline
 		$c^2$      &$ k$        &$ \prod(c^2,k)$        \\ \hline
@@ -4226,6 +4230,8 @@ $$F_z(0)=-7.4\ \mathrm{kN}$$
 相比于程序值，低估了15\%。
 
 \begin{table}[]%表3.13
+	  \centering
+	\caption{沸腾传热参数} 
 	\begin{tabular}{|l|l|l|}
 		\hline
 		$c^2$      &$k$  & $\prod(c^2,k)$        \\ \hline
@@ -4262,6 +4268,8 @@ F_{zA}(0)\simeq XXXXX =-43.3\ \mathrm{kN}
 没有一个条件满足。
 
 \begin{table}[]%表3.14
+	  \centering
+	\caption{沸腾传热参数} 
 	\begin{tabular}{llllll}
 		\hline
 		$k^2$ & $K(k)$&$E(k)$    & $k^2$       &$K(k)$     & $E(k)$     \\ \hline
@@ -4293,6 +4301,30 @@ F_{zR}(\rho)=&-\frac{\mu_{o}}{2}(\frac{N_{A}I_{A}}{2b_{A}})(\frac{N_{B}I_{B}}{2b
 \end{align*}
 
 \colorbox{red}{表3.15}
+\begin{table}[]%表3.15
+	  \centering
+	\caption{沸腾传热参数} 
+	\begin{tabular}{|l|l|l|}
+		\hline
+		$\frac{b_T-\rho}{\sqrt{a_{T}^{2}+(b_t-\rho)^2}}$ & $\frac{(0.5358\ \mathrm{m})}{\sqrt{(0.2425\ \mathrm{m})^2+(0.5358\ \mathrm{m})^2}}$ & 0.911035  \\  \hline	
+		$a_{T}^{2}+(b_T-\rho)^2$                         & $(0.2425\ \mathrm{m})^2+(0.5358\ \mathrm{m})^2$ & $0.345888\ \mathrm{m^2}$  \\  \hline
+		$K(k_{T-})-E(k_{T-})$           & 1.618355-1.525324 & 0.093031  \\  \hline
+		$(a_A-a_B)^2$   & $(0.0512\ \mathrm{m}-0.1913\ \mathrm{m})^2$ & $0.019628\ \mathrm{m^2}$  \\ \hline
+		$(a_A-a_B)^2[\prod(c^2,K_{T-})-K(k_{T-})]$   & $(0.019628\ \mathrm{m^2})(2.823887-1.618355)$ & $0.023662\ \mathrm{m^2}$  \\ \hline
+		$\frac{b_D+\rho}{\sqrt{a_{T}^{2}}+(b_D+\rho)^2}$   & $\frac{(-0.1292\ \mathrm{m})}{\sqrt{(0.2425\ \mathrm{m})^2+(-0.1292\ \mathrm{m})^2}}$ & -0.470210  \\ \hline
+		$a_{T}^{2}+(b_D\rho)^2$   & $(0.2425\ \mathrm{m})^2+(-0.1292\ \mathrm{m})^2$ & $0.075499\ \mathrm{m^2}$  \\ \hline
+		$K(k_{D+})-E(k_{D+})$   & 1.870449-1.341054 & 0.529395  \\ \hline
+		$(a_A-a_B)^2[\prod(c^2,K_{D+})-K(k_{D+})]$   & $(0.019628\ \mathrm{m^2})(3.400959-1.870449)$ & $0.030041\ \mathrm{m^2}$  \\ \hline	
+		$\frac{b_T-\rho}{\sqrt{a_{T}^{2}+(b_t+\rho)^2}}$   & $\frac{(0.5458\ \mathrm{m})}{\sqrt{(0.2425\ \mathrm{m})^2+(0.5458\ \mathrm{m})^2}}$ & 0.913860  \\ \hline
+		$a_{T}^{2}+(b_T+\rho)^2$   & $(0.2425\ \mathrm{m})^2+(0.5458\ \mathrm{m})^2$ & $0.356704\ \mathrm{m^2}$  \\ \hline
+		$K(k_{T+})-E(k_{T+})$   & 1.616815-1.526733 & 0.090082  \\ \hline
+		$(a_A-a_B)^2[\prod(c^2,K_{T+})-K(k_{T+})]$   & $(0.019628\ \mathrm{m^2})(2.820467-1.616815)$ & $0.023625\ \mathrm{m^2}$  \\ \hline
+		$\frac{b_D-\rho}{\sqrt{a_{T}^{2}+(b_D-\rho)^2}}$   & $\frac{(-0.1392\ \mathrm{m})}{\sqrt{(0.2425\ \mathrm{m})^2+(-0.1392\ \mathrm{m})^2}}$ & -0.497833  \\ \hline	
+		$a_{T}^{2}+(b_D-\rho)^2$ & $(0.2425\ \mathrm{m})^2+(-0.1392\ \mathrm{m})^2$ & $0.0.078183\ \mathrm{m^2}$ \\ \hline	
+		$K(k_{D-})-E(k_{D-})$   & 1.855016-1.350085 & 0.504931  \\ \hline	
+		$(a_A-a_B)^2[\prod(c^2,K_{D-})-K(k_{D-})]$   &  $(0.019628\ \mathrm{m^2})(3.364664-1.855016)$ & $0.029632\ \mathrm{m^2}$  \\ \hline
+	\end{tabular}
+\end{table}
 
 应用表3.15中的数值到方程3.60，我们计算：
 \begin{align*}
@@ -4581,8 +4613,17 @@ $\sim 100\ \mathrm{MPa}$；青铜和紫铜在冷却过程中都是塑性屈服�
 
 %%表3.16
 \colorbox{red}{表格3.16}
-
-
+\begin{table}[]%表3.16
+	  \centering
+	\caption{沸腾传热参数} 
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		Constintuent & $\epsilon_{0}^{*}[\%]$    & E{[}GPa{]} & $A^\dagger$    \\ \hline
+		bronze       & 1.66 & 100        & 0.24 \\ \hline
+		copper       & 1.62 & 100        & 0.62 \\ \hline
+		a            & 0.72 & 165        & 0.14 \\ \hline
+	\end{tabular}
+\end{table}
 
 
 \subsection{问题3.18：部分系统的自感}
