@@ -210,44 +210,42 @@ $p$是功率耗散密度，$w$是以电磁能存储的能量密度。
 
 \section{场的标量势解法}
 静电场因其旋度为零($\nabla \times \vec{E}=0$)，是保守场。故存在一个标量势，满足：
-\begin{equation}\label{eqn:scalar e field1}
-  \vec{E}=-grad\phi = -\nabla \phi
+\begin{equation}
+  \vec{E}=-\nabla \phi
 \end{equation}
-
 于是，$\nabla\cdot\vec{E}$可以写为：
-\begin{equation}\label{eqn:scalar e field2}
+\begin{equation}
   \nabla\cdot\vec{E}=-\nabla\cdot\nabla\phi=-\nabla^2\phi
 \end{equation}
-
-若无电荷密度存在，即$\rho_c=0$，方程\ref{eqn:gausslaw diff}可约化为：
-\begin{equation}\label{eqn:scalar e field3}
+若无电荷密度存在，即$\rho_c=0$，方程2.2可约化为：
+\begin{equation}
   \nabla\cdot\vec{E}=0
 \end{equation}
-
 进而，可以得到：
-\begin{equation}\label{eqn:scalar e field4}
+\begin{equation}
 \nabla^2\phi=0
 \end{equation}
 
-方程\ref{eqn:scalar e field4}即所谓的Laplace方程，给出了使用标量势求解矢量$\vec{E}$的方法。
+方程2.28即所谓的Laplace方程，它给出了使用标量势求解矢量$\vec{E}$的方法。
 
-类似的，在直流条件下，若无自由电流存在，则有$\nabla\times \vec{H}=0$，磁场$\vec{H}$也可以写成标量势Laplace方程，即$\vec{H}=-\nabla \phi$。
-在电磁领域之外，Laplace方程也有广泛的应用。
+类似的，在直流条件下，若无自由电流存在，因为$\nabla\times \vec{H}=0$，则磁场$\vec{H}$也可以由满足$\vec{H}=-\nabla \phi$的标量势方程导出。
+在电磁领域之外，Laplace方程在工程中还有其他用于求解时间无关变量的应用，比如：
+无源、各向同性传导介质中的温度($T$)；体积膨胀；无力、无动量存在，各向同性弹性介质中x-，y-和z-向的线性应力和。
 
-下面将讨论二维圆柱坐标和三维球坐标下的Laplace方程。
+下面将给出二维圆柱坐标和三维球坐标下的Laplace方程的解。
 \subsection{二维柱坐标}
 二维柱坐标$(r,\theta)$下的电势满足：
-\begin{equation}\label{eqn:laplace cyl 2d1}
+\begin{equation}
   \nabla^2\phi = \frac{1}{r}\frac{\partial}{\partial r}(r\frac{\partial \phi}{\partial r})+\frac{1}{r^2}\frac{\partial^2\phi}{\partial\theta^2}=0
 \end{equation}
 
-解方程\ref{eqn:laplace cyl 2d1}的标准做法是将$\phi$表示为两个函数的乘积，每一个函数仅含一个坐标：
-\begin{equation}\label{eqn:laplace cyl 2d2}
+解方程2.29的标准做法是将$\phi$表示为两个函数的乘积，每一个函数仅含一个坐标：
+\begin{equation}
   \phi=R(r)\Theta(\theta)
 \end{equation}
 
-可解出方程\ref{eqn:laplace cyl 2d1}的通解：
-\begin{subequations}\label{eqn:laplace cyl 2d3}
+可解出方程2.29的通解：
+\begin{subequations}
 	\begin{align}
 \mbox{对于n=0，}\phi_{0} &= (A_1 \ln r+A_2)(C_1 \theta+C_2) \\
 \mbox{对于n>0，} \phi_{n} &= (A_1 r^n+A_2 r^{-n})(C_1 \sin n\theta +C_2 \cos n\theta)
@@ -279,7 +277,7 @@ $p$是功率耗散密度，$w$是以电磁能存储的能量密度。
 \end{equation}
 
 类似的，$\phi$可以写成三个各仅含一个坐标的函数乘积的形式：
-\begin{subequations}\label{eqn:laplace sph2}
+\begin{subequations}
 	\begin{align}
   \phi&=R(r)\Theta(\theta)\Phi(\varphi)\\
   R(r)&=A_1 r^n+A_2 r^{-(n+1)} \\
