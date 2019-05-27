@@ -31,17 +31,20 @@ LTS和HTS磁体都得以发展。一方面，干式低温系统在运行、维�
   \item[制冷机冷却] 磁体和制冷机相连；绕组内的冷却主要通过传导。如第六章将会更详细讨论的，LTS磁体运行于准稳定态，而HTS磁体运行于稳定态。
   ``制冷循环器(cryocirculator)"对作为干式磁体冷源的制冷机是非常需要的，特别是对LTS磁体。
 \end{description}
-%%%表4.1
+
+
 \begin{table}[htbp]\small
   \centering
   \caption{湿式和干式超导磁体的冷却方式} \label{coolingmethod}
 \begin{tabular}{|c|c|c|}
   \hline
-\textbf{冷却方式}&\textbf{冷却-导体耦合性}&\textbf{传热方式} \\ \hline \hline
+\multicolumn{3}{l}{湿式磁体} \\\hline
+\textbf{冷却方式}&\textbf{冷却-导体耦合性}&\textbf{传热方式} \\ \hline
 浸泡冷却，cryostable & 好；全部导体& 对流\\ \hline
 浸泡冷却，绝热 & 基本不存在 &(磁体绕组表面的)传导 \\ \hline
 迫冷，cryostable &好；全部导体&对流\\ \hline
 迫冷，准稳定 &临近表面处，间接&传导\\ \hline\hline
+\multicolumn{3}{l}{干式磁体} \\\hline
 制冷机，准稳定&间接 &传导 \\ \hline
 \end{tabular}
 \end{table}
@@ -298,10 +301,8 @@ $T_{op}$。我们用两步来满足这个需求：1) 如果$T_{op}<27\ \mathrm{K
 \caption{液体制冷工质(LHe, LNe, LN2)在``理想"模式和``浸泡"模式下将1000 kg铜块从$T_i$分别冷却至4.2 K(LH2)、27 K(LNe)、77 K(LN2)的所需量}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline		
-% \multirow{2}{*}{$T_i$\\[K]} & \multirow{2}{*}{$h_{p_{cu}}$\\[kJ/kg]} & \multicolumn{2}{l|}{c所需LHe量[L]} & \multicolumn{2}{l|}{所需LNe量[L]} & \multicolumn{2}{l|}{所需LN2量[L]} \\ \cline{3-8}   
-%     &      & f``理想"\\(方程4.2) & ``浸泡"\\(方程4.3) & ``理想"\\(方程4.2) & ``浸泡"\\(方程4.3) & ``理想"\\(方程4.2) & ``浸泡"\\(方程4.3) \\ \hline
-\multirow{2}{*}{a} & \multirow{2}{*}{b} & \multicolumn{2}{l|}{c} & \multicolumn{2}{l|}{d} & \multicolumn{2}{l|}{e} \\ \cline{3-8} 
-                   &                    & f          & g         & h          & i         & j          & k         \\ \hline
+\multirow{2}{*}{$T_i$[K]} & \multirow{2}{*}{$h_{p_{cu}}$[kJ/kg]} & \multicolumn{2}{c|}{所需LHe量[L]} & \multicolumn{2}{c|}{所需LNe量[L]} & \multicolumn{2}{c|}{所需$\mathrm{LN_2}$量[L]} \\ \cline{3-8} 
+    &     & ``理想"模式(方程4.2)& ``浸泡"模式(方程4.3) & ``理想"模式(方程4.2) &``浸泡"模式(方程4.3) & ``理想"模式(方程4.2) & ``浸泡"模式(方程4.3)\\ \hline
 \textbf{300}  & 79.6 & 800  & 30,000 & 290   & 770    & 300  & 460 \\ \hline
 280 & 72.0 & 760 & 28,000 & 270 & 700 & 270 & 420 \\ \hline
 240 & 56.9 & 670 & 22,000 & 230 & 550 & 230 & 320 \\ \hline
@@ -353,7 +354,7 @@ $T_{op}$。我们用两步来满足这个需求：1) 如果$T_{op}<27\ \mathrm{K
 \caption{$Q_r(T),C_{cu}(T)$和$\kappa(T)\equiv C_{cu}(T)/Q_r(T)$}
 \begin{tabular}{|c|c|c|c|}
 \hline
-T[$\ \mathrm{K}$ ]  & ${Q_r(T)[\ \mathrm{W}]}$  & $C_{cu}[\ \mathrm{J/m^3K}]$    & $\kappa(T)[\ \mathrm{s/m^3K}]$   \\ \hline
+T[$\ \mathrm{K}$ ]  & ${Q_r(T)[\ \mathrm{W}]}$  & $C_{cu}[\ \mathrm{J/m^3K}]$    & $\kappa(T)[\ \mathrm{s/m^3K}]$   \\ \hline\hline
 300 & 100 & $3.44\times10^6$ & $3.44\times10^4$ \\
 250 & 87 & $3.32\times10^6$ & $3.82\times10^4$\\
 200 & 75 & $3.17\times10^6$ & $4.23\times10^4$ \\
@@ -390,7 +391,7 @@ M_{cu}&=\frac{\varrho_{cu}\tau_{cn}}{\int_{T_{op}}^{T_i}\kappa(T)dT}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
 \hline
 $T_i[\mathrm{K}]$& $T_{op}[\mathrm{K}]$&\multicolumn{8}{c|}{$\tilde{M}_{cu}[\mathrm{kg}]$}   \\ \hline
-\multicolumn{2}{|c|}{$\tau_{cn}[小时/\textbf{天}]\rightarrow$}   & 1   & 2   & 4    & 12  & \textbf{1}  &\textbf{2} &\textbf{10}&\textbf{20}\\ \hline
+\multicolumn{2}{|c|}{$\tau_{cn}[小时\/\textbf{天}]\rightarrow$}   & 1   & 2   & 4    & 12  & \textbf{1}  &\textbf{2} &\textbf{10}&\textbf{20}\\ \hline
 \multirow{4}{*}{300} & 77 & 3.4 & 6.8 & 13.6 & 41 & 82 & 164 & 820 & $1640^*$ \\ \cline{2-10} 
 & 50 & 3.0 & 6.1 & 12.1 & 36 & 73 & 147 & 735 & $1470^*$ \\ \cline{2-10} 
 & 30 & 2.9 & 5.8 & 11.6 & 35 & 70 & 140 & 700 & $1400^*$ \\ \cline{2-10} 
@@ -429,9 +430,9 @@ He II的搞热导率不允许液体中存在足以引起汽化的温度梯度。
 \begin{table}[htbp]\small
  \centering
 \caption{He II、He I、铜、水、空气的热导率和粘性}
-	\begin{tabular}{|c|c|c|}
+	\begin{tabular}{|l||c|c|}
 \hline
-材料& k[W/mK] & $\nu[\mu Pa s]$ \\ \hline
+材料& k[W/mK] & $\nu[\mu$Pa s] \\ \hline\hline
 He II & $\sim100,000^*$ & $0.01\sim0.1$ \\ \hline
 He I (4.2 K，液态) & 0.02 & $\sim3$ \\ \hline
 铜(4.2 K) & $\sim400$ & - \\ \hline
@@ -486,17 +487,17 @@ q_k=a_k(T_{cd}^{nk}-T_{b}^{nk})
 \begin{table}[htbp]\small
  \centering
 \caption{Kapitza热阻近似值}
-	\begin{tabular}{|l|c|c|}
+	\begin{tabular}{|l||c|c|}
 		\hline
-金属(表面) & $a_k[\mathrm{W/cm^2K^{n_k}}]$ & $n_k$ \\ \hline
-铝(抛光) & 0.05 & 3.4 \\ \hline
-铜(抛光) & 0.02 & 4.0 \\ \hline
-铜(退火，抛光) & 0.02 & 3.8 \\ \hline
-铜(来样) & 0.05 & 2.8 \\ \hline
-铜(表面涂焊料) & 0.08 & 3.4 \\ \hline
-铜(表面涂漆) & 0.07 & 2.1 \\ \hline
+金属(表面) & $a_k[\mathrm{W/cm^2K^{n_k}}]$ & $n_k$ \\ \hline\hline
+铝(抛光) & 0.05 & 3.4 \\ 
+铜(抛光) & 0.02 & 4.0 \\
+铜(退火，抛光) & 0.02 & 3.8 \\ 
+铜(来样) & 0.05 & 2.8 \\ 
+铜(表面涂焊料) & 0.08 & 3.4 \\ 
+铜(表面涂漆) & 0.07 & 2.1 \\
 银(抛光) & 0.06 & 3.0 \\ \hline
-	\end{tabular}
+\end{tabular}
 \end{table}
 
 
@@ -903,17 +904,25 @@ q_r=\epsilon_r\sigma(T_{wm}^4-T_{cl}^4)
 \begin{table}[htbp]\small
  \centering
 \caption{辐射热通量的典型值}
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c||c|c|c|}
 \hline
-材料& $T_{wm}\rightarrow T_{cl}$\\K & $\epsilon_r $ & $q_r$\\ $\mathrm{mW/m^2}$\\ \hline
+材料& $T_{wm}\rightarrow T_{cl}$ K & $\epsilon_r $ & $q_r\ \mathrm{mW/m^2}$\\ \hline\hline
+
 \begin{tabular}[c]{@{}c@{}}铜，来料\end{tabular} & \begin{tabular}[c]{@{}c@{}}$20\rightarrow 4$\\ $80\rightarrow 4$\\ $300\rightarrow 80$\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.03\\ 0.06\\ 0.12\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.3\\ 140\\ 55,000\end{tabular} \\ \hline
+
 \begin{tabular}[c]{@{}c@{}}铜，机械抛光\end{tabular} & \begin{tabular}[c]{@{}c@{}}$20\rightarrow 4$\\ $80\rightarrow 4$\\ $300\rightarrow 80$\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.01\\ 0.02\\ 0.06\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.1\\ 46\\ 27,000\end{tabular} \\ \hline
+
 \begin{tabular}[c]{@{}c@{}}不锈钢，来料 \end{tabular} & \begin{tabular}[c]{@{}c@{}}$20\rightarrow4$\\ $80\rightarrow4$\\ $300\rightarrow80$\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.06\\ 0.12\\ 0.34\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.54\\ 280\\ 155,000\end{tabular} \\ \hline
+
 \begin{tabular}[c]{@{}c@{}}不锈钢，机械抛光 \end{tabular} & \begin{tabular}[c]{@{}c@{}}$20\rightarrow4$\\ $80\rightarrow4$\\ $300\rightarrow80$\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.04\\ 0.07\\ 0.12\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.4\\ 162\\ 55,000\end{tabular} \\ \hline
 不锈钢，电抛光 & \begin{tabular}[c]{@{}c@{}}$20\rightarrow4$\\ $80\rightarrow4$\\ $300\rightarrow80$\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.03\\ 0.06\\ 0.10\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.3\\ 140\\ 46,000\end{tabular} \\ \hline
+
 \begin{tabular}[c]{@{}c@{}}铝，来料\end{tabular} & \begin{tabular}[c]{@{}c@{}}$20\rightarrow4$\\ $80\rightarrow4$\\ $300\rightarrow80$\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.04\\ 0.07\\ 0.49\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.4\\ 162\\ 224,000\end{tabular} \\ \hline
+
 \begin{tabular}[c]{@{}c@{}}铝，机械抛光\end{tabular} & \begin{tabular}[c]{@{}c@{}}$20\rightarrow4$\\$80\rightarrow4$\\ $300\rightarrow80$\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.03\\ 0.06\\ 0.10\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.3\\ 140\\ 46,000\end{tabular} \\ \hline
-铝，电抛光& \begin{tabular}[c]{@{}c@{}}$20\rightarrow4$\\ $80\rightarrow4$\\ $300\rightarrow80$\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.02\\ 0.03\\ 0.08\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.2\\ 70\\ 37,000\end{tabular} \\ \hline
+
+铝，电抛光& \begin{tabular}[c]{@{}c@{}}$20\rightarrow4$\\ $80\rightarrow4$\\ $300\rightarrow80$\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.02\\ 0.03\\ 0.08\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.2\\ 70\\ 37,000\end{tabular} \\ \hline\hline
+
 超级绝热& \begin{tabular}[c]{@{}c@{}}$20\rightarrow4$\\ $80\rightarrow4$\\ $300\rightarrow80$\end{tabular} & \begin{tabular}[c]{@{}c@{}}$\leq10^*$\\ $40^*$\\ $60^*$\end{tabular} & \begin{tabular}[c]{@{}c@{}}$2\dagger\ddagger$\\ $40\dagger$\\ $2,500\dagger$\end{tabular} \\ \hline
 \end{tabular}
 \end{table}
@@ -991,11 +1000,11 @@ $\eta_g$不仅与温度$T_{cl}$和$T_{wm}$有关，还和适应系数有关。30
 
 \begin{table}[htbp]\small
 \centering
-\caption{辐射热通量的典型值}
-\begin{tabular}{|c|c|c|c|c|c|}
+\caption{在$P_g=10^{-5}$ Torr时参与He和$\mathrm{H_2}$的热导率}
+\begin{tabular}{|c|c|c||c|c|c|}
 \hline
-\multicolumn{3}{|c|}{Helium} & \multicolumn{3}{c|}{Hydrogen} \\ \hline
-\begin{tabular}[c]{@{}c@{}}$T_{wm}\rightarrow T_{cl}$\\ $\left[K\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}$\eta_g$\\ $\left[\ \mathrm{W/m^2PaK}\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}$q_g$\\ $\left[\ \mathrm{mW/m^2}\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}$T_{wm}\rightarrow T_{cl}$\\ $\left[K\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}$\eta_g$\\ $\left[\ \mathrm{W/m^2PaK}\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}$q_g$\\ $\left[\ \mathrm{mW/m^2}\right]$\end{tabular} \\ \hline
+\multicolumn{3}{|c|}{氦} & \multicolumn{3}{c|}{氢} \\ \hline
+\begin{tabular}[c]{@{}c@{}}$T_{wm}\rightarrow T_{cl}$\\ [K]\end{tabular} & \begin{tabular}[c]{@{}c@{}}$\eta_g$\\ $\left[\ \mathrm{W/m^2PaK}\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}$q_g$\\ $\left[\ \mathrm{mW/m^2}\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}$T_{wm}\rightarrow T_{cl}$\\ [K]\end{tabular} & \begin{tabular}[c]{@{}c@{}}$\eta_g$\\ $\left[\ \mathrm{W/m^2PaK}\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}$q_g$\\ $\left[\ \mathrm{mW/m^2}\right]$\end{tabular} \\ \hline\hline
 $20\rightarrow 4$ & 1.27 & 27 & - & - & - \\ \hline
 $80\rightarrow 4.2$ & 0.85 & 86 & $80\rightarrow 20$ & 2.20 & 176 \\ \hline
 $300\rightarrow 4.2$ & 0.64 & 251 & $300\rightarrow 20$ & 1.32 & 494 \\ \hline
@@ -1078,11 +1087,19 @@ D_{th}=\frac{k}{\rho c_p}
 \begin{table}[htbp]\small
 \centering
 \caption{固态氖SNe、固态氮SN2和铜Cu在4-60 K温区的$D_{th}$和$\tau_{sd}$($\delta_{sd}$=10 mm)近似值}
-\begin{tabular}{|c|c|c|c|c|c|c|}
+\begin{tabular}{|c||c|c|c|c|c|c|}
 \hline
 & \multicolumn{3}{c|}{$D_{th}[\mathrm{mm^2/s}]$} & \multicolumn{3}{c|}{$\delta$=10 mm时的$\tau_{sd}[\mathrm{s}]$} \\ \hline
-$T$[K] & SNe & $SN_2$ & Cu & SNe & $SN_2$ & Cu \\ \hline
+$T$[K] & SNe & $\mathrm{SN_2}$ & Cu & SNe & $\mathrm{SN_2}$ & Cu \\ \hline\hline
 \multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}5\\ 10\\ 20\\ 30\\ $34^*$\\ $37^*$\\ 40\\ 50\\ 60\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}35\\ 22\\ 0.27\\ -\\ -\\ -\\ -\\ -\\ -\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}157\\ 70\\ 0.58\\ 0.22\\ 0.16\\ 0.18\\ 0.17\\ 0.13\\ 0.12\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}$0.36\times 10^6$\\ $0.17\times10^6$\\ $0.29\times10^5$\\ 8000\\ 5000\\ 3500\\ 2800\\ 1200\\ 600\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}0.29\\ 0.46\\ 38\\ -\\ -\\ -\\ -\\ -\\ -\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}0.06\\ 0.14\\ 17\\ 46\\ 63\\ 56\\ 60\\ 78\\ 84\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}$27\times10^{-6}$\\ $60\times10^{-6}$\\ $0.3\times10^{-3}$\\ $1.3\times10^{-3}$\\ $2\times10^{-3}$\\ $3\times10^{-3}$\\ $4\times10^{-3}$\\ $8\times10^{-3}$\\ $17\times10^{-3}$\end{tabular}} \\
+		&                                                                                                 &                                                                                                                    &                                                                                                                      &                                                                                                   &                                                                                                         &                                                                                                      \\
+		&                                                                                                 &                                                                                                                    &                                                                                                                      &                                                                                                   &                                                                                                         &                                                                                                      \\
+		&                                                                                                 &                                                                                                                    &                                                                                                                      &                                                                                                   &                                                                                                         &                                                                                                      \\
+		&                                                                                                 &                                                                                                                    &                                                                                                                      &                                                                                                   &                                                                                                         &                                                                                                      \\
+		&                                                                                                 &                                                                                                                    &                                                                                                                      &                                                                                                   &                                                                                                         &                                                                                                      \\
+		&                                                                                                 &                                                                                                                    &                                                                                                                      &                                                                                                   &                                                                                                         &                                                                                                      \\
+		&                                                                                                 &                                                                                                                    &                                                                                                                      &                                                                                                   &                                                                                                         &                                                                                                      \\
+		&                                                                                                 &                                                                                                                    &                                                                                                                      &                                                                                                   &                                                                                                         &                                                                                                      \\ 
 \hline
 \end{tabular}
 \end{table}
@@ -1420,7 +1437,7 @@ Rubin通过将近500多篇论文的钩沉，给出了一个1982-1997年间有关
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.7]{chpt4/figs/fig4.19.eps}
-	\caption{涵盖19个数量级的温度谱。}
+	\caption{涵盖19个数量级的温度谱}
 \end{figure}
 
 \textbf{热电偶} 对可容忍5\%温度不确定性的制冷应用---比如20 K下可容忍1 K---热电偶广泛使用。
@@ -1434,13 +1451,13 @@ Rubin通过将近500多篇论文的钩沉，给出了一个1982-1997年间有关
 \caption{几种热传感器的信号水平($V$)和敏感性($\delta V/\delta T$)的近似值。二极管[4.44]；电阻[4.44]；热电偶[4.45]}
 	\begin{tabular}{|l|c|c|c|c|c|c|c|c|}
 		\hline
-传感器 & 2K & 4K & 10K & 20K & 50K & 100K & 200K & 300K \\ \hline
+传感器 & 2 K & 4 K & 10 K & 20 K & 50 K & 100 K & 200 K & 300 K \\ \hline
 \begin{tabular}[c]{@{}l@{}}Silicon $\ \mathrm{V \left[V\right]}$\\ $\delta V/\delta T\left[\ \mathrm{mV/K}\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}1.69\\ -21\end{tabular} & \begin{tabular}[c]{@{}c@{}}1.63\\ -33\end{tabular} & \begin{tabular}[c]{@{}c@{}}1.42\\ -29\end{tabular} & \begin{tabular}[c]{@{}c@{}}1.21\\ -18\end{tabular} & \begin{tabular}[c]{@{}c@{}}1.07\\ -1.8\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.98\\ -2.0\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.76\\ -2.3\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.52\\ -2.4\end{tabular} \\ \hline
-\begin{tabular}[c]{@{}l@{}}GaAlAs $\ \mathrm{V \left[V\right]}$\\ $\delta V/\delta T\left[\ \mathrm{mV/K}\right]$ V\end{tabular} & \begin{tabular}[c]{@{}c@{}}5.5\\ -210\end{tabular} & \begin{tabular}[c]{@{}c@{}}5.1\\ -210\end{tabular} & \begin{tabular}[c]{@{}c@{}}4.1\\ -145\end{tabular} & \begin{tabular}[c]{@{}c@{}}2.7\\ -110\end{tabular} & \begin{tabular}[c]{@{}c@{}}1.5\\ -30\end{tabular} & \begin{tabular}[c]{@{}c@{}}1.4\\ -1.5\end{tabular} & \begin{tabular}[c]{@{}c@{}}1.1\\ -2.6\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.9\\ -2.7\end{tabular} \\ \hline
-\begin{tabular}[c]{@{}l@{}}Cernox $\ \mathrm{V \left[mV\right]}$\\ $\delta V/\delta T\left[\ \mathrm{mV/K}\right]$\\ @电流 $\left[\ \mathrm{\mu A}\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}12\\ -10\\ 1\end{tabular} & \begin{tabular}[c]{@{}c@{}}14\\ -3.5\\ 3\end{tabular} & \begin{tabular}[c]{@{}c@{}}17\\ -1.5\\ 10\end{tabular} & \begin{tabular}[c]{@{}c@{}}28\\ -1.2\\ 30\end{tabular} & \begin{tabular}[c]{@{}c@{}}13\\ -0.24\\ 30\end{tabular} & \begin{tabular}[c]{@{}c@{}}20\\ -0.18\\ 100\end{tabular} & \begin{tabular}[c]{@{}c@{}}33\\ -0.18\\ 300\end{tabular} & \begin{tabular}[c]{@{}c@{}}20\\ -0.07\\ 300\end{tabular} \\ \hline
-\begin{tabular}[c]{@{}l@{}}Platinum $\ \mathrm{V \left[mV\right]}$\\ $\delta V/\delta T\left[\ \mathrm{mV/K}\right]$\\ @电流 $\left[\ \mathrm{mA}\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}NA\\ NA\\ -\end{tabular} & \begin{tabular}[c]{@{}c@{}}NA\\ NA\\ -\end{tabular} & \begin{tabular}[c]{@{}c@{}}NA\\ NA\\ -\end{tabular} & \begin{tabular}[c]{@{}c@{}}2.4\\ 0.086\\ 1\end{tabular} & \begin{tabular}[c]{@{}c@{}}10\\ 0.35\\ 1\end{tabular} & \begin{tabular}[c]{@{}c@{}}31\\ 0.41\\ 1\end{tabular} & \begin{tabular}[c]{@{}c@{}}77\\ 0.39\\ 1\end{tabular} & \begin{tabular}[c]{@{}c@{}}114\\ 0.38\\ 1\end{tabular} \\ \hline
-\begin{tabular}[c]{@{}l@{}}Type E $\ \mathrm{V \left[\mu V\right]}$\\ $\delta V/\delta T\left[\ \mathrm{\mu V/K}\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}1.3\\ 1.15\end{tabular} & \begin{tabular}[c]{@{}c@{}}4.6\\ 2.09\end{tabular} & \begin{tabular}[c]{@{}c@{}}24.9\\ 4.65\end{tabular} & \begin{tabular}[c]{@{}c@{}}91\\ 8.51\end{tabular} & \begin{tabular}[c]{@{}c@{}}504\\ 18.7\end{tabular} & \begin{tabular}[c]{@{}c@{}}1775\\ 31.4\end{tabular} & \begin{tabular}[c]{@{}c@{}}5871\\ 49.3\end{tabular} & \begin{tabular}[c]{@{}c@{}}11445\\ 61\end{tabular} \\ \hline
-\begin{tabular}[c]{@{}l@{}}AuFe(0.07\%)-Chromel $\ \mathrm{V \left[\mu V\right]}$\\  $\delta V/\delta T\left[\ \mathrm{\mu V/K}\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}17.2\\ 10\end{tabular} & \begin{tabular}[c]{@{}c@{}}39.6\\ 12.2\end{tabular} & \begin{tabular}[c]{@{}c@{}}124.9\\ 15.6\end{tabular} & \begin{tabular}[c]{@{}c@{}}286.6\\ 16.3\end{tabular} & \begin{tabular}[c]{@{}c@{}}768.6\\ 16.4\end{tabular} & \begin{tabular}[c]{@{}c@{}}1647\\ 18.7\end{tabular} & \begin{tabular}[c]{@{}c@{}}3667\\ 21.4\end{tabular} & \begin{tabular}[c]{@{}c@{}}5864\\ 22.8\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}GaAlAs $\ \mathrm{V \left[V\right]}$\\ $\delta V/\delta T\left[\mathrm{mV/K}\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}5.5\\ -210\end{tabular} & \begin{tabular}[c]{@{}c@{}}5.1\\ -210\end{tabular} & \begin{tabular}[c]{@{}c@{}}4.1\\ -145\end{tabular} & \begin{tabular}[c]{@{}c@{}}2.7\\ -110\end{tabular} & \begin{tabular}[c]{@{}c@{}}1.5\\ -30\end{tabular} & \begin{tabular}[c]{@{}c@{}}1.4\\ -1.5\end{tabular} & \begin{tabular}[c]{@{}c@{}}1.1\\ -2.6\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.9\\ -2.7\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}Cernox $\ \mathrm{V \left[mV\right]}$\\ $\delta V/\delta T\left[\mathrm{mV/K}\right]$\\ @电流 $\left[\mathrm{\mu A}\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}12\\ -10\\ 1\end{tabular} & \begin{tabular}[c]{@{}c@{}}14\\ -3.5\\ 3\end{tabular} & \begin{tabular}[c]{@{}c@{}}17\\ -1.5\\ 10\end{tabular} & \begin{tabular}[c]{@{}c@{}}28\\ -1.2\\ 30\end{tabular} & \begin{tabular}[c]{@{}c@{}}13\\ -0.24\\ 30\end{tabular} & \begin{tabular}[c]{@{}c@{}}20\\ -0.18\\ 100\end{tabular} & \begin{tabular}[c]{@{}c@{}}33\\ -0.18\\ 300\end{tabular} & \begin{tabular}[c]{@{}c@{}}20\\ -0.07\\ 300\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}Platinum $\ \mathrm{V \left[mV\right]}$\\ $\delta V/\delta T\left[\mathrm{mV/K}\right]$\\ @电流 $\left[\mathrm{mA}\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}NA\\ NA\\ -\end{tabular} & \begin{tabular}[c]{@{}c@{}}NA\\ NA\\ -\end{tabular} & \begin{tabular}[c]{@{}c@{}}NA\\ NA\\ -\end{tabular} & \begin{tabular}[c]{@{}c@{}}2.4\\ 0.086\\ 1\end{tabular} & \begin{tabular}[c]{@{}c@{}}10\\ 0.35\\ 1\end{tabular} & \begin{tabular}[c]{@{}c@{}}31\\ 0.41\\ 1\end{tabular} & \begin{tabular}[c]{@{}c@{}}77\\ 0.39\\ 1\end{tabular} & \begin{tabular}[c]{@{}c@{}}114\\ 0.38\\ 1\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}Type E $\ \mathrm{V \left[\mu V\right]}$\\ $\delta V/\delta T\left[\mathrm{\mu V/K}\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}1.3\\ 1.15\end{tabular} & \begin{tabular}[c]{@{}c@{}}4.6\\ 2.09\end{tabular} & \begin{tabular}[c]{@{}c@{}}24.9\\ 4.65\end{tabular} & \begin{tabular}[c]{@{}c@{}}91\\ 8.51\end{tabular} & \begin{tabular}[c]{@{}c@{}}504\\ 18.7\end{tabular} & \begin{tabular}[c]{@{}c@{}}1775\\ 31.4\end{tabular} & \begin{tabular}[c]{@{}c@{}}5871\\ 49.3\end{tabular} & \begin{tabular}[c]{@{}c@{}}11445\\ 61\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}AuFe(0.07\%)-Chromel $\ \mathrm{V \left[\mu V\right]}$\\  $\delta V/\delta T\left[\mathrm{\mu V/K}\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}17.2\\ 10\end{tabular} & \begin{tabular}[c]{@{}c@{}}39.6\\ 12.2\end{tabular} & \begin{tabular}[c]{@{}c@{}}124.9\\ 15.6\end{tabular} & \begin{tabular}[c]{@{}c@{}}286.6\\ 16.3\end{tabular} & \begin{tabular}[c]{@{}c@{}}768.6\\ 16.4\end{tabular} & \begin{tabular}[c]{@{}c@{}}1647\\ 18.7\end{tabular} & \begin{tabular}[c]{@{}c@{}}3667\\ 21.4\end{tabular} & \begin{tabular}[c]{@{}c@{}}5864\\ 22.8\end{tabular} \\ \hline
 \end{tabular}
 \end{table}
 
@@ -2286,7 +2303,7 @@ Q_{j_{\ell q}}=\frac{\rho_oI_{o}^{2}\ell_{\ell q}}{A_{cu}}=\dot{m}_{fl}h_{n2}
 \subsection{问题4.6：6 kA气冷HTS电流引线}
 问题4.6将问题4.4和4.5中讨论的设计概念应用于三种6 kA的气冷HTS引线：
 A) FSV，无并联常规金属带；B) FSV，有120根并联常规金属带；
-C) CSV，有相同根数的常规金属带。
+ 
 表4.12给出Bi2223/Ag-Au带的关键参数。表中，$a_m$是单带Ag-Au基底的截面积：
 也即 $[A_m]_{fs}=N_{fs} a_m; I_c(T)=N_{fs} i_c(T_\ell);I_c(T_0)=N_{fs}i_c(T_0)$。
 我们假定，各带的全部有效长度都置于0.2 T的垂直场中。$\~{k}$和$\~{\rho}_x$分别是Ag-Au
@@ -2298,8 +2315,17 @@ C) CSV，有相同根数的常规金属带。
 \caption{Bi-2223/Ag-Au带材参数}
 \begin{tabular}{|l|c|}
 \hline
-Parameters & Value \\ \hline
-\multirow{10}{*}{\begin{tabular}[c]{@{}l@{}}Overall width $\left[\ \mathrm{mm}\right]$\\ Overall thickness $\left[\ \mathrm{mm}\right]$\\ Bi2223 filling(volume) $\left[\%\right]$\\ Au content $\left[\ \mathrm{wt\%}\right]$\\ Ag-Au cross section,$a_m$ $\left[\ \mathrm{mm^2}\right]$\\ Tape cross sectiong $\left[\ \mathrm{mm^2}\right]$\\ $i_c(T_l)(@77.3K@B_\bot=0.2T)$ $\left[\ \mathrm{A}\right]$\\ $i_c(T_0)(@4.2K@B_\bot=0.2T)$ $\left[\ \mathrm{A}\right]$\\ $\tilde{k}(4.2-77K)$ $\left[\ \mathrm{W/cm K}\right]$\\ $\tilde{p}_x(T_l-77K)$ $\left[\ \mathrm{\mu\Omega cm}\right]$\end{tabular}} & \multirow{10}{*}{\begin{tabular}[c]{@{}c@{}}4.2\\ 0.228\\ 42\\ 5.3\\ 0.555\\ 0.958\\ 80\textasciicircum{}*\\ $455.5\dagger$\\ 0.327\\ 1.0\end{tabular}} \\
+参数& 数值 \\ \hline
+\multirow{10}{*}{\begin{tabular}[c]{@{}l@{}}宽度$\left[\ \mathrm{mm}\right]$\\ 厚度$\left[\ \mathrm{mm}\right]$\\ Bi2223填充(体积) $\left[\%\right]$\\ Au比分$\left[\ \mathrm{wt\%}\right]$\\ Ag-Au截面积,$a_m$ $\left[\ \mathrm{mm^2}\right]$\\ 带材截面积$\left[\ \mathrm{mm^2}\right]$\\ $i_c(T_l)(@77.3 K@B_\bot=0.2 T)$ $\left[\ \mathrm{A}\right]$\\ $i_c(T_0)(@4.2 K@B_\bot=0.2 T)$ $\left[\ \mathrm{A}\right]$\\ $\tilde{k}(4.2-77 K)$ $\left[\ \mathrm{W/cm K}\right]$\\ $\tilde{p}_x(T_l-77 K)$ $\left[\ \mathrm{\mu\Omega cm}\right]$\end{tabular}} & \multirow{10}{*}{\begin{tabular}[c]{@{}c@{}}4.2\\ 0.228\\ 42\\ 5.3\\ 0.555\\ 0.958\\ 80\textasciicircum{}*\\ $455.5\dagger$\\ 0.327\\ 1.0\end{tabular}} \\
+		&                                                                                                                                                \\
+		&                                                                                                                                                \\
+		&                                                                                                                                                \\
+		&                                                                                                                                                \\
+		&                                                                                                                                                \\
+		&                                                                                                                                                \\
+		&                                                                                                                                                \\
+		&                                                                                                                                                \\
+		&                                                                                                                                                \\ 
 \hline
 \end{tabular}
 \end{table}
@@ -2319,8 +2345,17 @@ c) 验证方程4.61通过计算各功率项，可用于这根引线。
 \caption{常规金属(黄铜)带参数}
 	\begin{tabular}{|l|c|}
 		\hline
-Parameters & Value \\ \hline
+参数 &数值 \\ \hline
 \multirow{6}{*}{\begin{tabular}[c]{@{}l@{}}单带宽度[mm]\\ 单带厚度[mm]\\ 并联带数目\\ $[A_n]_{fs}$和$[A_n]_{cs}$ $[\mathrm{cm^2}]$\\ $\tilde{k}_n$(4.2-77 K) [W/cm K] \\ $\tilde{p}_n$(4.2-77 K) [$\mathrm{\mu}\Omega$cm]\end{tabular}} & \multirow{6}{*}{\begin{tabular}[c]{@{}c@{}}4.203\\ 0.344\\ 120\\ 1.735\\ 0.350\\ 2.25\end{tabular}} \\
+		&                                                                                                                                                \\
+		&                                                                                                                                                \\
+		&                                                                                                                                                \\
+		&                                                                                                                                                \\
+		&                                                                                                                                                \\
+		&                                                                                                                                                \\
+		&                                                                                                                                                \\
+		&                                                                                                                                                \\
+		&                                                                                                                                               
 \hline
 \end{tabular}
 \end{table}
@@ -2481,7 +2516,7 @@ $[A_n]_{cs}=[A_n]_{fs}=1.735\ \mathrm{cm^2}$(表4.13)。于是：
 \caption{$\xi_{cs}$和$\beta_{cs}^{n*}$的确定}
 \begin{tabular}{|c|c|c|}
 \hline
-\begin{tabular}[c]{@{}c@{}}Guess Value fo\\ $\xi_{cs}$\end{tabular} & \begin{tabular}[c]{@{}c@{}}Eq.4.96b\\ $\beta_{cs}^{n*}$\end{tabular} & \begin{tabular}[c]{@{}c@{}}Left-Hand Side\\ Eq.4.83\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}c@{}}猜测值\\$\xi_{cs}$\end{tabular} & \begin{tabular}[c]{@{}c@{}}方程4.96b\\ $\beta_{cs}^{n*}$\end{tabular} & \begin{tabular}[c]{@{}c@{}}方程4.83左侧\end{tabular} \\ \hline
 \multirow{6}{*}{\begin{tabular}[c]{@{}c@{}}0.9\\ 0.95\\ 0.94\\ 0.945\\ 0.9451\\ 0.94505\end{tabular}} & \multirow{5}{*}{\begin{tabular}[c]{@{}c@{}}15.708\\ 31.4159\\ 26.1799\\ 28.5599\\ 28.6120\end{tabular}} & \multirow{5}{*}{\begin{tabular}[c]{@{}c@{}}32.3975\\ 28.2120\\ 28.9759\\ 28.5898\\ 28.5821\end{tabular}} \\
 & & \\
 & & \\
@@ -2560,10 +2595,10 @@ d) 当进入77. K冷端点($z$=0)的制冷工质是液氮时，确定$\.{m}_{fl}
 \begin{table}[htbp]\small
 \centering
 \caption{6 kA气冷铜引线参数}
-\begin{tabular}{|l|c|}
+\begin{tabular}{|l||c|}
 \hline
-参数 & 数值 \\ \hline
-\multirow{10}{*}{\begin{tabular}[c]{@{}l@{}}Operating range$(T_o-T_{l_{cu}})$ $\left[\ \mathrm{K}\right]$\\ Active area,$A_{cu}$ $\left[\ \mathrm{cm^2}\right]$\\ Active length,$l_{cu}$ $\left[\ \mathrm{cm}\right]$\\ Area exposed to coolant $\left[\ \mathrm{cm^2}\right]$\\ $\tilde{k}_{cu}$(77-300K) $\left[\ \mathrm{W/cm K}\right]$\\ $\tilde{c}_{fl}$(77-300K):helium $\left[\ \mathrm{J/gK}\right]$\\ $\tilde{c}_{fl}$(77-300K):nitrogen $\left[\ \mathrm{J/gK}\right]$\\ $h_{n2}$(77.3K) $\left[\ \mathrm{J/g}\right]$\\ $\rho_o$(77K) $\left[\ \mathrm{\mu\Omega cm}\right]$\\ $\gamma_{cu}$(77-300K) $\left[\ \mathrm{n\Omega cm/K}\right]$\end{tabular}} & \multirow{10}{*}{\begin{tabular}[c]{@{}c@{}}77.3-300\\ 1.19\\ 38\\ 12,650\\ 4\\ 5.28\\ 1.04\\ 199\\ 0.22\\ 7.01\end{tabular}} \\
+参数 & 数值 \\ \hline\hline
+\multirow{10}{*}{\begin{tabular}[c]{@{}l@{}}运行区间$(T_o-T_{l_{cu}})$ $\left[\mathrm{K}\right]$\\ 有效面积,$A_{cu}$ $\left[\mathrm{cm^2}\right]$\\ 有效长度,$l_{cu}$ $\left[\mathrm{cm}\right]$\\ 接触制冷工质面积$\left[\mathrm{cm^2}\right]$\\ $\tilde{k}_{cu}$(77-300 K) $\left[\mathrm{W/cm K}\right]$\\ $\tilde{c}_{fl}$(77-300 K):氦$\left[\ \mathrm{J/gK}\right]$\\ $\tilde{c}_{fl}$(77-300 K):氮 $\left[\mathrm{J/gK}\right]$\\ $h_{n2}$(77.3 K) $\left[\mathrm{J/g}\right]$\\ $\rho_o$(77 K) $\left[\mathrm{\mu\Omega cm}\right]$\\ $\gamma_{cu}$(77-300 K) $[\mathrm{n}\Omega$ cm/K]\end{tabular}} & \multirow{10}{*}{\begin{tabular}[c]{@{}c@{}}77.3-300\\ 1.19\\ 38\\ 12,650\\ 4\\ 5.28\\ 1.04\\ 199\\ 0.22\\ 7.01\end{tabular}} \\
 & \\
 & \\
 & \\
@@ -2608,8 +2643,8 @@ c) 在a)中确定的$\beta_{cu}$和$\alpha_{cu}$同样适用于气氮情况。�
 \caption{$\beta_{cu}$和$\alpha_{cu}$的确定}                                                                                   
 \begin{tabular}{|c|c|c|c|c|}
 	\hline
-\multicolumn{3}{|c|}{Eq.4.88b} & Eq.4.88b & Eq.4.87c \\ \hline
-$\beta_{cu}\left[degree\right]$ & -cot$\beta_{cu}$ & $\beta_{cu}$ & $\alpha_{cu}$ & $\beta_{cu}$ \\ \hline
+\multicolumn{3}{|c|}{方程4.88b} & 方程4.88b & 方程4.87c \\ \hline
+$\beta_{cu}$[degree] & -cot$\beta_{cu}$ & $\beta_{cu}$ & $\alpha_{cu}$ & $\beta_{cu}$ \\ \hline
 \multirow{9}{*}{\begin{tabular}[c]{@{}l@{}}150\\ 160\\ 159\\ 159.5\\ 159.6\\ 159.7\\ 159.65\\ 159.67\\ 159.669\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}l@{}}1.732051\\ 2.747477\\ 2.605089\\ 2.674621\\ 2.688919\\ 2.703351\\ 2.696118\\ 2.699007\\ 2.698863\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}l@{}}2.617994\\ 2.792527\\ 2.775074\\ 2.783800\\ 2.785545\\ 2.787291\\ 2.786418\\ 2.786767\\ 2.786750\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}l@{}}4.534498\\ 7.692404\\ 7.229314\\ 7.445612\\ 7.490106\\ 7.535026\\ 7.512513\\ 7.521505\\ 7.521055\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}l@{}}6.615990\\ 2.338207\\ 3.474194\\ 2.982594\\ 2.869026\\ 2.748887\\ 2.809832\\ 2.785671\\ 2.786885\end{tabular}} \\
 & & & & \\
 & & & & \\
@@ -2652,9 +2687,9 @@ d) 这里我们来确定满足方程4.93、4.94和4.95在给定参数值$\rho_o,
 \caption{$\ell_{\ell q}，\beta^\prime_{cu}$和$\alpha^\prime_{cu}$的确定}                                                                                   
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
-\multicolumn{2}{|c|}{Eq.4.93} & Eq.4.95a & \multicolumn{2}{c|}{Eq.4.95b} & \multicolumn{2}{c|}{Eq.4.94} \\ \hline
+\multicolumn{2}{|c|}{方程4.93} & 方程4.95a & \multicolumn{2}{c|}{方程4.95b} & \multicolumn{2}{c|}{方程4.94} \\ \hline
 $\ell_{\ell q} \left[\ \mathrm{cm}\right]$ & $\dot{m}_{fl}\left[\ \mathrm{g/s}\right]$ & $\alpha_{cu}^{\prime}$ & $\beta_{cu}^{\prime}$ & $\beta_{cu}^{\prime}\left[degree\right]$ & -cot$\beta_{cu}^{\prime}$ & $\alpha_{cu}^{\prime}$ \\ \hline
-\multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}10\\ 20\\ 26\\ 27\\ 26.9\\ 26.98\\ 26.9805\\ 26.9802\\ 26.9804\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}0.3334453\\ 0.668891\\ 0.869558\\ 0.903002\\ 0.898304\\ 0.902334\\ 0.902350\\ 0.902340\\ 0.902347\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}1.023033\\ 1.315298\\ 1.139925\\ 1.085120\\ 1.089288\\ 1.086289\\ 1.086259\\ 1.086277\\ 1.086265\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}5.82035\\ 3.564382\\ 2.261869\\ 2.052632\\ 2.074294\\ 2.056789\\ 2.056686\\ 2.056748\\ 2.056706\end{tabular}} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}333.5\\ 204.2\end{tabular}} & \multicolumn{2}{c|}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}no solution\\ no solution\end{tabular}}} \\
+\multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}10\\ 20\\ 26\\ 27\\ 26.9\\ 26.98\\ 26.9805\\ 26.9802\\ 26.9804\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}0.3334453\\ 0.668891\\ 0.869558\\ 0.903002\\ 0.898304\\ 0.902334\\ 0.902350\\ 0.902340\\ 0.902347\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}1.023033\\ 1.315298\\ 1.139925\\ 1.085120\\ 1.089288\\ 1.086289\\ 1.086259\\ 1.086277\\ 1.086265\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}5.82035\\ 3.564382\\ 2.261869\\ 2.052632\\ 2.074294\\ 2.056789\\ 2.056686\\ 2.056748\\ 2.056706\end{tabular}} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}333.5\\ 204.2\end{tabular}} & \multicolumn{2}{c|}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}无解\\ 无解\end{tabular}}} \\
 & & & & & \multicolumn{2}{c|}{} \\ \cline{5-7} 
 & & & & \multirow{7}{*}{\begin{tabular}[c]{@{}c@{}}129.595532\\ 117.607165\\ 118.848308\\ 117.845335\\ 117.839402\\ 117.842976\\ 117.840594\end{tabular}} & \multirow{7}{*}{\begin{tabular}[c]{@{}c@{}}0.827141\\ 0.522947\\ 0.550853\\ 0.528252\\ 0.528119\\ 0.528199\\ 0.528146\end{tabular}} & \multirow{7}{*}{\begin{tabular}[c]{@{}c@{}}1.870884\\ 1.073417\\ 1.142631\\ 1.086503\\ 1.086175\\ 1.086373\\ 1.086241\end{tabular}} \\
 & & & & & & \\
@@ -2943,14 +2978,14 @@ $Q_{\bar{vp}}$和$Q_{vp}$都正比于$\tilde{k}$。
 
 \begin{table}[htbp]\small
 \centering
-\caption{$\ell_{\ell q}，\beta^\prime_{cu}$和$\alpha^\prime_{cu}$的确定}                                                                                   
-	\begin{tabular}{|l|c|c|c|c|c|}
-		\hline
-\multirow{2}{*}{Material} & \multicolumn{3}{c|}{$\tilde{k}\left[\ \mathrm{W/mK}\right]$} & $\sigma_U\left[\ \mathrm{MPa}\right]$ & $\tilde{k}/\sigma_U\left[\ \mathrm{m^2/Ks}\right]\dagger$ \\ \cline{2-6} 
-& 4-80K & 4-300K & 80-300K & 295K &(80-300K) \\ \hline
+\caption{G-10,304不锈钢,黄铜,紫铜的结``结构"数据}                                                                                   
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\multirow{2}{*}{材料} & \multicolumn{3}{c|}{$\tilde{k}\left[\ \mathrm{W/mK}\right]$} & $\sigma_U\left[\ \mathrm{MPa}\right]$ & $\tilde{k}/\sigma_U\left[\ \mathrm{m^2/Ks}\right]\dagger$ \\ \cline{2-6} 
+& 4-80 K & 4-300 K & 80-300 K & 295 K &(80-300 K) \\ \hline\hline
 G-10 & 0.25 & 0.50 & 0.56 & 280 & $2\times10^{-9}$ \\ \hline
-Stainless Steel304 & 4.5 & 11 & 13 & 1300 & $10\times10^{-9}$ \\ \hline
-Brass & 24 & 55 & 65 & 400 & $2\times10^{-7}$ \\ \hline
-Copper & 1300 & 660 & 460 & 250 & $2\times10^{-6}$ \\ \hline
-	\end{tabular}
+304不锈钢 & 4.5 & 11 & 13 & 1300 & $10\times10^{-9}$ \\ \hline
+黄铜 & 24 & 55 & 65 & 400 & $2\times10^{-7}$ \\ \hline
+紫铜 & 1300 & 660 & 460 & 250 & $2\times10^{-6}$ \\ \hline
+\end{tabular}
 \end{table}
