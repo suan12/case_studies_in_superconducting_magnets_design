@@ -179,22 +179,21 @@ $p$是功率耗散密度，$w$是以电磁能存储的能量密度。
 系统内能量平衡，即流入和流出相等；如果$\nabla \cdot \vec{S}<0$，表明有能量流入系统，在系统内要么被耗散，要么被存储。
 
 \subsubsection{简谐情况}
-处理简谐时变电场$\vec{E}$时，有$\vec{E}=\vec{E_0}e^{j\omega t}$以及$\vec{J}=(\vec{E}/\rho_e)e^{j\omega t}$。此时，时均功率耗散密度$<p>$写成：
+处理简谐时变电场$\vec{E}$时，常用复数，即有$\vec{E}=\vec{E_0}e^{j\omega t}$。从而，$\vec{J}=(\vec{E}/\rho_e)e^{j\omega t}$。此时，时均功率耗散密度$<p>$写成：
 \begin{equation}\label{eqn:poynting sincase}
   <p>=\frac{1}{2}\vec{E}\cdot \vec{J^*}=\frac{1}{2\rho_e}|E|^2=\frac{\rho_e}{2}|J|^2
 \end{equation}
-式中，$\vec{J^*}$是$\vec{J}$的共轭量。
+式中，$\vec{J^*}$是$\vec{J}$的复共轭量。
 
 简谐条件下，S矢量写成如下形式：
 \begin{subequations}\label{eqn:poynting s-vector sin}
 	\begin{align}
-\vec{S}&=\frac{1}{2}(\vec{E}\times \vec{H}) \\
+\vec{S}&=\frac{1}{2}(\vec{E}\times \vec{H^*}) \\
 -\oint_S \vec{S}\cdot d\vec{A}&=<P>+j2\omega (<E_m>-<E_e>)
 	\end{align}
 \end{subequations}
 式中，$<P>$[W]，$<E_m>$[J]，$<E_e>$[J]分别是总能耗、磁场能和电场能。
-每一个时均量都是通过体积分得到的：
-
+每一个时均量都是通过对系统体积分得到的：
 \begin{subequations}
 	\begin{align}
 <P>&= \frac{1}{2\rho_e}\int_V|E|^2dV\\
@@ -203,9 +202,9 @@ $p$是功率耗散密度，$w$是以电磁能存储的能量密度。
 	\end{align}
 \end{subequations}
 
-复数形式的Poynting矢量$\vec{S}$拓展到$\mathrm{1^{st}}$阶，表示为：
+复数形式的Poynting矢量$\vec{S}$展开到$\mathrm{1^{st}}$阶场的形式为：
 \begin{equation}\label{eqn:1st poynting}
-\vec{S}=\frac{1}{2}(\vec{E}_0\times \vec{H}_0^*+\vec{E}_0\times \vec{H}_1^*+\vec{E}_1\times \vec{H}_0^*)
+\vec{S}=\frac{1}{2}\left(\vec{E}_0\times \vec{H}_0^*+\vec{E}_0\times \vec{H}_1^*+\vec{E}_1\times \vec{H}_0^*\right)
 \end{equation}
 
 \section{场的标量势解法}
@@ -234,49 +233,47 @@ $p$是功率耗散密度，$w$是以电磁能存储的能量密度。
 
 下面将给出二维圆柱坐标和三维球坐标下的Laplace方程的解。
 \subsection{二维柱坐标}
-二维柱坐标$(r,\theta)$下的电势满足：
+二维柱坐标系$(r,\theta)$下的电势$\nabla^2\phi$形式为：
 \begin{equation}
-  \nabla^2\phi = \frac{1}{r}\frac{\partial}{\partial r}(r\frac{\partial \phi}{\partial r})+\frac{1}{r^2}\frac{\partial^2\phi}{\partial\theta^2}=0
+  \nabla^2\phi = \frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial \phi}{\partial r}\right)+\frac{1}{r^2}\frac{\partial^2\phi}{\partial\theta^2}=0
 \end{equation}
 
-解方程2.29的标准做法是将$\phi$表示为两个函数的乘积，每一个函数仅含一个坐标：
+解方程2.29的标准技术是将$\phi$表示为两个分别仅与一个坐标有关的函数之积：
 \begin{equation}
   \phi=R(r)\Theta(\theta)
 \end{equation}
 
-可解出方程2.29的通解：
+方程2.29的解的一般形式如下：
 \begin{subequations}
 	\begin{align}
 \mbox{对于n=0，}\phi_{0} &= (A_1 \ln r+A_2)(C_1 \theta+C_2) \\
 \mbox{对于n>0，} \phi_{n} &= (A_1 r^n+A_2 r^{-n})(C_1 \sin n\theta +C_2 \cos n\theta)
 	\end{align}
 \end{subequations}
-
 其中，$A_1, A_2, C_1, C_2$都是常数。
 
 \subsubsection{特例}
 \begin{description}
-  \item[n=0] 最简单的情况。场量在空间上仅依赖于$1/r$。满足这个条件的示例包括线电荷($\lambda=2\pi \epsilon_0$)产生的电场以及
-  线电流($I=2\pi$)产生的磁场。这样，由$[\phi_0]_E=\ln r$可以得到$\vec{E}=\frac{\vec{i}_r}{r} $；由$[\phi_0]_H=\theta$可以得到$\vec{E}=\frac{\vec{i}_{\theta}}{r} $。
-  不难看出，场强在远离源时，以$1/r$衰减。
-\item[n=1] 电势$\phi_1=\sin \frac{\phi}{r}$ 和$\phi_{1^\prime}=\cos \theta/r$与二维电/磁偶电场/磁场相联系。注意到两种形式在原点处(r=0)都有奇点，故它们通常用于表示
-不含原点的偶极子场。究竟是选$\sin$还是$\cos$，取决于坐标系中场的取向。
-此外，$\phi_1^\prime=r \sin \phi$和$\phi_{1^\prime}^\prime=r \cos \theta$与均匀矢量场有关。
- \item[n=2] 电势$\phi_2=\cos 2\theta/r^2$和$\phi_2^\prime= r^2 \cos 2\theta$与二维四极电场相联系。前者在原点有奇点，仅用于不含原点的空间；后者可用于
- 有限远内的所有空间。第三章会研究理想四极磁体。
+  \item[$n=0$] 最简单的情况。该条件下，场量在空间上仅依赖于$1/r$。实例包括线电荷($\lambda=2\pi \epsilon_0$)产生的电场以及  线电流($I=2\pi$)产生的磁场。
+  此时，由$[\phi_0]_E=\ln r$可得$\vec{E}=(1/r)\vec{i}_r $；由$[\phi_0]_H=\theta$可得$\vec{E}=(1/r)\vec{i}_{\theta}$。可见，远离源时，场强以$1/r$衰减。
+\item[$n=1$] 电势$\phi_1=\sin\theta/r$ 和$\phi_{1^\prime}=\cos \theta/r$与二维电/磁偶极子的电场/磁场有关。注意到两式在原点处($r$=0)都有奇点，故它们通常仅用于表示不含原点的偶极子场。
+究竟是选$\sin\theta$还是$\cos\theta$，取决于场在坐标系中的取向。
+此外，$\phi_1^\prime=r \sin \phi$和$\phi_{1^\prime}^\prime=r \cos \phi$与均匀矢量场有关。在第2章
+和第3章，我们将研究几个二维偶极子场的案例。
+ \item[$n=2$] 电势$\phi_2=\cos 2\theta/r^2$和$\phi_2^\prime= r^2 \cos 2\theta$与二维四极子场有关。前者因在原点有奇点，仅用于不含原点的空间；后者可用于有限远内的全部空间。第3章将研究一个理想四极磁体。
 \end{description}
 
 \subsection{球坐标}
 球坐标$(r, \theta, \varphi)$下的势方程：
 \begin{equation}\label{eqn:laplace sph1}
 \begin{split}
-  \nabla\cdot\nabla\phi=&\nabla^2\phi=\frac{1}{r^2}\frac{\partial}{\partial r}(r^2\frac{\partial \phi}{\partial r})
-  +\frac{1}{r^2\sin \theta}\frac{\partial}{\partial \theta}(\sin +\theta\frac{\partial \phi}{\partial \theta})\\
+  \nabla\cdot\nabla\phi=&\nabla^2\phi=\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial \phi}{\partial r}\right)
+  +\frac{1}{r^2\sin \theta}\frac{\partial}{\partial \theta}\left(\sin\theta\frac{\partial \phi}{\partial \theta}\right)\\
   &+\frac{1}{r^2\sin^2 \theta}\frac{\partial^2 \phi}{\partial \varphi^2}
 \end{split}
 \end{equation}
 
-类似的，$\phi$可以写成三个各仅含一个坐标的函数乘积的形式：
+类似的，$\nabla^2\phi$的解也可以写成三个各仅含一个坐标的函数的乘积形式:
 \begin{subequations}
 	\begin{align}
   \phi&=R(r)\Theta(\theta)\Phi(\varphi)\\
@@ -285,14 +282,17 @@ $p$是功率耗散密度，$w$是以电磁能存储的能量密度。
   \Phi(\varphi)&=D_1 \sin m\varphi +D_2 \cos m\varphi
   	\end{align}
 \end{subequations}
-
-其中，$A_1, A_2, C, D_1, D_2$都是常数。$P_n^0(\cos \theta)$，或者其简写$P_n(\cos\theta)$，就是所为的Legendre函数。
-它在设计空间部分均匀的螺管磁体时很有用，设计阶段可以假定场关于z轴($\theta=0$)对称。$P_n^m(\cos\theta)$，被称为
-伴随Legendre函数。它在最小化一个实际螺管磁体的设计``误差"时很有用。后面给出了一些有代表性的Legendre函数的表达式。
+其中，$A_1, A_2, C, D_1, D_2$都是常数。$P_n^0(\cos \theta)$，或其简写$P_n(\cos\theta)$，就是所谓的\textbf{勒让德函数}(Legendre Functions)。
+它在\textbf{设计}空间均匀螺管磁体时很有用，此类磁体在设计阶段常假定其磁场关于$z$轴($\theta=0$)对称。$P_n^m(\cos\theta)$，被称为\textbf{伴随勒让德函数}(Associated Legendre Functions)。它在最小化一个\textbf{实际}螺管磁体的设计``误差"时很有用。
+第3章将更详细的讨论由方程2.33导出的磁场表达式。
+表2.2给出了$n=0--8$时的$P_n(\cos\theta)$以及$n=1--4(0<m\le n)$时的$P_n^m(\cos\theta)$。
+表2.3给出了特定$n$和$m$组合下的$P_n^m(0)$。
+表2.4给出了方程2.33在笛卡尔坐标系下的解;
+这些表达式在设计和分析匀场电磁体和铁磁器件时，非常重要。
 
 \subsubsection{特例}
 \begin{description}
-  \item[n=0, m=0] 最简单的情况，$\phi_0\propto 1/r$。一个熟知的例子是点电荷($4\pi\epsilon_0$)产生的电场$\vec{E}=1/r^2 \vec{i_r}$($r>0$)。
+  \item[n=m=0] 此时给出最简单的解，$\phi_0\propto 1/r$。一个常见的例子是电量为$4\pi\epsilon_0$的点电荷产生的电场$\vec{E}=1/r^2 \vec{i_r}$($r>0$)。
   \item[n=1, m=0] 有两个解，分别是$\phi_1 \propto \cos\theta /r^2$和$\phi_1^\prime\propto r\cos\theta$。前者表示球外的偶极场，该场由球面上的电荷产生；
   后者是球内的均匀场。磁矩的偶极场亦可由$\phi_1$导出。
 \end{description}
@@ -300,7 +300,7 @@ $p$是功率耗散密度，$w$是以电磁能存储的能量密度。
 \subsection{正交坐标系下的微分算符}
 下面将给出四个矢量微分算符---grad($\nabla$)、div($\nabla\cdot$)、curl($\nabla\times$)、div grad($\nabla^2$)---在正交坐标系下的表达式。
 \subsubsection{笛卡尔坐标}
-三个正交坐标是：$x, y, z$
+三个正交坐标是：$x, y, z$。
 \begin{subequations}\label{eqn:field cart}
 	\begin{align}
 \nabla U=&\frac{\partial U}{\partial x}\vec{i_x} +\frac{\partial U}{\partial y}\vec{i_y}+\frac{\partial U}{\partial z}\vec{i_z}  \\
@@ -312,7 +312,7 @@ $p$是功率耗散密度，$w$是以电磁能存储的能量密度。
 \end{subequations}
 
 \subsubsection{柱坐标}
-三个正交坐标是：$r, \theta, z$
+三个正交坐标是：$r, \theta, z$。
 \begin{subequations}\label{eqn:field cyl}
 	\begin{align}
 \nabla U=&\frac{\partial U}{\partial r}\vec{i_r} +\frac{1}{r}\frac{\partial U}{\partial \theta}\vec{i_{\theta}}+\frac{\partial U}{\partial z}\vec{i_z} \\
@@ -324,7 +324,7 @@ $p$是功率耗散密度，$w$是以电磁能存储的能量密度。
 \end{subequations}
 
 \subsubsection{球坐标}
-三个正交坐标是：$r, \theta, \varphi$
+三个正交坐标是：$r, \theta, \varphi$。
 \begin{subequations}\label{eqn:field sphl}
 	\begin{align}
 \nabla U=&\frac{\partial U}{\partial r}\vec{i_r} +\frac{1}{r}\frac{\partial U}{\partial \theta}\vec{i_{\theta}}+\frac{1}{r\sin\theta}\frac{\partial U}{\partial \varphi}\vec{i_\varphi}\\
@@ -337,14 +337,16 @@ $p$是功率耗散密度，$w$是以电磁能存储的能量密度。
   	\end{align}
 \end{subequations}
 
+
 \subsection{Legendre函数}
-方程2.33c中的$P_n^m(\cos\theta)$在$m=0$时被称为n阶Legendre函数，即$P_n^0(\cos\theta)\equiv P_n(\cos\theta)\equiv P_n(u)$(此处
-令$u=\cos\theta$)。在$1\le m \le n$时，被称为伴随Legendre函数。$P_n^m(\cos\theta)\equiv P_n^m(u)$满足下面的微分方程：
+方程2.33c中的$P_n^m(\cos\theta)$在$m=0$时被称为$n$阶Legendre函数，即$P_n^0(\cos\theta)\equiv P_n(\cos\theta)\equiv P_n(u)$(此处
+令$u=\cos\theta$)。在$1\le m \le n$时，被称为伴随Legendre函数。$P_n^m(\cos\theta)\equiv P_n^m(u)$满足下面的关于$v$微分方程：
 \begin{equation}\label{eqn:legendre diff}
-  \frac{d}{du}[(1-u^2)\frac{dv}{du}]+[n(n+1)-\frac{m^2}{1-u^2}]v=0
+  \frac{d}{du}\left[(1-u^2)\frac{dv}{du}\right]+\left[n(n+1)-\frac{m^2}{1-u^2}\right]v=0
 \end{equation}
 
-如前所述，$P_n(u)$在解具有一定相对对称性的磁场(比如理想螺管)时特别有用。$P_n^m(u)$则在实际螺管(不完全、缺少旋转对称性)分析中十分有用。
+如前所述，$P_n(u)$在解具有\textbf{旋转对称性}的磁场(比如\textit{理想}螺管)时特别有用;
+$P_n^m(u)$则在\textit{实际}螺管(非理想、缺少旋转对称性)的磁场分析中十分有用。
 \begin{subequations}\label{eqn:legendre function1}
 	\begin{align}
 P_n(u)=&\left(\frac{1}{2^n n!}\right)\frac{d^n(u^2-1)^n}{du^n} \\
@@ -356,16 +358,19 @@ P_n^m(u)=&(1-u^2)^{m/2}\frac{d^mP_n(u)}{du^m}\\
 几个有用的Legendre函数以及伴随Legendre函数的递归形式如下：
 \begin{subequations}\label{eqn:legendre function2}
 	\begin{align}
-(n+1)P_(n+1)(u)-(2n+1)uP_n(u)+nP_(n-1)(u)=&0  \\
+(n+1)P_{(n+1)}(u)-(2n+1)uP_n(u)+nP_{(n-1)}(u)=&0  \\
 (n+1-m)P^m_{n+1}(u)-(2n+1)uP^m_n(u)+(n+m)P^m_{n-1}(u)=&0  \\
 P_n^{m+2}(u)-\frac{2(m+1)u}{\sqrt{(1-u^2)}}P_n^{m+1}+(n-m)(n+m-1)P_n^m(u)=&0
   	\end{align}
 \end{subequations}
-下面的几张表给出了常用的Legendre函数。
-%%
+
+表2.2列出了$n$取至8的Legendre函数$P_n(u)$以及$m(1\le m\le n)$取至4的的伴随Legendre函数$P_n^m(u)$。
+表2.3给出了$n$=2,4,6,8,10和$m$=0,2,4,6,8,10组合下的$P_n^m(0)$。
+表2.4给出了方程2.32在笛卡尔坐标系下的解。
+
+
 %%表2.2， 2.3, 2.4
 
-\textcolor[rgb]{1.00,0.00,0.00}{原书表2.2-2.4手工敲表很费劲，打算放到附录中。}
 
 \section{专题}
 \subsection{问题2.1：均匀场中的磁化球}
