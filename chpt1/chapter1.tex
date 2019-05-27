@@ -203,7 +203,7 @@ $\xi$反比于材料正常态的电阻率。两种常用的磁体级超导体---
   \begin{tabular}{|l|c|c||l|c|c|}
     \hline
     % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-    第I类 & $T_c$[K] & $\mu_0 H_c$\tnote{*}[T] & 第II类 & $T_c$[K] & $\mu_o H_{c2}$\tnote{*}[T] \\ \hline 
+    第I类 & $T_c$[K] & $\mu_o H_c$\tnote{*}\ [T] & 第II类 & $T_c$[K] & $\mu_o H_{c2}$\tnote{*}\ [T] \\ \hline 
     Ti & 0.39 & 0.0100 & Nb & 9.5 & 0.2\tnote{*} \\ \hline
     Zr & 0.55 & 0.0047 & NbTi & 9.8 & 10.5\tnote{$\dagger$} \\ \hline
     Zn & 0.85 & 0.0054 &NbN & 16.8 & 15.3\tnote{$\dagger$} \\ \hline
@@ -230,10 +230,10 @@ $\xi$反比于材料正常态的电阻率。两种常用的磁体级超导体---
   \centering
  \includegraphics[scale=0.6]{chpt1/figs/fig1.4.eps}
   \caption{
-几种代表性超导体$T_c$和发现年份。实线和空心圆圈：HTS；虚线和实心圆圈：LTS（2000年发现的$MgB_2$除外，
-其$	T_c$=39 K，被认为是HTS）。水平点线：若干制冷剂的沸点温度，自下而上分别为：
-He(4.22 K);$\mathrm{H_2}$(20.39 K);Ne(77.36 K);$\mathrm{N_2}$(77.36 K);Ar(87.28 K);
-$\mathrm{CH_4}$(111.6 K);$\mathrm{CF_4}$(145.4 K);$\mathrm{C_2H_6}$(184.6 K)。
+几种代表性超导体$T_c$和发现年份。实线和空心圆圈：高温超导体,HTS；虚线和实心圆圈：低温超导体,LTS（2000年发现的$\mathrm{MgB_2}$除外，其$	T_c=39\ \mathrm{K}$，被认为是HTS）。
+水平点线：若干制冷剂的沸点温度，自下而上分别为：$\mathrm{
+He(4.22\ K);H_2(20.39\ K);Ne(77.36\ K);N_2(77.36\ K);Ar(87.28\ K);
+CH_4(111.6\ K);CF_4(145.4\ K);C_2H_6(184.6\ K)}。$
 }
 \end{figure}
 
@@ -302,8 +302,8 @@ $\mathrm{Nb_3Sn}$的脆性及其承受应力不能超过$~0.3\%$的约束本质�
 
 \begin{table}[htbp]\small
   \centering
-  \caption{$\mathrm{Nb_3Sn}$和Bi-2223从材料到导体的发展阶段} \label{scstage}
-\begin{tabular}{|c|l|l|l|}
+  \caption{$\mathrm{Nb_3Sn}$和$\mathrm{Bi-2223}$从材料到导体的发展阶段} \label{scstage}
+\begin{tabular}{|c|l|c|c|}
   \hline
   阶段&事件& $\mathrm{Nb_3Sn}$ &Bi-2223 \\ \hline
 1 & 发现 & 1950年代早期& 1980年代晚期 \\ \hline
@@ -351,13 +351,13 @@ LTS磁体的基本温度通常是4.2 K；仅HTS磁体的运行温度可能高于
  \includegraphics[scale=0.6]{chpt1/figs/fig1.6.eps}
   \caption{
 温度对磁体的五个关键点的影响
-}\label{temperatureeffect}
+}
 \end{figure}
 
 通常，LTS的运行温区是1.8-10 K，HTS是20-80 K。LTS/HTS混合系统，运行温度由LTS决定，一般<10 K。
-图\ref{temperatureeffect}~中，保护与导体、稳定性与制冷用同一条曲线，仅表示趋势，并不代表实际上的重合。
+图1.6中，保护与导体、稳定性与制冷用同一条曲线，仅表示趋势，并不代表实际上的重合。
 
-图\ref{temperatureeffect}~表明，机械完整性的要求基本与运行温度无关。这个结论在运行温度到100 K之间都是适用的。
+图1.6表明，机械完整性的要求基本与运行温度无关。这个结论在运行温度到100 K之间都是适用的。
 在这个温区内，磁体的不同材料的热膨胀都可忽略。
 对给定磁场要求的磁体，安匝数与运行温度基本无关。因为已知的超导体的临界电流密度都是随温度上升而下降，
 而导体费用总是随温度上升而提高：降低制冷费用的期望收益一定要与导体费用的增加值作比较。
@@ -508,14 +508,13 @@ H_c(T)=H_{c_0}\left[1-\left(\frac{T}{T_c}\right)^2 \right]\tag{1.7}
 \end{align*}
 
 我们可以根据第I类超导体实验测得的$\gamma$和$T_c$通过1.6式预测$H_{c_0}$。
-下表给出了由公式计算的和实测的$\mu_0 H_{c_0}$数据；同时还给出了一些其他实测数据。
+表1.5给出了由公式计算的和实测的$\mu_0 H_{c_0}$数据；同时还给出了一些其他实测数据。
 %表1.5
 \begin{table}[htbp]\small
   \centering
   \caption{$H_{c_0}$：公式\ref{eqn:1.6}计算值和实测值} \label{tb:eqn1.6andexp}
 \begin{tabular}{|c||c|c|c|c|c|c|}
   \hline
-  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
 第I类超导体&$\rho [\mathrm{g/cm^3}]$&$M [\mathrm{g/mole}]$&$\gamma [\mathrm{J/m^3K^2}]$&$T_c [\mathrm{K}]$&$\mu_0 H_{c_0}$计算&$\mu_0 H_{c_0}$实测 \\ \hline \hline
 Ti&4.53&47.88&316.8&0.39&5.6&10.0 \\ \hline
 Zr&6.49&91.22&199.2&0.55&6.1&4.7\\ \hline
@@ -595,7 +594,7 @@ b = a − \frac{3\gamma}{T_c^2} \tag{S1.19}
 \end{figure}
 
 e) 超导体被加热，首先必须先进入正常态。外场提供磁能$\mu_0 H_c^2(T_i)/2$；由于转变过程要吸热
-$T_i[S_n(T-i)-S_s(T_i)]$，故还必须提供吸收能$H_{ec}$。图\ref{fig:tsplot}中的横虚线就是转变过程。于是，
+$T_i[S_n(T_i)-S_s(T_i)]$，故还必须提供吸收能$H_{ec}$。图1.7中的横虚线就是转变过程。于是，
 \begin{align*}
 \frac{1}{2}\mu_0 H_{ec}^2(T_i)=\frac{1}{2}\mu_0 H_c^2(T_i)+T_i[S_n(T_i)-S_s(T_i)]\tag{S1.21}
 \end{align*}
@@ -607,10 +606,10 @@ $T_i[S_n(T-i)-S_s(T_i)]$，故还必须提供吸收能$H_{ec}$。图\ref{fig:tsp
 
 把S1.9代入上式，并应用S1.19，得到
 \begin{align*}
-frac{1}{2}\mu_0 H_{ec}^2(T_i)=\frac{1}{2}\mu_0 H_c^2(T_i)+2\mu_0 H_{c_0}^2\left(\frac{T_i}{T_c}\right)^2 \left[1-\left(\frac{T_i}{T_c}\right)^2 \right] \tag{S1.23}
+\frac{1}{2}\mu_0 H_{ec}^2(T_i)=\frac{1}{2}\mu_0 H_c^2(T_i)+2\mu_0 H_{c_0}^2\left(\frac{T_i}{T_c}\right)^2 \left[1-\left(\frac{T_i}{T_c}\right)^2 \right] \tag{S1.23}
 \end{align*}
 
-联立式\ref{eqn:1.7}，得到
+联立式1.7，得到
 \begin{align*}
 H_{ec}^2(T_i)=H_c^2(T_i)+4H_c^2(T_i)\frac{(T_i/T_c)^2}{1-(T_i/T_c)^2} \tag{S1.24}
 \end{align*}
@@ -707,78 +706,78 @@ d) 梯度幅值直接和成像的空间解析度相关。更高的梯度相应�
 $120\ \mathrm{(T/m)/s}$。
 
 \section*{参考文献}
-[1.1] J.K. Hulm and B.T. Matthias, “Overview of superconducting materials development,”
+[1.1] J.K. Hulm and B.T. Matthias, ``Overview of superconducting materials development,”
 in Superconductor Materials Science—Metallurgy, Fabrication, and Applications,
 Eds., S. Foner and B.B. Schwartz (Plenum Press, NewYork, 1981).
 
-[1.2] A.A. Abrikosov, “On the magnetic properties of superconductors of the second
+[1.2] A.A. Abrikosov, ``On the magnetic properties of superconductors of the second
 type (English translation),” Zh. Eksp. Teor. Fiz. (Soviet Union) 5, 1174 (1957).
 
-[1.3] U. Essmann and H. Tr¨auble, “The direct observation of individual flux lines in
+[1.3] U. Essmann and H. Tr¨auble, ``The direct observation of individual flux lines in
 Type II superconductors,” Phys. Lett. 24A, 526 (1967).
 
-[1.4] Y.B. Kim, C.F. Hempstead, and A.R. Strnad, “Magnetization and critical supercurrents,” Phys. Rev. 129, 528 (1963).
+[1.4] Y.B. Kim, C.F. Hempstead, and A.R. Strnad, ``Magnetization and critical supercurrents,” Phys. Rev. 129, 528 (1963).
 
-[1.5] J.K. Hoffer, “The Initiation and propagation of normal zones in a force-cooled
+[1.5] J.K. Hoffer, ``The Initiation and propagation of normal zones in a force-cooled
 tubular superconductor,” IEEE Trans. Mag. 15, 331 (1979).
 
-[1.6] C. Marinucci, M.A. Hilal, J. Zellweger, and G. Vecsey, “Quench studies of the
+[1.6] C. Marinucci, M.A. Hilal, J. Zellweger, and G. Vecsey, ``Quench studies of the
 Swiss LCT conductor,” Proc. 8th Symp. on Eng. Prob. Fus. Res., 1424 (1979).
 
-[1.7] V.D. Arp, “Stability and thermal quenches in force-cooled superconducting cables,”
+[1.7] V.D. Arp, ``Stability and thermal quenches in force-cooled superconducting cables,”
 Proc. of 1980 Superconducting MHD Magnet Design Conference, MIT, 142(1980).
 
-[1.8] J. Benkowitsch and G. Kraft, “Numerical analysis of heat-induced transients in
+[1.8] J. Benkowitsch and G. Kraft, ``Numerical analysis of heat-induced transients in
 forced flow helium cooling systems,” Cryogenics 20, 209 (1980).
 
-[1.9] E.A. Ibrahim, “Thermohydraulic Analysis of Internally Cooled Superconductors,”
+[1.9] E.A. Ibrahim, ``Thermohydraulic Analysis of Internally Cooled Superconductors,”
 Adv. Cryo. Eng. 27, 235 (1982).
 
-[1.10] C. Marinucci, “A numerical model for the analysis of stability and quench characteristics of forced-flow cooled superconductors,” Cryogenics 23, 579 (1983).
+[1.10] C. Marinucci, ``A numerical model for the analysis of stability and quench characteristics of forced-flow cooled superconductors,” Cryogenics 23, 579 (1983).
 
-[1.11] M.C.M. Cornellissen and C.J. Hoogendoorn, “Propagation velocity for a force
+[1.11] M.C.M. Cornellissen and C.J. Hoogendoorn, ``Propagation velocity for a force
 cooled superconductor,” Cryogenics 25, 185 (1985).
 
-[1.12] A.F. Volkov, L.B. Dinaburg, and V.V. Kalinin, “Simulation of helium pressure
+[1.12] A.F. Volkov, L.B. Dinaburg, and V.V. Kalinin, ``Simulation of helium pressure
 rise in hollow conductor in case of superconductivity loss,” Proc. 12th Int. Cryo.
 Eng. Conf. (Southampton, UK), 922 (1988).
 
-[1.13] R.L. Wong, “Program CICC flow and heat transfer in cable-in-conduit conductors,”
+[1.13] R.L. Wong, ``Program CICC flow and heat transfer in cable-in-conduit conductors,”
 Proc. 13th Symp. Fus. Tech. (Knoxville, TN), 1134 (1989).
 
-[1.14] L. Bottura and O.C. Zienkiewicz, “Quench analysis of large superconducting magnets. Part I: model description,” Cryogenics 32, 659 (1992).
+[1.14] L. Bottura and O.C. Zienkiewicz, ``Quench analysis of large superconducting magnets. Part I: model description,” Cryogenics 32, 659 (1992).
 
-[1.15] C.A. Luongo, C.-L. Chang, and K.D. Partain, “A computational model applicable
+[1.15] C.A. Luongo, C.-L. Chang, and K.D. Partain, ``A computational model applicable
 to the SMES/CICC,” IEEE Trans. Mag. 30, 2569 (1994).
 
-[1.16] A. Shajii and J.P. Freidberg, “Quench in superconducting magnets. I. Model and
-implementation,” J. Appl. Phys. 76, 3149 (1994); “Quench in superconducting
+[1.16] A. Shajii and J.P. Freidberg, ``Quench in superconducting magnets. I. Model and
+implementation,” J. Appl. Phys. 76, 3149 (1994); ``Quench in superconducting
 magnets. II. Analytic Solution,” J. Appl. Phys. 76, 3159 (1994).
 
-[1.17] R. Zanino, S. De Palo, and L. Bottura, “A two-fluid code for the thermohydraulic
+[1.17] R. Zanino, S. De Palo, and L. Bottura, ``A two-fluid code for the thermohydraulic
 transient analysis of CICC superconducting magnets,” J. Fus. Energy 14,
 25 (1995).
 
-[1.18] L. Bottura, “A numerical model for the simulation of quench in the ITER magnets,”
+[1.18] L. Bottura, ``A numerical model for the simulation of quench in the ITER magnets,”
 J. Comp. Phys. 125, 26 (1996).
 
-[1.19] L Bottura, C. Rosso, and M. Breschi, “A general model for thermal, hydraulic,
+[1.19] L Bottura, C. Rosso, and M. Breschi, ``A general model for thermal, hydraulic,
 and electric analysis of superconducting cables,” Cryogenics 40, 617 (2000).
 
-[1.20] Q. Wang, P. Weng, and M. Hec, “Simulation of quench for the cable-in-conduitconductor in HT-7U superconducting Tokamak magnets using porous medium
+[1.20] Q. Wang, P. Weng, and M. Hec, ``Simulation of quench for the cable-in-conduitconductor in HT-7U superconducting Tokamak magnets using porous medium
 model,” Cryogenics 44, 81 (2004).
 
 [1.21] T. Inaguchi, M. Hasegawa, N. Koizumi, T. Isono, K. Hamada, M. Sugimoto, and
-Y. Takahashi, “Quench analysis of an ITER 13T-40kA Nb3Sn coil (CS insert),”
+Y. Takahashi, ``Quench analysis of an ITER 13T-40kA Nb3Sn coil (CS insert),”
 Cryogenics 44, 121 (2004).
 
-[1.22] L. Bottura, “Numerical aspects in the simulation of thermohydraulic transients
+[1.22] L. Bottura, ``Numerical aspects in the simulation of thermohydraulic transients
 in CICC’s,” J. Fus. Energy 14, 13 (1995).
 
-[1.23] L. Bottura and A. Shajii, “Numerical quenchback in thermofluid simulations of
+[1.23] L. Bottura and A. Shajii, ``Numerical quenchback in thermofluid simulations of
 superconducting magnets,” Int. J. Num. Methods Eng. 43, 1275 (1998).
 
-[1.24] L. Bottura, “Modelling stability in superconducting cables,” Physica C 316 (1998).
+[1.24] L. Bottura, ``Modelling stability in superconducting cables,” Physica C 316 (1998).
 
 [1.25] A.B. Pippard, The Elements of Classical Thermodynamics (Cambridge University
 Press, Cambridge, 1966).
