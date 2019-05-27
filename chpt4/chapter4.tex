@@ -37,7 +37,6 @@ LTS和HTS磁体都得以发展。一方面，干式低温系统在运行、维�
   \caption{湿式和干式超导磁体的冷却方式} \label{coolingmethod}
 \begin{tabular}{|c|c|c|}
   \hline
-  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
 \textbf{冷却方式}&\textbf{冷却-导体耦合性}&\textbf{传热方式} \\ \hline \hline
 浸泡冷却，cryostable & 好；全部导体& 对流\\ \hline
 浸泡冷却，绝热 & 基本不存在 &(磁体绕组表面的)传导 \\ \hline
@@ -71,8 +70,7 @@ LTS和HTS磁体都得以发展。一方面，干式低温系统在运行、维�
   \caption{沸腾传热参数} \label{boilingpara}
 \begin{tabular}{|c||c|c|c|c|c|}
   \hline
-  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-\textbf{液体}&$T_a[K]$&$h_l[J/cm^3]$&$q_{pk}[W/cm^2]$&$\Delta T_{pk}[K]$&$q_{fm}[W/cm^2]$ \\ \hline \hline
+液体&$T_s$[K]&$h_\ell[\mathrm{J/cm^3}]$&$q_{pk}[\mathrm{W/cm^2}]$&$\Delta T_{pk}$[K]&$q_{fm}[\mathrm{W/cm^2}]$ \\ \hline \hline
 氦&4.22&2.6&$\sim 1$&$\sim 1$&$\sim 0.3$\\ \hline
 氢&20.39&31.3&$\sim 10$&$\sim 5$&$\sim 0.5$ \\ \hline
 氖&27.09&104&$\sim 15$&$\sim 10$&$\sim 1$\\ \hline
@@ -295,40 +293,37 @@ $T_{op}$。我们用两步来满足这个需求：1) 如果$T_{op}<27\ \mathrm{K
 从表4.3，我们可以清晰的看到，对一个LH2冷却的磁体，采用LN2预冷极大的节省了LH2。
 很明显，几种制冷工质的体积汽化潜热的巨大差异---LHe的2.6[$\mathrm{J/cm^3}$]，LNe的104[$\mathrm{J/cm^3}$]，LN2的161[$\mathrm{J/cm^3}$]---决定了所需的体积量。
 
-\colorbox{red}{表4.3}
-\begin{table}[]%表4.3 需要加\usepackage{multirow}
-	  \centering
-	\caption{湿式和干式超导磁体的冷却方式} \label{coolingmethod}
-	\begin{tabular}{|c|c|c|c|c|c|c|c|}
-		\hline
-		
-		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}T\\ {[}K{]}\end{tabular}} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}h\\ {[}k{]}\end{tabular}} & \multicolumn{2}{c|}{LHe Required {[}liter{]}}                                                 & \multicolumn{2}{c|}{LNe required {[}liter{]}}                                                 & \multicolumn{2}{c|}{LN Required {[}liter{]}}                                                  \\ \cline{3-8} 
-		&                                                                      & \begin{tabular}[c]{@{}c@{}}a\\ b\end{tabular} & \begin{tabular}[c]{@{}c@{}}q\\ q\end{tabular} & \begin{tabular}[c]{@{}c@{}}a\\ b\end{tabular} & \begin{tabular}[c]{@{}c@{}}q\\ q\end{tabular} & \begin{tabular}[c]{@{}c@{}}a\\ b\end{tabular} & \begin{tabular}[c]{@{}c@{}}q\\ q\end{tabular} \\ \hline
-		\textbf{300}                                                         & 79.6                                                                 & 800                                           & 30,000                                        & 290                                           & 770                                           & 300                                           & 460                                           \\ \hline
-		280                                                                  & 72.0                                                                 & 760                                           & 28,000                                        & 270                                           & 700                                           & 270                                           & 420                                           \\ \hline
-		240                                                                  & 56.9                                                                 & 670                                           & 22,000                                        & 230                                           & 550                                           & 230                                           & 320                                           \\ \hline
-		200                                                                  & 42.4                                                                 & 570                                           & 16,000                                        & 190                                           & 410                                           & 170                                           & 230                                           \\ \hline
-		180                                                                  & 35.3                                                                 & 520                                           & 14,000                                        & 170                                           & 340                                           & 150                                           & 190                                           \\ \hline
-		160                                                                  & 28.5                                                                 & 460                                           & 11,000                                        & 140                                           & 280                                           & 120                                           & 140                                           \\ \hline
-		140                                                                  & 22.1                                                                 & 390                                           & 8,500                                         & 120                                           & 210                                           & 90                                            & 100                                           \\ \hline
-		120                                                                  & 16.1                                                                 & 320                                           & 6,200                                         & 90                                            & 160                                           & 60                                            & 66                                            \\ \hline
-		100                                                                  & 10.6                                                                 & 240                                           & 4,100                                         & 66                                            & 100                                           & 31                                            & 33                                            \\ \hline
-		90                                                                   & 8.22                                                                 & 200                                           & 3,200                                         & 53                                            & 78                                            & 17                                            & 17                                            \\ \hline
-		\textbf{77}                                                          & 5.90                                                                 & 150                                           & 2,100                                         & 37                                            & 51                                            & 0                                             & 0                                             \\ \hline
-		70                                                                   & 4.13                                                                 & 130                                           & 1,600                                         & 29                                            & 39                                            & -                                             & -                                             \\ \hline
-		60                                                                   & 2.58                                                                 & 90                                            & 1，000                                         & 19                                            & 24                                            & -                                             & -                                             \\ \hline
-		50                                                                   & 1.40                                                                 & 57                                            & 550                                           & 11                                            & 12                                            & -                                             & -                                             \\ \hline
-		40                                                                   & 0.61                                                                 & 31                                            & 240                                           & 4.4                                           & 4.8                                           & -                                             & -                                             \\ \hline
-		30                                                                   & 0.196                                                                & 13                                            & 77                                            & 0.7                                           & 0.7                                           & -                                             & -                                             \\ \hline
-		\textbf{27}                                                          & 0.124                                                                & 9.0                                           & 50                                            & 0                                             & 0                                             & -                                             & -                                             \\ \hline
-		20                                                                   & 0.034                                                                & 3.4                                           & 13                                            & -                                             & -                                             & -                                             & -                                             \\ \hline
-		15                                                                   & 0.0107                                                               & 1.3                                           & 4.0                                           & -                                             & -                                             & -                                             & -                                             \\ \hline
-		10                                                                   & 0.0024                                                               & 0.4                                           & 0.9                                           & -                                             & -                                             & -                                             & -                                             \\ \hline
-	\end{tabular}
+\begin{table}[htbp]\small
+\centering
+\caption{液体制冷工质(LHe, LNe, LN2)在``理想"模式和``浸泡"模式下将1000 kg铜块从$T_i$分别冷却至4.2 K(LH2)、27 K(LNe)、77 K(LN2)的所需量}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline		
+% \multirow{2}{*}{$T_i$\\[K]} & \multirow{2}{*}{$h_{p_{cu}}$\\[kJ/kg]} & \multicolumn{2}{l|}{c所需LHe量[L]} & \multicolumn{2}{l|}{所需LNe量[L]} & \multicolumn{2}{l|}{所需LN2量[L]} \\ \cline{3-8}   
+%     &      & f``理想"\\(方程4.2) & ``浸泡"\\(方程4.3) & ``理想"\\(方程4.2) & ``浸泡"\\(方程4.3) & ``理想"\\(方程4.2) & ``浸泡"\\(方程4.3) \\ \hline
+\multirow{2}{*}{a} & \multirow{2}{*}{b} & \multicolumn{2}{l|}{c} & \multicolumn{2}{l|}{d} & \multicolumn{2}{l|}{e} \\ \cline{3-8} 
+                   &                    & f          & g         & h          & i         & j          & k         \\ \hline
+\textbf{300}  & 79.6 & 800  & 30,000 & 290   & 770    & 300  & 460 \\ \hline
+280 & 72.0 & 760 & 28,000 & 270 & 700 & 270 & 420 \\ \hline
+240 & 56.9 & 670 & 22,000 & 230 & 550 & 230 & 320 \\ \hline
+200 & 42.4 & 570 & 16,000 & 190 & 410 & 170 & 230 \\ \hline
+180 & 35.3 & 520 & 14,000 & 170 & 340 & 150 & 190 \\ \hline
+160 & 28.5 & 460 & 11,000 & 140 & 280 & 120 & 140 \\ \hline
+140 & 22.1 & 390 & 8,500 & 120 & 210 & 90 & 100 \\ \hline
+120 & 16.1 & 320 & 6,200 & 90 & 160 & 60 & 66 \\ \hline
+100 & 10.6 & 240 & 4,100 & 66 & 100 & 31 & 33 \\ \hline
+90 & 8.22 & 200 & 3,200 & 53 & 78 & 17 & 17 \\ \hline
+\textbf{77} & 5.90 & 150 & 2,100 & 37 & 51 & 0 & 0 \\ \hline
+70 & 4.13 & 130 & 1,600 & 29 & 39 & - & - \\ \hline
+60 & 2.58 & 90 & 1，000 & 19 & 24 & - & - \\ \hline
+50 & 1.40 & 57 & 550 & 11 & 12 & - & - \\ \hline
+40 & 0.61 & 31 & 240 & 4.4 & 4.8 & - & - \\ \hline
+30 & 0.196 & 13 & 77 & 0.7 & 0.7 & - & - \\ \hline
+\textbf{27} & 0.124 & 9.0 & 50 & 0 & 0 & - & - \\ \hline
+20 & 0.034 & 3.4 & 13 & - & - & - & - \\ \hline
+15 & 0.0107 & 1.3 & 4.0 & - & - & - & - \\ \hline
+10 & 0.0024 & 0.4 & 0.9 & - & - & - & - \\ \hline
+\end{tabular}
 \end{table}
-
-
-
 
 \subsection{讨论4.3：``制冷机冷却"HTS磁体}
 本节我们研究一个干式HTS磁体，它由制冷机将其从初始温度$T_i$经过一个总的冷却时间$\tau_{cu}$冷却至运行温度$T_{op}$。
@@ -352,26 +347,24 @@ $T_{op}$。我们用两步来满足这个需求：1) 如果$T_{op}<27\ \mathrm{K
 	\includegraphics[scale=0.5]{chpt4/figs/fig4.7.eps}
 	\caption{磁体制冷机的$Q_r(T)$曲线。}
 \end{figure}
-	
-\colorbox{red}{表4.4}
 
-\begin{table}[]%表4.4
-	  \centering
-	\caption{湿式和干式超导磁体的冷却方式} \label{coolingmethod}
-	\begin{tabular}{|c|c|c|c|}
-		\hline
-		T[$\ \mathrm{K}$ ]  & ${Q_r(T)[\ \mathrm{W}]}$  & $C_{cu}[\ \mathrm{J/m^3K}]$    & $\kappa(T)[\ \mathrm{s/m^3K}]$   \\ \hline
-		300 & 100                     & $3.44\times10^6$ & $3.44\times10^4$ \\
-		250 & 87                      & $3.32\times10^6$ & $3.82\times10^4$\\
-		200 & 75                      & $3.17\times10^6$ & $4.23\times10^4$ \\
-		150 & 63                      & $2.87\times10^6$ & $4.56\times10^4$ \\
-		100 & 50                      & $2.26\times10^6$ & $4.52\times10^4$ \\
-		77  & 40                      & $1.75\times10^6$ & $4.38\times10^4$ \\
-		50  & 28                      & $0.88\times10^6$ & $3.14\times10^4$ \\
-		30  & 19                      & $0.24\times10^6$ & $1.26\times10^4$ \\
-		20  & 15                      & $0.69\times10^6$ & $0.46\times10^4$ \\
-		10  & \multicolumn{1}{c|}{10} & $0.08\times10^6$ & $0.08\times10^4$ \\ \hline
-	\end{tabular}
+\begin{table}[htbp]\small
+ \centering
+\caption{$Q_r(T),C_{cu}(T)$和$\kappa(T)\equiv C_{cu}(T)/Q_r(T)$}
+\begin{tabular}{|c|c|c|c|}
+\hline
+T[$\ \mathrm{K}$ ]  & ${Q_r(T)[\ \mathrm{W}]}$  & $C_{cu}[\ \mathrm{J/m^3K}]$    & $\kappa(T)[\ \mathrm{s/m^3K}]$   \\ \hline
+300 & 100 & $3.44\times10^6$ & $3.44\times10^4$ \\
+250 & 87 & $3.32\times10^6$ & $3.82\times10^4$\\
+200 & 75 & $3.17\times10^6$ & $4.23\times10^4$ \\
+150 & 63 & $2.87\times10^6$ & $4.56\times10^4$ \\
+100 & 50 & $2.26\times10^6$ & $4.52\times10^4$ \\
+77 & 40 & $1.75\times10^6$ & $4.38\times10^4$ \\
+50 & 28 & $0.88\times10^6$ & $3.14\times10^4$ \\
+30 & 19 & $0.24\times10^6$ & $1.26\times10^4$ \\
+20 & 15 & $0.69\times10^6$ & $0.46\times10^4$ \\
+10 & \multicolumn{1}{c|}{10} & $0.08\times10^6$ & $0.08\times10^4$ \\ \hline
+\end{tabular}
 \end{table}
 
 表4.4列出了$Q_r(T)$，$C_{cu}(T)$和$\kappa(T)\equiv C_{cu}(T)/Q_{r}(T)$在给定温度下的值。
@@ -391,23 +384,21 @@ M_{cu}&=\frac{\varrho_{cu}\tau_{cn}}{\int_{T_{op}}^{T_i}\kappa(T)dT}
 表4.5给出的结果清晰的指出了对于给定的$\tau_{cu}$，如果我们首先将磁体冷却至77 K，将可以极大的增加$\~{M}_{cu}$。
 表4.3可以用于估计实现这个过程的所需LN2量。
 
-\colorbox{red}{表4.5}
-
-\begin{table}[]%表4.5   需要加\usepackage{multirow}
-	  \centering
-	\caption{湿式和干式超导磁体的冷却方式} \label{coolingmethod}
-	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-		\hline
-		$T_i[\mathrm{K}]$                    & $T_{op}[\mathrm{K}]$  & \multicolumn{8}{c|}{$\tilde{M}_{cu}[\mathrm{kg}]$}                           \\ \hline
-		\multicolumn{2}{|c|}{$\tau_{cn}[hour/day]\rightarrow$}   & 1   & 2   & 4    & 12  & 1   & 2    & 10   & 20    \\ \hline
-		\multirow{4}{*}{300} & 77 & 3.4 & 6.8 & 13.6 & 41  & 82  & 164  & 820  & $1640^*$  \\ \cline{2-10} 
-		& 50 & 3.0 & 6.1 & 12.1 & 36  & 73  & 147  & 735  & $1470^*$  \\ \cline{2-10} 
-		& 30 & 2.9 & 5.8 & 11.6 & 35  & 70  & 140  & 700  & $1400^*$  \\ \cline{2-10} 
-		& 10 & 2.9 & 5.7 & 11.5 & 34  & 69  & 139  & 695  & $1390^*$  \\ \hline
-		\multirow{3}{*}{77}  & 50 & 29  & 58  & 118  & 352 & 704 & $1410^*$ & $7040^*$ & $14100^*$ \\ \cline{2-10} 
-		& 30 & 20  & 40  & 80   & 242 & 484 & 968  & $4840^*$ & $9680^*$  \\ \cline{2-10} 
-		& 10 & 19  & 38  & 76   & 227 & 453 & 906  & $4530^*$ & $9060^*$  \\ \hline
-	\end{tabular}
+\begin{table}[htbp]\small
+ \centering
+\caption{$\tau_{cn},T_i,T_{op}$对应的$\tilde{M}_{cu}$，其中$Q_r(T)$如图4.7}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+$T_i[\mathrm{K}]$& $T_{op}[\mathrm{K}]$&\multicolumn{8}{c|}{$\tilde{M}_{cu}[\mathrm{kg}]$}   \\ \hline
+\multicolumn{2}{|c|}{$\tau_{cn}[小时/\textbf{天}]\rightarrow$}   & 1   & 2   & 4    & 12  & \textbf{1}  &\textbf{2} &\textbf{10}&\textbf{20}\\ \hline
+\multirow{4}{*}{300} & 77 & 3.4 & 6.8 & 13.6 & 41 & 82 & 164 & 820 & $1640^*$ \\ \cline{2-10} 
+& 50 & 3.0 & 6.1 & 12.1 & 36 & 73 & 147 & 735 & $1470^*$ \\ \cline{2-10} 
+& 30 & 2.9 & 5.8 & 11.6 & 35 & 70 & 140 & 700 & $1400^*$ \\ \cline{2-10} 
+& 10 & 2.9 & 5.7 & 11.5 & 34 & 69 & 139 & 695 & $1390^*$ \\ \hline
+\multirow{3}{*}{77} & 50 & 29 & 58 & 118 & 352 & 704 & $1410^*$ & $7040^*$ & $14100^*$ \\ \cline{2-10} 
+& 30 & 20 & 40 & 80 & 242 & 484 & 968 & $4840^*$ & $9680^*$ \\ \cline{2-10} 
+& 10 & 19 & 38 & 76 & 227 & 453 & 906 & $4530^*$ & $9060^*$ \\ \hline
+\end{tabular}
 \end{table}
 
 \subsection{讨论4.4：超流}
@@ -435,19 +426,18 @@ He II的搞热导率不允许液体中存在足以引起汽化的温度梯度。
 	\caption{常规氦($He^4$)的相图。}
 \end{figure}
 
-\colorbox{red}{表4.6}
-\begin{table}[]%表4.6
-	  \centering
-	\caption{湿式和干式超导磁体的冷却方式} \label{coolingmethod}
+\begin{table}[htbp]\small
+ \centering
+\caption{He II、He I、铜、水、空气的热导率和粘性}
 	\begin{tabular}{|c|c|c|}
-		\hline
-		Material       & k{[}W/mK{]} & $\nu[\mu Pa s]$     \\ \hline
-		HL II          & $\sim100,000^*$         & $0.01\sim0.1$  \\ \hline
-		He I(4.2,liq.) & 0.02        & $\sim3$     \\ \hline
-		Copper(4.2K)   & $\sim400$         & -     \\ \hline
-		Water          & $\sim1$           & $\sim1,000$ \\ \hline
-		Air(293K)      & $\sim0.05$        & $\sim20$    \\ \hline
-	\end{tabular}
+\hline
+材料& k[W/mK] & $\nu[\mu Pa s]$ \\ \hline
+He II & $\sim100,000^*$ & $0.01\sim0.1$ \\ \hline
+He I (4.2 K，液态) & 0.02 & $\sim3$ \\ \hline
+铜(4.2 K) & $\sim400$ & - \\ \hline
+水& $\sim1$ & $\sim1,000$ \\ \hline
+空气(293 K) & $\sim0.05$ & $\sim20$ \\ \hline
+\end{tabular}
 \end{table}
 
 Bon Mardion、Claudet和Seyfert研究了He II通过窄通道的热流密度[4.21]。
@@ -492,20 +482,20 @@ q_k=a_k(T_{cd}^{nk}-T_{b}^{nk})
 
 表4.7给出了$a_k$和$n_k$的典型值。
 
-\textcolor{red}{表4.7}
-\begin{table}[]
-	  \centering
-	\caption{湿式和干式超导磁体的冷却方式} \label{coolingmethod}
-	\begin{tabular}{|l|l|l|}
+
+\begin{table}[htbp]\small
+ \centering
+\caption{Kapitza热阻近似值}
+	\begin{tabular}{|l|c|c|}
 		\hline
-		Metal(surface)         & $a_k[\ \mathrm{W/cm^2K^{n_k}}]$    & $n_k$   \\ \hline
-		Aluminum(polished)     & 0.05 & 3.4 \\ \hline
-		Copper(polished)       & 0.02 & 4.0 \\ \hline
-		Copper(polished)       & 0.02 & 3.8 \\ \hline
-		Copper(as-received)    & 0.05 & 2.8 \\ \hline
-		pper(solder-coated)    & 0.08 & 3.4 \\ \hline
-		Copper(varnish-coated) & 0.07 & 2.1 \\ \hline
-		Silver(polished)       & 0.06 & 3.0 \\ \hline
+金属(表面) & $a_k[\mathrm{W/cm^2K^{n_k}}]$ & $n_k$ \\ \hline
+铝(抛光) & 0.05 & 3.4 \\ \hline
+铜(抛光) & 0.02 & 4.0 \\ \hline
+铜(退火，抛光) & 0.02 & 3.8 \\ \hline
+铜(来样) & 0.05 & 2.8 \\ \hline
+铜(表面涂焊料) & 0.08 & 3.4 \\ \hline
+铜(表面涂漆) & 0.07 & 2.1 \\ \hline
+银(抛光) & 0.06 & 3.0 \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -910,7 +900,23 @@ q_r=\epsilon_r\sigma(T_{wm}^4-T_{cl}^4)
 \mbox{80 K板对腔体：} &Q_r\simeq (162\times 10^{-3}\ \mathrm{W/m^2})(2.8\ \mathrm{m^2})\simeq 3\ \mathrm{mW}
 \end{align*}
 
-\textcolor{red}{表4.8}
+\begin{table}[htbp]\small
+ \centering
+\caption{辐射热通量的典型值}
+\begin{tabular}{|c|c|c|c|}
+\hline
+材料& $T_{wm}\rightarrow T_{cl}$\\K & $\epsilon_r $ & $q_r$\\ $\mathrm{mW/m^2}$\\ \hline
+\begin{tabular}[c]{@{}c@{}}铜，来料\end{tabular} & \begin{tabular}[c]{@{}c@{}}$20\rightarrow 4$\\ $80\rightarrow 4$\\ $300\rightarrow 80$\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.03\\ 0.06\\ 0.12\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.3\\ 140\\ 55,000\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}c@{}}铜，机械抛光\end{tabular} & \begin{tabular}[c]{@{}c@{}}$20\rightarrow 4$\\ $80\rightarrow 4$\\ $300\rightarrow 80$\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.01\\ 0.02\\ 0.06\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.1\\ 46\\ 27,000\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}c@{}}不锈钢，来料 \end{tabular} & \begin{tabular}[c]{@{}c@{}}$20\rightarrow4$\\ $80\rightarrow4$\\ $300\rightarrow80$\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.06\\ 0.12\\ 0.34\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.54\\ 280\\ 155,000\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}c@{}}不锈钢，机械抛光 \end{tabular} & \begin{tabular}[c]{@{}c@{}}$20\rightarrow4$\\ $80\rightarrow4$\\ $300\rightarrow80$\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.04\\ 0.07\\ 0.12\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.4\\ 162\\ 55,000\end{tabular} \\ \hline
+不锈钢，电抛光 & \begin{tabular}[c]{@{}c@{}}$20\rightarrow4$\\ $80\rightarrow4$\\ $300\rightarrow80$\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.03\\ 0.06\\ 0.10\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.3\\ 140\\ 46,000\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}c@{}}铝，来料\end{tabular} & \begin{tabular}[c]{@{}c@{}}$20\rightarrow4$\\ $80\rightarrow4$\\ $300\rightarrow80$\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.04\\ 0.07\\ 0.49\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.4\\ 162\\ 224,000\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}c@{}}铝，机械抛光\end{tabular} & \begin{tabular}[c]{@{}c@{}}$20\rightarrow4$\\$80\rightarrow4$\\ $300\rightarrow80$\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.03\\ 0.06\\ 0.10\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.3\\ 140\\ 46,000\end{tabular} \\ \hline
+铝，电抛光& \begin{tabular}[c]{@{}c@{}}$20\rightarrow4$\\ $80\rightarrow4$\\ $300\rightarrow80$\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.02\\ 0.03\\ 0.08\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.2\\ 70\\ 37,000\end{tabular} \\ \hline
+超级绝热& \begin{tabular}[c]{@{}c@{}}$20\rightarrow4$\\ $80\rightarrow4$\\ $300\rightarrow80$\end{tabular} & \begin{tabular}[c]{@{}c@{}}$\leq10^*$\\ $40^*$\\ $60^*$\end{tabular} & \begin{tabular}[c]{@{}c@{}}$2\dagger\ddagger$\\ $40\dagger$\\ $2,500\dagger$\end{tabular} \\ \hline
+\end{tabular}
+\end{table}
 
 我们还可以计算对着300 K表面的80 K辐射屏的热输入；对着300 K表面的80 K板的总面积是$11.7\ \mathrm{m^2}$。
 同样，我们假设平行板的形状相同，即对着80 K板的300 K板的总面积也是$11.7\ \mathrm{m^2}$。
@@ -983,7 +989,19 @@ $\eta_g$不仅与温度$T_{cl}$和$T_{wm}$有关，还和适应系数有关。30
 这样，进入磁体腔的总热输入为$\sim 540\ \mathrm{mW}$，这个值对本系统过大了；应当维持真空水平在$10^{-6}$ torr才行。
 因此，将低温容器的真空压力维持在小于$\sim 10^{-5}$ torr很重要。
 
-\textcolor{red}{表4.9}
+\begin{table}[htbp]\small
+\centering
+\caption{辐射热通量的典型值}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\multicolumn{3}{|c|}{Helium} & \multicolumn{3}{c|}{Hydrogen} \\ \hline
+\begin{tabular}[c]{@{}c@{}}$T_{wm}\rightarrow T_{cl}$\\ $\left[K\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}$\eta_g$\\ $\left[\ \mathrm{W/m^2PaK}\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}$q_g$\\ $\left[\ \mathrm{mW/m^2}\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}$T_{wm}\rightarrow T_{cl}$\\ $\left[K\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}$\eta_g$\\ $\left[\ \mathrm{W/m^2PaK}\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}$q_g$\\ $\left[\ \mathrm{mW/m^2}\right]$\end{tabular} \\ \hline
+$20\rightarrow 4$ & 1.27 & 27 & - & - & - \\ \hline
+$80\rightarrow 4.2$ & 0.85 & 86 & $80\rightarrow 20$ & 2.20 & 176 \\ \hline
+$300\rightarrow 4.2$ & 0.64 & 251 & $300\rightarrow 20$ & 1.32 & 494 \\ \hline
+$300\rightarrow 80$ & 0.44 & 129 & $300\rightarrow 80$ & 1.02 & 298 \\ \hline
+\end{tabular}
+\end{table}
 
 
 \subsection{讨论4.10：真空泵系统}
@@ -1057,7 +1075,17 @@ D_{th}=\frac{k}{\rho c_p}
 \tau_{sd}=\frac{1}{D_{th}}(\frac{\delta_{sd}}{\pi})^2
 \end{align}
 
-\textcolor{red}{表4.10}
+\begin{table}[htbp]\small
+\centering
+\caption{固态氖SNe、固态氮SN2和铜Cu在4-60 K温区的$D_{th}$和$\tau_{sd}$($\delta_{sd}$=10 mm)近似值}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+& \multicolumn{3}{c|}{$D_{th}[\mathrm{mm^2/s}]$} & \multicolumn{3}{c|}{$\delta$=10 mm时的$\tau_{sd}[\mathrm{s}]$} \\ \hline
+$T$[K] & SNe & $SN_2$ & Cu & SNe & $SN_2$ & Cu \\ \hline
+\multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}5\\ 10\\ 20\\ 30\\ $34^*$\\ $37^*$\\ 40\\ 50\\ 60\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}35\\ 22\\ 0.27\\ -\\ -\\ -\\ -\\ -\\ -\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}157\\ 70\\ 0.58\\ 0.22\\ 0.16\\ 0.18\\ 0.17\\ 0.13\\ 0.12\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}$0.36\times 10^6$\\ $0.17\times10^6$\\ $0.29\times10^5$\\ 8000\\ 5000\\ 3500\\ 2800\\ 1200\\ 600\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}0.29\\ 0.46\\ 38\\ -\\ -\\ -\\ -\\ -\\ -\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}0.06\\ 0.14\\ 17\\ 46\\ 63\\ 56\\ 60\\ 78\\ 84\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}$27\times10^{-6}$\\ $60\times10^{-6}$\\ $0.3\times10^{-3}$\\ $1.3\times10^{-3}$\\ $2\times10^{-3}$\\ $3\times10^{-3}$\\ $4\times10^{-3}$\\ $8\times10^{-3}$\\ $17\times10^{-3}$\end{tabular}} \\
+\hline
+\end{tabular}
+\end{table}
 
 表4.10列出了固氖 (SNe)、固氮(SN2)、铜(Cu)在4–60 K区间$\delta_{sd}$=10 mm时，$D_{th}$和对应的$\tau_{sd}$的近似值，数值基于$\rho(T)$, $c_p(T)$和$k(T)$数据[4.33–4.35]。
 在这个温度区间，SN2的热扩散系数比铜小3-5个量级---相比固氮，热更容易传入铜。
@@ -1400,6 +1428,21 @@ Rubin通过将近500多篇论文的钩沉，给出了一个1982-1997年间有关
 另外，热电偶也是这三种中最便宜的。
 
 \textbf{D. 几种热传感器的信号水平和敏感性}
+
+\begin{table}[htbp]\small
+ \centering
+\caption{几种热传感器的信号水平($V$)和敏感性($\delta V/\delta T$)的近似值。二极管[4.44]；电阻[4.44]；热电偶[4.45]}
+	\begin{tabular}{|l|c|c|c|c|c|c|c|c|}
+		\hline
+传感器 & 2K & 4K & 10K & 20K & 50K & 100K & 200K & 300K \\ \hline
+\begin{tabular}[c]{@{}l@{}}Silicon $\ \mathrm{V \left[V\right]}$\\ $\delta V/\delta T\left[\ \mathrm{mV/K}\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}1.69\\ -21\end{tabular} & \begin{tabular}[c]{@{}c@{}}1.63\\ -33\end{tabular} & \begin{tabular}[c]{@{}c@{}}1.42\\ -29\end{tabular} & \begin{tabular}[c]{@{}c@{}}1.21\\ -18\end{tabular} & \begin{tabular}[c]{@{}c@{}}1.07\\ -1.8\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.98\\ -2.0\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.76\\ -2.3\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.52\\ -2.4\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}GaAlAs $\ \mathrm{V \left[V\right]}$\\ $\delta V/\delta T\left[\ \mathrm{mV/K}\right]$ V\end{tabular} & \begin{tabular}[c]{@{}c@{}}5.5\\ -210\end{tabular} & \begin{tabular}[c]{@{}c@{}}5.1\\ -210\end{tabular} & \begin{tabular}[c]{@{}c@{}}4.1\\ -145\end{tabular} & \begin{tabular}[c]{@{}c@{}}2.7\\ -110\end{tabular} & \begin{tabular}[c]{@{}c@{}}1.5\\ -30\end{tabular} & \begin{tabular}[c]{@{}c@{}}1.4\\ -1.5\end{tabular} & \begin{tabular}[c]{@{}c@{}}1.1\\ -2.6\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.9\\ -2.7\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}Cernox $\ \mathrm{V \left[mV\right]}$\\ $\delta V/\delta T\left[\ \mathrm{mV/K}\right]$\\ @电流 $\left[\ \mathrm{\mu A}\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}12\\ -10\\ 1\end{tabular} & \begin{tabular}[c]{@{}c@{}}14\\ -3.5\\ 3\end{tabular} & \begin{tabular}[c]{@{}c@{}}17\\ -1.5\\ 10\end{tabular} & \begin{tabular}[c]{@{}c@{}}28\\ -1.2\\ 30\end{tabular} & \begin{tabular}[c]{@{}c@{}}13\\ -0.24\\ 30\end{tabular} & \begin{tabular}[c]{@{}c@{}}20\\ -0.18\\ 100\end{tabular} & \begin{tabular}[c]{@{}c@{}}33\\ -0.18\\ 300\end{tabular} & \begin{tabular}[c]{@{}c@{}}20\\ -0.07\\ 300\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}Platinum $\ \mathrm{V \left[mV\right]}$\\ $\delta V/\delta T\left[\ \mathrm{mV/K}\right]$\\ @电流 $\left[\ \mathrm{mA}\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}NA\\ NA\\ -\end{tabular} & \begin{tabular}[c]{@{}c@{}}NA\\ NA\\ -\end{tabular} & \begin{tabular}[c]{@{}c@{}}NA\\ NA\\ -\end{tabular} & \begin{tabular}[c]{@{}c@{}}2.4\\ 0.086\\ 1\end{tabular} & \begin{tabular}[c]{@{}c@{}}10\\ 0.35\\ 1\end{tabular} & \begin{tabular}[c]{@{}c@{}}31\\ 0.41\\ 1\end{tabular} & \begin{tabular}[c]{@{}c@{}}77\\ 0.39\\ 1\end{tabular} & \begin{tabular}[c]{@{}c@{}}114\\ 0.38\\ 1\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}Type E $\ \mathrm{V \left[\mu V\right]}$\\ $\delta V/\delta T\left[\ \mathrm{\mu V/K}\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}1.3\\ 1.15\end{tabular} & \begin{tabular}[c]{@{}c@{}}4.6\\ 2.09\end{tabular} & \begin{tabular}[c]{@{}c@{}}24.9\\ 4.65\end{tabular} & \begin{tabular}[c]{@{}c@{}}91\\ 8.51\end{tabular} & \begin{tabular}[c]{@{}c@{}}504\\ 18.7\end{tabular} & \begin{tabular}[c]{@{}c@{}}1775\\ 31.4\end{tabular} & \begin{tabular}[c]{@{}c@{}}5871\\ 49.3\end{tabular} & \begin{tabular}[c]{@{}c@{}}11445\\ 61\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}AuFe(0.07\%)-Chromel $\ \mathrm{V \left[\mu V\right]}$\\  $\delta V/\delta T\left[\ \mathrm{\mu V/K}\right]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}17.2\\ 10\end{tabular} & \begin{tabular}[c]{@{}c@{}}39.6\\ 12.2\end{tabular} & \begin{tabular}[c]{@{}c@{}}124.9\\ 15.6\end{tabular} & \begin{tabular}[c]{@{}c@{}}286.6\\ 16.3\end{tabular} & \begin{tabular}[c]{@{}c@{}}768.6\\ 16.4\end{tabular} & \begin{tabular}[c]{@{}c@{}}1647\\ 18.7\end{tabular} & \begin{tabular}[c]{@{}c@{}}3667\\ 21.4\end{tabular} & \begin{tabular}[c]{@{}c@{}}5864\\ 22.8\end{tabular} \\ \hline
+\end{tabular}
+\end{table}
 
 表4.11给出了6种常用热传感器的信号水平(V)和敏感性($\delta V/\delta T$)在2-300 K区间几个温度下的近似值。三种类型，每种选两个，二极管[4.44]，电阻[4.44]，热电偶[4.45]。
 Note that these values are given here to demonstrate that both
@@ -2250,6 +2293,18 @@ C) CSV，有相同根数的常规金属带。
 在表4.12中所给的温度区间的平均热导率和平均电导率。
 表4.13给出了紫铜带的关键参数。
 
+\begin{table}[htbp]\small
+\centering
+\caption{Bi-2223/Ag-Au带材参数}
+\begin{tabular}{|l|c|}
+\hline
+Parameters & Value \\ \hline
+\multirow{10}{*}{\begin{tabular}[c]{@{}l@{}}Overall width $\left[\ \mathrm{mm}\right]$\\ Overall thickness $\left[\ \mathrm{mm}\right]$\\ Bi2223 filling(volume) $\left[\%\right]$\\ Au content $\left[\ \mathrm{wt\%}\right]$\\ Ag-Au cross section,$a_m$ $\left[\ \mathrm{mm^2}\right]$\\ Tape cross sectiong $\left[\ \mathrm{mm^2}\right]$\\ $i_c(T_l)(@77.3K@B_\bot=0.2T)$ $\left[\ \mathrm{A}\right]$\\ $i_c(T_0)(@4.2K@B_\bot=0.2T)$ $\left[\ \mathrm{A}\right]$\\ $\tilde{k}(4.2-77K)$ $\left[\ \mathrm{W/cm K}\right]$\\ $\tilde{p}_x(T_l-77K)$ $\left[\ \mathrm{\mu\Omega cm}\right]$\end{tabular}} & \multirow{10}{*}{\begin{tabular}[c]{@{}c@{}}4.2\\ 0.228\\ 42\\ 5.3\\ 0.555\\ 0.958\\ 80\textasciicircum{}*\\ $455.5\dagger$\\ 0.327\\ 1.0\end{tabular}} \\
+\hline
+\end{tabular}
+\end{table}
+
+
 \subsubsection{问题4.6A：FSV，无并联常规金属带}
 
 a) 证明这根6 kA的气冷FSV引线，$N_{fs}$=75。
@@ -2259,7 +2314,16 @@ b) 证明若这根引线$\ell$=20 cm，有$[Q_{in}]_{fs}$ =0.0786 W。这里，$
 
 c) 验证方程4.61通过计算各功率项，可用于这根引线。
 
-\colorbox{red}{表4.12和4.13}
+\begin{table}[htbp]\small
+\centering
+\caption{常规金属(黄铜)带参数}
+	\begin{tabular}{|l|c|}
+		\hline
+Parameters & Value \\ \hline
+\multirow{6}{*}{\begin{tabular}[c]{@{}l@{}}单带宽度$\left[\ \mathrm{mm}\right]$\\ 单带 厚度$\left[\ \mathrm{mm}\right]$\\ 并联带数目$\left[\ \mathrm{mm}\right]$\\ $\left[A_n\right]_{fs}$和$\left[A_n\right]_{cs}$ $\left[\ \mathrm{cm^2}\right]$\\ $\tilde{k}_n(4.2-77K)$ $\left[\ \mathrm{W/cm K}\right]$ \\ $\tilde{p}_n(4.2-77K)$ $[\mathrm{\mu}\Omega$cm}]\end{tabular}} & \multirow{6}{*}{\begin{tabular}[c]{@{}c@{}}4.203\\ 0.344\\ 120\\ 1.735\\ 0.350\\ 2.25\end{tabular}} \\
+\hline
+\end{tabular}
+\end{table}
 
 \subsubsection{问题4.6A之解}
 
@@ -2412,7 +2476,20 @@ $[A_n]_{cs}=[A_n]_{fs}=1.735\ \mathrm{cm^2}$(表4.13)。于是：
 \frac{1}{4}([\alpha_\ell]_{cs}^{n})^2=2.303
 \end{align*}
 
-\colorbox{red}{表4.14}
+\begin{table}[htbp]\small
+\centering
+\caption{$\xi_{cs}$和$\beta_{cs}^{n*}$的确定}
+\begin{tabular}{|c|c|c|}
+\hline
+\begin{tabular}[c]{@{}c@{}}Guess Value fo\\ $\xi_{cs}$\end{tabular} & \begin{tabular}[c]{@{}c@{}}Eq.4.96b\\ $\beta_{cs}^{n*}$\end{tabular} & \begin{tabular}[c]{@{}c@{}}Left-Hand Side\\ Eq.4.83\end{tabular} \\ \hline
+\multirow{6}{*}{\begin{tabular}[c]{@{}c@{}}0.9\\ 0.95\\ 0.94\\ 0.945\\ 0.9451\\ 0.94505\end{tabular}} & \multirow{5}{*}{\begin{tabular}[c]{@{}c@{}}15.708\\ 31.4159\\ 26.1799\\ 28.5599\\ 28.6120\end{tabular}} & \multirow{5}{*}{\begin{tabular}[c]{@{}c@{}}32.3975\\ 28.2120\\ 28.9759\\ 28.5898\\ 28.5821\end{tabular}} \\
+& & \\
+& & \\
+& & \\
+& & \\ \cline{2-3} 
+& \multicolumn{2}{c|}{28.5859$\simeq$ 28.5860} \\ \hline
+\end{tabular}
+\end{table}
 
 将必要的值代入方程4.81，得到：
 \begin{align*}% 4.81
@@ -2480,7 +2557,24 @@ c) 当进入77. K冷端点($z$=0)的制冷工质是气氮时，确定$\.{m}_{fl}
 
 d) 当进入77. K冷端点($z$=0)的制冷工质是液氮时，确定$\.{m}_{fl}$，同时确定$\ell_{\ell_q}$。
 
-\colorbox{red}{Biao 4.15}
+\begin{table}[htbp]\small
+\centering
+\caption{6 kA气冷铜引线参数}
+\begin{tabular}{|l|c|}
+\hline
+参数 & 数值 \\ \hline
+\multirow{10}{*}{\begin{tabular}[c]{@{}l@{}}Operating range$(T_o-T_{l_{cu}})$ $\left[\ \mathrm{K}\right]$\\ Active area,$A_{cu}$ $\left[\ \mathrm{cm^2}\right]$\\ Active length,$l_{cu}$ $\left[\ \mathrm{cm}\right]$\\ Area exposed to coolant $\left[\ \mathrm{cm^2}\right]$\\ $\tilde{k}_{cu}$(77-300K) $\left[\ \mathrm{W/cm K}\right]$\\ $\tilde{c}_{fl}$(77-300K):helium $\left[\ \mathrm{J/gK}\right]$\\ $\tilde{c}_{fl}$(77-300K):nitrogen $\left[\ \mathrm{J/gK}\right]$\\ $h_{n2}$(77.3K) $\left[\ \mathrm{J/g}\right]$\\ $\rho_o$(77K) $\left[\ \mathrm{\mu\Omega cm}\right]$\\ $\gamma_{cu}$(77-300K) $\left[\ \mathrm{n\Omega cm/K}\right]$\end{tabular}} & \multirow{10}{*}{\begin{tabular}[c]{@{}c@{}}77.3-300\\ 1.19\\ 38\\ 12,650\\ 4\\ 5.28\\ 1.04\\ 199\\ 0.22\\ 7.01\end{tabular}} \\
+& \\
+& \\
+& \\
+& \\
+& \\
+& \\
+& \\
+& \\
+& \\ \hline
+\end{tabular}
+\end{table}
 
 \subsubsection{问题4.6D之解}
 a) 将表4.15中的参数值代入方程4.87c，我们有：
@@ -2509,7 +2603,24 @@ Q_o&=\frac{\tilde{k}_{cu}A_{cu}}{\ell_{cu}}\frac{d\theta(\zeta)}{d\zeta}\mid_0=\
 
 c) 在a)中确定的$\beta_{cu}$和$\alpha_{cu}$同样适用于气氮情况。两者唯一的不同是比热：气氮的是1.04 J/gK。于是：$\dot{m}_{fl}$=1.812 g/s。
 
-\colorbox{red}{表4.16}
+\begin{table}[htbp]\small
+\centering
+\caption{$\beta_{cu}$和$\alpha_{cu}$的确定}                                                                                   
+\begin{tabular}{|c|c|c|c|c|}
+	\hline
+\multicolumn{3}{|c|}{Eq.4.88b} & Eq.4.88b & Eq.4.87c \\ \hline
+$\beta_{cu}\left[degree\right]$ & -cot$\beta_{cu}$ & $\beta_{cu}$ & $\alpha_{cu}$ & $\beta_{cu}$ \\ \hline
+\multirow{9}{*}{\begin{tabular}[c]{@{}l@{}}150\\ 160\\ 159\\ 159.5\\ 159.6\\ 159.7\\ 159.65\\ 159.67\\ 159.669\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}l@{}}1.732051\\ 2.747477\\ 2.605089\\ 2.674621\\ 2.688919\\ 2.703351\\ 2.696118\\ 2.699007\\ 2.698863\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}l@{}}2.617994\\ 2.792527\\ 2.775074\\ 2.783800\\ 2.785545\\ 2.787291\\ 2.786418\\ 2.786767\\ 2.786750\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}l@{}}4.534498\\ 7.692404\\ 7.229314\\ 7.445612\\ 7.490106\\ 7.535026\\ 7.512513\\ 7.521505\\ 7.521055\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}l@{}}6.615990\\ 2.338207\\ 3.474194\\ 2.982594\\ 2.869026\\ 2.748887\\ 2.809832\\ 2.785671\\ 2.786885\end{tabular}} \\
+& & & & \\
+& & & & \\
+& & & & \\
+& & & & \\
+& & & & \\
+& & & & \\
+& & & & \\
+& & & & \\ \hline
+\end{tabular}
+\end{table}
 
 
 d) 这里我们来确定满足方程4.93、4.94和4.95在给定参数值$\rho_o, \gamma_{cu}, I_o, \~{k}_{cu}， A_{cu}$下的$\ell_{\ell_q}$。用迭代的方法确定$\ell_{\ell_q}$是最简单的。我们进行如下步骤：
@@ -2536,7 +2647,25 @@ d) 这里我们来确定满足方程4.93、4.94和4.95在给定参数值$\rho_o,
 与c)中77.3 K气氮的$\dot{m}_{fl}$=1.812 g/s相比，液氮流量仅需一半。这是因为液氮在77.3 K汽化时可吸收大量热量，即199 J/g，相等于气氮温升将近200 K($\tilde{c}_{fl}=1.04 J/gK$)。
 如果引入到铜引线的制冷工质为77.3 K的氮，c)和d)的结果表明77.3 K的液氮更好。
 
-\colorbox{red}{表4.17}
+\begin{table}[htbp]\small
+\centering
+\caption{$\ell_{\ell q}，\beta^\prime_{cu}$和$\alpha^\prime_{cu}$的确定}                                                                                   
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{2}{|c|}{Eq.4.93} & Eq.4.95a & \multicolumn{2}{c|}{Eq.4.95b} & \multicolumn{2}{c|}{Eq.4.94} \\ \hline
+$\ell_{\ell q} \left[\ \mathrm{cm}\right]$ & $\dot{m}_{fl}\left[\ \mathrm{g/s}\right]$ & $\alpha_{cu}^{\prime}$ & $\beta_{cu}^{\prime}$ & $\beta_{cu}^{\prime}\left[degree\right]$ & -cot$\beta_{cu}^{\prime}$ & $\alpha_{cu}^{\prime}$ \\ \hline
+\multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}10\\ 20\\ 26\\ 27\\ 26.9\\ 26.98\\ 26.9805\\ 26.9802\\ 26.9804\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}0.3334453\\ 0.668891\\ 0.869558\\ 0.903002\\ 0.898304\\ 0.902334\\ 0.902350\\ 0.902340\\ 0.902347\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}1.023033\\ 1.315298\\ 1.139925\\ 1.085120\\ 1.089288\\ 1.086289\\ 1.086259\\ 1.086277\\ 1.086265\end{tabular}} & \multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}5.82035\\ 3.564382\\ 2.261869\\ 2.052632\\ 2.074294\\ 2.056789\\ 2.056686\\ 2.056748\\ 2.056706\end{tabular}} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}333.5\\ 204.2\end{tabular}} & \multicolumn{2}{c|}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}no solution\\ no solution\end{tabular}}} \\
+& & & & & \multicolumn{2}{c|}{} \\ \cline{5-7} 
+& & & & \multirow{7}{*}{\begin{tabular}[c]{@{}c@{}}129.595532\\ 117.607165\\ 118.848308\\ 117.845335\\ 117.839402\\ 117.842976\\ 117.840594\end{tabular}} & \multirow{7}{*}{\begin{tabular}[c]{@{}c@{}}0.827141\\ 0.522947\\ 0.550853\\ 0.528252\\ 0.528119\\ 0.528199\\ 0.528146\end{tabular}} & \multirow{7}{*}{\begin{tabular}[c]{@{}c@{}}1.870884\\ 1.073417\\ 1.142631\\ 1.086503\\ 1.086175\\ 1.086373\\ 1.086241\end{tabular}} \\
+& & & & & & \\
+& & & & & & \\
+& & & & & & \\
+& & & & & & \\
+& & & & & & \\
+& & & & & & \\ \hline
+\end{tabular}
+\end{table}
+
 
 \subsection{问题4.7：气冷铜电流引线}
 浸泡于液氦中运行的超导磁体的气冷电流引线可以整体是铜(讨论4.14)或者冷端下部整体式超导(问题4.4-4.6)，
@@ -2812,4 +2941,16 @@ $Q_{\bar{vp}}$和$Q_{vp}$都正比于$\tilde{k}$。
 表4.18给出了G-10、304不锈钢、黄铜、红铜作为结构材料的相关参数值；列入红铜是为了展示它的不适合。
 基于$\tilde{k}/\sigma_U$，G-10要比不锈钢好；不过，不锈钢更适宜焊接。
 
-\textcolor{red}{表4.18}
+\begin{table}[htbp]\small
+\centering
+\caption{$\ell_{\ell q}，\beta^\prime_{cu}$和$\alpha^\prime_{cu}$的确定}                                                                                   
+	\begin{tabular}{|l|c|c|c|c|c|}
+		\hline
+\multirow{2}{*}{Material} & \multicolumn{3}{c|}{$\tilde{k}\left[\ \mathrm{W/mK}\right]$} & $\sigma_U\left[\ \mathrm{MPa}\right]$ & $\tilde{k}/\sigma_U\left[\ \mathrm{m^2/Ks}\right]\dagger$ \\ \cline{2-6} 
+& 4-80K & 4-300K & 80-300K & 295K &(80-300K) \\ \hline
+G-10 & 0.25 & 0.50 & 0.56 & 280 & $2\times10^{-9}$ \\ \hline
+Stainless Steel304 & 4.5 & 11 & 13 & 1300 & $10\times10^{-9}$ \\ \hline
+Brass & 24 & 55 & 65 & 400 & $2\times10^{-7}$ \\ \hline
+Copper & 1300 & 660 & 460 & 250 & $2\times10^{-6}$ \\ \hline
+	\end{tabular}
+\end{table}
