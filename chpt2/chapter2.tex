@@ -5,7 +5,7 @@
 \section{Maxwell方程}
 麦克斯韦方程组包括四个基本方程：1)Gauss定律；2)Ampere定律；3)Faraday定律；4)磁通连续定律。此外，我们还会常用到电荷守恒方程及其他本构关系。
 
-本书中如非指明，电磁量都采用SI单位(表\ref{emquantity})。磁体界常混用磁场强度$\vec{H}$和磁通密度(或磁感应强度)$\vec{B}$。尽管这个做法并无大碍，也基本不会导致混淆，但我们应对此提起警惕，比如从$\vec{M}$ vs. $\vec{H}$图计算能量的时候。
+本书中如非特别指明，电磁量都采用SI单位(表\ref{emquantity})。磁体界常混用磁场强度$\vec{H}$和磁通密度(或磁感应强度)$\vec{B}$。尽管这个做法并无大碍，也基本不会导致混淆，但我们应对此提起警惕，比如从$\vec{M}$ vs. $\vec{H}$图计算能量的时候。
 
 自由空间的磁导率$\mu_0=4\pi \times 10^{-7}$ H/m；自由空间介电系数$\epsilon_0=\frac{1}{\mu_0c^2}$，近似值为$8.85\times 10^{-12}$ F/m。
 附录IA给出了其他物理常数及部分常用非SI单位到SI单位的转换因子。
@@ -164,8 +164,7 @@ Faraday定律的积分形式为：
 
 注意到此时的$\vec{E_1}$仍是和$\vec{H_1}$无关的。一般而言，电源的$\vec{J_f}$仅有$\vec{J_{f0}}$分量；在金属中，有$\vec{J_{f1}}=\vec{E_1}/\rho_e$。
 
-显然，上述的近似过程可以无限的进行下去。
-不过，对于低频情况，解出$\mathrm{0^{th}}$阶和$\mathrm{1^{st}}$阶就够了。
+显然，上述的近似过程可以无限的进行下去,但对于本章专题中所关系的``低频"情况，解出$\mathrm{0^{th}}$阶和$\mathrm{1^{st}}$阶场就够了。
 
 \section{Poynting矢量}
 Poynting定理可用下式表示：
@@ -212,14 +211,17 @@ $p$是功率耗散密度，$w$是以电磁能存储的能量密度。
 \begin{equation}
   \vec{E}=-\nabla \phi
 \end{equation}
+
 于是，$\nabla\cdot\vec{E}$可以写为：
 \begin{equation}
   \nabla\cdot\vec{E}=-\nabla\cdot\nabla\phi=-\nabla^2\phi
 \end{equation}
+
 若无电荷密度存在，即$\rho_c=0$，方程2.2可约化为：
 \begin{equation}
   \nabla\cdot\vec{E}=0
 \end{equation}
+
 进而，可以得到：
 \begin{equation}
 \nabla^2\phi=0
@@ -283,17 +285,17 @@ $p$是功率耗散密度，$w$是以电磁能存储的能量密度。
   	\end{align}
 \end{subequations}
 其中，$A_1, A_2, C, D_1, D_2$都是常数。$P_n^0(\cos \theta)$，或其简写$P_n(\cos\theta)$，就是所谓的\textbf{勒让德函数}(Legendre Functions)。
-它在\textbf{设计}空间均匀螺管磁体时很有用，此类磁体在设计阶段常假定其磁场关于$z$轴($\theta=0$)对称。$P_n^m(\cos\theta)$，被称为\textbf{伴随勒让德函数}(Associated Legendre Functions)。它在最小化一个\textbf{实际}螺管磁体的设计``误差"时很有用。
+它在\textit{设计}空间均匀螺管磁体时很有用，此类磁体在设计阶段常假定其磁场关于$z$轴($\theta=0$)对称。$P_n^m(\cos\theta)$，被称为\textbf{伴随勒让德函数}(Associated Legendre Functions)。它在最小化一个\textit{实际}螺管磁体的设计``误差"时很有用。
 第3章将更详细的讨论由方程2.33导出的磁场表达式。
-表2.2给出了$n=0--8$时的$P_n(\cos\theta)$以及$n=1--4(0<m\le n)$时的$P_n^m(\cos\theta)$。
+表2.2给出了$n=0-8$时的$P_n(\cos\theta)$以及$n=1-4(0<m\le n)$时的$P_n^m(\cos\theta)$。
 表2.3给出了特定$n$和$m$组合下的$P_n^m(0)$。
 表2.4给出了方程2.33在笛卡尔坐标系下的解;
 这些表达式在设计和分析匀场电磁体和铁磁器件时，非常重要。
 
 \subsubsection{特例}
 \begin{description}
-  \item[n=m=0] 此时给出最简单的解，$\phi_0\propto 1/r$。一个常见的例子是电量为$4\pi\epsilon_0$的点电荷产生的电场$\vec{E}=1/r^2 \vec{i_r}$($r>0$)。
-  \item[n=1, m=0] 有两个解，分别是$\phi_1 \propto \cos\theta /r^2$和$\phi_1^\prime\propto r\cos\theta$。前者表示球外的偶极场，该场由球面上的电荷产生；
+  \item[$n=m=0$] 此时给出最简单的解，$\phi_0\propto 1/r$。一个常见的例子是电量为$4\pi\epsilon_0$的点电荷产生的电场$\vec{E}=1/r^2 \vec{i_r}$($r>0$)。
+  \item[$n=1, m=0$] 有两个解，分别是$\phi_1 \propto \cos\theta /r^2$和$\phi_1^\prime\propto r\cos\theta$。前者表示球外的偶极场，该场由球面上的电荷产生；
   后者是球内的均匀场。磁矩的偶极场亦可由$\phi_1$导出。
 \end{description}
 
@@ -305,8 +307,8 @@ $p$是功率耗散密度，$w$是以电磁能存储的能量密度。
 	\begin{align}
 \nabla U=&\frac{\partial U}{\partial x}\vec{i_x} +\frac{\partial U}{\partial y}\vec{i_y}+\frac{\partial U}{\partial z}\vec{i_z}  \\
 \nabla\cdot \vec{A}=& \frac{\partial{A_x}}{\partial x} +\frac{\partial{A_y}}{\partial y}+\frac{\partial{A_z}}{\partial z}\\
-\nabla\times \vec{A}=& (\frac{\partial{A_z}}{\partial y} -\frac{\partial{A_y}}{\partial z})\vec{i_x} + (\frac{\partial{A_x}}{\partial z} -\frac{\partial{A_z}}{\partial x}) \vec{i_y}
-+ (\frac{\partial{A_y}}{\partial x} -\frac{\partial{A_x}}{\partial y})\vec{i_z} \\
+\nabla\times \vec{A}=& \left(\frac{\partial{A_z}}{\partial y} -\frac{\partial{A_y}}{\partial z}\right)\vec{i_x} + \left(\frac{\partial{A_x}}{\partial z} -\frac{\partial{A_z}}{\partial x}\right) \vec{i_y}
++ \left(\frac{\partial{A_y}}{\partial x} -\frac{\partial{A_x}}{\partial y}\right)\vec{i_z} \\
 \nabla^2 U=&\frac{\partial^2 U}{\partial x^2}+\frac{\partial^2 U}{\partial y^2}+\frac{\partial^2 U}{\partial z^2}
   	\end{align}
 \end{subequations}
@@ -317,9 +319,8 @@ $p$是功率耗散密度，$w$是以电磁能存储的能量密度。
 	\begin{align}
 \nabla U=&\frac{\partial U}{\partial r}\vec{i_r} +\frac{1}{r}\frac{\partial U}{\partial \theta}\vec{i_{\theta}}+\frac{\partial U}{\partial z}\vec{i_z} \\
 \nabla\cdot \vec{A} =& \frac{1}{r}\frac{\partial{(r A_r)}}{\partial r} +\frac{1}{r}\frac{\partial{A_\theta}}{\partial \theta}+\frac{\partial{A_z}}{\partial z} \\
-\nabla\times \vec{A}=& (\frac{1}{r}\frac{\partial{A_z}}{\partial \theta} -\frac{\partial{A_\theta}}{\partial z})\vec{i_r} + (\frac{\partial{A_r}}{\partial z} -\frac{\partial{A_z}}{\partial r}) \vec{i_\theta} \notag\\
-&+ (\frac{1}{r}\frac{\partial{(r A_\theta)}}{\partial r} -\frac{1}{r}\frac{\partial{A_r}}{\partial \theta})\vec{i_z}\\
-\nabla^2 U=&\frac{1}{r}\frac{\partial}{\partial r}(r\frac{\partial U}{\partial r})+\frac{1}{r^2}\frac{\partial^2 U}{\partial \theta^2}+\frac{\partial^2 U}{\partial z^2}
+\nabla\times \vec{A}=& \left(\frac{1}{r}\frac{\partial{A_z}}{\partial \theta} -\frac{\partial{A_\theta}}{\partial z}\right)\vec{i_r} + \left(\frac{\partial{A_r}}{\partial z} -\frac{\partial{A_z}}{\partial r}\right) \vec{i_\theta}+ \left(\frac{1}{r}\frac{\partial{(r A_\theta)}}{\partial r} -\frac{1}{r}\frac{\partial{A_r}}{\partial \theta}\right)\vec{i_z}\\
+\nabla^2 U=&\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial U}{\partial r}\right)+\frac{1}{r^2}\frac{\partial^2 U}{\partial \theta^2}+\frac{\partial^2 U}{\partial z^2}
   	\end{align}
 \end{subequations}
 
@@ -358,7 +359,7 @@ P_n^m(u)=&(1-u^2)^{m/2}\frac{d^mP_n(u)}{du^m}\\
 几个有用的Legendre函数以及伴随Legendre函数的递归形式如下：
 \begin{subequations}\label{eqn:legendre function2}
 	\begin{align}
-(n+1)P_{(n+1)}(u)-(2n+1)uP_n(u)+nP_{(n-1)}(u)=&0  \\
+(n+1)P_{n+1}(u)-(2n+1)uP_n(u)+nP_{n-1}(u)=&0  \\
 (n+1-m)P^m_{n+1}(u)-(2n+1)uP^m_n(u)+(n+m)P^m_{n-1}(u)=&0  \\
 P_n^{m+2}(u)-\frac{2(m+1)u}{\sqrt{(1-u^2)}}P_n^{m+1}+(n-m)(n+m-1)P_n^m(u)=&0
   	\end{align}
@@ -368,36 +369,119 @@ P_n^{m+2}(u)-\frac{2(m+1)u}{\sqrt{(1-u^2)}}P_n^{m+1}+(n-m)(n+m-1)P_n^m(u)=&0
 表2.3给出了$n$=2,4,6,8,10和$m$=0,2,4,6,8,10组合下的$P_n^m(0)$。
 表2.4给出了方程2.32在笛卡尔坐标系下的解。
 
+\begin{quotation}
+\textbf{勒让德小传}\ \kaishu {勒让德（Adrien-Marie Legendre，1752年9月18日－1833年1月10日）的主要贡献在统计学、数论、抽象代数、数学分析、初等几何与天体力学。勒让德是椭圆积分理论奠基人之一，是解析数论的先驱者之一，对数论的主要贡献是二次互反律，归纳出了素数分布律。其他贡献包括：椭圆函数论、最小二乘法、测地线理论等。拉格朗日（Lagrange）、拉普拉斯（Laplace）和勒让德（Legendre）三位的姓氏的第一个字母为“L”，又生活在同一时代，所以人们称他们为“三L”。Legendre的大部分工作与比他小二十岁的Gauss重合，两者分别独立的得到了结果，但Gauss的天才光环，让后世的人更喜欢把功劳归功到Gauss头上。正可谓``既生瑜，何生亮''。}
+\end{quotation}
 
-%%表2.2， 2.3, 2.4
+\begin{table}[htbp]\small
+  \centering
+  \caption{Legendre函数和伴随Legendre函数} 
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{3}{|c|}{Legendre Functions(m=0)$\left[P_n(0) \ \mathrm{for} \ n \ \mathrm{odd}\right]$} \\ \hline
+n & $P_n(\cos\theta)\equiv P_n(u)$ & Miltiple-Angle Form \\ \hline
+0 & 1 & 1 \\ \hline
+1 & u & $\cos\theta$ \\ \hline
+2 & $\frac{1}{2}(3u^2-1)$ & $\frac{1}{4}(3\cos2\theta+1)$ \\ \hline
+3 & $\frac{1}{2}(5u^3-3u)$ & $\frac{1}{8}(5\cos3\theta+3\cos\theta)$ \\ \hline
+4 & $\frac{1}{8}(35u^4-30u^2+3)$ & $\frac{1}{68}(35\cos4\theta+20\cos2\theta+9)$ \\ \hline
+5 & $\frac{1}{8}(63u^5-70u^3+15u)$ & $\frac{1}{128}(63\cos5\theta+35\cos3\theta+30\cos\theta)$ \\ \hline
+6 & $\frac{1}{16}(231u^6-315u^4+105u^2-5)$ & $\frac{1}{512}(231\cos6\theta+126\cos4\theta+105\cos2\theta+50)$ \\ \hline
+7 & $\frac{1}{16}(429u^7-639u^5+315u^3-35u)$ &\begin{tabular}[c]{@{}l@{}}$\frac{1}{1024}(429\cos7\theta+231\cos5\theta+189\cos3\theta$\\ $+175\cos\theta)$\end{tabular} \\ \hline
+8 & $\frac{1}{128}(6435u^8-12012u^6+6930u^4-1260u^2+35)$ &\begin{tabular}[c]{@{}l@{}}$\frac{1}{16384}(6435\cos8\theta+3432\cos6\theta
++2772\cos4\theta$\\ $+2520\cos2\theta+1225)$\end{tabular} \\ \hline
+\multicolumn{3}{|c|}{Associated Legendre Functions$(1\leq m\leq n)\left[P_{n}^{m}(1)=0\right]$} \\ \hline
+m,n & $P_{n}^{m}(\cos\theta)\equiv P_{n}^{m}(u)$ & Multiple-Angle Form \\ \hline
+\multicolumn{1}{|r|}{\multirow{4}{*}{\begin{tabular}[c]{@{}r@{}}1,1\\ 2\\ 3\\ 4\end{tabular}}} & $(1-u^2)^{1/2}$ & $\sin\theta$ \\ \cline{2-3} 
+\multicolumn{1}{|r|}{} & $3u(1-u^2)^{1/2}$ & $\frac{3}{2}\sin2\theta$ \\ \cline{2-3} 
+\multicolumn{1}{|r|}{} & $\frac{3}{2}(1-u^2)^{1/2}(5u^2-1)$ & $\frac{3}{8}(\sin\theta+5\sin3\theta)$ \\ \cline{2-3} 
+\multicolumn{1}{|r|}{} & $\frac{5}{2}(1-u^2)^{1/2}(7u^3-3u)$ & $\frac{5}{16}(2\sin2\theta+7\sin4\theta)$ \\ \hline
+\multicolumn{1}{|r|}{\multirow{3}{*}{\begin{tabular}[c]{@{}r@{}}2,2\\ 3\\ 4\end{tabular}}} & $3(1-u^2)$ & $\frac{3}{2}(1-\cos2\theta)$ \\ \cline{2-3} 
+\multicolumn{1}{|r|}{} & $15(1-u^2)u$ & $\frac{15}{4}(\cos\theta-\cos3\theta)$ \\ \cline{2-3} 
+\multicolumn{1}{|r|}{} & $\frac{15}{2}(1-u^2)(7u^2-1)$ & $\frac{15}{16}(3+4\cos2\theta-7\cos4\theta)$ \\ \hline
+\multicolumn{1}{|r|}{\multirow{2}{*}{\begin{tabular}[c]{@{}r@{}}3,3\\ 4\end{tabular}}} & $15(1-u^2)^{3/2}$ & $\frac{15}{4}(3\sin\theta-\sin3\theta)$ \\ \cline{2-3} 
+\multicolumn{1}{|r|}{} & $105(1-u^2)^{3/2}u$ & $\frac{105}{8}(2\sin2\theta-\sin4\theta)$ \\ \hline
+4,4 & $105(1-u^2)^2$ & $\frac{105}{8}(3-4\cos2\theta+\cos4\theta)$ \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]\small
+  \centering
+  \caption{$m=0,2,4,6,8,10$对应的$P_n^m(0)$值} 
+\begin{tabular}{|c|l|}
+\hline
+m & $P_{n}^{m}(0)$ \\ \hline
+0 & $P_2(0)=-\frac{1}{2};\ P_4(0)=\frac{3}{8};\ P_6(0)=-\frac{5}{16};\ P_8(0)=\frac{35}{128};\ P_10(0)=-\frac{63}{256}$ \\ \hline
+2 & $P_{2}^{2}(0)=3;\ P_{4}^{2}(0)=-\frac{15}{2};\ P_{6}^{2}(0)=\frac{105}{8};\ P_{8}^{2}(0)=-\frac{315}{16};\ P_{10}^{2}(0)=\frac{3465}{128}$ \\ \hline
+4 & $P_{4}^{4}(0)=3\cdot5\cdot7=105;\ P_{4}^{6}(0)=-\frac{945}{2};\ P_{4}^{8}(0)=\frac{10395}{8};\ P_{4}^{10}(0)=-\frac{45045}{16} $ \\ \hline
+6 & $P_{6}^{6}(0)=3\cdot5\cdot7\cdot9\cdot11=10395;\ P_{6}^{8}(0)=-\frac{135135}{2};\ P_{6}^{10}(0)=\frac{2027025}{8} $ \\ \hline
+8 & $P_{8}^{8}(0)=3\cdot5\cdot7\cdot9\cdot11\cdot13\cdot15=2027025;\ P_{8}^{10}(0)=-\frac{3\cdot5\cdot7\cdot9\cdot11\cdot13\cdot15\cdot17}{2}=-\frac{34459425}{2}$ \\ \hline
+10 & $P_{10}^{10}(0)=3\cdot5\cdot7\cdot9\cdot11\cdot13\cdot15\cdot17\cdot19=654729075$ \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[htbp]\small
+  \centering
+  \caption{方程2.32在笛卡尔坐标系下的解} 
+\begin{tabular}{|c|l|l|}
+\hline
+\multicolumn{3}{|c|}{Legendre Functions(m=0)} \\ \hline
+n & \multicolumn{2}{l|}{$r^nP_n(u)$} \\ \hline
+0 & \multicolumn{2}{l|}{1} \\ \hline
+1 & \multicolumn{2}{l|}{z} \\ \hline
+2 & \multicolumn{2}{l|}{$z^2-\frac{1}{2}(x^2+y^2)$} \\ \hline
+3 & \multicolumn{2}{l|}{$z^3-\frac{3}{2}(x^2+y^2)z$} \\ \hline
+4 & \multicolumn{2}{l|}{$z^4-3(x^2+y^2)\left[z^2-\frac{1}{8}(x^2+y^2)\right]$} \\ \hline
+5 & \multicolumn{2}{l|}{$z^5-5(x^2+y^2)\left[z^2-\frac{3}{8}(x^2+y^2)\right]z$} \\ \hline
+6 & \multicolumn{2}{l|}{$z^6-\frac{5}{2}(x^2+y^2)\left[3z^4-\frac{9}{4}z^2(x^2+y^2)+\frac{1}{8}(x^2+y^2)^2\right]$} \\ \hline
+7 & \multicolumn{2}{l|}{$z^7-\frac{7}{16}(x^2+y^2)\left[24z^4-30z^2(x^2+y^2)+5(x^2+y^2)^2\right]z$} \\ \hline
+8 & \multicolumn{2}{l|}{$z^8-\frac{7}{128}(x^2+y^2)\left[256z^6-480z^4(x^2+y^2)+160z^2(x^2+y^2)-5(x^2+y^2)^3\right]$} \\ \hline
+\multicolumn{3}{|c|}{Associated Legendre Functions($1\leq m\leq n$)} \\ \hline
+\multicolumn{1}{|l|}{m,n} & $r^nP_{n}^{m}(u)\cos(m\varphi)$ &$r^nP_{n}^{m}(u)\sin(m\varphi)$ \\ \hline
+\multicolumn{1}{|r|}{\multirow{4}{*}{\begin{tabular}[c]{@{}r@{}}1,1\\ 2\\ 3\\ 4\end{tabular}}} & x & y \\ \cline{2-3} 
+\multicolumn{1}{|r|}{} & 3zx & 3zy \\ \cline{2-3} 
+\multicolumn{1}{|r|}{} & $6x\left[z^2-\frac{1}{4}(x^2+y^2)\right]$ & $6y\left[z^2-\frac{1}{4}(x^2+y^2)\right]$ \\ \cline{2-3} 
+\multicolumn{1}{|r|}{} & $10zx\left[z^2-\frac{3}{4}(x^2+y^2)\right]$ & $10zy\left[z^2-\frac{3}{4}(x^2+y^2)\right]$ \\ \hline
+\multicolumn{1}{|r|}{\multirow{3}{*}{\begin{tabular}[c]{@{}r@{}}2,2\\ 3\\ 4\end{tabular}}} & $3(x^2-y^2)$ & 3(2xy) \\ \cline{2-3} 
+\multicolumn{1}{|r|}{} & $15z(x^2-y^2)$ & 15z(2xy) \\ \cline{2-3} 
+\multicolumn{1}{|r|}{} & $45(x^2-y^2)\left[z^2-\frac{1}{6}(x^2+y^2)\right]$ &$45(2xy)\left[z^2-\frac{1}{6}(x^2+y^2)\right]$ \\ \hline
+\multicolumn{1}{|r|}{\multirow{2}{*}{\begin{tabular}[c]{@{}r@{}}3,3\\ 4\end{tabular}}} & $15x(x^2-3y^2)$ & $15y(3x^2-y^2)$ \\ \cline{2-3} 
+\multicolumn{1}{|r|}{} & $105zx(x^2-3y^2)$ & $105zy(3x^2-y^2)$ \\ \hline
+\multicolumn{1}{|r|}{4,4} & $105(x^3-6x^2y^2+y^4)$ & $210(2xy)(x^2-y^2)$ \\ \hline
+\end{tabular}
+\end{table}
 
 
 \section{专题}
-\subsection{问题2.1：均匀场中的磁化球}
-本题处理一个置于均匀外磁场中的磁性球问题。由于背景场是均匀的，故球的净受力为0。
+\subsection{问题2.1：均匀场中的磁球}
+本题处理一个置于均匀外磁场中的磁球。由于背景场是均匀的，故球的净受力为0。
+球内的场表达式可以用来估算磁体的边缘场对附近铁磁物体的作用力。
+磁体边缘场对铁制物体的作用力是第3章讨论3.12的主题。
 
-如图2.1所示，磁性球的半径是R，磁导率是$\mu$，外磁场为
+如图2.1所示的一个磁球，半径是R，磁导率是$\mu$，置于均匀外磁场中：
 \begin{equation}\label{eqn:2.40}
   \vec{H}_\infty = H_0 (-\cos \theta\vec{i_r}+\sin\theta\vec{i_\theta})
 \end{equation}
 
-a) 证明磁性球内($B_2$)、外($B_1$)的磁感应强度分别为：
+a) 证明磁感应强度在磁球内($B_2$)、外($B_1$)分别为：
 \begin{subequations}
 	\begin{align}
-  B_1 =& \mu_0 H_0 (-\cos\theta\vec{i_r}+\sin\theta\vec{i_\theta})\notag\\ 
+  \vec{B_1} =& \mu_0 H_0 (-\cos\theta\vec{i_r}+\sin\theta\vec{i_\theta})\notag\\ 
           &+\mu_0 \left(\frac{\mu_0-\mu}{2\mu_0+\mu}\right)H_0 \left(\frac{R}{r}\right)^3 (2\cos\theta\vec{i_r}+\sin\theta\vec{i_\theta})\\ 
-  B_2=& \frac{3\mu_0\mu H_0}{2\mu_0+\mu} (-\cos\theta_{\vec{i_r}}+\sin\theta_{\vec{i_\theta}})
+  \vec{B_2}=& \frac{3\mu_0\mu H_0}{2\mu_0+\mu} (-\cos\theta_{\vec{i_r}}+\sin\theta_{\vec{i_\theta}})
   	\end{align}
 \end{subequations}
 
-考虑以下极限情况：$\mu/\mu_0=0, \mu/\mu_0=1,\mu/\mu_0=\infty$。确认结果表达式在球内是有物理意义的。
+考虑以下三种极限情况：$\mu/\mu_0=0, \mu/\mu_0=1$和$\mu/\mu_0=\infty$。
+确认结果表达式在球内是有物理意义的。
 
-b)在头脑中画出$\mu=0.1\mu_0, \mu=100\mu_0$时$\vec{B}$的场分布，然后和图2.2对照。
+b)在头脑中想象出$\mu=0.1\mu_0$和$\mu=100\mu_0$时$\vec{B}$的场分布，然后和图2.2对照。
 
 \begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.8]{chpt2/figs/fig2.1.eps}
-  \caption{均匀场中的磁性球}
+  \caption{均匀磁场中的磁化球}
 \end{figure}
 
 \subsubsection*{问题2.1之解答}
@@ -408,14 +492,15 @@ $$\vec{H}=-\nabla \phi \eqno (S1.1)$$
 $$\vec{B}=\mu \vec{H} \eqno (S1.2)$$
 
 问题可以分为两个区域：区域1($r\ge R$)和区域2($r\le R$)。因为在$r=\infty$时，$H_\infty=H_0$，
-在$r=0$时，$H\neq \pm \infty$，每个区域的标量势可选为：
+在$r=0$时，$H\neq \pm \infty$，两个区域的标量势可分别选为：
 	\begin{align}
-\phi_1&=H_0 r\cos\theta+\frac{A}{r^2}\cos\theta \tag{S1.3a}\\
-\phi_2&=C r \cos\theta \tag{S1.3b}
+\phi_1&=H_0 r\cos\theta+\frac{A}{r^2}\cos\theta &(r\ge R)\tag{S1.3a}\\
+\phi_2&=C r \cos\theta &(r\le R)\tag{S1.3b}
   	\end{align}
 
 注意到，在$r\rightarrow \infty$时，$\phi_1\rightarrow H_0 r \cos\theta$；在$r=0$时，$\phi_2$是有限的。
-应用$\nabla$算符，有：
+
+应用球坐标系下的$\nabla$算符(方程2.36a)，我们有：
 	\begin{align}
 \vec{H}_1&= H_0(−\cos\theta\vec{i_r} + \sin\theta\vec{i}_\theta) + \frac{A}{r^3}(2 \cos\theta\vec{i_r} + \sin\theta\vec{i_\theta})\tag{S1.4a}\\
 \vec{H}_2&=C(-\cos\theta\vec{i_r} + \sin\theta\vec{i}_\theta) \tag{S1.4b}
@@ -423,10 +508,10 @@ $$\vec{B}=\mu \vec{H} \eqno (S1.2)$$
 
 \textbf{边界条件}
 
-1)在$r=R$处，$\vec{H}$的切向分量连续，故无表面电流。这等价于在$r=R$时，有$\phi_1=\phi_2$：
+1)在$r=R$处，因无表面电流，故$\vec{H}$的切向分量($\vec{i_\theta}$)连续。这等价于在$r=R$时，有$\phi_1=\phi_2$：
 $$H_0 + \frac{A}{R^3} = C \eqno (S1.5)$$
 
-2)在$r=R$处，$\vec{B}$的法向连续：
+2)在$r=R$处，$\vec{B}$的法向分量($\vec{i_r}$)连续：
 $$\mu_0\left(-H_0 + 2\frac{A}{R^3} \right)= -\mu C \eqno (S1.6)$$
 
 从S1.5和S1.6式，解出A和C两个常数：
@@ -435,8 +520,7 @@ $$A=(C-H_0)R^3=H_0\left(\frac{\mu_0-\mu}{2\mu_0+\mu}\right)R^3 \eqno (S1.8)$$
 
 于是，$\vec{B}_1$和$\vec{B}_2$可写为：
 	\begin{align}
-\vec{B}_1=& \mu_0 H_0(−\cos\theta\vec{i_r} + \sin\theta\vec{i_\theta}) \notag\\
-&+\mu_0\left(\frac{\mu_0-\mu}{2\mu_0+\mu}\right)H_0\left(\frac{R}{r}\right)^3(2 \cos\theta\vec{i_r} + \sin\theta\vec{i_\theta})\tag{2.41a}\\
+\vec{B}_1=& \mu_0 H_0(−\cos\theta\vec{i_r} + \sin\theta\vec{i_\theta}) +\mu_0\left(\frac{\mu_0-\mu}{2\mu_0+\mu}\right)H_0\left(\frac{R}{r}\right)^3(2 \cos\theta\vec{i_r} + \sin\theta\vec{i_\theta})\tag{2.41a}\\
 \vec{B}_2=&\frac{3\mu_0\mu H_0}{2\mu_0+\mu}(-\cos\theta\vec{i_r} + \sin\theta\vec{i_\theta}))\tag{2.41b}
   	\end{align}
 
@@ -452,43 +536,54 @@ $$A=(C-H_0)R^3=H_0\left(\frac{\mu_0-\mu}{2\mu_0+\mu}\right)R^3 \eqno (S1.8)$$
 \vec{B}_2&=0 \tag{S1.9b}
   	\end{align}
 
-这个球像第I类超导体。球内不允许有磁通密度存在(Meissner效应)。问题2.2将会讨论到，$\vec{H}$在
-$r=R$处的$\theta$分量不连续将要求存在表面电流(被限制在一个薄层内)。因为这个电流一旦建立起来，
-会一直流下去，这就表明了球对电流是无电阻的。如第一章所言的，存在Meissner效应的材料必须同时是理想导体：
-那这种材料其实就是超导体。
+这个球像第I类超导体;球内不允许有磁通密度存在---Meissner效应。
+磁通和图1.1b中超导体的点C是一致的。
+问题2.2将会讨论到，$\vec{H}$在
+$r=R$处的$\theta$分量不连续将要求存在表面电流(被限制在一个薄层内)。
+因为这个电流一旦建立起来，就必须一直流下去，这就表明了球对电流是无电阻的。
+如第1章所言的，存在Meissner效应的材料必须同时是理想导体：那这种材料其实就是超导体。
 
 \textbf{特例2：$\mu/\mu_0=1$}
 
-这时问题退化为平凡解，即等价于没有球的存在。代入方程2.41，两个方程将变成同一个。
+这时问题退化为平凡解，即等价于没有球的存在。代入方程2.41，两个方程将退化为一个方程。
 
 \textbf{特例3：$\mu/\mu_0=\infty$}
 
-这时表示的是一个理想铁磁材料。软铁的性质与此接近。磁场被``吸"如球内，代入2.41中，有
+这时表示的是一个理想铁磁材料；软铁的性质与此近似。
+磁场被``吸"入球内。将$\mu=\infty$代入2.41，有：
 	\begin{align}
 \vec{B}_1&= \mu_0 H_0(−\cos\theta\vec{i_r} + \sin\theta\vec{i_\theta}) -
 \mu_0 H_0\left(\frac{R}{r}\right)^3 (2 \cos\theta\vec{i_r} + \sin\theta\vec{i_\theta})\tag{S1.10a}\\
 \vec{B}_2&=3\mu_0 H_0(−\cos\theta\vec{i_r} + \sin\theta\vec{i_\theta})\tag{S1.10b}
   	\end{align}
 
-
-可见，球内的磁感应强度是外施磁场的3倍。注意到，如果球存在磁化饱和，则$\mu$不再是$\infty$。所有磁性
-材料都存在的磁场饱和效应将在问题4中讨论。
+本例中的一个要点是我们发现此时球内的$\vec{B}$是外施磁场$\vec{B}$的3倍。
+如果球存在磁饱和，则$\mu$不再是$\infty$。
+所有磁性材料都存在的磁饱和效应将在问题2.3中讨论。
 
 b) 图2.2给出了$\mu/\mu_0=0.1$和$\mu/\mu_0=100$两种情况下的磁场线。
 
 \begin{figure}[htbp]
   \centering
- \includegraphics[scale=0.4]{chpt2/figs/fig2.2.eps}
-  \caption{两种特例下球内和球附近的磁场线。上球在无穷远处的磁场线密度是球内的2.6倍；下球仅为1.7倍}
+ \includegraphics[scale=0.5]{chpt2/figs/fig2.2.eps}
+  \caption{$\mu/\mu_0=0.1$(上)和$\mu/\mu_0=100$(下)两种情况下球内和球附近的磁场线。上球在$r=\infty$处的磁场线密度是球内的$\sim 2.6(=\sqrt{2.1/0.3})$倍；下球的球内磁场比无穷远处密$\sim 1.7(=\sqrt{300/101})$倍。这两个比值不仅在纸平面成立，在垂直纸面方向也成立。$\mu/\mu_0=100$的圆柱体的比值为200/101，
+  但仅在纸平面成立。我们看到，在$\mu/\mu_0=100$时，进出球的场线\textit{几乎}与球表面垂直---
+  $\mu/\mu_0=\infty$时完全垂直。}
 \end{figure}
 
 \subsection{问题2.2：均匀场中的第I类超导棒}
-本题处理第I代超导体的Meissner效应，并用London超导理论对结果进行解释。
+本题研究第I代超导体的Meissner效应，并用London超导理论对结果进行解释。
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.4]{chpt2/figs/fig2.3.eps}
+	\caption{无限长、圆截面超导棒置于均匀磁场中。}
+\end{figure}
+
 图2.3给出了无限长、圆截面(半径$R$)的Pb棒，置于垂直于轴向的均匀外磁场中。
 \begin{equation*}\label{eqn:2.40}
   \vec{H}_\infty = H_0 (-\cos \theta\vec{i_r}+\sin\theta\vec{i_\theta}) \tag{2.40}
 \end{equation*}
-
 式中，$\mu_0H_0=0.08\ \mathrm{T}$。初始状态，棒处于正常态，于是磁场在棒的内外是处处相同的。棒逐步冷却至超导态。
 
 a)证明在外磁场暂态效应消失后，棒外场的表达式为
@@ -503,11 +598,6 @@ b) 证明在穿透深度$\lambda\ll R$内的电流密度$K_f [\mathrm{A/m}]$的�
 
 c)将表面电流密度幅值转换为(体)电流密度$J_f [\mathrm{A/m^2}]$。证明用London超导理论导出的电流密度值和这个值是一致的。
 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[scale=0.4]{chpt2/figs/fig2.3.eps}
-	\caption{无限长、圆截面超导棒置于均匀磁场中。}
-\end{figure}
 
 \subsubsection*{问题2.2之解答}
 a) 问题可以分为两个区域：区域1($r\ge R$)和区域2($r\le R$)。因为我们处理的是第I类超导体，也即圆棒超导时有$\vec{B}_2=0 (\phi_2=0)$。
@@ -575,7 +665,6 @@ London理论给出了供超导电流流过的超导体表面穿透深度$\lambda
 \begin{equation*}
 \lambda=\sqrt{\frac{m}{\mu_0 e^2 n_{se}}} \tag{1.1}
 \end{equation*}
-
 其中，$n_{se}$上面已经给出，$m=9.1\times 10^{-31}\ \mathrm{kg}$，则：
 $$
 \lambda=\sqrt{\frac{9.1\times 10^{-31}}{4\pi \times 10^{-7}\times 1.6\times 10^{-19}\times 3.3\times 10^{28}}}\simeq 3\times 10^{-8} m
@@ -587,7 +676,6 @@ J_f=\frac{2H_0}{\lambda}=\frac{2\mu_0 H_0}{\mu_0 \lambda}\simeq 4\times 10^{12} 
 \end{equation*}
 
 也即，$J_f$与$J_s$\textbf{大致}上相等。
-
 
 
 
