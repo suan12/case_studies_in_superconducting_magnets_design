@@ -688,67 +688,73 @@ J_f=\frac{2H_0}{\lambda}=\frac{2\mu_0 H_0}{\mu_0 \lambda}\simeq 4\times 10^{12} 
 点C处，包括球内的整个空间处于均匀外场中(问题2.1的方程2.40)。
 我们使用和问题2.1中途2.1相同的球坐标系。
 
-当均匀外场降至$0$(图1.1c中的D点)，由于球内的磁感应无法改变，其磁场$\vec{H_2}$必保持不变。远离球中心($r\rightarrow \infty$)处的外场$\vec{H_1}$为0。靠近球处的磁场可由标量势$\phi_1=(A/r^2)\cos\theta$导出。
-在$\phi_1$上应用$\nabla$算符，可得到球坐标下的偶极场。
+当均匀外场减小至零(图1.1c中的D点)，由于球内磁感应强度无法改变，其磁场强度$\vec{H_2}$必保持不变。
+远离球中心($r\rightarrow \infty$)处的外磁场$\vec{H_1}$为零。
+靠近球处的磁场可由标量势$\phi_1=(A/r^2)\cos\theta$导出。
+在$\phi_1$上应用$\nabla$算符，得到就是球坐标下的偶极场。
 \begin{subequations}
 	\begin{align}
-\vec{H_2}=&H_0 (-\cos\theta \vec{i_r}+\sin\theta \vec{i_\theta})  \qquad(r\le R) \\
-\vec{H_1}=&\frac{A}{r^3}(2\cos\theta \vec{i_r}+\sin\theta \vec{i_\theta})\qquad  (r\ge R)
+\vec{H}_2=&H_0 (-\cos\theta \vec{i_r}+\sin\theta \vec{i_\theta})  \qquad(r\le R) \\
+\vec{H}_=&\frac{A}{r^3}(2\cos\theta \vec{i_r}+\sin\theta \vec{i_\theta})\qquad  (r\ge R)
 	\end{align}
 \end{subequations}
 
-在$r=R$处，$B$的法向分量应连续。由于在$\theta=0$处球内外的磁场均仅有法向分量，故：
-$$
--H_0=2\frac{A}{R^3}
-$$
-
-于是，$A=-H_0 R^3/2$，进而：
+在$r=R$处，$B$的法向分量连续。由于在$\theta=0$处球内外的磁场均仅有法向分量，故：
 \begin{equation*}
-\vec{H_1}=-H_0\left(\frac{R}{r}\right)^3 (\cos\theta \vec{i_r}+\frac{1}{2}\sin\theta \vec{i_\theta}) \tag{2.44c}
+-H_0=2\frac{A}{R^3}
+\end{equation*}
+
+于是，$A=-H_0 R^3/2$。进而：
+\begin{equation*}
+\vec{H}_1=-H_0\left(\frac{R}{r}\right)^3 \left(\cos\theta \vec{i_r}+\frac{1}{2}\sin\theta \vec{i_\theta}\right) \tag{2.44c}
 \end{equation*}
 
 
-上式即磁场分布的定量表达。不同的是，图1.1c的外场是自下向上的，而图2.1的磁场是自右向左的。
+方程2.44c即磁场分布。不同的是，图1.1c的外场是自下向上的，而图2.1的磁场是自右向左的。
 
-在$r=R$处，磁场切向分量的不连续等于在$r=R$处球表面电流密度$\vec{K}_f$。联立方程2.6、2.44a和2.44c，有：
+磁场切向分量在$r=R$处的不连续等于在$r=R$处的球面上存在表面电流密度$\vec{K}_f$。
+联立方程2.6、2.44a和2.44c，有：
 \begin{equation}
-  \vec{K}_f=\vec{i_r}\times \left[H_0 \sin\theta \vec{i_\theta}-(-\frac{1}{2}H_0 \sin\theta \vec{i_\theta})\right]=\frac{3}{2}H_0\sin\theta\vec{i_\theta}
+  \vec{K}_f=\vec{i_r}\times \left[H_0 \sin\theta \vec{i_\theta}-\left(-\frac{1}{2}H_0 \sin\theta \vec{i_\theta}\right)\right]=\frac{3}{2}H_0\sin\theta\vec{i_\theta}
 \end{equation}
 
-值得一提的是，这个$\sin\theta$分布，可以用一个绕在球上的在$z$轴均匀匝密度的``薄"线圈来近似。
+此$\sin\theta$式分布可以用一个绕在球面上的\textit{在$z$轴方向具有均匀匝密度}的``薄"线圈来近似。
 
 
 
 
 \subsection{问题2.3：球壳的磁屏蔽}
-本问题处理被动磁屏蔽。在MRI、磁悬浮等一些人和磁场敏感设备必须暴露于磁场外缘的高场系统中磁屏蔽是非常重要的课题。
-美国食药局(FDA)规定，MRI中的最大外缘磁场为5高斯($0.5\ \mathrm{mT}$)。
+本问题处理被动磁屏蔽，该问题在MRI、磁悬浮列车、人和磁敏感设备可能会暴露于其外场中的高场系统中是非常重要的。美国食药局(FDA)规定，MRI中的最大外缘磁场为5 gauss($0.5\ \mathrm{mT}$)。
 
-在空间中的球星区域，屏蔽一个均匀磁场$\vec{H}_\infty$：
+在空间中的球形区域内，需要被屏蔽均匀磁场$\vec{H}_\infty$为：
 \begin{equation*}
 \vec{H}_\infty=H_0 (-\cos\theta \vec{i_r}+\sin\theta \vec{i_\theta})\tag{2.40}
 \end{equation*}
 
-为了形成屏蔽，可以用一个外径为$2R$、壁厚$d/R\ll 1$、高磁导率材料($\mu/\mu_0 \gg 1$)的球壳，如图2.4所示。
+为了实现屏蔽，可以使用外径$2R$、壁厚$d/R\ll 1$、高磁导率($\mu/\mu_0 \gg 1$)材料的球壳。
+示意如图2.4。
 
-a) 将本问题视为均匀外磁场中的磁性球壳。证明$H_{ss}/H_0$有如下表达式。其中，$H_{ss}$为球壳内($r\le R-d$)的磁场幅值
+a) 将本问题视为均匀外磁场中的磁性球壳。记$H_{ss}$为球壳内($r\le R-d$)的磁场幅值，
+证明$H_{ss}/H_0$为：
 \begin{equation}
 \frac{H_{ss}}{H_0}=\frac{9\mu_0 \mu}{9\mu_0 \mu+2(\mu-\mu_0)^2\left[1-\left(1-\frac{d}{R}\right)^3\right]}
 \end{equation}
 
-b)证明，在极限情况$\mu/\mu_0\gg 1$和$d/R\ll 1$下，$H_{ss}/H_0$可约化为
+b) 证明，在$\mu/\mu_0\gg 1$和$d/R\ll 1$的极限情况下，方程2.46给出的$H_{ss}/H_0$可约化为：
 \begin{equation}
-\frac{H_{ss}}{H_0}\simeq \frac{3}{2}(\frac{\mu_0}{\mu})(\frac{R}{d})
+\frac{H_{ss}}{H_0}\simeq \frac{3}{2}\left(\frac{\mu_0}{\mu}\right)\left(\frac{R}{d}\right)
 \end{equation}
 
-c)用微扰法得到上式。首先，在$\mu=\infty$条件下解出壳上($R-d\le r\le R$)的磁场。接着，用微扰法在$\mu/\mu_0 \gg 1$条件下得到上式。
+c) 接下来，用微扰法导出上式。首先，在$\mu=\infty$条件下解出壳体中($R-d\le r\le R$)的磁场。
+然后，用微扰法在$\mu/\mu_0 \gg 1$条件下得到方程2.47。
 
-d)实践中，屏蔽材料中的磁通必须控制在材料的饱和磁通($\mu_0 M_{sa}$)之下。证明，可保持壳不饱和的$d/R$表达式为
+d) 实践中，屏蔽材料中的磁通必须控制在材料的饱和磁通($\mu_0 M_{sa}$)之下。
+证明，壳体不饱和的$d/R$条件为：
 \begin{equation}
 \frac{d}{R} \ge \frac{3H_0}{2M_{sa}}
 \end{equation}
 
-e)画出$\mu/\mu_0 \gg 1$情况下的场线。
+e)画出$\mu/\mu_0 \gg 1$情况下的磁力线。
 
 \begin{figure}[htbp]
   \centering
@@ -757,35 +763,38 @@ e)画出$\mu/\mu_0 \gg 1$情况下的场线。
 \end{figure}
 
 \subsubsection*{问题2.3之解答}
-a)问题可以分为三个区域：区域1($r\ge R$)；区域2(球壳)；区域3($r\le R-d$)。相应的势函数为：
+a) 将问题分为三个区域：区域1($r\ge R$)；区域2(球壳)；区域3($r\le R-d$)。相应的势函数分别为：
 \begin{align}
   \phi_1 =& H_0 r\cos\theta+\frac{A}{r^2}\cos\theta \tag{S3.1a} \\
   \phi_2 =& C r \cos\theta+\frac{D}{r^2}\cos\theta\tag{S3.1b} \\
   \phi_3 =& H_{ss} r\cos\theta  \tag{S3.1c}
 \end{align}
 
-注意到，在$r\rightarrow \infty$时，$\phi_1 \rightarrow H_0 r\cos\theta$以及在$r\rightarrow 0$时，$\phi_3$为有限值。应用球坐标下的$\nabla$算符，得到
+可见，在$r\rightarrow \infty$时，$\phi_1 \rightarrow H_0 r\cos\theta$；
+$r\rightarrow 0$时，$\phi_3$为有限值。
+
+应用球坐标下的$\nabla$算符，得：
 \begin{align}
   \vec{H}_1 =& H_0 (-\cos\theta\vec{i_r}+\sin\theta\vec{i}_\theta)+\frac{A}{r^3} (2\cos\theta\vec{i_r}+\sin\theta\vec{i}_\theta) \tag{S3.2a}\\
   \vec{H}_2 =& C(-\cos\theta\vec{i_r}+\sin\theta\vec{i}_\theta)+\frac{D}{r^3} (2\cos\theta\vec{i_r}+\sin\theta\vec{i}_\theta)  \tag{S3.2b}\\
    \vec{H}_3 =& H_{ss}  (-\cos\theta\vec{i_r}+\sin\theta\vec{i}_\theta)  \tag{S3.2c}
 \end{align}
 
-\textbf{边界条件：}
+\noindent\textbf{边界条件：}
 
 \begin{enumerate}
-  \item $r=R$处，$\vec{H}$的切向分量$H_\theta$连续：$\phi_1=\phi_2   $
-  \item 类似的，在$r=R-d$处，$H_\theta$连续：$\phi_2=\phi_3  $
-  \item 在$r=R$处，$\vec{B}$的法向分量$B_r$连续
-  \item 类似的，在$r=R-d$处，$B_r$连续
+  \item $r=R$处，$\vec{H}$的切向分量$H_\theta$连续：$\phi_1=\phi_2$。
+  \item 类似的，在$r=R-d$处，$H_\theta$连续：$\phi_2=\phi_3  $。
+  \item 在$r=R$处，$\vec{B}$的法向分量$B_r$连续。
+  \item 类似的，在$r=R-d$处，$B_r$连续。
 \end{enumerate}
 
-由上述边界条件，可导出下面的四个方程：
+上述边界条件给出下面的四个等式：
 \begin{align}
-  H_0+\frac{A}{R^3}=& C+\frac{D}{R^3} \nonumber \tag{S3.3a}\\
-  C+\frac{D}{(R-d)^3}=& H_{ss} \nonumber \tag{S3.3b}\\
-  \mu_0(-H_0+\frac{2A}{R^3})=& \mu\left(-C+\frac{2D}{R^3}\right)\nonumber \tag{S3.3c} \\
-  \mu\left[-C+\frac{2D}{(R-d)^3}\right]=& -\mu_0 H_{ss} \nonumber\tag{S3.3d}
+  &H_0+\frac{A}{R^3}= C+\frac{D}{R^3} \nonumber \tag{S3.3a}\\
+  &C+\frac{D}{\left(R-d\right)^3}= H_{ss} \nonumber \tag{S3.3b}\\
+  &\mu_0\left(-H_0+\frac{2A}{R^3}\right)= \mu\left(-C+\frac{2D}{R^3}\right)\nonumber \tag{S3.3c} \\
+  &\mu\left[-C+\frac{2D}{(R-d)^3}\right]= -\mu_0 H_{ss} \nonumber\tag{S3.3d}
 \end{align}
 
 联立S3.3a和S3.3b，消去$C$：
@@ -794,53 +803,59 @@ a)问题可以分为三个区域：区域1($r\ge R$)；区域2(球壳)；区域3
 \end{equation*}
 
 
-联立S3.3b和S3.3d，解出$D$：
+联立S3.3b和S3.3d，解出用$H_{ss}$表示的$D$：
 \begin{equation*}
-D=\frac{\mu-\mu_0}{2\mu} (R-d)^3 H_{ss}  \tag{S3.5}
+D=\frac{\mu-\mu_0}{2\mu} \left(R-d\right)^3 H_{ss}  \tag{S3.5}
 \end{equation*}
 
-于是，可以$H_{ss}$表示$A/R^3$：
+联立方程S3.4和S3.5，得到以$H_{ss}$表示的$A/R^3$：
 \begin{equation*}
 \frac{A}{R^3}=H_{ss}\left\{1-\frac{\mu-\mu_0}{3\mu}\left[1-\left(1-\frac{d}{R}\right)^3\right]\right\}-H_0   \tag{S3.6}
 \end{equation*}
 
-联立S3.3c和S3.3d，得到：
+由S3.3c和S3.3d，得到：
 \begin{equation*}
-\frac{2A}{R^3}+2\frac{\mu}{\mu_0}D\left[\frac{1}{(R-d)^3}-\frac{1}{R^3}\right]+H_ss =H_0  \tag{S3.7}
+\frac{2A}{R^3}+2\frac{\mu}{\mu_0}D\left[\frac{1}{(R-d)^3}-\frac{1}{R^3}\right]+H_{ss} =H_0  \tag{S3.7}
 \end{equation*}
 
-联立S3.3-S3.7，用$H_0$表达$H_{ss}$，可以得到：
+联立S3.3-S3.7，用$H_0$表达$H_{ss}$，可得：
 \begin{equation*}
 \frac{H_{ss}}{H_0}=\frac{9\mu_0 \mu}{9\mu_0 \mu+2(\mu-\mu_0)^2\left[1-\left(1-\frac{d}{R}\right)^3\right]}  \tag{2.46}
 \end{equation*}
 
-b) 方程右侧的分子分母同除$\mu_0^2$，应用极限$\mu/\mu_0\gg 1$和$d/R\ll 1$：
+b) 方程2.46右侧的分子分母同除$\mu_0^2$，应用极限$\mu/\mu_0\gg 1$和$d/R\ll 1$：
 \begin{align}
-\frac{H_{ss}}{H_0}\simeq& \frac{9\mu/\mu_0}{9\frac{\mu}{\mu_0}+2(\frac{\mu}{\mu_0})^2\left[1-(1-3\frac{d}{R})\right]} \nonumber\tag{S3.8}\\
-\simeq&\frac{3}{3+2(\frac{\mu}{\mu_0})(\frac{d}{R})}\nonumber \tag{S3.9}
+\frac{H_{ss}}{H_0}\simeq& \frac{9\mu/\mu_0}{9\left(\frac{\mu}{\mu_0}\right)+2\left(\frac{\mu}{\mu_0}\right)^2\left[1-\left(1-3\left(\frac{d}{R}\right)\right)\right]} \nonumber\tag{S3.8}\\
+\simeq&\frac{3}{3+2\left(\frac{\mu}{\mu_0}\right)\left(\frac{d}{R}\right)}\nonumber \tag{S3.9}
 \end{align}
 
-在$\mu d/\mu_0 R \gg 1$的特殊情况下，S3.9可以简化为：
+在$\mu d/\mu_0 R \gg 1$的特殊情况下，S3.9可进一步简化：
 \begin{equation*}
-\frac{H_{ss}}{H_0}\simeq \frac{2}{3}(\frac{\mu_0}{\mu})(\frac{R}{d})  \tag{2.47}
+\frac{H_{ss}}{H_0}\simeq \frac{2}{3}\left(\frac{\mu_0}{\mu}\right)\left(\frac{R}{d}\right)  \tag{2.47}
 \end{equation*}
 
-c)我们假设$\mu$为无限大。这要求B线在$r=R$处垂直于球壳。这是因为在$r=R$处，$\vec{H}_1$仅有径向分量。由于壳内$H=0$，故在$r=R$处$H_\theta$必须连续。
-注意到，当$\mu=\infty$时，$C=D=0$。这样，$A=-R^3 H_0$，于是在$r=R$处
+c) 方程2.47的相同结果可以直接在极限$\mu/\mu_0\gg 1$和$d/R\ll 1$下由微扰法得到。
+
+我们首先假设球壳材料的$\mu$无限大。这要求B线在$r=R$处垂直于球壳。
+这是因为在$r=R$处，$\vec{H}_1$仅有径向分量。由于壳内$H=0$，故在$r=R$处$H_\theta$必须连续。
+(当$\mu=\infty$时，$C=D=0$。)
+由方程S3.3a，$A=-R^3 H_0$，于是在$r=R$处：
 \begin{equation*}
 \vec{H}_1=-3 H_0 \cos\theta \vec{i_r} \tag{S3.10}
 \end{equation*}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.7]{chpt2/figs/fig2.5.eps}
+	\includegraphics[scale=0.8]{chpt2/figs/fig2.5.eps}
 	\caption{通过球壳$\pm \theta$边界内区域进入壳的磁通。}
 \end{figure}
 
-B线局限在壳内，不会``逸"至区域3。也即，壳内的B仅有$\vec{i}_\theta$分量。应用磁通连续性($\nabla \cdot \vec{B}=0$)并在$\mu=\infty$条件下解$B_2$。解出$B_2$
-后，可以得到$\mu \neq \infty$但$\mu/\mu_0 \gg 1$时$\vec{H}_3$的近似表达式。
+B线局限在壳内，不会``逸"至区域3；也即壳内的B仅有$\vec{i}_\theta$分量。
+应用磁通连续性($\nabla \cdot \vec{B}=0$)并在$\mu=\infty$条件下解$\vec{B}_2$。
+解出$B_2$后，可以得到$\mu \neq \infty$但$\mu/\mu_0 \gg 1$时$\vec{H}_3$的近似表达式。
 
-首先，计算通过表面区域$\pm \theta$边界内进入壳的总磁通(图2.5)。根据图中的微元积分
+首先，计算通过表面区域$\pm \theta$范围内进入壳的总磁通(图2.5)。
+如图所示，表面积可由微元(圆环)从$0$到$\theta$积分得到：
 \begin{align}
 \Phi=&\mu_0\int_{0}^{\theta} \vec{H}_1 \cdot d\vec{A}=\mu_0\int_{0}^{\theta} 3H_0\cos\theta 2\pi R^2 \sin\theta d\theta\nonumber\\
 =&3\pi\mu_0 R^2 H_0 \sin^2 \theta\nonumber \tag{S3.11}
