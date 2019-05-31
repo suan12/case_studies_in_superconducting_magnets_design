@@ -916,10 +916,11 @@ d)应当明确，不能为了满足$d/R \ll 1$而将$d$选的特别小。事实�
 \begin{table}[]
 \centering
 \caption{铁合金的$\mu/\mu_0$、$\mu_0M(H_0)$和$\mu_0 M_{sa}$值}
+\begin{threeparttable}
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
 \multirow{2}{*}{$\mu_0 H_0$[gauss]} & \multicolumn{2}{c|}{Annealed Ingot Iron} & \multicolumn{2}{c|}{As-Cast Steel} & \multicolumn{2}{c|}{Vanadium Permendur} \\ \cline{2-7}
-&$ (\mu/\mu_0)_{dif} $ & $\mu_0 $M[T] & $(\mu/\mu_0)_{dif} $ &$ \mu_0 M$[T] &$ (\mu/\mu_0)_{dif} $ & $\mu_0 M$[T] \\ \hline
+&$ (\mu/\mu_0)_{dif}\tnote{*} $ & $\mu_0 $M[T] & $(\mu/\mu_0)_{dif}\tnote{*} $ &$ \mu_0 M$[T] &$ (\mu/\mu_0)_{dif}\tnote{*} $ & $\mu_0 M$[T] \\ \hline
 1 & 7710 & 0.375 & na & na & na & na \\ \hline
 3 & 3850 & 0.91 & 1660 & 0.25 & 4845 & 0.65 \\ \hline
 5 & 500 & 1.42 & 1155 & 0.51 & 1875 & 1.25 \\ \hline
@@ -931,54 +932,57 @@ d)应当明确，不能为了满足$d/R \ll 1$而将$d$选的特别小。事实�
 500 & 2.0 & 2.05 & 1.0 & 1.92 & 0.26 & 2.18 \\ \hline
 1000 & 0.4 & 2.11 & 0.45 & 2.01 & 0.07 & 2.19 \\ \hline
 $\mu_0 M_{sa} $ & \multicolumn{2}{c|}{2.13 [T]} & \multicolumn{2}{c|}{2.03 [T]} & \multicolumn{2}{c|}{2.20 [T]} \\ \hline
-
-
+ \begin{tablenotes}
+        \footnotesize
+        \item[*] 数据来自永磁体手册的$M(H)$图(通用电气公司, 1963)。 %此处加入注释*信息
+      \end{tablenotes}
+    \end{threeparttable}
 \end{tabular}
 \end{table}
 
-e) $\mu/\mu_0=100$磁性球壳置于均匀场中的磁场分布如图2.6所示。
+e) $\mu/\mu_0=100$条件下的磁力线分布如图2.6。
 
 \begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.7]{chpt2/figs/fig2.6.eps}
-  \caption{$\mu/\mu_0=100$磁性球壳置于均匀场中的磁场分布。注意到进出球壳的磁场线是近乎垂直于壳的。}
+  \caption{$\mu/\mu_0=100$磁性球壳置于均匀场中的磁场分布。注意到进出球壳的磁场线是\textit{近乎}垂直于壳的}
 \end{figure}
 
 
-
 \subsection{讨论2.2：用圆柱壳屏蔽}
-我们用类似于问题4中所用的微扰技术推导$H_{cs}/H_0$的表达式。式中，$H_{cs}$是置于均匀外场采用高磁导率($\mu/\mu_0 \gg 1$)材料的圆柱壳($d/R\ll 1$)内部($r\le R-d$)的磁场的幅值。
-在二维柱坐标系下，外场有如下形式：
+我们用类似于问题2.3中所用的微扰法推导$H_{cs}/H_0$的表达式。圆柱壳外径o.d.为$2R$，壁厚($d/R\ll 1$)，
+由高磁导率($\mu/\mu_0 \gg 1$)制成，置于幅值为$H_0$的外场$\vec{H}_\infty$中，圆柱壳内($r\le R-d$)
+的磁场记为$H_{cs}$。在二维柱坐标系下，外场的形式为：
 \begin{equation*}
 \vec{H}_\infty =H_0 (-\cos\theta \vec{i_r}+\sin\theta\vec{i}_\theta) \tag{2.40}
 \end{equation*}
+其中，$\theta$的定义见图2.3。
 
-
-我们假定圆柱材料的$\mu$是无限大的，这样B线在$r=R$处必须垂直于圆柱。于是，在$r=R$处，有
+我们假定圆柱材料的$\mu$无限大，$B$线在$r=R$处必须垂直于圆柱。于是，在$r=R$处有：
 $$\vec{H}_1 =-2 H_0 \cos\theta \vec{i_r}$$
 
-当然，壳内的B是$\theta$方向的。在$d/R\ll 1$条件下，磁通连续性要求B满足：
+当然，壳内的$B$为$\theta$向。在$d/R\ll 1$条件下，磁通连续性要求$B$满足：
 $$B_2 d=\int_{0}^{\theta}2\mu_0 H_0 R\cos\theta d\theta=2\mu_0 R H_0 \sin\theta$$
 
-于是，
-$$\vec{B}_2=2\mu_0 (\frac{R}{d})H_0 \sin\theta \vec{i}_\theta$$
+于是：
+$$\vec{B}_2=2\mu_0 \left(\frac{R}{d}\right)H_0 \sin\theta \vec{i}_\theta$$
 
-已知$\mu=\infty$下的$\vec{B}_2$，我们可以得到$\mu/\mu_0 \gg 1$下的$\vec{H}_2$：
-$$\vec{H}_2= \frac{\vec{B}_2}{\mu}\simeq 2(\frac{\mu_0}{\mu}) (\frac{R}{d})H_0 \sin\theta \vec{i}_\theta$$
+一旦得到$\mu=\infty$下的$\vec{B}_2$，我们就知道了$\mu/\mu_0 \gg 1$下的$\vec{H}_2$：
+$$\vec{H}_2= \frac{\vec{B}_2}{\mu}\simeq 2\left(\frac{\mu_0}{\mu}\right) \left(\frac{R}{d}\right)H_0 \sin\theta \vec{i}_\theta$$
 
 因为在没有表面电流时$H_\theta$是连续的，区域2和区域3一定有$H_{\theta 2}=H_{\theta 3}$。于是，在$r=R-d$处：
-$$H_{\theta 3}=H_{\theta 2}\simeq 2(\frac{\mu_0}{\mu}) (\frac{R}{d})H_0 \sin\theta$$
+$$H_{\theta 3}=H_{\theta 2}\simeq 2\left(\frac{\mu_0}{\mu}\right) \left(\frac{R}{d}\right)H_0 \sin\theta$$
 
-从上面的表达式，可以得出：
+由以上几式可得：
 \begin{align}
-\vec{H}_3 \simeq& 2(\frac{\mu_0}{\mu}) (\frac{R}{d})H_0 (-\cos\theta \vec{i_r}+\sin\theta\vec{i}_\theta)\nonumber\\
-\left|\frac{\vec{H}_3}{H_0}\right|\equiv&\frac{H_{cs}}{H_0}\simeq 2(\frac{\mu_0}{\mu}) (\frac{R}{d})
+\vec{H}_3 \simeq& 2\left(\frac{\mu_0}{\mu}\right) \left(\frac{R}{d}\right)H_0 (-\cos\theta \vec{i_r}+\sin\theta\vec{i}_\theta)\nonumber\\
+\left|\frac{\vec{H}_3}{H_0}\right|\equiv&\frac{H_{cs}}{H_0}\simeq 2\left(\frac{\mu_0}{\mu}\right) \left(\frac{R}{d}\right)
 \end{align}
 
-如问题2.3中的球壳一样，圆柱壳的厚度也不能无线薄。它必须有保持足够的厚度以防止饱和：
+如问题2.3中的球壳一样，圆柱壳的厚度也不能任意薄；它必须有足够的厚度以防止饱和：
 $$\mu H_{cs}=2\mu_0 H_0 \frac{R}{d}\le \mu_0 M_{sa}$$
 
-根据上面的推导，我们得到：
+根据上面的推导，有：
 \begin{equation}
 \frac{d}{R}\ge \frac{2H_0}{M_{sa}}
 \end{equation}
