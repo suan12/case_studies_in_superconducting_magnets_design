@@ -989,22 +989,28 @@ $$\mu H_{cs}=2\mu_0 H_0 \frac{R}{d}\le \mu_0 M_{sa}$$
 
 
 \subsection{问题2.4：四个偶极子簇的远场}
-本题讨论如下图布置的四个理想偶极子簇的远场。各偶极子的方向如图箭头所示。两个相反偶极子的中心距为$2\delta_d$。各偶极子j均为零绕组厚度，直径均为$2r_d$，在y向的总长度为$l_d$，距离偶极子径向($r_j$)位置的远场($r_j \gg l_d$)可建模为球偶极子场$\vec{B}_j$：
+本题讨论如图2.7布置的四个\textit{理想}偶极子簇的远场。
+各偶极子的方向由圆圈内的箭头指示。
+两个相反偶极子的中心距为$2\delta_d$。
+偶极子$j$绕组厚度为零，直径为$2r_d$，$y$向总长度为$\ell_d$，
+径向($r_j$)远离偶极子的远场($r_j \gg \ell_d$)可建模为球偶极子场$\vec{B}_j$：
 \begin{equation}
-\vec{B}_j=\frac{r_d^2 l_d B_0}{2r_j^3}(\cos\theta_j \vec{i}_{r_j}+\frac{1}{2} \sin\theta_j \vec{i}_{\theta_j})
+\vec{B}_j=\frac{r_d^2 \ell_d B_0}{2r_j^3}(\cos\vartheta_j \vec{i}_{r_j}+\frac{1}{2} \sin\vartheta_j \vec{i}_{\theta_j})
 \end{equation}
+式中，$r_j$是分别到各偶极子中心的距离；
+$\vartheta_j$的定义确保$\vartheta_j=0^\circ$时，各偶极子在绕组内的磁场指向$r_j$方向。
+图2.7给出了各偶极子内磁场的方向，还定义了对所有偶极子共用的$r-\theta$坐标系和$z-x$坐标系。
+$r\gg \delta_d$时，我们有${\vartheta}_1=\theta+180^\circ,\vartheta_2=\theta-90^\circ,\vartheta_3=\theta,\vartheta_4=\theta + 90^\circ$。
 
-式中，$r_j$是分别到各偶极子中心的距离；$\theta_j$的定义确保$\theta_j=0^\circ$时，各偶极子的绕组内场指向$r_j$方向。图2.7给出了各偶极子内场的方向，还定义了对所有偶极子共同的$r-\theta$坐标系和$z-x$坐标系。注意到，$r\gg \delta_d$，我们有$\mathscr{\theta}_1=\theta+180^\circ,\theta_2=\theta-90^\circ,\theta_3=\theta,\theta_4=\theta + 90^\circ$。
-
-证明，忽略各偶极子的末端效应，仅考虑$y=0$平面，本组合系统的远场($r/\delta_d \gg 1$)近似表达式为：
+证明，若忽略各偶极子的末端效应，即仅考虑$y=0$平面，本组合系统的远场($r/\delta_d \gg 1$)的近似表达式为：
 \begin{equation}
-\vec{B}\simeq \frac{3r_d^2 l_d B_0 \delta_d}{r^4}(-\sin 2\theta \vec{i}_r+\frac{1}{2}\cos 2\theta \vec{i}_\theta)
+\vec{B}\simeq \frac{3r_d^2 \ell_d B_0 \delta_d}{r^4}(-\sin 2\theta \vec{i}_r+\frac{1}{2}\cos 2\theta \vec{i}_\theta)
 \end{equation}
 
 \begin{figure}[htbp]
   \centering
- \includegraphics[scale=0.8]{chpt2/figs/fig2.7.eps}
-  \caption{四个偶极子布置的横截面。每个偶极子的箭头指示线圈内场的方向。}
+ \includegraphics[scale=0.9]{chpt2/figs/fig2.7.eps}
+  \caption{四个偶极子布局的横截面。每个偶极子中的箭头指示线圈内磁场的方向。}
 \end{figure}
 
 
@@ -1017,29 +1023,28 @@ r_3\simeq& r+\delta_d \sin\theta\nonumber\tag{S4.1c}\\
 r_4\simeq& r-\delta_d \cos\theta\nonumber\tag{S4.1d}
 \end{align}
 
-由此，可以得到各偶极子采用$\theta$表示的场：
+将S4.1分别代入2.51，使用$\theta$表示$\vartheta$的：
 \begin{align}
-\vec{B}_1 \simeq& \frac{r_d^2 l_d B_0}{2(r-\delta_d\sin\theta)^3}(-\cos\theta \vec{i}_r-\frac{1}{2}\sin\theta \vec{i}_\theta) \nonumber\tag{S4.2a}\\
-\vec{B}_2 \simeq& \frac{r_d^2 l_d B_0}{2(r+\delta_d\cos\theta)^3}(\sin\theta \vec{i}_r-\frac{1}{2}\cos\theta \vec{i}_\theta)  \nonumber\tag{S4.2b}\\
-\vec{B}_3 \simeq& \frac{r_d^2 l_d B_0}{2(r+\delta_d\sin\theta)^3}(\cos\theta \vec{i}_r+\frac{1}{2}\sin\theta \vec{i}_\theta) \nonumber\tag{S4.2c}\\
-\vec{B}_4 \simeq& \frac{r_d^2 l_d B_0}{2(r-\delta_d\cos\theta)^3}(-\sin\theta \vec{i}_r+\frac{1}{2}\cos\theta \vec{i}_\theta)  \nonumber\tag{S4.2d}
+\vec{B}_1 \simeq& \frac{r_d^2 \ell_d B_0}{2(r-\delta_d\sin\theta)^3}(-\cos\theta \vec{i}_r-\frac{1}{2}\sin\theta \vec{i}_\theta) \nonumber\tag{S4.2a}\\
+\vec{B}_2 \simeq& \frac{r_d^2 \ell_d B_0}{2(r+\delta_d\cos\theta)^3}(\sin\theta \vec{i}_r-\frac{1}{2}\cos\theta \vec{i}_\theta)  \nonumber\tag{S4.2b}\\
+\vec{B}_3 \simeq& \frac{r_d^2 \ell_d B_0}{2(r+\delta_d\sin\theta)^3}(\cos\theta \vec{i}_r+\frac{1}{2}\sin\theta \vec{i}_\theta) \nonumber\tag{S4.2c}\\
+\vec{B}_4 \simeq& \frac{r_d^2 \ell_d B_0}{2(r-\delta_d\cos\theta)^3}(-\sin\theta \vec{i}_r+\frac{1}{2}\cos\theta \vec{i}_\theta)  \nonumber\tag{S4.2d}
 \end{align}
 
-对于$r\gg \delta_d$，各项的分母可对$\delta_d/r$作一阶展开，成为：
+在$r\gg \delta_d$时，S4.2各式中的分母可对$\delta_d/r$作一阶展开，成为：
 \begin{align}
-\vec{B}_1 \simeq& \frac{r_d^2 l_d B_0}{2 r^3}\left[1+3(\frac{\delta_d}{r})\sin\theta \right](-\cos\theta \vec{i}_r-\frac{1}{2}\sin\theta \vec{i}_\theta)\nonumber\tag{S4.3a}\\
-\vec{B}_2 \simeq& \frac{r_d^2 l_d B_0}{2 r^3}\left[1-3(\frac{\delta_d}{r})\cos\theta \right](\sin\theta \vec{i}_r-\frac{1}{2}\cos\theta \vec{i}_\theta)\nonumber\tag{S4.3b}\\
-\vec{B}_3 \simeq& \frac{r_d^2 l_d B_0}{2 r^3}\left[1-3(\frac{\delta_d}{r})\sin\theta \right](\cos\theta \vec{i}_r+\frac{1}{2}\sin\theta \vec{i}_\theta)\nonumber\tag{S4.3c}\\
-\vec{B}_4 \simeq& \frac{r_d^2 l_d B_0}{2 r^3}\left[1+3(\frac{\delta_d}{r})\sin\theta \right](-\sin\theta \vec{i}_r+\frac{1}{2}\cos\theta \vec{i}_\theta)\nonumber\tag{S4.3d}
+\vec{B}_1 \simeq& \frac{r_d^2 \ell_d B_0}{2 r^3}\left[1+3\left(\frac{\delta_d}{r}\right)\sin\theta \right](-\cos\theta \vec{i}_r-\frac{1}{2}\sin\theta \vec{i}_\theta)\nonumber\tag{S4.3a}\\
+\vec{B}_2 \simeq& \frac{r_d^2 \ell_d B_0}{2 r^3}\left[1-3\left(\frac{\delta_d}{r}\right)\cos\theta \right](\sin\theta \vec{i}_r-\frac{1}{2}\cos\theta \vec{i}_\theta)\nonumber\tag{S4.3b}\\
+\vec{B}_3 \simeq& \frac{r_d^2 \ell_d B_0}{2 r^3}\left[1-3\left(\frac{\delta_d}{r}\right)\sin\theta \right](\cos\theta \vec{i}_r+\frac{1}{2}\sin\theta \vec{i}_\theta)\nonumber\tag{S4.3c}\\
+\vec{B}_4 \simeq& \frac{r_d^2 \ell_d B_0}{2 r^3}\left[1+3\left(\frac{\delta_d}{r}\right)\sin\theta \right](-\sin\theta \vec{i}_r+\frac{1}{2}\cos\theta \vec{i}_\theta)\nonumber\tag{S4.3d}
 \end{align}
 
-组合上面几式，可以得到
+将S4.3各式组合，可得：
 \begin{equation*}
-\vec{B}=\vec{B}_1+\vec{B}_2+\vec{B}_3+\vec{B}_4\simeq \frac{3r_d^2 l_d B_0 \delta_d}{r^4}(-\sin 2\theta \vec{i}_r+\frac{1}{2}\cos 2\theta \vec{i}_\theta) \tag{2.52}
+\vec{B}=\vec{B}_1+\vec{B}_2+\vec{B}_3+\vec{B}_4\simeq \frac{3r_d^2 \ell_d B_0 \delta_d}{r^4}(-\sin 2\theta \vec{i}_r+\frac{1}{2}\cos 2\theta \vec{i}_\theta) \tag{2.52}
 \end{equation*}
 
-注意到，四偶极子簇的$|B|$按$\propto 1/r^4$衰减而不是像单个偶极子一样的依照$\propto 1/r^3$衰减。
-
+可见，四偶极子簇的$|\vec{B}|$按$\propto 1/r^4$衰减，而不像单个偶极子依照$\propto 1/r^3$衰减。
 
 
 \subsection{问题2.5：铁电磁体的磁极形状}
