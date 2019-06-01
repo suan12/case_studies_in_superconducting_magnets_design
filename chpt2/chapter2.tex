@@ -139,7 +139,7 @@ Faraday定律的积分形式为：
 
 如果电场$\vec{E}$和磁场$\vec{B}$能够解耦，将大大简化解方程组2.17的难度。
 ``准静态"分析就是一种可以满足很多重要实际应用的近似方法。
-最简单的做法就以静态方程替代方程2.17。于是，在$\mathrm{0^{th}}$阶近似下，我们有：
+最简单的做法就以静态方程替代式2.17。于是，在$0^{th}$阶近似下，我们有：
 \begin{subequations}
 	\begin{align}
 \nabla \cdot (\epsilon_0\vec{E}) &=\rho_c \\
@@ -459,7 +459,7 @@ n & \multicolumn{2}{l|}{$r^nP_n(u)$} \\ \hline
 球内的场表达式可以用来估算磁体的边缘场对附近铁磁物体的作用力。
 磁体边缘场对铁制物体的作用力是第3章讨论3.12的主题。
 
-如图2.1所示的一个磁球，半径是R，磁导率是$\mu$，置于均匀外磁场中：
+如图2.1所示的一个磁球，半径是$R$，磁导率是$\mu$，置于均匀外磁场中：
 \begin{equation}\label{eqn:2.40}
   \vec{H}_\infty = H_0 (-\cos \theta\vec{i_r}+\sin\theta\vec{i_\theta})
 \end{equation}
@@ -514,7 +514,7 @@ $$H_0 + \frac{A}{R^3} = C \eqno (S1.5)$$
 2)在$r=R$处，$\vec{B}$的法向分量($\vec{i_r}$)连续：
 $$\mu_0\left(-H_0 + 2\frac{A}{R^3} \right)= -\mu C \eqno (S1.6)$$
 
-从式S1.5和S1.6，解出$A$和$C$两个常数：
+从式S1.5和式S1.6，解出$A$和$C$两个常数：
 $$C =\frac{3H_0\mu_0}{2\mu_0+\mu}\eqno (S1.7)$$
 $$A=(C-H_0)R^3=H_0\left(\frac{\mu_0-\mu}{2\mu_0+\mu}\right)R^3 \eqno (S1.8)$$
 
@@ -528,7 +528,7 @@ $$A=(C-H_0)R^3=H_0\left(\frac{\mu_0-\mu}{2\mu_0+\mu}\right)R^3 \eqno (S1.8)$$
 
 \textbf{特例1：$\mu/\mu_0=0$}
 
-将$\mu=0$代入2.41式，可得
+将$\mu=0$代入式2.41，可得
 
 	\begin{align}
 \vec{B}_1&= \mu_0 H_0(−\cos\theta\vec{i_r} + \sin\theta\vec{i_\theta}) +
@@ -545,19 +545,19 @@ $r=R$处的$\theta$分量不连续将要求存在表面电流(被限制在一个
 
 \textbf{特例2：$\mu/\mu_0=1$}
 
-这时问题退化为平凡解，即等价于没有球的存在。代入方程2.41，两个方程将退化为一个方程。
+这时问题退化为平凡解，即等价于没有球的存在。代入式2.41，两个方程将退化为一个方程。
 
 \textbf{特例3：$\mu/\mu_0=\infty$}
 
 这时表示的是一个理想铁磁材料；软铁的性质与此近似。
-磁场被``吸"入球内。将$\mu=\infty$代入2.41，有：
+磁场被``吸"入球内。将$\mu=\infty$代入式2.41，有：
 	\begin{align}
 \vec{B}_1&= \mu_0 H_0(−\cos\theta\vec{i_r} + \sin\theta\vec{i_\theta}) -
 \mu_0 H_0\left(\frac{R}{r}\right)^3 (2 \cos\theta\vec{i_r} + \sin\theta\vec{i_\theta})\tag{S1.10a}\\
 \vec{B}_2&=3\mu_0 H_0(−\cos\theta\vec{i_r} + \sin\theta\vec{i_\theta})\tag{S1.10b}
   	\end{align}
 
-本例中的一个要点是我们发现此时球内的$\vec{B}$是外施磁场$\vec{B}$的3倍。
+我们发现，此时球内的$\vec{B}$是外施磁场$\vec{B}$的3倍。
 如果球存在磁饱和，则$\mu$不再是$\infty$。
 所有磁性材料都存在的磁饱和效应将在问题2.3中讨论。
 
@@ -910,8 +910,8 @@ d)应当明确，不能为了满足$d/R \ll 1$而将$d$选的特别小。事实�
 \frac{d}{R}\ge \frac{3H_0}{2M_{sa}}  \tag{2.48}
 \end{equation*}
 
-表2.5 给出了三种材料的\textit{微分}$\mu/\mu_0$(定义为$(\mu/\mu_0)_{dif}\equiv \Delta M/ \Delta H_0 |_{\mu_0 H_0}$)和$\mu_0M(H_0)$($\mu_0 H_0$的范围为$0\sim 1000$高斯)的近似值。
-这几种材料常用来屏蔽$\sim 100$高斯下的磁场。三种材料的饱和磁通$\mu_0 M_{sa}$大概为2.1 T,2.0 T和2.2 T。
+表2.5 给出了三种材料的\textit{微分}$\mu/\mu_0$(定义为$(\mu/\mu_0)_{dif}\equiv \Delta M/ \Delta H_0 |_{\mu_0 H_0}$)和$\mu_0M(H_0)$($\mu_0 H_0$的范围为$0\sim 1000$ gauss)的近似值。
+这几种材料常用来屏蔽$\sim 100$ gauss下的磁场。三种材料的饱和磁通$\mu_0 M_{sa}$大概为2.1 T,2.0 T和2.2 T。
 
 \begin{table}[htbp]
 \centering
@@ -945,7 +945,7 @@ e) $\mu/\mu_0=100$条件下的磁力线分布如图2.6。
 \begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.7]{chpt2/figs/fig2.6.eps}
-  \caption{$\mu/\mu_0=100$磁性球壳置于均匀场中的磁场分布。注意到进出球壳的磁场线是\textit{近乎}垂直于壳的}
+  \caption{$\mu/\mu_0=100$磁性球壳置于均匀场中的磁场分布。注意到进出球壳的磁场线是\textit{近乎}垂直于壳的。}
 \end{figure}
 
 
@@ -1071,7 +1071,7 @@ r_4\simeq& r-\delta_d \cos\theta\nonumber\tag{S4.1d}
 \end{equation}
 
 $\vec{H}_{m_A}(r,\theta)$关于$z$轴对称，故可以从标量势$\cos\theta/r^2$导出。
-这种推导方法已在问题2.1、2.3/2.4以及讨论2.1中应用。
+这种推导方法已在问题2.1、2.3、2.4以及讨论2.1中应用。
 
 提示：解出位于磁极倒角基部边缘上(图2.8左下角黑点)的单个磁矩$\vec{m}_A \uparrow$在$z$轴\textit{中心}场。
 
@@ -1135,6 +1135,14 @@ H_{m_A z}=\frac{\vec{m}_A}{r^3}(\cos^2\theta-\frac{1}{2}\sin^2\theta) \tag{S5.1}
 
 
 \subsection{问题2.6：圆柱中的准静态场}
+
+\begin{figure}[htbp]
+  \centering
+ \includegraphics[scale=0.4]{chpt2/figs/fig2.9.eps}
+  \caption{置于$z$向正弦时变磁场中的在$\theta=0$处有$\delta$窄缝的半径为$R$的理想导体制成
+  的薄壁长圆柱的轴向视图。}
+\end{figure}
+
 半径为$R$的薄壁长圆柱由理想导体($\rho=\infty$)而非超导体薄板制成，侧面开有宽$\delta$的窄缝(如图2.9)。
 圆柱置于正弦时变磁场中，磁场为$0^{th}$、均匀、$z$向(垂直纸面)，即：
 \begin{equation}
@@ -1155,12 +1163,7 @@ c)在\textit{无}金属板(或$\rho_s=\infty$)条件下，在圆柱腔内画出6
 
 d)在\textit{无}金属板条件下，推导两点间的一阶电压的线积分$V_1 |_{\theta=-\pi/2}^{\theta=+\pi/2}$的表达式。其中一点位于$\theta=+\pi/2$，另一点位于$\theta=-\pi/2$。
 
-\begin{figure}[htbp]
-  \centering
- \includegraphics[scale=0.4]{chpt2/figs/fig2.9.eps}
-  \caption{置于$z$向正弦时变磁场中的在$\theta=0$处有$\delta$窄缝的半径为$R$的理想导体制成
-  的薄壁长圆柱的轴向视图。}
-\end{figure}
+
 
 \subsubsection*{问题2.6之解}
 a) 对$1^{th}$阶电场$\vec{E}_1(t)$应用积分形式的Faraday定律：
@@ -1193,30 +1196,29 @@ V_1 |_{-\pi/2}^{+\pi/2}=-\frac{1}{2}j\omega \pi R^2 \mu_0 H_0   \tag{S6.3}
 
 \begin{figure}[htbp]
   \centering
- \includegraphics[scale=0.4]{chpt2/figs/fig2.10.eps}
+ \includegraphics[scale=0.35]{chpt2/figs/fig2.10.eps}
   \caption{$\vec{E}_1$线垂直于理想导体圆柱。从$x=R$到$x=-R$，$|E_1|$是减小的。}
 \end{figure}
 
 
 \subsection{问题2.7：圆柱壳的感应加热}
+\begin{figure}[htbp]
+  \centering
+ \includegraphics[scale=0.35]{chpt2/figs/fig2.11.eps}
+  \caption{圆柱金属壳置于均匀的正弦时变磁场之中。}
+\end{figure}
 本问题处理金属(非超导)圆柱壳的感应加热。它是一个同时涉及时谐电磁场、能流(Poynting矢量)和能量耗散的好例子。
 本问题和下一问题是交流损耗，特别是涡流损耗的先导实例，第7章将会进一步讨论。
 感应加热在电炉中广泛使用，用以在导电性材料内获得高温；有它时也被用来作为超导线圈热行为的研究工具。
 在超导磁体技术研究中，感应加热最常用脉冲磁场形式在超导线圈中产生小的正常区域，模拟暂态扰动。
 
-图2.11给出一个置于正弦时变磁场($0^{th}$阶、均匀、$z$向。)中``长"金属圆柱壳，其电导率为$\rho_e$，外径o.d.为$2R$，厚度$d\ll R$。即：
+图2.11给出一个置于正弦时变磁场($0^{th}$阶、均匀、$z$向)中``长"金属圆柱壳，其电导率为$\rho_e$，外径o.d.为$2R$，厚度$d\ll R$。即：
 \begin{equation*}
 \vec{\CMcal{H}}_\infty(t)=\mathrm{Re}(\vec{H}_0 e^{j\omega t})=\mathrm{Re}(H_0 e^{j\omega t})\vec{i}_z \tag{2.54}
 \end{equation*}
 式中，$H_0$是磁场复幅值。
 
 我们首先用两种方法解出相应的场量。接下来，再用两种方法解出圆柱内的能量耗散。
-
-\begin{figure}[htbp]
-  \centering
- \includegraphics[scale=0.4]{chpt2/figs/fig2.11.eps}
-  \caption{圆柱金属壳置于均匀的正弦时变磁场之中。}
-\end{figure}
 
 \subsubsection*{第一部分：感应加热的场}
 首先，用两种方法解出场量，如下文详述。
@@ -1311,14 +1313,14 @@ c) 式2.57、S7.4和2.58指出，$\vec{J}_1$、$\vec{K}_1$和$\vec{H}_1$的幅�
 |\vec{H}_1|=\frac{\omega \mu_0 R d |H_0|}{2\rho_e}\ll |\vec{H}_0|\tag{S7.6}
 \end{equation*}
 
-由S7.6，我们可以得到频率极限，即通常所谓的趋肤深度频率$f_{sk}$。在此频率之下，准静态近似是有效的：
+由S7.6，我们可以得到准静态近似有效的频率上限，即通常所谓的趋肤深度频率$f_{sk}$：
 \begin{equation*}
 f_{sk}=\frac{\rho_e}{\pi \mu_0 R d} \tag{2.59}
 \end{equation*}
 
 可见，正弦时变磁场中的物体的$f_{sk}$不仅与其材料的电阻率有关，还与其尺寸有关。
 
-d) 第二种方法在计算反应场时，设定$\vec{H}_1\equiv \vec{H}_R$，并在式2.58中$\vec{H}_1$的表达式中用$\vec{H}_0+\vec{H}_R$代换$\vec{H}_0$：
+d) 第二种方法在计算反应场时，设定$\vec{H}_1\equiv \vec{H}_R$，并在式2.58中用$\vec{H}_0+\vec{H}_R$代换$\vec{H}_0$：
 \begin{equation*}
 \vec{H}_R=-\frac{j\omega \mu_0 R d (\vec{H}_0+\vec{H}_R)}{2\rho_e} \tag{S7.7}
 \end{equation*}
@@ -1380,7 +1382,7 @@ i) 从$<P>$vs. $\rho_e$的关系可以得到一个结论：存在临界电阻率
 \end{equation}
 
 从式2.65可知，对一个给定的电阻率($\rho_e$)和样品尺寸($R,d$)组合，
-存在一个可以令加热最大化的最优频：该频率就是式2.59给出的趋肤深度频率$f_{sk}$。
+存在一个可以令加热最大化的最优频率：该频率就是式2.59给出的趋肤深度频率$f_{sk}$。
 
 j) 计算一个半径$R=10\ \mathrm{mm}$，壁厚$d=0.5\ \mathrm{mm}$，电阻率$\rho_e=2\times 10^{-10}\ \Omega\mathrm{m}$(大致为液氦温度下铜的电阻率)的铜管的$f_{sk}$。
 
@@ -1414,7 +1416,7 @@ f) 复Poynting矢量$\vec{S}$的$1^{th}$阶展开为：
 \begin{equation*}
 \vec{S}_1=\frac{1}{2}(\vec{E}_1 \times \vec{H}_0^*) \tag{S7.12}
 \end{equation*}
-式2.62给出了$\vec{E}_1$：
+式中的$\vec{E}_1$由式2.62给出：
 \begin{equation*}
 \vec{E}_1=\rho_e \vec{J}=-\frac{j\rho_e \omega \mu_0 R H_0}{2\rho_e+j\omega \mu_0 R d}\vec{i}_\theta \tag{S7.13}
 \end{equation*}
@@ -1443,7 +1445,7 @@ i) 将$<P>$对$\rho_e$求导，并令之在$\rho_{e_c}$处为0，有：
 
 式2.65在均匀、正弦时变磁场施加于导体样品的感应加热应用中非常重要。
 样品被样品中的感应涡流加热。
-在方程2.59给出的趋肤深度频率$f_{sk}$下，感应加热最大。
+在式2.59给出的趋肤深度频率$f_{sk}$下，感应加热最大。
 
 j) 将铜圆柱的参数$R=1\ \mathrm{cm}, d=0.5\ \mathrm{mm},\rho_e=2\times 10^{-10}\ \Omega\mathrm{m}$($\sim 4$ K时铜的电阻率)代入式2.59，有：
 \begin{equation*}
@@ -1456,200 +1458,222 @@ f_{sk}=\frac{\rho_{e_c}}{\pi\mu_0 R d}\simeq 10Hz \tag{2.59}
   \caption{感应加热圆柱壳的功率耗散和电阻率的关系。}
 \end{figure}
 
-\begin{quotation}
-\textbf{微波炉烹饪}\ \kaishu{微波炉烹饪基于感应加热，但它和我们这里研究的属于不同类型。
-在微波炉中，频率被设定为水分子的主要振动频率，使食物中的水吸收电磁能而被加热。}
-\end{quotation}
+%\begin{quotation}
+%\textbf{微波炉}\\
+%\kaishu{微波炉基于感应加热，但它和我们这里研究的属于不同类型。
+%在微波炉中，频率被设定为水分子的主要振动频率，使食物中的水吸收电磁能而被加热。}
+%\end{quotation}
 
 
 \subsection{问题2.8：金属扁带中的涡流损耗}
-本题推导置于时变磁场中的金属扁带的涡流损耗。这可以用于计算铜基超导带中涡流损耗的计算。(感应电流有用时叫感应加热，有害时就叫涡流损耗。)
-
-图2.13给出了电导率为$\rho_e$、$y$向宽为$b$、厚度($z$向)为$a$的长($x$向)金属扁带。扁带置于时变外磁场中。外场满足$dB_0/dt=\dot{B_0}$，即零阶、均匀、$z$向。
-
-a)证明一阶电场$\vec{E}_1$为
-\begin{equation}
-E_{1x}=y\dot{B_0}
-\end{equation}
-
-b)证明空间平均能耗密度$\tilde{p}$(单位体积)为：
-\begin{equation}
-\tilde{p}=\frac{(b\dot{B_0})^2}{12\rho_e}
-\end{equation}
-
-c)外场以角频率$\omega$正弦变化，即$B(t)=B_0 \sin\omega t$时，证明：时均能耗密度为：
-\begin{equation}
-<\tilde{p}>=\frac{(b\omega\dot{B_0})^2}{24\rho_e}
-\end{equation}
-
 \begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.4]{chpt2/figs/fig2.13.eps}
   \caption{宽度为b的金属扁带置于时变磁场中。}
 \end{figure}
 
+本题推导置于时变磁场中的金属扁带的涡流损耗的表达式，它可用于计算铜基底超导带中的涡流损耗计算。
+(感应电流发热有用时叫感应加热；有害时就通常称为涡流损耗。)
+
+图2.13给出了一条置于时变外磁场中电导率为$\rho_e$、宽为$b$($y$向)、厚为$a$($z$向)的``长''($x$向)金属扁带。外场$dB_0/dt=\dot{B_0}$，为$0^{th}$阶、均匀、$z$向。
+
+a) 证明$1^{th}$阶电场$\vec{E}_1$可表示为：
+\begin{equation}
+E_{1x}=y\dot{B_0}
+\end{equation}
+
+b) 证明\textit{空间平均}能耗密度$\tilde{p}$(单位体积)可表示为：
+\begin{equation}
+\tilde{p}=\frac{(b\dot{B_0})^2}{12\rho_e}
+\end{equation}
+
+c) 当外场以频率$\omega$正弦变化，即$B(t)=B_0 \sin\omega t$时，证明\textit{时间平均}能耗密度$<\tilde{p}>$可表示为：
+\begin{equation}
+<\tilde{p}>=\frac{(b\omega\dot{B_0})^2}{24\rho_e}
+\end{equation}
+
+
 \subsubsection{问题2.8之解}
-a)由于$\vec{B}_0$时均匀分布的且系统不依赖于$x$，所以$\vec{E}_1$只能指向$x$方向并且仅依赖于$y$。于是$\nabla\times \vec{E}_1=\partial \vec{B}_0/\partial t$可以化简为
+a) 由于$\vec{B}_0$是均匀的且系统不依赖于$x$，所以$\vec{E}_1$只能指向$x$向且仅依赖于$y$，
+也即$\nabla\times \vec{E}_1=\partial \vec{B}_0/\partial t$可化简为：
 \begin{equation*}
 -\frac{dE_{1x}}{dy}=-\frac{B_0}{dt}=-\dot{B}_0 \tag{S8.1}
 \end{equation*}
 
-根据对称性，$E_{1x}(y=0)=0$，于是，我们有
+根据对称性，$E_{1x}(y=0)=0$，我们由S8.1可得：
 \begin{equation*}
 E_{1x}=y\dot{B_0}  \tag{2.66}
 \end{equation*}
 
-b)扁带中的局部能量损耗密度$p(y)$由$\vec{E}_1\cdot\vec{J}_1$给出。总的损耗(单位长度)为
+b) 扁带中的\textit{局域}能耗密度$p(y)$由$\vec{E}_1\cdot\vec{J}_1$给出。
+总的能耗(单位长度)$P$于是为：
 \begin{equation*}
 P=a\int_{-b/2}^{b/2}p(y)dy=\frac{2a(\dot{B}_0)^2}{\rho_e}\int_{0}^{b/2}y^2dy=\frac{ab(b\dot{B_0})^2}{12\rho_e}  \tag{S8.2}
 \end{equation*}
 
-上式仅在$\vec{J}_1$感应出来的一阶感应磁场相比$\vec{B}_0$很小时才有效。
+式S8.2在$B_0$变化``足够''慢以及材料``足够''阻性时成立。
+也即，仅在$\vec{J}_1$感应出来的$1^{th}$阶感应磁场相比$\vec{B}_0$很小时才有效。
 
-空间平均能耗密度$\tilde{p}$(单位体积)可以由$P$除以截面得到：
+\textit{空间平均}能耗密度$\tilde{p}$(单位体积)可以由$P$除以带材截面得到：
 \begin{equation*}
-\tilde{p}=\frac{P}{ab}\frac{(b\dot{B_0})^2}{12\rho_e}  \tag{2.67}
+\tilde{p}=\frac{P}{ab}=\frac{(b\dot{B_0})^2}{12\rho_e}  \tag{2.67}
 \end{equation*}
 
-c)在外场正弦变化时，时均能耗密度为：
+c) 在正弦激励下，\textit{时均}能耗密度$<p>$为：
 \begin{equation*}
 <\tilde{p}>=\frac{1}{2}E_{1x} J_{1x}^*  \tag{S8.3}
 \end{equation*}
 
-由于$E_{1x}=j\omega y B_0$，$J_{1x}=E_{1x}/\rho_e$，于是可以得到
+代入$E_{1x}=j\omega y B_0$，$J_{1x}=E_{1x}/\rho_e$，$<p>$在带材体积上的平均值为：
 \begin{equation*}
 <\tilde{p}>=\frac{2a(\omega B_0)^2}{2\rho_e (ab)}\int_{0}^{b/2} y^2 dy=\frac{(b\omega\dot{B_0})^2}{24\rho_e}  \tag{2.68}
 \end{equation*}
 
-我们注意到，$\tilde{p}$和$<\tilde{p}>$分别正比于$(b\dot{B_0})^2$和$(b\omega \dot{B_0})^2$。也就是说，两者对感应磁场和导体宽度均为平方依赖关系。
+可见，$\tilde{p}$和$<\tilde{p}>$分别正比于$(b\dot{B_0})^2$和$(b\omega \dot{B_0})^2$；
+也就是说，两者对感应磁场和导体宽度均为平方依赖关系。
 
 
-
-
-\subsection{讨论2.4：分层以减少涡流损耗}
-假设将扁带劈为两条，每一条宽度为$b/2$，由上面的分析可以知道，损耗将变为原来的$1/4$。因此，可以通过将扁带细分的方法降低涡流损耗。这种切分技术在电力变压器中广泛使用。类似的，我们将在第5章和第7章中看到，超导体也能从切分中获益。
-
+\subsection{讨论2.4：切分以减少涡流损耗}
+若将扁带劈为两条，每一条宽度为$b/2$。由式2.67和2.68可知，$\tilde{p}$和总能耗将变为原来的$1/4$。
+因此，可以通过将扁带切分的方法将涡流损耗降至任意小。
+这种切分技术在电力变压器中广泛使用，其中的铁扼是由铁片堆叠成的。
+我们将在第5章和第7章中看到，超导体也能从切分技术中获益：磁体导体一般都是细丝化的。
 
 
 \subsection{问题2.9：Rogowski线圈}
-Rogowski线圈是时变电流的安培计。它是一种环形拾磁线圈，其积分输出电压正比于被线圈包围的截面内通过的总电流。图2.14a给出了一个Rogowski线圈，待测电流$I(t)$置于其中央。如图所示，Rogowski线圈包括$N$个串联的小圆环(一匝)。每一个半径为$c$的圆环的中心位于电流中心的径向$R$处。
-图2.14b定义了一匝的$xy$坐标。
+Rogowski线圈是时变电流的电流计。
+它是一种环形拾磁线圈，其输出电压正比于被Rogowski线圈包围的截面内通过的总电流。
+图2.14a给出了一个Rogowski线圈，待测电流$I(t)$在线圈中间。
+如图2.14a所示，Rogowski线圈包括$N$个串联的单匝小圆环。
+各半径为$c$的圆环的中心位于电流中心的径向$R$处。
+图2.14b定义了一匝的$x-y$坐标系。
 
-a) 证明在$c\ll R$条件下，$N$匝的Rogowski线圈的总磁链$\Phi(t)=N\Phi_1(t)$为：
+a) 说明在$c\ll R$条件下，$N$匝的Rogowski线圈的总磁链$\Phi(t)=N\Phi_1(t)$近似为：
 \begin{equation}
 \Phi(t)\simeq\frac{\mu_0 N c^2}{2R}I(t)
 \end{equation}
-
-式中，$\Phi_1(t)$是与一匝交链的总磁通。
+式中，$\Phi_1(t)$是与单匝交链的总磁通。
 
 b) 证明$\Phi(t)$的准确表达式为：
 \begin{equation}
 \Phi(t)=\mu_0 N (R-\sqrt{R^2-c^2})I(t)
 \end{equation}
 
-将$N$匝中的一个放在$xy$坐标系的中心来计算$\Phi(t)$。
+拿出$N$匝中的一匝在放在$x-y$坐标系中，将其中心与原点对齐来计算$\Phi(t)$。
 
-c) 证明在极限$(c/R)^4\ll 1$下，b)退化为a)。
+c) 证明在极限$(c/R)^4\ll 1$下，式2.70退化为式2.69。
 
-d)证明b)中的公式在Rogowski线圈的轴线偏离电流的中心时也有效。
+d) 证明式2.70给出的$\Phi(t)$在Rogowski线圈的轴线偏离电流中心时也有效。
 
-e)计算一个$N = 3600; c = 3\ \mathrm{mm}; R = 0.5\ \mathrm{m}$的Rogowski线圈在$\Delta I(t)=1\ \mathrm{MA}$时两端产生的伏秒。
+e) 计算一个$N = 3600; c = 3\ \mathrm{mm}; R = 0.5\ \mathrm{m}$的Rogowski线圈在$\Delta I(t)=1\ \mathrm{MA}$时两个端子之间产生的伏秒值。
 
 \begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.4]{chpt2/figs/fig2.14.eps}
-  \caption{(a)$N$匝Rogowski线圈，每匝直径为$2c$，环绕在待测的时变电流$I(t)$外围。(b)一匝(半径为$r$)的截面视图。圆环距离电流中心的距离为$R$。}
+  \caption{(a)Rogowski线圈。$N$匝，每匝直径为$2c$，环绕在待测的时变电流$I(t)$外围；
+  (b)单匝(半径为$r$)的截面图。中心与$x-y$坐标系原点对齐，圆环到电流中心的距离为$R$。}
 \end{figure}
 
 \subsubsection{问题2.9之解}
-a)电流$I(t)$产生的磁场相对于电流方向是方位角向的。距电流中心距离$R$处的$H_\phi(t)$表示为：
+a) 电流$I(t)$产生的磁场$H_\phi (t)$相对于电流方向是周向的。
+距电流中心距离$R$处的$H_\phi(t)$为：
 \begin{equation*}
 H_\phi (t)=\frac{I(t)}{2\pi R} \tag{S9.1}
 \end{equation*}
 
-对于$c\ll R$，上式给出的$H_\phi(t)$在每一匝的横截面$\pi c^2$上几乎都是成立的。由于Rogowski线圈有$N$个这样的回路，我们有：
+在$c\ll R$时，式S9.1给出的$H_\phi(t)$在每一圆环匝的横截面$\pi c^2$上几乎都是成立的。
+由于Rogowski线圈有$N$个这样的圆环匝，我们有：
 \begin{equation*}
 \Phi(t)\simeq \frac{\mu_0 N c^2}{2R}I(t)  \tag{2.69}
 \end{equation*}
 
 Rogowski线圈输出电压$V(t)$于是可以写为：
 \begin{equation*}
-V(t)=\frac{d\Phi(t0}{dt}=\frac{\mu_0 N c^2}{2R}\frac{dI(t)}{dt}  \tag{S9.2}
+V(t)=\frac{d\Phi(t)}{dt}=\frac{\mu_0 N c^2}{2R}\frac{dI(t)}{dt}  \tag{S9.2}
 \end{equation*}
 
-b)因为$H_\phi (t)$在每一个环上并非常数，每一匝包围的总磁通$\Phi_1(t)$应由沿回路围成的区域的积分得到。
-注意到$x^2+y^2=c^2$，定回路中心坐标为$(0,0)$，$\Phi_1(t)$表示为：
+b) 因为$H_\phi (t)$在各圆环匝上并非不变，单匝包围的总磁通$\Phi_1(t)$应由沿回路围成区域的积分得到。
+若定回路中心坐标为$(0,0)$，有$x^2+y^2=c^2$，则$\Phi_1(t)$为：
 \begin{align}
 \Phi (t)=&\frac{\mu_0 I(t)}{2\pi}\int_{-c}^{c}\int_{-\sqrt{c^2-y^2}}^{\sqrt{c^2-y^2}}\frac{1}{R+y}dxdy\nonumber\\
 =&\frac{\mu_0 I(t)}{\pi}\int_{-c}^{c}\frac{\sqrt{c^2-y^2}}{R+y}dy\nonumber\tag{S9.3}
 \end{align}
 
-上式可以使用新变量$\xi\equiv R+y$得到闭式解(注意：$d\xi=dy$)。于是，有：
+式S9.3可以使用新变量$\xi\equiv R+y$得到闭式解(注意：$d\xi=dy$)。于是：
 \begin{align}
 \Phi_1 (t)=&\frac{\mu_0 I(t)}{\pi} \int_{R-c}^{R+c}\frac{\sqrt{c^2-R^2+2R\xi-\xi^2}}{\xi}d\xi\nonumber\\
 =&\mu_0(R-\sqrt{R^2-c^2})I(t)\nonumber\tag{S9.4}
 \end{align}
 
-$N$匝的Rogowski线圈交链的总磁通$\Phi(t)=N\Phi_1(t)$：
+$N$匝的Rogowski线圈的交链磁通$\Phi(t)=N\Phi_1(t)$：
 \begin{equation*}
 \Phi (t)=\mu_0 N(R-\sqrt{R^2-c^2})I(t) \tag{2.70}
 \end{equation*}
 
-c)上式可以写为：
+c) 式2.70可以写为：
 \begin{equation*}
-\Phi (t)=\mu_0 NI(t)(R-R\sqrt{1-\frac{c^2}{R^2}}) \tag{S9.5}
+\Phi (t)=\mu_0 NI(t)\left(R-R\sqrt{1-\frac{c^2}{R^2}}\right) \tag{S9.5}
 \end{equation*}
 
-由于对$x\ll 1$，$\sqrt{1-x}\simeq 1-(1/2)x+(1/8)x^2-...$，截取到二阶，所以
+由于$x\ll 1$时有$\sqrt{1-x}\simeq 1-(1/2)x+(1/8)x^2-...$，式S9.5截取到二阶有：
 \begin{align}
-\Phi(t)\simeq\mu_0 N\left[R-R\left(1-\frac{1}{2}\frac{c^2}{R^2}+\cdots\right)\right]\nonumber\tag{S9.6}\\
-\Phi (t)\simeq \frac{\mu_0 Nc^2}{2R} I(t)\nonumber\tag{2.69}
+\Phi(t)&\simeq\mu_0 N\left[R-R\left(1-\frac{1}{2}\frac{c^2}{R^2}+\cdots\right)\right]\nonumber\tag{S9.6}\\
+\Phi (t)&\simeq \frac{\mu_0 Nc^2}{2R} I(t)\nonumber\tag{2.69}
 \end{align}
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.4]{chpt2/figs/fig2.15.eps}
-	\caption{$(x,y)$面上的横截面视图。}
+	\caption{正交于电流/Rogowski线圈组方向的横截面$(x,y)$，其中Rogowski线圈中心位于$(0,0)$，
+电流中心在Rogowski线圈中心向下偏离$\delta_i$。}
 \end{figure}
 
-d)图2.15给出正交于电流/Rogowski线圈组方向的横截面$(x,y)$，其中Rogowski中心位于$(0,0)$，电流中心在Rogowski线圈中心向下偏离$\delta_i$。关键参数如图中定义：$r$为Rogowski中心$(0,0)$到一匝线圈上的点$A$的径向距离；$\theta$是$y$轴和$r$之间的夹角；$s$是电流中心到点$A$的距离；$\epsilon$是$r$与$s$之间形成的角。$s^2$写为：
+d) 图2.15给出正交于电流/Rogowski线圈组方向的横截面$(x,y)$，其中Rogowski线圈中心位于$(0,0)$，
+电流中心在Rogowski线圈中心向下偏离$\delta_i$。
+
+关键参数如图2.15中的定义：$r$为Rogowski中心$(0,0)$到一匝线圈上的点$A$的径向距离；
+$\theta$是$y$轴和$r$之间的夹角；$s$是\textit{电流中心}到点$A$的距离；
+$\epsilon$是$r$与$s$之间形成的角。根据几何条件，$s^2$为：
 \begin{equation*}
 s^2=(r\cos\theta+\delta_i)^2+r^2\sin^2\theta=r^2+\delta_i^2+2r\delta_i\cos\theta \tag{S9.7}
 \end{equation*}
 
-将$r$延长$\delta_i \cos\theta$形成一个直角，我们有：
+将$r$延长$\delta_i \cos\theta$形成一个直角(图2.15未画出)，我们有：
 \begin{equation*}
 \cos\epsilon=\frac{r+\delta_i \cos\theta}{s} \tag{S9.8}
 \end{equation*}
 
 点$A$处的磁场由$H_A(t)=I(t)/2\pi s$给出；它在Rogowski线圈回路上点$A$处的法向分量为：
 \begin{equation*}
-H_{A\bot}=\frac{I(t)}{2\pi s}\cos\epsilon=\frac{I(t)}{2\pi s}(\frac{r+\delta_i \cos\theta}{s}) \tag{S9.9}
+H_{A\bot}=\frac{I(t)}{2\pi s}\cos\epsilon=\frac{I(t)}{2\pi s}\left(\frac{r+\delta_i \cos\theta}{s}\right) \tag{S9.9}
 \end{equation*}
 
-将上式与$s^2$的表达式联立，得到：
+联立式S9.7和式S9.9，得到：
 \begin{equation*}
 H_{A\bot}=\frac{I(t)}{2\pi}\left(\frac{r+\delta_i \cos\theta}{r^2+\delta_i^2+2r\delta_i\cos\theta}\right) \tag{S9.10}
 \end{equation*}
 
-为了计算$\Phi(t)$，$S9.10$乘上$(N/2\pi)2\sqrt{c^2−(r−R)^2}$必须积分两次：第一次对$\theta$从$0$至$2\pi$积分，视径向距离$r$为常数，计及$N$匝；第二次对$R$从$R-c$到$R+c$积分。注意到$2\sqrt{c^2−(r−R)^2}$是每一匝直径为$c$的线圈在$r$处总的弦距离($z$向)，它位于距离回路中心的$r-R$处。
+为了计算$\Phi(t)$，S9.10乘上$(N/2\pi)2\sqrt{c^2−(r−R)^2}$必须积分两次：第一次视径向距离$r$为常数，
+对$\theta$从$0$至$2\pi$积分，计及$N$匝；第二次对$r$从$R-c$到$R+c$积分。
+注意到$2\sqrt{c^2−(r−R)^2}$是每一匝直径为$c$的线圈在$r$处总的弦距离($z$向)，它位于距离圆环匝中心的$r-R$处。
 \begin{align}
-\Phi(t)&=\frac{N I(t)}{2\pi^2}\int_{R-c}^{R+c}\int_{0}^{1\pi}\left[ \frac{(r+\delta_i \cos\theta)\sqrt{c^2-(r-R)^2}}{r^2+\delta_i^2+2r\delta_i \cos\theta}\right]d\theta dr\nonumber\tag{S9.11a}\\
+\Phi(t)&=\frac{N I(t)}{2\pi^2}\int_{R-c}^{R+c}\int_{0}^{2\pi}\left[ \frac{(r+\delta_i \cos\theta)\sqrt{c^2-(r-R)^2}}{r^2+\delta_i^2+2r\delta_i \cos\theta}\right]d\theta dr\nonumber\tag{S9.11a}\\
 &=\frac{N I(t)}{\pi}\int_{R-c}^{R+c} \left[ 0+\frac{\sqrt{c^2-(r-R)^2}}{r}\right]dr\nonumber\tag{S9.11b}
 \end{align}
 
-注意到积分中完全没有$\delta_i$。下面，$S9.11b$沿着一匝的径向从$r=R-c$到$r=R+c$积分，有：
+可见，积分中并无$\delta_i$。
+下面，对S9.11b沿着圆环匝的径向从$r=R-c$到$r=R+c$积分，结果为：
 \begin{equation*}
 \Phi(t)=\frac{N I(t)}{\pi}\left[ \pi(R-\sqrt{R^2-c^2})\right] \tag{S9.11c}
 \end{equation*}
 
-可见，Rogowski线圈可以精确的测量电流$I(t)$，不管它与其套入的电流是否同心。
+于是，不管Rogowski线圈与其围住的电流$I(t)$是否同心，它都可以进行精确的测量。
 
-e) 对于$N = 3600, c = 3\ \mathrm{mm}; R = 0.5\ \mathrm{m}; \Delta I = 1\ \mathrm{MA}$，公式2.69可以应用，因为$(c/R)^4 = 1.3×10^{−9}\ll 1$。这样，由$S9.2$得：
+e) 在$N = 3600, c = 3\ \mathrm{mm}; R = 0.5\ \mathrm{m}; \Delta I = 1\ \mathrm{MA}$时，式2.69可用。因为$(c/R)^4 = 1.3×10^{−9}\ll 1$。由$S9.2$得：
 $$\int V(t)dt=\frac{\mu_0 N c^2 \Delta I}{2R}\simeq 41\ \mathrm{mVs}$$
 
-在一个噪音环境中，比如典型的试验聚变机器中，测到$40\ \mathrm{mVs}$级别的信号水平并不简单，但也不是完全得不到。
+在一个充满噪声的环境内，比如典型的试验聚变设备中，测到$40\ \mathrm{mVs}$级别的信号水平并不简单，但也不是完全得不到。
 
-\begin{quotation}
-\kaishu 正如我们所知，有已知的已知，他们是我们知道我们知道的；我们也知道有些是已知的未知。这就是说我们知道有些事情我们是不知道的。但是还有未知的未知---这些事我们不知道我们不知道。---Donald Rumsfeld，2002
-\end{quotation}
+%\begin{quotation}
+%\kaishu 正如我们所知，有已知的已知，他们是我们知道我们知道的；我们也知道有些是已知的未知。这就是说我们知道有些事情我们是不知道的。但是还有未知的未知---这些事我们不知道我们不知道。---Donald Rumsfeld，2002
+%\end{quotation}
