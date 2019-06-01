@@ -1048,140 +1048,154 @@ r_4\simeq& r-\delta_d \cos\theta\nonumber\tag{S4.1d}
 
 
 \subsection{问题2.5：铁电磁体的磁极形状}
-图2.8给出了铁制电磁铁的剖面。两个铁磁材料制成的圆柱形磁极相对放置，圆柱尖端倒角成锥形(图中的阴影部分)。
-磁极上的线圈(图中未画出)通电后，两极间的间隙内将产生一个相对均匀的磁场。
-中心场理论上没有上限，因为它是$\propto \ln(R_2/R_1)$增长的。其中，$R_1$和$R_2$分别是锥体顶部和基部的直径。
-由于随着$R_2$增加，磁体的质量会变得很大，所以实践中的中心场上限$\sim 7\ \mathrm{T}$(巴黎Bellevue；瑞典Uppsala Uni.)。
-由于尖端部分的磁矩产生的场对中心的z向场有一个负的贡献，所以，尖角能够加强中心场。
-
-证明：若铁芯在与系统z轴平行方向励磁，$\theta_{tp}=54^\circ 44^\prime$是这种简单磁极几何的最优角度。
-假定中心场是均匀分布于磁极件上的磁矩产生的场的叠加。$z$向励磁的磁矩$\vec{m}_A [\mathrm{A\cdot m^2}]$产生的偶极场为：
-\begin{equation}
-\vec{H}_{m_A}=\frac{\vec{m_A}}{r^3}(\cos\theta \vec{i}_r+\frac{1}{2}\sin\theta\vec{i}_\theta)
-\end{equation}
-
-$\vec{H}_{m_A}(r,\theta)$关于z轴对称，可以从标量势$\cos\theta/r^2$导出。
-
-提示：解出位于磁极倒角基部边缘上(图示)的单个磁矩$m_A \uparrow$在z轴中心的场。
-
-\subsubsection*{问题2.5的解}
-$m_A$产生的在中心的场的z向分量$H_{m_A z}$为：
-\begin{equation*}
-H_{m_A z}=\frac{\vec{m_A}}{r^3}(\cos^2\theta-\frac{1}{2}\sin^2\theta) \tag{S5.1}
-\end{equation*}
-
-式中，$r_A$是$m_A$距中心的距离。在$\theta=\theta_{tp}$时，上述方程的右侧为0。于是
-\begin{equation*}
-\cos^2\theta_{tp}-\frac{1}{2}\sin^2\theta_{tp}=0 \tag{S5.2}
-\end{equation*}
-
-于是有$\cos\theta_{tp}=1/\sqrt{3}$或$\tan\theta_{tp}=\sqrt{2}$，也即$\theta_{tp}\simeq 54.736^\circ\simeq54^\circ 44^\prime$。
-
-我们注意到，对阴影区中基线之上的磁矩均有$\theta_{tp}>54^\circ 44^\prime$。由于随$\theta$值的增加，$\cos\theta$递减而$\sin\theta$递增，
-在$\theta_{tp}>54^\circ 44^\prime$时，$H_{m_A z}$为负。以$\theta_{tp}=54^\circ 44^\prime$倒角磁极可以消除这种负的贡献，最大化中心场。
-
-值得一提的是，NMR质谱仪中的``神奇角"(magic angle)也是$54^\circ 44^\prime$。通常，NMR样品以这个``神奇角"与主轴场取向放置以减少各向异性的作用。
 
 \begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.4]{chpt2/figs/fig2.8.eps}
-  \caption{电极对，倒角为$\theta_{tp}$。图中$\bullet$指示了磁矩$\vec{m_A}\uparrow$的位置。}
+  \caption{电极对，倒角为$\theta_{tp}$。图中$\bullet$指示了磁矩$\vec{m}_A\uparrow$的位置。}
 \end{figure}
 
+图2.8展示了一个铁制电磁体作用部分的剖面，两个铁磁材料制成的圆柱形磁极相对放置，圆柱末端削成锥形
+---图中阴影部分。
+磁极上的线圈(图中未画出)通电后，两极间的间隙内将产生一个相对均匀的磁场。
+中心场理论上没有上限，因为它$\propto \ln(R_2/R_1)$。其中，$2R_1$和$2R_2$分别是锥体顶部和基部的直径。
+由于随着$R_2$增加，磁体的质量会变得很大，故实际中的中心场上限$\sim 7\ \mathrm{T}$(巴黎Bellevue；瑞典Uppsala Uni.)。
+锥顶部分的磁矩的磁场对中心位置的$z$向场有\textit{负}贡献，所以圆锥能够加强中心场。
 
+证明：若铁芯在沿系统$z$轴方向励磁，$\theta_{tp}=54^\circ 44^\prime$是这种简单磁极几何的最优角度。
+假定中心场是均匀分布于磁极件上的磁矩产生的场的叠加。
+(如图所示的四条点线分别投影在定义$\theta_{tp}=54^\circ 44^\prime$的四条线上，相交于中心点。
+如果间隙足够大，削成锥形并无好处。)$z$向励磁的磁矩$\vec{m}_A [\mathrm{A\cdot m^2}]$产生的偶极场为：
+\begin{equation}
+\vec{H}_{m_A}=\frac{\vec{m_A}}{r^3}(\cos\theta \vec{i}_r+\frac{1}{2}\sin\theta\vec{i}_\theta)
+\end{equation}
+
+$\vec{H}_{m_A}(r,\theta)$关于$z$轴对称，故可以从标量势$\cos\theta/r^2$导出。
+这种推导方法已在问题2.1、2.3/2.4以及讨论2.1中应用。
+
+提示：解出位于磁极倒角基部边缘上(图2.8左下角黑点)的单个磁矩$\vec{m}_A \uparrow$在$z$轴\textit{中心}场。
+
+\subsubsection*{问题2.5的解}
+磁矩$\vec{m}_A$在中心产生的磁场的$z$向分量$H_{m_A z}$为：
+\begin{equation*}
+H_{m_A z}=\frac{\vec{m}_A}{r^3}(\cos^2\theta-\frac{1}{2}\sin^2\theta) \tag{S5.1}
+\end{equation*}
+式中，$r_A$是$\vec{m}_A$到中心的距离。当$\theta=\theta_{tp}$时，方程S5.1右侧为0。于是：
+\begin{equation*}
+\cos^2\theta_{tp}-\frac{1}{2}\sin^2\theta_{tp}=0 \tag{S5.2}
+\end{equation*}
+
+根据方程S5.2，有$\cos\theta_{tp}=1/\sqrt{3}$(或$\tan\theta_{tp}=\sqrt{2}$)，
+于是$\theta_{tp}\simeq 54.736^\circ\simeq54^\circ 44^\prime$。
+
+我们注意到，对阴影区中基线之上的磁矩均有$\theta_{tp}>54^\circ 44^\prime$。
+由于随$\theta$值的增加，$\cos\theta$增大而$\sin\theta$减小，
+在$\theta_{tp}>54^\circ 44^\prime$时，$H_{m_A z}$为负。
+以$\theta_{tp}=54^\circ 44^\prime$倒角磁极可以消除该\textit{负}贡献，从而最大化中心场。
+
+值得一提的是，NMR质谱仪中的``\textit{神奇角}"(magic angle)正是$54^\circ 44^\prime$。
+通常，NMR样品放置时以这个``神奇角"对主轴场取向，以减少各向异性的作用。
 
 
 \subsection{讨论2.3：永磁体}
-永磁磁体是日常生活中大量设备如汽车、电视、电脑、手机、冰箱等的关键部件。实际上，如果没有永磁体，今日的现代生活将难以存续。
-在低场($<1$)T的MRI中，永磁体是超导体的竞争对手。由于永磁磁体既无需制冷也很便宜，永磁MRI很受欢迎。
+永磁体是日常生活中使用的大量设备---如汽车、电视、电脑、手机、冰箱等---的关键组件。
+实际上，如果没有永磁体，我们当下的现代生活将难以存续。
+在低场($<1$) T的MRI中，永磁体还是超导体的竞争对手。由于永磁体MRI既无需制冷也很便宜，很受欢迎。
 
-表2.6给出了90年(1910s-1990s)间永磁体和超导体的发展。永磁体性能以最大磁能$BH|_{mx}$表示，而超导体以最高临界温度$T_c|_{mx}$表示。
-这期间，$BH|_{mx}$提高了约30倍，$T_c|_{mx}$提高了约20倍。
+表2.6给出了90年(1910s-1990s)间永磁体和超导体的发展。
+永磁体的指标以最大磁能$BH|_{mx}$表示，而超导体以最高临界温度$T_c|_{mx}$表示。
+在这期间，$BH|_{mx}$提高了约30倍，$T_c|_{mx}$提高了约20倍。
 
 永磁体照这个步调发展下去，在不久的将来，永磁体MRI将能达到$\sim 1\ $T。
-在这个磁场之上，还是超导的天下。
+更高磁场的MRI，还是以超导为主导。
 
 \begin{table}[htbp]
 \centering
 \caption{永磁体和超导体的发展历程}
 \label{磁体和超导体的发展}
-\begin{tabular}{|c|c|c|c|c|}
+\begin{threeparttable}
+\begin{tabular}{|c|c|c||c|c|}
 \hline
 年代        & 永磁体 & $BH|_{mx}$[$\mathrm{kJ/m^3}$] & 超导体 & $T_c|_{mx}$[K]   \\ \hline
 1910      &  特种钢   & 11       &  Pb   & 7.2 \\ \hline
-1920-1940 &  Alnico 1-4   & 15       &   NbN  & 16  \\ \hline
+1920-1940 &  Alnico\tnote{*} 1-4   & 15       &   NbN  & 16  \\ \hline
 1950      &   Alnico 5  & 35       &    $\mathrm{Nb_3 Sn}$ & 18  \\ \hline
 1960      &   Alnico 8,9  & 55       &   $\mathrm{Nb_{12}Al_3 Ge}$  &   19  \\ \hline
 1970      &   $\mathrm{SmCo_5} $  & 140      &  $\mathrm{Nb_3Ge}$   & 23    \\ \hline
 1980      &   Sm(CoCuFeZr)  & 240      &  $\mathrm{Bi_2 Sr_2 Ca_2 Cu_3 O_x}$   & 118 \\ \hline
 1990      &  $\mathrm{Nd_2Fe_{14}B}$   & 350      & $\mathrm{(Hg, Pb) Sr_2 Ca_2 Cu_3 O_x}$    & 133 \\ \hline
 \end{tabular}
+\begin{tablenotes}
+        \footnotesize
+        \item[*] 主要组分为Al、Ni和Co的铁合金。 %此处加入注释*信息
+      \end{tablenotes}
+\end{threeparttable}
 \end{table}
 
 
 
 \subsection{问题2.6：圆柱中的准静态场}
-半径为R的长薄圆柱由理想导体($\rho=\infty$，非超导)薄板制成，侧面开有宽$\delta$的窄缝(如图)。
-圆柱置于正弦时变磁场中：
+半径为$R$的薄壁长圆柱由理想导体($\rho=\infty$)而非超导体薄板制成，侧面开有宽$\delta$的窄缝(如图2.9)。
+圆柱置于正弦时变磁场中，磁场为$0^{th}$、均匀、$z$向(垂直纸面)，即：
 \begin{equation}
-\vec{H}_\infty(t)=Re[H_0 e^{j\omega t}] \vec{i}_z
+\vec{\CMcal{H}}_\infty(t)=\mathrm{Re}[H_0 e^{j\omega t}] \vec{i}_z
 \end{equation}
-
 式中，$H_0$是复幅值。忽略端部效应。
 
-a)忽略$\delta/R$阶项。证明：跨窄缝短边的一阶复电压幅值为：
+a)忽略$\delta/R$阶项。证明：跨窄缝短边的$1^{th}$阶复电压幅值$V_{1|0}\equiv V_{1|\theta=0}$为：
 \begin{equation}
 V_{1|0}\equiv V_{1|\theta=0}=-j\omega \pi R^2 \mu_0 H_0
 \end{equation}
 
-b)一个电阻率为$\rho[\Omega\cdot m]$的正常金属板置于窄缝将圆柱开缝恰好连接起来。推导通过该板的一阶复电流密度(轴向单位长度)$J_1 [\mathrm{A/m}]$的表达式。
-假定：驱动频率($\omega/2\pi$)足够小，磁场仍保持原准静态形式；电流在板截面上均匀流过。
+b)一个电阻率为$\rho[\Omega\cdot\mathrm{m}]$的正常金属板置于窄缝将圆柱开缝恰好连接起来。
+推导通过该板的$1^{th}$阶复电流密度(轴向单位长度)$J_1 [\mathrm{A/m}]$的表达式。
+假定驱动频率($\omega/2\pi$)足够小，磁场仍保持方程2.54的准静态形式；电流在板截面上均匀流过。
 
-c)在无金属板存在(或$\rho_s=\infty$)条件下，在圆柱腔内画出6条一阶复电场矢量($\vec{E}_1$)线，指明电场的重要特征。
+c)在\textit{无}金属板(或$\rho_s=\infty$)条件下，在圆柱腔内画出6条描绘电场重要特征的$1^{th}$阶复电场($\vec{E}_1$)线。
 
-d)在无金属板存在条件下，推导两点间的一阶电压的线积分$V_1 |_{\theta=-\pi/2}^{\theta=+\pi/2}$的表达式，即一点位于$\theta=+\pi/2$，另一点位于$\theta=-\pi/2$。
+d)在\textit{无}金属板条件下，推导两点间的一阶电压的线积分$V_1 |_{\theta=-\pi/2}^{\theta=+\pi/2}$的表达式。其中一点位于$\theta=+\pi/2$，另一点位于$\theta=-\pi/2$。
 
 \begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.4]{chpt2/figs/fig2.9.eps}
-  \caption{置于z向正弦时变磁场的在$\theta=0$处有窄缝的半径为R的理想导体长薄圆柱体的轴向视图。}
+  \caption{置于$z$向正弦时变磁场中的在$\theta=0$处有$\delta$窄缝的半径为$R$的理想导体制成
+  的薄壁长圆柱的轴向视图。}
 \end{figure}
 
 \subsubsection*{问题2.6之解}
-a)对一阶电场$\vec{E}_1(t)$应用积分形式的Faraday定律：
+a) 对$1^{th}$阶电场$\vec{E}_1(t)$应用积分形式的Faraday定律：
 \begin{equation*}
 \CMcal{V}_1(t) \equiv \int_{C} \vec{E}_1 (t) \cdot d\vec{s}=-\pi R^2 \mu_0 \frac{d\CMcal{H}_0(t)}{dt} \tag{S6.1}
 \end{equation*}
 
-线积分沿着圆柱逆时针进行(含窄缝)。上式右侧包括圆柱($\pi R^2$)所定义的整个区域。
-因为圆柱是理想导体，故在材料内有$\vec{\mathcal{E}}_1(t)=0$。对线积分，仅有的非零贡献来自窄缝。以复幅值表示，有
+线积分沿着圆柱表面逆时针方向进行(含窄缝)。方程S6.1右侧包括圆柱($\pi R^2$)所定义的整个区域。
+因为圆柱是理想导体，故在材料内有$\vec{\mathcal{E}}_1(t)=0$，对线积分仅有的非零贡献来自窄缝。以复幅值表示，有
 \begin{equation*}
 V_{1|0}=-j\omega \pi R^2 \mu_0 H_0 \tag{2.55}
 \end{equation*}
 
-b)应用Ohm定律，得到$J_1$(单位长度)：
+b) 应用Ohm定律，得到$J_1$(单位长度)：
 \begin{equation*}
 J_1=\frac{V_{1|0}}{\rho_s} \tag{S6.2}
 \end{equation*}
 
-c)因为圆柱是理想导体。圆柱面上$\vec{E}_1$的切向分量必须为零。$\vec{E}_1$以直角离开或进入圆柱。
-跨越圆柱的积分移动至窄缝左侧，积分区域减少，这令$|E_1|$变小。场线如图2.10所示。
+c) 因为圆柱是理想导体，圆柱面上$\vec{E}_1$的切向分量必须为零：$\vec{E}_1$以直角离开或进入圆柱。
+随着跨越圆柱的积分路径向窄缝左侧移动，积分区域减少，这令$|E_1|$变小。场线如图2.10所示。
 
-d)这是c)的特例。从对称角度，可以准确计算出线积分。积分区域等于$\pi R^2/2$，即
+d) 这是c)的特例。从对称角度，可以准确计算出线积分：积分区域等于$\pi R^2/2$。于是：
 \begin{equation*}
-V_1 |_{\theta=-\pi/2}^{\theta=+\pi/2}=-\frac{1}{2}j\omega \pi R^2 \mu_0 H_0   \tag{S6.3}
+V_1 |_{-\pi/2}^{+\pi/2}=-\frac{1}{2}j\omega \pi R^2 \mu_0 H_0   \tag{S6.3}
 \end{equation*}
 
-上式和a)表明，在同一轴向距离点，跨过圆柱的电压与电压触头方位有关。记住这一点，这在存在时变磁场(外施磁场，如本例；系统中电流产生的)条件下测电压时非常重要。
-超导体交流损耗的电测法就是一个非常好的例子。
+方程2.55和S6.3表明，在相同轴向坐标下，跨过圆柱的两点间的电压与电压触头方位有关。
+在存在时变磁场(外施磁场，如本例；系统中电流产生的磁场)条件下测电压时一定要记住这一点。
+超导体交流损耗的电测就是一个应当小心的非常好的实例。
 
 \begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.4]{chpt2/figs/fig2.10.eps}
-  \caption{$\vec{E}_1$线垂直于理想导体圆柱。注意到，从$x=R$到$x=-R$，$|E_1|$是减小的。}
+  \caption{$\vec{E}_1$线垂直于理想导体圆柱。从$x=R$到$x=-R$，$|E_1|$是减小的。}
 \end{figure}
-
-
 
 
 \subsection{问题2.7：圆柱壳的感应加热}
