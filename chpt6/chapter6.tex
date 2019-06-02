@@ -45,7 +45,21 @@ C_{cd}(T)\frac{\partial T}{\partial t}=\nabla ·[k_{cd}(T)\nabla T]+\rho_{cd}(T)
 表中，标为0的参数表示它在方程中可以忽略或者不予考虑。$\surd$表示要予以考虑。
 在讨论方程6.1的每一项之前，我们先简要讨论表6.1中列出的概念。
 
-表格6.1
+\begin{table}[htbp]\small
+\centering
+\caption{功率密度方程6.1的衍生概念} 
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$C_{cd}(T)(\partial T/\partial t)$&$\nabla\cdot[k_{cd}(T)\nabla T]   $&$\rho_{cd}(T)J_{cd}^2(t) $  &  $g_d(t)$ & $g_q(T) $ &    Concept           \\ \hline
+$\surd $& 0 & 0 & $\surd $& 0 & Flux jump     \\ \hline
+0 & 0 & $\surd $ & 0 & $\surd $ & Cryostability \\ \hline
+$\surd $ & $\surd $ & $\surd $ & 0 & $\surd $ & Dynamic stability      \\ \hline
+0 & $\surd $ & $\surd $ & 0 & $\surd $ & "Equal area"        \\ \hline
+0 & $\surd $ & $\surd $& 0 & 0 & MPZ*          \\ \hline
+$\surd $ & 0 &$\surd $ & 0 & 0 & Protection    \\ \hline
+$\surd $ & $\surd $ &$\surd $ & 0 & 0 & Adiabatic NZP$\dagger$ \\ \hline
+\end{tabular}
+\end{table}
 
 \subsection{公式6.1涉及的概念}
 下面将简要讨论方程6.1所涉及的以及表6.1列出的概念。
@@ -81,7 +95,24 @@ NbTi、$\mathrm{MgB_2}$、YBCO以及附属材料在相应温区内的近似热�
 其次是$\mathrm{MgB_2}$，对磁体工程师的挑战是最小的。
 我们的结论是，只有对于LTS，稳定性才真正算作问题。
 
-表格6.2
+\begin{table}[htbp]\small
+\centering
+\caption{超导磁体中各材料的热容}  %6.2
+\begin{tabular}{|l|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|c|}{\multirow{4}{*}{\begin{tabular}[c]{@{}c@{}}Superconductor\\ Operating\\ Remperrature\\ Range\end{tabular}}} & \multicolumn{3}{c|}{$\Leftarrow$NbTi($T_c$=9.8K)$\Rightarrow$} & \multicolumn{4}{l|}{} \\ \cline{2-8}
+\multicolumn{1}{|c|}{} & \multicolumn{5}{c|}{$\Leftarrow$$MgB_2$($T_c$=39K)$\Rightarrow$} & \multicolumn{2}{l|}{} \\ \cline{2-8}
+\multicolumn{1}{|c|}{} & \multicolumn{7}{c|}{$\Leftarrow$YBCO($T_c$=93K)$\Rightarrow$} \\ \cline{2-8}
+\multicolumn{1}{|c|}{} & \multicolumn{7}{c|}{$C_p$(T){[}J/$cm^3$ K{]}} \\ \hline
+Material & 2K & 4K & 10K & 20K & 30K & 50K & 90K \\ \hline
+Copper & 0.0025 & 0.00089 & 0.0076 & 0.067 & 0.236 & 0.857 & 2.07 \\ \hline
+\begin{tabular}[c]{@{}l@{}}NbTi\\MgB$_2$\\ YBCO\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.00018\\ 0.000040\\ 0.000086\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.0014\\ 0.00032\\ 0.007\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.022\\ 0.00181\end{tabular} & \begin{tabular}[c]{@{}c@{}}-\\ 0.0081\end{tabular} & \begin{tabular}[c]{@{}c@{}}-\\ 0.0242\\ 0.120\end{tabular} & \begin{tabular}[c]{@{}c@{}}-\\ -\\ 0.454\end{tabular} & \begin{tabular}[c]{@{}c@{}}-\\ -\\ 1.12\end{tabular} \\ \hline
+Stainless steel & 0.0014 & 0.003 & 0.01 & 0.04 & 0.1 & 0.4 & 1.5 \\ \hline
+Epoxy & 0.00008 & 0.00066 & 0.014 & 0.080 & & & \\ \hline
+\begin{tabular}[c]{@{}l@{}}Helium @3 atm\\ Soild Neon\\ Soild Nitrogen\end{tabular} & \begin{tabular}[c]{@{}c@{}}-\\ 0.003\\ 0.007\end{tabular} & \begin{tabular}[c]{@{}c@{}}$0.47^\ast$\\ 0.027\\ 0.031\end{tabular} & \begin{tabular}[c]{@{}c@{}}$0.095^\ast$\\ 0.42\\ 0.17\end{tabular} & \begin{tabular}[c]{@{}c@{}}-\\ 1.39\\ 0.71\end{tabular} & \begin{tabular}[c]{@{}c@{}}-\\ -\\ 1.21\end{tabular} & \begin{tabular}[c]{@{}c@{}}-\\ -\\ 1.51\end{tabular} & \begin{tabular}[c]{@{}c@{}}-\\ -\\ -\end{tabular} \\ \hline
+\end{tabular}
+\end{table}
+
 
 \subsection{热传导}
 在低温稳定性中，热传导项被略掉。而在``绝热"LTS磁体中，它对决定MPZ大小有重要的作用；MPZ大小反过来
@@ -90,7 +121,27 @@ NbTi、$\mathrm{MgB_2}$、YBCO以及附属材料在相应温区内的近似热�
 稳态耗散能量密度(即交流损耗)水平。
 表6.3与表6.2类似，给出了热导率$k(T)$的近似值。
 
-表格6.3
+\begin{table}[htbp]\small
+\centering
+\caption{超导磁体中各材料的热导率，铜和不锈钢的电阻率} 
+\begin{tabular}{|l|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|c|}{\multirow{4}{*}{\begin{tabular}[c]{@{}c@{}}Superconductor\\ Operating\\ Remperrature\\ Range\end{tabular}}} & \multicolumn{3}{c|}{$\Leftarrow$NbTi($T_c=9.8K$)$\Rightarrow$} & \multicolumn{4}{l|}{} \\ \cline{2-8}
+\multicolumn{1}{|c|}{} & \multicolumn{5}{c|}{$\Leftarrow$$MgB_2$($T_c=39K$)$\Rightarrow$} & \multicolumn{2}{l|}{} \\ \cline{2-8}
+\multicolumn{1}{|c|}{} & \multicolumn{7}{c|}{$\Leftarrow$YBCO($T_c$=93K)$\Rightarrow$} \\ \cline{2-8}
+\multicolumn{1}{|c|}{} & \multicolumn{7}{c|}{k(T){[}W/cm K{]}} \\ \hline
+Material & 2K & 4K & 10K & 20K & 30K & 50K & 90K \\ \hline
+Copper & 2 & 4.2 & 8.5 & 15 & 15 & 9 & 5 \\ \hline
+\begin{tabular}[c]{@{}l@{}}NbTi\\MgB$_2$\\ YBCO\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.0006\\ \\ 0.020\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.0017\\ \\ 0.080\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.0057\\ 0.024\\ 0.120\end{tabular} & \begin{tabular}[c]{@{}c@{}}-\\ 0.068\\ 0.225\end{tabular} & \begin{tabular}[c]{@{}c@{}}-\\ 0.110\\ 0.250\end{tabular} & \begin{tabular}[c]{@{}c@{}}-\\ -\\ 0.240\end{tabular} & \begin{tabular}[c]{@{}c@{}}-\\ -\\ 0.125\end{tabular} \\ \hline
+Stainless steel & 0.0001 & 0.0027 & 0.009 & 0.02 & 0.035 & 0.057 & 0.088 \\ \hline
+Epoxy & 0.0001 & 0.0003 & 0.0012 & 0.0027 & 0.004 & 0.006 & 0.007 \\ \hline
+\begin{tabular}[c]{@{}l@{}}Helium @3 atm\\ Soild Neon\\ Soild Nitrogen\end{tabular} & \begin{tabular}[c]{@{}c@{}}$0.00017^\ast$\\ 0.030\\ 0.09\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.0002\\ 0.038\\ 0.057\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.00018\\ 0.0095\\ 0.016\end{tabular} & \begin{tabular}[c]{@{}c@{}}-\\ 0.004\\ 0.0042\end{tabular} & \begin{tabular}[c]{@{}c@{}}-\\ -\\ 0.003\end{tabular} & \begin{tabular}[c]{@{}c@{}}-\\ -\\ 0.002\end{tabular} & \begin{tabular}[c]{@{}c@{}}-\\ -\\ -\end{tabular} \\ \hline
+Material & \multicolumn{7}{c|}{$\rho(T)[\mu\Omega cm]$} \\ \hline
+Copper (RRR=100) & 0.0015 & 0.0015 & 0.015 & 0.017 & 0.02 & 0.07 & 0.3 \\ \hline
+Stainless steel & 54 & 54 & 54 & 54 & 55 & 56 & 57 \\ \hline
+\end{tabular}
+\end{table}
+
 
 和热容不同，表中每一种材料的热导率随温度变化的幅度并不剧烈。
 铜有最好的热导率，比其他材料好很多。这让它成为LTS和HTS绕组稳定(本章)和保护(第8章)不可或缺的首选材料。
@@ -166,7 +217,26 @@ $I_c(T)$近似是一条直线，连接了$T_{op}$下的临界电流$T_c(T_{op})\
 它的$I_{op}(I_t)$应当在绕组中低于导体的最小$I_{c_o}$。因为$I_{c_o}$与磁场有关，而磁场在绕组中是变化的。
 表6.4列出了几个对LTS和HTS磁体比较典型的$T_{op}$和$\Delta T_{op}$及其对应的$\Delta e_h$。
 
-表6.4.。。。。。
+\begin{table}[htbp]\small
+\centering
+\caption{方程5.40在NbTi和YBCO材料的应用} 
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\multicolumn{3}{|c|}{LTS} & \multicolumn{3}{c|}{HTS} \\ \hline
+$T_{op}[K]$ & $[\Delta T_{op}(I_{op})]_{st}[K]$ & $\Delta
+e_h[J/cm^3]$ & $T_{op}[K]$ & $[\Delta T_{op}I_{op}]_{st}[K]$
+& $\Delta e_h[J/cm^3]$ \\ \hline
+2.5 & 0.3 & $1.2\times10^{-4}$ & 4.2 & 25 & 1.6 \\
+\hline
+4.2. & 0.5 & $0.6\times10^{-3}$ & 10 & 20 & 1.8 \\
+\hline
+4.2 & 2 & $4.3\times10^{-3}$ & 30 & 10 & 3.7 \\
+\hline
+10 & 1 & $9\times10^{-3}$ & 70 & 5 & 8.1 \\
+\hline
+\end{tabular}
+\end{table}
+
 
 \begin{description}
 	\item[LTS] 对比表6.4中给出的能量裕度与图6.1中给出的扰动能量密度，可以明确看到，LTS磁体非常容易因扰动
@@ -495,7 +565,39 @@ J_{m_o}(=I_{op}/A_m),\lambda J_{op}(=I_{op}/A_{wd})$[6.12,3.24]。
 这个性能的提高部分是由于近四十年来随着建造实际磁体而逐步深入的对稳定性和保护问题的理解，
 部分来自降低这种仅用于研究的个性化磁体的费用的压力。
 
-表6.5.。。。。。。。。。
+\begin{table}[]
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+Composite & $\gamma_{m/s}$    & $I_c[KA]$    & $I_{op}[KA]$    &
+$J_c[MA/m^2]$   & $J_e[MA/m^2]$    & $J_{mo}[MA/m^2]$   & $\lambda
+J_{op}[MA/m^2]$    \\ \hline
+$NbTi^*$      & 24   & $4.0^{a}$  & 2.2  & 800 & 32.0 & 18.3 & 7.8  \\
+\hline
+$NbSn\dag $     & 21.5 &$ 15.8^{b} $& 10.0 & $627^{c}$ & 74.4 & 184  &
+39.2 \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[htbp]\small
+\centering
+\caption{方程5.40在NbTi和YBCO材料的应用}  %6.5
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+ $I_t[A]$   &$I_m[A]$         &$I_s$[A]          &$R_mI_m[V]$
+ &$P_{cd}[W]$      &  $g_{jcd}[W/cm^2]$    & $R_{dif}[\Omega]$      \\
+ \hline
+90  & 0.00686 & 89.99314 & 2.06$\times10^{-6}$ & 185$\times10^{-6}$  & 18.5$\times10^{-6}$ & 0.343$\times10^{-6}$ \\ \hline
+100 & 0.0332  & 99.967   & 9.95$\times10^{-6}$ & 995$\times10^{-6}$  & 99.5$\times10^{-6}$ & 1.49$\times10^{-6}$  \\ \hline
+120 & 0.483   & 119.517  & 145$\times10^{-6}$  & 17.4$\times10^{-3}$ & 1.74$\times10^{-3}$ & 18.2$\times10^{-6}$  \\ \hline
+150 & 7.07    & 142.93   & 2.12$\times10^{-3}$ & 318$\times10^{-3}$  & 31.8$\times10^{-3}$ & 223 $\times10^{-6}$  \\ \hline
+300 & 126.75  & 173.25   & 38.0$\times10^{-3}$ & 11.4 & 1.14 & 3.29$\times10^{-3}$  \\ \hline
+500 & 315.88  & 184.12   & 94.8$\times10^{-3}$ & 47.4 & 4.74 & 7.72$\times10^{-3}$  \\ \hline
+\end{tabular}
+\end{table}
+
+
+
 
 \subsection{讨论6.3：复合物超导体}
 可用的磁体级超导体通常有两类，一类是``Monolithic"(单体)，一类是``built-up"(组合)。
@@ -715,7 +817,24 @@ P_{cd}=R_mI_mI_t=V_sI_t \tag{S3.4}
 
 表6.5a给出了b)的解。
 
-表6.5a......
+
+\begin{table}[htbp]\small
+\centering
+\caption{方程5.40在NbTi和YBCO材料的应用} 
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+ $I_t[A]$   &$I_m[A]$         &$I_s$[A]          &$R_mI_m[V]$
+ &$P_{cd}[W]$      &  $g_{jcd}[W/cm^2]$    & $R_{dif}[\Omega]$      \\
+ \hline
+90  & 0.00686 & 89.99314 & 2.06$\times10^{-6}$ & 185$\times10^{-6}$  & 18.5$\times10^{-6}$ & 0.343$\times10^{-6}$ \\ \hline
+100 & 0.0332  & 99.967   & 9.95$\times10^{-6}$ & 995$\times10^{-6}$  & 99.5$\times10^{-6}$ & 1.49$\times10^{-6}$  \\ \hline
+120 & 0.483   & 119.517  & 145$\times10^{-6}$  & 17.4$\times10^{-3}$ & 1.74$\times10^{-3}$ & 18.2$\times10^{-6}$  \\ \hline
+150 & 7.07    & 142.93   & 2.12$\times10^{-3}$ & 318$\times10^{-3}$  & 31.8$\times10^{-3}$ & 223 $\times10^{-6}$  \\ \hline
+300 & 126.75  & 173.25   & 38.0$\times10^{-3}$ & 11.4 & 1.14 & 3.29$\times10^{-3}$  \\ \hline
+500 & 315.88  & 184.12   & 94.8$\times10^{-3}$ & 47.4 & 4.74 & 7.72$\times10^{-3}$  \\ \hline
+\end{tabular}
+\end{table}
+
 
 c) 即使复合导体被沸腾液氮很好的冷却，它的温度必然升高以将焦耳热传至制冷剂。
 这里，液氮沸腾温度为77.3 K，随热流密度增加，导体温升在核态沸腾区域可高达$\sim 10$ K。
@@ -731,7 +850,42 @@ d) e)结果总结在表6.5b。
 这是很实际的问题。例如，在$I_t$=150 A时，对$n=15$的复合导体，$R_mI_m$=2.12 mV；
 而$n=60$的复合导体这个值时11.3 mV：很明显，就检测电阻性电压而言，显然$n=60$的导体要比$n=15$的好。 
 
-表6.5b............
+\begin{table}[htbp]\small
+\centering
+\caption{方程5.40在NbTi和YBCO材料的应用} %6.5b
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+  $I_t[A]$  &   $ I_m[A]$     &  $I_s[A]$        & $R_mI_m$      &
+  $P_{cd}[W]$   &  $g_{jcd}[W/cm^2]$     & $R_{dif}[\Omega]$      \\
+  \hline
+\multicolumn{7}{|c|}{n=30}                              \\ \hline
+90  & 0.00141 & 89.9986  & 0.424$\times10^{-6}$ & 38.1$\times10^{-6}$ &
+3.81$\times10^{-6}$  & 0.127$\times10^{-6}$ \\ \hline
+100 & 0.0330  & 99.967   & 9.90$\times10^{-6}$  & 990$\times10^{-6}$  &
+99.0$\times10^{-6}$  & 2.97$\times10^{-6}$  \\ \hline
+120 & 3.37    & 116.63   & 1.01$\times10^{-3}$  & 121$\times10^{-3}$  &
+12.1$\times10^{-3}$  & 260$\times10^{-6}$   \\ \hline
+150 & 25.27   & 124.73   & 7.58$\times10^{-3}$  & 1.14 &
+114$\times10^{-3}$   & 1.82$\times10^{-3}$  \\ \hline
+300 & 167.16  & 132.8    & 50.1$\times10^{-3}$  & 15.0 & 1.50  &
+11.32$\times10^{-3}$ \\ \hline
+500 & 363.67  & 163.33   & 109$\times10^{-3}$   & 54.6 & 5.46  &
+24.0$\times10^{-3}$  \\ \hline
+\multicolumn{7}{|c|}{n=60}                              \\ \hline
+90  & 0.00006 & 89.99994 & 0.018$\times10^{-6}$ & 1.60$\times10^{-6}$ &
+0.162$\times10^{-6}$ & 0.012$\times10^{-6}$ \\ \hline
+100 & 0.0327  & 99.9673  & 9.81$\times10^{-6}$  & 981$\times10^{-6}$  &
+98.1$\times10^{-6}$  & 5.89$\times10^{-6}$  \\ \hline
+120 & 10.02   & 109.98   & 3.01$\times10^{-3}$  & 361$\times10^{-3}$  &
+36.1$\times10^{-3}$  & 1.64$\times10^{-3}$  \\ \hline
+150 & 37.57   & 112.43   & 11.3$\times10^{-3}$  & 1.69 &
+169$\times10^{-3}$   & 6.02$\times10^{-3}$  \\ \hline
+300 & 184.55  & 115.45   & 55.4$\times10^{-3}$ & 16.6 & 1.66  &
+28.8$\times10^{-3}$  \\ \hline
+500 & 383.14 & 116.86 & 114.9$\times10^{-3}$ & 57.5 & 5.75 &
+59.0$\times10^{-3}$ \\ \hline
+\end{tabular}
+\end{table}
 
 
 \subsection{问题6.4：电流脉冲下的YBCO}
@@ -923,7 +1077,80 @@ h_{he}=0.0259(\frac{k_{he}}{D_{hy}})Re^{0.8}Pr^{0.4}(\frac{T_{he}}{T_{cd}})^{-0.
 式中，$k_{he}$、Re、Pr分别是氦的热导率、雷诺数和普朗特数；$D_{hy}$是水力直径；
 $T_{cd}$是导体温度。3.5 atm和4.5 K下对应Re=$10^4$和Re=$10^5$的传热热流$g_q$值如图6.3。
 
-表6.6.。。。。。。。。。。。。。。。。。。。
+\begin{table}[htbp]\small
+\centering
+\caption{方程5.40在NbTi和YBCO材料的应用} %6.6
+\begin{tabular}{|l|c|c|c|}
+\hline
+\multicolumn{1}{|c|}{CIC Conductor Coil}
+& \multicolumn{2}{c|}{45-T Hybrid Magent}
+& \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}ITER\\ TF
+Coil\end{tabular}} \\ \cline{1-3}
+Parameters
+& Coil A
+& Coil C
+&
+\\ \hline
+Nominal $I_{op} $[kA]
+& \multicolumn{2}{c|}{10}
+& 50
+\\ \hline
+\hline
+Total area (A$_{cic}$){[}mm$^2${]} & 209.94 & 196.29 & 2601 \\ \hline
+\begin{tabular}[c]{@{}l@{}}Basic Cable$\sharp$starands\\ Strand
+diameter,$D_{st}$ {[}mm{]}\\ Cable Patterns\\ Total strand
+number,Nst\\ Conductor area ,$A_{cd}$ {[}mm$^2${]}\\
+$A_{sc}$+$A_{\overline{m}}$ {[}mm$^2${]}\\$ A_m$
+{[}mm$^2${]}\\ $A_cd$/$A_{cic}$\end{tabular} &
+\begin{tabular}[c]{@{}c@{}}6 Nb$_3$Sn/Cu+1Cu\\ 0.433\\
+7$\times3\times5\times5$\\ 525\\ $79.44^\ast$\\ 25.19\\ 54.25\\
+0.38\end{tabular} & \begin{tabular}[c]{@{}c@{}}3 NbTi/Cu\\ 0.810\\
+3$\times3\times3\times5$\\ 135\\ $70.49^\ast$\\ 11.25\\ 59.14\\
+0.36\end{tabular} & \begin{tabular}[c]{@{}c@{}}6 Nb$_3$Sn/Cu\\ 0.810\\
+3$\times(4^3)\times6$\\ 1152\\ 593.6\\ 94.74\\ 498.05\\
+0.23\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}Helium\\ Nominal P$_{op }$ {[}atm{]}\\
+Nominal
+T$_{op }$ {[}K{]}\\ Nominal fiow rate {[}g/s{]}\end{tabular}
+& \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}Superfluid$\dagger$\\
+1\\ 1.8\\
+not-forced;natural convection\end{tabular}}
+& \begin{tabular}[c]{@{}c@{}}Supercritical\\ 5\\ 4.5\\ 10\end{tabular}
+\\ \hline
+\begin{tabular}[c]{@{}l@{}}$D_{hy}\ddagger $ {[}mm{]}\\ Flow
+area$\dagger\dagger(A_q)$
+{[}mm$^2${]}\\ $A_q/A_{cic}$\end{tabular}
+& \begin{tabular}[c]{@{}c@{}}227.3\\ 50.30\\ 0.24\end{tabular}
+& \begin{tabular}[c]{@{}c@{}}109.4\\ 36.50\\ 0.19\end{tabular}
+& \begin{tabular}[c]{@{}c@{}}933.1\\ 276\\ 0.106\end{tabular}
+\\ \hline
+\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Conduit Material\\
+Area($A_S$)
+{[}mm$^2${]}\\ height$\times$width {[}mm$\times$mm{]}\\ wall
+thickness {[}mm{]}\\
+outer corner radius {[}mm{]}\\ A$_S/A_{cic}$\end{tabular}}
+& \multicolumn{2}{c|}{Stainless steel$\ddagger\ddagger$}
+& \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Incoloy\\ 1466.9\\
+51$\times51$\\
+2.86\\ \\ 0.56\end{tabular}} \\ \cline{2-3}
+ &
+ \begin{tabular}[c]{@{}c@{}}80.20\\
+ 16.22$\times13.71$\\
+ 1.64\\
+ 3.40\\
+ 0.38\end{tabular}
+ &
+ \begin{tabular}[c]{@{}c@{}}89.30\\
+ 15.85$\times$13.74\\
+ 2.00\\
+ 4.77\\
+ 0.45\end{tabular}
+ &
+ \\
+ \hline
+\end{tabular}
+\end{table}
+
 
 \textbf{沟槽}
 
@@ -1069,9 +1296,27 @@ v(i)=\frac{10(i-1)}{10-i} \tag{S5.5}
 
 部分$i$值下的$v(i)$值如表6.7所列。
 
-表6.7.。。。。。。。。。。。。
+\begin{table}[htbp]\small
+\centering
+\caption{方程5.40在NbTi和YBCO材料的应用} %6.8
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+i & 1 & 1.1  & 1.5  & 2    \\ \hline
+u & 0 & 0.11 & 0.59 & 1.25 \\ \hline
+\end{tabular}
+\end{table}
 
-表6.8.。。。。。。。。。。。。。。。。
+
+\begin{table}[htbp]\small
+\centering
+\caption{方程5.40在NbTi和YBCO材料的应用} %6.8
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+i & 1 & 0.9   & 0.8   & 0.75 & 0.725 & 0.707 & $\leq$0.707 \\ \hline
+u & 0 & 0.125 & 0.333 & 0.5  & 0.611 & 0.707 & 0     \\ \hline
+\end{tabular}
+\end{table}
+
 
 d) 当$f_p=0.1$时，$\alpha_{sk}$变为1。对$i<1$，根据定义，$v=0$。对$v>1$，由方程6.32，$v(i)=i$。
 在$i=1$时，$v(i)$不能确定；物理上，如讨论6.1所指出的，这意味着$v$可以是$i=1$竖线上的任意点。
