@@ -1,5 +1,5 @@
-\section{附录}
-\subsection{物理常数和转换因子}
+\chapter*{附录}
+\section{物理常数和转换因子}
 \begin{table}[htbp]\small
 \centering
 \caption{部分物理常数}%表A1.1
@@ -61,7 +61,7 @@ $0^\mathrm{o}\mathrm{C}$ & 273K \\ \hline
 \end{table}
 \newpage
 
-\subsection{均匀电流密度螺管线圈磁场误差系数}
+\section{均匀电流密度螺管线圈磁场误差系数}
 第3.4节讨论中，式3.15b给出了$F(\alpha,\beta) E_{n}(\alpha,\beta)$之积：
 \begin{align*}
 F(\alpha,\beta) E_{n}(\alpha,\beta)=\frac{1}{M_n \beta^{n-1}}\left[\frac{f_n(\alpha=1,\beta)}{(1+\beta^2)^{n-0.5}}-\frac{\alpha^3 f_n(\alpha,\beta)}{(\alpha^2+\beta^2)^{n-0.5}}\right] \tag{3.15b}
@@ -73,7 +73,7 @@ f_{n+1}(\alpha,\beta)=\frac{1}{(n+1)M_n }\frac{1\partial}{\partial\beta}\left[\f
 \end{align*}
 
 下面给出了$M_n$的值和$f_{n}(\alpha,\beta)$在$n$从2至20的表达式：
-
+\begin{flushleft}
 \begin{align*}
 n=2:&M_2=2；f_2(\alpha,\beta)=1 \\
 n=3:&M_3=6；f_3(\alpha,\beta)=\alpha^2+4\beta^4 \\ 
@@ -117,6 +117,7 @@ n=20:&M_{20}=24903680；f_{20}(\alpha,\beta)=65536\alpha^{36}+1277952\alpha^{34}
 &+8620015404\alpha^{16}\beta^{20}+7193248608\alpha^{14}\beta^{22}+8412511744\alpha^{12}\beta^{24}\\ 
 &-11477921280\alpha^{10}\beta^{26}+30055434240\alpha^8\beta^{28}-25007497216\alpha^6\beta^{30}\\ &+10287710208\alpha^4\beta^{32}-1608155136\alpha^2\beta^{34}+87162880\beta^{36}\\
 \end{align*}
+\end{flushleft}
 \newpage
 
 \section{制冷工质的热力学性质}
@@ -129,12 +130,12 @@ n=20:&M_{20}=24903680；f_{20}(\alpha,\beta)=65536\alpha^{36}+1277952\alpha^{34}
 \begin{tabular}{|l|c|c|c|c|c|c|}
 \hline
 性质 & He & $\mathrm{n-H_2}$ & Ne & $\mathrm{N_2}$ & Ar & $\mathrm{O_2}$ \\ \hline
-沸点,$T_b \ \ \ \ \ \ \ \ \ [\mathrm{K}]$ & 4.22 & 20.39 & 27.10 & 77.36 & 87.28 & 90.18 \\ \hline
-\begin{tabular}[c]{@{}l@{}}汽化热,$h_L\ \ [\mathrm{kJ/kg}]$\\ $\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ h_\ell\ \ [\mathrm{J/cm^3}]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}20.7\\ 2.6\end{tabular} & \begin{tabular}[c]{@{}c@{}}443\\ 31.3\end{tabular} & \begin{tabular}[c]{@{}c@{}}85.9\\ 104\end{tabular} & \begin{tabular}[c]{@{}c@{}}199\\ 161\end{tabular} & \begin{tabular}[c]{@{}c@{}}162\\ 226\end{tabular} & \begin{tabular}[c]{@{}c@{}}213\\ 243\end{tabular} \\ \hline
-密度($T_b$,liquid)\ \ \ \ \ \ \ \ \ $[\mathrm{kg/m^3}]$ & 125 & 70.8 & 1206 & 807 & 1394 & 1141 \\ \hline
-密度($T_b$,vapor)\ \ \ \ \ \ \ \ \ $[\mathrm{kg/m^3}]$ & 16.9 & 1.33 & 9.37 & 4.60 & 5.77 & 4.47 \\ \hline
+沸点,$T_b \ [\mathrm{K}]$ & 4.22 & 20.39 & 27.10 & 77.36 & 87.28 & 90.18 \\ \hline
+\begin{tabular}[c]{@{}l@{}}汽化热,$h_L\ \ [\mathrm{kJ/kg}]$\\ $\ \  h_\ell\ \ [\mathrm{J/cm^3}]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}20.7\\ 2.6\end{tabular} & \begin{tabular}[c]{@{}c@{}}443\\ 31.3\end{tabular} & \begin{tabular}[c]{@{}c@{}}85.9\\ 104\end{tabular} & \begin{tabular}[c]{@{}c@{}}199\\ 161\end{tabular} & \begin{tabular}[c]{@{}c@{}}162\\ 226\end{tabular} & \begin{tabular}[c]{@{}c@{}}213\\ 243\end{tabular} \\ \hline
+密度($T_b$,液)\ \ \ \ \ \ \ \ \ $[\mathrm{kg/m^3}]$ & 125 & 70.8 & 1206 & 807 & 1394 & 1141 \\ \hline
+密度($T_b$,气)\ \ \ \ \ \ \ \ \ $[\mathrm{kg/m^3}]$ & 16.9 & 1.33 & 9.37 & 4.60 & 5.77 & 4.47 \\ \hline
 \begin{tabular}[c]{@{}l@{}}密度@273K($0^\mathrm{o}\mathrm{C})^*$ \ \ \ \ $[\mathrm{kg/m^3}]$\\ \ \ \ \ \ \ \ \ \ \ @293K($20^\mathrm{o}\mathrm{C}$)\ \ \ \ \ $[\mathrm{kg/m^3}]$ \end{tabular} & \begin{tabular}[c]{@{}l@{}}0.179\\ 0.166\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.090\\ 0.083\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.900\\ 0.834\end{tabular} & \begin{tabular}[c]{@{}l@{}}1.251\\ 1.158\end{tabular} & \begin{tabular}[c]{@{}l@{}}1.784\\ 1.652\end{tabular} & \begin{tabular}[c]{@{}l@{}}1.429\\ 1.324\end{tabular} \\ \hline
-\begin{tabular}[c]{@{}l@{}}密度($T_b$,liquid)/密度(273K)\\ 密度($T_b$,liquid)/密度(293K)\end{tabular} & \begin{tabular}[c]{@{}l@{}}900\\ 753\end{tabular} & \begin{tabular}[c]{@{}l@{}}787\\ 853\end{tabular} & \begin{tabular}[c]{@{}l@{}}1340\\ 1446\end{tabular} & \begin{tabular}[c]{@{}l@{}}645\\ 697\end{tabular} & \begin{tabular}[c]{@{}l@{}}781\\ 844\end{tabular} & \begin{tabular}[c]{@{}l@{}}798\\ 862\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}密度($T_b$,液)/密度(273K)\\ 密度($T_b$,液)/密度(293K)\end{tabular} & \begin{tabular}[c]{@{}l@{}}900\\ 753\end{tabular} & \begin{tabular}[c]{@{}l@{}}787\\ 853\end{tabular} & \begin{tabular}[c]{@{}l@{}}1340\\ 1446\end{tabular} & \begin{tabular}[c]{@{}l@{}}645\\ 697\end{tabular} & \begin{tabular}[c]{@{}l@{}}781\\ 844\end{tabular} & \begin{tabular}[c]{@{}l@{}}798\\ 862\end{tabular} \\ \hline
 \end{tabular}
 \end{table}
 
