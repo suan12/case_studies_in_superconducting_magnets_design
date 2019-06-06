@@ -1,0 +1,264 @@
+\section{附录}
+\subsection{物理常数和转换因子}
+\begin{table}[htbp]\small
+\centering
+\caption{部分物理常数}%表A1.1
+\begin{tabular}{|l|l|l|}
+\hline
+光速 & c & $3.00\times10^8\ \mathrm{m/s}$ \\ \hline
+自由空间磁导率 & $\mu_o$ & $4\pi\times10^{-7}\ \mathrm{H/m}$ \\ \hline
+自由空间电导率 & $\epsilon_o$ & $8.85\times10^{-12}\ \mathrm{F/m}$ \\ \hline
+阿伏伽德罗常数 & $N_A $& $6.023\times10^{23}\ \mathrm{particle/mole}$ \\ \hline
+电荷 & e & $1.60\times10^{-19}\ \mathrm{C}$ \\ \hline
+电子静止质量 & $m_o$ & $9.11\times10^{-31}\ \mathrm{kg}$ \\ \hline
+质子静止质量 & $M_{p_o}$ & $1.67\times10^{-27}\ \mathrm{kg}$ \\ \hline
+普朗克常数& h & $6.63\times10^{-34}\ \mathrm{Js}$ \\ \hline
+玻尔兹曼常数& $k_B$ & $1.38\times10^{-23}\ \mathrm{J/K}$ \\ \hline
+气体常数 & R & $8.32\times10^3\ \mathrm{J/kg-mole K}$ \\ \hline
+摩尔气体体积 & $V_R$ & $22.4\ \mathrm{m^3/kg-mole}$ \\ \hline
+Stefan-Boltzmann常数& $\sigma_{SB}$ & $5.67\times10^{-8}\ \mathrm{W/m^2K^4}$ \\ \hline
+重力加速度& g & $9.81\ \mathrm{m/s^2}$ \\ \hline
+Wiedemann-Franz数& $\wedge$ & $2.45\times10^{-8}\ \mathrm{W\Omega/K^2}$ \\ \hline
+\end{tabular}
+\end{table}
+\newpage
+
+\begin{table}[htbp]\small
+\centering
+\caption{部分转换因子}%表A1.2 问号处不会打
+\begin{tabular}{|l|l|}
+\hline
+``常用''非SI单位 & SI单位 \\ \hline
+电磁 & \\ \hline
+1 gauss & $10^{-4}\ \mathrm{T}$ \\ \hline
+1 oersted & $250/\ \mathrm{\pi A/m}$ \\ \hline
+1 emu/$\mathrm{cm^3}$ & $1000\ \mathrm{A/m}$ \\ \hline
+压力& \\ \hline
+1 mmHg(1 torr) & 133Pa \\ \hline
+1 atm(760 torr) & 101kPa \\ \hline
+1 bar(750 torr) & 0.1MPa \\ \hline
+1 psi(52 torr) & 6.9kPa \\ \hline
+粘度& \\ \hline
+1 poise & 0.1 Pa s(0.1kg/ms) \\ \hline
+能量和功率 & \\ \hline
+1 eV & $1.6\times10^{-19}\ \mathrm{J}$ \\ \hline
+1 cal & 4.18J \\ \hline
+1 BTU & 1055J \\ \hline
+1hp(horsepower) & 746W \\ \hline
+温度 & \\ \hline
+$0^\mathrm{o}\mathrm{C}$ & 273K \\ \hline
+1 eV & 11600K \\ \hline
+质量 & \\ \hline
+1 lb & 0.45kg \\ \hline
+1 metric ton & 1000kg \\ \hline
+尺度 & \\ \hline
+1 in & 25.4mm \\ \hline
+1 French league & 4km \\ \hline
+1 liter(1000$\ \mathrm{cm^3}$) & $0.001\ \mathrm{m^3}$ \\ \hline
+1$ft^3$(28.3liter) & $0.0283\ \mathrm{m^3}$ \\ \hline
+\multicolumn{2}{|l|}{$ ^*Values in italics are approximate.$} \\ \hline
+\end{tabular}
+\end{table}
+\newpage
+
+\subsection{均匀电流密度螺管线圈磁场误差系数}
+第3.4节讨论中，式3.15b给出了$F(\alpha,\beta) E_{n}(\alpha,\beta)$之积：
+\begin{align*}
+F(\alpha,\beta) E_{n}(\alpha,\beta)=\frac{1}{M_n \beta^{n-1}}\left[\frac{f_n(\alpha=1,\beta)}{(1+\beta^2)^{n-0.5}}-\frac{\alpha^3 f_n(\alpha,\beta)}{(\alpha^2+\beta^2)^{n-0.5}}\right] \tag{3.15b}
+\end{align*}
+
+$f_{n+1}(\alpha,\beta)$可以由下面的递归公式给出：
+\begin{align*}
+f_{n+1}(\alpha,\beta)=\frac{1}{(n+1)M_n }\frac{1\partial}{\partial\beta}\left[\frac{f_n(\alpha,\beta)}{(\alpha^2+\beta^2)^{n-0.5}}\right] 
+\end{align*}
+
+下面给出了$M_n$的值和$f_{n}(\alpha,\beta)$在$n$从2至20的表达式：
+
+\begin{align*}
+n=2:&M_2=2；f_2(\alpha,\beta)=1 \\
+n=3:&M_3=6；f_3(\alpha,\beta)=\alpha^2+4\beta^4 \\ 
+n=4:&M_4=24；f_4(\alpha,\beta)=2\alpha^4+7\alpha^2\beta^2+20\beta^4 \\ 
+n=5:&M_5=40；f_5(\alpha,\beta)=2\alpha^6+9\alpha^4\beta^2+12\alpha^2\beta^4+40\beta^6 \\ 
+n=6:&M_6=240；f_6(\alpha,\beta)=8\alpha^8+44\alpha^6\beta^2+99\alpha^4\beta^4+28\alpha^2\beta^6+280\beta^8 \\ 
+n=7:&M_7=336；f_7(\alpha,\beta)=8\alpha^{10}+52\alpha^8\beta^2+143\alpha^6\beta^4-112\alpha^2\beta^8+448\beta^{10} \\ 
+n=8:&M_8=896；f_8(\alpha,\beta)=16\alpha^{12}+120\alpha^{10}\beta^2+390\alpha^8\beta^4+715\alpha^6\beta^6+1080\alpha^4\beta^8\\ &-1008\alpha^2\beta^{10}+1344\beta^{12}\\
+n=9:&M_9=1152；f_9(\alpha,\beta)=16\alpha^{14}+136\alpha^{12}\beta^2+510\alpha^{10}\beta^4+1105\alpha^8\beta^6+1480\alpha^6\beta^8\\ &+2592\alpha^4\beta^{10}-2688\alpha^2\beta^{12}+1920\beta^{14}\
+n=10:&M_{10}=11520；f_{10}(\alpha,\beta)=128\alpha^{16}+1216\alpha^{14}\beta^2+5168\alpha^{12}\beta^4+12920\alpha^{10}\beta^6\\ &+20995\alpha^8\beta^{8}+19976\alpha^6\beta^{10}+49632\alpha^4\beta^{12}-46464\alpha^2\beta^{14}+21120\beta^{16} \\ 
+n=11:&M_{11}=14080；f_{11}(\alpha,\beta)=128\alpha^{18}+1344\alpha^{16}\beta^2+6384\alpha^{14}\beta^4+18088\alpha^{12}\beta^6\\ 
+&+33915\alpha^{10}\beta^{8}+44436\alpha^8\beta^{10}+23408\alpha^6\beta^{12}+114048\alpha^4\beta^{14}-88704\alpha^2\beta^{16}+28160\beta^{18}\\
+n=12:&M_{12}=33792；f_{12}(\alpha,\beta)=256\alpha^{20}+2944\alpha^{18}\beta^2+15456\alpha^{16}\beta^4+48944\alpha^{14}\beta^6\\ 
+&+104006\alpha^{12}\beta^{8}+156009\alpha^{10}\beta^{10}+177268\alpha^8\beta^{12}-2288\alpha^6\beta^{14}+494208\alpha^4\beta^{16}\\ &-311168\alpha^2\beta^{18}+73216\beta^{20}\\
+n=13:&M_{13}=39936；f_{13}(\alpha,\beta)=256\alpha^{22}+3200\alpha^{20}\beta^2+18400\alpha^{18}\beta^4+64400\alpha^{16}\beta^6\\ 
+&+152950\alpha^{14}\beta^{8}+260015\alpha^{12}\beta^{10}+324268\alpha^{10}\beta^{12}+355160\alpha^8\beta^{14}-228800\alpha^6\beta^{16}\\ &+1006720\alpha^4\beta^{18}-512512\alpha^2\beta^{20}+93184\beta^{22} \\
+n=14:&M_{14}=186368；f_{14}(\alpha,\beta)=1024\alpha^{24}+13824\alpha^{22}\beta^2+86400\alpha^{20}\beta^4+331200\alpha^{18}\beta^6\\ 
+&+869400\alpha^{16}\beta^{8}+1651860\alpha^{14}\beta^{10}+2340135\alpha^{12}\beta^{12}+2465460\alpha^{10}\beta^{14}\\ &+3027960\alpha^8\beta^{16}-3615040\alpha^6\beta^{18}+7742592\alpha^4\beta^{20}-3214848\alpha^2\beta^{22}+465920\beta^{24}\\
+n=15:&M_{15}=215040；f_{15}(\alpha,\beta)=1024\alpha^{26}+14848\alpha^{24}\beta^2+100224\alpha^{22}\beta^4+417600\alpha^{20}\beta^6\\ 
+&+1200600\alpha^{18}\beta^{8}+2521260\alpha^{16}\beta^{10}+3991995\alpha^{14}\beta^{12}+4850640\alpha^{12}\beta^{14}\\ 
+&+4232160\alpha^{10}\beta^{16}+6980480\alpha^8\beta^{18}-10286848\alpha^6\beta^{20}+14137344\alpha^4\beta^{22}\\ 
+&-4845568\alpha^2\beta^{24}+573440\beta^{26} \\
+n=16:&M_{16}=491520；f_{16}(\alpha,\beta)=2048\alpha^{28}+31744\alpha^{26}\beta^2+230144\alpha^{24}\beta^4+1035648\alpha^{22}\beta^6\\ 
+&+3236400\alpha^{20}\beta^{8}+7443720\alpha^{18}\beta^{10}+13026510\alpha^{16}\beta^{12}+17678835\alpha^{14}\beta^{14}\\ 
+&+18886320\alpha^{12}\beta^{16}+12335200\alpha^{10}\beta^{18}+33747584\alpha^8\beta^{20}-49956608\alpha^6\beta^{22}\\ &+49334272\alpha^4\beta^{24}-14135296\alpha^2\beta^{26}+1392640\beta^{28}\\
+n=17:&M_{17}=557056；f_{17}(\alpha,\beta)=2048\alpha^{30}+33792\alpha^{28}\beta^2+261888\alpha^{26}\beta^4+1265792\alpha^{24}\beta^6\\ 
+&+4272048\alpha^{22}\beta^{8}+10680120\alpha^{20}\beta^{10}+20470230\alpha^{18}\beta^{12}+30705345\alpha^{16}\beta^{14}\\ 
+&+36455760\alpha^{14}\beta^{16}+35305600\alpha^{12}\beta^{18}+11776512\alpha^{10}\beta^{20}+81808896\alpha^8\beta^{22}\\ &-109531136\alpha^6\beta^{24}+82722816\alpha^4\beta^{26}-20054016\alpha^2\beta^{28}+1671168\beta^{30}\\
+n=18:&M\\ M_{18}=10027008；f_{18}(\alpha,\beta)=32768\alpha^{32}+573440\alpha^{30}\beta^2+4730880\alpha^{28}\beta^4\\ 
+&+24442880\alpha^{26}\beta^6+88605440\alpha^{24}\beta^{8}+239234688\alpha^{22}\beta^{10}+498405600\alpha^{20}\beta^{12}\\ 
+&+818809200\alpha^{18}\beta^{14}+1074687075\alpha^{16}\beta^{16}+1132428880\alpha^{14}\beta^{18}+1047367552\alpha^{12}\beta^{20}\\ 
+&-149334528\alpha^{10}\beta^{22}+3085089280\alpha^8\beta^{24}-3565506560\alpha^6\beta^{26}+2143272960\alpha^4\beta^{28}\\ 
+&-444530688\alpha^2\beta^{30}+31752192\beta^{32}\\ 
+n=19:&M_{19}=11206656；f_{19}(\alpha,\beta)=32768\alpha^{34}+606208\alpha^{32}\beta^2+5304320\alpha^{30}\beta^4\\ 
+&+29173760\alpha^{28}\beta^6+113048320\alpha^{26}\beta^{8}+327840128\alpha^{24}\beta^{10}+737640288\alpha^{22}\beta^{12}\\ 
+&+1317214800\alpha^{20}\beta^{14}+1893496275\alpha^{18}\beta^{16}+2209194460\alpha^{16}\beta^{18}\\ 
+&+2080028192\alpha^{14}\beta^{20}+2015437312\alpha^{12}\beta^{22}-1533862400\alpha^{10}\beta^{24}+6968944640\alpha^8\beta^{26}\\ &-6839951360\alpha^6\beta^{28}+3365732352\alpha^4\beta^{30}-603291648\alpha^2\beta^{32}+37355520\beta^{34}\\
+n=20:&M_{20}=24903680；f_{20}(\alpha,\beta)=65536\alpha^{36}+1277952\alpha^{34}\beta^2+11821056\alpha^{32}\beta^4\\ 
+&+68956160\alpha^{30}\beta^6+284444160\alpha^{28}\beta^{8}+881776896\alpha^{26}\beta^{10}+2130960832\alpha^{24}\beta^{12}\\ 
+&+4109710176\alpha^{22}\beta^{14}+6421422150\alpha^{20}\beta^{16}+8205150525\alpha^{18}\beta^{18}\\ 
+&+8620015404\alpha^{16}\beta^{20}+7193248608\alpha^{14}\beta^{22}+8412511744\alpha^{12}\beta^{24}\\ 
+&-11477921280\alpha^{10}\beta^{26}+30055434240\alpha^8\beta^{28}-25007497216\alpha^6\beta^{30}\\ &+10287710208\alpha^4\beta^{32}-1608155136\alpha^2\beta^{34}+87162880\beta^{36}\\
+\end{align*}
+\newpage
+
+\section{制冷工质的热力学性质}
+这里给出的大多热力学性质的数值(一般仅给到三位有效数字)仅供草算和初始设计使用。
+对氢($\mathrm{H_2}$)，给出的是``常规''氢($\mathrm{n-H_2}$)的数据。
+对焓，仅对在温度差或相变点有意义；例如，0 K时的焓并不总定为0。。。。。。。。。。
+\begin{table}[htbp]\small
+\centering
+\caption{部分制冷工质在1 atm时的性质}%表A2.1
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+性质 & He & $\mathrm{n-H_2}$ & Ne & $\mathrm{N_2}$ & Ar & $\mathrm{O_2}$ \\ \hline
+沸点,$T_b \ \ \ \ \ \ \ \ \ [\mathrm{K}]$ & 4.22 & 20.39 & 27.10 & 77.36 & 87.28 & 90.18 \\ \hline
+\begin{tabular}[c]{@{}l@{}}汽化热,$h_L\ \ [\mathrm{kJ/kg}]$\\ $\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ h_\ell\ \ [\mathrm{J/cm^3}]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}20.7\\ 2.6\end{tabular} & \begin{tabular}[c]{@{}c@{}}443\\ 31.3\end{tabular} & \begin{tabular}[c]{@{}c@{}}85.9\\ 104\end{tabular} & \begin{tabular}[c]{@{}c@{}}199\\ 161\end{tabular} & \begin{tabular}[c]{@{}c@{}}162\\ 226\end{tabular} & \begin{tabular}[c]{@{}c@{}}213\\ 243\end{tabular} \\ \hline
+密度($T_b$,liquid)\ \ \ \ \ \ \ \ \ $[\mathrm{kg/m^3}]$ & 125 & 70.8 & 1206 & 807 & 1394 & 1141 \\ \hline
+密度($T_b$,vapor)\ \ \ \ \ \ \ \ \ $[\mathrm{kg/m^3}]$ & 16.9 & 1.33 & 9.37 & 4.60 & 5.77 & 4.47 \\ \hline
+\begin{tabular}[c]{@{}l@{}}密度@273K($0^\mathrm{o}\mathrm{C})^*$ \ \ \ \ $[\mathrm{kg/m^3}]$\\ \ \ \ \ \ \ \ \ \ \ @293K($20^\mathrm{o}\mathrm{C}$)\ \ \ \ \ $[\mathrm{kg/m^3}]$ \end{tabular} & \begin{tabular}[c]{@{}l@{}}0.179\\ 0.166\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.090\\ 0.083\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.900\\ 0.834\end{tabular} & \begin{tabular}[c]{@{}l@{}}1.251\\ 1.158\end{tabular} & \begin{tabular}[c]{@{}l@{}}1.784\\ 1.652\end{tabular} & \begin{tabular}[c]{@{}l@{}}1.429\\ 1.324\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}密度($T_b$,liquid)/密度(273K)\\ 密度($T_b$,liquid)/密度(293K)\end{tabular} & \begin{tabular}[c]{@{}l@{}}900\\ 753\end{tabular} & \begin{tabular}[c]{@{}l@{}}787\\ 853\end{tabular} & \begin{tabular}[c]{@{}l@{}}1340\\ 1446\end{tabular} & \begin{tabular}[c]{@{}l@{}}645\\ 697\end{tabular} & \begin{tabular}[c]{@{}l@{}}781\\ 844\end{tabular} & \begin{tabular}[c]{@{}l@{}}798\\ 862\end{tabular} \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[htbp]\small
+\centering
+\caption{部分固态制冷工质在1 bar/1 atm下的密度和焓数据}%表A2.2
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+& \multicolumn{2}{c|}{Neon(1 ber)} & \multicolumn{2}{c|}{Nitrogen(1 atm)} & \multicolumn{2}{c|}{Argon(1 bar)} \\ \hline
+$T[\mathrm{K}]$ & $\varrho[\mathrm{kg/m^3}]$ & $h[\mathrm{kJ/kg}]$ & $\varrho[\mathrm{kg/m^3}]$ & $h[\mathrm{kJ/kg}]$ & $\varrho[\mathrm{kg/m^3}]$ & $h[\mathrm{kJ/kg}]$ \\ \hline
+4 & 1507 & 0.02 & 1032 & 0.008 & 1771 & 0.01 \\ \hline
+5 & 1507 & 0.09 & 1032 & 0.021 & 1771 & 0.015 \\ \hline
+6 & 1506 & 0.10 & 1032 & 0.044 & 1771 & 0.024 \\ \hline
+8 & 1505 & 0.31 & 1032 & 0.15 & 1771 & 0.08 \\ \hline
+10 & 1503 & 0.75 & 1031 & 0.38 & 1771 & 0.20 \\ \hline
+12 & 1499 & 1.43 & 1031 & 0.880 & 1771 & 0.42 \\ \hline
+15 & 1490 & 2.76 & 1029 & 1.85 & 1769 & 0.96 \\ \hline
+20 & 1466 & 6.78 & 1027 & 4.74 & 1765 & 2.20 \\ \hline
+22 & 1452 & 8.84 & 1025 & 6.29 & 1763 & 2.80 \\ \hline
+24.56 & \begin{tabular}[c]{@{}c@{}}1429\\ $1240\dagger$\end{tabular} & \begin{tabular}[c]{@{}c@{}}12.0\\ $24.2\dagger$\end{tabular} & 1022 & 8.51 & 1760 & 3.90 \\ \hline
+30 & - & - & 1016 & 14.5 & 1752 & 6.12 \\ \hline
+$35.61\ddagger$ & - & - & \begin{tabular}[c]{@{}c@{}}1002\\ 994\end{tabular} & \begin{tabular}[c]{@{}c@{}}22.7\\ 30.8\end{tabular} & 1742 & 8.90 \\ \hline
+40 & - & - & 989 & 37.1 & 1731 & 11.3 \\ \hline
+45 & - & - & 981 & 44.3 & 1725 & 14.2 \\ \hline
+50 & - & - & 970 & 52.1 & 1715 & 17.3 \\ \hline
+60 & - & - & 949 & 68.9 & 1691 & 23.9 \\ \hline
+63.16 & - & - & \begin{tabular}[c]{@{}c@{}}946\\ $877\dagger$\end{tabular} & \begin{tabular}[c]{@{}c@{}}74.3\\ $100.0\dagger$\end{tabular} & 1683 & 25.5 \\ \hline
+70 & - & - & - & - & 1664 & 31.1 \\ \hline
+80 & - & - & - & - & 1633 & 39.1 \\ \hline
+83.81 & - & - & - & - & 1619 & \begin{tabular}[c]{@{}c@{}}42.3\\ $71.6\dagger$\end{tabular} \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[htbp]\small
+\centering
+\caption{饱和氦}%表A2.3a
+\begin{tabular}{|c|c|c|c|}
+\hline
+\begin{tabular}[c]{@{}c@{}}T\\ $[K]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}$p^*$\\ $[\mathrm{toor}/atm]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}$\rho\dagger$\\ $[\mathrm{kg/m^3}]$\end{tabular} & \begin{tabular}[c]{@{}c@{}}$h\dagger$\\ $[\mathrm{kJ/kg}]$\end{tabular} \\ \hline
+1.50 & 3.53 & 145 \ \ 0.15 & 0.26 \ \ 22.61 \\ \hline
+1.55 & 4.47 & 145\ \ 0.19 & 0.32 \ \ 22.85 \\ \hline
+1.60 & 5.59 & 145 \ \ 0.23 & 0.39 \ \ 23.09 \\ \hline
+1.65 & 6.90 & 145 \ \ 0.27 & 0.48 \ \ 23.33 \\ \hline
+1.70 & 8.45 & 145\ \ 0.33 & 0.58 \ \ 23.56 \\ \hline
+1.75 & 10.2 & 145\ \ 0.38 & 0.70 \ \ 23.79 \\ \hline
+1.80 & 12.3 & 145 \ \ 0.45 & 0.84 \ \ 24.02 \\ \hline
+1.85 & 14.6 & 145 \ \ 0.52 & 1.00 \ \ 24.25 \\ \hline
+1.90 & 17.2 & 145\ \ 0.60 & 1.18 \ \ 24.47 \\ \hline
+1.95 & 20.2 & 145\ \ 0.69 & 1.38 \ \ 24.69 \\ \hline
+2.00 & 23.4 & 146\ \ 0.8 & 1.63 \ \ 24.91 \\ \hline
+2.05 & 27.0 & 146 \ \ 0.89 & 1.92 \ \ 25.13 \\ \hline
+2.10 & 31.0 & 146\ \ 0.99 & 2.23 \ \ 25.33 \\ \hline
+$T_\lambda:2.18$ & 38.0 & 146\ \ 1.18 & - \ \ 25.41 \\ \hline
+2.20 & 39.9 & 146 \ \ 1.24 & 3.28 \ \ 25.51 \\ \hline
+2.30 & 50.4 & 146 \ \ 1.50 & 3.57 \ \ 25.91 \\ \hline
+2.40 & 62.5 & 145\ \ 1.81 & 3.82 \ \ 26.30 \\ \hline
+2.50 & 76.6 & 145\ \ 2.14 & 4.05 \ \ 26.68 \\ \hline
+2.60 & 92.6 & 144\ \ 2.52 & 4.27 \ \ 27.04 \\ \hline
+2.80 & 133 & 142\ \ 3.40 & 4.73 \ \ 27.71 \\ \hline
+3.00 & 182 & 141 \ \ 4.46 & 5.23 \ \ 28.33 \\ \hline
+3.25 & 257 & 139 \ \ 6.08 & 5.93 \ \ 28.99 \\ \hline
+3.50 & 352 & 136\ \ 8.09 & 6.72 \ \ 29.52 \\ \hline
+3.75 & 470 & 133 \ \ 10.5 & 7.62 \ \ 29.91 \\ \hline
+4.00 & 615 & 129 \ \ 13.6 & 8.65 \ \ 30.12 \\ \hline
+4.22 & 760/1.00 & 125 \ \ 16.9 & 9.71 \ \ 30.13 \\ \hline
+4.30 & $\textbf{1.07}$ & 124 \ 18.2 & 10.1 \ \ 30.1 \\ \hline
+4.40 & \textbf{1.17} & 121 \ \ 20.2 & 10.7 \ \ 30.0 \\ \hline
+4.50 & \textbf{1.28} & 119 \ \ 22.1 & 11.3\ \ 29.8 \\ \hline
+4.75 & \textbf{1.58} & 112 \ \ 28.7 & 13.0 \ \ 29.0 \\ \hline
+5.00 & \textbf{1.93} & 101 \ \ 39.3 & 15.4 \ \ 27.3 \\ \hline
+$T_{ct}:5.20$ & $\textbf{2.24}$ & 69.6 & 21.4 \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[htbp]\small
+\centering
+\caption{氦在1,6,10 atm时的密度和焓数据}%表A2.3b
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+& \multicolumn{2}{c|}{1 atm} & \multicolumn{2}{c|}{6 atm} & \multicolumn{2}{c|}{10 atm} \\ \hline
+$T[\mathrm{K}]$ & $\varrho[\mathrm{kg/m^3}]$ & $h[\mathrm{kJ/kg}]$ & $\varrho[\mathrm{kg/m^3}]$ & $h[\mathrm{kJ/kg}]$ & $\varrho[\mathrm{kg/m^3}]$ & $h[\mathrm{kJ/kg}]$ \\ \hline
+2.5 & 147 & 4.58 & 156 & 7.56 & 161 & 9.93 \\ \hline
+3.0 & 143 & 5.64 & 153 & 8.45 & 159 & 10.7 \\ \hline
+3.5 & 138 & 6.96 & 150 & 9.55 & 157 & 11.7 \\ \hline
+4.0 & 130 & 8.70 & 146 & 10.9 & 153 & 13.0 \\ \hline
+4.224 & \begin{tabular}[c]{@{}c@{}}125\\ 16.9\end{tabular} & \begin{tabular}[c]{@{}c@{}}9.71\\ 30.13\end{tabular} & 145 & 11.6 & 151 & 13.6 \\ \hline
+4.5 & 14.5 & 32.5 & 140 & 12.5 & 148 & 14.4 \\ \hline
+5.0 & 11.9 & 36.2 & 133 & 14.6 & 144 & 16.2 \\ \hline
+5.5 & 10.3 & 39.5 & 124 & 17.2 & 138 & 18.2 \\ \hline
+6 & 9.15 & 42.5 & 112 & 20.3 & 131 & 20.5 \\ \hline
+7 & 7.53 & 48.4 & 78.5 & 30.0 & 115 & 26.0 \\ \hline
+8 & 6.44 & 54.0 & 54.1 & 40.5 & 94.5 & 33.4 \\ \hline
+9 & 5.64 & 59.5 & 42.2 & 48.9 & 75.5 & 42.1 \\ \hline
+10 & 5.02 & 64.9 & 35.1 & 56.1 & 62.4 & 50.3 \\ \hline
+12 & 4.13 & 75.7 & 27.0 & 69.0 & 46.9 & 64.3 \\ \hline
+14 & 3.52 & 86.3 & 22.2 & 81.0 & 37.9 & 77.1 \\ \hline
+16 & 3.07 & 96.9 & 18.9 & 92.6 & 32.0 & 89.4 \\ \hline
+18 & 2.72 & 107 & 16.5 & 104 & 27.8 & 101 \\ \hline
+20 & 2.44 & 118 & 14.7 & 115 & 24.6 & 113 \\ \hline
+25 & 1.95 & 144 & 11.5 & 142 & 19.3 & 141 \\ \hline
+30 & 1.62 & 170 & 9.65 & 169 & 16.0 & 168 \\ \hline
+35 & 1.39 & 196 & 8.26 & 196 & 13.6 & 195 \\ \hline
+40 & 1.22 & 222 & 7.22 & 222 & 11.9 & 222 \\ \hline
+45 & 1.08 & 248 & 6.42 & 249 & 10.6 & 249 \\ \hline
+50 & 0.973 & 274 & 5.78 & 275 & 9.54 & 275 \\ \hline
+55 & 0.885 & 300 & 5.25 & 301 & 8.68 & 301 \\ \hline
+60 & 0.811 & 326 & 4.82 & 327 & 7.96 & 328 \\ \hline
+65 & 0.749 & 352 & 4.45 & 353 & 7.36 & 354 \\ \hline
+70 & 0.696 & 378 & 4.13 & 379 & 6.84 & 380 \\ \hline
+75 & 0.649 & 404 & 3.86 & 405 & 6.39 & 406 \\ \hline
+80 & 0.609 & 430 & 3.62 & 431 & 5.99 & 432 \\ \hline
+90 & 0.541 & 482 & 3.22 & 484 & 5.34 & 484 \\ \hline
+100 & 0.487 & 534 & 2.90 & 536 & 4.81 & 537 \\ \hline
+125 & 0.390 & 664 & 2.33 & 666 & 3.86 & 667 \\ \hline
+150 & 0.325 & 794 & 1.94 & 796 & 3.22 & 797 \\ \hline
+175 & 0.279 & 924 & 1.66 & 925 & 2.76 & 927 \\ \hline
+200 & 0.244 & 1054 & 1.46 & 1055 & 2.42 & 1057 \\ \hline
+225 & 0.217 & 1183 & 1.30 & 1185 & 2.15 & 1186 \\ \hline
+250 & 0.195 & 1313 & 1.17 & 1315 & 1.94 & 1316 \\ \hline
+275 & 0.177 & 1443 & 1.06 & 1445 & 1.76 & 1446 \\ \hline
+300 & 0.163 & 1573 & 0.973 & 1575 & 1.62 & 1576 \\ \hline
+\end{tabular}
+\end{table}
+
