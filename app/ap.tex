@@ -26,37 +26,36 @@ Wiedemann-Franz数& $\wedge$ & $2.45\times10^{-8}\ \mathrm{W\Omega/K^2}$ \\ \hli
 \begin{table}[htbp]\small
 \centering
 \caption{部分转换因子}%表A1.2 问号处不会打
-\begin{tabular}{|l|l|}
+\begin{tabular}{ll}
 \hline
-``常用''非SI单位 & SI单位 \\ \hline
-电磁 & \\ \hline
-1 gauss & $10^{-4}\ \mathrm{T}$ \\ \hline
-1 oersted & $250/\ \mathrm{\pi A/m}$ \\ \hline
-1 emu/$\mathrm{cm^3}$ & $1000\ \mathrm{A/m}$ \\ \hline
-压力& \\ \hline
-1 mmHg(1 torr) & 133Pa \\ \hline
-1 atm(760 torr) & 101kPa \\ \hline
-1 bar(750 torr) & 0.1MPa \\ \hline
-1 psi(52 torr) & 6.9kPa \\ \hline
-粘度& \\ \hline
-1 poise & 0.1 Pa s(0.1kg/ms) \\ \hline
-能量和功率 & \\ \hline
-1 eV & $1.6\times10^{-19}\ \mathrm{J}$ \\ \hline
-1 cal & 4.18J \\ \hline
-1 BTU & 1055J \\ \hline
-1hp(horsepower) & 746W \\ \hline
-温度 & \\ \hline
-$0^\mathrm{o}\mathrm{C}$ & 273K \\ \hline
-1 eV & 11600K \\ \hline
-质量 & \\ \hline
-1 lb & 0.45kg \\ \hline
-1 metric ton & 1000kg \\ \hline
-尺度 & \\ \hline
-1 in & 25.4mm \\ \hline
-1 French league & 4km \\ \hline
-1 liter(1000$\ \mathrm{cm^3}$) & $0.001\ \mathrm{m^3}$ \\ \hline
-1$ft^3$(28.3liter) & $0.0283\ \mathrm{m^3}$ \\ \hline
-\multicolumn{2}{|l|}{$ ^*Values in italics are approximate.$} \\ \hline
+``常用''非SI单位 & SI单位 \\ 
+电磁 & \\ 
+1 gauss & $10^{-4}\ \mathrm{T}$ \\ 
+1 oersted & $250/\ \mathrm{\pi A/m}$ \\ 
+1 emu/$\mathrm{cm^3}$ & $1000\ \mathrm{A/m}$ \\ 
+压力& \\ 
+1 mmHg(1 torr) & 133 Pa \\ 
+1 atm(760 torr) & 101 kPa \\
+1 bar(750 torr) & 0.1 MPa \\ 
+1 psi(52 torr) & 6.9 kPa \\ 
+粘度& \\ 
+1 poise & 0.1 Pas(0.1 kg/ms) \\ 
+能量和功率 & \\
+1 eV & $1.6\times10^{-19}\ \mathrm{J}$ \\ 
+1 cal & 4.18 J \\ 
+1 BTU & 1055 J \\ 
+1 hp(马力) & 746 W \\ 
+温度 & \\ 
+$0^\mathrm{o}\mathrm{C}$ & 273 K \\ 
+1 eV & 11600 K \\ 
+质量 & \\ 
+1 lb & 0.45 kg \\ 
+1 metric ton & 1000 kg \\ 
+尺度 & \\ 
+1 in & 25.4 mm \\ 
+1 French league & 4 km \\ 
+1 liter(1000$\ \mathrm{cm^3}$) & $0.001\ \mathrm{m^3}$ \\ 
+1$ft^3$(28.3 L) & $0.0283\ \mathrm{m^3}$ \\ 
 \end{tabular}
 \end{table}
 \newpage
@@ -69,7 +68,7 @@ F(\alpha,\beta) E_{n}(\alpha,\beta)=\frac{1}{M_n \beta^{n-1}}\left[\frac{f_n(\al
 
 $f_{n+1}(\alpha,\beta)$可以由下面的递归公式给出：
 \begin{align*}
-f_{n+1}(\alpha,\beta)=\frac{1}{(n+1)M_n }\frac{1\partial}{\partial\beta}\left[\frac{f_n(\alpha,\beta)}{(\alpha^2+\beta^2)^{n-0.5}}\right] 
+f_{n+1}(\alpha,\beta)=\frac{1}{(n+1)M_n }\frac{\partial}{\partial\beta}\left[\frac{f_n(\alpha,\beta)}{(\alpha^2+\beta^2)^{n-0.5}}\right] 
 \end{align*}
 
 下面给出了$M_n$的值和$f_{n}(\alpha,\beta)$在$n$从2至20的表达式：
@@ -92,16 +91,16 @@ n=13:&M_{13}=39936；f_{13}(\alpha,\beta)=256\alpha^{22}+3200\alpha^{20}\beta^2+
 &+152950\alpha^{14}\beta^{8}+260015\alpha^{12}\beta^{10}+324268\alpha^{10}\beta^{12}+355160\alpha^8\beta^{14}-228800\alpha^6\beta^{16}\\ &+1006720\alpha^4\beta^{18}-512512\alpha^2\beta^{20}+93184\beta^{22} \\
 n=14:&M_{14}=186368；f_{14}(\alpha,\beta)=1024\alpha^{24}+13824\alpha^{22}\beta^2+86400\alpha^{20}\beta^4+331200\alpha^{18}\beta^6\\ 
 &+869400\alpha^{16}\beta^{8}+1651860\alpha^{14}\beta^{10}+2340135\alpha^{12}\beta^{12}+2465460\alpha^{10}\beta^{14}\\ &+3027960\alpha^8\beta^{16}-3615040\alpha^6\beta^{18}+7742592\alpha^4\beta^{20}-3214848\alpha^2\beta^{22}+465920\beta^{24}\\
+n=15:&M_{15}=215040；f_{15}(\alpha,\beta)=1024\alpha^{26}+14848\alpha^{24}\beta^2+100224\alpha^{22}\beta^4+417600\alpha^{20}\beta^6\\ 
+&+1200600\alpha^{18}\beta^{8}+2521260\alpha^{16}\beta^{10}+3991995\alpha^{14}\beta^{12}+4850640\alpha^{12}\beta^{14}\\ 
+&+4232160\alpha^{10}\beta^{16}+6980480\alpha^8\beta^{18}-10286848\alpha^6\beta^{20}+14137344\alpha^4\beta^{22}\\ 
+&-4845568\alpha^2\beta^{24}+573440\beta^{26} \\
 \end{align*}
 \end{flushleft}
 \newpage
 
 \begin{flushleft}
 \begin{align*}
-n=15:&M_{15}=215040；f_{15}(\alpha,\beta)=1024\alpha^{26}+14848\alpha^{24}\beta^2+100224\alpha^{22}\beta^4+417600\alpha^{20}\beta^6\\ 
-&+1200600\alpha^{18}\beta^{8}+2521260\alpha^{16}\beta^{10}+3991995\alpha^{14}\beta^{12}+4850640\alpha^{12}\beta^{14}\\ 
-&+4232160\alpha^{10}\beta^{16}+6980480\alpha^8\beta^{18}-10286848\alpha^6\beta^{20}+14137344\alpha^4\beta^{22}\\ 
-&-4845568\alpha^2\beta^{24}+573440\beta^{26} \\
 n=16:&M_{16}=491520；f_{16}(\alpha,\beta)=2048\alpha^{28}+31744\alpha^{26}\beta^2+230144\alpha^{24}\beta^4+1035648\alpha^{22}\beta^6\\ 
 &+3236400\alpha^{20}\beta^{8}+7443720\alpha^{18}\beta^{10}+13026510\alpha^{16}\beta^{12}+17678835\alpha^{14}\beta^{14}\\ 
 &+18886320\alpha^{12}\beta^{16}+12335200\alpha^{10}\beta^{18}+33747584\alpha^8\beta^{20}-49956608\alpha^6\beta^{22}\\ &+49334272\alpha^4\beta^{24}-14135296\alpha^2\beta^{26}+1392640\beta^{28}\\
