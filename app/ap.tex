@@ -1,24 +1,28 @@
-\chapter*{附录}
+\appendix      
+\renewcommand{\appendixname}{Appendix~\Alph{section}}
+\setcounter{table}{0}   %从零开始编号%定义编号格式，在数字序号前加字符“A"
+\renewcommand{\thetable}{A\arabic{table}}
+
 \section{物理常数和转换因子}
 \begin{table}[htbp]\small
 \centering
 \caption{部分物理常数}%表A1.1
-\begin{tabular}{|l|l|l|}
-\hline
-光速 & c & $3.00\times10^8\ \mathrm{m/s}$ \\ \hline
-自由空间磁导率 & $\mu_o$ & $4\pi\times10^{-7}\ \mathrm{H/m}$ \\ \hline
-自由空间电导率 & $\epsilon_o$ & $8.85\times10^{-12}\ \mathrm{F/m}$ \\ \hline
-阿伏伽德罗常数 & $N_A $& $6.023\times10^{23}\ \mathrm{particle/mole}$ \\ \hline
-电荷 & e & $1.60\times10^{-19}\ \mathrm{C}$ \\ \hline
-电子静止质量 & $m_o$ & $9.11\times10^{-31}\ \mathrm{kg}$ \\ \hline
-质子静止质量 & $M_{p_o}$ & $1.67\times10^{-27}\ \mathrm{kg}$ \\ \hline
-普朗克常数& h & $6.63\times10^{-34}\ \mathrm{Js}$ \\ \hline
-玻尔兹曼常数& $k_B$ & $1.38\times10^{-23}\ \mathrm{J/K}$ \\ \hline
-气体常数 & R & $8.32\times10^3\ \mathrm{J/kg-mole K}$ \\ \hline
-摩尔气体体积 & $V_R$ & $22.4\ \mathrm{m^3/kg-mole}$ \\ \hline
-Stefan-Boltzmann常数& $\sigma_{SB}$ & $5.67\times10^{-8}\ \mathrm{W/m^2K^4}$ \\ \hline
-重力加速度& g & $9.81\ \mathrm{m/s^2}$ \\ \hline
-Wiedemann-Franz数& $\wedge$ & $2.45\times10^{-8}\ \mathrm{W\Omega/K^2}$ \\ \hline
+\begin{tabular}{lll}
+
+光速 & $c$ & $3.00\times10^8\ \mathrm{m/s}$ \\ 
+自由空间磁导率 & $\mu_o$ & $4\pi\times10^{-7}\ \mathrm{H/m}$ \\ 
+自由空间电导率 & $\epsilon_o$ & $8.85\times10^{-12}\ \mathrm{F/m}$ \\ 
+阿伏伽德罗常数 & $N_A $& $6.023\times10^{23}\ \mathrm{particle/mole}$ \\ 
+电荷 & $e$ & $1.60\times10^{-19}\ \mathrm{C}$ \\
+电子静止质量 & $m_o$ & $9.11\times10^{-31}\ \mathrm{kg}$ \\ 
+质子静止质量 & $M_{p_o}$ & $1.67\times10^{-27}\ \mathrm{kg}$ \\ 
+普朗克常数& $h$ & $6.63\times10^{-34}\ \mathrm{Js}$ \\
+玻尔兹曼常数& $k_B$ & $1.38\times10^{-23}\ \mathrm{J/K}$ \\
+气体常数 & $R$ & $8.32\times10^3\ \mathrm{J/kg-mole K}$ \\ 
+摩尔气体体积 & $V_R$ & $22.4\ \mathrm{m^3/kg-mole}$ \\ 
+Stefan-Boltzmann常数& $\sigma_{SB}$ & $5.67\times10^{-8}\ \mathrm{W/m^2K^4}$ \\ 
+重力加速度& $g$ & $9.81\ \mathrm{m/s^2}$ \\ 
+Wiedemann-Franz数& $\Lambda$ & $2.45\times10^{-8}\ \mathrm{W\Omega/K^2}$ \\ 
 \end{tabular}
 \end{table}
 \newpage
@@ -27,35 +31,34 @@ Wiedemann-Franz数& $\wedge$ & $2.45\times10^{-8}\ \mathrm{W\Omega/K^2}$ \\ \hli
 \centering
 \caption{部分转换因子}%表A1.2 问号处不会打
 \begin{tabular}{ll}
-\hline
 ``常用''非SI单位 & SI单位 \\ 
-电磁 & \\ 
+\textit{电磁} & \\ 
 1 gauss & $10^{-4}\ \mathrm{T}$ \\ 
 1 oersted & $250/\ \mathrm{\pi A/m}$ \\ 
 1 emu/$\mathrm{cm^3}$ & $1000\ \mathrm{A/m}$ \\ 
-压力& \\ 
+\textit{压力}& \\ 
 1 mmHg(1 torr) & 133 Pa \\ 
 1 atm(760 torr) & 101 kPa \\
 1 bar(750 torr) & 0.1 MPa \\ 
 1 psi(52 torr) & 6.9 kPa \\ 
-粘度& \\ 
+\textit{粘度}& \\ 
 1 poise & 0.1 Pas(0.1 kg/ms) \\ 
-能量和功率 & \\
+\textit{能量和功率} & \\
 1 eV & $1.6\times10^{-19}\ \mathrm{J}$ \\ 
 1 cal & 4.18 J \\ 
 1 BTU & 1055 J \\ 
 1 hp(马力) & 746 W \\ 
-温度 & \\ 
+\textit{温度} & \\ 
 $0^\mathrm{o}\mathrm{C}$ & 273 K \\ 
 1 eV & 11600 K \\ 
-质量 & \\ 
+\textit{质量} & \\ 
 1 lb & 0.45 kg \\ 
 1 metric ton & 1000 kg \\ 
-尺度 & \\ 
+\textit{尺度} & \\ 
 1 in & 25.4 mm \\ 
 1 French league & 4 km \\ 
 1 liter(1000$\ \mathrm{cm^3}$) & $0.001\ \mathrm{m^3}$ \\ 
-1$ft^3$(28.3 L) & $0.0283\ \mathrm{m^3}$ \\ 
+1 $\mathrm{ft^3}$(28.3 L) & $0.0283\ \mathrm{m^3}$ \\ 
 \end{tabular}
 \end{table}
 \newpage
