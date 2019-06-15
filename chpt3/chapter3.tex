@@ -268,7 +268,7 @@ $f_4(\alpha,\beta)=2\alpha^4+7\alpha^2\beta^2+20\beta^4,M_4=24$。
 
 式3.12a于是成为：
 \begin{align}
-  h_z(\zeta)=1&-\frac{3(\alpha^2-1)}{4\alpha^2 \ln \alpha}\zeta^2+\frac{15(\alpha^4-1)}{32\alpha^4 \ln \alpha}\zeta^4 -\frac{35(\alpha^6-1)}{96\alpha^6\ln \alpha}\zeta^6\\
+  h_z(\zeta)=1&-\frac{3(\alpha^2-1)}{4\alpha^2 \ln \alpha}\zeta^2+\frac{15(\alpha^4-1)}{32\alpha^4 \ln \alpha}\zeta^4 -\frac{35(\alpha^6-1)}{96\alpha^6\ln \alpha}\zeta^6\\\notag
   &+\frac{315(\alpha^8-1)}{1024\alpha^8\ln \alpha}\zeta^8-\frac{693(\alpha^{10}-1)}{2350\alpha^{10}\ln \alpha}\zeta^{10}+\cdots
 \end{align}
 
@@ -330,15 +330,15 @@ E_{10}(1,0) =-&\frac{3\cdot 5 \cdot 7\cdot 9\cdot 11}{2\cdot 4\cdot 6\cdot 8\cdo
 
 问题3.4中，将通过式3.124诸式给出$E_{12}(1,0),E_{14}(1,0),E_{16}(1,0),E_{18}(1,0),E_{20}(1,0)$的值。
 
-\subsection{失配误差—嵌套双线圈磁体}
+\subsection{谐波误差—嵌套双线圈磁体}
 式3.12a和3.12b表明，$h_z(\zeta)$和$h_z(\xi)$(其中，$h_z(\zeta)\equiv H_z/H_0,\zeta\equiv z/a_1,\xi\equiv x/a_1$)都仅与$\zeta$或$\xi$的偶次幂有关。
 也即，两式都表出了``理想"螺管或者此种螺管的``理想"嵌套组合的轴向场的空间变化。
 在这里，``理想"一词指的是空间对称性、均匀性以及电流密度的不变性。
 
 哪怕对单螺管，在现实中也是很不同的，例如线圈形状的不完美；导体的尺度和形状不一致；导体的移位。
 这会引起磁场中不只存在偶次幂。
-如果一个磁体是由嵌套线圈组成的，可能的不完美就更多了，会出现很多``不希望"的项。
-下面，我们将展给出嵌套双线圈磁体失配误差的起源。
+如果一个磁体是由嵌套线圈组成的，可能的不完美就更多了，会出现很多``不希望"的谐波项。
+下面，我们将展给出嵌套双线圈磁体谐波误差的起源。
 
 考虑一个双螺管线圈嵌套磁体：参数为$[2a_1]_1,\alpha_1,\beta_1,[\lambda J]_1$的螺管线圈1嵌入参数为$[2a_1]_2,\alpha_2,\beta_2,[\lambda J]_2$的螺管线圈2的室温孔内。
 如果两个线圈在轴向和径向都对齐的话，有：
@@ -357,12 +357,11 @@ H_z(z)=[H_z(z)]_1+[H_z(z)]_2
 
 \subsubsection{线圈轴向失配}
 如果线圈1和线圈2在径向是对齐的(即同轴)，但其中平面未对齐，分别在$z=0$和$z=\delta_z$位置。
-这样，式3.31中的$H_z(z)$成为：
+这样，式3.31中的$H_z(z)$成为3.32a。若将3.32a按$z$合并同类项，有3.32b。
 \begin{subequations}
 	\begin{align}
   H_z(z)=&H_0+3\{ [A_2^0]_1 z^2+[A_2^0]_2(z-\delta_z)^2\}\nonumber\\
   &+5\{[A_4^0]_1 z^4+[A_4^0]_2(z-\delta)^4\}+\cdots\\
- % \mbox{将式3.32a按相同幂次项展开，有：}\\\notag
 H_z(z)=&\{H_0+3[A_2^0]_2 \delta_z^2+5[A_4^0]_2\delta_z^4+\cdots\}\nonumber\\
 &-\{6[A_2^0]_2\delta_z+20[A_4^0]_2\delta_z^3+\cdots\}z\nonumber\\
 &+{3[A_2^0]_1+3[A_2^0]_2+30[A_4^0]_2\delta_z^2+\cdots}z^2+\cdots
@@ -377,7 +376,7 @@ H_z(z)=&\{H_0+3[A_2^0]_2 \delta_z^2+5[A_4^0]_2\delta_z^4+\cdots\}\nonumber\\
 $z^3$项同样扩大了谱线，主要是在偏离中心频率之处。
 
 \subsubsection{轴向补偿线圈}
-那些``不希望"的项可以通过在超导磁体的校正线圈外再增加补偿线圈来消减；
+那些``不希望"的谐波项可以通过在超导磁体的校正线圈外再增加补偿线圈来消减；
 甚至，补偿线圈还可以布置在探测器和低温容器室温孔之间的径向间隙中。
 
 最小化$z$偶次幂项的补偿线圈主要是``Helmholtz"线圈，其基本特性我们将在问题3.3中研究；
@@ -385,11 +384,10 @@ $z^3$项同样扩大了谱线，主要是在偏离中心频率之处。
 
 \subsubsection{线圈径向失配}
 为了研究径向失配的嵌套双线圈磁体的磁场的空间变化，我们首先在笛卡尔坐标系中写出单螺管的$H_z(x,y,z)$。
-根据式3.11和表2.4中$n=0,n=2,n=4$的Legendre函数，我们有：
+根据式3.11和表2.4中$n=0,n=2,n=4$的Legendre函数，可得3.33a式。当线圈2与线圈1在径向失配，具体为在$x$方向失配$\delta_x$，在$y$方向失配$\delta_y$。我们将式3.33a中的$x$和$y$分别用$x-\delta_x$和$y-\delta_y$替换，有3.33b式。
 \begin{subequations}
 	\begin{align}
   H_z(x,y,z)=&A_0^0+3A_2^0[z^2-\frac{1}{2}(x^2+y^2)]+5A_4^0\left\{z^4-3(x^2+y^2)\left[z^2-\frac{1}{8}(x^2+y^2)\right]\right\}\\
-%\mbox{当线圈2与线圈1在径向失配，具体为在$x$方向失配$\delta_x$，在$y$方向失配$\delta_y$。我们将式3.33a中的$x$和$y$分别用$x-\delta_x$和$y-\delta_y$替换，有：}\\\notag
 H_z(x,y,z)=&H_0+3\left([A_2^0]_1[z^2-\frac{1}{2}(x^2+y^2)]+[A_2^0]_2\left\{ z^2-\frac{1}{2}[(x-\delta_x)^2+(y-\delta_y)^2]\right\}\right)\\\notag
 &+5[A_4^0]_1\left(z^4-3(x^2+y^2)[z^2-\frac{1}{8}(x^2+y^2)]\right)\\\notag
 &+[A_4^0]_2\left(z^4-3[(x-\delta)^2+(y-\delta_y)^2]\left\{ z^2-\frac{1}{8}[(x-\delta_x)^2+(y-\delta_y)^2]\right\}\right) 
@@ -404,45 +402,50 @@ H_z(x,y,z)=&H_0+3\left([A_2^0]_1[z^2-\frac{1}{2}(x^2+y^2)]+[A_2^0]_2\left\{ z^2-
 每个线圈产生一个$z$向、随远离$z$轴而增大的磁场。
 
 \subsubsection{线圈轴向和径向均失配}
-当嵌套线圈在轴向和径向均失配的时候---实际NMR中不可避免---将产生$xz,yz,xyz$及其他更多的失配误差。
+当嵌套线圈在轴向和径向均失配的时候---实际NMR中不可避免---将产生$xz,yz,xyz$及其他更多的谐波误差。
 
 \section{轴向力}
-本节给出轴向对齐环形线圈、薄壁螺管线圈等的轴向力$F_z$的解析表达式。这些表达式都是从Garrett [3.5]给出的公式推导出来的。极限情况下(比如相距很远的线圈)的近似表达式有助于快速的数值检查；另一些公式或许可以用于为写自己的计算代码做基础。所有的案例中，电流都是同向流动的，任一个电流的反向都将导致力的反向。
+本节给出轴向对齐``环"线圈、``薄壁''螺管线圈等的轴向力$F_z$的解析表达式，
+这些表达式都是从Garrett [3.5]最早给出的原始表达式推导得到的。
+极限情况下(比如相距很远的线圈)的近似表达式可用于快速的数值检查；
+另一些公式可作为写自编计算程序的基准。
+所有案例均假定电流同向流动；任一电流反向，将导致力的反向。
 
 \subsection{两个``环"线圈间的轴向力}
-图3.5给出了距离为$\rho$、轴向分立的两个``环"线圈($\alpha=1,\beta=0$)。线圈A和线圈B的直径分别为$2a_A$和$2a_B$，总的安匝数分别为$N_A I_A$和$N_B I_B$。每个线圈产生的轴向场都指向同一方向。线圈B施于线圈A的轴向力$F_{zA}(\rho)$为：
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=1]{chpt3/figs/fig3.5.eps}
 	\caption{``环"线圈A和B同轴对齐，距离上相距$\rho$}
 \end{figure}
-
+图3.5给出了沿轴向($\vec{i}_z$)放置的两个距离为$\rho$的``环"线圈($\alpha=1,\beta=0$)。
+线圈A和B的直径分别为$2a_A$和$2a_B$，总安匝数分别为$N_A I_A$和$N_B I_B$。
+两线圈产生的轴向($\vec{i}_z$)场指向同一方向。
+线圈B施加给线圈A的轴向力$F_{zA}(\rho)$为：
 \begin{equation}
 \begin{split}
   F_{zA}(\rho)=&\frac{\mu_0}{2}(N_A I_A)(N_B I_B)\frac{\rho\sqrt{(a_A+a_B)^2+\rho^2}}{(a_A-a_B)^2+\rho^2}\\
-  &\times\{k^2 K(k)+(k^2-2)[K(k)-E(k)]\}
+  &\times\left\{k^2 K(k)+(k^2-2)[K(k)-E(k)]\right\}
 \end{split}
 \end{equation}
 
-$F_{zA}(\rho)$是$+z$向或者说是指向线圈B的；也即，$F_{zA}(\rho)$是吸引力。如果两个电流的方向相反，符号变为-，力变成斥力。上式中，$K(k)$和$E(k)$分别是第一类和第二类完全椭圆积分，定义为：
+$F_{zA}(\rho)$的方向为$+z$，或指向线圈B的；也即，$F_{zA}(\rho)$是引力。
+若两个电流的方向相反，则符号变为$-$，$F_{zA}(\rho)$成为斥力。
+式3.34中，$K(k)$和$E(k)$分别是第一类和第二类完全椭圆积分，定义为：
 \begin{subequations}
 	\begin{align}
   K(k) &= \int_{0}^{\pi/2} \frac{d\theta}{\sqrt{1-k^2\sin^2\theta}} \\
   E(k)&= \int_{0}^{\pi/2}\sqrt{1-k^2 \sin^2\theta}d\theta
   \end{align}
 \end{subequations}
-
-本系统椭圆积分的模量$k$由下式决定：
+本系统中椭圆积分的模量$k$由下式决定：
 \begin{equation}
   k^2=\frac{4a_A a_B}{(a_A+a_B)^2+\rho^2}
 \end{equation}
 
-
-
 %%%%%%%%表格3.1
 \begin{table}[htbp]\small
 \centering
-\caption{第一类和第二类完全椭圆积分参数：给定$k^2$和$k$下的$K(k)$和$E(k)$值}
+\caption{第一类和第二类完全椭圆积分参数：部分$k^2$和$k$下的$K(k)$和$E(k)$值}
 \label{my-label}
 \begin{tabular}{|c|c||c|c||c|c||c|c|}
 \hline
@@ -457,21 +460,23 @@ $k^2$    & $k$  & $K(k)$ &$E(k)$  &$k^2$  & $k$ &$K(k)$  &$E(k)$  \\ \hline\hlin
 \end{tabular}
 \end{table}
 
-表3.1给出了部分$k$和$k^2$值下的$K(k)$和$E(k)$。注意到，$K(0)=E(0)=\pi/2$；还注意到，$K(1)=\infty$以及$E(1)=1$，也即$K(k)$是随k增加而增加的，$E(k)$随k增加而减小。
-$K(k)$和$E(k)$可以展开为$k^2$的级数：
+表3.1给出了部分$k$和$k^2$值下的$K(k)$和$E(k)$。我们发现，$K(0)=E(0)=\pi/2$；以及$K(1)=\infty$以及$E(1)=1$，也即$K(k)$随$k$增加而增加，$E(k)$随k增加而减小。
+例如，如果$k^2=0.5$，$K(k=0.7071)=1.8541$。
+
+$K(k)$和$E(k)$可展开为$k^2$的幂级数：
 \begin{subequations}
 	\begin{align}
-  K(k) =& \frac{\pi}{2}[1+(\frac{1}{2})^2 k^2+(\frac{1\cdot 3}{2\cdot 4})^2 k^4+(\frac{1\cdot 3\cdot 5}{2\cdot 4\cdot 6})^2 k^6+\cdots] \\
-  E(k) =& \frac{\pi}{2}[1-(\frac{1}{2})^2 k^2-(\frac{1\cdot 3}{2\cdot 4})^2 \frac{k^4}{3}-(\frac{1\cdot 3\cdot 5}{2\cdot 4\cdot 6})^2 \frac{k^6}{5}-\cdots]
+  K(k) =& \frac{\pi}{2}\left[1+\left(\frac{1}{2}\right)^2 k^2+\left(\frac{1\cdot 3}{2\cdot 4}\right)^2 k^4+\left(\frac{1\cdot 3\cdot 5}{2\cdot 4\cdot 6}\right)^2 k^6+\cdots\right] \\
+  E(k) =& \frac{\pi}{2}\left[1-\left(\frac{1}{2}\right)^2 k^2-\left(\frac{1\cdot 3}{2\cdot 4}\right)^2 \frac{k^4}{3}-\left(\frac{1\cdot 3\cdot 5}{2\cdot 4\cdot 6}\right)^2 \frac{k^6}{5}-\cdots\right]
  	\end{align}
   \end{subequations}
 
-在$k^2\ll 1$时，两个积分和他们的差可以近似为
+在$k^2\ll 1$时，两个积分及其差值可近似为：
 \begin{subequations}
 	\begin{align}
-  K(k) \simeq&  \frac{\pi}{2}(1+\frac{1}{4}k^2+\frac{9}{64}k^4+\frac{25}{256}k^6+\frac{1225}{16384}k^8)\\
-  E(k) \simeq&  \frac{\pi}{2}(1-\frac{1}{4}k^2-\frac{3}{64}k^4-\frac{5}{256}k^6-\frac{175}{16384}k^8)\\ 
-  K(k)-E(k) \simeq& \frac{\pi}{4}(k^2+\frac{3}{8}k^4+\frac{15}{64}k^6+\frac{175}{1024}k^8) 
+  K(k) \simeq&  \frac{\pi}{2}\left(1+\frac{1}{4}k^2+\frac{9}{64}k^4+\frac{25}{256}k^6+\frac{1225}{16384}k^8\right)\\
+  E(k) \simeq&  \frac{\pi}{2}\left(1-\frac{1}{4}k^2-\frac{3}{64}k^4-\frac{5}{256}k^6-\frac{175}{16384}k^8\right)\\ 
+  K(k)-E(k) \simeq& \frac{\pi}{4}\left(k^2+\frac{3}{8}k^4+\frac{15}{64}k^6+\frac{175}{1024}k^8\right) 
   	\end{align}
 \end{subequations}
 
