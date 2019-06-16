@@ -480,79 +480,84 @@ $K(k)$和$E(k)$可展开为$k^2$的幂级数：
   	\end{align}
 \end{subequations}
 
-\subsubsection{特例1：两个远离的``环"线圈}
-当两个线圈相距足够远，也即$\rho^2 \gg (a_A+a_B)^2$时，有$k^2\ll 1$。此时，可以用方程3.38化简3.34。方程3.34首先被简化为：
+\subsubsection{特例1：两个距离很远``环"线圈}
+当两个线圈距离足够远，即$\rho^2 \gg (a_A+a_B)^2$时，有$k^2\ll 1$。
+此时，可以用式3.38a和3.38c来简化式3.34。式3.34第一步可简化为：
 \begin{equation}
-  F_{zA}(\rho)\simeq \frac{\mu_0}{2}(N_A I_A)(N_B I_B)\{ k^2K(k)+(k^2-2)[K(k)-E(k)]\}
+  F_{zA}(\rho)\simeq \frac{\mu_0}{2}(N_A I_A)(N_B I_B)\left\{ k^2K(k)+(k^2-2)[K(k)-E(k)]\right\}
 \end{equation}
 
-应用3.38第一式和第三式，仅考虑$k^4$及以下项。尽管$k^2\ll 1$，我们展开$K(k)-E(k)$时必须将$k^4$项包括进来，因为它的系数还有一个$-2$：
+接下来，用式3.38a和3.38c。尽管$k^2\ll 1$，但展开$K(k)-E(k)$时必须考虑$k^4$项，
+因为与它相乘的，除了$k^2$还有$-2$：
+\begin{align*}
+F_{zA}(\rho)\simeq&\frac{\mu_0}{2}(N_AI_A)(N_BI_B)\times\left[k^2\left(\frac{\pi}{2}+\frac{\pi}{8}k^2\right)+(k^2-2)\left(\frac{\pi}{4}k^2+\frac{3\pi}{32}k^4\right)\right]\\
+\simeq& \frac{\mu_0}{2}(N_A I_A)(N_B I_B)\left(\frac{3\pi}{16}k^4\right) \tag{3.39b}
+\end{align*}
+
+第二步近似时，忽略$k^6$项。
+最终，我们得到在极限$\rho^2 \gg (a_A+a_B)^2$时，力的简单表达式：
 \begin{equation*}
-F_{zA}(\rho)\simeq \frac{\mu_0}{2}(N_A I_A)(N_B I_B)(\frac{3\pi}{16}k^4) \tag{3.39'}
+F_{zA}(\rho)= \frac{3\mu_0}{2\pi}\left(\frac{\pi a_A^2 N_A I_A}{\rho^2}\right)\left(\frac{\pi a_B^2 N_B I_B}{\rho^2}\right) \tag{3.39c}
 \end{equation*}
 
-在第二步近似时，$k^6$项被略去了。最后，我们得到了极限$\rho^2 \gg (a_A+a_B)^2$时的一个简单表达式：
+式3.39c表明，轴向力正比于两线圈各自``磁矩''($\pi a_A^2 N_A I_A$和$\pi a_B^2 N_B I_B$)比距离$\rho^2$之乘积。讨论3.17中，我们将从互感表达式中再次导出3.39c式。
+
+\subsubsection{特例2：两个距离很近且直径相同的``环"线圈}
+如果两个环线圈的直径相同且距离很近，即$a_A=a_B=a$以及$\rho\ll 2a$。
+于是，$k^2\rightarrow 1,K(k)\rightarrow\infty,E(k)\rightarrow 1$。
+此时，式3.34可以有更简单的形式：
 \begin{equation*}
-F_{zA}(\rho)= \frac{3\mu_0}{2\pi}(\frac{\pi a_A^2 N_A I_A}{\rho^2})(\frac{\pi a_B^2 N_B I_B}{\rho^2}) \tag{3.39''}
+F_{zA}(\rho)\simeq \mu_0(N_A I_A)(N_B I_B)\left(\frac{a}{\rho}\right) \tag{3.39d}
 \end{equation*}
 
-\subsubsection{特例2：两个紧邻的相同直径的``环"线圈}
-如果两个环线圈的直径相同并相互紧邻放置，即$a_A=a_B=a$以及$\rho\ll 2a$。此时，$k^2\mapsto 1,K(k)\mapsto\infty,E(k)\mapsto 1$。方程3.34可以简化为：
-\begin{equation*}
-F_{zA}(\rho)\simeq \mu_0(N_A I_A)(N_B I_B)(\frac{a}{\rho}) \tag{3.39'''}
-\end{equation*}
-
-我们可以将上式表示为``环"A直径($2\pi a$)，``环"A安匝($N_A I_A$)和轴向相距$\rho$处的``环"B在``环"A上的场的径向分量($B_r$，由于$\rho\ll a$，可简单表示为$\mu_0 N_B I_B/(2\pi\rho)$)的乘积。于是：
-\begin{equation*}
-\begin{split}
-F_{zA}(\rho)&\simeq (2\pi a)\times(N_A I_A)\times(\frac{\mu_0 N_B I_B}{2\pi\rho})\\
-&=\mu_0(N_A I_A)(N_B I_B)(\frac{a}{\rho}) 
-\end{split}\tag{3.39'''}
-\end{equation*}
+我们可以式3.39d表示为``环"线圈A直径($2\pi a$)、安匝($N_A I_A$)和轴向$\rho$处的``环"线圈B在``环"线圈A处产生的磁场的径向分量($B_r$)的乘积。
+由于$\rho\ll a$，两线圈可视为两条距离为$\rho$的直线，于是磁场可近似为$\mu_0 N_B I_B/(2\pi\rho)$。于是：
+\begin{align*}
+F_{zA}(\rho)&\simeq (2\pi a)\times(N_A I_A)\times\left(\frac{\mu_0 N_B I_B}{2\pi\rho}\right)\\
+&=\mu_0(N_A I_A)(N_B I_B)(\frac{a}{\rho}) \tag{3.39d}
+\end{align*}
 
 
 \subsection{``薄壁"螺管内的轴向力}
-考虑一个直径为$2a$，长度为$2b$，中平面位于$z=0$，通过均匀表面电流$NI/2b$的薄壁($\alpha=1$)螺管线圈。对于这个螺管线圈，距离中平面$z\ge 0$处的轴向力可以表示为：
-\begin{equation}
-\begin{split}
-F_z(z)=&-\frac{\mu_0}{2}(\frac{NI}{2b})^2\{(b-z)\sqrt{4a^2+(b-z)^2}[K(k_{b_-})-E(k_{b_-})]\\
-&+(b+z)\sqrt{4a^2+(b+z)^2}[K(k_{b_+})-E(k_{b_+})]\\
-&-2b\sqrt{4a^2+4b^2}[K(k_{2b})-E(k_{2b})]\}
-\end{split}
-\end{equation}
-
-椭圆积分模量分别为：
+考虑一个直径为$2a$，长度为$2b$，中平面位于$z=0$，通以$NI/2b$均匀表面电流的``薄壁''($\alpha=1$)螺管线圈。
+该螺线管中距中平面$z\ge 0$处的轴向力可以表示为：
+\begin{align}
+F_z(z)=-\frac{\mu_0}{2}\left(\frac{NI}{2b}\right)^2&\bigg\{(b-z)\sqrt{4a^2+(b-z)^2}\left[K(k_{b_-})-E(k_{b_-})\right]\\\notag
+&+(b+z)\sqrt{4a^2+(b+z)^2}\left[K(k_{b_+})-E(k_{b_+})\right]\\\notag
+&-2b\sqrt{4a^2+4b^2}\left[K(k_{2b})-E(k_{2b})\right]\bigg\}
+\end{align}
+式中的椭圆积分模量分别为：
 $$k_{b_-}^2=\frac{4a^2}{4a^2+(b-z)^2} ; \quad k_{b_+}^2=\frac{4a^2}{4a^2+(b+z)^2} ;\quad k_{2b}^2=\frac{4a^2}{4a^2+4 b^2}$$
 
 \subsubsection{特例3：端部力}
-在$z=b$处，因为有$k_{b_+}=k_{2b}$，所以有$F_z(b)=0$。也即，正如我们所预料到的，一个孤立螺线管端部的轴向力是零。
+在$z=b$处，因为$k_{b_+}=k_{2b}$，根据式3.40，有$F_z(b)=0$。
+即一个孤立螺线管端部的轴向力是零，这和我们的预期一致。
 
 \subsubsection{特例4：中平面的力}
-将$z=0$代入3.40式，我们可以得到中平面($z=0$)处的轴向力$F_z(0)$：
-\begin{equation}
-\begin{split}
-  F_z(0)=&-\frac{\mu_0}{2}(\frac{NI}{2b})^2\{2b\sqrt{4a^2+b^2}[K(k_{b})-E(k_{b})]\\
-  &-2b\sqrt{4a^2+4b^2}[K(k_{2b})-E(k_{2b})]\}
-\end{split}
-\end{equation}
-
-式中，$k_{2b}$由下式给出：
+将$z=0$代入3.40式，可得中平面($z=0$)处的轴向力$F_z(0)$：
+\begin{align}
+  F_z(0)=-\frac{\mu_0}{2}\left(\frac{NI}{2b}\right)^2&\bigg\{2b\sqrt{4a^2+b^2}\left[K(k_{b})-E(k_{b})\right]\\\notag
+  &-2b\sqrt{4a^2+4b^2}\left[K(k_{2b})-E(k_{2b})\right]\bigg\}
+\end{align}
+式中，模量$k_{2b}$同上；$k_{b}$由下式给出：
 $$k_{b}^2=\frac{4a^2}{4a^2+b^2}$$
 
-孤立螺线管在$z$向的轴向压缩力从$0$到$z=b$是逐渐变大，至中平面处取得最大值。
+可见，孤立螺线管沿$z$的轴向\textit{压缩力}在$z=b$为$0$，向内逐渐增大，至中平面处取得最大。
 
-\subsubsection{特例5：长薄壁螺管的中平面的力}
-对于一个``长"($\beta\gg 1$或者$k^2\ll 1$)的薄壁螺线管，利用方程3.38，可以将方程3.41a简化为：
+\subsubsection{特例5：``长''薄壁螺管的中平面的力}
+对于一个``长"($\beta\gg 1$或者$k^2\ll 1$)的薄壁螺线管，可利用式3.38c将式3.41化简：
 \begin{equation*}
-F_z(0)\simeq-\frac{\mu_0}{2}(\frac{NI}{2b})\pi a^2 \tag{3.41'}
+F_z(0)\simeq-\frac{\mu_0}{2}\left(\frac{NI}{2b}\right)\pi a^2 \tag{3.41b}
 \end{equation*}
 
-上式表明，$F_z(0)$在给定表面电流密度值$NI/2b$后，与线圈长度无关。因为长螺管的轴向中心场(问题3.1)有$NI/2b=H_z(0,0)$，我们可以得到：
+式3.41b表明，$F_z(0)$在给定的表面电流密度$NI/2b$下，与线圈长度\textit{无关}。
+因为对长螺管的轴向中心场(问题3.1)，有$NI/2b=H_z(0,0)$。由此可得：
 \begin{equation*}
-F_z(0)\simeq -\frac{1}{2}\mu_0 H_z^2(0,0)\times\pi a^2  \tag{3.41''}
+F_z(0)\simeq -\frac{1}{2}\mu_0 H_z^2(0,0)\times\pi a^2  \tag{3.41c}
 \end{equation*}
 
-这样，$F_z(0)$就等于磁压乘上线圈室温孔的面积。实际上，下面我们将看到，每一个轴向力的表达式都有一个磁压项($\mu_0(NI/2b)^2$)或其等价形式。
+于是，$F_z(0)$等于磁压乘上线圈室温孔的面积。
+实际上，后面我们将看到，\textit{每一个}轴向力的表达式都含有一个磁压项($\mu_0(NI/2b)^2$)或其等价形式。
 
 \subsection{``薄壁"螺管和``环"线圈间的轴向力}
 图3.6给出了一个薄壁螺线管($2a_s,2b_s,N_s I_s/2b_s$)与一个环线圈($2a_R,N_R I_R$)同轴放置的情况。螺管右侧距离环线圈距离$\rho$。各线圈产生的轴向场指向同一方向。螺线管受到的轴向力可以表示为：
