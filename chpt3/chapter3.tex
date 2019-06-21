@@ -654,8 +654,7 @@ $\prod(0,k)=K(k)$，$\prod(1,k)=\infty$。$\prod(c^2,k)$可用$c^2$和$k^2$的�
 \end{subequations}
 
 当$c^2=0$时，式3.49a退化为3.38a，因为$\prod(0,k)=K(k)$。
-不过，在我们要讨论的大部分问题中，$c^2$通常都接近于1。
-这种条件下，由于快速收敛要求$c^2\ll 1$，式3.49的任一展开都不好使。
+不过，在我们要讨论的问题中，$c^2$通常都接近于1；由于快速收敛要求$c^2\ll 1$，此时式3.49的任一展开都不好使。
 后面在讨论互感的时候，我们将会用到3.49b。
 表3.2给出了一些$c^2$和$k^2$值对应的$\prod(c^2,k)$。
 可用Mathcad等软件计算$K(k),E(k),\prod(c^2,k)$值。
@@ -715,6 +714,12 @@ $2a_A=2a_B=2a, N_A I_A/2b_A = N_B I_B/2b_B = NI/2b,2b_A = 2b_B = b$，
 代换后即成为式3.50。
 
 \subsection{``厚壁"螺管线圈---中平面轴向力}
+\begin{figure}[htbp]
+  \centering
+ \includegraphics[scale=0.4]{chpt3/figs/fig3.8.eps}
+  \caption{用以计算线圈A上的中心面轴向力的螺管线圈A和B的布局。}
+\end{figure}
+
 当一个螺管线圈不能被视为``薄壁''时，可以将之等效为径向上很多``薄壁''子线圈的组合。
 这里，我们考虑对$\alpha>1$螺管线圈的最简单的处理方法：
 将螺管分为两个``薄壁''子螺管A(内)和B(外)，
@@ -743,12 +748,6 @@ F_{zA}(0) =& F_{zAA}(0)+F_{zAB}(0) \\
 F_{zB}(0) =& F_{zBB}(0)+F_{zBA}(0)
 	\end{align}
 \end{subequations}
-
-\begin{figure}[htbp]
-  \centering
- \includegraphics[scale=0.4]{chpt3/figs/fig3.8.eps}
-  \caption{用以计算线圈A上的中心面轴向力的螺管线圈A和B的布局。}
-\end{figure}
 
 于是，
 \begin{align}
@@ -798,15 +797,13 @@ F_{zT}(0)=&-\frac{\mu_0}{2}\left(\frac{N I}{4b}\right)\times \\
 因为在大多数应用中有$c^2\simeq 1$，
 式3.54中$\Upsilon(c^2,k)$项里的$\prod{(c^2,k)}$项不能由其级数展开的前几项近似。
 不过，式3.54中的剩余项可以在$\beta \gg 1$时展开，正如特例5中所作的那样。于是：
-\begin{equation}
-\begin{split}
-F_{zT}(0)\simeq& -\mu_0 \left(\frac{N I}{4b}\right)^2\left\{ \pi(a_A^2+a_B^2)-(a_A^2-a_B^2)^2[2\prod(c^2,k_b)-\prod(c^2,k_{2b})]\right\}  \\
-\simeq& -\mu_0 \left(\frac{N I}{4b}\right)^2 \pi(a_A^2+a_B^2) \left\{1-\frac{(a_A^2-a_B^2)^2}{\pi(a_A^2+a_B^2)}[2\prod(c^2,k_b)-\prod(c^2,k_{2b})]\right\}
-\end{split}
-\end{equation}
+\begin{align}
+F_{zT}(0)\simeq& -\mu_0 \left(\frac{N I}{4b}\right)^2\left\{ \pi(a_A^2+a_B^2)-(a_A^2-a_B^2)^2\big[2\prod(c^2,k_b)-\prod(c^2,k_{2b})\big]\right\}  \\\notag
+\simeq& -\mu_0 \left(\frac{N I}{4b}\right)^2 \pi(a_A^2+a_B^2) \left\{1-\frac{(a_A^2-a_B^2)^2}{\pi(a_A^2+a_B^2)}\big[2\prod(c^2,k_b)-\prod(c^2,k_{2b})\big]\right\}
+\end{align}
 
 当$a_A=a_B$时，式3.55约化为3.41b。
-在式3.55的第二行形式中，大括号内的最后一项可视为修正项。
+在式3.55的第二行中，大括号内的后一项可视为修正项。
 
 \subsection{双线圈嵌套磁体的轴向力}
 在一个由多个同轴对齐的嵌套螺管组成的磁体中，
@@ -815,7 +812,14 @@ F_{zT}(0)\simeq& -\mu_0 \left(\frac{N I}{4b}\right)^2\left\{ \pi(a_A^2+a_B^2)-(a
 螺线管A(内)的参数为$2a_A,2b_A,N_A I_A/2b_A$；
 螺线管B(外)的参数为$2a_B, 2b_B, N_B I_B/2b_B$。
 
+\begin{figure}[htbp]
+  \centering
+ \includegraphics[scale=0.4]{chpt3/figs/fig3.9.eps}
+  \caption{由螺管A和B组成的嵌套磁体}
+\end{figure}
+
 \subsubsection{螺管A所受中平面轴向力}
+
 施于螺线管A右半部分的总中平面轴向力$F_{zA}(0)$是$F_{zAA}(0)$和$F_{zAB}(0)$之和。
 其中，$F_{zAA}(0)$来自其自身左半部分，$F_{zAB}(0)$来自螺管B。
 $F_{zAA}(0)$可在式3.41a中替换下标A给出。$F_{zAB}(0)$可由式3.44采取如下替代给出：
@@ -832,11 +836,6 @@ F_{zA}(0)=&\frac{\mu_0}{2}\bigg[\left(\frac{N_A I_A}{2b_A}\right)^2\times \{2b_A
 其中，$a_T=a_A+a_B$，$b_D=b_B-b_A$以及$b_T=b_A+b_B$。模量$k_{b_A}, k_{2b_A}, k_A,k_B, k_{AB}$分别为：
 $$ k_{bA}^2=\frac{4a_A^2}{4a_A^2+b_A^2}; k_{2bA}^2=\frac{4a_A^2}{4a_A^2+4b_A^2}; k_B^2=\frac{4a_Aa_B}{a_T^2+b_B^2};k_D^2=\frac{4a_Aa_B}{a_T^2+b_D^2}; k_T^2=\frac{4a_Aa_b}{a_T^2+b_T^2}$$
 
-\begin{figure}[htbp]
-  \centering
- \includegraphics[scale=0.4]{chpt3/figs/fig3.9.eps}
-  \caption{由螺管A和B组成的嵌套磁体}
-\end{figure}
 
 \subsubsection{特例10：螺管A所受中平面轴向力---``长''螺管}
 当两个螺线管都是``长"($b_A^2\gg 4a_A^2；b_B^2\gg a_T^2$)的，但长度不一样，比如$b_D^2\gg a_T^2$。
@@ -881,12 +880,10 @@ k_{2bB}^2=\frac{a_B^2}{4a_B^2+4b_B^2};\quad \quad k_A^2=\frac{4a_Aa_B}{a_T^2+b_A
 
 \subsubsection{特例12：螺管B所受中平面轴向力---A和B均``长"但B比A更长}
 条件参数与特例11所述相同，我们有：
-\begin{equation}
-\begin{split}
-F_{zB}(0)\simeq-\frac{\mu_0}{2}\bigg\{&\left(\frac{N_BI_B}{2b_B}\right)^2\pi a_B^2+\left(\frac {N_BI_B}{2b_B}\right)\lefet(\frac{N_AI_A}{2b_A}\right)\bigg[\pi(a_A^2+a_B^2)\\
-&-(a_A-a_B)^2[2\Pi(c^2,k_A)+\Pi(c^2,k_D)-\Pi(c^2,k_T)]\bigg]\bigg\}
-\end{split}
-\end{equation}
+\begin{align}
+F_{zB}(0)\simeq -\frac{\mu_0}{2}\bigg\{&\left(\frac{N_BI_B}{2b_B}\right)^2\pi a_B^2+\left(\frac {N_BI_B}{2b_B}\right)\left(\frac{N_AI_A}{2b_A}\right)\bigg[\pi(a_A^2+a_B^2)\\\notag
+&-(a_A-a_B)^2\big[2\prod(c^2,k_A)+\prod(c^2,k_D)-\prod(c^2,k_T)\big]\bigg]\bigg\}
+\end{align}
 
 与特例11类似，式3.59中第二项表示的$F_{zBA}$不可忽略，
 因为螺管A的$B_r$对螺管B靠近螺管A两端的轴向位置上均不可忽略。
@@ -904,15 +901,13 @@ F_{zB}(0)\simeq-\frac{\mu_0}{2}\left(\frac{N_BI_B}{2b_B}\right)^2\pi a_B^2 \tag{
 \subsection{轴向偏心螺管组的轴向恢复力}
 当螺管A和螺管B的轴向场指向同一方向但中轴线失配距离为$\rho$时，
 会产生一个轴向恢复力$F_{zR}(\rho)$，让两者中轴线对齐。$F_{zR}(\rho)$可写为：
-\begin{equation}
-\begin{split}
-F_{zR}(\rho)=&-\frac{\mu_0}{2}\left(\frac{N_AI_A}{2b_A}\right)\left(\frac{N_BI_B}{2b_B}\right)\times\\
-&\bigg(\frac{b_T-\rho}{\sqrt{a_T^2+(b_T-\rho)^2}}\left\{[a_T^2+(b_T-\rho)^2][K(k_{T-})-E(k_{T-})]-\Upsilon(c^2,k_{T-})\right\}\\
-&+\frac{b_D+\rho}{\sqrt{a_T^2+(b_T+\rho)^2}}\left\{[a_T^2+(b_D+\rho)^2][K(k_{D+})-E(k_{D+})]-\Upsilon(c^2,k_{D+})\right\}\\
-&-\frac{b_T+\rho}{\sqrt{a_T^2+(b_T+\rho)^2}}\left\{[a_T^2+(b_T+\rho)^2][K(k_{T+})-E(k_{T+})]-\Upsilon(c^2,k_{T+})\right\}\\
+\begin{align}
+F_{zR}(\rho)=&-\frac{\mu_0}{2}\left(\frac{N_AI_A}{2b_A}\right)\left(\frac{N_BI_B}{2b_B}\right)\times\\\notag
+&\bigg(\frac{b_T-\rho}{\sqrt{a_T^2+(b_T-\rho)^2}}\left\{[a_T^2+(b_T-\rho)^2][K(k_{T-})-E(k_{T-})]-\Upsilon(c^2,k_{T-})\right\}\\\notag
+&+\frac{b_D+\rho}{\sqrt{a_T^2+(b_T+\rho)^2}}\left\{[a_T^2+(b_D+\rho)^2][K(k_{D+})-E(k_{D+})]-\Upsilon(c^2,k_{D+})\right\}\\\notag
+&-\frac{b_T+\rho}{\sqrt{a_T^2+(b_T+\rho)^2}}\left\{[a_T^2+(b_T+\rho)^2][K(k_{T+})-E(k_{T+})]-\Upsilon(c^2,k_{T+})\right\}\\\notag
 &-\frac{b_D-\rho}{\sqrt{a_T^2+(b_D-\rho)^2}}\left\{[a_T^2+(b_D-\rho)^2][K(k_{D-})-E(k_{D-})]-\Upsilon(c^2,k_{D-})\right\}\bigg)
-\end{split}
-\end{equation}
+\end{align}
 式中，$a_T=a_A+a_B, b_T=b_A+b_B, b_D=b_A−b_B$。模量为：
 $$
 k_{T+}^2=\frac{4a_Aa_B}{a_T^2+(b_T+\rho)^2};\qquad k_{T-}^2=\frac{4a_Aa_B}{a_T^2+(b_T-\rho)^2};$$
@@ -930,74 +925,85 @@ F_{zR}(\rho)\propto-\left(\frac{N_AI_A}{2b_A}\right)\left(\frac{N_BI_B}{2b_B}\ri
 
 后文将使用式3.61推导小轴向失配($\rho\ll \sqrt{a_T^2+b_D^2}$)螺管A和B间的互感$M_{AB}(\rho)$。
 
-
-
-
-\subsubsection{特例16：某一螺管是``长"的}
-如果螺管A或螺管B之一是``长"的，这个更长的螺管的轴向场将成为均匀的，其$B_r$就很小了，哪怕两个线圈之间存在可观的失配，长螺管在短线圈上也只产生很小的轴向力。方程3.60在$b^2_T\gg a_T^2,b_D^2\gg a_T^2$时前两个+项和后两个-项抵消，有$F_{zR}(\rho)\rightarrow 0$。
+\subsubsection{特例16：螺管之一是``长"的}
+如果螺管A或螺管B之一是``长"的，那个更长的螺管的轴向场将成为均匀的，其$B_r$就很小了。
+哪怕两个线圈之间存在较大的失配，长螺管对短螺管只有很小的轴向力。
+在$b^2_T\gg a_T^2,b_D^2\gg a_T^2$时，式3.60中前两个$+$项和后两个$-$项抵消，结果有$F_{zR}(\rho)\rightarrow 0$。
 
 \section{螺管在磁力下的应力应变}
-此处研究超导体在(主要是)洛伦兹力的应力和应变。本节的磁应力的分析解和图表都是在简单场分布下的应用绕组材料的简单性质而得到的。
+本节我们研究螺管磁体中的超导体(主要是)在洛伦兹力下的应力和应变[3.6]。
+这里推导出来的磁应力解析解和图像都是在``简单''场分布下的应用绕组材料的``简化''性质条件下得到的。
 
 \subsection{应力应变方程}
-处于由轴向磁场$B_z(r,z)$和电流$\lambda J$相互作用产生的磁场力下的螺管绕组的应力(径向$\sigma_r(r,z)$，环向$\sigma_\theta(r,z)$，轴向$\sigma_z(r,z)$，剪切$\tau_{rz}(r,z)$)满足以下平衡方程：
+轴向磁场$B_z(r,z)$对电流$\lambda J$作用而产生的磁场力在螺管绕组中引起的应力
+(径向$\sigma_r(r,z)$，周向$\sigma_\theta(r,z)$，轴向$\sigma_z(r,z)$，剪切$\tau_{rz}(r,z)$)可通过解以下平衡方程得到：
 \begin{subequations}
 	\begin{align}
 \frac{\partial\sigma_{r}}{\partial_r}+\frac{\sigma_{r}-\sigma_{\theta}}{r}+\frac{\partial \tau_{rz}}{\partial z}=&-\lambda JB_z(r,z)\\
-\frac{\partial \tau_{rz}}{\partial r}-\frac{\tau_{rz}}{r}+\frac{\partial \sigma_z}{\partial_z}=&-\lambda JB_r(r,z)
+\frac{\partial \tau_{rz}}{\partial r}-\frac{\tau_{rz}}{r}+\frac{\partial \sigma_z}{\partial z}=&-\lambda JB_r(r,z)
 	\end{align}
 \end{subequations}
+边界条件为：$\sigma_r(r=a_1,z)=0;\sigma_r(r=a_2,z)=0;\sigma_z(r,z=\pm b)=0;\tau_{rz}(r=a_1,z)=0;\tau_{rz}(r=a_2,z)=0;\tau_{rz}(r,z=\pm b)=0$。
 
-边界条件为：$\sigma_r(r=a_1,z);\sigma_r(r=a_2,z);\sigma_z(r,z=\pm b)=0;\tau_{rz}(r=a_1,z)=0;\tau_{rz}(r=a_2,z)=0;\tau_{rz}(r,z=\pm b)=0$。
-注意到剪切力是方程3.62a和3.62b中唯一的变量。大多数复合超导体，包括LTS和HTS，都可以视为正交各向异性：可以应用Hooke定律。正交各向异性材料具有以下机械性质：Young模量，Poisson比。它们在三个正交方向不同，但都关于正交方向对称。应变$\epsilon_r,\epsilon_\theta,\epsilon_z$分别为$r,\theta,z$向，剪切应变$\gamma_{rz}$位于$r-z$平面。应变关系：
+可见，剪切力是耦合式3.62a和3.62b的唯一变量。大多数LTS和HTS复合超导体都可以视为正交各向异性，
+即可用Hooke定律。正交各向异性材料的Young模量，Poisson比等机械性质在三个正交方向不同但关于正交方向对称。
+应变$\epsilon_r,\epsilon_\theta,\epsilon_z$分别为$r,\theta,z$向，剪切应变$\gamma_{rz}$位于$r-z$平面，各自与相应应力关联：
 \begin{subequations}
 	\begin{align}
-\epsilon_r=&\frac{1}{E_r}\sigma_r-\frac{\nu_{\theta r}}{E_{\theta}}\sigma_{\theta}-\frac{\nu_{zr}}{E_z}\sigma_z+\epsilon_{Tz}\\
-\epsilon_\theta=&-\frac{\nu_{r\theta}}{E_r}\sigma_r+\frac{1}{E_{\theta}}\sigma_{\theta}-\frac{\nu_{z\theta}}{E_z}\sigma_z+\epsilon_{T\theta}\\
-\epsilon_z=&-\frac{\nu_{rz}}{E_r}\sigma_r-\frac{\nu_{\theta z}}{E_{\theta}}\sigma_{\theta}+\frac{1}{E_z}\sigma_z+\epsilon_{Tz}\\
+\epsilon_r=&\frac{1}{E_r}\sigma_r-\frac{\nu_{\theta r}}{E_{\theta}}\sigma_{\theta}-\frac{\nu_{zr}}{E_z}\sigma_z+\epsilon_{T_r}\\
+\epsilon_\theta=&-\frac{\nu_{r\theta}}{E_r}\sigma_r+\frac{1}{E_{\theta}}\sigma_{\theta}-\frac{\nu_{z\theta}}{E_z}\sigma_z+\epsilon_{T_\theta}\\
+\epsilon_z=&-\frac{\nu_{rz}}{E_r}\sigma_r-\frac{\nu_{\theta z}}{E_{\theta}}\sigma_{\theta}+\frac{1}{E_z}\sigma_z+\epsilon_{T_z}\\
 \gamma_{rz}=&\frac{1}{G_{{rz}}}\tau_{rz}
 	\end{align}
 \end{subequations}
-
-$E_r, E_\theta, E_z$分别是各向的杨氏模量。$\mu_{12}\equiv -\epsilon_2/\epsilon_1$，当材料应力加在1方向时($\sigma_1;\sigma_2=\sigma_3=0$)两个正交方向的横向应变的Poisson比。$G_{rz}$是剪切模量。 
-$\epsilon_{Tr},\epsilon_{T\theta},\epsilon_{Tz}$分别为从室温$300\ \mathrm{K}$到运行温度$T_{op}$的热膨胀积分系数。
+式中，$E_r, E_\theta, E_z$分别是$r,\theta,z$向的杨氏模量。
+$\nu_{12}\equiv -\epsilon_2/\epsilon_1$是当材料应力加在1方向时($\sigma_1;\sigma_2=\sigma_3=0$)两个正交方向的横向应变的Poisson比。$G_{rz}$是剪切模量。 
+$\epsilon_{T_r},\epsilon_{T_\theta},\epsilon_{T_z}$分别为从室温$300\ \mathrm{K}$到运行温度$T_{op}$的热膨胀积分系数。
 \begin{equation*}
-\epsilon_{T_r}=\int_{300K}^{T_{op}}\alpha_{Tr}(T)dT;\quad
-\epsilon_{T_\theta}=\int_{300K}^{T_{op}}\alpha_{T_\theta}(T)dT;\quad
-\epsilon_{T_Z}=\int_{300K}^{T_{op}}\alpha_{Tz}(T)dT \tag{3.63e}
+\epsilon_{T_r}=\int_{300\ \mathrm{K}}^{T_{op}}\alpha_{Tr}(T)dT;\quad
+\epsilon_{T_\theta}=\int_{300\ \mathrm{K}}^{T_{op}}\alpha_{T_\theta}(T)dT;\quad
+\epsilon_{T_z}=\int_{300\ \mathrm{K}}^{T_{op}}\alpha_{Tz}(T)dT \tag{3.63e}
 \end{equation*}
+式中，$\alpha_{T_r}(T),\alpha_{T_\theta}(T),\alpha_{T_z}(T)$分别为平行于主轴的依赖于温度的热膨胀系数。
+因为这些系数为正且从$300\ \mathrm{K}$到度$T_{op}<300\ \mathrm{K}$积分，
+可知式3.63a-3.63c中的热应变为负，即压缩。
 
-$\alpha_{Tr}(T),\alpha_{T\theta}(T),\alpha_{Tz}(T)$分别为平行于各自主轴的热膨胀系数，与温度有关。
-注意到这些系数是正的，并且因为是从$300\ \mathrm{K}$到度$T_{op}<300\ \mathrm{K}$积分，方程3.63a-3.63c中的热应变是负的，也即压缩力。
-
-应用下列$\nu$和$E$的关系：
+同时应用下列$\nu$和$E$关系：
 \begin{equation*}
 \frac{\nu_{r\theta}}{E_\theta}=\frac{\nu_{\theta r}}{E_r};\quad \frac{\nu_{\theta z}}{E_z}=\frac{\nu_{z\theta}}{E_\theta};\quad \frac{\nu_{zr}}{E_r}=\frac{\nu_{rz}}{E_z} \tag{3.63f}
 \end{equation*}
 
-在轴对称体情况下，例如理想螺线管，在r和z方向的应变$u_r$和位移$u_z$分别为：
+对于轴对称体，例如理想螺线管，在$r$和$z$方向的应变$u_r$和位移$u_z$关系为：
 \begin{equation*}
-\epsilon_r=\frac{\partial_{u_r}}{\partial_r};\quad \epsilon_\theta=\frac{u_r}{r};\quad \epsilon_z=\frac{\partial_{u_z}}{\partial_z};\quad \gamma_{rz}=\frac{\partial_{u_r}}{\partial_z}+\frac{\partial_{u_z}}{\partial_r} \tag{3.63g}
+\epsilon_r=\frac{\partial {u_r}}{\partial r};\quad \epsilon_\theta=\frac{u_r}{r};\quad \epsilon_z=\frac{\partial {u_z}}{\partial z};\quad \gamma_{rz}=\frac{\partial {u_r}}{\partial z}+\frac{\partial {u_z}}{\partial r} \tag{3.63g}
 \end{equation*}
 
-由于轴对称，方程3.62中的所有变量都与$\theta$无关，且有$u_\theta=0$。一般的，不同时存在$\sigma_r$和$\sigma_z$的闭式解。在一个``长"螺管中，例如多用于空间高磁场均匀性NMR磁体的螺管中，$B_z(r, z)$在z方向至少是在螺管以中平面为起点的很大长度内的变化都是很小的。剪切应力$\tau_{rz}$是由$B_z(r,z)$在线圈上产生的径向载荷的变化导致的。因此，在一个长螺管中，我们可以假设所有变量不依赖于z(包括$u_r$，有$\partial u_r/\partial z=0$)来化简3.62a。因为在高磁场均匀性磁体中有$\partial B_r(r,z).\partial z\simeq 0$，我们可以放心的假设在磁体轴向的大部分长度上有$\partial u_r/\partial z=0$成立。加上$\partial u_z/\partial r=0$，我们发现$\gamma_{rz}=\tau_{rz}=0$。反过来，这个结果 有会解耦3.62a和3.62b。
+由于轴对称，式3.62中的所有变量都与$\theta$无关，且有$u_\theta=0$。
+一般的，不同时存在$\sigma_r$(3.62a)和$\sigma_z$(3.62b)的闭式解。
+对``长"螺管，例如多用于空间高均匀磁场NMR磁体中的螺管，
+其$B_z(r,z)$在$z$方向至少是在以中平面为起点的很长范围内的变化都很小。
+剪切应力$\tau_{rz}$是由$B_z(r,z)$在线圈上产生的径向载荷的变化导致的。
+因此，在一个长螺管中，我们可假设所有变量都不依赖于$z$(包括$u_r$，即$\partial u_r/\partial z=0$)，
+以化简式3.62a。因为在高均匀磁场磁体中有$\partial B_r(r,z)/\partial z\simeq 0$，
+故可以放心的假设在磁体轴向的大部分长度上有$\partial u_r/\partial z=0$成立。
+加上$\partial u_z/\partial r=0$，结果有$\gamma_{rz}=\tau_{rz}=0$。
+反过来，这个结果会解耦式3.62a和3.62b。
 
-联立方程3.62和3.63，假设$\tau_{rz}=0$，用$u_r$解出$\sigma_r$和$\sigma_{\theta}$，我们得到以下微分方程：
+联立式3.62和3.63，假设$\tau_{rz}=0$，用$u_r$解出$\sigma_r$和$\sigma_{\theta}$，我们得到以下微分方程：
 \begin{subequations}
 	\begin{align}
 &\frac{d^2u_r}{d_r^2}+\frac{1}{r}\frac{du_r}{dr}-\zeta^2\frac{u_r}{r^2}=-\frac{1-\nu_{r\theta}\nu_{\theta r}}{E_r}\lambda JB_z(r)+\frac{F}{r}\\
-&\zeta=\sqrt{\frac{E_\theta}{E_r}};\quad F=
+&\mbox{其中，\quad}\zeta=\sqrt{\frac{E_\theta}{E_r}};\quad F=
 -(\zeta^2-\nu_{r \theta})\epsilon_{T_\theta}+(1-\nu_{\theta r}\zeta^2)\epsilon_{Tr}
 	\end{align}
 \end{subequations}
 
-方程3.64a的解的一般形式：
+式3.64a的通解为：
 \begin{equation}
 u_r=C_1r^\zeta+\frac{C_2}{r^\zeta}+u_r^L+u_r^T
 \end{equation}
-
 式中，$C_1,C_2$是由$r = a_1, r = a_2$边界条件确定的常数。
-$u^L_r$和$u^T_r$ (上标$L$和$T$分别代表Lorentz和thermal) 依赖于方程3.64a等式右侧源项的特解。
+$u^L_r$和$u^T_r$ (上标$L$和$T$分别代表Lorentz和Thermal)为依赖于式3.64a等式右侧``源''项的特解。
 热学项$u^T_r$为：
 \begin{equation}
 u_r^T=\frac{Fr}{1-\zeta^2}
