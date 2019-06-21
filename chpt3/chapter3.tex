@@ -815,110 +815,123 @@ F_{zT}(0)\simeq& -\mu_0 \left(\frac{N I}{4b}\right)^2\left\{ \pi(a_A^2+a_B^2)-(a
 螺线管A(内)的参数为$2a_A,2b_A,N_A I_A/2b_A$；
 螺线管B(外)的参数为$2a_B, 2b_B, N_B I_B/2b_B$。
 
-\subsubsection{施于A的中平面轴向力}
-施于螺线管A右半部分的总中平面轴向力$F_{zA}(0)$是$F_{zAA}(0)$和$F_{zAB}(0)$之和。$F_{zAA}(0)$是其自身左半部分的中平面轴向力；$F_{zAB}(0)$来自螺线管B。$F_{zAA}(0)$可由方程3.41a替换下标A给出。 $F_{zAB}(0)$可由方程3.44采取如下替代得到： $b_A$替$2b_A$，$−(b_A+b_B)$替$\rho$，$2b_B$不变，$c^2$仍由3.47给出。
+\subsubsection{螺管A所受中平面轴向力}
+施于螺线管A右半部分的总中平面轴向力$F_{zA}(0)$是$F_{zAA}(0)$和$F_{zAB}(0)$之和。
+其中，$F_{zAA}(0)$来自其自身左半部分，$F_{zAB}(0)$来自螺管B。
+$F_{zAA}(0)$可在式3.41a中替换下标A给出。$F_{zAB}(0)$可由式3.44采取如下替代给出：
+$b_A$替$2b_A$，$−(b_A+b_B)$替$\rho$，$2b_B$不变，$c^2$仍由式3.47给出。
 \begin{equation}
 \begin{split}
-F_{zA}(0)=&\frac{\mu_0}{2}\bigg[(\frac{N_A I_A}{2b_A})^2\times \{2b_A\sqrt{4a_A^2+b_A^2}[K(k_{bA})-E(k_{bA})]-2b_A\sqrt{4a_A^2+4b_A^2}[K(k_{2bA})-E(k_{2bA})]\}\\
-&+(\frac{N_AI_A}{2b_A})(\frac{N_BI_B}{2b_B})\big(\frac{2b_B}{\sqrt{a_T^2+b_B^2}}\{[a_T^2+b_B^2][K(k_B)-E(k_{B})]-\Upsilon(c^2,k_B)\}\\
+F_{zA}(0)=&\frac{\mu_0}{2}\bigg[\left(\frac{N_A I_A}{2b_A}\right)^2\times \{2b_A\sqrt{4a_A^2+b_A^2}[K(k_{bA})-E(k_{bA})]-2b_A\sqrt{4a_A^2+4b_A^2}[K(k_{2bA})-E(k_{2bA})]\}\\
+&+\left(\frac{N_AI_A}{2b_A}\right)\left(\frac{N_BI_B}{2b_B}\right)\big(\frac{2b_B}{\sqrt{a_T^2+b_B^2}}\{[a_T^2+b_B^2][K(k_B)-E(k_{B})]-\Upsilon(c^2,k_B)\}\\
 &-\frac{b_D}{\sqrt{a_T^2+b_D^2}}\{{[a_T^2+b_D^2][K(k_D)-E(k_D)]-\Upsilon(c^2,k_D)}\}\\
 &-\frac{b_T}{\sqrt{a_T^2+b_T^2}}\{[a_T^2+b_T^2][K(k_T)-E(k_T)]-\Upsilon(c^2,k_T^2)\}\big)\bigg]
 \end{split}
 \end{equation}
 
-由$a_T=a_A+a_B$，$b_D=b_B-b_A$以及$b_T=b_A+b_B$，给出$k_{b_A}, k_{2b_A}, k_A,k_B, k_{AB}$：
+其中，$a_T=a_A+a_B$，$b_D=b_B-b_A$以及$b_T=b_A+b_B$。模量$k_{b_A}, k_{2b_A}, k_A,k_B, k_{AB}$分别为：
 $$ k_{bA}^2=\frac{4a_A^2}{4a_A^2+b_A^2}; k_{2bA}^2=\frac{4a_A^2}{4a_A^2+4b_A^2}; k_B^2=\frac{4a_Aa_B}{a_T^2+b_B^2};k_D^2=\frac{4a_Aa_B}{a_T^2+b_D^2}; k_T^2=\frac{4a_Aa_b}{a_T^2+b_T^2}$$
 
 \begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.4]{chpt3/figs/fig3.9.eps}
-  \caption{有螺管A和B组成的嵌套磁体}
+  \caption{由螺管A和B组成的嵌套磁体}
 \end{figure}
 
-\subsubsection{特例10：长螺管的施于A的中平面力}
-当两个螺线管都是``长"($b_A^2\gg 4a_A^2；b_B^2\gg a_T^2$)的，并且长度不一样，从而$b_D^2\gg a_T^2$，方程3.56可以简化为：
-\begin{equation}
-\begin{split}
-F_{zA}(0)\simeq& -\frac{\mu_0}{2}\{(\frac{N_AI_A}{2b_A})^2\pi a_A^2+(\frac{N_AI_A}{2b_A})(\frac{N_BI_B}{2b_{B}})\times\\
-&(a_A-a_B)^2[\Pi(c^2,k_D)+\Pi(c^2,k_T)-2\Pi(c^2,k_B)]]\}
-\end{split}
-\end{equation}
+\subsubsection{特例10：螺管A所受中平面轴向力---``长''螺管}
+当两个螺线管都是``长"($b_A^2\gg 4a_A^2；b_B^2\gg a_T^2$)的，但长度不一样，比如$b_D^2\gg a_T^2$。
+式3.56可简化为：
+\begin{align}
+F_{zA}(0)\simeq -\frac{\mu_0}{2}\{&\left(\frac{N_AI_A}{2b_A}\right)^2\pi a_A^2+\left(\frac{N_AI_A}{2b_A}\right)\left(\frac{N_BI_B}{2b_{B}}\right)\times\\\notag
+&(a_A-a_B)^2\big[\prod(c^2,k_D)+\prod(c^2,k_T)-2\prod(c^2,k_B)\big]\}
+\end{align}
 
-方程3.57a等号右侧的第二项代表$F_{zAB}$。物理上，这是由于螺线管B的磁场在螺线管A的接近螺线管B末端的轴向位置上的径向分量$B_r$引起的。注意到，当$b_A\rightarrow \infty$以及 $b_B\rightarrow \infty$时，第二项趋于。
-\subsubsection{特例11：施于A的中平面轴向力---A和B均``长"但B比A更长}
-当两个螺线管都如特例10中一样是``长"的，且B比A更长一些，也即$b_D\rightarrow b_B$以及$b_T\rightarrow b_B$时，方程3.57a可进一步化简为：
+式3.57右侧的第二项代表$F_{zAB}$。
+物理上，这是由螺管B的在螺管A的近螺管B端轴向位置上的磁场径向分量$B_r$引起的。
+当$b_A\rightarrow \infty$和$b_B\rightarrow \infty$时，第二项趋于0。
+
+\subsubsection{特例11：螺管A所受中平面轴向力---A和B均``长"但B比A更长}
+当两个螺线管都如特例10中一样是``长"的但B远比A更长，
+即$b_D\rightarrow b_B$以及$b_T\rightarrow b_B$。式3.57a可进一步化简为：
 \begin{equation*}
-F_{zA}(0)\simeq F_{zAA}(0)\simeq -\frac{\mu_0}{2}(\frac{N_AI_A}{2b_A})^2\pi a_A^2 \tag{3.57'}
+F_{zA}(0)\simeq F_{zAA}(0)\simeq -\frac{\mu_0}{2}\left(\frac{N_AI_A}{2b_A}\right)^2\pi a_A^2 \tag{3.57'}
 \end{equation*}
 
-物理上很容易理解，当$b_A/b_B\rightarrow 0$时有$F_{zAB}(0)\rightarrow 0$，因为螺管B比螺管A更长。作为$F_{zAB}(0)$中关键要素的螺管B的$B_r$在其室温孔内是0，而此处正式螺管A放置的位置。
+当$b_A/b_B\rightarrow 0$时有$F_{zAB}(0)\rightarrow 0$。这在物理上很容易理解，
+因为螺管B比螺管A更长。式3.57右侧第二项给出的作为$F_{zAB}(0)$关键项的螺管B的$B_r$在其室温孔内是0，
+而螺管A恰置于此处。
 
-\subsubsection{施于B上的中平面轴向力}
-螺线管B的中平面上的轴向力的表达式与螺管A非常相似。我们可以通过变量替换的方式，直接从前几部分的方程得到。螺管B的中平面总轴向力$F_{zB}(0)$是$F_{zBB}(0)$与$F_{zBA}(0)$之和。其中，$F_{zBB}(0)$是由其自身左半部分产生的中平面轴向力，$F_{zBA}(0)$是螺线管A产生的。
-\begin{equation}
-\begin{split}
-F_{zB}(0)=&-\frac{\mu_0}{2}\bigg[(\frac{N_BI_B}{2b_B})^2\times\\
-&\{2b_B\sqrt{4a_B^2+b_B^2}[K(k_{bB})-E(k_{bB})]-2b_B\sqrt{4a_B^2+4b_B^2}[K(K_{2bB})-E(k_{2bB})]\}\\
-&+(\frac{N_BI_B}{2b_B})(\frac{N_AI_A}{2b_A})\big(\frac{2b_A}{\sqrt{a_T^2+b_A^2}}\{[a_T^2+b_A^2][K(k_A)-E(k_A)]-\Upsilon(c^2,k_A)\}\\
-&+\frac{b_D}{\sqrt{a_T^2+b_D^2}}\{[a_T^2+b_D^2][K(k_D)-E(k_D)]-\Upsilon(c^2,k_D)\}\\
-&-\frac{b_T}{\sqrt{a_T^2+b_T^2}}\{[a_T^2+b_T^2][K(k_T)-E(k_T)]-\Upsilon(c^2,k_T)\}\big)\bigg]
-\end{split}
-\end{equation}
+\subsubsection{螺管B所受中平面轴向力}
+螺线管B的中平面轴向力表达式与螺管A非常相似。
+我们可以通过变量替换的方式，直接由前几部分已给出的表达式得到。
+螺管B所受总中平面轴向力$F_{zB}(0)$是$F_{zBB}(0)$与$F_{zBA}(0)$之和。
+其中，$F_{zBB}(0)$来自其自身左半部分，$F_{zBA}(0)$来自螺管A。
+\begin{align}
+F_{zB}(0)=&-\frac{\mu_0}{2}\bigg[\left(\frac{N_BI_B}{2b_B}\right)^2\times\\\notag
+&\{2b_B\sqrt{4a_B^2+b_B^2}[K(k_{bB})-E(k_{bB})]-2b_B\sqrt{4a_B^2+4b_B^2}[K(K_{2bB})-E(k_{2bB})]\}\\\notag
+&+\left(\frac{N_BI_B}{2b_B}\right)\left(\frac{N_AI_A}{2b_A}\right)\bigg(\frac{2b_A}{\sqrt{a_T^2+b_A^2}}\{[a_T^2+b_A^2][K(k_A)-E(k_A)]-\Upsilon(c^2,k_A)\}\\\notag
+&+\frac{b_D}{\sqrt{a_T^2+b_D^2}}\{[a_T^2+b_D^2][K(k_D)-E(k_D)]-\Upsilon(c^2,k_D)\}\\\notag
+&-\frac{b_T}{\sqrt{a_T^2+b_T^2}}\{[a_T^2+b_T^2][K(k_T)-E(k_T)]-\Upsilon(c^2,k_T)\}\bigg)\bigg]
+\end{align}
 
-式中的$c^2$同样有方程3.47给出，模量$k_{2b_B},k_A$如下给出：
+式中的$c^2$同样由式3.47给出。模量$k_{2b_B},k_A$如下式，其他模量与式3.56相同：
 \begin{equation*}
 k_{2bB}^2=\frac{a_B^2}{4a_B^2+4b_B^2};\quad \quad k_A^2=\frac{4a_Aa_B}{a_T^2+b_A^2}
 \end{equation*}
 
-其他模量与方程3.56相同。
-
-\subsubsection{特例12：施于B的中平面轴向力---A和B均``长"但B比A更长}
-如特例11所述时，我们有：
+\subsubsection{特例12：螺管B所受中平面轴向力---A和B均``长"但B比A更长}
+条件参数与特例11所述相同，我们有：
 \begin{equation}
 \begin{split}
-F_{zB}(0)\simeq&-\frac{\mu_0}{2}\big\{(\frac{N_BI_B}{2b_B})^2\pi a_B^2+(\frac {N_BI_B}{2b_B})(\frac{N_AI_A}{2b_A})[\pi(a_A^2+a_B^2)\\
-&-(a_A-a_B)^2[2\Pi(c^2,k_A)+\Pi(c^2,k_D)-\Pi(c^2,k_T)]]\big\}
+F_{zB}(0)\simeq-\frac{\mu_0}{2}\bigg\{&\left(\frac{N_BI_B}{2b_B}\right)^2\pi a_B^2+\left(\frac {N_BI_B}{2b_B}\right)\lefet(\frac{N_AI_A}{2b_A}\right)\bigg[\pi(a_A^2+a_B^2)\\
+&-(a_A-a_B)^2[2\Pi(c^2,k_A)+\Pi(c^2,k_D)-\Pi(c^2,k_T)]\bigg]\bigg\}
 \end{split}
 \end{equation}
 
-如特例11中，方程3.59a中的第二项表示的$F_{zBA}$是可以忽略的，这是由于螺管A的$B_r$影响螺管A两端附近位置轴线上的螺管B。
+与特例11类似，式3.59中第二项表示的$F_{zBA}$不可忽略，
+因为螺管A的$B_r$对螺管B靠近螺管A两端的轴向位置上均不可忽略。
 
-\subsubsection{特例13：施于B的中平面轴向力---A和B均``长"但B比A短很多}
-当两个螺管都是``长"的，但螺管B比螺管A短很多($b_D^2\rightarrow b_A^2\gg a_T^2$)时，方程3.58简化为：
+\subsubsection{特例13：螺管B所受中平面轴向力---A和B均``长"但B比A短很多}
+当两个螺管都是``长"的($b_B^2\gg a_T^2；b_A^2\gg a_T^2$)但螺管B比螺管A短很多
+($b_D^2\rightarrow b_A^2\gg a_T^2$)时，式3.58简化为：
 \begin{equation*}
-F_{zB}(0)\simeq-\frac{\mu_0}{2}\left(\frac{N_BI_B}{2b_B}\right)^2\pi a_B^2 \tag{3.59'}
+F_{zB}(0)\simeq-\frac{\mu_0}{2}\left(\frac{N_BI_B}{2b_B}\right)^2\pi a_B^2 \tag{3.59b}
 \end{equation*}
 
-方程3.59b可以类比为特例11中的3.57b。也可以用相同的物理原因解释这个结果。
+式3.59可类比于特例11中的式3.57b；那里的物理解释也可以用在这里。
 
-\subsection{轴向偏心螺管的轴向恢复力}
-当每一个螺管的轴向场都是指向同一个方向并且螺管A和螺管B的轴中心失配距离为$\rho$时，将产生一个轴向恢复力$F_{zR}(\rho)$以对齐轴中心。$F_{zR}(\rho)$可以写为：
+
+\subsection{轴向偏心螺管组的轴向恢复力}
+当螺管A和螺管B的轴向场指向同一方向但中轴线失配距离为$\rho$时，
+会产生一个轴向恢复力$F_{zR}(\rho)$，让两者中轴线对齐。$F_{zR}(\rho)$可写为：
 \begin{equation}
 \begin{split}
-F_{zR}(\rho)=&-\frac{\mu_0}{2}(\frac{N_AI_A}{2b_A})(\frac{N_BI_B}{2b_B})\times\\
-&(\frac{b_T-\rho}{\sqrt{a_T^2+(b_T-\rho)^2}}\left\{[a_T^2+(b_T-\rho)^2][K(k_{T-})-E(k_{T-})]-\Upsilon(c^2,k_{T-})\right\}\\
+F_{zR}(\rho)=&-\frac{\mu_0}{2}\left(\frac{N_AI_A}{2b_A}\right)\left(\frac{N_BI_B}{2b_B}\right)\times\\
+&\bigg(\frac{b_T-\rho}{\sqrt{a_T^2+(b_T-\rho)^2}}\left\{[a_T^2+(b_T-\rho)^2][K(k_{T-})-E(k_{T-})]-\Upsilon(c^2,k_{T-})\right\}\\
 &+\frac{b_D+\rho}{\sqrt{a_T^2+(b_T+\rho)^2}}\left\{[a_T^2+(b_D+\rho)^2][K(k_{D+})-E(k_{D+})]-\Upsilon(c^2,k_{D+})\right\}\\
 &-\frac{b_T+\rho}{\sqrt{a_T^2+(b_T+\rho)^2}}\left\{[a_T^2+(b_T+\rho)^2][K(k_{T+})-E(k_{T+})]-\Upsilon(c^2,k_{T+})\right\}\\
-&-\frac{b_D-\rho}{\sqrt{a_T^2+(b_D-\rho)^2}}\left\{[a_T^2+(b_D-\rho)^2][K(k_{D-})-E(k_{D-})]-\Upsilon(c^2,k_{D-})\right\})
+&-\frac{b_D-\rho}{\sqrt{a_T^2+(b_D-\rho)^2}}\left\{[a_T^2+(b_D-\rho)^2][K(k_{D-})-E(k_{D-})]-\Upsilon(c^2,k_{D-})\right\}\bigg)
 \end{split}
 \end{equation}
-
-式中，$a_T=a_A+a_B, b_T=b_A+b_B, b_D=b_A−b_B$。模量：
+式中，$a_T=a_A+a_B, b_T=b_A+b_B, b_D=b_A−b_B$。模量为：
 $$
-k_{T+}^2=\frac{4a_Aa_B}{a_T^2+(b_T+\rho)^2}; k_{T-}^2=\frac{4a_Aa_B}{a_T^2+(b_T-\rho)^2};$$
-$$k_{D+}^2=\frac{4a_Aa_B}{a_T^2+(b_D+\rho)^2};  k_{D-}^2=\frac{4a_Aa_B}{a_T^2+(b_D-\rho)^2}$$
+k_{T+}^2=\frac{4a_Aa_B}{a_T^2+(b_T+\rho)^2};\qquad k_{T-}^2=\frac{4a_Aa_B}{a_T^2+(b_T-\rho)^2};$$
+$$k_{D+}^2=\frac{4a_Aa_B}{a_T^2+(b_D+\rho)^2}; \qquad k_{D-}^2=\frac{4a_Aa_B}{a_T^2+(b_D-\rho)^2}$$
 
 
-\subsubsection{特例14：不存在轴向失配}
-当$\rho=0, k_{T+}^2=k_{T-}^2, k_{D+}^2=k_{D-}^2$时，有$F_{zR}(\rho)=0$。这和物理上的预期是一致的。
+\subsubsection{特例14：轴向对齐}
+当$\rho=0, k_{T+}^2=k_{T-}^2, k_{D+}^2=k_{D-}^2$时，有$F_{zR}(\rho)=0$。这和物理上的预期一致。
 
-\subsubsection{特例15：微小的轴向失配}
+\subsubsection{特例15：``小''的轴向失配}
 对于很小的失配，规定为$\rho\ll \sqrt{a_T^2+b_D^2}$，$F_{zR}(\rho)$正比于$\rho$：
 \begin{equation}
-F_{zR}(\rho)\propto-(\frac{N_AI_A}{2b_A})(\frac{N_BI_B}{2b_B})\rho
+F_{zR}(\rho)\propto-\left(\frac{N_AI_A}{2b_A}\right)\left(\frac{N_BI_B}{2b_B}\right)\rho
 \end{equation}
 
-方程3.61后面将用来推导小失配距离线圈A和B之间的互感表达式$M_{AB}(\rho)$。
+后文将使用式3.61推导小轴向失配($\rho\ll \sqrt{a_T^2+b_D^2}$)螺管A和B间的互感$M_{AB}(\rho)$。
+
+
+
 
 \subsubsection{特例16：某一螺管是``长"的}
 如果螺管A或螺管B之一是``长"的，这个更长的螺管的轴向场将成为均匀的，其$B_r$就很小了，哪怕两个线圈之间存在可观的失配，长螺管在短线圈上也只产生很小的轴向力。方程3.60在$b^2_T\gg a_T^2,b_D^2\gg a_T^2$时前两个+项和后两个-项抵消，有$F_{zR}(\rho)\rightarrow 0$。
