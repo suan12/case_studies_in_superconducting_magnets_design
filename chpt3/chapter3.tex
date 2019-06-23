@@ -752,9 +752,9 @@ F_{zB}(0) =& F_{zBB}(0)+F_{zBA}(0)
 于是，
 \begin{align}
 F_{zA}(0)=&-\frac{\mu_0}{2}\left(\frac{N I}{4b}\right)\times \\\notag
-&( \{2b\sqrt{4a_A^2+b^2}[K(k_{b_A})-E(k_{b_A})]-2b\sqrt{4a_A^2+4b^2}[K(k_{2b_A})-E(k_{2b_A})]\}\\\notag
+&\bigg( \{2b\sqrt{4a_A^2+b^2}[K(k_{b_A})-E(k_{b_A})]-2b\sqrt{4a_A^2+4b^2}[K(k_{2b_A})-E(k_{2b_A})]\}\\\notag
 &+\frac{2b}{\sqrt{a_T^2+b^2}} \{[a_T^2+b^2][K(k_{b})-E(k_{b})]-\Upsilon(c^2,k_b)\}\\\notag
-&-\frac{2b}{\sqrt{a_T^2+4b^2}} \{[a_T^2+4b^2][K(k_{2b})-E(k_{2b})]-\Upsilon(c^2,k_{2b}) \})
+&-\frac{2b}{\sqrt{a_T^2+4b^2}} \{[a_T^2+4b^2][K(k_{2b})-E(k_{2b})]-\Upsilon(c^2,k_{2b}) \}\bigg)
 \end{align}
 
 其中，$c^2$已在3.47给出。四个模量分别为：
@@ -827,9 +827,9 @@ $b_A$替$2b_A$，$−(b_A+b_B)$替$\rho$，$2b_B$不变，$c^2$仍由式3.47给�
 \begin{equation}
 \begin{split}
 F_{zA}(0)=&\frac{\mu_0}{2}\bigg[\left(\frac{N_A I_A}{2b_A}\right)^2\times \{2b_A\sqrt{4a_A^2+b_A^2}[K(k_{bA})-E(k_{bA})]-2b_A\sqrt{4a_A^2+4b_A^2}[K(k_{2bA})-E(k_{2bA})]\}\\
-&+\left(\frac{N_AI_A}{2b_A}\right)\left(\frac{N_BI_B}{2b_B}\right)\big(\frac{2b_B}{\sqrt{a_T^2+b_B^2}}\{[a_T^2+b_B^2][K(k_B)-E(k_{B})]-\Upsilon(c^2,k_B)\}\\
+&+\left(\frac{N_AI_A}{2b_A}\right)\left(\frac{N_BI_B}{2b_B}\right)\bigg(\frac{2b_B}{\sqrt{a_T^2+b_B^2}}\{[a_T^2+b_B^2][K(k_B)-E(k_{B})]-\Upsilon(c^2,k_B)\}\\
 &-\frac{b_D}{\sqrt{a_T^2+b_D^2}}\{{[a_T^2+b_D^2][K(k_D)-E(k_D)]-\Upsilon(c^2,k_D)}\}\\
-&-\frac{b_T}{\sqrt{a_T^2+b_T^2}}\{[a_T^2+b_T^2][K(k_T)-E(k_T)]-\Upsilon(c^2,k_T^2)\}\big)\bigg]
+&-\frac{b_T}{\sqrt{a_T^2+b_T^2}}\{[a_T^2+b_T^2][K(k_T)-E(k_T)]-\Upsilon(c^2,k_T^2)\}\bigg)\bigg]
 \end{split}
 \end{equation}
 
@@ -841,8 +841,8 @@ $$ k_{bA}^2=\frac{4a_A^2}{4a_A^2+b_A^2}; k_{2bA}^2=\frac{4a_A^2}{4a_A^2+4b_A^2};
 当两个螺线管都是``长"($b_A^2\gg 4a_A^2；b_B^2\gg a_T^2$)的，但长度不一样，比如$b_D^2\gg a_T^2$。
 式3.56可简化为：
 \begin{align}
-F_{zA}(0)\simeq -\frac{\mu_0}{2}\{&\left(\frac{N_AI_A}{2b_A}\right)^2\pi a_A^2+\left(\frac{N_AI_A}{2b_A}\right)\left(\frac{N_BI_B}{2b_{B}}\right)\times\\\notag
-&(a_A-a_B)^2\big[\prod(c^2,k_D)+\prod(c^2,k_T)-2\prod(c^2,k_B)\big]\}
+F_{zA}(0)\simeq -\frac{\mu_0}{2}\bigg\{&\left(\frac{N_AI_A}{2b_A}\right)^2\pi a_A^2+\left(\frac{N_AI_A}{2b_A}\right)\left(\frac{N_BI_B}{2b_{B}}\right)\times\\\notag
+&(a_A-a_B)^2\big[\prod(c^2,k_D)+\prod(c^2,k_T)-2\prod(c^2,k_B)\big]\bigg\}
 \end{align}
 
 式3.57右侧的第二项代表$F_{zAB}$。
@@ -886,7 +886,7 @@ F_{zB}(0)\simeq -\frac{\mu_0}{2}\bigg\{&\left(\frac{N_BI_B}{2b_B}\right)^2\pi a_
 \end{align}
 
 与特例11类似，式3.59中第二项表示的$F_{zBA}$不可忽略，
-因为螺管A的$B_r$对螺管B靠近螺管A两端的轴向位置上均不可忽略。
+因为螺管A的$B_r$在螺管B靠近螺管A两端的轴向位置上均不可忽略。
 
 \subsubsection{特例13：螺管B所受中平面轴向力---A和B均``长"但B比A短很多}
 当两个螺管都是``长"的($b_B^2\gg a_T^2；b_A^2\gg a_T^2$)但螺管B比螺管A短很多
@@ -943,8 +943,8 @@ F_{zR}(\rho)\propto-\left(\frac{N_AI_A}{2b_A}\right)\left(\frac{N_BI_B}{2b_B}\ri
 \frac{\partial \tau_{rz}}{\partial r}-\frac{\tau_{rz}}{r}+\frac{\partial \sigma_z}{\partial z}=&-\lambda JB_r(r,z)
 	\end{align}
 \end{subequations}
-边界条件为：$\sigma_r(r=a_1,z)=0;\sigma_r(r=a_2,z)=0;\sigma_z(r,z=\pm b)=0;\tau_{rz}(r=a_1,z)=0;\tau_{rz}(r=a_2,z)=0;\tau_{rz}(r,z=\pm b)=0$。
 
+相应的边界条件为：$\sigma_r(r=a_1,z)=0;\sigma_r(r=a_2,z)=0;\sigma_z(r,z=\pm b)=0;\tau_{rz}(r=a_1,z)=0;\tau_{rz}(r=a_2,z)=0;\tau_{rz}(r,z=\pm b)=0$。
 可见，剪切力是耦合式3.62a和3.62b的唯一变量。大多数LTS和HTS复合超导体都可以视为正交各向异性，
 即可用Hooke定律。正交各向异性材料的Young模量，Poisson比等机械性质在三个正交方向不同但关于正交方向对称。
 应变$\epsilon_r,\epsilon_\theta,\epsilon_z$分别为$r,\theta,z$向，剪切应变$\gamma_{rz}$位于$r-z$平面，各自与相应应力关联：
@@ -1025,15 +1025,18 @@ u_r^T=\frac{1-\nu_{r\theta}\nu_{\theta r}}{E_r}\lambda J\sum_{k=0}^{n}\frac{b_k 
 \end{equation}
 
 \subsection{各向同性螺管的应力应变方程}
-本节我们推导具有绕组电流密度$\lambda J$的各向同性螺线管径向和方位角方向的应力。
-绕组中的轴向场从$B_z(r = a_1)\equiv B_1$到$B_z(r = a_2)\equiv B_2$随r线性变化。
-注意到在嵌套线圈磁体中，$B_1，B_2$都可能包括由位于外部的``长"线圈产生的不均匀背景场。
-我们定义两个无量纲参数：$\kappa\equiv B_2/B_1，\rho = r/a_1$。在一个高场NMR磁体中，最内部的线圈$\kappa$会超过$0.9$；对一个孤立的线圈，大概是$-0.1$；对于无限长孤立线圈，有$\kappa=0$。于是，方程3.62a可以修正为：
+本节我们推导绕组电流密度为$\lambda J$的各向同性螺管的径向和周向的应力。
+绕组中的轴向场随$r$线性变化，变化范围为$B_z(r = a_1)\equiv B_1$到$B_z(r = a_2)\equiv B_2$。
+注意到在嵌套线圈磁体中，$B_1，B_2$中都可能含有由位于外部的``长"线圈产生的均匀背景场。
+定义两个无量纲参数：$\kappa\equiv B_2/B_1，\rho = r/a_1$。
+在高场NMR磁体中，最内部的线圈的$\kappa$会超过$0.9$；
+对孤立线圈，$\kappa$大概是$-0.1$；对于无限长孤立线圈，有$\kappa=0$。
+于是，式3.62a可以重写为：
 \begin{equation}
 \frac{d\sigma_{\rho}}{d\rho}+\frac{\sigma_\rho-\sigma_\theta}{\rho}=-\frac{\lambda JB_1a_1}{\alpha-1}[\alpha-\kappa-(1-\kappa)\rho]
 \end{equation}
 
-对于各向同性材料，考虑热应变$\epsilon_T$的应变为：
+对于各向同性材料，考虑热应变$\epsilon_T$后的总应变为：
 \begin{subequations}
 	\begin{align}
 \epsilon_\rho=&\frac{1}{E}(\sigma_\rho-\nu\sigma_\theta)+\epsilon_T\\
@@ -1049,119 +1052,147 @@ u_r^T=\frac{1-\nu_{r\theta}\nu_{\theta r}}{E_r}\lambda J\sum_{k=0}^{n}\frac{b_k 
 	\end{align}
 \end{subequations}
 
-应变是和位移$u$有关的：
+应变和位移$u$有关(此处仅考虑$r$向)：
 \begin{equation*}
 \epsilon_\rho=\frac{1}{a_1}\frac{du}{d\rho};\quad \epsilon_\theta=\frac{1}{a_1}\frac{u}{\rho} \tag{3.72c}
 \end{equation*}
 
-联立3.72a-3.72c，我们得到：
+联立式3.72a-3.72c，得：
 \begin{align*}
-\sigma_\rho=&\frac{E}{(1-\nu^2)a_1}[\frac{du}{d\rho}+\nu\frac{u}{\rho}-a_1(1+\nu)\epsilon_T]\tag{3.72d}\\ 
-\sigma_\theta=&\frac{E}{(1-\nu^2)a_1}[\frac{u}{\rho}+\nu\frac{du}{d\rho}-a_1(1+\nu)\epsilon_T] \tag{3.72e}
+\sigma_\rho=&\frac{E}{(1-\nu^2)a_1}\left[\frac{du}{d\rho}+\nu\frac{u}{\rho}-a_1(1+\nu)\epsilon_T\right]\tag{3.72d}\\ 
+\sigma_\theta=&\frac{E}{(1-\nu^2)a_1}\left[\frac{u}{\rho}+\nu\frac{du}{d\rho}-a_1(1+\nu)\epsilon_T\right] \tag{3.72e}
 \end{align*}
 
-联立3.70和方程3.92d，3.72e，得到：
+联立式3.70和3.92d，3.72e，得到：
 \begin{equation}
-\frac{d^2u}{d\rho^2}+\frac{1}{\rho}\frac{du}{d\rho}-\frac{u}{\rho^2}=-(\frac{1-\nu^2}{E})(\frac{\lambda JB_1a_1^2}{\alpha-1})[\alpha-\kappa-(1-\kappa)\rho] %(3.73)
+\frac{d^2u}{d\rho^2}+\frac{1}{\rho}\frac{du}{d\rho}-\frac{u}{\rho^2}=-\left(\frac{1-\nu^2}{E}\right)\left(\frac{\lambda JB_1a_1^2}{\alpha-1}\right)[\alpha-\kappa-(1-\kappa)\rho] %(3.73)
 \end{equation}
 
 方程3.73的通解为：
 \begin{equation}
-u=C_1\rho+\frac{C_2}{\rho}-(\frac{1-\nu^2}{E})(\frac{\lambda JB_1a_1^2}{\alpha-1})[\frac{(\alpha-\kappa)\rho^2}{3}-\frac{(1-\kappa)\rho^3}{8}]%\(3.74)
+u=C_1\rho+\frac{C_2}{\rho}-\left(\frac{1-\nu^2}{E}\right)\left(\frac{\lambda JB_1a_1^2}{\alpha-1}\right)\left[\frac{(\alpha-\kappa)\rho^2}{3}-\frac{(1-\kappa)\rho^3}{8}\right]%\(3.74)
 \end{equation}
-
-式中，$C_1,C_2$是由$\rho=1$和$\rho=\alpha$处的边界条件确定的常数；最后一项是特解。联立3.74,3.72d和3.72e，我们得到：
+式中，$C_1,C_2$是由$\rho=1$和$\rho=\alpha$处的边界条件确定的常数；最后一项是特解。联立式3.74，3.72d和3.72e，得：
 \begin{subequations}
 	\begin{align}
 \sigma_\rho=&\frac{E}{(1-\nu^2)a_1}\left[(1+\nu)C_1-(1-\nu)\frac{C_2}{\rho^2}\right] \\ \nonumber
-&-\left\{\frac{\lambda JB_1a_1}{\alpha-1}[\frac{2+\nu}{3}(\alpha-\kappa)\rho-\frac{3+\nu}{8}(1-\kappa)\rho^2]\right\}-\frac{E\epsilon_T}{1-\nu}\\
+&-\left\{\frac{\lambda JB_1a_1}{\alpha-1}\left[\frac{2+\nu}{3}(\alpha-\kappa)\rho-\frac{3+\nu}{8}(1-\kappa)\rho^2\right]\right\}-\frac{E\epsilon_T}{1-\nu}\\
 \sigma_\theta=&\frac{E}{(1-\nu^2)a_1}\left[(1+\nu)C_1+(1-\nu)\frac{C_2}{\rho^2}\right]\\ \nonumber
-&-\left\{\frac{\lambda JB_1\alpha_1}{\alpha-1}[\frac{1+2\nu}{3}(\alpha-\kappa)\rho-\frac{1+3\nu}{8}(1-\kappa)\rho^2]\right\}-\frac{E\epsilon_T}{1-\nu}
+&-\left\{\frac{\lambda JB_1\alpha_1}{\alpha-1}\left[\frac{1+2\nu}{3}(\alpha-\kappa)\rho-\frac{1+3\nu}{8}(1-\kappa)\rho^2\right]\right\}-\frac{E\epsilon_T}{1-\nu}
 	\end{align}
 \end{subequations}
 
 代入$\sigma_{\rho}(1)=0$和$\sigma_{\rho}(\alpha)=0$，我们得到$C_1,C_2$的表达式：
 \begin{subequations}
 	\begin{align}
-{[(1+\nu)C_1-(1-\nu)C_2]}=&\frac{1-\nu^2}{E}(\frac{\lambda JB_1a_1^2}{\alpha-1})\notag\\
-&\times\left[\frac{2+\nu}{3}(\alpha-\kappa)-\frac{3+\nu}{8}(1-\kappa)\right]+a_1(1+\nu)\epsilon_T\\
-{[(1+\nu)C_1-(1-\nu)\frac{C_2}{\alpha^2}]}=&\frac{1-\nu^2}{E}(\frac{\lambda JB_1a_1^2}{\alpha-1}) \notag\\ 
-&\times\left[\frac{2+\nu}{3}(\alpha-\kappa)\alpha-\frac{3+\nu}{8}(1-\kappa)\alpha^2\right] +a_1(1+\nu)\epsilon_T
+{[(1+\nu)C_1-(1-\nu)C_2]}=&\frac{1-\nu^2}{E}\left(\frac{\lambda JB_1a_1^2}{\alpha-1}\right)
+\times\left[\frac{2+\nu}{3}(\alpha-\kappa)-\frac{3+\nu}{8}(1-\kappa)\right]\notag\\
+&+a_1(1+\nu)\epsilon_T\\
+{[(1+\nu)C_1-(1-\nu)\frac{C_2}{\alpha^2}]}=&\frac{1-\nu^2}{E}\left(\frac{\lambda JB_1a_1^2}{\alpha-1}\right) \times\left[\frac{2+\nu}{3}(\alpha-\kappa)\alpha-\frac{3+\nu}{8}(1-\kappa)\alpha^2\right]\notag\\
+& +a_1(1+\nu)\epsilon_T
 	\end{align}
 \end{subequations}
 
 解出$C_1,C_2$：
 \begin{align*}
-C_1=&\frac{1-\nu}{E}(\frac{\lambda JB_1a_1^2}{\alpha^2-1})\notag\\
-&\times\left[\frac{2+\nu}{3}(\alpha-\kappa)(\alpha^2+\alpha+1)
--\frac{3+\nu}{8}(1-\kappa)(\alpha+1)(\alpha^2+1)\right]
-+a_1\epsilon_T\tag{3.76c}\\
-C_2=&\frac{1+\nu}{E}(\frac{\lambda JB_1a_1\alpha^2}{\alpha^2-1})\times \left[\frac{2+\nu}{3}(\alpha-\kappa)-\frac{3+\nu}{8}(1-\kappa)(\alpha+1)\right]\tag{3.76d}
+C_1=&\frac{1-\nu}{E}\left(\frac{\lambda JB_1a_1^2}{\alpha^2-1}\right)
+\times\left[\frac{2+\nu}{3}(\alpha-\kappa)(\alpha^2+\alpha+1)
+-\frac{3+\nu}{8}(1-\kappa)(\alpha+1)(\alpha^2+1)\right] \notag\\
+&+a_1\epsilon_T\tag{3.76c}\\
+C_2=&\frac{1+\nu}{E}\left(\frac{\lambda JB_1a_1\alpha^2}{\alpha^2-1}\right)\times \left[\frac{2+\nu}{3}(\alpha-\kappa)-\frac{3+\nu}{8}(1-\kappa)(\alpha+1)\right]\tag{3.76d}
 \end{align*}
 
-将方程3.76c和3.76d代入3.75，我们可以得到：
+将3.76c和3.76d代入3.75，可得：
 \begin{subequations}
 	\begin{align}
-\sigma_\rho=&\frac{\lambda JB_1a_1}{\alpha-1}[\frac{2+\nu}{3}(\alpha-\kappa)(\frac{\alpha^2+\alpha+1-\frac{\alpha^2}{\rho^2}}{\alpha+1}-\rho) \\ \nonumber
-&-\frac{3+\nu}{8}(1+\kappa)(\alpha^2+1-\frac{\alpha^2}{\rho^2}-\rho^2)]\\
-\sigma_\theta=&\frac{\lambda JB_1a_1}{\alpha-1}\{(\alpha-\kappa)[\frac{2+\nu}{3}(\frac{\alpha^2+\alpha+1+{\frac{\alpha^2}{\rho^2}}}{\alpha+1})-\frac{1+2\nu}{3}\rho] \\ \nonumber
-&-(1-\kappa)[\frac{3+\nu}{8}(\alpha^2+1+\frac{\alpha^2}{\rho^2})-\frac{1+3\nu}{8}\rho^2]\}
+\sigma_\rho=\frac{\lambda JB_1a_1}{\alpha-1}&\bigg[\frac{2+\nu}{3}(\alpha-\kappa)\left(\frac{\alpha^2+\alpha+1-\frac{\alpha^2}{\rho^2}}{\alpha+1}-\rho\right) \\ \nonumber
+&-\frac{3+\nu}{8}(1+\kappa)\left(\alpha^2+1-\frac{\alpha^2}{\rho^2}-\rho^2\right)\bigg]\\
+\sigma_\theta=&\frac{\lambda JB_1a_1}{\alpha-1}&\bigg\{(\alpha-\kappa)\big[\frac{2+\nu}{3}\left(\frac{\alpha^2+\alpha+1+{\frac{\alpha^2}{\rho^2}}}{\alpha+1}\right)-\frac{1+2\nu}{3}\rho\big] \\ \nonumber
+&-(1-\kappa)\big[\frac{3+\nu}{8}\left(\alpha^2+1+\frac{\alpha^2}{\rho^2}\right)-\frac{1+3\nu}{8}\rho^2\big]\bigg\}
 	\end{align}
 \end{subequations}
 
-\subsubsection{薄壁线圈}
-图3.10a和3.10b分别画出了薄壁线圈(这里$\alpha=1.2$)的归一化方位角向应力($\varsigma_\theta\equiv \sigma_{\theta}/(\lambda J B_1 a_1)$)和径向应力($\varsigma_r\equiv \sigma_{\rho}/(\lambda J B_1 a_1)$)与归一化径向距离($\rho\equiv r/a_1$ )在几个特定的``场比率"($\kappa\equiv B_2/B_1$)下的关系。
-我们发现，$\kappa=-0.1$对应孤立螺管；$\kappa=0$对应无限长线圈；$\kappa>0$对应处于均匀背景场中的线圈。
+\subsubsection{``薄壁''线圈}
+图3.10a和3.10b分别画出了``薄壁''线圈(这里$\alpha=1.2$)的归一化周向应力$\varsigma_\theta$($\equiv \sigma_{\theta}/(\lambda J B_1 a_1)$)和径向应力$\varsigma_r$($\equiv \sigma_{\rho}/(\lambda J B_1 a_1)$)与归一化径向距离$\rho$($\equiv r/a_1$ )在几个特定的``磁场比"$\kappa$($equiv B_2/B_1$)下的关系。
+应注意，$\kappa=-0.1$对应孤立螺管；$\kappa=0$对应无限长线圈；$\kappa>0$对应处于均匀背景场中的线圈。
+
+对各个磁场比$\kappa$，$\varsigma_\theta$均为$\rho$的减函数。
+而$\varsigma_r$不同，在$r=a_1$和$r=a_2$时为零，在绕组径向中间位置有极值(极大或极小)。
+
+对于$\kappa>0.5$，绕组总体上有一个正的径向应力，倾向于将各匝分开。
+这种情况一般是应当避免的。减小绕组应力$\varsigma_r$的正效应问题将在3.6.3中简要讨论。
 \begin{figure}
   \centering
- \includegraphics[scale=0.9]{chpt3/figs/fig3.10.eps}
-  \caption{几个$\kappa\equiv B_2/B_1$值下的薄壁线圈($\alpha=1.2$)的特性图：a)归一化切应力$\varsigma_\theta\equiv \sigma_\theta/(\lambda J B_A a_1)$ vs. 归一化径向距离$\rho\equiv r/a_1$；
-  b)归一化径向应力$\varsigma_r \equiv \sigma_\rho/(\lambda J B_A a_1)$ vs.  $\rho$。各图中，$\kappa$的取值均为$-0.1$(最下)；$0$；$0.2$；$0.5$；$0.7$；$0.8$；$0.9$；$0.95$(最顶) }
+ \includegraphics[scale=0.8]{chpt3/figs/fig3.10.eps}
+  \caption{几个$\kappa\equiv B_2/B_1$值下的``薄壁''线圈($\alpha=1.2$)的特性图：a)归一化周向应力$\varsigma_\theta\equiv \sigma_\theta/(\lambda J B_1 a_1)$ vs. 归一化径向距离$\rho\equiv r/a_1$；
+  b)归一化径向应力$\varsigma_r \equiv \sigma_\rho/(\lambda J B_1 a_1)$ vs. 归一化径向距离$\rho$。图中的$\kappa$的取值为$-0.1$(最下)；$0$；$0.2$；$0.5$；$0.7$；$0.8$；$0.9$；$0.95$(最顶) }
 \end{figure}
 
-对于$\kappa>0.5$，绕组总体上有一个正的径向应力，倾向于将各匝分开。这种情况一般是要避免的。
-
-\subsubsection{中等厚度线圈}
-图3.11给出了``中等厚度"线圈($\alpha=1.8$)的类似于图3.10的特性。这里，$\alpha=1.8$。
-在这个中等厚度线圈中，在$\kappa\simeq 0.2$时有$\varsigma>0$；在$\kappa> 0.8$时$\varsigma$超过0.1。也即，一个内插入高场背景场磁体室温孔中的线圈应当是薄壁的，不然，它应当被切分为多个薄壁的。
+\subsubsection{``中等壁厚"线圈}
+图3.11给出了``中等壁厚"线圈($\alpha=1.8$)的类似于图3.10的特性。
+在这个``中等壁厚"线圈中，在$\kappa\simeq 0.2$时有$\varsigma>0$；
+在$\kappa> 0.8$时$\varsigma$超过0.1。
+也即，高背景场磁体室温孔中的``内插''线圈应当是``薄壁''的；不然，就要将之切分为多个``薄壁''的。
 
 \begin{figure}
   \centering
- \includegraphics[scale=0.8]{chpt3/figs/fig3.11.eps}
-  \caption{几个$\kappa\equiv B_2/B_1$值下的中等厚度线圈($\alpha=1.8$)的特性图：a)$\varsigma_\theta\equiv \sigma_\theta/(\lambda J B_A a_1)$ vs.$\rho$；
-  b)$\varsigma_r \equiv \sigma_\rho/(\lambda J B_A a_1)$ vs. $\rho$。各图中，$\kappa$的取值均为$-0.1$(最下)；$0$；$0.2$；$0.5$；$0.7$；$0.8$；$0.9$；$0.95$(最顶) }
+ \includegraphics[scale=0.7]{chpt3/figs/fig3.11.eps}
+  \caption{几个$\kappa\equiv B_2/B_1$值下的``中等壁厚"线圈($\alpha=1.8$)的特性图：(a)$\varsigma_\theta\equiv \sigma_\theta/(\lambda J B_1 a_1)$ vs.$\rho$；
+  (b)$\varsigma_r \equiv \sigma_r/(\lambda J B_1 a_1)$ vs. $\rho$。各图中，$\kappa$的取值均为$-0.1$(最下)；$0$；$0.2$；$0.5$；$0.7$；$0.8$；$0.9$；$0.95$(最顶) }
 \end{figure}
 
-\subsubsection{厚壁线圈}
-类似的，图3.12给出了厚壁线圈($\alpha=3.6$)的特性图，这里$\alpha=3.6$。注意到，$\varsigma_\theta$大致是中等厚度线圈的2倍。最显著的是，厚壁线圈的归一化径向应力只在$\kappa$明显小于0时才为正值。
-有两种实用方法可以令$\sigma_{r}$接近0或者成为负值：1) 预应力绕制线圈；2)在最外层用绑线或高弹性模量材料绑扎。同时，将线圈分割为更薄的线圈不仅降低$\sigma_{r}$还降低$\sigma_{\theta}$。
+\subsubsection{``厚壁''线圈}
+图3.12给出了``厚壁''线圈($\alpha=3.6$)的特性图。
+注意到此时$\varsigma_\theta$大致是``中等壁厚"线圈的2倍。
+``厚壁线圈''最典型的特征是只在$\kappa$明显小于0时其归一化径向应力$\sigma_r$才大于零。
+
+有两种实用方法可以令$\sigma_{r}$接近0或者成为负值：
+1) 预应力绕制线圈；
+2) 在最外层用具有高弹性模量的材料进行绑扎。
+同时，将线圈分割为更薄的线圈不仅降低$\sigma_{r}$还降低$\sigma_{\theta}$。
 \begin{figure}
   \centering
- \includegraphics[scale=0.8]{chpt3/figs/fig3.12.eps}
-  \caption{几个$\kappa\equiv B_2/B_1$值下的中厚壁线圈($\alpha=3.6$)的特性图：a)$\varsigma_\theta\equiv \sigma_\theta/(\lambda J B_A a_1)$ vs. $\rho$；
-  b)$\varsigma_r \equiv \sigma_\rho/(\lambda J B_A a_1)$ vs. $\rho$。各图中，$\kappa$的取值均为$-0.1$(最下)；$0$；$0.2$；$0.5$；$0.7$；$0.8$；$0.9$；$0.95$(最顶) }
+ \includegraphics[scale=0.7]{chpt3/figs/fig3.12.eps}
+  \caption{几个$\kappa\equiv B_2/B_1$值下的``厚壁''线圈($\alpha=3.6$)的特性图：
+(a) $\varsigma_\theta\equiv \sigma_\theta/(\lambda J B_1 a_1)$ vs. $\rho$；
+  (b) $\varsigma_r \equiv \sigma_r/(\lambda J B_1 a_1)$ vs. $\rho$。各图中，$\kappa$的取值均为$-0.1$(最下)；$0$；$0.2$；$0.5$；$0.7$；$0.8$；$0.9$；$0.95$(最顶) }
 \end{figure}
 
+\subsection{张力绕制以减小径向应力}
+这里用演示性的例子来说明张力绕制对减小径向应力$\sigma_{r}$的好处。
+如前所述，$\sigma_{r}$在绕组中应为\textit{负}值以保证各层不会在径向崩析。
+简单来说，当线圈是由预张力导体绕成时，张力产生向内的径向应力，从而减小了绕组内部的径向应力。
+即使绕制过程张力维持恒定，张力效应在绕组中径向的分布也很难写为磁场体力的近似表达式。
+由于绕组张力的存在，轴向和径向的应力只能通过数值分析计算得到。
 
-\subsection{减小径向应力的绕制张力}
-这里用一个例子演示绕组张力对减小径向应力$\sigma_{r}$的好处。如上文所述，$\sigma_{r}$在绕组中应当保持负值以保证各层不再径向分离。简单来说，当线圈是由预张力导体绕成时，张力产生径向的向内应力，减少了绕组内部的径向应力。尽管绕组张力在绕制过程中维持恒定，张力效应在绕组内的径向变化也很难写出为磁力的近似表达式。由于绕组张力的存在，绕向角向和径向的应力计算必须通过数值分析得到。
+考虑一个放置于高场背景磁体室温孔内的内插线圈。
+内插线圈的参数为内径$2a_1=87\ \mathrm{mm}$，外径$2a_2=156.6\ \mathrm{mm}$，对应$\alpha = 1.8$：
+这是一个``中等壁厚"磁体。分析中，假设线圈是``长"的。
+其他参数包括：
+$B_z(r=a_1)\equiv B_1 =28.1\ \mathrm{T}; B_z(r=a_2)\equiv B_2 =24.3\ \mathrm{T};\kappa\equiv B_2/B_1 = 0.865; \lambda J =8.26×10^7 \ \mathrm{A/m^2}$。
+图3.11给出了$\alpha=1.8$时的$\varsigma_r(\rho)$曲线。
+从图中，我们找到归一化径向应力$\varsigma_r\equiv \sigma_r/(\lambda J B_1 a_1)$的最大值为0.11，
+在$\rho=r/a_1=1.3$时取得。于是，最大径向应力为：
+\begin{align*}
+  [\sigma_r]_{mx}=&0.11\lambda JB_1 a_1 \\
+   =&0.11(8.26\times 10^7 \ \mathrm{A/m^2})(28.1\ \mathrm{T})(43.5\times 10^{-3}\ \mathrm{m})=11.1\ \mathrm{MPa}
+\end{align*}
 
-考虑一个放置于高场背景磁体室温孔内的线圈。插入线圈的参数为内径$2a_1=87\ \mathrm{mm}$，外径$2a_2=156.6\ \mathrm{mm}$，即$\alpha = 1.8$：这是一个中等厚度磁体。我们假设线圈是``长"的。插入线圈的其他参数包括：
-$B_z(r=a_1)\equiv B_1 =28.1\ \mathrm{T}; B_z(r=a_2)\equiv B_2 =24.3\ \mathrm{T};\kappa\equiv B_2/B_1 = 0.865; \lambda J =8.26×10^7 \ \mathrm{A/m^2}$。从图3.11的$\varsigma_r(\rho)$在$\alpha=1.8$时的曲线，我们找到归一化径向应力的最大值时0.11，在$\rho=r/a_1=1.3$时取得。于是，最大径向应力为：
-\begin{equation*}
-\begin{split}
-  [\sigma_r]_{mx}=&0.11\lambda JB_1\alpha_1 \\
-   =&0.11(8.26\times 10^7 \ \mathrm{A/m^2})(28.1\ \mathrm{T})(43.5\times 10^{-3}m)=11.1\ \mathrm{MPa}%page105
-\end{split}
-\end{equation*}
-
-$11.1\ \mathrm{MPa}$的径向应力在内插线圈内是难以承受的。图3.13给出了在几个给定绕制张力下(从0到最大$200\ \mathrm{N}\simeq 20\ \mathrm{kg}$)的$\sigma_{r}$和r的关系。本图说明，绕制张力至少要求$160\ \mathrm{N}$才能保证$\sigma_{r}$为0或为负值。
-实践中，可能应用大到200N的张力来绕线圈。对于这个特别的内插磁体，绕制张力$80\ \mathrm{N}$时，最大应力减小至大约$5\ \mathrm{MPa}$。当线圈是用环氧浸渍时，正的径向$5\ \mathrm{MPa}$应力是可以承受的。
+内插线圈难以承受大如$11.1\ \mathrm{MPa}$的径向应力。
+图3.13给出了在从0到最大$200\ \mathrm{N}$($\simeq 20\ \mathrm{kg}$)范围内
+几个绕制张力$\Gamma$下的$\sigma_{r}$和$r$的关系。
+本图说明，绕制张力至少要$160\ \mathrm{N}$才能保证$\sigma_{r}$近似为0或为负值。
+实践中，可能用到大至200 N的张力来绕线圈。
+对于该内插线圈，绕制张力在$80\ \mathrm{N}$时，最大应力减小至大约$5\ \mathrm{MPa}$；
+当线圈是用环氧浸渍时，正的径向$5\ \mathrm{MPa}$应力是可以承受的。
 \begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.7]{chpt3/figs/fig3.13.eps}
   \caption{$\alpha=1.8$的螺管线圈在不同张力$\Gamma$下的$\sigma_r$ vs.$r$。$\Gamma=0$时，$\sigma$取得峰值，在$r\simeq 57.5\ \mathrm{mm}$处约为$11.1\ \mathrm{MPa}$。当张力大于$160\ \mathrm{N}$($\simeq 16\ \mathrm{kg}$)后，处处$\sigma_r\le 0 $。}
 \end{figure}
+
+
+
 
 
 \section{自感}
