@@ -1201,174 +1201,190 @@ $B_z(r=a_1)\equiv B_1 =28.1\ \mathrm{T}; B_z(r=a_2)\equiv B_2 =24.3\ \mathrm{T};
  \Phi=LI %page106
 \end{equation}
 
-比例系数$L$是线圈的自感。注意到$\Phi$是一个``场"量概念，而$I$是一个``路"量概念：$L$将这两个概念连接起来。
-因为``场"的概念必然涉及体积，故$L$是一个与几何有关的量。$L$还与线圈中存储的磁能$E_m$有关：
+比例系数$L$称为线圈自感。
+我们注意到，$\Phi$是一个``场"概念量，而$I$是一个``路"概念量。
+$L$将这两个概念连接起来。由于``场"概念必然涉及体积，故$L$是一个与几何有关的量。
+此外，$L$还与线圈中存储的磁能$E_m$有关：
 \begin{equation}
  E_m=\frac{1}{2}LI^2 %page106
 \end{equation}
 
-对于不含有磁性材料的系统，$E_m$可通过在整个空间积分$(1/2)\mu_0 H^2$计算。可见，$E_m$也是一个``场"量概念；$L$通过方程3.79将$E_m$和$I$连接在一起。
+对于不含有磁性材料的系统，$E_m$可通过在整个空间积分$(1/2)\mu_0 H^2$得到。
+可见，$E_m$也是一个``场"概念量；$L$通过式3.79将$E_m$和$I$联系在一起。
 
 \subsection{圆形闭合回路的自感}
-一根半径为$a$、磁导率为$\mu$的导线围成的半径为$R$的圆环的$L$公式可由Maxwell方程导出：
+Maxwell推导了半径为$a$、磁导率为$\mu$的导线围成的半径为$R$的圆环的自感$L$的计算公式：
 \begin{subequations}
 	\begin{align}
-L=&\mu_0R\left[\ln(\frac{8R}{a}-2)\right]+\frac{1}{4}\mu R \\
-\simeq & \mu_0R\left[\ln(\frac{R}{a})+0.079\right]+\frac{1}{4}\mu R%page106
+L=&\mu_0R\left[\ln\left(\frac{8R}{a}\right)-2\right]+\frac{1}{4}\mu R \\
+\simeq & \mu_0R\left[\ln\left(\frac{R}{a}\right)+0.079\right]+\frac{1}{4}\mu R%page106
 	\end{align}
 \end{subequations}
 
-上述方程的等号右侧，第一项是由圆环内部区域$(0\le r \le R-a)$磁通贡献的自感；第二项由是$2\pi R$长的导线内部贡献的自感圆环自感(问题3.18)。因为导线外部的磁链与频率无关，第一项对所有频率都成立，而第二项是频率相关的。$(1/4)\mu R$仅对低频成立；第二项在高频时趋向于零。第一项的推导是非常复杂的，涉及到椭圆积分等高等数学。
+在上述表达式的等号右侧中，第一项是由圆环内部区域$(0\le r \le R-a)$的磁通交链贡献的自感；
+第二项由是$2\pi R$长的导线内部贡献的自感(问题3.18进一步研究)。
+因为导线外部的磁链与频率无关，故第一项在所有频率下都成立；而第二项与频率相关，即
+$(1/4)\mu R$仅在``低''频下成立，在``高''频时趋向于零。
+式3.80右侧第一项的推导非常复杂，涉及到椭圆积分等高等知识。
 
 \subsection{螺管线圈的自感}
-对于一个不含有铁磁材料，由绕组内径$a_1,\alpha,\beta$以及总匝数$N$确定的螺管线圈的自感$L$可以写为：
+某螺管线圈不含铁磁材料，绕组内径为$a_1$，无量纲参数为$\alpha,\beta$，总匝数为$N$。
+其自感$L$可写为：
 \begin{equation}
-L=\mu_0a_1N^2L(\alpha,\beta)%page107
+L=\mu_0a_1N^2\mathcal{L}(\alpha,\beta)%page107
 \end{equation}
+式中，$\mathrcal{L}(\alpha,\beta)$是一个无量纲电感参数，仅与由$\alpha,\beta$表示的线圈形状有关。
 
-式中，$L(\alpha,\beta)$是一个无量纲电感参数，仅与由$\alpha,\beta$表示的线圈形状有关。图3.14画出了我们感兴趣的$\alpha=1$至$\alpha=5$，$\beta=0.04$至$\beta=10$范围内的$L(\alpha,\beta)$。
-$\beta>1$涵盖了大部分螺管线圈，但``环"和``饼"是重要的例外。如图中所示，$L(\alpha,\beta)$大致上正比于$\alpha$。事实上，当一个粗略的(``ball-park")$L$值足够时，例如在``first-cut"设计阶段，我们可以使用：
+图3.14给出了$\alpha=1$至$\alpha=5$，$\beta=0.04$至$\beta=10$范围内的$\mathcal{L}(\alpha,\beta)$。
+$\beta>1$包括了大部分螺管线圈，但``环"和``饼"是重要的例外。
+如图所示，$\mathcal{L}(\alpha,\beta)$大致正比于$\alpha$。
+事实上，如果$L$的粗略估计值够用，例如在``第一版设计''阶段，我们可以用：
 \begin{subequations}
 	\begin{align}
 \mathcal{L}(\alpha,\beta)\sim&\frac{\pi\alpha}{2(\beta+0.5)} \qquad(\mbox{for } \beta\rightarrow 1\ \mbox{from}\ \beta>1)\\ 
-\mathcal{L}(\alpha,\beta)\sim&\frac{\pi\alpha}{2\beta}\qquad (\mbox{for } \beta\rightarrow \infty)
+\mathcal{L}(\alpha,\beta)\sim&\frac{\pi\alpha}{2\beta}\qquad\qquad (\mbox{for } \beta\rightarrow \infty)
 	\end{align}
 \end{subequations}
 
 \begin{figure}[htbp]
   \centering
- \includegraphics[scale=0.6]{chpt3/figs/fig3.14.eps}
-  \caption{参数$\alpha,\beta$下的$\mathcal{L}(\alpha,\beta)$}
+ \includegraphics[scale=0.7]{chpt3/figs/fig3.14.eps}
+  \caption{螺管线圈参数为$\alpha,\beta$时的$\mathcal{L}(\alpha,\beta)$}
 \end{figure}
 
-对于一个``薄壁"螺管，即$\alpha\simeq 1,\beta\rightarrow \infty$，3.82b简化为$\pi/2\beta$(问题3.18)。
+对于一个``薄壁"螺管，即$\alpha\simeq 1,\beta\rightarrow \infty$，3.82b简化为$\pi/2\beta$。
+问题3.18将给出详细推导。
 
 \subsection{实用电感公式}
-本节给出非磁性材料($\mu=\mu_0$)线圈的电感公式。一些公式的推导，在问题3.18中会再次涉及。
+本节给出无磁性材料($\mu=\mu_0$)线圈的实用电感公式。
+一些公式的推导，在问题3.18中会再次涉及。
 
-尽管过去---电感计算程序大量使用之前---推导出了``厚"线圈的解析表达式并写入工程参考书中，这些公式一般来说是很难用的。图3.14，甚至方程3.82，对大多数应用，特别是早期设计的电感计算足够了。
-
+在有可方便实用的电感计算程序之前，人们推导了``厚壁"绕组电感的解析表达式，在工程手册中可以找到。
+这些公式一般来说是很难用的。对大多数应用，图3.14或者式3.82对电感计算已足够，特别是早期设计阶段。
 
 \textbf{导线}  
   
-  半径为$a$的导线单位长度电感$L[H/m]$为：
+半径为$a$的导线，单位长度电感$L$[H/m]为：
   \begin{equation}
          L=\frac{\mu_0}{8\pi}%page108
   \end{equation}
   
 \textbf{``长"线圈} 
   
-  a. 一个``长"$(β>0.75)$、``薄"($2a_1$)、$N$匝的线圈：
+  a. 一个``长"$(\beta>0.75)$、``薄壁"(内径$2a_1$)$N$匝线圈[3.7]：
 \begin{equation}
   L=\mu_0a_1N^2\left[\frac{\pi(1+\alpha)^2}{8\beta}\right]\left[1-\frac{2}{3\pi\beta}+\frac{(1+\alpha)^2}{32\beta^2}...\right]%page108
 \end{equation}
 
-在$(\alpha−1)/(\alpha+1)\ll 1$时，化简为：
+在$(\alpha−1)/(\alpha+1)\ll 1$时，式3.84成为：
 \begin{equation*}
   L=\mu_0a_1N^2\left(\frac{\pi}{2\beta}\right)\left[1-\frac{2}{3\pi\beta}+\frac{1}{8\beta^2}...\right] \tag{3.84b}%page108
 \end{equation*}
 
-b.一个``很长"($\beta\gg 1$)、``薄"($\alpha \simeq 1$)，方程3.84b成为：
+b.一个``很长"($\beta\gg 1$)且``薄壁"($\alpha \simeq 1$)的线圈，式3.84b成为：
 \begin{equation*}
-  L=\mu_0a_1N^2(\frac{\pi}{2\beta}) \tag{3.84c}%page108
+  L=\mu_0a_1N^2\left(\frac{\pi}{2\beta}\right) \tag{3.84c}%page108
 \end{equation*}
 
-可见，对一个非常长且薄壁的线圈，有$L(\alpha,\beta)=\pi/2\beta$。
+可见，对一个非常长且薄壁的线圈，有$\mathcal{L}(\alpha,\beta)=\pi/2\beta$。
 
 \textbf{``短"线圈}
 
- 一个``短"$(\beta<0.75)$、``薄"($2a_1,\alpha\simeq 1$) 、N匝的线圈：
+ 一个``短"$(\beta<0.75)$、``薄壁"(内径$2a_1,\alpha\simeq 1$) 的$N$匝线圈[3.7]：
   \begin{equation}
   \begin{split}
-L\simeq&\mu_0a_1N^2(\frac{\alpha+1}{2})(ln\{[\frac{2(\alpha+1)}{\beta}][1+\frac{\beta^2}{2(1+\alpha^2)}]\}\\
-&-\frac{1}{2}[1+\frac{\beta^2}{4(1+\alpha^2)}])%page108
+L\simeq&\mu_0a_1N^2\left(\frac{\alpha+1}{2}\right)\bigg(\ln\left\{\left[\frac{2(\alpha+1)}{\beta}\right]\left[1+\frac{\beta^2}{2(1+\alpha^2)}\right]\right\}\\
+&-\frac{1}{2}\left[1+\frac{\beta^2}{4(1+\alpha^2)}\right]\bigg)%page108
   \end{split}
   \end{equation}
   
-  如果$\beta \ll 1$，变为：
+  如果$\beta \ll 1$，则有：
   \begin{equation*}
-L\simeq\mu_0a_1N^2(\frac{\alpha+1}{2})\{ln[\frac{2(\alpha+1)}{\beta}]-0.5\} \tag{3.85'}%page108
+L\simeq\mu_0a_1N^2\left(\frac{\alpha+1}{2}\right)\left\{\ln\left[\frac{2(\alpha+1)}{\beta}\right]-0.5\right\} \tag{3.85b}%page108
 \end{equation*}
 
-\textbf{饼式线圈}
+\textbf{``饼式''(扁平)线圈}
 
-  一个内径$2a_1$、饼式(扁平)($\beta\ll 1$)、N匝线圈：
+一个内径为$2a_1$的饼式(扁平)($\beta\ll 1$)$N$匝线圈[3.7]：
   \begin{equation}
   \begin{split}
-L\simeq & \mu_0a_1N^2(\frac{\alpha+1}{2})\{\ln[\frac{4(\alpha+1)}{\alpha-1}][1+\frac{1}{24}\frac{(\alpha-1)^2}{(\alpha+1)^2}]\\
-&-\frac{1}{2}[1-\frac{43}{144}\frac{(\alpha-1)^2}{(\alpha+1)^2}]\}%page10
+L\simeq & \mu_0a_1N^2\left(\frac{\alpha+1}{2}\right)\bigg\{\ln\left[\frac{4(\alpha+1)}{\alpha-1}\right]\left[1+\frac{1}{24}\frac{(\alpha-1)^2}{(\alpha+1)^2}\right]\\
+&-\frac{1}{2}\left[1-\frac{43}{144}\frac{(\alpha-1)^2}{(\alpha+1)^2}\right]\bigg\}%page10
   \end{split}
 \end{equation}
 
-对于$(\alpha-1)/(\alpha+1)\ll 1$，上式进一步简化为：
+当$(\alpha-1)/(\alpha+1)\ll 1$时，上式进一步简化为：
 \begin{equation*}
-L\simeq\mu_0a_1N^2(\frac{\alpha+1}{2})\{\ln[\frac{4(\alpha+1)}{\alpha-1}]-0.5\} \tag{3.86'}%page109
+L\simeq\mu_0a_1N^2\left(\frac{\alpha+1}{2}\right)\left\{\ln\left[\frac{4(\alpha+1)}{\alpha-1}\right]-0.5\right\} \tag{3.86b}%page109
 \end{equation*}
 
-注意到，对于一个``环"($N=1$)，有$a_1(\alpha+1)=2R,2a_1\beta=2a,a_1(\alpha-1)=2a$，方程3.85b和3.86b都将简化为：
+注意到，对于``环"线圈($N=1$)，有$a_1(\alpha+1)=2R$(环直径)和$2a_1\beta=2a$
+或$a_1(\alpha-1)=2a$(导线直径)，式3.85b和3.86b都将简化为：
 \begin{equation*}
-L\simeq\mu_0R[\ln(\frac{4R}{\alpha})-0.5]=\mu_0R[\ln(\frac{R}{a})+0.886] \tag{3.86''}%page109
+L\simeq\mu_0R\left[\ln\left(\frac{4R}{a}\right)-0.5\right]=\mu_0 R\left[\ln\left(\frac{R}{a}\right)+0.886\right] \tag{3.86c}%page109
 \end{equation*}
 
-方程3.86c应用于具有长方形横截面的环，而3.80a用于圆形截面的环。对一个实际很平($\alpha\gg 1$)的饼，3.86a进一步可以简化为：
+具有\textit{长方形}截面的环线圈用式3.86c，\textit{圆形}截面的环用式3.80a。
+对一个很平($\alpha\gg 1$)的饼式线圈，3.86可以进一步简化为：
 \begin{equation*}
-L  \simeq  0.5\mu_0a_1\alpha N^2\{\ln(\frac{25}{6})-\frac{101}{288}\}=0.538\mu_0a_1\alpha N^2\approx 0.5\mu_0a_2N^2 \tag{3.86'''}%page109
+L  \simeq  0.5\mu_0a_1\alpha N^2\left\{\ln\left(\frac{25}{6}\right)-\frac{101}{288}\right\}=0.538\mu_0a_1\alpha N^2\approx 0.5\mu_0a_2N^2 \tag{3.86'''}%page109
 \end{equation*}
 
-注意到，3.86d中出现的是$a_2$而不是通常出现的$a_1$。
+注意，3.86d中出现的是$a_2$而\textit{不}是$a_1$。
 
-\textbf{理想偶极磁体}
+\textbf{``理想''二极磁体}
 
-  ``理想"偶极磁体---无限长、零绕组厚度、$N$匝---的单位长度电感$L\mathrm{[H/m]}$：
+有$N$匝绕组的``理想"二极磁体(问题3.8)---无限长、零绕组厚度---的\textit{单位长度电感}${L_\ell}$[H/m]为：
 \begin{equation}
-L_l=\frac{1}{8}\mu_0\pi N^2%page109
+L_\ell=\frac{1}{8}\mu_0\pi N^2%page109
 \end{equation}
 
-\textbf{理想四极磁体}
+\textbf{``理想''四极磁体}
 
-  ``理想"四极磁体---无限长、零绕组厚度、N匝---的单位长度长度电感$L\mathrm{[H/m]}$：
+有$N$匝绕组的``理想"四极磁体(问题3.9)---无限长、零绕组厚度---的\textit{单位长度电感}${L_\ell}$[H/m]为$：
   \begin{equation}
 L_l=\frac{1}{16}\mu_0\pi N^2%page109
 \end{equation}
 
-注意到，一个理想偶极子和理想四极子磁体，电感与绕组半径无关，但与长度成正比。
+可见，理想二极磁体和理想四极磁体的电感均与绕组半径无关，但与长度成正比。
 
-\textbf{理想圆截面的环形磁体}
+\textbf{``理想''圆截面的螺绕环}
 
-  ``理想"环形磁体---零绕组厚度、主半径$R$，圆截面半径$a$，匝数N：
+有$N$匝绕组的``理想"圆截面螺绕环磁体(问题3.10)---零绕组厚度、主半径$R$，圆截面半径$a$---的电感：
   \begin{equation}
- L=\mu_0RN^2[1-\sqrt{1-(\frac{a}{R})^2}]%page110
+ L=\mu_0RN^2\left[1-\sqrt{1-\left(\frac{a}{R}\right)^2}\right]%page110
 \end{equation}
 
 在极限$a\ll R$下，$L$近似为：
 \begin{equation*}
- L=\mu_0aN^2(\frac{a}{2R})[1+\frac{1}{4}(\frac{a}{R})^2+\frac{1}{8}(\frac{a}{R})^4+...]\simeq\mu_0aN^2(\frac{a}{2R}) \tag{3.89'}%page110
+ L=\mu_0aN^2\left(\frac{a}{2R}\right)\left[1+\frac{1}{4}\left(\frac{a}{R}\right)^2+\frac{1}{8}\left(\frac{a}{R}\right)^4+\cdots\right]\simeq\mu_0aN^2\left(\frac{a}{2R}\right) \tag{3.89b}%page110
 \end{equation*}
 
-\textbf{``理想"矩形截面的环形磁体体}
+\textbf{``理想"矩形截面的螺绕环}
 
-``理想"环形磁体---零绕组厚度、主半径$R$，矩形截面r轴宽$2a$、z轴高$2b$，匝数N：
-  \begin{equation}
-L=\mu_0bN^2[\frac{1}{\pi}ln(\frac{R+a}{R-a})]%page110
+有$N$匝绕组的``理想"矩形截面螺绕环磁体---零绕组厚度，主半径$R$，矩形截面$r$轴宽$2a$、$z$轴高$2b$---的电感：
+ \begin{equation}
+L=\mu_0bN^2\left[\frac{1}{\pi}\ln\left(\frac{R+a}{R-a}\right)\right]%page110
 \end{equation}
 
 在极限$a\ll R$下，$L$近似为：
 \begin{equation*}
-L=\mu_0bN^2(\frac{2a}{\pi R})[1+\frac{1}{3}(\frac{a}{R})^2+\frac{1}{5}(\frac{a}{R})^4+...]\simeq\mu_0bN^2(\frac{2a}{\pi R}) \tag{3.90'}%page110
+L=\mu_0bN^2\left(\frac{2a}{\pi R}\right)\left[1+\frac{1}{3}\left(\frac{a}{R}\right)^2+\frac{1}{5}\left(\frac{a}{R}\right)^4+\cdots\right]\simeq\mu_0bN^2\left(\frac{2a}{\pi R}\right) \tag{3.90b}%page110
 \end{equation*}
 
 
 
 %%%%第3.8节
 \section{互感}
-当线圈1和线圈2相互靠近时，他们通常会存在感应相互作用。他们的耦合可以量化为互感$M_{12},M_{21}$。显然有$M_{12}=M_{21}$。我们有：
+当两个线圈1和2相互靠近时，他们之间通常会存在电感相互作用。
+他们的耦合可以定量的用互感$M_{12}$或$M_{21}$描述，且有$M_{12}=M_{21}=M$。于是：
 \begin{equation}
 M_{12}\equiv N_1\frac{\Phi_{12}}{I_2}=M_{21}\equiv N_2\frac{\Phi_{21}}{I_1}%page111
 \end{equation}
+式中，$\Phi_{12}$是当线圈2通过电流$I_2$产生的磁通与线圈1的$N_1$匝的交链；
+$\Phi_{21}$是当线圈1通过电流$I_1$产生的磁通与线圈2的$N_2$匝的交链。
 
-$\Phi_{12}$是当线圈2通过电流$I_2$产生的磁通与线圈1的$N_1$匝的交链；
-$\Phi_{21}$是当线圈1通过电流$I_1$产生的磁通与线圈2的$N_2$匝的交链；
-在一个两线圈耦合系统的总磁能$E_m$为：
+两线圈耦合系统的总磁能$E_m$为：
 \begin{equation}
 \begin{split}
 E_m&=\frac{1}{2}L_1I_1^2+\frac{1}{2}L_2I_2^2+\frac{1}{2}M_{12}I_1I_2+\frac{1}{2}M_{21}I_1I_2\\
@@ -1376,48 +1392,50 @@ E_m&=\frac{1}{2}L_1I_1^2+\frac{1}{2}L_2I_2^2+\frac{1}{2}M_{12}I_1I_2+\frac{1}{2}
 \end{split}
 \end{equation}
 
-和自感公式类似，对于一些系统是存在互感公式的。我们感兴趣的，比如耦合同轴螺管组，能计算线圈自感的代码通常也能一个多线圈系统的电感矩阵。
+和自感公式类似，一些特定的线圈可以写出互感表达式。
+用来计算我们感兴趣的线圈系统(如耦合的同轴螺管线圈组)的线圈自感的程序，
+通常能计算多线圈系统的电感矩阵。
 
 \textbf{串联线圈} 
   
-  两个自感为$L_1,L_2$互感为$M_{12}$的两线圈串联系统的有效自感$L_s$为：
+  两个自感为$L_1,L_2$互感为$M_{12}$的两线圈，串联后的有效自感$L_s$为：
   \begin{equation}
    L_s=L_1+L_2 \pm 2M_{12}%page111
   \end{equation}
 
-如果磁场是叠加的，$M_{12}$取+号；反之，取−号。
+如果两者的磁场是加强的，$M_{12}$取$+$号；反之，取$−$号。
 
 \textbf{并联线圈} 
 
-两个自感为$L_1,L_2$互感为$M_{12}$的两线圈并联系统的有效自感$L_s$为：
+两个自感为$L_1,L_2$互感为$M_{12}$的两线圈，并联后的有效自感$L_s$为：
   \begin{equation}
 L_p=\frac{L_1 L_2-M_{12}^2}{L_1+L_2 \mp 2M_{12}}%page111
 \end{equation}
 
 \textbf{互感系数} 
 
-  与$L_1,L_2$有关的互感系数$M_{12}$为：
+互感$M_{12}$与$L_1,L_2$有关：
 \begin{subequations}
 	\begin{align}
 M_{12}=&k\sqrt{L_1L_2}\\%page111
 k=&\frac{M_{12}}{\sqrt{L_1L_2}}%page111
 	\end{align}
 \end{subequations}
+其中，$k$称为耦合系数；$k=0$表示线圈间无耦合，$k=1$表示全耦合。
+对于一对紧密嵌套的螺管线圈，即一个线圈同轴、同心、中平面对齐的放置于位于另一个线圈的室温孔内，
+$k$一般在$0.3-0.6$。当他们的$\alpha$和$\beta$相近时，趋向于0.6；否则，趋向于0.3。
 
-其中，$k$称为耦合系数.$k=0$表示线圈之间是无耦合的，$k=1$表示全耦合。对于一个紧密嵌入的螺管对，即一个线圈同轴、同心位于另一个线圈的室温孔内，$k$一般在$0.3-0.6$。当他们的$\alpha$和$\beta$相近时，趋向于0.6；否则，趋向于0.3。
 
-
-\subsection{互感---几个可解析表达的情况}
+\subsection{互感---几个解析表达式}
 因为线圈之间的力和互感是紧密相连的，前面给出的线圈A和线圈B之间的轴向力解析表达式可以用于导出互感公式。
 根据$\vec{F}=I_A I_B \nabla M$，显然M的表达式要比轴向力的表达式更复杂。因此，下面仅讨论几个简单的例子。
 
-\textbf{两个环线圈之间的互感} 
+\textbf{两个``环"线圈间的互感} 
 
-两个轴对齐的``环"线圈A($2a_A,N_A$)和线圈B($2a_B,N_B$)相距$\rho$，互感$M_{AB}(\rho)$：
+两个轴对齐的``环"线圈A($2a_A,N_A$)和线圈B($2a_B,N_B$)相距$\rho$，其互感$M_{AB}(\rho)$为：
   \begin{equation}
-M_{AB}=\frac{\mu_0}{2}(N_AN_B)\sqrt{(a_A+a_B)^2+\rho^2}\{2[K(k)-E(k)]-k^2K(k)\}%page112
+M_{AB}=\frac{\mu_0}{2}(N_AN_B)\sqrt{(a_A+a_B)^2+\rho^2}\left\{2[K(k)-E(k)]-k^2K(k)\right\}%page112
 \end{equation}
-
 本系统的模量$k^2$为：
 \begin{equation*}
 k^2=\frac{4a_Aa_B}{(a_A+a_B)^2+\rho^2}%page112
@@ -1425,121 +1443,125 @@ k^2=\frac{4a_Aa_B}{(a_A+a_B)^2+\rho^2}%page112
 
 \textbf{特例1：相距很远的两个环形线圈} 
 
-  当两个环线圈相距很远时，即$\rho^2\gg(a_A+a_B)^2$或$k^2\ll 1$时，方程3.38c和3.38a可用来简化方程3.96：
+  当两个环线圈相距很远时，即$\rho^2\gg(a_A+a_B)^2$或$k^2\ll 1$时，可以用式3.38c和3.38a来简化3.96：
 \begin{equation}
-M_{AB}\simeq\frac{\mu_0}{2\pi}[\frac{(\pi a_A^2N_A)(\pi a_B^2N_B)}{\rho^3}]\\%page112
+M_{AB}\simeq\frac{\mu_0}{2\pi}\left[\frac{(\pi a_A^2N_A)(\pi a_B^2N_B)}{\rho^3}\right]\\%page112
 \end{equation}
 
-上式表明，互感近似正比于两个线圈的总绕组面积$\pi a_A^2 N_A$和$\pi a_B^2 N_B$之积。
+上式表明，互感近似正比于两个线圈的总绕组面积---$\pi a_A^2 N_A$和$\pi a_B^2 N_B$---之积除以$\rho^3$。
 
-\textbf{薄壁螺管和环形线圈间的互感} 
+\textbf{``薄壁''螺管线圈和环线圈间的互感} 
 
-  此处，我们考虑一个``薄壁"螺管($2a_S$;均匀匝密度$N_S/2b_S$)和一个环线圈($2a_R,N_R$)在轴向对齐。
-  环线圈位于螺管右端的右侧$\rho$处，如图3.6所示。螺管线圈和环线圈之间的互感$M_{RS}$为：
+  此处，我们考虑一个``薄壁"螺管($2a_S$；均匀匝密度$N_S/2b_S$)和一个环线圈($2a_R,N_R$)，
+  两者在轴向对齐，环线圈位于螺管右端右侧$\rho$处，如图3.6所示。
+  螺管线圈和环线圈间的互感$M_{RS}$为：
   \begin{equation}
   \begin{split}
-M_{RS}(\rho&)=-\frac{\mu_0}{2}(\frac{N_RN_S}{2b_S})\times\\
-&(\frac{\rho}{\sqrt{(a_R^2+a_S^2)^2+\rho^2}}\{[(a_R+a_S)^2+\rho^2][K(k_R)-E(k_R)]-\gamma(c^2,k_R)\}\\
-&-\frac{2b_S+\rho}{\sqrt{(a-R+a_S)^2+(2b_S+\rho)^2}}\times\\
-&\{[(a_R+a_S)^2+(2b_S+\rho)^2][K(k_S)-E(k_S)]-\gamma(c^2,k_S)\})%page112
+M_{RS}(\rho&)=-\frac{\mu_0}{2}\left(\frac{N_RN_S}{2b_S}\right)\times\\
+&\bigg(\frac{\rho}{\sqrt{(a_R^2+a_S^2)^2+\rho^2}}\{[(a_R+a_S)^2+\rho^2][K(k_R)-E(k_R)]-\gamma(c^2,k_R)\}\\
+&-\frac{2b_S+\rho}{\sqrt{(a-R+a_S)^2+(2b_S+\rho)^2}}\times
+\{[(a_R+a_S)^2+(2b_S+\rho)^2][K(k_S)-E(k_S)]-\gamma(c^2,k_S)\}\bigg)%page112
   \end{split}
 \end{equation}
-
-式中的参数为：
+式中，
 \begin{equation*}
-k_R^2=\frac{4a_Ra_S}{(a_R+a_S)^2+\rho^2};k_S^2=\frac{4a_Ra_S}{(a_R+a_S)^2+(2b_S+\rho)^2};c^2=\frac{4a_Ra_S}{(a_R+a_S)^2}%page112
+k_R^2=\frac{4a_Ra_S}{(a_R+a_S)^2+\rho^2};\quad k_S^2=\frac{4a_Ra_S}{(a_R+a_S)^2+(2b_S+\rho)^2};\quad c^2=\frac{4a_Ra_S}{(a_R+a_S)^2}%page112
 \end{equation*}
 
-\textbf{特例2：相距很远的薄壁线圈和环线圈} 
+\textbf{特例2：相距很远的薄壁螺管和环线圈} 
 
-  当两个线圈很远，至于$k_R^2 \ll 1, k_S^2\ll 1,\rho > b_S$时，方程3.98可以简化为：
+  当两个线圈很远，至于满足$k_R^2 \ll 1, k_S^2\ll 1,\rho > b_S$时，式3.98可简化为：
   \begin{equation}
-  \begin{split}
-M_{RS}=&\frac{\mu_0}{2}(\frac{N_RN_S}{2b_S})\{\frac{2\pi(a_Ra_S)^2b_S}{\rho^3}(1+\frac{b_S}{\rho})\\
-&-(a_R-a_S)^2[\Pi(c^2,k_S)-\Pi(c^2,k_S)]\}%page113
-  \end{split}
+
+M_{RS}=\frac{\mu_0}{2}\left(\frac{N_RN_S}{2b_S}\right)\eft\{\frac{2\pi(a_Ra_S)^2b_S}{\rho^3}\left(1+\frac{b_S}{\rho}\right)
+-(a_R-a_S)^2[\prod(c^2,k_S)-\prod(c^2,k_S)]\right\}%page113
   \end{equation}
   
-尽管$\rho$比$a_R,a_S$长不少，但仍能远大于$b_S$。于是，修正项$b_S/\rho$和$\prod(c^2, k)s$在方程3.99中必须保留。
+尽管$\rho$比$a_R$和$a_S$长不少，但仍能远大于$b_S$。于是，``修正''项$b_S/\rho$和$\prod(c^2, k)$在3.99中还必须予以保留。
 
-\textbf{特例3：相距极远的薄壁线圈和环线圈} 
+\textbf{特例3：相距极远的薄壁螺管和环线圈} 
 
-  当两个线圈足够远，至于$\rho \gg b_S$以及$k_R\rightarrow 0,k_S\rightarrow 0$都满足时，方程3.99进一步可以简化为：
+  当两个线圈足够远，至于$\rho \gg b_S$以及$k_R\rightarrow 0,k_S\rightarrow 0$都满足时，3.99可进一步简化为：
  \begin{equation}
 \begin{split}
-M_{RS}&=\frac{\mu_0}{2}(\frac{N_RN_S}{2b_S})\frac{2\pi(a_Ra_S)^2b_S}{\rho^3}\\
-&=\frac{\mu_o}{2\pi}(\pi a_R^2N_R)(\frac{\pi a_S^2N_S}{2b_S})\frac{2b_S}{\rho^3}%page113
+M_{RS}&=\frac{\mu_0}{2}\left(\frac{N_RN_S}{2b_S}\right)\frac{2\pi(a_Ra_S)^2b_S}{\rho^3}\\
+&=\frac{\mu_o}{2\pi}(\pi a_R^2N_R)\left(\frac{\pi a_S^2N_S}{2b_S}\right)\frac{2b_S}{\rho^3}%page113
 \end{split}
 \end{equation}
 
-\textbf{环线圈在薄壁螺管的中部} 
+\textbf{环线圈位于薄壁螺管的中部} 
+
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.8]{chpt3/figs/fig3.15.eps}
-	\caption{环形线圈置于薄壁线圈的中平面处}
+	\includegraphics[scale=0.7]{chpt3/figs/fig3.15.eps}
+	\caption{环形线圈置于薄壁螺管线圈的中平面处。}
 \end{figure}
 
-图3.15给出了两个线圈的安置示意图，图中环线圈位于薄壁螺管线圈的中平面上。在这个安置中，$\rho=-b_S$。这样，在方程3.98中插入$\rho=-b_S$，我们得到下面的简化表达式：
+图3.15给出了两个线圈的位置示意。图中环线圈位于薄壁螺管线圈的中平面。
+此时，$\rho=-b_S$。将$\rho=-b_S$代入式3.98，我们得到下面的简化表达式：
   \begin{equation}
   \begin{split}
-M_{RS}(\rho=&-b_S)\simeq\frac{\mu_0}{2}(\frac{N_R N_S}{2b_S})\times\frac{2b_S}{\sqrt{(a_R+a_S)^2+b_S^2}}\times\\
-&\{[(a_R+a_S)^2+b_S^2][K(\kappa)-E(\kappa)]-\Upsilon(c^2,k)\}%page113
+M_{RS}(\rho=-b_S)\simeq & \frac{\mu_0}{2}\left(\frac{N_R N_S}{2b_S}\right)\times\frac{2b_S}{\sqrt{(a_R+a_S)^2+b_S^2}}\times\\
+&\left\{[(a_R+a_S)^2+b_S^2][K(\kappa)-E(\kappa)]-\Upsilon(c^2,k)\right\}
 \end{split}
 \end{equation}
-
-  式中，$k$为：
+式中，$k$为：
   \begin{equation*}
-\kappa^2=\frac{4a_Ra_S}{(4a_R+a_S)^2+b_S}%page113
+\kappa^2=\frac{4a_Ra_S}{(4a_R+a_S)^2+b_S^2}
 \end{equation*}
 
-\textbf{特例4：长薄壁螺管和环线圈} 
+\textbf{特例4：``长''薄壁螺管和环线圈} 
 
-当薄壁线圈是``长"的，特别是当$b_S\gg a_R$满足时，环线圈和螺管线圈的相对位置不再重要。对于一个满足$k^2\simeq 4a_R a_S/b_S^2$的长螺管，方程3.101变为：
-\begin{equation}
-\begin{split}
-M_{RS}&\simeq\frac{\mu_0}{2}(\frac{N_RN_S}{2b_S})(2)\{b_S^2[K(\kappa)-E(\kappa)]-\Upsilon(c^2,\kappa)\}\\
-&\simeq\frac{\mu_0}{2}(\frac{N_RN_S}{2b_S})\pi(a_R^2+a_S^2)[1-\frac{2(a_R-a_s)^2}{\pi(a_R^2+a_S^2)}\Pi(c^2,\kappa)]\\%page114
-\end{split}
-\end{equation}
+当薄壁螺管线圈是``长"的，特别是当$b_S\gg a_R$和$b_S\gg a_S$满足时，
+环线圈和螺管线圈的相对位置不再重要。
+对于满足$k^2\simeq 4a_R a_S/b_S^2$的长螺管，式3.101变为：
+\begin{align}
+M_{RS}&\simeq\frac{\mu_0}{2}\left(\frac{N_RN_S}{2b_S}\right)(2)\left\{b_S^2[K(k)-E(k)]-\Upsilon(c^2,k)\right\}\\\notag
+&\simeq\frac{\mu_0}{2}\left(\frac{N_RN_S}{2b_S}\right)\pi(a_R^2+a_S^2)\left[1-\frac{2(a_R-a_s)^2}{\pi(a_R^2+a_S^2)}\prod(c^2,k)\right] 
+\end{align}
 
-大括号内的第二项可以视为修正项，在极限$ a_R\gg a_S$或$a_R\ll a_S$时可以忽略。
+式3.102的方括号内的第二项可以视为修正项，在极限$ a_R\gg a_S$或$a_R\ll a_S$时可以忽略。
 
 \textbf{特例5：与螺管直径相差很大的环线圈} 
 
-当环线圈的直径与螺管线圈直径相差很大时，条件$c^2\rightarrow 0$满足，$\prod(c^2,0)$可由依$c^2$展开的级数的前几项表示。在方程3.102取极限$k^2\rightarrow 0(b_S\gg a_R,b_S\gg a_S),\prod(c^2,k)\rightarrow \prod(c^2,0)$时，使用3.49b，我们有：
-  \begin{equation}
-\begin{split}
-M_{RS}&\simeq\frac{\mu_0}{2}(\frac{N_RN_S}{2b_S})\pi(a_R^2+a_S^2)[1-\frac{(a_R-a_s)^2}{(a_R^2+a_S^2)}(1+\frac{1}{2}c^2+\frac{3}{8}c^4+\frac{5}{16}c^6)]\\
-&\simeq\frac{\mu_0}{2}(\frac{N_RN_S}{2b_S})\pi(a_R^2+a_S^2)\times \\
-&\{1-\frac{(a_R-a_s)^2}{(a_R^2+a_S^2)}[1+\frac{2a_Ra_S}{(a_R^2+a_S^2)^2}+\frac{6(a_Ra_S)^2}{(a_R^2+a_S^2)^4}+\frac{20(a_Ra_S)^3}{(a_R^2+a_S^2)^6}]\}%page114
-\end{split}
-\end{equation}
+当环线圈的直径与螺管线圈直径相差很大时，条件$c^2\rightarrow 0$满足，
+前已提及(式3.49b)，$\prod(c^2,0)$可由依$c^2$展开的级数的前几项表示。
+在极限$k^2\rightarrow 0(b_S\gg a_R,b_S\gg a_S)$时，3.102中的$\prod(c^2,k)\rightarrow \prod(c^2,0)$。
+使用3.49b，有：
+  \begin{align}
+M_{RS}&\simeq\frac{\mu_0}{2}\left(\frac{N_RN_S}{2b_S}\right)\pi(a_R^2+a_S^2)\left[1-\frac{(a_R-a_S)^2}{(a_R^2+a_S^2)}(1+\frac{1}{2}c^2+\frac{3}{8}c^4+\frac{5}{16}c^6)\right]\\\notag
+&\simeq\frac{\mu_0}{2}\left(\frac{N_RN_S}{2b_S}\right)\pi(a_R^2+a_S^2)\times \\\notag
+&\left\{1-\frac{(a_R-a_S)^2}{(a_R^2+a_S^2)}\left[1+\frac{2a_Ra_S}{(a_R^2+a_S^2)^2}+\frac{6(a_Ra_S)^2}{(a_R^2+a_S^2)^4}+\frac{20(a_Ra_S)^3}{(a_R^2+a_S^2)^6}\right]\right\}%page114
+\end{align}
 
 \subsection{互感和相互作用力}
-使用3.5.7节导出的轴向偏离中心线圈受到的轴向恢复力表达式，我们可以导出两个轴向依赖线圈的互感表达式。两个螺管A、B间的净磁力$F_{AB}$与存储在两个线圈中的总磁能有关：
+
+使用3.5.7节导出的轴向偏心线圈受到的轴向恢复力表达式，
+我们可以导出两个线圈的互感表达式与轴向的关系。
+两个螺管A、B间的净磁场力$\vec{F}_{AB}$与两个线圈中储存的总磁能有关：
 \begin{equation}
-\overrightarrow{F}_{AB}=\nabla E_{AB}%page114
+\vec{F}_{AB}=\nabla E_{AB}%page114
 \end{equation}
 
-将方程3.92中的下标替换为方程3.104a中的A和B，注意到z向的$F_{AB}$是$F_{ZR}(\rho)$，我们有：
+将式3.92中的下标替换为A和B，代入3.104a，并注意到$z$向的$F_{AB}$就是式3.60给出的$F_{ZR}(\rho)$，我们有：
 \begin{equation}
 F_{zR}(\rho)=\frac{\partial E_{AB}}{\partial \rho}=I_AI_B\frac{\partial M_{AB}(\rho)}{\partial \rho}%pagr114
 \end{equation}
 
-对于小距离$\rho$($\rho\ll \sqrt{a_T^2+b_D^2}$)，我们可以对$F_{ZR}(\rho)$积分，有：
+对于小距离$\rho$($\rho\ll \sqrt{a_T^2+b_D^2}$)，我们可以对式3.61给出的$F_{ZR}(\rho)$积分：
 \begin{equation}
 M_{AB}(\rho)-M_{AB}(0)\propto-\rho^2%page114
 \end{equation}
 
-可见，对于小距离$\rho$，$M_{AB}(\rho)$随偏离中心距离的平方$\rho^2$减小。 
+可见，对于小距离$\rho$，$M_{AB}(\rho)$随偏离中心距离的平方($\rho^2$)减小。 
 
+\subsection*{磁场强度$H$和磁感应强度$B$}
 
-\textbf{磁场强度$H$和磁感应强度$B$}
-
-除非特别指明，专题中的磁体都是空心的。此时，磁感应强度B和磁场强度H存在简单关系：$B=\mu_0 H$。式中，$\mu_0$是空气磁导率，此时等于真空磁导率。
-通常，特别是工程师，常用特斯拉[T]作磁感应强度单位，用安培每米[A/m]作磁场强度的单位。
-
-……cgs电磁单位制……
+除非特别指明，专题中的磁体都是空心的。此时，磁感应强度$B$和磁场强度$H$存在简单关系：$B=\mu_0 H$。
+其中，$\mu_0$是空气磁导率，约等于真空磁导率$\mu_0=4\pi\times 10^{-7}$ H/m。
+通常在SI单位制下，常用特斯拉[T]作磁感应强度$B$的单位，用安培每米[A/m]作磁场强度$H$的单位；工程师通常这么使用。在一些文献中常遇到用$B$代替$H$的，主要原因是：
+1) 在cgs电磁单位制下，$B$[gauss]和$H$[oersted]在数值上相等；
+2) gauss比oersted更常用。在第二版中，把第一版中使用$H$来表达的方程式都改用$B$给出了。
 
 \newpage
 \section{专题}
