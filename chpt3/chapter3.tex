@@ -1564,29 +1564,32 @@ M_{AB}(\rho)-M_{AB}(0)\propto-\rho^2%page114
 \section{专题}
 \subsection{讨论3.1：均匀电流密度螺管}
 
-这里，我们首先讨论均匀电流密度螺管线圈的一些基本问题。绕组的内直径是$i.d.=2a_1$，外直径是$o.d.=2a_2$，总长度是$2b$。
-图3.16定义了绕组截面---因为我们处理的是轴对称螺管，可以仅考虑z和r轴。由位于$(r,z)$处的微分截面载流环$dA \mathrm{[A/m^2]}$在中心点处产生的微分磁感性强度$dB_z(0, 0)$[T]为：
+这里，我们首先讨论均匀电流密度螺管线圈的一些基本问题。
+绕组内径i.d.为$2a_1$，外径o.d.为$2a_2$，总长度是$2b$。
+图3.16定义了绕组截面---因为我们处理的是轴对称螺管，仅考虑$z$和$r$轴。
+由位于$(r,z)$处的载流环微元$dA\mathrm{[A/m^2]}$在中心点处产生的磁场$dB_z(0, 0)$[T]可由式3.3a的等价形式给出：
 \begin{equation}
 dB_z(0,0)=\frac{\mu_0r^2\lambda JdA}{2(r^2+z^2)^\frac{3}{2}}%page115
 \end{equation}
-
-式中，$\lambda J\mathrm{[A/m^2]}$是微分截面内部的总电流密度。无量纲数$\lambda$称为空间因子，这刻画了绕组截面并非完全由载流导体占据这一事实。注意到在这个模型中，$\lambda J$在整个绕组截面上是均匀的，且有：
+式中，$\lambda J\mathrm{[A/m^2]}$是微元内部的总电流密度。
+无量纲数$\lambda$称为空间因子，它刻画了绕组截面并非完全由载流导体占据这一事实。
+注意到在这个模型中，$\lambda J$在整个绕组截面上是均匀的，且有：
 \begin{subequations}
 \begin{align}
 \lambda J&=\frac{NI}{2b(a_2-a_1)}\\
 &=\frac{NI}{2a_1^2\beta(\alpha-1)}%page115
 \end{align}
 \end{subequations}
-
 式中，$\alpha=a_2/a_1,\beta=b/a_1$。$N$是总匝数，$NI$称为总安匝数。
 \begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.7]{chpt3/figs/fig3.16.eps}
-  \caption{均匀电流密度螺管的截面}
+  \caption{均匀电流密度螺管的截面。}
 \end{figure}
 
-对3.107式从$r=a_1$到$r=a_2$以及$z=-b$到$z=b$积分，
-我们得到螺管的$B_z(0,0)$和$F(\alpha,\beta)$的表达式：
+对3.107式从$r=a_1$到$r=a_2$以及从$z=-b$到$z=b$积分，
+我们得到螺管的$B_z(0,0)$的表达式，在3.4节中它是由3.13a的$H_z(0,0)$和
+3.13b的磁场因子$F(\alpha,\beta)$给出的：
 \begin{equation}
 B_z(0,0)=\mu_0\lambda J_{a_1}F(\alpha,\beta)\\ %page116
 \end{equation}
@@ -1594,9 +1597,13 @@ B_z(0,0)=\mu_0\lambda J_{a_1}F(\alpha,\beta)\\ %page116
 F(\alpha,\beta)=\beta \ln\left(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}\right) \tag{3.13b}
 \end{equation*}
 
-前面已经提及，$F(\alpha,\beta)$是均匀电流密度线圈的``场因子"。和电感参数$L(\alpha,\beta)$类似，它也是仅依赖于螺管线圈的截面形状的。图3.17给出了三组关系：3.17a给出的是在$\beta$为常数时，$F(\alpha,\beta)$与$\alpha$的关系；3.17b给出的是在$\alpha$为常数时，$F(\alpha,\beta)$与$\beta$的关系；3.17a给出的是在$F(\alpha,\beta)$为常数时，$\beta$与$\alpha$的关系。
+前已提及，$F(\alpha,\beta)$是均匀电流密度线圈的``场因子"。
+和式3.81给出的电感参数$\mathcal{L}(\alpha,\beta)$类似，它也仅依赖于螺管线圈的截面形状。
+图3.17给出了三组有关$F(\alpha,\beta)$的关系：3.17a是$\beta$为常数时，$F(\alpha,\beta)$与$\alpha$的关系；3.17b是$\alpha$为常数时，$F(\alpha,\beta)$与$\beta$的关系；3.17c是$F(\alpha,\beta)$为常数时，$\beta$与$\alpha$的关系[3.8]。
 
-与$F(\alpha,\beta)$类似，螺管总体积$V_{cd}=\lambda 2\pi a_1^3(\alpha^2-1)\beta$在给定的$\lambda,a_1$条件下仅依赖于$\alpha,\beta$：每一幅图中的实线上的点都是给定$F(\alpha,\beta)$下的最小体积。$F(\alpha,\beta)$与某些特殊线圈相关的显著特征将在问题3.1中论及。
+与$F(\alpha,\beta)$类似，螺管中的导体总体积$\mathcal{V}_{cd}=\lambda 2\pi a_1^3(\alpha^2-1)\beta$在给定的$\lambda$和$a_1$条件下仅依赖于$\alpha,\beta$：
+每一幅图中的实线上的点都是给定$F(\alpha,\beta)$下的\textit{最小}导体体积。
+$F(\alpha,\beta)$与某些\textit{特殊}线圈相关的显著特征将在问题3.1中论及。
 
 \begin{figure}[htbp]
 	\centering
@@ -1618,7 +1625,7 @@ F(\alpha,\beta)=\beta \ln\left(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\
 	\label{fig:subfig} %% label for entire figure
 \end{figure}
 
-\subsection{问题3.1：``简单"螺管}
+\subsection{问题3.1：``简单"螺管线圈}
 a)从3.107开始，推导得到3.109和3.13b。
 
 b)通过联立3.108b和3.109，可以得到$B_z(0,0)$：
