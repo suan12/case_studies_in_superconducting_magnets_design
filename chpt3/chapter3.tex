@@ -1587,7 +1587,7 @@ dB_z(0,0)=\frac{\mu_0r^2\lambda JdA}{2(r^2+z^2)^\frac{3}{2}}%page115
   \caption{均匀电流密度螺管的截面。}
 \end{figure}
 
-对3.107式从$r=a_1$到$r=a_2$以及从$z=-b$到$z=b$积分，
+对3.107式依次从$r=a_1$到$r=a_2$以及从$z=-b$到$z=b$积分，
 我们得到螺管的$B_z(0,0)$的表达式，在3.4节中它是由3.13a的$H_z(0,0)$和
 3.13b的磁场因子$F(\alpha,\beta)$给出的：
 \begin{equation}
@@ -1626,79 +1626,86 @@ $F(\alpha,\beta)$与某些\textit{特殊}线圈相关的显著特征将在问题
 \end{figure}
 
 \subsection{问题3.1：``简单"螺管线圈}
-a)从3.107开始，推导得到3.109和3.13b。
+a) 由式3.107推导出式3.109和3.13b。
 
-b)通过联立3.108b和3.109，可以得到$B_z(0,0)$：
+b)通过联立3.108b和3.109，我们还可以将$B_z(0,0)$表示为：
 \begin{equation}
 B_z(0,0)=\frac{\mu_0NI}{2a_1(\alpha-1)}\ln\left(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}\right)%page118
 \end{equation}
 
 \begin{description}
-  \item[``环"线圈] 化简上式为一个半径$a_1$、载流$NI$的环线圈($\alpha=1$)，得到：
+  \item[``环"线圈] 对半径为$a_1$、总载流为$NI$的``环''线圈($\alpha=1$)，式3.110可化简为：
   \begin{equation}
     B_z(0,0)=\frac{\mu_0NI}{2a_1}%page118
   \end{equation}
- \item[``薄壁"螺管] 对于薄壁螺管($\alpha \rightarrow 1$)，可以简化为：
+ \item[``薄壁"螺管] 对``薄壁''螺管($\alpha \rightarrow 1$)，式3.110可化简为：
  \begin{align*}
-   B_z(0,0)=&\frac{\mu_0NI}{2a_1}\left(\frac{1}{\sqrt{1+\beta^2}}\right)\tag{3.111b}\\ %page118
-   B_z(0,0)=&\mu_0 \lambda Ja_1(\alpha-1)\frac{\beta}{\sqrt{1+\beta^2}}\tag{3.111c}%page118
+   B_z(0,0)=\frac{\mu_0NI}{2a_1}\left(\frac{1}{\sqrt{1+\beta^2}}\right)\tag{3.111b}\\ %page118
+ \begin{align*}
+ 同时证明：
  \end{align*}
-  \item[``长"螺管] 对于长度远大于外直径的螺管($\beta \gg \alpha$)，可以简化为：
+   B_z(0,0)=\mu_0 \lambda Ja_1(\alpha-1)\frac{\beta}{\sqrt{1+\beta^2}}\tag{3.111c}%page118
+ \end{align*}
+  \item[``长"螺管] 对于长度远大于外直径的螺管($\beta \gg \alpha$)，式3.110可化简为：
 \begin{equation*}
 B_z(0,0)=\frac{\mu_0NI}{2b} \tag{3.111d}%page118
 \end{equation*}
-考虑到$NI/2b=K_\theta$，上式等价于3.5，于是
+
+因为$NI/2b=K_\theta$，式3.111d等价于式3.5。同时，证明：
 \begin{equation*}
 B_z(0,0)=\mu_0\lambda Ja_1(\alpha-1) \tag{3.111e}%page118
 \end{equation*}
-  \item[``饼式"线圈] 对于长度比外直径小很多的饼式线圈，简化为：
+  \item[``饼式"线圈] 对于长度比外直径小很多的饼式线圈，式3.110可化简为：
   \begin{equation*}
-B_z(0,0)=\frac{\mu_0NI}{2a_1}(\frac{\ln\alpha}{\alpha-1}) \tag{3.111f}%page118
+B_z(0,0)=\frac{\mu_0NI}{2a_1}\left(\frac{\ln\alpha}{\alpha-1}\right) \tag{3.111f}%page118
   \end{equation*}
+
+式3.111f将在讨论3.6进一步研究。
 \end{description}
 
-c)\textbf{场 vs. 能量}：证明电阻性螺管(比如铜螺管)线圈的中心场表达$B_z(0,0)$与其所需功率$P$的关系为：
+c) \textbf{场和能量}：证明\textit{电阻性}螺管(比如铜螺管)的中心场$B_z(0,0)$与其所需功率$P$的关系为：
 \begin{subequations}
 	\begin{align}
 B_z(0,0)=&\mu_0G(\alpha,\beta)\sqrt{\frac{\lambda P}{\rho_{cd}a_1}}\\ %page118
-G(\alpha,\beta)=&\sqrt{\frac{\beta}{2\pi(\alpha^2-1)}}\ln(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}})%page118
+G(\alpha,\beta)=&\sqrt{\frac{\beta}{2\pi(\alpha^2-1)}}\ln\left(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}\right)%page118
 	\end{align}
 \end{subequations}
-式中，$\rho_{cd}$是导体电导率。$G(\alpha,\beta)$被称为均匀电流密度线圈的``G因子"。
+式中，$\rho_{cd}$是导体的电导率。$G(\alpha,\beta)$称为均匀电流密度线圈的``G因子"[3.2]。
 
 \subsubsection{问题3.1之解}
 
-a)对3.107在$z$和$r$的合适区间积分，得到：
+a) 对式3.107在$z$和$r$的合适区间积分，得：
 \begin{equation*}
-B_z(0,0)=\frac{\mu_0\lambda J}{2}\int_{a_1}^{a_2}\int_{-b}^{b}\frac{r^2dzdr}{\sqrt[3]{r^2+z^2}}=\mu_0\lambda J\int_{a_1}^{a_2}\int_{0}^{b}\frac{r^2dzdr}{\sqrt[3]{r^2+z^2}}%page119
+B_z(0,0)=\frac{\mu_0\lambda J}{2}\int_{a_1}^{a_2}\int_{-b}^{b}\frac{r^2dzdr}{(r^2+z^2)^{3/2}}=\mu_0\lambda J\int_{a_1}^{a_2}\int_{0}^{b}\frac{r^2dzdr}{(r^2+z^2)^{3/2}}%page119
 \end{equation*}
 
-查积分表，得到：
+查积分表，得：
 \begin{equation*}
-\int_{0}^{b}\frac{dz}{\sqrt[3]{r^2+z^2}}=\left[\frac{z}{r^2\sqrt{r^2+z^2}}\right]_{0}^{b}=\frac{b}{r^2\sqrt{r^2+b^2}}%page119
+\int_{0}^{b}\frac{dz}{(r^2+z^2)^{3/2}}=\left[\frac{z}{r^2\sqrt{r^2+z^2}}\right]_{0}^{b}=\frac{b}{r^2\sqrt{r^2+b^2}}%page119
 \end{equation*}
 
 于是：
 \begin{equation*}
 \begin{split}
-B_z(0,0)&=\mu_0\lambda J\int_{a_1}^{a_2}\frac{r^2bdr}{r^2\sqrt{r^2+b^2}}=\mu_0\lambda Jb[\ln({r+\sqrt{r^2+b^2}})]_{a_1}^{a_2}\\
-&=\mu_0\lambda Jb[\ln(a_2+\sqrt{a_2^2+b^2})-\ln(a_1+\sqrt{a_1^2+b^2})]\\
+B_z(0,0)&=\mu_0\lambda J\int_{a_1}^{a_2}\frac{r^2bdr}{r^2\sqrt{r^2+b^2}}=\mu_0\lambda Jb\left[\ln({r+\sqrt{r^2+b^2}})\right]_{a_1}^{a_2}\\
+&=\mu_0\lambda Jb\left[\ln(a_2+\sqrt{a_2^2+b^2})-\ln(a_1+\sqrt{a_1^2+b^2})\right]\\
 &=\mu_0\lambda Ja_1\left(\frac{b}{a_1}\right)\ln\left[\frac{\frac{a_2}{a_1}+\sqrt{(\frac{a_2}{a_1})^2+(\frac{b}{a_1})^2}}{(\frac{a_1}{a_2})+\sqrt{(\frac{a_1}{a_1})^2+(\frac{b}{a_1})^2}}\right]\\%page119
 \end{split} \tag{S1.1}
 \end{equation*}
 
-考虑到$a_2/a_1=\alpha$和$b/a_1=\beta$，上式变为：
+代入$a_2/a_1=\alpha$和$b/a_1=\beta$，式S1.1变为：
 \begin{equation*}
 B_z(0,0)=\mu_0\lambda J\alpha_1\beta\ln\left[\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}\right]\tag{S1.2}
 \end{equation*}
 
 于是：
 \begin{align*}
-B_z(0,0)=&\mu_0\lambda J_{a_1}F(\alpha,\beta)\tag{3.109}\\ %page119
+B_z(0,0)=&\mu_0\lambda J {a_1} F(\alpha,\beta)\tag{3.109}\\ %page119
 F(\alpha,\beta)=&\beta \ln\left(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}\right)\tag{3.13b}%page119
 \end{align*}
 
-b)\textbf{``环"线圈}。对于环线圈($\alpha\rightarrow 1; \beta\rightarrow 0$)，3.110中右侧的对数项成为：
+b) \textbf{``环"线圈}。对环线圈($\alpha\rightarrow 1; \beta\rightarrow 0$)，
+式3.110等号右侧的对数项成为：
 \begin{equation*}
 \lim_{\beta\rightarrow 0}\ln\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}=\ln\alpha%page119
 \end{equation*}
@@ -1708,63 +1715,66 @@ b)\textbf{``环"线圈}。对于环线圈($\alpha\rightarrow 1; \beta\rightarrow
 B_z(0,0)=\frac{\mu_0NI}{2a_1(\alpha-1)}(\alpha-1)=\frac{\mu_0NI}{2a_1}\tag{3.111}%page119
 \end{equation*}
 
-注意到，方程3.111a和方程3.3a的关系。
+注意式3.111a和3.3a的关系。式3.3a在$z=0$时，用$a_1,NI$分别替换$a,I$，将得到3.111a(除$\mu_0$项)。
 
-\textbf{薄壁螺管。}对于薄壁螺管($\alpha\rightarrow 1$)，通过联立3.13b和3.23b，可得：
+\textbf{``薄壁''螺管。}对薄壁螺管($\alpha\rightarrow 1$)，联立3.13b和3.23b，可得：
 \begin{equation*}
 \lim_{\alpha\rightarrow 1}\ln\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}=\frac{\alpha-1}{\sqrt{1+\beta^2}} \tag{S1.3}%page120
 \end{equation*}
 
-联立3.110和S1.3，我们得到3.111b。从方程3.109,3.13b和S1.3，我们得到3.111c：
+联立3.110和S1.3，得3.111b；联立3.109,3.13b和S1.3，得3.111c：
 \begin{align*}
-B_z(0,0)&=\frac{\mu_0 NI}{2a_1}(\frac{1}{1+\beta^2})\tag{3.111b}\\ %page120
+B_z(0,0)&=\frac{\mu_0 NI}{2a_1}\left(\frac{1}{1+\beta^2}\right)\tag{3.111b}\\ %page120
 B_z(0,0)&=\mu_0 \lambda Ja_1(\alpha-1)\frac{\beta}{\sqrt{1+\beta^2}}\tag{3.111c}%page120
 \end{align*}
 
-注意到，对于长螺管$\beta\gg 1$，3.111c变成3.111e。
+注意到，对于``长''`螺管($\beta\gg 1$)，3.111c变成3.111e。
 
-\textbf{长螺管。}对于$\beta\gg \alpha$，有：
+\textbf{``长''螺管。}在$\beta\gg \alpha$时，有：
 \begin{equation*}
 \lim_{\beta\gg\alpha}\ln\left(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}\right)=\ln\left(\frac{\alpha+\beta}{1+\beta}\right)=\ln\left(\frac{\frac{\alpha}{\beta}+1}{\frac{1}{\beta}+1}\right)%page120
 \end{equation*}
 
-使用``环"线圈中相同的近似方法，得到：
+使用推导``环"线圈采用近似方法，得：
 \begin{equation*}
 \lim_{\beta\gg\alpha}\ln\left(\frac{\frac{\alpha}{\beta}+1}{\frac{1}{\beta}+1}\right)\simeq\frac{\alpha}{\beta}-\frac{1}{\beta}=\frac{\alpha-1}{\beta}%page120
 \end{equation*}
 
-于是在极限$\beta\gg\alpha$下，我们得到：
+在极限$\beta\gg\alpha$下，得：
 \begin{equation*}
 B_z(0,0)=\frac{\mu_0NI}{2b} \tag{3.111d}%page120
 \end{equation*}
 
-上文已经提及，$NI/2b$可以视为表面电流密度。从式3.108中，有$NI/(2b)=\lambda J (a_2-a_1)$。于是上式又可以写为：
+上文已提及，$NI/2b$可以视为表面电流密度。
+根据式3.108，$NI/(2b)=\lambda J (a_2-a_1)$。于是式3.111d又可以写为：
 \begin{equation*}
 B_z(0,0)=\mu_0\lambda Ja_1(\alpha-1) \tag{3.111e}%page120
 \end{equation*}
 
-对于一个长螺管，它的中心场和它的长度是无关的。$B_z(0,0)$独立性在大$\beta(>\sim 3)$和中等$\alpha(<\beta)$情况下是明显的(图3.17b)。
-同样，$B_z(0,0)$在大$\beta(>\sim 3)$和中等$\alpha(<\beta)$情况下正比于线圈的$a_2-a_1$。这是因为该值越大，对应的单位长度总安匝数越大(图3.17a)。
+长螺管的中心场与其长度($\beta$)无关---
+$B_z(0,0)$在大$\beta(>\sim 3)$和中等$\alpha(<\beta)$情况下的独立性从图3.17b清晰可见。
+由图3.17a可见，在大$\beta$和中等$\alpha(<\beta)$情况下，
+$B_z(0,0)$正比于线圈的$a_2-a_1$。这是因为该值越大，相应的单位长度总安匝数越大。
 
-\textbf{饼式线圈。}对于饼式线圈，近似极限是$\beta\rightarrow 0$：
+\textbf{``饼式''线圈。} 对饼式线圈，极限条件是$\beta\rightarrow 0$：
 \begin{align*}
 &\lim_{\beta\rightarrow 0}\ln\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}=\ln\left(\frac{2\alpha}{2}\right)=\ln\alpha\notag \\%page120
 &B_z(0,0)=\frac{\mu_0NI}{2a_1}\left(\frac{\ln\alpha}{\alpha-1}\right) \tag{3.111f}%page120
 \end{align*}
 
-注意到，饼式线圈的中心场等于环线圈的中心场乘一个系数$\ln \alpha/(\alpha-1)$。在$\alpha\rightarrow 1$时，上式退化为环线圈的表达式。
+注意到，饼式线圈的中心场等于``环''线圈的中心场乘一个系数$\ln \alpha/(\alpha-1)$。
+在$\alpha\rightarrow 1$时，式3.111f退化为3.111a。
 
-c)全部导体体积等于$\lambda\times$<绕组体积(winding volume, wv)>：
+c) 总导体体积等于$\lambda\times$<绕组体积(winding volume, wv)>：
 \begin{equation*}
-<wv>=2b\pi(a_2^2-a_1^2)=a_1^32\pi\beta(\alpha^2-1)%page121
+<\mathrm{wv}>=2b\pi(a_2^2-a_1^2)=a_1^32\pi\beta(\alpha^2-1)%page121
 \end{equation*}
 
 于是：
 \begin{equation*}
 P=\rho_{cd}J^2\lambda a_1^32\pi\beta(\alpha^2-1) \tag{3.112}%page121
 \end{equation*}
-
-这里，$J$仅是导体中的电流密度。从3.112中，我们用$P$和其他参数解出$J$：
+式中，$J$是仅存在于导体中的电流密度。由式3.112，我们用$P$和其他参数解出$J$：
 \begin{equation*}
 J=\sqrt{\frac{P}{\rho_{cd}\lambda a_1}}\left[\frac{1}{a_1\sqrt{2\pi\beta(\alpha^2-1)}}\right]\tag{S1.4}%page121
 \end{equation*}
@@ -1772,7 +1782,7 @@ J=\sqrt{\frac{P}{\rho_{cd}\lambda a_1}}\left[\frac{1}{a_1\sqrt{2\pi\beta(\alpha^
 联立S1.2和S1.4，得到：
 \begin{equation*}
 \begin{split}
-B_z(0,0)&=\mu_0\lambda\sqrt{\frac{P}{\rho_{cd}\lambda a_1}}\left[\frac{1}{a_1\sqrt{2\pi\beta(\alpha^2-1)}}\right]a_1\beta\ln(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}})\\
+B_z(0,0)&=\mu_0\lambda\sqrt{\frac{P}{\rho_{cd}\lambda a_1}}\left[\frac{1}{a_1\sqrt{2\pi\beta(\alpha^2-1)}}\right]a_1\beta\ln\left(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}\right)\\
 &=\mu_0\sqrt{\frac{\lambda P}{\rho_{cd}a_1}}\sqrt{\frac{\beta}{2\pi(\alpha^2-1)}}\ln\left(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\beta^2}}\right)%page121
 \end{split}
 \end{equation*}
@@ -1785,7 +1795,8 @@ G(\alpha,\beta)&=\sqrt{\frac{\beta}{2\pi(\alpha^2-1)}}\ln\left(\frac{\alpha+\sqr
 \end{align}
 \end{subequations}
 
-上式表明，对给定参数$\alpha$和$\beta$的电阻性螺管线圈所需的功率P和它的中心场是平方关系：
+式3.113a表明，对给定参数$\alpha$和$\beta$的电阻性螺管线圈，
+所需功率$P$依其中心场\textit{平方}增加：
 \begin{equation*}
 P=\frac{\rho_{cu}a_1B_z^2(0,0)}{\mu_0^2\lambda G^2(\alpha,\beta)}\tag{3.113c}%page121
 \end{equation*}
