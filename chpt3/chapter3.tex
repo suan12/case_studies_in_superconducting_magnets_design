@@ -1802,66 +1802,73 @@ P=\frac{\rho_{cu}a_1B_z^2(0,0)}{\mu_0^2\lambda G^2(\alpha,\beta)}\tag{3.113c}%pa
 \end{equation*}
 
 \subsection{讨论3.2：Bitter磁体}
-尽管本书主要研究超导磁体，这里我们讨论一下无铁芯、水冷磁体。我们称这种直流高场水冷磁体为``Bitter磁体"，以纪念于1930s最早提出该设计的MIT科学家Francis Bitter。
+尽管本书主要研究超导磁体，但这里我们还是准备讨论一下无铁芯水冷磁体。
+我们称这种直流高场水冷磁体为``Bitter磁体"，
+以纪念于1930s最早提出该设计的MIT科学家Francis Bitter。
 Bitter的工作奠定了现代磁体技术的基础。
-我们从Bitter的《磁体》一书摘录一段，描述高场磁体的技术挑战和解决方案。
 
+Bitter的设计采用了堆叠的镂空圆盘板导体。每一个板有一个缝，除一个扇区外用薄绝缘片隔开。
+缝允许裸露扇区在压力下与相邻板的裸露部分连接，从而电流可以在板间以类似螺旋的形式流动。
+每一个``Bitter''`板都打了数百个冷却孔。
+为了产生高场，需在其中通入几千安培的电流，共消耗几兆瓦的电能，
+而这些能量大部分转换为金属板的热能。
+迫流冷却水以高速($\sim 20\ \mathrm{m/s}$)流过冷却孔以带走热量。
+1990s国家高场实验室开发的两个嵌套的``Florida-Bitter''板如图3.18所示[3.9]。
+板上的径向缝清晰可见。同时也注意到，水孔并不是像Bitter板是圆；
+这种在电流方向拉长的形状处理最早是由MIT的Weggel在1970s提出的。
+这里的板组的外直径是$148\ \mathrm{mm}$；整体板直径尺寸已超过$400\ \mathrm{mm}$。
+板上的16个大孔是用于轴向固定的。
+Bitter磁体制造的关键特征是模块化，即由许多相似的板组成。
+为了优化磁体性能，可通过定制轴向各板的厚度、机械性质和电气性质而实现。
 
-Bitter的设计采用了堆叠的环形板导体。每一个板有一个缝，用薄绝缘片隔开。缝允许裸露部分在压力下与相邻板的裸露部分连接，从而电流可以在板间以类似螺旋的形式流动。
-每一个Bitter板都打了数百个冷却孔。为了产生高场，通入几千安培的电流，小号几兆瓦的电能，转换为金属板的热量。迫流水以高速($\sim 20\ \mathrm{m/s}$)流过孔，带走热量。
-1990s国家高场实验室开发的Florida-Bitter磁体如图3.18所示。板上的径向缝清晰可见。同时也注意到，水控并不是像Bitter板是圆形的。这种在电流方向拉长的形状处理最早是由
-MIT的Weggel在1970s提出的。这里的外板直径是$148\ \mathrm{mm}$；板直径尺寸早已超过$400\ \mathrm{mm}$。16个大孔是用于板的轴向固定的。Bitter磁体制造的关键特征是模块化，即由
-许多相似的板组成。为了优化磁体性能，板的厚度、机械性质和电气性质在轴向可以定制。
+由3.110式(问题3.1)可知，在给定安匝数$NI$下，绕组内径$a_1$越小，中心场$B_z(0,0)$越大。
+又从3.113a式可知，在相同功耗下，减小$a_1$可以产生更高的中心场$B_z(0,0)$。
+也即，为了在给定功率下最大化$B_z(0,0)$，最高效的方法是将安匝尽可能靠近磁体室温孔绕制。
+Bitter的设计($J\propto 1/r$)是一个近似实现上述目标的实用方法。
 
-由3.110式可知，在给定安匝数$NI$下，绕组内径$a_1$越小，中心场$B_z(0,0)$越大。又，从3.113a式可知，在相同功耗下，安匝越靠近磁体室温孔越高效。
-Bitter的设计($J\propto 1/r$)是一个近似实现上述目标的有效方法。
-
-%%%%图3.18 
 \begin{figure}[htbp]
   \centering
  \includegraphics[scale=0.4]{chpt3/figs/fig3.18.eps}
-  \caption{国家高场实验室的两个嵌入式Florida-Bitter轮廓，外盘直径140\ mm，位于``水"磁体内}
+  \caption{国家高场实验室水冷磁体中的两个嵌套``Florida-Bitter''板。外盘直径140\ mm。}
 \end{figure}
 
 \textbf{A. 电流密度、场、能量}
 
-本节，我们推导出Bitter磁体的以下表达式：电流密度$J_\theta (r)$，中心场$B_z(0,0)$，场因数$F(\alpha,\beta)$，G因数$G(\alpha,\beta)$。
+本节我们推导Bitter磁体的电流密度$[J_\theta (r)]_B$，中心场$[B_z(0,0)]_B$，场因子$[F(\alpha,\beta)]_B$和G因子$[G(\alpha,\beta)]_B$的表达式。
 
 \textbf{电流密度分布}
 
-考虑一个单盘，电流在$\theta$向流动。电场E给出的电压V正比于$\theta$。因为$\vec{E}$仅有$\theta$分量，且在给定r处为常亮，$E_\theta 2\pi r=V$。
-所以，$E_\theta$按照$1/r$变化。由于$\vec{J}=\vec{E}/\rho_{Cu}$，我们有：
+考虑一个单盘，电流在$\theta$向流动。电场$E$给出的电压$V$正比于$\theta$。
+因为$\vec{E}$仅有$\theta$分量，且在给定$r$处为常量，$E_\theta 2\pi r=V$。
+即，$E_\theta$按照$1/r$变化。由于$\vec{J}=\vec{E}/\rho_{Cu}$，有：
 \begin{equation}
 {[J_\theta(r)]}_B=\frac{E_{\theta}}{\rho_{cu}}=\frac{V}{2\pi\rho_{cu}r}=J_0\frac{a_1}{r}%page123
 \end{equation}
-
-式中，$J_0=[J_\theta(a_1)]_B=V/(2\pi \rho_{Cu} a_1)$。上式表明，Bitter磁体中的电流密度按照$1/r$减小，且在$r=a_1$处取得最大值。
+式中，$J_0=[J_\theta(a_1)]_B=V/(2\pi \rho_{Cu} a_1)$。
+式3.114表明，Bitter磁体中的电流密度按照$1/r$减小，在$r=a_1$处取最大值。
 
 \textbf{场}
 
-我们用上式给出的$J_\theta$替换3.107式中的$\lambda J$。选择合适的上下限，积分得：
+我们用式3.114给出的$J_\theta$替换3.107式中的$\lambda J$，在合适的上下限下积分得：
 \begin{equation*}
-\begin{split}
-{[B_z(0,0)]}_B&=\mu_0\lambda_B J_0a_1\int_{a_1}^{a_2}\int_{0}^{b}\frac{r dr dz}{\sqrt[3]{r^2+z^2}}\\
-&=\mu_0\lambda_B J_0 a_1\int_{1}^{\alpha}\int_{0}^{\beta}\frac{\eta d\eta d\zeta}{\sqrt[3]{\eta^2+\zeta^2}}%page123
-\end{split}
+{[B_z(0,0)]}_B=\mu_0\lambda_B J_0a_1\int_{a_1}^{a_2}\int_{0}^{b}\frac{r dr dz}{{r^2+z^2}^{3/2}}
+=\mu_0\lambda_B J_0 a_1\int_{1}^{\alpha}\int_{0}^{\beta}\frac{\eta d\eta d\zeta}{{\eta^2+\zeta^2}^{3/2}}%page123
+\end{equation*}
+式中，$r/a_1=\eta$，$z/a_1=\zeta$。查积分表，得到：
+\begin{equation*}
+\int_{0}^{\beta}\frac{d\zeta}{{\eta^2+\zeta^2}^{3/2}}=\left[\frac{\zeta}{\eta^2\sqrt{\eta^2+\zeta^2}}\right]_0^{\beta}=\frac{\beta}{\eta^2\sqrt{\eta^2+\beta^2}}%page123
 \end{equation*}
 
-式中，$r/a_1=\eta$，$z/a_1=\zeta$，查积分表，得到：
-\begin{equation*}
-\int_{0}^{\beta}\frac{d\zeta}{\sqrt[3]{\eta^2+\zeta^2}}=\left[\frac{\zeta}{\eta^2\sqrt{\eta^2+\zeta^2}}\right]_0^{\beta}=\frac{\beta}{\eta^2\sqrt{\eta^2+\beta^2}}%page123
-\end{equation*}
-
-联立上面两式，得到：
+联立上面两式，得：
 \begin{equation*}
 \begin{split}
 {[B_z(0,0)]}_B&=\mu_0\lambda_B J_0a_1\beta\int_{1}^{\alpha}\frac{\eta d\eta}{\eta^2\sqrt{\eta^2+\beta^2}}\\
-&=\mu_0\lambda_B J_0a_1\beta\left[-\frac{1}{\beta}\ln(\frac{\beta+\sqrt{\beta^2+\eta^2}}{\eta})\right]_1^{\alpha}\\ %page123
+&=\mu_0\lambda_B J_0a_1\beta\left[-\frac{1}{\beta}\ln\left(\frac{\beta+\sqrt{\beta^2+\eta^2}}{\eta}\right)\right]_1^{\alpha}\\ %page123
 &=\mu_0\lambda_B J_0a_1\ln\left(\alpha\frac{\beta+\sqrt{1+\beta^2}}{\beta+\sqrt{\alpha^2+\beta^2}}\right)%page123
 \end{split}
 \end{equation*}
 
-上面的表达式可以写为：
+上面的表达式还可写为：
 \begin{subequations}
 	\begin{align}
 {[B_z(0,0)]}_B=&\mu_0\lambda_B J_0a_1[F(\alpha,\beta)]_B\\ %page123
@@ -1873,68 +1880,69 @@ Bitter的设计($J\propto 1/r$)是一个近似实现上述目标的有效方法�
 
 \textbf{场和能量}
 
-我们通过在整个线圈区域内积分功率密度$\rho_{Cu} [J_\theta]_B^2(r)$推导出$[H_z(0,0)]_B$和Bitter磁体总功率$P_B$的关系式。这里继续采用无量纲参数，有：
+我们通过在整个线圈区域内对功率密度$\rho_{Cu} [J_\theta]_B^2(r)$积分导出$[H_z(0,0)]_B$和Bitter磁体总功率$P_B$的关系式。这里继续采用无量纲参数，有：
 \begin{equation*}
 P_B=a_1^3\int_{1}^{\alpha}\int_{-\beta}^{\beta}\rho_{cu}\lambda_B\left(\frac{J_0}{\eta}\right)^2 2\pi\eta d\zeta d\eta=J_0^2\rho_{cu}\lambda_B a_1^3(4\pi\beta\ln\alpha)%page124
 \end{equation*}
 
-通过上面的表达式，我们将$J_0$和$P_B$联系起来：
+通过上式，我们将$J_0$和$P_B$联系起来：
 \begin{equation*}
 J_0=\frac{1}{a_1\sqrt{4\pi\beta\ln\alpha}}\sqrt{\frac{P_B}{\rho_{cu}\lambda_B a_1}}%page124
 \end{equation*}
 
-上式和3.115联立，得到：
+将上式和式3.115联立，将$[B_z(0,0)]_B$和$P_B$联系起来：
 \begin{subequations}
 	\begin{align}
 {[B_z(0,0)]}_B&=\mu_0[G(\alpha,\beta)]_B\sqrt{\frac{\lambda_B P_B}{\rho_{cu}a_1}}\\%page124
-{[G(\alpha,\beta)]}_B&=\frac{1}{\sqrt{4\pi\beta\ln\alpha}}[F(\alpha,\beta)]_B%page124
+\mbox{式中，}{[G(\alpha,\beta)]}_B&=\frac{1}{\sqrt{4\pi\beta\ln\alpha}}[F(\alpha,\beta)]_B%page124
 	\end{align}
 \end{subequations}
 
 在均匀电流密度螺管线圈中，$[B_z(0,0)]_B$按$P_B$的平方根增加；$P_B$是磁场的二次函数。
-$[G(\alpha,\beta)]_B$在$\alpha\simeq 6.42$和$\beta\simeq 2.5$时取得最大值，此时$[G(\alpha,\beta)]_B\simeq 0.166$。在$5\leq \alpha \leq 9$和$1.8\leq\beta\leq 2.6$范围内，$[G(\alpha,\beta)]_B$的值
-至少是其峰值的99\%。也就是说，在这个$\alpha$和$\beta$范围内，在给定场下，$P_B$变动在2\%以内。
-不过，给定$a_1$时，场的均匀性随$2b/\beta$增大而改善。故大多数Bitter磁体的$\beta>2.5$。
+$[G(\alpha,\beta)]_B$在$\alpha\simeq 6.42$和$\beta\simeq 2.5$时取得最大值，此时$[G(6.4,2.15)]_B\simeq 0.166$。在$5\leq \alpha \leq 9$和$1.8\leq\beta\leq 2.6$范围内，$[G(\alpha,\beta)]_B$的值
+至少是其峰值的99\%。也就是说，在这个$\alpha$和$\beta$范围内，在给定场下，$P_B$的变动最小值为2\%以内。
+不过，给定$a_1$时，场的均匀性随$2b$或$\beta$增大而改善。故大多数Bitter磁体的$\beta>2.5$，
+就如下面给出的这个磁体一样。
 
-\textbf{实例}
-
-我们用上面的关系式计算一个Bitter磁体。磁体参数$2a_1=6\ \mathrm{cm}, 2a_2=40\ \mathrm{cm}, 2b=22 \ \mathrm{cm},\lambda_B=0.8, \rho_{Cu}=2\times10^{-6}\ \mathrm{\Omega cm}$，产生的磁场$[B_z(0,0)]_B=20\ \mathrm{T}$。
-此时，$\alpha=40/6=6.67;\beta=22/6=3.67$。
+\textbf{实例}\qquad 我们式3.116计算一个Bitter磁体的$P_B$。
+磁体参数：$2a_1=6\ \mathrm{cm}, 2a_2=40\ \mathrm{cm}, 2b=22 \ \mathrm{cm},\lambda_B=0.8$以及$\rho_{Cu}=2\times 10^{-6}\ \Omega\mathrm{cm}$，
+产生磁场$[B_z(0,0)]_B=20\ \mathrm{T}$。
+代入参数$\alpha=a_2/a_1=40/6=6.67;\beta=b/a_1=22/6=3.67$，
 \begin{equation*}
-\begin{split}
-{[G(6.67,3.67)]}_B&=\frac{1}{\sqrt{4\pi3.67\ln(6.67)}}\ln\left[6.67\frac{3.67+\sqrt{1+(3.67)^2}}{3.67+\sqrt{(6,67)^2+(3.67)^2}}\right]\\
-&\simeq 0.159 %page124
-\end{split}
+{[G(6.67,3.67)]}_B=\frac{1}{\sqrt{4\pi3.67\ln(6.67)}}\ln\left[6.67\frac{3.67+\sqrt{1+(3.67)^2}}{3.67+\sqrt{(6.67)^2+(3.67)^2}}\right]\simeq 0.159 %page124
 \end{equation*}
 
-类似的，
-\begin{equation*}
-\begin{split}
+类似式3.113c，可以将$P_B$写成$[B_z(0,0)]_B$和其他参数的表达式：
+\begin{align*}
 P_B&=\frac{\rho_{cu}a_1[B_z(0.0)]_B^2}{\mu_0^2\lambda_B[G(\alpha,\beta)]_B^2}\\
-&=\frac{(2\times 10^{-8}\ \Omega m)(3\times 10^{-2}\ \mathrm{m})(20\ \mathrm{T})^2}{(4\pi\times 10^{-7}\ \mathrm{\frac{H}{m}})^2(0.8)(0.159)^2}\\
-&\simeq 7.5\ \mathrm{MW}%page124
-\end{split}
-\end{equation*}
+&=\frac{(2\times 10^{-8}\ \Omega\mathrm{m})(3\times 10^{-2}\ \mathrm{m})(20\ \mathrm{T})^2}{(4\pi\times 10^{-7}\ \mathrm{H/m})^2(0.8)(0.159)^2}\simeq 7.5\ \mathrm{MW}%page124
+\end{align*}
 
-这个功率是运行于Francis Bitter国家磁体实验室$20\ \mathrm{T}$ Bitter磁体的典型值。
+这个功率是运行于Francis Bitter国家磁体实验室的$20\ \mathrm{T}$Bitter磁体的典型值。
 
-\textbf{B. 非``Bitter"电流密度分布}
+\textbf{B. 非``Bitter"型电流密度分布}
 
-水冷磁体的一个重要参数是磁场效率，定义为$[B_z(0,0)]_B^2/\mu_0^2 P_B$。作为一种均匀电流密度磁体，Bitter磁体的场效率正比于$\lambda_B$和$[G(\alpha,\beta)]_B^2$，反比于
-$a_1$和$\rho_{Cu}$。
+水冷磁体的一个重要参数是磁场效率，定义为：$[B_z(0,0)]_B^2/\mu_0^2 P_B$。
+作为均匀电流密度磁体，Bitter磁体的磁场效率正比于$\lambda_B$和$[G(\alpha,\beta)]_B^2$，
+反比于$a_1$和导体电阻率$\rho_{Cu}$。
 
-我们到目前讨论了两种电流分布：1)均匀电流分布，$J(r,z)=J_0$。这时，J与r和z无关；2)Bitter分布，即$J\propto 1/r$。
-由graded超导材料绕的超导磁体的$J(r)$随r离散阶梯变化。由多个嵌套线圈组成的磁体，每一个线圈由不同的超导带绕成，同样有$J(r)$随r阶梯变化。此处，我们介绍另外三种水冷磁体的电流分布。
+我们目前考虑了两种电流分布：1) 均匀型，即$J(r,z)=J_0$；2) Bitter型，即$J\propto 1/r$。
+均匀分布意味着$J$与$r$和$z$无关。
+由``分级''超导材料绕的超导磁体的$J(r)$随$r$离散阶梯变化。
+由多个嵌套线圈组成的磁体，若各线圈由不同的超导材料绕制，其$J(r)$同样随$r$阶梯变化。
+这里我们介绍另外三种用于水冷磁体的电流分布。
 
 \textbf{Kelvin线圈}
 
-给出最高磁场效率的电流密度分布被称为Kelvin分布：
+具有最高磁场效率的电流密度分布被称为Kelvin分布：
 \begin{equation*}
 J_K(r,z)\propto\frac{r}{(r^2+z^2)^\frac{3}{2}}%page125
 \end{equation*}
 
-Kelvin线圈的独有性质是每一个部分的单位功率都产生相同的磁场。
-作为对比，总功率相同的均匀电流密度线圈的中心场仅为Kelvin线圈的66\%；Bitter线圈的这个比值是77\%。不过，制成具有Kelvin电流分布的线圈并不具可行性。
+Kelvin线圈的独有性质是每个部分的单位功率都产生相同的磁场。
+作为对比，总功率相同的均匀电流密度线圈产生的磁场是磁体中心场的66\%；
+而Bitter线圈的这个比值是77\%。
+不过，制成具有Kelvin电流分布的线圈并不具可行性。
 
 \textbf{Gaume}
 
@@ -1943,17 +1951,22 @@ Gaume分布同样给出很好的磁场效率：
 J_G(r,z)\propto\frac{1}{r}\left(\frac{1}{\sqrt{a_1^2+z^2}}-\frac{1}{\sqrt{a_2^2+z^2}}\right)%page125
 \end{equation*}
 
-Gaume线圈的每一匝在单位功率下产生相同的磁场。Gaume线圈的磁场是Kelvin的85\%。Bitter线圈的电流分布在某种程度上是近似于Gaume线圈的。这可以通过以下方法实现：
-更厚的Bitter板，轴向远离中心平面。$J_b(r,z)\propto 1/r\delta(z)$，此处$\delta(z)$是依赖于z的板的厚度。
+Gaume线圈的每一匝在单位功率下产生相同的磁场。
+Gaume线圈产生的磁场是Kelvin线圈的85\%。
+Bitter线圈的电流分布在某种程度上是近似于Gaume线圈的。
+这可以通过使用轴向远离磁体中心平面的更厚的Bitter板实现：
+$J_b(r,z)\propto 1/r\delta(z)$，此处$\delta(z)$是依赖于$z$的板厚度。
 
-\textbf{Polyhelix}
+\textbf{多螺旋}
 
-多螺旋线圈由多个嵌套的单层线圈组成，每一层的电流密度被调整以最大化磁场效率和/或匹配每一层的与其导体强度匹配的应力：
+多螺旋线圈由多个嵌套的单层线圈组成，
+每一层的电流密度经调整，具有最大化磁场效率并/或匹配每一层导体应力的能力：
 \begin{equation*}
 J_P(r,z)\propto f(r)%page125
 \end{equation*}
 
-最高效率的多螺旋线圈，其$J_P(r,z)\propto 1/r^2$，可以产生92\%的Kelvin磁场。实践中，由于两端需要多个电极，多螺旋线圈被认为比Bitter线圈更难于制造。
+最高效率的多螺旋线圈，其$J_P(r,z)\propto 1/r^2$，可以产生92\%的Kelvin磁场。
+实践中，多螺旋线圈由于两端需要很多电极，而被认为比Bitter线圈更难于制造。
 
 
 \subsection{问题3.2：螺管中的最大场}
