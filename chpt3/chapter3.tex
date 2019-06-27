@@ -2333,34 +2333,34 @@ $\lambda J@I_{op} [\mathrm{MA/m^2}]$ & $39.6^*$ & $44.3^*$ & $38.6^*$ \\ \hline
 \subsection{问题3.3：Helmholtz线圈}
 很多应用都希望有高均匀性的磁场。
 一种被称为``Helmholtz coil"的简单布局可以在一个有限的区域内实现高均匀磁场。
-它使用两个一致的空间上同轴但在磁场轴线($z$向)分开一定距离的的线圈(图3.24a)；
-两个线圈分别位于$z = d/2$和$z = −d/2$。通过调整间隔$d$，使得磁场中心处于($r=0,z=0$):
+它使用两个一样的线圈，在磁场轴线($z$向)分开一定距离同轴放置(图3.24a)；
+两线圈分别位于$z = d/2$和$z = −d/2$。通过调整间隔$d$，使得磁体中心处于($r=0,z=0$):
 %3.121
 \begin{equation}% 3.121
 \frac{d^2H_z(0,z)}{dz^2}\mid_{z=0}=0
 \end{equation}
 
-a) 将两个线圈看成理想的``环"线圈，半径为$a$，证明当$d=a$时，在中心处有$dH^2_z(0, z)/dz^2 = 0$。
-图3.24b中的实线给出了一个不满足方程3.121的$d$下的$H_z(0, z)$。
+a) 将两个线圈看成半径为$a$的理想``环"线圈。证明：当$d=a$时，在磁体中心处有$dH^2_z(0, z)/dz^2 = 0$。
+图3.24b中的实线给出了一个不满足式3.121的$d$下的某线圈的$H_z(0, z)$。
 
-b) 证明两个线圈如果反极性，中心处会产生一个梯度场。
-在$z=0$处计算$dH_z/dz$。(注意，当$d=a$时$d^3H_z(0,z)/dz^3 \neq 0$；$d^3H_z(0,z)/dz^3=0$要求$d=\sqrt{3}a$) 
-此种相反电流的配置称为Maxwell线圈。图3.24b中的虚线给出了梯度线圈的$H_z(z)$。
+b) 证明：两个线圈如果反极性，磁体中心会产生一个梯度场
+计算$dH_z/dz$在$z=0$的值。(注意，当$d=a$时，$d^3H_z(0,z)/dz^3 \neq 0$；$d^3H_z(0,z)/dz^3=0$要求$d=\sqrt{3}a$) 。
+此种通过反向电流的配置称为Maxwell线圈。图3.24b中的虚线给出了梯度线圈的$H_z(z)$。
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.4]{chpt3/figs/fig3.24.eps}
-	\caption{(a)理想Helmholtz线圈布局；(b)均匀场下的$H_z(0,z)$(实线)和梯度场下的$H_z(0,z)$(虚线)}
+	\caption{(a)理想Helmholtz线圈布局；(b)``均匀''场下的$H_z(0,z)$(实线)和``梯度''场下的$H_z(0,z)$(虚线)。}
 \end{figure}
 
 \subsubsection{问题3.3之解}
-a) 位于下方$z=−d/2$处环产生的轴向($r =0$)磁场的$z$分量可由方程3.3a给出：
+a) 位于下方$z=−d/2$处的环线圈产生的轴向($r =0$)磁场的$z$分量可由式3.3a给出：
 % 方程
 \begin{equation*}% page139
 H_z(0,z)=\frac{a^2I}{2[a^2+(z+\frac{d}{2})^2]^\frac{3}{2}}
 \end{equation*}
 
-加上位于上面$z=d/2$处的线圈的磁场，有：
+加上位于上面$z=d/2$处的环线圈的磁场，有：
 %S3.1
 \begin{equation*}% S3.1
 H_z(0,z)=\frac{a^2I}{2}\left\{\frac{1}{[a^2+(z+\frac{d}{2})^2]^\frac{3}{2}}+\frac{1}{[a^2+(z-\frac{d}{2})^2]^\frac{3}{2}}\right\} \tag{S3.1}
@@ -2369,23 +2369,23 @@ H_z(0,z)=\frac{a^2I}{2}\left\{\frac{1}{[a^2+(z+\frac{d}{2})^2]^\frac{3}{2}}+\fra
 将S3.1给出的方程$H_z(z)$对$z$微分，有：
 % 方程
 \begin{equation*}
-\frac{d^2H_z(0,z)}{dz}=\frac{3a^2I}{2}\left\{{-\frac{(z+\frac{d}{2})}{[a^2+(z+\frac{d}{2})^2]^\frac{5}{2}}-\frac{(z-\frac{d}{2})}{[a^2+(z-\frac{d}{2})^2]^\frac{5}{2}}}\right\}
+\frac{dH_z(0,z)}{dz}=\frac{3a^2I}{2}\left\{{-\frac{(z+\frac{d}{2})}{[a^2+(z+\frac{d}{2})^2]^\frac{5}{2}}-\frac{(z-\frac{d}{2})}{[a^2+(z-\frac{d}{2})^2]^\frac{5}{2}}}\right\}
 \end{equation*}
 
-注意，由于对称性，$dH_z(0,z)/dz=0$在$z=0$处对任意$a$成立。
+由于对称性，$dH_z(0,z)/dz=0$在$z=0$处对任意$a$成立。
 
-对S3.1二次微分有：
+式S3.1的二阶导数为：
 % 方程
 \begin{equation*}
 \frac{d^2H_z(0,z)}{dz^2}=\frac{3a^2I}{2}\left\{{-\frac{a^2-4(z+\frac{d}{2})^2}{[a^2+(z+\frac{d}{2})^2]^\frac{7}{2}}}
 -\frac{a^2-4(z-\frac{d}{2})^2}{[a^2+(z-\frac{d}{2})^2]^\frac{7}{2}}\right\}
 \end{equation*}
 
-如果$d = a$，在$z = 0$处二阶导数为零。
-这种同轴放置两个同一线圈，且其距离等于线圈半径的做法产生了一个高均匀场区域。
-这里的二阶分析是MRI和其他要求高空间均匀性磁场磁体设计的重要准则之一。
+若在$z = 0$处二阶导数为零，应有$d = a$。
+这种同轴放置两个一样的线圈且其距离等于线圈半径的技术产生了一个均匀场区域。
+这里的二次谐波分析，是MRI和其他要求高空间均匀性磁场磁体设计的重要准则之一。
 
-b) 对这个系统，下方线圈的电流极性反转，有：
+b) 对该系统，将下方环线圈的电流极性反转，有：
 % s3.2
 \begin{equation*}% S3.2
 H_z(0,z)=\frac{a^2I}{2}\left\{{-\frac{1}{[a^2+(z+\frac{d}{2})^2]^\frac{3}{2}}+\frac{1}{[a^2+(z-\frac{d}{2})^2]^\frac{3}{2}}}\right\} \tag{S3.2}
@@ -2400,23 +2400,22 @@ H_z(0,z)=\frac{a^2I}{2}\left\{{-\frac{1}{[a^2+(z+\frac{d}{2})^2]^\frac{3}{2}}+\f
 在$z=0$处计算S3.3，有：
 %方程
 \begin{equation*}
-\frac{dH_z(0,z)}{dz}\mid_0=\frac{3a^2Id}{2[a^2+(z+\frac{d}{2})^2]^\frac{5}{2}}
+\frac{dH_z(0,z)}{dz}\bigg\mid_0=\frac{3a^2Id}{2[a^2+(\frac{d}{2})^2]^\frac{5}{2}}
 \end{equation*}
 
-这种放置两个同一但电流方向相反的线圈产生梯度场的方法是要求中平面梯度场磁体设计中使用的基本法则。
-MRI系统中使用的脉冲磁体产生梯度场(从成像中提取空间信息)就是一个例子。
+这种同轴放置两个一样但电流方向相反的线圈以产生梯度场的方法是对中平面梯度场有要求的磁体的
+设计中使用的基本法则。MRI系统中使用脉冲磁体产生梯度场(提取空间信息以成像)就是一个例子。
 
 
-\subsection{问题3.4：Helmholtz线圈---另一种方法}
-这一节，我们使用方程3.16a和3.22分析问题3.3中的Helmholtz线圈。
+\subsection{问题3.4：Helmholtz线圈的分析---另一种方法}
+这一节，我们使用式3.16a和3.22来分析问题3.3中的Helmholtz线圈。
 
 证明，两个半径为$a$、分别位于$\xi(\equiv z/a)=+0.5$ 和$\xi=−0.5$的``环"线圈1和2组成的Helmholtz对，
 轴向场在其中心($\xi=0$)的二阶导数$d^2 h_z(0)/d\xi^2|_{1/2}$可以表示为$\xi^{2n}$的级数且随着
-项数增加而收敛于0。由于并未计算每一个线圈在$\xi=0$的值，所以3.17b的简化表达式不能用。
+项数增加而收敛于0。由于并未计算各线圈自己在$\xi=0$的值，所以3.17b的简化表达式不能用在这里。
 
-
-使用最高项第20项计算$d^2 h_z(0)/d\xi^2|_{1/2}$。注意到$E_2(1, 0)\cdots E_{10}(1, 0)$已由3.28给出。
-导出$E_2(1, 0)\cdots E_{10}(1, 0)$的技术也可以用于从3.15b导出$E_{12}(\alpha, 0)\cdots E_{20}(\alpha, 0)$，$f_{12}(\alpha,\beta)\cdots f_{20}(\alpha,\beta)$在附录IB中有。
+使用至第20阶项计算$d^2 h_z(0)/d\xi^2|_{1/2}$。注意到$E_2(1, 0)\cdots E_{10}(1, 0)$已由3.28给出。
+推导$E_2(1, 0)\cdots E_{10}(1, 0)$的技术同样也可用于从3.15b推导出$E_{12}(\alpha, 0)\cdots E_{20}(\alpha, 0)$。$f_{12}(\alpha,\beta)\cdots f_{20}(\alpha,\beta)$在附录IB中有。
 在极限$\beta\rightarrow 0$下，将$1/(1+\beta^2)^{19.5}$展开至$\beta^{20}$项，有：
 %3.122
 \begin{equation}% 3.122
@@ -2427,7 +2426,7 @@ MRI系统中使用的脉冲磁体产生梯度场(从成像中提取空间信息)
 \end{split}
 \end{equation}
 
-$E_{12}(\alpha, 0)\cdots E_{20}(\alpha, 0)$类似于方程3.21中的$E_{2}(\alpha, 0)\cdots E_{10}(\alpha, 0)$，我们有：
+$E_{12}(\alpha, 0)\cdots E_{20}(\alpha, 0)$类似于式3.21中的$E_{2}(\alpha, 0)\cdots E_{10}(\alpha, 0)$，有：
 %3.123
 \begin{subequations}% 3.123a
 	\begin{align}
@@ -2439,20 +2438,21 @@ E_{20}(\alpha,0)&=\frac{3\cdot7\cdot11\cdot13\cdot17\cdot19}{2^{20}\cdot5}\cdot\
 \end{align}
 \end{subequations}
 
-在极限$\alpha\rightarrow 1$时，方程3.123a-3.123e成为：
+在极限$\alpha\rightarrow 1$时，式3.123a-3.123e成为：
 %3.124
 \begin{subequations}
 	\begin{align}
-E_{12}(1,0)=\frac{3003}{1024}&=\frac{3\cdot7\cdot11\cdot13}{2^{10}}=\frac{3\cdot5\cdot7\cdot9\cdot11\cdot13}{2\cdot4\cdot6\cdot8\cdot10\cdot12}\simeq 2.933\\
-E_{14}(1,0)=-\frac{6435}{2048}&=-\frac{5\cdot9\cdot11\cdot13}{2^{11}}=-\frac{3\cdot5\cdot7\cdot9\cdot11\cdot13\cdot15}{2\cdot4\cdot6\cdot8\cdot10\cdot12\cdot14}\simeq-3.142\\
-E_{16}(1,0)=\frac{109395}{32768}&=\frac{5\cdot9\cdot11\cdot13\cdot17}{10^{15}}=\frac{3\cdot5\cdot7\cdot9\cdot11\cdot13\cdot15\cdot17} {2\cdot4\cdot6\cdot8\cdot10\cdot12\cdot14\cdot16}\simeq 3.338\\
-E_{18}(1,0)=-\frac{230945}{65536}&=\frac{5\cdot11\cdot13\cdot17\cdot19}{10^{16}}=-\frac{3\cdot5\cdot7\cdot9\cdot11\cdot13\cdot15\cdot17\cdot19} {2\cdot4\cdot6\cdot8\cdot10\cdot12\cdot14\cdot16\cdot18}\simeq-3.524\\
-E_{20}(1,0)=\frac{969969}{262144}&=\frac{3\cdot7\cdot11\cdot13\cdot17\cdot19}{10^{18}}=\frac{3\cdot5\cdot7\cdot9\cdot11\cdot13\cdot15\cdot17\cdot19\cdot21} {2\cdot4\cdot6\cdot8\cdot10\cdot12\cdot14\cdot16\cdot18\cdot20}\simeq 3.700
+&E_{12}(1,0)=\frac{3003}{1024}=\frac{3\cdot7\cdot11\cdot13}{2^{10}}=\frac{3\cdot5\cdot7\cdot9\cdot11\cdot13}{2\cdot4\cdot6\cdot8\cdot10\cdot12}\simeq 2.933\\
+&E_{14}(1,0)=-\frac{6435}{2048}=-\frac{5\cdot9\cdot11\cdot13}{2^{11}}=-\frac{3\cdot5\cdot7\cdot9\cdot11\cdot13\cdot15}{2\cdot4\cdot6\cdot8\cdot10\cdot12\cdot14}\simeq-3.142\\
+&E_{16}(1,0)=\frac{109395}{32768}=\frac{5\cdot9\cdot11\cdot13\cdot17}{10^{15}}=\frac{3\cdot5\cdot7\cdot9\cdot11\cdot13\cdot15\cdot17} {2\cdot4\cdot6\cdot8\cdot10\cdot12\cdot14\cdot16}\simeq 3.338\\
+&E_{18}(1,0)=-\frac{230945}{65536}=\frac{5\cdot11\cdot13\cdot17\cdot19}{10^{16}}=-\frac{3\cdot5\cdot7\cdot9\cdot11\cdot13\cdot15\cdot17\cdot19} {2\cdot4\cdot6\cdot8\cdot10\cdot12\cdot14\cdot16\cdot18}\simeq-3.524\\
+&E_{20}(1,0)=\frac{969969}{262144}=\frac{3\cdot7\cdot11\cdot13\cdot17\cdot19}{10^{18}}=\frac{3\cdot5\cdot7\cdot9\cdot11\cdot13\cdot15\cdot17\cdot19\cdot21} {2\cdot4\cdot6\cdot8\cdot10\cdot12\cdot14\cdot16\cdot18\cdot20}\simeq 3.700
 \end{align}
 \end{subequations}
 
 \subsubsection{问题3.4之解}
-位于$\xi=+0.5$的线圈1贡献的$d^2h_z(\xi)/dxi^2$在 $xi=0$时$d^2h_z(0)/d\xi^2|_{1/2}$由方程3.16a给出：
+位于$\xi=+0.5$的线圈1贡献的$d^2h_z(\xi)/d\xi^2$在$\xi=0$时为$d^2h_z(0)/d\xi^2|_{1/2}$，
+可由式3.16a给出：
 %s4.1
 \begin{equation*}% S4.1
 \begin{split}
@@ -2464,90 +2464,94 @@ E_{20}(1,0)=\frac{969969}{262144}&=\frac{3\cdot7\cdot11\cdot13\cdot17\cdot19}{10
 \end{split}\tag{S4.1}
 \end{equation*}
 
-由于线圈2(位于$\xi=−0.5$)和位于$\xi=0.5$的线圈1在$\xi=0.5$处给出树枝上相同的$d^2\xi_z/d\xi^2$，我们有：
+由于线圈2(位于$\xi=−0.5$)和位于$\xi=0.5$的线圈1在$\xi=0.5$处给出数值上相同的$d^2\xi_z/d\xi^2$，有：
 %s4.2
 \begin{equation*}
 \begin{split}
-\frac{d^2h_z(0)}{d\zeta^2}\mid_{\frac{1}{2}}=&4(-\frac{3}{2})+24(\frac{15}{8})(0.5)^2+60(-\frac{35}{16})(0.5)^4\\
-&+112(\frac{315}{128})(0.5)^6+180(-\frac{693}{256})(0.5)^8\\
-&+264(\frac{3003}{1024})(0.5)^{10}+264(-\frac{6435}{2048})(0.5)^{12}\\
-&+480(\frac{109395}{32768})(0.5)^{14}+612(-\frac{230945}{65536})(0.5)^{16}\\
-&+760(\frac{969969}{262144})(0.5)^{18}+\cdots
+\frac{d^2h_z(0)}{d\zeta^2}\mid_{\frac{1}{2}}=&4\left(-\frac{3}{2}\right)+24\left(\frac{15}{8}\right)(0.5)^2+60\left(-\frac{35}{16}\right)(0.5)^4\\
+&+112\left(\frac{315}{128})(0.5\right)^6+180\left(-\frac{693}{256}\right)(0.5)^8\\
+&+264\left(\frac{3003}{1024}\right)(0.5)^{10}+264\left(-\frac{6435}{2048}\right)(0.5)^{12}\\
+&+480\left(\frac{109395}{32768}\right)(0.5)^{14}+612\left(-\frac{230945}{65536}\right)(0.5)^{16}\\
+&+760\left(\frac{969969}{262144}\right)(0.5)^{18}+\cdots
 \end{split}\tag{S4.2}
 \end{equation*}
 
-随着项数增加，我们计算方程S4.2：
+我们计算方程S4.2随项数增加的变化情况：
 %方程
 \begin{align*}
-\frac{d^2h_z(0)}{d\zeta^2}\mid_{\frac{1}{2}}&=-6\qquad (\mbox{only} E_2)\\
-&=5.25  \qquad (\mbox{through}\quad E_4)\\
-&\simeq -2.9531\qquad   (\mbox{through}\ E_6)\\
-&\simeq 1.3535\qquad (\mbox{through}\ E_8)\\
-&\simeq -0.5499\qquad   (\mbox{through}\ E_{10})\\
-&\simeq 0.2062 \qquad (\mbox{through}\ E_{12})\\
-&\simeq -0.0730\qquad   (\mbox{through}\ E_{14})\\
-&\simeq 0.0248 \qquad  (\mbox{through}\ E_{16})\\
-&\simeq-0.0081\qquad  (\mbox{through}\ E_{18})\\
-&\simeq 0.0026 \qquad (\mbox{through}\ E_{20})
+\frac{d^2h_z(0)}{d\zeta^2}\mid_{\frac{1}{2}}&=-6\qquad &(\mbox{仅} E_2)\\
+&=5.25  \qquad &(\mbox{到}\quad E_4)\\
+&\simeq -2.9531\qquad   &(\mbox{到}\ E_6)\\
+&\simeq 1.3535\qquad &(\mbox{到}\ E_8)\\
+&\simeq -0.5499\qquad   &(\mbox{到}\ E_{10})\\
+&\simeq 0.2062 \qquad &(\mbox{到}\ E_{12})\\
+&\simeq -0.0730\qquad   &(\mbox{到}\ E_{14})\\
+&\simeq 0.0248 \qquad  &(\mbox{到}\ E_{16})\\
+&\simeq-0.0081\qquad  &(\mbox{到}\ E_{18})\\
+&\simeq 0.0026 \qquad &(\mbox{到}\ E_{20})
 \end{align*}
 
 
-由上可知，随着高次项的加入， $d^2h_z(0)/d\xi^2|_{1/2}\rightarrow 0$。
-注意到，对置于$\xi=0$的一个孤立环线圈： $d^2h_z(0)/d\xi^2=−3$。
+由上可知，随着更高次项的加入， $d^2h_z(0)/d\xi^2|_{1/2}\rightarrow 0$。
+注意到，对置于$\xi=0$的一个单环线圈有$d^2h_z(0)/d\xi^2=−3$。
 
 
 
-\subsection{问题3.5：一个空间均匀磁体的分析}
+\subsection{问题3.5：空间均匀磁体分析}
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.6]{chpt3/figs/fig3.25.eps}
+	\includegraphics[scale=0.5]{chpt3/figs/fig3.25.eps}
 	\caption{三个线圈组成的磁体，以mm为单位}
 \end{figure}
-图3.25给出了一个由三个线圈组成的空间均匀磁体的结构剖面。
-线圈1和线圈3是完全一样的，分别位于中间线圈2的上下方，
-用以加强中心场$(0,0)$的均匀性。
+图3.25给出了一个由三个线圈组成的空间均匀高场磁体的结构剖面。
+线圈1和线圈3是完全一样的，分别位于中间线圈2的上方和下方，
+用以提高中心$(0,0)$的场均匀性。
 关键尺寸(mm为单位)已在图中标注。
 每个线圈的$2a_1$都是$100\ \mathrm{mm}$，每个线圈的总电流密度均为
-$\lambda J =2.5147×108\ \mathrm{A/m^2} $。
-表格3.4给出了使用Bobrov程序计算得到的场参数[3.32]。
-%% 表格3.4
-
+$\lambda J =2.5147×10^8\ \mathrm{A/m^2} $。
+表3.4给出了使用Bobrov的程序计算得到的该磁体的场参数[3.32]。
 \begin{table}[htbp]\small
 \centering
 \caption{场参数}
-\begin{tabular}{|l|c|}
+\begin{tabular}{|l|l|}
 	\hline
 		参数                 & 值                    \\ \hline
-	中心场,$B_0$  [T] & 1.000                    \\ 
-	$d^2B/dz^2\mid_0$     [$\mathrm{T/cm^2}$]      & 0.4658$\times10^{-6} $\\ 
-	$d^4B/dz^4\mid_0  $  [$\mathrm{T/cm^4}$] & 4.8450$\times10^{-5} $\\ 
-	$d^6B/dz^6\mid_0 $   [$\mathrm{T/cm^6}$]   & 1.0893$\times10^{-4} $\\
-	$d^8B/dz^8\mid_0$ [$\mathrm{T/cm^8}$]    & 1.0789$\times10^{-4}$ \\ \hline
+	中心场，$B_0$  [T] & 1.000                    \\ 
+	$d^2B/dz^2\mid_0$  \qquad   [$\mathrm{T/cm^2}$]      & 0.4658$\times10^{-6} $\\ 
+	$d^4B/dz^4\mid_0  $\qquad   [$\mathrm{T/cm^4}$] & 4.8450$\times10^{-5} $\\ 
+	$d^6B/dz^6\mid_0 $ \qquad   [$\mathrm{T/cm^6}$]   & 1.0893$\times10^{-4} $\\
+	$d^8B/dz^8\mid_0$ \qquad    [$\mathrm{T/cm^8}$]    & 1.0789$\times10^{-4}$ \\ \hline
 	\end{tabular}
 \end{table}
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.6]{chpt3/figs/fig3.26.eps}
-	\caption{图3.25中的三个线圈表示为A、B、C，每个线圈的中心都位于磁体中心。线圈C的符号表示
-		它的载流是与A和B反向的。以mm为单位}
+	\caption{将图3.25中的三个线圈表示为A、B、C，每个线圈的中心都位于磁体中心。线圈C的负号表示
+		它的载流是与A和B反向的。尺寸以mm为单位。}
 \end{figure}
-图3.26给出的是同一个磁体，线圈用A、B和C表示，各线圈的中心都是$(0,0)$。
-线圈A从线圈1延伸至线圈3，还包括中间的两个间隙。线圈B与线圈2一致。
-因为这个新的表示法中线圈2被线圈A和线圈B代表了2次，
-所以加入与线圈A和B电流相反的线圈C，以减掉1个线圈2以及那两个间隙。
 
-a) 证明，如果线圈A、B和C的总电流密度都是$\lambda J$，图3.26的线圈配置和原线圈配置给出相同的中心场；
+图3.26给出的是用A、B和C表示的同一磁体，各线圈的中心都在$(0,0)$。
+线圈A从线圈1延伸至线圈3，并包括中间的两个间隙。线圈B与线圈2一致。
+因为这个新的表示法中线圈2被线圈A和线圈B表示了2次，
+所以使用与线圈A和B电流相反的线圈C，以减掉1个线圈2以及那两个间隙。
+
+a) 证明：图3.26的线圈配置和原线圈配置给出相同的中心场。线圈A、B和C的总电流密度都是$\lambda J$。
 \begin{equation} %3.125
 B_0 = 1.000\ \mathrm{T}=\mu_0\lambda J a_1[F_A(\alpha,\beta)+F_B(\alpha,\beta)-F_C(\alpha,\beta)]
 \end{equation}
 
-b) 应用方程3.14和3.17，并使用手持科学计算器，计算本磁体的$d^2B/dz^2|_0$和$d^4B/dz^4|_0$。
-计算值应该可表3.4使用程序计算的结果吻合。
+b) 应用式3.14和3.17，并用手持科学计算器计算本磁体的$d^2B/dz^2|_0$和$d^4B/dz^4|_0$。
+计算值应该与表3.4使用程序计算的结果吻合。
 
 \subsubsection{问题3.5之解}
-表3.5列出了线圈A、B和C的$\alpha$和$\beta$的近似值。采用这些数值，我们得到：
-
+表3.5列出了线圈A、B和C的$\alpha$和$\beta$的对应值。采用这些值，得：
+%计算的F
+\begin{align*}% page144
+F_A(\alpha,\beta)&=0.12094421\\
+F_B(\alpha,\beta)&=0.05287933\\
+F_C(\alpha,\beta)&=0.11053327
+\end{align*}
 %表格3.5
 \begin{table}[htbp]\small
 \centering
@@ -2561,14 +2565,7 @@ b) 应用方程3.14和3.17，并使用手持科学计算器，计算本磁体的
 	\end{tabular}
 \end{table}
 
-%计算的F
-\begin{align*}% page144
-F_A(\alpha,\beta)&=0.12094421\\
-F_B(\alpha,\beta)&=0.05287933\\
-F_C(\alpha,\beta)&=0.11053327
-\end{align*}
-
-a)从方程3.125，我们有：
+a) 由式3.125，我们有：
 %%
 \begin{equation*}% page144
 \begin{split}
@@ -2577,17 +2574,17 @@ B_0=&(4\pi\times 10^{-7}\ \mathrm{H/m})(2.5147\times 10^8\ \mathrm{ A/m^2})(5\ti
 \end{split}
 \end{equation*}
 
-b)将$\alpha$和$\beta$代入方程3.14a和3.14b1，我们有：
+b)将$\alpha$和$\beta$代入3.14a和3.14b1，我们有：
 %%
  \begin{align*}% page144
-F(\alpha,\beta)E_2(\alpha,\beta)_A=-0.002277367;F(\alpha,\beta)E_4(\alpha,\beta)_A=-0.000315757\\
-F(\alpha,\beta)E_2(\alpha,\beta)_B=-0.007938543;F(\alpha,\beta)E_4(\alpha,\beta)_B=-0.001737981\\
-F(\alpha,\beta)E_2(\alpha,\beta)_C=-0.010216278;F(\alpha,\beta)E_4(\alpha,\beta)_C=-0.002133593
+F(\alpha,\beta)E_2(\alpha,\beta)_A=-0.002277367;\qquad F(\alpha,\beta)E_4(\alpha,\beta)_A=-0.000315757\\
+F(\alpha,\beta)E_2(\alpha,\beta)_B=-0.007938543;\qquad F(\alpha,\beta)E_4(\alpha,\beta)_B=-0.001737981\\
+F(\alpha,\beta)E_2(\alpha,\beta)_C=-0.010216278;\qquad F(\alpha,\beta)E_4(\alpha,\beta)_C=-0.002133593
 \end{align*}
 
-当所有线圈都有相同的$a_1$和$\lambda J a_1$时，方程3.18成为：
+当所有线圈都有相同的$a_1$和$\lambda J a_1$时，3.18成为：
 \begin{equation*}% S5.1
-h_\zeta(\zeta)=1+\frac{\sum_{k}^{j=1}F(\alpha_j,\beta_j)E_2(\alpha_j,\beta_j)}{\sum_{k}^{j=1}F(\alpha_j,\beta_j)}\zeta^2+\cdots \tag{S5.1}
+h_\zeta(\zeta)=1+\frac{\sum^{k}_{j=1}F(\alpha_j,\beta_j)E_2(\alpha_j,\beta_j)}{\sum^{k}_{j=1}F(\alpha_j,\beta_j)}\zeta^2+\cdots \tag{S5.1}
 \end{equation*}
 
 \begin{align*}
@@ -2598,28 +2595,27 @@ E_4(\alpha,\beta)&=\frac{-0.000315757-0.001737981+0.002132363}{0.6329027}=0.0012
 
 于是我们有：
 \begin{align*}% page144
-\frac{d^2B}{dz^2}\big|_0=2E_2(\frac{B_0}{a_{1}^{2}})=0.4658\times 10^{-6}\ \mathrm{T/cm^2}\\
-\frac{d^4B}{dz^4}\big|_0=24E_4(\frac{B_0}{a_{1}^{4}})=4.8453\times 10^{-5}\ \mathrm{T/cm^4}
+\frac{d^2B}{dz^2}\bigg|_0=2E_2\left(\frac{B_0}{a_{1}^{2}}\right)=0.4658\times 10^{-6}\ \mathrm{T/cm^2}\\
+\frac{d^4B}{dz^4}\bigg|_0=24E_4\left(\frac{B_0}{a_{1}^{4}}\right)=4.8453\times 10^{-5}\ \mathrm{T/cm^4}
 \end{align*}
 
-这些数值与表3.4给出的事实上是一致的，尽管需要我们勤奋的计算至第九位小数。
+这些数值与表3.4给出的数据完全是一致的，如果我们能勤奋的计算至第九位小数的话。
 
-值得注意的是，这里呈现的分析对计算给定此题设计的场梯度是很有用的，尽管乏味。
-这里给出的分析形式对设计空间高均匀性磁体并不实用；它只是对开发个人的设计程序很有用。
+值得注意的是，在\textit{给定}磁体设计时，这里给出的分析对磁场梯度项的计算很有用，尽管乏味。
+这里给出的分析形式对设计空间高均匀性磁体并不实用；
+不过，它可作为开发个人设计程序的基础。
 
-
-
-\subsection{问题3.6：直角坐标下的场展开}
+\subsection{问题3.6：直角坐标下的磁场展开}
 在由图3.4定义的球坐标$(r, \theta,\phi)$下，
-由嵌套线圈组成磁体产生的在无源子由空间的$z$向磁场$H_z$可由方程3.9表示：
+由嵌套线圈组成磁体产生的在无源空间的$z$向磁场$H_z$可由式3.9表示。
 
-证明，笛卡尔坐标系下$H_z(r, \theta,\phi)$的表达式$H_z(x, y, z)$在$n=0, 1, 2$分别为：
+证明，笛卡尔坐标系下$H_z(r, \theta,\phi)$的表达式$H_z(x, y, z)$在$n=0, 1, 2$时分别为：
 %%3.126
 \begin{subequations}
 	\begin{align}
-\mbox{n=0:} H_z(x,y,z)=*A_{0}^{0}\\
-\mbox{n=1:} H_z(x,y,z)=&A_{0}^{0}+2zA_{1}^{0}+3(A_{1}^{1}x+B_{1}^{1}y)\\
-\mbox{n=2:} H_z(x,y,z)=&A_{0}^{0}+2zA_{1}^{0}+3(A_{1}^{1}x+B_{1}^{1}y)\notag\\
+n=0\qquad H_z(x,y,z)=&A_{0}^{0}\\
+n=1\qquad H_z(x,y,z)=&A_{0}^{0}+2zA_{1}^{0}+3(A_{1}^{1}x+B_{1}^{1}y)\\
+n=2\qquad H_z(x,y,z)=&A_{0}^{0}+2zA_{1}^{0}+3(A_{1}^{1}x+B_{1}^{1}y)\notag\\
 &+\frac{3}{2}A_{2}^{0}(2z^2-x^2-y^2)+12z(A_{2}^{1}x+B_{2}^{1}y)\notag\\
 &+15[A_{2}^{2}(x^2-y^2)+2B_{2}^{2}xy]
 	\end{align}
@@ -2627,8 +2623,7 @@ E_4(\alpha,\beta)&=\frac{-0.000315757-0.001737981+0.002132363}{0.6329027}=0.0012
 
 
 \subsubsection{问题3.6之解}
-球坐标参数$r, u = \cos\theta, s = \sin\theta, \sin\phi,\cos\phi$用$x,y,z$表示为：
-
+球坐标参数$r, u = \cos\theta, s = \sin\theta, \sin\varphi,\cos\varphi$用$x,y,z$表示为：
 %%S6.1
  \begin{align*}% S6.1a
 &r=\sqrt{x^2+y^2+z^2}\tag{S6.1a}\\
@@ -2638,7 +2633,8 @@ E_4(\alpha,\beta)&=\frac{-0.000315757-0.001737981+0.002132363}{0.6329027}=0.0012
 &\cos\varphi=\frac{x}{\sqrt{x^2+y^2}}\tag{S6.1e}
 \end{align*}
 
-方程3.9与S6.1a-S6.1e分别对$n=0,1,2$联立，有：
+式3.9与S6.1a-S6.1e分别对$n=0,1,2$联立，有：
+$$n=0$$：
 \begin{equation*}% S6.2a
 \begin{split}
 H_z(x,y,z)=&\sum_{0}^{m=0}r^0(1+0)P_{0}^{0}(u)(A_{0}^{0}\cos0 +B_{0}^{0}\sin 0)\\
@@ -2646,15 +2642,16 @@ H_z(x,y,z)=&\sum_{0}^{m=0}r^0(1+0)P_{0}^{0}(u)(A_{0}^{0}\cos0 +B_{0}^{0}\sin 0)\
 \end{split}\tag{S6.2}
 \end{equation*}
 
-对$n=0$，我们有：
+即，对$n=0$，我们有：
  \begin{equation*}% 3.126a
 H_z(x,y,z)=A_{0}^{0} \tag{3.126a}
 \end{equation*}
+其中，$A_0^0$表示磁体中心场$H_z(0, 0, 0)$。
 
-注意到，$A_0^0$表示磁体中心场$H_z(0, 0, 0)$。$n=1$时：
+$n=1$：
 \begin{equation*}% s6.3a
 \begin{split}
-H_z(x,y,z)=&\sum_{1}^{m=0}r^1(2+m)P_{1}^{m}(A_{1}^{m}\cos m\varphi+B_{1}^{m}\sin m\varphi)\\
+H_z(x,y,z)=&\sum^{1}_{m=0}r^1(2+m)P_{1}^{m}(A_{1}^{m}\cos m\varphi+B_{1}^{m}\sin m\varphi)\\
 =&r^1(2+0)P_{1}^{0}(A_{1}^{0})+r^1(2+1)
 P_{1}^{1}(A_{1}^{1}\cos\varphi+B_{1}^{1}\sin\varphi)\\
 =&2ruA_{1}^{0}+3rs(A_{1}^{1}\cos\varphi+B_{1}^{1}\sin\varphi)\\
@@ -2664,16 +2661,18 @@ P_{1}^{1}(A_{1}^{1}\cos\varphi+B_{1}^{1}\sin\varphi)\\
 \end{split}\tag{S6.3}
 \end{equation*}
 
-于是，对最大为1的$n$值，我们有：
+于是，在$n$不大于1时，有：
 %%3.126b
 \begin{equation*}% 3.126b
-H_z(x,y,z)=A_{0}^{0}+zA_{1}^{0}+3(A_{1}^{1}x+B_{1}^{1}y) \tag{3.126b}
+H_z(x,y,z)=A_{0}^{0}+2zA_{1}^{0}+3(A_{1}^{1}x+B_{1}^{1}y) \tag{3.126b}
 \end{equation*}
 
-注意，$H_z(x, y, z)$含有仅随着$z,x,y$变化的项。$n=2$时：%%S6.4
+注意，$H_z(x, y, z)$含有仅随着$z,x,y$变化的项。
+
+$n=2$：%%S6.4
  \begin{equation*}% S6.4
  \begin{split}
-H_z(x,y,z)=&\sum_{2}^{m=0}r^2(3+m)P_{2}^{m}(A_{2}^{m}\cos m\varphi+B_{2}^{m}\sin m\varphi)\\
+H_z(x,y,z)=&\sum^{2}_{m=0}r^2(3+m)P_{2}^{m}(A_{2}^{m}\cos m\varphi+B_{2}^{m}\sin m\varphi)\\
 =&r^2(3+0)P_{2}^{0}(A_{2}^{0})+r^2(3+1)P_{2}^{1}
 (A_{2}^{1}\cos\varphi+B_{2}^{1}\sin\varphi)\\
 &+r^2(3+2)P_{2}^{2}(A_{2}^{2}\cos 2\varphi+B_{2}^{2}\sin 2\varphi)
@@ -2685,13 +2684,12 @@ H_z(x,y,z)=&\sum_{2}^{m=0}r^2(3+m)P_{2}^{m}(A_{2}^{m}\cos m\varphi+B_{2}^{m}\sin
 H_z(x,y,z)=&3(x^2+y^2+z^2)\frac{1}{2}\left(\frac{2z^2-x^2-y^2}{x^2+y^2+z^2}\right)A_{2}^{0}\\
 &+4(x^2+y^2+z^2)\frac{3z\sqrt{x^2+y^2}}{x^2+y^2+z^2}
 \left(A_{2}^{1}\frac{x}{\sqrt{x^2+y^2}}+B_{2}^{1}\frac{y}{\sqrt{x^2+y^2}}\right)\\
-&+5(x^2+y^2+z^2)\frac{3(x^2+y^2)}{x^2+y^2+z^2}\left[A_{2}^{2}(\frac{2x^2}{x^2+y^2}-1)+B_{2}^{2}\frac{2xy}{x^2+y^2}\right]\\
-=&\frac{3}{2}A_{2}^{0}(2z^2-x^2-y^2)\\
-&+12z(A_{2}^{1}x+B_{2}^{1}y)+15[A_{2}^{2}(x^2-y^2)+2B_{2}^{2}xy]
+&+5(x^2+y^2+z^2)\frac{3(x^2+y^2)}{x^2+y^2+z^2}\left[A_{2}^{2}\left(\frac{2x^2}{x^2+y^2}-1\right)+B_{2}^{2}\frac{2xy}{x^2+y^2}\right]\\
+=&\frac{3}{2}A_{2}^{0}(2z^2-x^2-y^2)+12z(A_{2}^{1}x+B_{2}^{1}y)+15[A_{2}^{2}(x^2-y^2)+2B_{2}^{2}xy]
 \end{split}\tag{S6.4b}
 \end{equation*}
 
-累加方程S6.2b, S6.3b和S6.4b，我们得到对最大为2的$n$值情况：
+累加S6.2b, S6.3b和S6.4b，我们得到$n$值不大于2的情况：
 \begin{equation*}% 3.126c
 \begin{split}
 H_z(x,y,z)=&A_{0}^{0}+2zA_{1}^{0}+3(A_{1}^{1}x+B_{1}^{1}y)\\
@@ -2700,7 +2698,7 @@ H_z(x,y,z)=&A_{0}^{0}+2zA_{1}^{0}+3(A_{1}^{1}x+B_{1}^{1}y)\\
 \end{split}\tag{3.126c}
 \end{equation*}
 
-注意到，当对$n=0,1,2$计算$H_z(x, y, z)$时，它包含随$x, y, z, z^2, x^2, y^2, zx, zy$和$xy$变化的项。
+注意到，当在$n=0,1$和$2$下计算$H_z(x, y, z)$时，它包含随$x, y, z, z^2, x^2, y^2, zx, zy$和$xy$变化的项。
 
 
 \subsection{问题3.7：Notched螺管}
