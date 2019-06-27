@@ -2702,11 +2702,12 @@ H_z(x,y,z)=&A_{0}^{0}+2zA_{1}^{0}+3(A_{1}^{1}x+B_{1}^{1}y)\\
 
 
 \subsection{问题3.7：Notched螺管}
-Helmholtz线圈的准则---关于螺管中心对称放置载流元以在中心区域产生空间均匀场---是notched螺管线圈设计的基本准则。
+Helmholtz线圈的准则---在关于螺管中心对称的位置放置载流元以在中心区域产生空间均匀场
+---是notched螺管线圈设计的基础。
 很多MRI和NMR磁体都是notched螺管设计的变种。
 
-对一个简单螺管，绕组内半径$a_1$，外半径$a_2$，总长度$2b$，总电流密度$\lambda J$。
-回想到前面方程3.13a和3.13b给出中心轴向场$H_0\equiv H_z(0, 0)$，有：
+对一个绕组内半径$a_1$，外半径$a_2$，总长度$2b$，总电流密度$\lambda J$的简单螺管，
+回想到前面3.13a和3.13b给出的中心轴向场$H_0\equiv H_z(0, 0)$：
 %%3.13a/b
  \begin{equation*}% 3.13a
 H_0=\lambda Ja_1F(\alpha,\beta) \tag{3.13a}
@@ -2720,13 +2721,15 @@ F(\alpha,\beta)=\beta\ln\left(\frac{\alpha+\sqrt{\alpha^2+\beta^2}}{1+\sqrt{1+\b
 %%3.127
 \begin{equation}% 3.127
 \begin{split}
-H_z(0,z_1)=&\frac{1}{2}\lambda a_1\left[F(\alpha_1,\beta_1+\gamma_1)+F(\alpha_1,\beta_1-\gamma_1)\right]\\
+H_z(0,z_1)=&\frac{1}{2}\lambda J a_1\left[F(\alpha_1,\beta_1+\gamma_1)+F(\alpha_1,\beta_1-\gamma_1)\right]\\
 &-\frac{1}{2}\lambda Ja_3
 \left[F(\alpha_2,\beta_2+\gamma_2)+F(\alpha_2,\beta_2-\gamma_2)\right]
 \end{split}
 \end{equation}
-
 式中，$\alpha_1=a_2/a_1,\beta_1=b_1/a_1,\gamma_1=z_1/a_1,\alpha_2=a_2/a_3,\beta_2=b_2/a_3,\gamma_2=z_1/a_3$。螺管参数$a_1, a_2, a_3, b_1, b_2$如图3.27的定义。
+
+一个简单的notched线圈除了几个空间均匀度系数，仅有少数几个自由度可迫零，但那些2阶和4阶量可以很好的破零。
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.4]{chpt3/figs/fig3.27.eps}
@@ -2735,7 +2738,7 @@ H_z(0,z_1)=&\frac{1}{2}\lambda a_1\left[F(\alpha_1,\beta_1+\gamma_1)+F(\alpha_1,
 
 
 \subsubsection{问题3.7之解}
-为了解出$H_z(0,z-1)$，我们可以把螺管分成四个单螺管，其截面参数按角点设计如下：
+为了解出$H_z(0,z_1)$，我们可以把螺管分成四个单螺管，其截面参数按角点设计如下：
 
 \textbf{螺管1}：ABDC，有$\alpha_1=a_2/a_1=\alpha,\beta_1=(b_1+z_1)/a_1=\beta+\gamma$，其中
 $\beta=b_1/a_1,\gamma=z_1/a_1$；
@@ -2744,40 +2747,42 @@ $\beta=b_1/a_1,\gamma=z_1/a_1$；
 
 \textbf{螺管3}：IGDL，有$\alpha_3=a_2/a_3=\alpha^\prime,\beta_3=(b_2+z_1)/a_3=\beta^\prime+\gamma^\prime$，其中$\beta^\prime=b_2/a_3,\gamma^\prime=z_1/a_3$；
 
-\textbf{螺管4}：GKHD，有$\alpha_4=a_2/a_3=\alpha^\prime,\beta_4=(b_2-z_1)/a_3=\beta^\prime-\gamma^\prime$；
+\textbf{螺管4}：GKHD，有$\alpha_4=a_2/a_3=\alpha^\prime,\beta_4=(b_2-z_1)/a_3=\beta^\prime-\gamma^\prime$.
 
-注意到，所有螺管中，$J$都有相同的幅值，但螺管3和4与螺管1和2有相反的方向。同时注意到，所有的螺管都不是notched。
+我们注意到，所有螺管中$J$都有相同的幅值，但螺管3和4与螺管1和2有相反的符号。
+同时，所有的螺管都不再有凹槽。
 
-\textbf{螺管1的磁场}：$2_b=b_1+z_1$长的螺管1产生的$H_z(0, z_1)$是具有相同参数$a_1, a_2,\lambda J$而长度
-为$2_b = 2(b_1+z_1)$的螺管产生的中心场的一半。
-这从一个长为$2b$的非notched螺管的中心场$H_z(0, 0)$是两部分螺管产生的场(一部分从$z=−b$到$0$，另一部分
-从$0$到$z=b$)之和这里看的更清楚。
-也即，螺管的每一半产生总场$H_z(0, 0)$的一半。 于是：
+\textbf{螺管1的磁场}：长$2b=b_1+z_1$的螺管1产生的$H_z(0, z_1)$是具有相同参数$a_1, a_2,\lambda J$而长度
+为$2b = 2(b_1+z_1)$的螺管产生的中心场的一半。
+这从一个长为$2b$的非notched螺管的中心场$H_z(0, 0)$是两部分螺管产生的场(一部分来自$z=−b$到$0$，另一部分
+来自$0$到$z=b$)之和这一点看的更清楚。
+也即，螺管的每一半各贡献总场$H_z(0, 0)$的50\%。 于是：
 \begin{equation*}
 H_{z}(0,z_{1})|_{1}=\frac{1}{2}\lambda Ja_{1}F(\alpha,\beta+\gamma)\tag{S7.1}
 \end{equation*}
 
-\textbf{螺管2的磁场}：在$(0, z_1)$，$H_z$中来自长度$2_b = b_1−z_1$的螺管2的部分是具有相同$a_1, a_2,\lambda J$而长度为
-$2_b = 2(b_1−z_1)$的螺管的中心场的一半。
+\textbf{螺管2的磁场}：在$(0, z_1)$，$H_z$中来自长度$2b = b_1−z_1$的螺管2的部分是具有相同$a_1, a_2,\lambda J$而长度为
+$2b = 2(b_1−z_1)$的螺管的中心场的一半。
 \begin{equation}
 H_{z}(0,z_{1})|_{2}=\frac{1}{2}\lambda Ja_{1}F(\alpha,\beta-\gamma)\tag{S7.2}
 \end{equation}
 
-\textbf{螺管3的磁场}：在$(0, z_1)$，$H_z$中来自长$2_b=b_2+z_1$的螺管3的部分四具有相同$a_3, a_2,\lambda J$
-而长度为$2_b=2(b_2+z_1)$的螺管的中心场的一半。
+\textbf{螺管3的磁场}：在$(0, z_1)$，$H_z$中来自长$2b=b_2+z_1$的螺管3的部分是
+具有相同$a_3, a_2,\lambda J$而长度为$2b=2(b_2+z_1)$的螺管的中心场的一半。
 因为$J$是反向的，我们有：
 \begin{equation}
 H_{Z}(0,z_{1})|_{3}=-\frac{1}{2}\lambda Ja_{3}F(\alpha',\beta'+\gamma')\tag{S7.3}
 \end{equation}
 
-\textbf{螺管4的磁场}：在$(0, z_1)$，$H_z$来自长$2_b = b_2−z_1$的螺管4的部分是除长为$2_b = 2(b_2−z_1)$而其他参数相同的螺管的中心场的一半。
+\textbf{螺管4的磁场}：在$(0, z_1)$，$H_z$来自长$2b = b_2−z_1$的螺管4的部分是
+其他参数相同而长为$2b = 2(b_2−z_1)$的螺管的中心场的一半。
 \begin{equation}
 H_{z}(0,z_{1})|_{4}=-\frac{1}{2}\lambda Ja_{3}F(\alpha',\beta'-\gamma')\tag{S7.4}
 \end{equation}
 
 \textbf{Notched螺管的磁场}
 
-原notched螺管产生的$H_z(0,z_1)$于是可以由上四式之和给出：
+原notched螺管产生的$H_z(0,z_1)$于是可以由上四式S7.1-S7.4之和给出：
 \begin{equation*}%3.127
 \begin{split}
  H_{z}(0,z_{1}) =&H_{z}(0,z_{1})|_{1}+H_{z}(0,z_{1})|_{2}+H_{z}(0,z_{1})|_{3}+H_{z}(0,z_{1})|_{4} \\
@@ -2788,7 +2793,7 @@ H_{z}(0,z_{1})|_{4}=-\frac{1}{2}\lambda Ja_{3}F(\alpha',\beta'-\gamma')\tag{S7.4
 
 
 
-\subsection{讨论3.7：饼式线圈磁体的场分析}
+\subsection{讨论3.7：饼式线圈磁体的磁场分析}
 应用讨论3.4中的叠加技术，我们推导可用于计算一个有2N个饼式线圈(N个双饼)组成的螺管磁体的场误差系数的轴向场表达式。
 Bi2223和YBCO是带形式的，由高温超导带绕制的饼式线圈组成的磁体是实现空间高均匀度磁体(例如NMR和MRI磁体)
 的一个可行途径[3.33, 3.34]。饼式线圈是薄的方截面导体的理想形式。
