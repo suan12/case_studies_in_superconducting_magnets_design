@@ -2635,6 +2635,7 @@ n=2\qquad H_z(x,y,z)=&A_{0}^{0}+2zA_{1}^{0}+3(A_{1}^{1}x+B_{1}^{1}y)\notag\\
 
 式3.9与S6.1a-S6.1e分别对$n=0,1,2$联立，有：
 
+
 $n=0$：
 \begin{equation*}% S6.2a
 \begin{split}
@@ -2906,7 +2907,7 @@ $2b=2w+3\delta$的线圈$4^\prime$得到的磁体。}
 本分析中，我们假设双饼的两个饼间距离和相邻双饼之间的距离是相等的。
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.45]{chpt3/figs/fig3.31.eps}
+	\includegraphics[scale=0.4]{chpt3/figs/fig3.31.eps}
 	\caption{将$2N$饼磁体视为$2(N-1)$饼磁体加上线圈$2N$再减去线圈$2N^\prime$所得的磁体。}
 \end{figure}
 
@@ -3492,65 +3493,66 @@ F_{Lr}=\frac{\mu_{0}NI^{2}}{2}\left(1-\frac{R}{\sqrt{R^{2}-a^{2}}}\right)\tag{3.
 
 \subsection{讨论3.9：核聚变与磁约束}
 如果轻元素核被约束并被加热到很高的温度($\sim 100\ \mathrm{MK}$)，它们将发生聚变。
-因为聚变产生的总质量$M_f$比原始核的总质量$M_n$要轻，反应会释放出静能量$E_n =(M_n−M_f)c^2$
-，其中，$c$是光速。太阳通过这种过程产生能量。
+因为聚变产物的总质量$M_f$比原始核的总质量$M_n$要轻，故聚变会释放出净能量$E_n =(M_n−M_f)c^2$
+。其中，$c$是光速。太阳即通过该过程产生能量。
 一个可控的热核反应堆是一个小型的人造太阳。
-太阳通过引力约束不稳定的热离子。
-重力可以用磁体替代；使用磁场稳定热离子的技术称为磁约束。
+太阳通过引力约束不稳定的热等离子。
+引力也可以用磁力替代。使用磁场令热离子稳定的技术称为磁约束。
 
-聚变发电反应堆最可能使用一种采用磁约束的环形装置Tokamak。
-Tokamak在1950年代由莫斯科kURchatov原子能研究所的L.A. Artsimovich和A.D. Sakharov提出。
+聚变发电反应堆最可能使用的磁约束装置是螺绕环型式的所谓Tokamak。
+Tokamak是1950年代由Kurchatov原子能研究所(位于莫斯科)的L.A. Artsimovich和A.D. Sakharov提出的。
 国际热核实验反应堆(International Thermonuclear Experimental Reactor, ITER)项目
 是一个联合欧盟、日本、俄罗斯、美国、韩国、中国和印度的合作项目。
 ITER的目标是使用超导磁体制造一个现实可行的Tokamak。
-ITER的环形磁体并未上面研究的圆截面，而是D型的，主半径$R\sim 8\ \mathrm{m}$，高约12 m；
-它的环形磁场$B_\phi\sim 6\ \mathrm{T}$，
-导体上的最大磁场约为13 T。ITER将在法国Cadarache完成制造。
+ITER的螺绕环磁体并不是上面研究的圆截面，而是D形截面的，其主半径$R\sim 8\ \mathrm{m}$，高约12 m；
+绕环磁场$B_\varphi\sim 6\ \mathrm{T}$，导体上的最大磁场为$\sim$13 T。
+ITER将在法国Aix-en-Provence北部$\sim$40 km的Cadarache建造。
 
 
 
-\subsection{问题3.11：边缘磁场}
-本问题处理边缘磁场---磁体系统外部的不希望有的磁场。
-边缘磁场很重要，因为它可能在磁体系统附近形成风险点；它还会对磁场敏感设备造成干扰或引起其失真。
-为了计算远离磁场的边缘位置的磁场$\vec{H_f}$，我们可以将磁体建模为一个有效半径为$R_e$的球形偶极子：
+\subsection{问题3.11：边缘场}
+本问题处理边缘磁场---磁体系统的外部不希望存在的磁场。
+因为边缘磁场可能在磁体系统附近形成安全风险点，还会干扰磁场敏感设备或引起其失真，研究边缘磁场十分重要。
+为了计算距磁体较\textit{远}的边缘位置的磁场$\vec{H_f}$，
+我们可以将磁体建模为一个有效半径为$R_e$的球形偶极子：
 \begin{align}
-\vec{H}_{f}=H_{0}(\frac{R_{e}}{r})^{3}(\cos\theta\vec{\imath}_{r}+\frac{1}{2}\sin\theta\vec{\imath}_{\theta})
+\vec{H}_{f}=H_{0}\left(\frac{R_{e}}{r}\right)^{3}\left(\cos\theta\vec{\imath}_{r}+\frac{1}{2}\sin\theta\vec{\imath}_{\theta}\right)
 \end{align}
-%(3.163)
-
-式中，$\mu_0 H_0$是中心场。我们令方程3.163中给出的$z$轴($r$向，在$\theta=0$时)偶极远场($r\gg R$)等于
-由方程3.3a给出的半径为$a$、载流为$I$的环($z\gg a$)。于是：
+式中，$\mu_0 H_0$是中心场。我们令3.163中给出的$z$轴($r$向，在$\theta=0$时)偶极远场($r\gg R$)等于
+由3.3a给出的半径为$a$、载流为$I$的电流环($z\gg a$)的场。于是：
 \begin{align}
 H_{0}R_{e}^{3}=\frac{1}{2}a^{2}I
 \end{align}
 
-a)对一个安匝数为$NI$、内径$2a_1$、外径$2a_2$的螺管线圈，证明：采用加权平均$~{a}^2$，方程3.164修改为：
+a)对一个安匝数为$NI$、内径$2a_1$、外径$2a_2$的螺管线圈，证明：采用加权平均$\tilde{a}^2$，
+3.164可写为：
 \begin{align}
 H_{0}R_{e}^{3}=\frac{1}{2}\tilde{a}^{2}NI=\frac{1}{6}(a_{1}^{2}+a_{2}^{2}+a_{1}a_{2})NI
 \end{align}
 
-当方程3.164用于$n_{\ell}$组成的绕组的每一层时，每一层都有相同的匝数$n_{t/\ell}$。我们此处不加
-推倒的给出一个表达式，请读者自行推导：
+当3.164用于$n_{\ell}$组成的绕组的\textit{每一层}时，
+每层都有\textit{相同}的单位层总匝数$n_{t/\ell}$。
+我们此处不加推导的给出一个表达式，请读者自行推导：
 \begin{align}
-H_{0}R_{e}^{3}=\frac{1}{2}a_{1}^{2}NI[1+(\alpha-1)\frac{(n_{\ell}+1)}{n_{\ell}}+(\alpha-a)^{2}\frac{(n_{\ell}+1)(2n_{\ell}+1)}{6n_{\ell}^{2}}]
+H_{0}R_{e}^{3}=\frac{1}{2}a_{1}^{2}NI\left[1+(\alpha-1)\frac{(n_{\ell}+1)}{n_{\ell}}+(\alpha-a)^{2}\frac{(n_{\ell}+1)(2n_{\ell}+1)}{6n_{\ell}^{2}}\right]
 \end{align}
 
-注意到，$N=n_{t/\ell} n_{\ell}$。对于$n_{\ell}\gg1$，方程3.166可以由3.165近似。
-因为$R_e$正比于各方程等号右侧的的立方根，多数情况下方程3.165是方程3.166的很好近似。
-这些方程仅在$r\gg R_e$时有效，所以，方程3.165计算的$R_e$是无磁体长度$2b$和安匝数$NI$无关的。
-对于由$k$个线圈嵌套组成的磁体，方程3.165可以推广为：
+注意到，$N=n_{t/\ell} n_{\ell}$。对于$n_{\ell}\gg1$，3.166可以由3.165近似。
+因为$R_e$正比于各方程等号右侧的\textit{立方根}，多数情况下3.165都是3.166的很好近似。
+需牢记，这些式子仅在$r\gg R_e$时有效。所以，使用3.165计算的$R_e$是与磁体长度$2b$和安匝数$NI$无关的。
+对于由$k$个线圈嵌套组成的磁体，3.165可以推广为：
 \begin{align}
 H_{0}R_{e}^{3}=\frac{1}{6}I\sum_{j=1}^{k}(a_{1j}^{2}+a_{2j}^{2}+a_{1j}a_{2j})N_{j}
 \end{align}
 
-b) 使用方程3.167和表格3.3给出的参数，证明对45 T超导磁体有$R_e=0.67 \ \mathrm{m} $。 (因为
-水冷磁体的体积比超导磁体的体积小很多，水冷磁体尽管其中心场为31 T，但对边缘场仅贡献了一点点，可以忽略掉。)
+b) 使用3.167和表3.3给出的参数，证明：对45 T超导磁体有$R_e=0.67 \ \mathrm{m} $。 (因为
+水冷磁体的体积比超导磁体的体积小很多，尽管水冷磁体中心场为31 T，但对仅贡献了一点点边缘场，可忽略不计。)
 
-c) 处于安全性考虑，与本磁体的运行和实验有关的人和设备必须位于磁体的100 gauss线外。
-确定$z=2.75\ \mathrm{m}$处的径向距离$r_m$，在此处边缘场幅值$|\mu_0 \vec{H_f}|$恰为100 gauss。
+c) 出于安全性考虑，与磁体的运行和实验有关的人员和设备必须位于磁体的100 gauss等磁场强度线外。
+确定$z=2.75\ \mathrm{m}$时相应的径向距离$r_m$，令其在此处的边缘场$|\mu_0 \vec{H_f}|$恰为100 gauss。
 
 \subsubsection{问题3.11之解}
-a)参数为$2a_1,2a_2$的螺管的加权平均$~{a}^2$可以写为：
+a)参数为$2a_1,2a_2$的螺管的加权平均$\tilde{a}^2$可以写为：
 \begin{equation*}
 \tilde{a}^{2}=\frac{1}{(a_{2}-a_{1})}\int_{a_{1}}^{a_{2}}r^{2}dr=\frac{(a_{2}^{3}-a_{1}^{3})}{3(a_{2}-a_{1})}=\frac{1}{3}(a_{1}^{2}+a_{2}^{2}+a_{1}a_{2})\tag{S11.1}%(S11.1)
 \end{equation*}
@@ -3560,25 +3562,24 @@ a)参数为$2a_1,2a_2$的螺管的加权平均$~{a}^2$可以写为：
 H_{0}R_{e}^{3}=\frac{1}{2}\tilde{a}^{2}NI=\frac{1}{6}(a_{1}^{2}+a_{2}^{2}+a_{1}a_{2})NI\tag{3.165}%(3.165)
 \end{equation*}
 
-b) 应用3.167和$H_0=14 T/\mu_0$到45 T超导磁体 (表3.3) ，我们有：
+b) 对45 T超导磁体(表3.3) 应用3.167，代入$H_0=14\ \mathrm{T}/\mu_0$ ，有：
 %% 一个计算式
 \begin{align*}
-\frac{14 T}{4\pi\times 10^{-7}H/m} R_e^3&= \mbox{一个很长的表达式}\\
-(11.1408\times 10^6\ \mathrm{Am^2})R_E^3&=3.300\times 10^6\ \mathrm{Am^2} \\
+\frac{14\ \mathrm{T}}{4\pi\times 10^{-7}\ \mathrm{H/m}} R_e^3&= 3.300\times 10^6\ \mathrm{Am^2}\\
 R_e=&0.667\ \mathrm{m}
 \end{align*}
 
-c)在$I_{op}=10\ \mathrm{kA}$时，$\mu_0 \vec{H}_f=0.01\ \mathrm{T}(100\ \mathrm{gauss})$，我们有：
+c)在$I_{op}=10\ \mathrm{kA}$时，代入$\mu_0 \vec{H}_f=0.01\ \mathrm{T}(100\ \mathrm{gauss})$，我们有：
 \begin{align*}
-(0.01T)&=(14\ \mathrm{T})(\frac{0.67\ \mathrm{m}}{R\ \mathrm{m}})(\cos\theta\vec{\imath}_{r}+\frac{1}{2}\sin\theta\vec{\imath}_{\theta})\tag{S11.2a}\\
+(0.01\ \mathrm{T})&=(14\ \mathrm{T})\left(\frac{0.67\ \mathrm{m}}{R\ \mathrm{m}}\right)^3(\cos\theta\vec{\imath}_{r}+\frac{1}{2}\sin\theta\vec{\imath}_{\theta})\tag{S11.2a}\\
 (R\ \mathrm{m})&=\sqrt{(x\ \mathrm{m})^{2}+0+(2.7\ \mathrm{m})^{2}}\tag{S11.2b}\\%(S11.2b)
-\theta&=\tan^{-1}(\frac{x\ \mathrm{m}}{2.7\ \mathrm{m}})\tag{S11.2c}%(S11.2c)
+\theta&=\tan^{-1}\left(\frac{x\ \mathrm{m}}{2.7\ \mathrm{m}}\right)\tag{S11.2c}%(S11.2c)
 \end{align*}
 
-在方程S11.2a, S11.2b和S11.2c中解出$x$，我们得到：$x=6.52\ \mathrm{m}$。
-对于$x=6.52\ \mathrm{m}$，我们从方程S11.2b得到$R\simeq 7.05\ \mathrm{m}, \theta\simeq 67.5^\circ$。
+根据S11.2a, S11.2b和S11.2c，解出$x$，得：$x=6.52\ \mathrm{m}$。
+在$x=6.52\ \mathrm{m}$时，我们从S11.2b得到$R\simeq 7.05\ \mathrm{m}, \theta\simeq 67.5^\circ$。
 
-注意到实验仪器在100 gauss磁场中暴露一天半天和在5 gauss中长期暴露是不同的。
+值得注意的是，根据FDA的认可的规则，实验人员在100 gauss磁场中暴露一天半天和在5 gauss中长期暴露是不同的。
 
 
 
