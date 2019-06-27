@@ -3408,18 +3408,18 @@ F_{1y}=&\frac{\mu_{0}N^{2}I^{2}}{4\pi}\left(-\frac{1}{c}+\frac{c}{a^{2}+c^{2}}\r
 
 
 
-\subsection{问题3.10：理想环状toroidal磁体}
-本问题处理一个零绕组厚度的理想环形磁体，关键参数如图所示。
+\subsection{问题3.10：理想螺绕环磁体}
+本问题处理一个零绕组厚度的理想螺绕环磁体，给出螺绕环磁体的关键参数。
 
-一个理想的圆截面环形磁体，大半径为$R$、小半径为$a$，由等效总安匝数$NI$的表面电流励磁
-(图3.39)。假定表面电流围绕环流动，方向与$\phi$向垂直。
+一个理想的圆截面螺绕环磁体，主半径为$R$、小半径为$a$，由等效总安匝数$NI$的表面电流励磁
+(图3.39)。假定表面电流方向与$\varphi$向垂直，围绕环流动。
 
-a) 证明环形磁体的内部磁场$B_\phi$为：
+a) 证明螺绕环磁体的内部磁场$B_\varphi$为：
 \begin{align}
 B_{\varphi}(r)=\frac{\mu_{0}NI}{2\pi r}%(3.161)
 \end{align}
 
-同时证明，环外的磁场$B_\phi$是零。
+同时证明，环外的磁场$B_\varphi$是零。
 
 b)假设环磁体已用有$N$个环，每个环载流均为$I$。证明，作用于单个环上的净径向洛伦兹力$F_{L+}$为：
 \begin{align}
@@ -3428,42 +3428,40 @@ F_{L+}=\frac{\mu_{0}NI^{2}}{2}(1-\frac{R}{\sqrt{R^{2}-a^{2}}})\\%(3.162)
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.5]{chpt3/figs/fig3.39.eps}
-	\caption{理想环形磁体，由N个环组成，每个环载流均为I。}
+	\caption{理想环形磁体，由$N$匝环组成，每个环载流均为$I$。}
 \end{figure}
 
 \subsubsection{问题3.10之解}
-a)根据对称性，我们看到$H_\phi$与$\phi$无关。在环形磁体内应用Ampere积分定律： 
+a) 根据对称性，我们看到$H_\varphi$与$\varphi$无关。在螺绕环磁体内应用Ampere积分定律： 
 \begin{equation*}
 \int_{0}^{2\pi}H_{\varphi}(r)rd\varphi=2\pi rH_{\varphi}(r)=NI\tag{S10.1}%(S10.1)
 \end{equation*}
 
-因为$B_\phi(r)=\mu_0 H_\phi(r)$，我们有：
+因为$B_\varphi(r)=\mu_0 H_\varphi(r)$，我们有：
 \begin{equation*}
 B_{\varphi}(r)=\frac{\mu_{0}NI}{2\pi r}\tag{3.161}%(3.161)
 \end{equation*}
 
-当上述积分在整个周长上进行时，环形磁体外部无净电流。故而，$H_\phi(r)=0,\ B_\phi(r)=0$。
+当上述积分在螺绕环外的闭合曲线上进行时，由于螺绕环磁体外部无净电流，故$H_\varphi(r)=0,\ B_\varphi(r)=0$。
 
-b)图3.40给出了一个环，在它上面一个力微元$d\vec{F_L}$作用在一个微元$d\vec{s}$上。$r$方向的力微元为$dF_{Lr}$。
+b) 图3.40给出了一个单环，一个力微元$d\vec{F_L}$作用在它上面的一个线微元$d\vec{s}$上，$r$方向的力微元为$dF_{Lr}$。
 $d\vec{F_L}$可以写为：
 \begin{equation*}
 d\vec{F}_{L}=-Ids\vec{\imath}_{\theta}\times\tilde{B}_{\varphi}(r)\vec{\imath}_{\varphi}\tag{S10.2}%(S10.2)
 \end{equation*}
-
-式中，$\~{B}_{\phi}(r)$是作用在表面电流上的平均场。
+式中，$\tilde{B}_{\varphi}(r)$是作用在表面电流上的平均场。
 这个场是方程3.161给出的场的一半。
 \begin{equation*}
 d\vec{F}_{L}=-Ids\vec{\imath}_{\theta}\times\tilde{B}_{\varphi}(r)\vec{\imath}_{\varphi}=\frac{\mu_{0}NI^{2}ds}{4\pi r}\vec{\imath}_{\xi}\tag{S10.3}%(S10.3)
 \end{equation*}
-
-式中，$\vec{i_{\theta}}\xi$矢量与$\vec{F_L}$同向(Fig. 3.40)。该力微元的$r$分量写为：
+式中，$\vec{i}_\xi$矢量与$\vec{F_L}$同向(Fig. 3.40)。该力微元的$r$分量写为：
 \begin{equation*}
 dF_{Lr}=\frac{\mu_{0}NI^{2}\cos\theta ds}{4\pi r}\tag{S10.4}%(10.4)
 \end{equation*}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.6]{chpt3/figs/fig3.40.eps}
+	\includegraphics[scale=0.5]{chpt3/figs/fig3.40.eps}
 	\caption{作用于单个环上的力微元。}
 \end{figure}
 
@@ -3472,7 +3470,7 @@ dF_{Lr}=\frac{\mu_{0}NI^{2}\cos\theta ds}{4\pi r}\tag{S10.4}%(10.4)
 dF_{Lr}=\frac{\mu_{0}NI^{2}a\cos\theta d\theta}{4\pi(R+a\cos\theta)}\tag{S10.5}%(S10.5)
 \end{equation*}
 
-在整个小圆上对S10.5积分，有：
+在整个小环上对S10.5积分，有：
 \begin{equation*}
 F_{Lr}=\frac{\mu_{0}NI^{2}a}{4\pi}\int_{0}^{2\pi}\frac{\cos\theta d\theta}{R+a\cos\theta}=\frac{\mu_{0}NI^{2}a}{2\pi}\int_{0}^{\pi}\frac{\cos\theta d\theta}{R+a\cos\theta}\tag{S10.6}%(S10.6)
 \end{equation*}
@@ -3480,16 +3478,15 @@ F_{Lr}=\frac{\mu_{0}NI^{2}a}{4\pi}\int_{0}^{2\pi}\frac{\cos\theta d\theta}{R+a\c
 查积分表，有：
 \begin{equation*}
 \begin{split}
-F_{Lx}=&\frac{\mu_{0}NI^{2}a}{2\pi}(\frac{\theta}{a}\big|_{0}^{\pi}-\frac{R}{a}\int_{0}^{\pi}\frac{d\theta}{R+a\cos\theta})\\
-=&\frac{\mu_{0}NI^{2}a}{2\pi}\left\{\frac{\pi}{a}-\frac{2R}{a\sqrt{R^{2}-a^{2}}}\tan^{-1}\left[\sqrt{\frac{R-a}{R+a}}\tan\frac{\theta}{2}\right]\big|_{0}^{\pi}\right\}%(S10.7a)
+F_{Lx}=&\frac{\mu_{0}NI^{2}a}{2\pi}\left(\frac{\theta}{a}\bigg|_{0}^{\pi}-\frac{R}{a}\int_{0}^{\pi}\frac{d\theta}{R+a\cos\theta}\right)\\
+=&\frac{\mu_{0}NI^{2}a}{2\pi}\left\{\frac{\pi}{a}-\frac{2R}{a\sqrt{R^{2}-a^{2}}}\tan^{-1}\left[\sqrt{\frac{R-a}{R+a}}\tan\frac{\theta}{2}\right]\bigg|_{0}^{\pi}\right\}%(S10.7a)
 \end{split}\tag{S10.7a}
 \end{equation*}
 \begin{equation*}
-F_{Lr}=\frac{\mu_{0}NI^{2}}{2}(1-\frac{R}{\sqrt{R^{2}-a^{2}}})\tag{3.162}%(3.162)
+F_{Lr}=\frac{\mu_{0}NI^{2}}{2}\left(1-\frac{R}{\sqrt{R^{2}-a^{2}}}\right)\tag{3.162}%(3.162)
 \end{equation*}
 
-当$R\rightarrow \infty$时，环形磁体成为直径为$2a$的直螺管。如我们所料，此时$F_{Lr}\rightarrow 0$。
-
+当$R\rightarrow \infty$时，螺绕环磁体成为直径为$2a$的直螺线管。如我们所料，此时有$F_{Lr}\rightarrow 0$。
 
 
 \subsection{讨论3.9：核聚变与磁约束}
