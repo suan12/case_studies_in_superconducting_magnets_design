@@ -2090,59 +2090,62 @@ Voccio最近给出了确定Bi2223和YBCO带材绕制的``饼式线圈"最大运�
 
 
 \subsection{讨论3.4：叠加技术}
-解场问题应用的Biot-Savart定律从根本上阐明了螺管上某点的磁场是螺管上所有电流源产生的磁场的矢量和叠加。
-这里，我们在整个螺管上应用叠加技术以计算螺管轴线上任一点的磁场。这个技术，虽仅限于轴线上的磁场，但亦能
-增进读者对螺管磁场的一般理解。
+用于求解磁场问题的Biot-Savart定律从根本上阐明了螺管上某点的磁场是螺管上所有电流元在该处
+产生的磁场的矢量和(叠加)。
+本节我们在整个螺管上应用叠加技术以计算螺管轴线上任一点的磁场。
+叠加技术虽仅限于轴线上的磁场，但亦能增进读者对螺管磁场的一般理解。
 
-\textbf{A. 末端磁场}
+\textbf{A. 末端场}
 
-轴对称螺管的轴线末端处磁场是一个同样组成但两倍长度的螺管的中心场的一半。
-我们可以形象化的理解这个问题，考虑一个有两个完全相同部分组成的轴对称螺管，每个螺管长$2b$(图3.20)。
-新螺管的轴向中心场是由两个部分螺管产生的两个等量场之和：
+轴对称螺管的轴线末端处的磁场是一个结构\textit{等同}但长度加倍的螺管的\textit{中心场}的一半。
+我们可以形象的理解：考虑一个由两个完全相同部分组成的轴对称螺管，每个螺管长$2b$(图3.20)。
+新螺管的轴向中心场是由两个部分螺管产生的磁场之和：
 \begin{equation}
 H(b)=H(\alpha,\beta)|_{z=b}=\frac{1}{2}H(\alpha,2\beta)|_{z=0}=\frac{1}{2}\lambda Ja_{1}[F(\alpha,2\beta)]\\%(3.119)
 \end{equation}
 
 由于$F(\alpha, 2\beta)>F(\alpha,\beta)$ (图3.17b)，自然有$H(z=b)>0.5H(0)$。
-也即，螺管的轴线末端场总是略大于中心场的一半。
-注意到，在极限$\beta\rightarrow\infty$下，有$H(z=b)\rightarrow 0.5H(0)$。
+也即，单螺管的轴线末端场总是略大于中心场的一半。
+在极限$\beta\rightarrow\infty$下，有$H(z=b)\rightarrow 0.5H(0)$。
 
-\textbf{B. 非中心轴向场}
+\textbf{B. 非中点轴向场}
 
 叠加技术还可以用于计算螺管轴线上任一点的轴向场。
-这里考虑两个非中心轴向场的实例：1)$0<z<b$，即位于螺管室温孔内；2) $z > b$，即位于螺管室温孔外。
+这里考虑两个非中点轴向场的实例：1) $0<z<b$，即位于螺管室温孔内；2) $z > b$，即位于螺管室温孔外。
 图3.21给出了各实例应用叠加技术的过程。
 于是，我们有：
 \begin{subequations}
 	\begin{align}
-(\mbox{情况1：}z<b)\quad H(z)&=\frac{1}{2}\lambda J\alpha_{1}[F(\alpha,\beta=\frac{b+z}{a_{1}})+F(\alpha,\beta=\frac{b-z}{a_{1}})]\\%(3.120a)
-(\mbox{情况2：}:z<b)\quad H(z)&=\frac{1}{2}\lambda Ja_{1}[F(\alpha,\beta=\frac{b+z}{a_{1}})-F(\alpha,\beta=\frac{z-b}{a_{1}})]%(3.120b)
+&(\mbox{情况1：}z<b)\quad H(z)=\frac{1}{2}\lambda J\alpha_{1}\left[F\left(\alpha,\beta=\frac{b+z}{a_{1}}\right)+F\left(\alpha,\beta=\frac{b-z}{a_{1}}\right)\right]\\%(3.120a)
+&(\mbox{情况2：}:z>b)\quad H(z)=\frac{1}{2}\lambda Ja_{1}\left[F\left(\alpha,\beta=\frac{b+z}{a_{1}}\right)-F\left(\alpha,\beta=\frac{z-b}{a_{1}}\right)\right]%(3.120b)
 	\end{align}
 \end{subequations}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.6]{chpt3/figs/fig3.20.eps}
-	\caption{采用叠加技术，一个长度为$2b$的轴对称螺管末端磁场可以按照同样尺寸但长度$4b$的螺管的中心场的一半计算。}
+	\includegraphics[scale=0.5]{chpt3/figs/fig3.20.eps}
+	\caption{采用叠加技术，一个长度为$2b$的轴对称螺管末端磁场可以按照同样结构但长度为$4b$的螺管的中心场的一半计算。}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.8]{chpt3/figs/fig3.21.eps}
-	\caption{处理偏离轴心点的叠加技术。}
+	\includegraphics[scale=0.9]{chpt3/figs/fig3.21.eps}
+	\caption{计算轴向场任意点磁场的叠加技术。情况1：$z<b$；情况2：$z>b$。}
 \end{figure}
 
 
 
 \subsection{讨论3.5：混合磁体}
-混合磁体包括两个不同种类的轴向对齐且居中的电磁体：大功率水冷磁体置于超导磁体(SCM)的室温孔内。
-1960年代，国家磁体实验室(NML)的Montgomery等人证实它是获得高达$\sim 25\ \mathrm{T}$直流磁场的一种方法[3.11]。
-这个磁场是当时可用电源$9\ \mathrm{MW}$所能支持Bitter磁体实现的最高直流场。
-此后30年，磁体实验室设计、制造和运行了多台混合磁体，为混合磁体技术做出了贡献[3.12–3.18]。
+``混合''磁体包括两个轴向对齐且居中但不同种类的电磁体：一个是大功率水冷磁体，一个是超导磁体。
+水冷磁体安装在超导磁体室温孔内。
+1960年代中期，国家磁体实验室(NML)的Montgomery等人证实，
+混合磁体是获得高于$\sim 25\ \mathrm{T}$直流磁场的一种方法[3.11]。
+该磁场是当时电源($9\ \mathrm{MW}$)所能支持Bitter磁体实现的最高直流场。
+此后30年，磁体实验室设计、制造和运行了多台混合磁体，发展了混合磁体技术[3.12–3.18]。
 
-\textbf{A. 代表性的混合磁体设施}
+\textbf{A. 有代表性的混合磁体研究单位}
 
-现在多有个混合磁体在运行。下面以开始运行的时间为序，对几个代表性的混合磁体作简要介绍。
+现在有很多个在运行的混合磁体研究单位。下面以开始运行的时间为序，对几个代表性的混合磁体作简要介绍。
 
 \textbf{\kaishu 高场磁体实验室，Radboud大学}
 
