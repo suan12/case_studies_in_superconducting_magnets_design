@@ -3583,38 +3583,36 @@ c)在$I_{op}=10\ \mathrm{kA}$时，代入$\mu_0 \vec{H}_f=0.01\ \mathrm{T}(100\ 
 
 
 
-\subsection{讨论3.10：缩放一个螺管磁体}
-在磁体设计的早期，缩放一个已经设计好的磁体的参数作为新磁体的参数有时候很方便并且也很快速。
-缩放的时候通常的要求就是保持中心场$H_z(0,0)$或者功耗不变。
-注意到下面的所有缩放定律尽管是针对螺管磁体提出的，但对任何形状的磁体都可以应用。
+\subsection{讨论3.10：螺管磁体的缩放}
+在磁体设计的早期阶段，设计新磁体参数的一个方便快捷方法对一个已设计好的磁体的参数进行比例缩放。
+缩放的一般要求是保持中心场$H_z(0,0)$或者功耗不变。
+下面的所有缩放法则尽管是针对螺管磁体提出的，但对任何形状的磁体都可以应用。
 
-原始绕组尺寸$a_{1o}\equiv a_o;a_{2o}\equiv\alpha_o a_o;b_o\equiv \beta_o a_o$分别缩放$\chi$(>1为放大，<1为缩小)
-得到一组新的绕组尺寸参数，其中的$\chi$是常数，
-$a_{1\chi}=\chi a_o;a_{2\chi}=\chi\alpha_o a_o; b_\chi=\chi \beta_o a_o$。
-下面的讨论中，所有的$o$下标参数都表原始磁体，$\chi$下标参数表示缩放后的新磁体。
+于是，将原始绕组尺寸$a_{1o}\equiv a_o;a_{2o}\equiv\alpha_o a_o;b_o\equiv \beta_o a_o$分别放大$\chi>1$(或$\chi<1$缩小，$\chi$是常数)将得到新的绕组尺寸$a_{1\chi}=\chi a_o;a_{2\chi}=\chi\alpha_o a_o; b_\chi=\chi \beta_o a_o$。
+后文讨论中，$o$下标参数表示原始磁体，$\chi$下标表示缩放后的新磁体。
 
-我们感兴趣的参数包括：中心场$H_z(0, 0)\equiv H$；空间因数$\lambda$；总电流密度$J$；
-运行电流$I$；导体截面积$A$；磁能$E$；总导体长度$\ell$；绕组体积$V$。
-下面的讨论中，我们假设两个磁体的空间因数相同：$\lambda_\chi=\lambda_o=\lambda$。 
+我们感兴趣的参数包括：中心场$H_z(0, 0)\equiv H$；空间因子$\lambda$；总电流密度$J$；
+运行电流$I$；导体截面积$A$；磁能$E$；导体总长度$\ell$；绕组体积$\mathcal{V}$。
+下面的讨论中，我们假设两个磁体有相同的空间因子：$\lambda_\chi=\lambda_o=\lambda$。 
 
 \textbf{A.空间均匀性}
 
 如讨论3.4所述，螺管磁体的磁场的空间均匀性完全由$\alpha,\beta$确定。
-因此，只要$\alpha,\beta$保持不变，全比例磁体将和原始磁体具有相同的均匀性。
+因此，只要$\alpha,\beta$保持不变，缩放后的磁体(在缩放区域上)将和原始磁体(在原始区域上)具有相同的均匀性。
 
 \textbf{B.中心场 vs. 电流密度}
 
-由方程3.13a(3.4和问题3.1)，对于相同的$\lambda,\alpha,\beta$，中心场正比于$a_1 J$。
-因为$a_{1\chi}=\chi a_o$，$J_\chi$必须缩放$1/\chi$：$J_\chi=J_O/\chi$。
-因为磁压正比于$H_z^2(0, 0)$，所以新磁体的磁压与原磁体保持一致。
-这从磁压正比于磁体的径向尺寸与运行电流密度的乘积$a_1 J$在缩放过程不变也能看出。
-可以从方程3.54得到，新的磁体的中平面总的轴向力是原磁体的$\chi^2$---方程3.54中，$(NI/4b)^2$保持不变；
-它是面积项，增长$\chi^2$。
+根据3.13a(第3.4节以及问题3.1)，对相同的$\lambda,\alpha,\beta$，中心场正比于$a_1 J$。
+由于$a_{1\chi}=\chi a_o$，$J_\chi$必须按$1/\chi$缩放：$J_\chi=J_o/\chi$。
+因为磁压正比于$H_z^2(0, 0)$，所以新磁体的磁压与原磁体一致；
+此外，磁压还正比于磁体径向尺寸与运行电流密度的乘积(即$a_1 J$)，而该量在缩放后不变。
+从3.54可以看出，新磁体的中平面总轴向力是原磁体的$\chi^2$倍---在3.54中，$(NI/4b)^2$保持不变，
+而它是``面积''项，按$\chi^2$增长。
 
-\textbf{C.导体大小 \& 运行电流}
+\textbf{C.导体尺寸 \& 运行电流}
 
-如果$I_\chi$缩放$\chi$，则缩放后的磁体的导体截面积$A_\chi\simeq I_\chi/J_\chi$要被缩放$\chi^2$：$A_\chi=\chi^2 A_o$。
-另一方面，如果运行电流不变，那有$A_\chi=\chi A_o$。
+如果$I_\chi$缩放$\chi$，则缩放后的磁体的导体截面积$A_\chi\simeq I_\chi/J_\chi$将缩放$\chi^2$：$A_\chi=\chi^2 A_o$。
+另一方面，如果运行电流不变($I_\chi=I_o$)，那有$A_\chi=\chi A_o$。
 
 \textbf{D. 总匝数}
 
@@ -3623,32 +3621,32 @@ $a_{1\chi}=\chi a_o;a_{2\chi}=\chi\alpha_o a_o; b_\chi=\chi \beta_o a_o$。
 N_{\chi}=\frac{\lambda J_{\chi}(2\beta a_{\chi})a_{\chi}(\alpha-1)}{I_{\chi}}%(3.168a)
 \end{align}
 
-给定$A_\chi,J_\chi =J_o/\chi$，因为$H_z(0,0)$必须保持不变，$N_\chi$可保持不变或者必须按$\chi$缩放：
+因为$H_z(0,0)$必须保持不变，代入$A_\chi,J_\chi =J_o/\chi$，$N_\chi$可保持不变或者按$\chi$缩放：
 \begin{align*}
-(\mbox{对于}\ I_{\chi}=\chi I_{o})\quad N_{\chi}&=\frac{\lambda(\frac{J_{o}}{\chi})(2\beta\chi a_{o})\chi a_{o}(a-1)}{\chi I_{o}}=N_{o}\tag{3.168b}\\
-(\mbox{对于}\ I_{\chi}=I_{o})\quad  N_{\chi}&=\frac{\lambda(\frac{J_{o}}{\chi})(2\beta\chi a_{o})\chi a_{o}(a-1)}{I_{o}}=\chi N_{o}\tag{3.168c}%(3.168c)
+(\mbox{对}\ I_{\chi}=\chi I_{o})\quad N_{\chi}&=\frac{\lambda\left(\frac{J_{o}}{\chi}\right)(2\beta\chi a_{o})\chi a_{o}(a-1)}{\chi I_{o}}=N_{o}\tag{3.168b}\\
+(\mbox{对}\ I_{\chi}=I_{o})\quad  N_{\chi}&=\frac{\lambda\left(\frac{J_{o}}{\chi}\right)(2\beta\chi a_{o})\chi a_{o}(a-1)}{I_{o}}=\chi N_{o}\tag{3.168c}%(3.168c)
 \end{align*}
 
-\textbf{E. 总导体长度、运行电流和安·米}
+\textbf{E. 导体总长度、运行电流 \& 安·米}
 
-磁体所需的总导体长度，$\ell_\chi$，有两种选项：
+磁体所需的导体总长度，$\ell_\chi$，有两种选项：
 \begin{subequations}
 	\begin{align}
-(\mbox{对于}\ I_{\chi}=\chi I_{o})\quad \ell_{\chi}&=N_{\chi} \pi (\alpha a_\chi+a_\chi)=N_{o}\chi \pi a_0(\alpha+1)=\chi \ell_{o}\\%(3.169a)
-(\mbox{对于}\ I_{\chi}=I_0)\quad \ell_{\chi}&=\chi N_0 \chi \pi a_0 (\alpha+1)=\chi^2 \ell_{o}%(3.169b)
+(\mbox{对}\ I_{\chi}=\chi I_{o})\quad \ell_{\chi}&=N_{\chi} \pi (\alpha a_\chi+a_\chi)=N_{o}\chi \pi a_o(\alpha+1)=\chi \ell_{o}\\%(3.169a)
+(\mbox{对}\ I_{\chi}=I_o)\quad \ell_{\chi}&=\chi N_o \chi \pi a_o (\alpha+1)=\chi^2 \ell_{o}%(3.169b)
 	\end{align}
 \end{subequations}
 
-总的安·米数，$I_\chi \ell_\chi$，是导体费用的一个很好的指标，在两种情况下都是按$\chi^2$缩放：
+总安·米数$I_\chi \ell_\chi$是导体费用的一个好指标，在两种情况下都是按$\chi^2$缩放：
 \begin{equation}
-I_\chi \ell_\chi=\chi^2 I_0 \ell_0 %3.170
+I_\chi \ell_\chi=\chi^2 I_o \ell_o %3.170
 \end{equation}
 
-\textbf{F. 总磁场能}
+\textbf{F. 总磁能}
 
-因磁体的总磁能是磁能密度在磁场所在的全部空间区域的积分，以及磁能密度不变，所以：
+磁体的总磁能是磁能密度在磁场所在的全部空间的积分,而磁能密度不变，所以：
 \begin{align*}
-E_{m\chi}=x^3E_{mo}
+E_{m\chi}=\chi^3E_{mo}
 \end{align*}
 
 \textbf{示例}
@@ -3656,13 +3654,15 @@ E_{m\chi}=x^3E_{mo}
 我们有一个如下参数的模型磁体：$H_z(0, 0) = 1.53\ \mathrm{T}; 2a_1 =
 80\ \mathrm{mm}; 2a_2 = 130\ \mathrm{mm}; 2b = 220\ \mathrm{mm}$;总匝数$N_o = 2976$。
 磁体自感$0.301\ \mathrm{H}$，在运行电流为$100\ \mathrm{A}$时产生的中心场为$1.53\ \mathrm{T}$。
-下面我们考虑一个磁体，尺寸扩大10倍，空间因数保持不变。
-我们计算几个新磁体的参数。
+下面我们考虑一个\textit{全尺寸}磁体，尺寸扩大10倍，空间因数$\lambda$保持不变。
+我们计算几个全尺寸新磁体的参数。
 
-\textbf{自感}\ 因为$L_\chi=\mu_o a_\chi N_\chi^2L(\alpha,\beta)$，1)如果$I_\chi=\chi I$，$L_\chi=\chi L_o$；或者
-2)如果$I_\chi=I_o$，$L_\chi=\chi^3L_o$。于是：1)如果$I_\chi=100\ \mathrm{A}$，有$L_\chi\simeq 3.01\ \mathrm{H}$；2)如果$I_\chi=10\ \mathrm{A}$，有$L_\chi\simeq 301\ \mathrm{H}$。
+\textbf{自感}\ 因为$L_\chi=\mu_o a_\chi N_\chi^2\mathcal{L}(\alpha,\beta)$，
+1) $L_\chi=\chi L_o$(若$I_\chi=\chi I$)；或2) $L_\chi=\chi^3L_o$(若$I_\chi=I_o$)。
+于是：1) 如果$I_chi=1000$ A，$L_\chi\simeq 3.01\ \mathrm{H}$；
+2)如果$I_\chi=100\ \mathrm{A}$，有$L_\chi\simeq 301\ \mathrm{H}$。
 
-计算$\ell_o$：
+首先计算$\ell_o$：
 \begin{align*}
 \ell_{o}=&N_{o}\frac{a_{o}(\alpha+1)}{2}\\
 =&(2976)\frac{(0.04)(1.625+1)}{2}\simeq 156\ \mathrm{m}
@@ -3674,77 +3674,83 @@ E_{m\chi}=x^3E_{mo}
 
 \subsection{讨论3.11：粒子加速器}
 电场($\vec{E}$)加速带电粒子的简单原理是粒子加速器的基础。
-Cockroft-Walton (1928)和Van de Graaff (1930)的早期及其是线性的：沿一条直线以电势($\int\vec{E}\cdot\vec{s}$)加速粒子。
-线性加速器需要很大的势能才能产生高能量粒子。因此，线性加速器需要大的电场$\vec{E}$或者长距离，
-或两者兼有。斯坦福直线加速器($\sim 20\ \mathrm{GeV} $)的距离为2英里(3.2km)。
+早期Cockroft-Walton (1928)和Van de Graaff (1930)设计的机器是线性的，
+即沿一条电势线($\int\vec{E}\cdot\vec{s}$)加速粒子。
+为了产生高能粒子，线性加速器需要很大的势能。
+因此，线性加速器要求高电场$\vec{E}$或长距离，或两者兼有。
+斯坦福直线加速器($\sim 20\ \mathrm{GeV} $)的距离为2英里(3.2 km)。
 
-1930年代，Lawrence开发了一种圆形的回旋加速器。
-现代圆形加速器是Lawrence斯回旋加速器的变种。
-在圆形加速器中，带电粒子每次回旋时都以适度的电势加速；
+1930年代，E. O. Lawrence开发了一种圆形的回旋加速器。
+现代圆形加速器就是从Lawrence回旋加速器发展而来的。
+在圆形加速器中，带电粒子每次回旋时都以不很大的电势加速；
 通过多次回旋，可以将粒子加速到远远超过线性加速器可实现的能量水平。
+圆形加速器的重要组成部分是一组用于产生磁场(通常为垂直方向)以使粒子沿圆周轨道运动的磁体；
+现代加速器使用二极磁体，而Lawrence的首台$1.2\ \mathrm{MeV}$回旋加速器使用的是磁极片，
+以类似夹三明治的方式让粒子束在其中运动。
 
-圆形加速器的一个重要组件是一组用于产生磁场(通常为垂直方向)以使粒子沿圆周轨道运动的磁体。
-现代加速器使用双极磁体，而Lawrence的首台$1.2\ \mathrm{MeV}$回旋加速器使用的是磁极片。
-
-问题3.12将研究，圆形加速器中的粒子能量$E_p$正比于回旋半径$R_a$、粒子束速度和垂直磁场密度$B_z$。
-CERN的强子对撞机(LHC)产生的最新的粒子能量为$7\ \mathrm{TeV}$，它意味着机器半径将近$3\ \mathrm{km}$！
-作为对比，Lawrence的首台回旋加速器的半径是$\sim 0.1\ \mathrm{m}$。
-如果LHC使用和Lawrence首台加速器一样的$\sim 1\ \mathrm{T}$的磁场$B_z$，那么半径需要增加
-$\sim 3\times 10^4$仅能令$E_p$达到$\sim 0.8\ \mathrm{TeV}$。
-在LHC中，通过增加磁场强度，扩大了$\sim 8$倍半径，实现了$7\ \mathrm{TeV}$。如此大的磁场，
-仅超导双极磁体可以实现。
+问题3.12的研究会表明，圆形加速器中的粒子能量$E_p$正比于回旋半径$R_a$、粒子束速度和垂直磁场$B_z$。
+CERN最新的强子对撞机(LHC)为产生$7\ \mathrm{TeV}$能量的粒子，其机器半径将近$3\ \mathrm{km}$！
+作为对比，Lawrence的首台回旋加速器半径是$\sim 0.1\ \mathrm{m}$。
+如果LHC使用和Lawrence首台加速器一样的$\sim 1\ \mathrm{T}$的磁场$B_z$，
+半径扩大$\sim 3\times 10^4$仅能令$E_p$达到$\sim 0.8\ \mathrm{TeV}$。
+在LHC中，通过增加磁场强度，扩大$\sim 8$倍半径，就实现了$7\ \mathrm{TeV}$。
+如此大的磁场，仅超导二极磁体可以实现。
 
 
 \subsection{问题3.12：旋转加速器加速质子}
-世界最大的对撞机LHC有$\sim 1250$个双极磁体，每一个都有$\sim 14 \ \mathrm{m}$长，在直径$56\ \mathrm{mm}$的空间内产生$8.3\ \mathrm{T}$的磁场。
-LHC有两个相对运动的质子环束，每一部分被加速到$7\ \mathrm{TeV}$。
+世界最大的对撞机LHC有$\sim 1250$个二极磁体。各磁体长$\sim 14 \ \mathrm{m}$，
+在直径$56\ \mathrm{mm}$的空间区域内产生$8.3\ \mathrm{T}$的磁场。
+LHC有两个相对运动的质子环束，每一部分都被加速到$7\ \mathrm{TeV}$。
 
-a) 椭圆形主环由两个半径为$R_a=2.8 \ \mathrm{km}$的半圆组成，连接一个将近4.5km的直线部分。
-双极磁体占满了两个半圆部分。
-证明，双极磁场8.3T产生的Lorentz力$\vec{F_L}$平衡了$7\ \mathrm{TeV}$质子在圆部分的向心力$\vec{F_{cp}}$。
-假设质子速度等于光速，$1\ \mathrm{eV}= 1.6\times 10^{−19}\ \mathrm{J}$。
+a) 椭圆形主环由两个半径为$R_a=2.8 \ \mathrm{km}$的半圆与连接两者的近4.5 km的直线部分组成。
+二极磁体占满了两个半圆部分。
+证明，二极磁场8.3 T产生的Lorentz力$\vec{F_L}$可与$7\ \mathrm{TeV}$质子在半圆部分的
+向心力$\vec{F_{cp}}$平衡。假设质子速度等于光速。
+提示：$1\ \mathrm{eV}= 1.6\times 10^{−19}\ \mathrm{J}$。
 
-b)证明$7\ \mathrm{TeV}$的质子的速度接近光速。
+b) 证明$7\ \mathrm{TeV}$质子的速度接近光速。
 
 \subsubsection{问题3.12之解}
-a) 旋转质子的向心力 $\vec{F_{cp}}$被Lorentz力$\vec{F_L}$平衡。因为$F_{cp}$总是指向径向朝外的，所以需要
-选择$B_z$的方向以保证$F_L$径向向心。两个力分别为：
+a) 旋转质子的向心力 $\vec{F_{cp}}$与Lorentz力$\vec{F_L}$平衡。
+因为$F_{cp}$总是沿径向朝外的，所以选择$B_z$向磁场以保证$F_L$沿径向朝内。
+两个力分别为：
 \begin{align*}
 \vec{F}_{cp}&=\frac{M_{p}v^{2}}{R_{a}}\vec{\imath}_{r}\simeq\frac{M_{p}c^{2}}{Ra}\vec{\imath}_{r}=\frac{E_{p}}{R_{a}}\vec{\imath}_{r}\tag{S12.1a}\\%(S12.1a)
 \vec{F}_{L}&=-qcB_{z}\vec{\imath}_{r}\tag{S12.1b}%(S12.1b)
 \end{align*}
 
-从$\vec{F}_{L}+\vec{F}_{cp}=0$中解出$R_a$，我们得到：
+从$\vec{F}_{L}+\vec{F}_{cp}=0$中解出$R_a$，得：
 \begin{equation*}
 R_a=\frac{E_p}{q c B_z}\tag{S12.2} %S12.2
 \end{equation*}
 
-根据上式，我们有：
+根据上式，有：
 \begin{equation*}
 R_{a}=\frac{(1.6\times 10^{-19}\ \mathrm{J/eV})(7\times 10^{12}\ \mathrm{eV})}{(1.6\times 10^{-19}\ \mathrm{C})(3\times 10^{8}\ \mathrm{m/s})(8.3\ \mathrm{T})}\\
 \simeq 2.81\times 10^{3}\ \mathrm{m}\simeq 2.8\ \mathrm{km}
 \end{equation*}
 
-这笔LHC的实际半径(略超过4km)要小。
-注意到上面的计算假定了整个环都被双极磁体占满；实际上，双极磁体的使用率是$\sim 60\%$---其余
-部分空间被四极磁体、探测磁体占据。
-沿着LHC环的平均双极场于是$\sim 5\ \mathrm{T}$，这样就会计算得到半径为$\sim 4\ \mathrm{km}$。
-当然，双极场$B_z=15\ \mathrm{T}$将使环半径减半。$10-16\ \mathrm{T}$的超导双极磁体很容易造出来[3.54–3.56]。
+这比LHC的实际半径(略超过4 km)要小。
+注意到上面的计算假定了整个环都被二极磁体占满，而实际上，二极磁体的填充率是$\sim 60\%$
+---其余部分空间被四极磁体、探测磁体占据。
+于是，沿着LHC环的平均二极场是$\sim 5\ \mathrm{T}$。这时，计算得到半径就是$\sim 4\ \mathrm{km}$了。
+当然，若二极场$B_z=15\ \mathrm{T}$，环半径将减半；
+而$10-16\ \mathrm{T}$的超导二极磁体是很容易造出的[3.54–3.56]。
 
-b) 质子质量$M_p$，行进速度$v$与其静止速度有关：
+b) 质子质量$M_p$，速度$v$与其静止质量有关($M_{p0}=1.67\times 10^{27}$ kg)：
 \begin{equation*}
-M_{p}=\frac{M_{po}}{\sqrt{1-(\frac{v}{c})^{2}}}=\frac{E_{p}}{c^{2}}\tag{S12.3}%(S12.3)
+M_{p}=\frac{M_{p0}}{\sqrt{1-\left(\frac{v}{c}\right)^{2}}}=\frac{E_{p}}{c^{2}}\tag{S12.3}%(S12.3)
 \end{equation*}
 
 在上式中解出$v/c$，有：
 \begin{equation*}
-\frac{v}{c}=\sqrt{1-\frac{M_{po}^{2}c^{4}}{E_{p}^{2}}}\tag{S12.4}
+\frac{v}{c}=\sqrt{1-\frac{M_{p0}^{2}c^{4}}{E_{p}^{2}}}\tag{S12.4}
 \end{equation*}
 
-因为$v/c$非常接近1，方程S12.4可以近似为：
+因为$v/c$非常接近1，S12.4可近似为：
 %%% 一个计算式
 \begin{equation*}
-\frac{v}{c}\simeq 1-\frac{M_po^2 c^4}{2E_p^2}\simeq 1-9\times 10^{-9}
+\frac{v}{c}\simeq 1-\frac{M_{p0}^2 c^4}{2E_p^2}\simeq 1-9\times 10^{-9}
 \end{equation*}
 
 可见，质子速度相当接近光速了。
