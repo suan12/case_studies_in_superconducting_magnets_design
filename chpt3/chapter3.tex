@@ -3758,48 +3758,53 @@ M_{p}=\frac{M_{p0}}{\sqrt{1-\left(\frac{v}{c}\right)^{2}}}=\frac{E_{p}}{c^{2}}\t
 
 
 \subsection{问题3.13：两线圈磁体}
-图3.41给出了一个由两个轴向对齐、完全相同的线圈A和B组成的磁体的剖面。两线圈的励磁极性相同。
-轴向场$B_z$沿水平方向。如问题3.3指出的，反对称系统(Maxwell线圈)在中点($z=0$)产生线性的轴向场。
-对称系统的线圈间的轴向作用力是引力；反对称系统配置下是大小相同的斥力。
+图3.41给出了一个由两个轴对齐、尺寸一致、励磁极性相同的线圈A和B组成的磁体的剖面。
+轴向场$B_z$沿水平方向。如问题3.3(Helmholtz线圈)指出的，
+反对称系统(Maxwell线圈)在中点($z=0$)附近产生``线性''轴向场$B_z$。
+对称系统的线圈间的轴向力是引力；反对称系统是大小相同的斥力。
 
-两个绕组参数均为：$2a_1 = 1.5\ \mathrm{m}; 2a_2 = 2.1\ \mathrm{m}; 2b = 0.1\ \mathrm{m};
+两个线圈的绕组参数均为：$2a_1 = 1.5\ \mathrm{m}; 2a_2 = 2.1\ \mathrm{m}; 2b = 0.1\ \mathrm{m};
 N =8900$和$I =65\ \mathrm{A}$。
 左侧线圈轴中心位于$z=0.5\ \mathrm{m}$，右侧线圈位于$z = 0.5 \ \mathrm{m}$---两线圈的中心距为$1\ \mathrm{m}$ (3.5节中的$\rho$)。
-水平的黑色条代表两个线圈之间的室温结构支撑件。
-图3.42a和3.42b分别给出了$B_z(r, z)$和$B_r(r, z)$在$I =65\ \mathrm{A}$的图。
-注意，这里的$z=0$恰好与线圈轴向中点重合。
+水平的黑色条代表两个线圈之间的室温结构件，用以支持两线圈间的作用力。
+
+图3.42a和3.42b分别给出了一个线圈在$I =65\ \mathrm{A}$时的$B_z(r, z)$和$B_r(r, z)$图。
+这里的$z=0$恰好与线圈轴向中点重合。
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.5]{chpt3/figs/fig3.41.eps}
-	\caption{有两个相同线圈A和B在相同极性励磁下组成的磁体的剖面，尺寸以m为单位}
+	\caption{两个相同线圈A和B在同极性励磁下组成的磁体的剖面。尺寸以m为单位。}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.9]{chpt3/figs/fig3.42.eps}
-	\caption{一个线圈未励磁，另一个线圈在$I =65\ \mathrm{A}$时的(a)$B_z(r, z)$和(b) $B_r(r, z)$}
+	\caption{一个线圈不励磁，另一个线圈在$I =65\ \mathrm{A}$时，在励磁线圈轴向($z$)位置上的(a)$B_z(r, z)$和(b) $B_r(r, z)$。}
 \end{figure}
 
-a) 计算$I =65\ \mathrm{A}$时，线圈A的总体电流密度。
+a) 计算$I =65\ \mathrm{A}$时，线圈A的总电流密度。
 
-b) 计算线圈A绕组的总导体长度。
+b) 计算线圈A绕组的导体总长度。
 
-c) 使用恰当的解析表达，证明线圈A在$I =65\ \mathrm{A}$、线圈B不励磁时的轴向中点处的$B_z$近似为0.4T，如图3.42a所示。
+c) 使用恰当的解析表达，证明线圈A在$I =65\ \mathrm{A}$、线圈B不励磁时的轴向中点处的$B_z$近似为0.4 T，
+如图3.42a所示。
 
-d) 使用图3.14中给出的螺管的$L(\alpha,\beta)$和方程3.81，计算线圈A的自感。某程序给出的数值是216.8 H。
+d) 使用图3.14中给出的螺管的$\mathcal{L}(\alpha,\beta)$和3.81，计算线圈A的自感。
+某程序给出的数值是216.8 H。
 
-f) 定量的证明，3.5.1中研究过的线圈A上的轴向力$F_{zA}(\rho)$在线圈B以$65\ \mathrm{A}$励磁时是$+z$向的，即
-线圈A和B之间的轴向力是引力。
+f) 定量的证明，3.5.1节中研究过的线圈A上的轴向力$F_{zA}(\rho)$
+在线圈B以$65\ \mathrm{A}$励磁时是$+z$向的，即线圈A和B之间的轴向力是引力。
 
 g) 使用图3.42a和3.42b中合适的场数据，计算上述引力的幅值：两个线圈均以$65A$励磁。
 结果应该在$2\times 10^5\ \mathrm{N}$的±20\%以内。(某程序计算值为−193 kN，负号表示引力。)
 
-h) 将每个线圈近似为``环" (如图3.5)，使用方程3.34计算线圈B施于线圈A上的轴向力$F_{zA}(\rho)$
-使用$K(k) =2.10000,E(k)=1.2000,k=0.874157$。这里$a_A=a_B=0.9 \ \mathrm{m},\rho=1.0\ \mathrm{m}$。
+h) 将两线圈近似为``环" 线圈(图3.5)，使用3.34计算线圈B施于线圈A上的轴向力$F_{zA}(\rho)$
+使用$k=0.874157$对应的$K(k) =2.10000,E(k)=1.2000$。
+这里$a_A=a_B=0.9 \ \mathrm{m},\rho=1.0\ \mathrm{m}$。
 
 i) 在$\rho=5\ \mathrm{m}$时计算$F_{zA}(\rho)$。
 
-表3.6给出了这个两线圈系统的计算得到的互感 vs. 中心距数据，$M_{AB}(\rho)$。
+表3.6给出了该两线圈系统的互感 vs. 中心距数据$M_{AB}(\rho)$计算值数据。
 
 j) 证明，系统存储的总能量$E_m$在运行电流$65\ \mathrm{A}$、$\rho=1.0\ \mathrm{m}$时，近似为$1\ \mathrm{MJ}$。
 使用$L=216.8\ \mathrm{H}$。
@@ -3809,7 +3814,7 @@ k) 在系统上应用方程3.105b，由$M_{AB}(\rho)$数据计算$F_{zA}(\rho)$�
 \begin{table}[htbp]\small
 \centering
 \caption{$M_{AB}$ vs. $\rho$数据}
-	\begin{tabular}{|l|l|l|l|}
+	\begin{tabular}{|c|c|c|c|}
 		\hline
 		$\rho${[}m{]} & $M_{AB}${[}H{]} & $\rho${[}m{]} & $M_{AB}${[}H{]} \\ \hline
 		0.4     & 85.230     & 0.9     & 34.873     \\ \hline
@@ -3825,44 +3830,40 @@ k) 在系统上应用方程3.105b，由$M_{AB}(\rho)$数据计算$F_{zA}(\rho)$�
 a)根据3.108a，有：
 \begin{equation*}
 \lambda J=\frac{NI}{2b(a_{2}-a_{1})}\\%(3.108a)
-=\frac{(4\pi\times 10^{-7}\ \mathrm{H/m})(8900)(65\ \mathrm{A})}{(1.5\ \mathrm{m})}(\frac{0.336}{0.4})=0.4\ \mathrm{T}\tag{3.108a}
+=19.3\times 10^6\ \mathrm{A/m^2}\tag{3.108a}
 \end{equation*}
 
-b) 导体总长度$\ell$为：$\ell=N\pi(a_2+a_1)\simeq 50.3\ \mathrm{km}$。于是这个两线圈系统的总导体长度
-为$\sim 100\ \mathrm{km}$。
+b) 线圈导体总长度$\ell$为：$\ell=N\pi(a_2+a_1)\simeq 50.3\ \mathrm{km}$。
+于是，该两线圈系统的导体总长度为$\sim 100\ \mathrm{km}$。
 
-c) 我们可以将其中的一个线圈近似为$\alpha=1.4$的饼式线圈。通过应用3.111f，
-我们得到线圈A的轴向中心场$B_{zA}$：
+c) 我们可以将其中的一个线圈(线圈A或B)近似为$\alpha=1.4$的``饼式''线圈。
+应用3.111f，我们得到线圈A的轴向中心场$B_{zA}$：
 \begin{equation*}
-B_{zA}\simeq B_{z}(0,0)=\frac{\mu_{o}NI}{2a_{1}}(\frac{\ln\alpha}{\alpha-1})=0.4\ \mathrm{T} \tag{3.111f}
+B_{zA}\simeq B_{z}(0,0)=\frac{\mu_{o}NI}{2a_{1}}\left(\frac{\ln\alpha}{\alpha-1}\right)=0.4\ \mathrm{T} \tag{3.111f}
 \end{equation*}
 
-d) 从图3.14，我们得到$L(\alpha=1.4, \beta=0.067)\simeq 2.8$。根据方程3.81，有：
+d) 从图3.14，我们得到$\mathcal{L}(\alpha=1.4, \beta=0.067)\simeq 2.8$。根据3.81，有：
 \begin{equation*}
-L=\mu_{o}a_{1}N^{2}\mathcal{L}(\alpha,\beta)\\%(3.81)
-=2.9\ \mathrm{H} \tag{3.81}
+L=\mu_{o}a_{1}N^{2}\mathcal{L}(\alpha,\beta)=209\ \mathrm{H} \tag{3.81}
 \end{equation*}
 
-f)图3.42b中的$B_r(r, z)$在$z\ge 0$时成立，表明$B_r(r, z)$是正的，沿半径向外。
-不过，当线圈B产生的$B_r(r, z)$施于线圈A时，因为线圈A相对于线圈B的轴向中点处于$z<0$，
-线圈B施于线圈A的$B_r(r, z)$是沿半径向内的。如果对图3.41中的线圈A的顶部绕组截面应用
-$I\vec{i_\theta}\times-B_r(r,z)\vec{i_r}$，线圈B施于线圈A的轴向力是$+z$向的，表明
-这个力是引力。
+f)图3.42b中的$B_r(r, z)$在$z\ge 0$时成立，表明$B_r(r, z)$是正的，沿径向朝外。
+不过，当线圈B产生的$B_r(r, z)$作用于线圈A时，因为线圈A相对于线圈B的轴向中点处于$z<0$，
+线圈B作用于线圈A的$B_r(r, z)$是沿径向朝内的。
+如果对图3.41中的线圈A的顶部绕组截面应用$I\vec{i_\theta}\times-B_r(r,z)\vec{i_r}$，
+可知线圈B作用于线圈A的轴向力是$+z$向的，即这个力是引力。
 
 g) $F_{zA}(\rho)$是Lorentz力，可由下式计算： 
-\begin{equation*}
-F_{zA}(\rho)\simeq (\mbox{平均绕组周长})\times(NI)\times(B_r)=\pi(1.8)(8900\times 65)(0.06)=196\ \mathrm{kN}
-\end{equation*}
+\begin{align*}
+F_{zA}(\rho)&\simeq (\mbox{平均绕组周长})\times(NI)\times(\mbox{绕组截面中心的}B_r)\\
+&=\pi(1.8)(8900\times 65)(0.06)=196\ \mathrm{kN}
+\end{align*}
 
-h)线圈B施于线圈A的力$F_{zA}(\rho)$为：
-\begin{equation*}
-\begin{split}
-F_{zA}(\rho)=&\frac{\mu_{o}}{2}(N_{A}I_{A})(N_{B}I_{B})\frac{\rho\sqrt{(a_{A}+a_{B})^{2}+\rho^{2}}}{(a_{A}-a_{B})^{2}+\rho^{2}}\\
-&\times{k^{2}K(k)+(k^{2}-2)[K(k)-E(k)]}%(3.34)
-\end{split} \tag{3.34}
-\end{equation*}
-
-式中$K(k)$和$E(k)$分别是第一类和第二类完全椭圆积分：
+h)线圈B作用于线圈A的力$F_{zA}(\rho)$为：
+\begin{align*}
+F_{zA}(\rho)=&\frac{\mu_{o}}{2}(N_{A}I_{A})(N_{B}I_{B})\frac{\rho\sqrt{(a_{A}+a_{B})^{2}+\rho^{2}}}{(a_{A}-a_{B})^{2}+\rho^{2}}\times\left\{k^{2}K(k)+(k^{2}-2)[K(k)-E(k)]\right\}\tag{3.34}
+\end{align*}
+式中，$K(k)$和$E(k)$分别是第一类和第二类完全椭圆积分。
 \begin{equation*}
 k^{2}=\frac{4a_{A}a_{B}}{(a_{A}+a_{B})^{2}+\rho^{2}}\tag{3.36}%(3.36)
 \end{equation*}
@@ -3875,36 +3876,36 @@ k^2=\frac{4(0.9)(0.9)}{(0.9+0.9)^2+(1.0)^2}=0.764151\ \Rightarrow\ k=0.874157
 
 我们有$K(k)=2.100000$和$E(k)=1.200000$，于是：
 \begin{equation*}
-F_{zA}(1\ \mathrm{m})=long\ numbers\simeq -213.2\ \mathrm{kN}
+F_{zA}(1\ \mathrm{m})\simeq -213.2\ \mathrm{kN}
 \end{equation*}
 
 
-i)在极限$ρ^2\gg(a_A+a_B)^2$下，方程3.34简化为：
+i)在极限$\rho^2\gg(a_A+a_B)^2$下，式3.34简化为：
 \begin{equation*}
-F_{zA}(\rho)=\frac{3\mu_{o}}{2\pi}(\frac{\pi a_{A}^{2}N_{A}I_{A}}{\rho^{2}})(\frac{\pi a_{B}^{2}N_{B}I_{B}}{\rho^{2}})\tag{3.39c}%(3.39c)
+F_{zA}(\rho)=\frac{3\mu_{o}}{2\pi}\left(\frac{\pi a_{A}^{2}N_{A}I_{A}}{\rho^{2}}\right)\left(\frac{\pi a_{B}^{2}N_{B}I_{B}}{\rho^{2}}\right)\tag{3.39c}%(3.39c)
 \end{equation*}
 
-$\rho^2=25.0\ \mathrm{m^2}$以及$(a_A+a_B)^2=3.24 \ \mathrm{m^2}$，可知$\rho^2\gg(a_A+a_B)^2$是满足的。
-因为$N_A=N_B=N =8900, I_A=I_B=65\ \mathrm{A}, a_A=b_B=0.9\ \mathrm{m}$，方程3.39c成为：
+代入$\rho^2=25.0\ \mathrm{m^2}$及$(a_A+a_B)^2=3.24 \ \mathrm{m^2}$，
+可知$\rho^2\gg(a_A+a_B)^2$满足。
+因为$N_A=N_B=N =8900, I_A=I_B=65\ \mathrm{A}, a_A=b_B=0.9\ \mathrm{m}$，3.39c成为：
 \begin{equation*}
 F_{zA}(\rho)=\frac{3(4\pi\times 10^{-7}\ \mathrm{H/m})}{2\pi}\left[\frac{\pi(0.9)^2(8900)(65)}{(5)^2}\right]^2=2.08\ \mathrm{kN}
 \end{equation*}
 
 一个2 kN ($\sim 200$ kg)的力仅大约相当于单个线圈重量的13\%。
 
-j)系统总磁能$E_m$可以由方程3.92给出：
+j)系统存储的总磁能$E_m$可以由3.92给出：
 \begin{equation*}
 E_{m}=\frac{1}{2}L_{1}I_{1}^{2}+\frac{1}{2}L_{2}I_{2}^{2}+M_{12}I_{1}I_{2}\tag{3.92}%(3.92)
 \end{equation*}
 
-已知$L_1 = L_A = L_2 = L_B\equiv  L = 216.8\ \mathrm{H}, I_1 = I_A = I_2 = I_B\equiv I = 65\ \mathrm{A}$，从表中
-可知$M_{AB}\simeq 29.8 \ \mathrm{H}$，我们有：
+已知$L_1 = L_A = L_2 = L_B\equiv  L = 216.8\ \mathrm{H}, I_1 = I_A = I_2 = I_B\equiv I = 65\ \mathrm{A}$，查表知$M_{AB}\simeq 29.8 \ \mathrm{H}$，有：
 %%公式
 \begin{equation*}
 	E_m=LI^2+M_{AB}I^2=(L+M_{AB})I^2=1.04\ \mathrm{MJ}
 \end{equation*}
 
-k)式3.105b如下给出：
+k)式3.105b由下式给出：
 \begin{equation*}
 F_{zR}(\rho)=\frac{\partial E_{AB}}{\partial \rho}=I_{A}I_{B}\frac{\partial M_{AB}(\rho)}{\partial\rho}\tag{3.105b}%(3.105b)
 \end{equation*}
@@ -3924,32 +3925,32 @@ F_{zR}(\rho)\simeq (65)^2(-46.115)=-194.8\ \mathrm{kN}
 
 
 
-\subsection{问题3.14：螺管中平面上的轴向力}
-本题我们使用3.5部分对$2a_1 = 10\ \mathrm{cm}; 2a_2 = 14\ \mathrm{cm}; 2b = 25\ \mathrm{cm}; NI = 1.5×10^6\ \mathrm{A}$(见图3.43a)的一个螺管中
-推导出来的表达式。
+\subsection{问题3.14：螺管线圈中平面上的轴向力}
+本题我们使用3.5部分对$2a_1 = 10\ \mathrm{cm}; 2a_2 = 14\ \mathrm{cm}; 2b = 25\ \mathrm{cm}; NI = 1.5×10^6\ \mathrm{A}$的螺管线圈(见图3.43a)推导出来的表达式。
 
-a) 尽管这个螺管 ($\alpha = 1.4,\beta = 2.5$)实际上是既不``薄壁"也不``长"，
-用方程3.111d计算$B_z(0, 0)$。
+a) 用3.111d计算$B_z(0, 0)$---尽管这个螺管 ($\alpha = 1.4,\beta = 2.5$)实际上是既不``薄壁"也不``长"。
 
-b) 将这个螺管视为``薄壁"，应用方程3.41a计算轴向中平面力$F_z(0)$。某程序计算结果是−187.8 kN。
-使用$2a=10\ \mathrm{cm}$。
+b) 将这个螺管视为``薄壁"的，应用3.41a计算轴向中平面力$F_z(0)$，计算时取$2a=10\ \mathrm{cm}$。
+某程序的计算结果是$−187.8$ kN。
 
-c) 使用对``长"螺管有效的方程3.41b，计算$F_z(0)$。选择螺管平均直径：1) $2a =10\ \mathrm{cm}$； 2) $2a=12\ \mathrm{cm}$。
+c) 使用对``长"螺管有效的式3.41b计算$F_z(0)$。
+取螺管平均直径：1) $2a =10\ \mathrm{cm}$； 2) $2a=12\ \mathrm{cm}$。
 
-d) 现在，将螺管分为两个子螺管A和B，如图3.43b所示。子线圈具有相同的半径1 cm，同时$2a_A=10\ \mathrm{cm}, 2a_B=12\ \mathrm{cm},
-NI =0.75\times10^6 A$。计算$B_z(0, 0)$。
+d) 现在，如图3.43b所示，将螺管分为两个子螺管A和B。
+子线圈具有相同的壁厚1 cm，同时$2a_A=10\ \mathrm{cm}, 2a_B=12\ \mathrm{cm},
+NI =0.75\times10^6$ A。计算$B_z(0, 0)$。
 
-e) 应用方程3.54计算，并与某程序的计算值$F_{zT}(0)=−187.8\ \mathrm{kN}$对比。
+e) 应用3.54计算$F_{zT}(0)$，并与某程序的计算值$−187.8\ \mathrm{kN}$对比。
 
-f) 应用对``长"螺管成立的方程3.55计算$F_{zT}(0)$。
+f) 应用对``长"螺管成立的3.55计算$F_{zT}(0)$。
 
-g) 在``薄壁"且``长"的、有均匀表面电流密度$NI/2b$的螺管的一半的整个表面应用$\nabla\cdot B=0$。
-需要考虑的表面是线圈的$x-y$平面上的$z=0$和$z=b$截面区域，分别为$\pi a^2$；以及在$r=a$时，从$z=0$
-到$z=b$的圆柱表面区域，$2\pi ab$。
+g) 取``薄壁"且``长"的($2a,2b$)、有均匀表面电流密度$NI/2b$的螺管的一半，
+在其整个表面应用$\nabla\cdot B=0$导出3.41b。
+需要考虑的表面是线圈的$xy$平面上的$z=0$(中平面)和$z=b$之间的区域(分别为$\pi a^2$)
+以及在$r=a$时，从$z=0$到$z=b$的圆柱表面区域（$2\pi ab$）。
 
-h) 对一个长螺管($\beta\gg 1$)，解释为什么在它的长度方向从中平面到近末端的大部分区域的轴向力
-是常数，并可由相应的中平面值给出。试着评估长螺管一半结构上$z$的位置，在该位置$B_z$开始
-从$B_z(0,0)$显著下降。
+h) 对长螺管($\beta\gg 1$)线圈，解释为什么在它长度方向从中平面到近末端的大部分区域的轴向力
+为常量，并等于中平面的值。试计算长螺管的一半结构上$B_z$开始从$B_z(0,0)$显著下降的位置$z$。
 
 表3.7给出了部分完全椭圆积分的值。
 \begin{figure}[htbp]
@@ -3965,11 +3966,11 @@ h) 对一个长螺管($\beta\gg 1$)，解释为什么在它的长度方向从中
 \caption{b)和e)所需的相关完全椭圆积分值}
 	\begin{tabular}{|c|c|c||c|c|c|}
 		\hline
-	$	k^2   $   & $K(k)$     &$ E(k) $   &$ K^2  $   &$ K(k) $    &$ E(k) $   \\ \hline\hline
+	$	k^2   $   & $K(k)$     &$ E(k) $   &$ K^2  $   &$ K(k) $    &$ E(k) $   \\ \hline
 		0.137931 & 1.62961  & 1.51514 & 0.390244 & 1.77081  & 1.40400 \\ \hline
 		0.160858 & 1.64041  & 1.50558 & 0.432822 & 1.80099  & 1.38373 \\ \hline
 		0.187256 & 1.65325  & 1.49445 & 0.479600 & 1.83717  & 1.36084 \\ \hline\hline
-		$c^2 $     &$ k  $     & $\prod(c^2,k) $& $c^2  $    & $k  $     &$ \prod(c^2,k)$       \\ \hline\hline
+		$c^2 $     &$ k  $     & $\prod(c^2,k) $& $c^2  $    & $k  $     &$ \prod(c^2,k)$       \\ \hline
 		0.991736 & 0.401071 & 18.7227 & 0.991736 & 0.657892 & 22.3701 \\ \hline
 	\end{tabular}
 \end{table}
@@ -3978,34 +3979,33 @@ h) 对一个长螺管($\beta\gg 1$)，解释为什么在它的长度方向从中
 a)应用3.111d，我们有：
 \begin{align*}
 B_{z}(0,0)&=\frac{\mu_{o}NI}{2b}\\%(3.111d)
-&=\frac{(4\pi\times 10^{-7}\ \mathrm{H/m})(1.5\times 10^{6}\ \mathrm{A})}{(0.25\ \mathrm{m})}=7.55\ \mathrm{T}\tag{3.111d}
+&=\frac{(4\pi\times 10^{-7}\ \mathrm{H/m})(1.5\times 10^{6}\ \mathrm{A})}{(0.25\ \mathrm{m})}=7.5\ \mathrm{T}\tag{3.111d}
 \end{align*}
 
-方程3.109对这个$\alpha=1.4,\ \beta=2.5$的螺管给出的值时$B_z(0,0) = 6.8\ \mathrm{T}$。可知方程3.111d的误差
-大约是10\%，考虑到它的简单性，这个结果不算太坏。
+式3.109对这个$\alpha=1.4,\ \beta=2.5$的螺管给出的值是$B_z(0,0) = 6.8\ \mathrm{T}$。
+可知式3.111d的误差大约是10\%。考虑到它的简单性，这个结果不算太坏。
 
 b)再次给出3.41a式：
 \begin{align*}
-F_{z}(0)=&-\frac{\mu_{o}}{2}(\frac{NI}{2b})^{2}\{2b\sqrt{4a^{2}+b^{2}}[K(k_{b})-E(k_{b})]\\
-&-2b\sqrt{4a^{2}+4b^{2}}[K(k_{2b})-E(k_{2b})]\}\tag{3.41a}%(3.41a)
+F_{z}(0)=&-\frac{\mu_{o}}{2}\left(\frac{NI}{2b}\right)^{2}\left\{2b\sqrt{4a^{2}+b^{2}}[K(k_{b})-E(k_{b})]
+&-2b\sqrt{4a^{2}+4b^{2}}[K(k_{2b})-E(k_{2b})]\right\}\tag{3.41a}%(3.41a)
 \end{align*}
-
 式中的模为：
 \begin{align*}
 k_b^2&=\frac{4a^2}{4a^2+b^2}=\frac{4(5)^2}{4(5)^2+(12.5)^2}\simeq 0.390244\\
 k_{2b}^2&=\frac{4a^2}{4a^2+(2b)^2}=\frac{4(5)^2}{4(5)^2+(25)^2}\simeq 0.137931
 \end{align*}
 
-使用表3.7中给出的$K(k)$和$E(k)$合适值：
+代入表3.7中给出的$K(k)$和$E(k)$值：
 \begin{align*}
-F_z(0)= xxxxxxx \simeq -157.8\ \mathrm{kN}
+F_z(0)\simeq -157.8\ \mathrm{kN}
 \end{align*}
 
-上面这个值时某程序给出的值-187.8kN的84\%。
+上面这个值是某程序给出的值-187.8 kN的84\%。
 
 c)式3.41b如下给出：
 \begin{align*}
-F_{z}(0)\simeq-\frac{\mu_{o}}{2}(\frac{NI}{2b})^{2}\pi a^{2}\tag{3.41b}%(3.41b)
+F_{z}(0)\simeq-\frac{\mu_{o}}{2}\left(\frac{NI}{2b}\right)^{2}\pi a^{2}\tag{3.41b}%(3.41b)
 \end{align*}
 
 将$a=5\ \mathrm{cm}$和$a=6\ \mathrm{cm}$代入，有：
