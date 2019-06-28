@@ -3988,7 +3988,7 @@ B_{z}(0,0)&=\frac{\mu_{o}NI}{2b}\\%(3.111d)
 b)再次给出3.41a式：
 \begin{align*}
 F_{z}(0)=&-\frac{\mu_{o}}{2}\left(\frac{NI}{2b}\right)^{2}\left\{2b\sqrt{4a^{2}+b^{2}}[K(k_{b})-E(k_{b})]
-&-2b\sqrt{4a^{2}+4b^{2}}[K(k_{2b})-E(k_{2b})]\right\}\tag{3.41a}%(3.41a)
+-2b\sqrt{4a^{2}+4b^{2}}[K(k_{2b})-E(k_{2b})]\right\}\tag{3.41a}%(3.41a)
 \end{align*}
 式中的模为：
 \begin{align*}
@@ -4120,31 +4120,32 @@ F_{z}(z=b-2a)\simeq-\frac{\mu_{o}}{2}\left(\frac{NI}{2b}\right)^{2}4a^{2}\sqrt{2
 
 
 
-\subsection{问题3.15：嵌套两线圈磁体的中平面上的力}
-本问题中，我们计算由两个嵌套线圈组成的磁体中螺管A和螺管B的轴向压缩力，如图3.44所示。
-两个螺管的轴向场都是指向$z$向的。
+\subsection{问题3.15：嵌套两线圈磁体的中平面轴向力}
+本问题中，我们计算由两个螺管A和螺管B嵌套组成的磁体中的轴向压缩力，如图3.44；
+两个螺管的轴向场均为$z$向。
 线圈参数如下：$2a_A=10\ \mathrm{cm};2b_A = 50\ \mathrm{cm}; N_A I_A = 3\times 10^6\ \mathrm{A};
 2a_B = 14\ \mathrm{cm}; 2b_B = 100\ \mathrm{cm}; N_B I_B = 8\times10^6\ \mathrm{A}$。
-各线圈的径向绕组厚度均为$1\ \mathrm{cm}$。
+两线圈的径向绕组厚度均为$1\ \mathrm{cm}$。
 
-a) 视各螺管为``薄壁"($\alpha = 1$)和``长"($\beta\gg 1$)，计算各线圈产生的中心场
-$B_{zA}(0, 0)$和$B_{zB}(0, 0)$。证明，这个嵌套线圈磁体的中心场是$\sim 17.5\ \mathrm{T}$
-(准确值为$17.31\ \mathrm{T}$)。
+a) 视两螺管为``薄壁"($\alpha = 1$)且``长"($\beta\gg 1$)的，计算各螺管产生的中心场
+$B_{zA}(0, 0)$和$B_{zB}(0, 0)$。
+证明：该嵌套线圈磁体的中心场$\sim 17.5\ \mathrm{T}$
+(准确值：$17.31\ \mathrm{T}$)。
 
-b) 使用方程3.57b，计算螺管A承受的总的中平面轴向力$F_{zA}(0)$。
+b) 使用3.57b，计算螺管A承受的总中平面轴向力$F_{zA}(0)$。
 某程序给出$F_{zA}(0)=-200.9\ \mathrm{kN}$。
 
-c) 使用方程3.57a，再次计算$F_{zA}(0)$。
-计算结果值应该比b)得到的更接近-200.9。
+c) 使用3.57a，再次计算$F_{zA}(0)$。
+计算结果值应该比b)得到的更接近$-200.9$。
 
-d) 使用方程3.59a，计算螺管B承受的总的中平面轴向力$F_{zB}(0)$。
+d) 使用3.59a，计算螺管B承受的总中平面轴向力$F_{zB}(0)$。
 某程序给出$F_{zB}(0)=-1207.5\ \mathrm{kN}$。
 
 e) 解释为什么螺管A绕组内的最大场$B_{TA}=\sqrt{B_{zA}^2 + B_{rA}^2}$最可能
-	出现在$r=a_A$和$z=0$。
+	出现在$r=a_A$(绕组最内侧半径)和$z=0$。
 	
-f) 解释为什么螺管B绕组内的最大场$B_{TB}=\sqrt{B_{zB}^2 + B_{rB}^2}$不会出现，甚至也不会靠近$z=0$。
-那它可能出现在什么位置呢？
+f) 解释为什么螺管B绕组内的最大场$B_{TB}=\sqrt{B_{zB}^2 + B_{rB}^2}$
+不会出现在$z=0$，甚至都不靠近该点。它可能出现在什么位置呢？
 
 表3.8给出了部分$\prod(c^2,k)$值。
 
@@ -4152,11 +4153,32 @@ f) 解释为什么螺管B绕组内的最大场$B_{TB}=\sqrt{B_{zB}^2 + B_{rB}^2}
 	\centering
 	\includegraphics[scale=0.5]{chpt3/figs/fig3.44.eps}
 	\caption{由两个``薄壁"($\alpha = 1$)线圈嵌套而成的两线圈磁体示意图。
-		螺管A有$2a_A=10\ \mathrm{cm};2b_A = 50\ \mathrm{cm}$。
-		螺管B有$2a_B = 14\ \mathrm{cm}; 2b_B = 100\ \mathrm{cm}$。}
+		螺管A(内)有$2a_A=10\ \mathrm{cm};2b_A = 50\ \mathrm{cm}$。
+		螺管B(外)有$2a_B = 14\ \mathrm{cm}; 2b_B = 100\ \mathrm{cm}$。}
 \end{figure}
 
-\begin{table}[htbp]\small
+
+\subsubsection{问题3.15之解}
+a) 根据$B_z(0,0)=\mu_0H_z(0, 0)$以及3.111d，我们有：
+\begin{align*}
+B_{zA}(0,0)&\simeq 7.5\ \mathrm{T}\\
+B_{zb}(0,0)&\simeq 10.0\ \mathrm{T}\\
+B_{z}(0,0)&\simeq 17.5\ \mathrm{T}
+\end{align*}
+
+题干部分指出，准确的中心场值为17.32 T；我们的计算值不算差。
+
+b) 式3.57b由下式给出：
+\begin{equation*}
+F_{zA}(0)\simeq F_{zAA}(0)\simeq-\frac{\mu_{0}}{2}\left(\frac{N_{A}I_{A}}{2b_{A}}\right)^{2}\pi a_{A}^{2}\tag{3.57b}%(3.57b)
+\end{equation*}
+
+代入合适的值，有：
+\begin{equation*}
+F_{zA}\simeq -177.7\ \mathrm{kN}
+\end{equation*}
+
+可见，式3.57b的结果是程序计算值的88\%；两者存在差异的部分原因是3.57b没有考虑$F_{zAB}(0)$的贡献。 \begin{table}[htbp]\small
 \centering
 \caption{c)和d)所用的$\prod(c^2=0.992222,k)$值}
 	\begin{tabular}{|c|c|c|c|c|c|}
@@ -4166,37 +4188,11 @@ f) 解释为什么螺管B绕组内的最大场$B_{TB}=\sqrt{B_{zB}^2 + B_{rB}^2}
 	\end{tabular}
 \end{table}
 
-
-\subsubsection{问题3.15之解}
-a) 根据$B_z(0,0)=\mu_0H_z(0, 0)$以及方程3.111d，我们有：
-\begin{align*}
-B_{zA}(0,0)=&XXX\simeq 7.5\ \mathrm{T}\\
-B_{zb}(0,0)=&XXX\simeq 10.0\ \mathrm{T}\\
-B_{z}(0,0)=X&XX\simeq 17.5\ \mathrm{T}\\
-\end{align*}
-
-如问题中给出的，准确的中心场值为17.32 T。
-
-b) 式3.57b由下式给出：
-\begin{equation*}
-F_{zA}(0)\simeq F_{zAA}(0)\simeq-\frac{\mu_{0}}{2}(\frac{N_{A}I_{A}}{2b_{A}})^{2}\pi a_{A}^{2}\tag{3.57b}%(3.57b)
-\end{equation*}
-
-代入合适的值，我们有：
-\begin{equation*}
-F_{zA}\simeq -177.7\ \mathrm{kN}
-\end{equation*}
-
-可见，方程3.57b的结果是程序计算值的88\%；两者的区别的部分原因是方程3.57b没有涵盖$F_{zAB}(0)$的贡献。 
-
 c)式3.57a由下式给出：
-\begin{equation*}
-\begin{split}
-F_{zA}(0)\simeq&-\frac{\mu_{o}}{2}\{(\frac{N_{A}I_{A}}{2b_{A}})^{2}\pi a_{A}^{2}+(\frac{N_{B}I_{B}}{2b_{B}})(\frac{N_{A}I_{A}}{2b_{A}})\times\\
-&(a_{A}-a_{B})^{2}[\Pi(c^{2},k_{D})+\Pi(c^{2},k_{r})-2\Pi(c^{2},k_{B})]\}
-\end{split}\tag{3.57a}
-\end{equation*}
-
+\begin{align*}
+F_{zA}(0)\simeq -\frac{\mu_{o}}{2}&\bigg\{\left(\frac{N_{A}I_{A}}{2b_{A}}\right)^{2}\pi a_{A}^{2}+\left(\frac{N_{B}I_{B}}{2b_{B}}\right)\left(\frac{N_{A}I_{A}}{2b_{A}}\right)\times\\\notag
+&(a_{A}-a_{B})^{2}[\prod(c^{2},k_{D})+\prod(c^{2},k_{T})-2\prod(c^{2},k_{B})]\bigg\}\tag{3.57a}
+\end{align*}
 式中，
 \begin{align*}
 c^2&= \frac{4a_A a_B}{(a_A+a_B)^2}=0.972222\\
@@ -4205,22 +4201,19 @@ k_D^2&=\frac{4a_A a_B}{a_T^2+b_D^2}=0.182055\Rightarrow k_D\simeq 0.426679\\
 k_T^2&=\frac{4a_A a_B}{a_T^2+b_T^2}=0.024268\Rightarrow k_T\simeq 0.155781
 \end{align*}
 
-向方程3.57a中代入必要的值：
+向3.57a中代入必要的值，得：
 \begin{equation*}
 F_{zA}\simeq -183.7\ \mathrm{kN}
 \end{equation*}
 
-这个值是 −200.9 kN的91\%；如我们所料，相对于b)有所提升，尽管不足以抵消增加的复杂性。 
+这个值是 −200.9 kN的91\%；如我们所料，准确度相对于b)有所提升---尽管复杂性也增加了不少。 
 
-d)式3.59a由下式给出：
-\begin{equation*}
-\begin{split}
-F_{zA}(0)\simeq&-\frac{\mu_{o}}{2}\bigg\{(\frac{N_{B}I_{B}}{2b_{B}})^{2}\pi a_{B}^{2}+(\frac{N_{B}I_{B}}{2b_{B}})(\frac{N_{A}I_{A}}{2b_{A}})[\pi(a_{A}^{2}+a_{B}^{2})\\
-&-(a_{A}-a_{B})^{2}[2\prod(c^{2},k_{A})+\prod(c^{2},k_{D})-\prod(c^{2},k_{T})]]\bigg\}\\%(3.59a)
-\end{split}\tag{3.59a}
-\end{equation*}
-
-式中，$c^2, k_D^2,k_T^2$已在上面给出；本例中，因为$b_A=b_D, k_A^2=k_D^2$，有：
+d)式3.59a为：
+\begin{align*}
+F_{zA}(0)\simeq&-\frac{\mu_{o}}{2}\bigg\{\left(\frac{N_{B}I_{B}}{2b_{B}}\right)^{2}\pi a_{B}^{2}+\left(\frac{N_{B}I_{B}}{2b_{B}}\right)\left(\frac{N_{A}I_{A}}{2b_{A}}\right)\bigg[\pi(a_{A}^{2}+a_{B}^{2})\\
+&-(a_{A}-a_{B})^{2}\left[2\prod(c^{2},k_{A})+\prod(c^{2},k_{D})-\prod(c^{2},k_{T})\right]\bigg]\bigg\}\tag{3.59a}
+\end{align*}
+式中，$c^2, k_D^2,k_T^2$已在上文给出；本例中，因为$b_A=b_D, k_A^2=k_D^2$，有：
 \begin{equation*}
 F_{zB}\simeq -1063.4\ \mathrm{kN}
 \end{equation*}
@@ -4228,63 +4221,68 @@ F_{zB}\simeq -1063.4\ \mathrm{kN}
 这是程序值的88\%。
 
 e) 因为$(2b_B)^2\gg (2b_A)^2$，在螺管A的室温孔内，螺管B产生的磁场和螺管A产生的磁场都是均匀的且仅有轴向。
-所以，螺管A内部的最大场，大约17.5 T，出现在$z=0$处的最内侧半径上。
+所以，螺管A内部的最大场(约17.5 T)出现在$z=0$处的最内侧半径上。
 根据同一个程序的计算结果，最大场17.32 T出现在($r=5\ \mathrm{cm},z=0$)。
 
-f) 再次，因为$(2b_B)^2\gg (2b_A)^2$，the radial field component of Solenoid A impinges on Solenoid B away from its center point where the axial field of Solenoid B is still essentially the same as that at its midplane. 因此，很可能螺管B的最大场可能超过10.0 T，螺管B的中平面场(程序给出为9.94 T)，出现在轴向距离中心$\sim \pm b_A$的地方。
-程序给出的螺管B中的最大场是9.96 T ($B_r = \pm 1.70\ \mathrm{T};B_z =9.81\ \mathrm{T}$)，出现在($r=7\ \mathrm{cm}, z=\pm 25\ \mathrm{cm}$)。注意，
-$b_A=25\ \mathrm{cm}$。
+f) 再次，因为$(2b_B)^2\gg (2b_A)^2$，螺管A径向场分量影响螺管B的中心点外的地方，
+在那里螺管B的轴向场仍基本与在中平面处相同。
+因此，螺管B的最大场很可能超过螺管B中平面的磁场10.0 T(程序给出为9.94 T)，
+最大值点出现在轴向距离中心$\sim \pm b_A$的地方。
+程序给出的螺管B中的最大场是9.96 T ($B_r = \pm 1.70\ \mathrm{T};B_z =9.81\ \mathrm{T}$)，出现在($r=7\ \mathrm{cm}, z=\pm 25\ \mathrm{cm}$)。
+我们注意到，$b_A=25\ \mathrm{cm}$。
 
 
 \subsection{问题3.16：环氧浸渍螺管的应力}
-本例简单的近似处理环氧浸渍磁体的应力计算。
-我们使用一个FBNML制造于1970年代的500-MHz (12 T) NMR超导磁体作为实例[3.57]。
-该磁体有一个高场内插磁体，一个主线圈和多个矫正补偿线圈。
+本问题将简单且近似的计算处理环氧浸渍磁体的应力。
+我们使用一台FBNML制造于1970年代的500 MHz (12 T)NMR超导磁体作为实例[3.57]。
+该磁体包括一个高场内插磁体，一个主磁体和多个矫正补偿线圈。
 主磁体绕组的内半径$a_1$为72.6 mm，绕组的外半径($a_2$)为102 mm，绕组长度($2b$)是488 mm。
-主线圈由Nb-Ti导体绕成；铜和NiTi的体积比是2.1。
-这种复合导线的直径是裸线0.63 mm ($D_{cd}$)，绝缘后0.71 mm($D_{ov}$)。
-绕组是紧凑的六边形配置。导线之间的间隙填充了环氧树脂。
-图3.45给出了该配置下的三条相邻导线。
+主线圈由NbTi多丝复合导体绕成，该导体铜和NbTi的体积比是2.1。
+这种复合导线裸线直径是0.63 mm ($D_{cd}$)，含绝缘直径为0.71 mm($D_{ov}$)。
+绕组采用紧凑六边形配置。导线间隙填充环氧树脂。图3.45给出了该紧凑六边形配置下的三条相邻导线。
 
-当所有线圈都励磁后，磁场$B_z$的轴向($z$)分量在主线圈范围内随径向距离$r$线性减小。
-在主线圈的中平面($z = 0$)上，当$r = a_1$时$B_z=8.22\ \mathrm{T} $，当$r = a_2$时$B_z=-0.21\ \mathrm{T} $。
-$B_z$的线性降低在$z=0$是相当准确。
-主线圈的总运行电流密度为$248\ \mathrm{MA/m^2} $。.
+当所有线圈都励磁后，磁场$B_z$的轴向($z$)分量在主线圈绕组厚度范围内随径向距离$r$线性减小。
+在主线圈的中平面($z = 0$)上，当$r = a_1$时$B_z=8.22\ \mathrm{T} $，
+当$r = a_2$时$B_z=-0.21\ \mathrm{T} $。
+在$z=0$时，$B_z$的严格线性减小。
+主线圈的总运行电流密度$\lambda J$为$248\ \mathrm{MA/m^2} $。
 
-承受体力负荷的各向异性圆柱的解析方法用来计算主线圈的中平面的应力。
-内半径和外半径上的环箍应力计算得到的分别为105 MPa和65 MPa；
-环箍力大致上是从内半径到外半径线性减小。
+我们用各向异性圆柱在体力负荷作用下的解析解来计算主线圈中平面的应力。
+计算得到的内半径和外半径上的周向应力分别为105 MPa和65 MPa；
+周向应力大致上是从内半径到外半径线性减小。
 
-a) 从简单的力平衡考虑，证明这些应力值与负荷条件是一致的。
+a) 考虑简单的力平衡，证明这些应力值匹配负荷条件。
 
-b) 假定绕组模式是紧绕(线挨线)六边形配置，计算NbTi，铜，有机材料(环氧+绝缘)三种材料的面积占比。
+b) 假定绕组模式是紧凑(线挨线)六边形配置，计算NbTi、铜、有机材料(环氧+绝缘)三种材料的面积比。
 
-c) 基于上述面积占比和三种材料在4.2 K时的近似杨氏模量($E_{sc} = 85\ \mathrm{GPa}  ; E_{cu} = 100\ \mathrm{GPa}; E_{in} = 30 \ \mathrm{GPa}$)，
-计算绕组最内层的NbTi和铜的环箍力。
+c) 基于上述面积比和三种材料在4.2 K时的近似杨氏模量($E_{sc} = 85\ \mathrm{GPa}  ; E_{cu} = 100\ \mathrm{GPa}; E_{in} = 30 \ \mathrm{GPa}$)，
+计算绕组最内层的NbTi和铜的周向应力。
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.6]{chpt3/figs/fig3.45.eps}
-	\caption{紧绕六边形配置下的三根相邻导线。}
+	\caption{紧凑六边形配置下的三根相邻导线。}
 \end{figure}
 
 
 \subsubsection{问题3.16之解}
-a)绕组中的平均环箍力为：
+a)绕组中的平均周向应力为：
 \begin{equation*}
 \tilde{\sigma}=\frac{\sigma_{i}+\sigma_{o}}{2}=\frac{105\ \mathrm{MPa}+65\ \mathrm{MPa}}{2}%(S16.1)
 =85\ \mathrm{MPa}\tag{S16.1}
 \end{equation*}
 
-平均绕组半径$\tilde{R}= (a_1 + a_2)/2=87.3\ \mathrm{mm}$；平均磁场$\tilde{B}_z = (B_i + B_o)/2=4.0 T$。于是，
-绕组中的平均环箍力为：
+平均绕组半径$\tilde{R}= (a_1 + a_2)/2=87.3\ \mathrm{mm}$；
+平均磁场$\tilde{B}_z = (B_i + B_o)/2=4.0$ T。
+于是，绕组中的平均周向应力为：
 \begin{equation*}
 \tilde{\sigma}=\tilde{R}(\lambda J)\tilde{B}_{z}=(87.3\times 10^{-3}\ \mathrm{m})(248\times 10^{6}\ \mathrm{A/m^{2}})(4.0\ \mathrm{T})%(S16.2)
 =86.6\ \mathrm{MPa} \tag{S16.2}
 \end{equation*}
 
-这和上文(方程S16.1)计算的$\tilde{\sigma}=(\sigma_i+\sigma_o)/2$几乎一致。
+这和上文(S16.1)计算的$\tilde{\sigma}$($\sigma_i和\sigma_o$的平均值)几乎一致。
 
-b) 看图3.45中由虚线连城的三角形区域$A_{tr}$，它可由总体导体直径定义：$A_{tr} =\sqrt{3} D_{ov}^2/4$。
+b) 观察图3.45中的紧凑六边形配置。
+由虚线连成的三角形区域$A_{tr}$可由导体总直径$D_{ov}$确定：$A_{tr} =\sqrt{3} D_{ov}^2/4$。
 三角形内的导体面积$A_{cd}= \pi D_{cd}^2/8$，其中$2.1/3.1$是铜的面积$A_{cu}$，$1/3.1$
 是NbTi的面积$A_{sc}$。环氧和绝缘的面积$A_{in}= A_{tr} − A_{cd}$。于是：
 \begin{align*}
@@ -4293,7 +4291,7 @@ f_{sc}&=\frac{A_{sc}}{A_{tr}}=\frac{1}{2.1}\frac{A_{cu}}{A_{tr}}=0.230 \tag{S16.
 f_{in}&=\frac{A_{in}}{A_{tr}}=1-\frac{A_{cu}+A_{sc}}{A_{tr}}=1-0.484-0.230=0.286 \tag{S16.3c}
 \end{align*}
 
-c)复合材料的杨氏模量$\tilde{E}$由平行混合法则给出：
+c)复合材料的杨氏模量$\tilde{E}$可用并联混合法则给出：
 \begin{equation*}
 \begin{split}
 \tilde{E}=&f_{cu}E_{cu}+f_{sc}E_{sc}+f_{in}E_{in}\\
@@ -4302,7 +4300,7 @@ c)复合材料的杨氏模量$\tilde{E}$由平行混合法则给出：
 \end{split}\tag{S16.4}
 \end{equation*}
 
-我们可以计算绕组各组分最内侧半径处的应力：
+我们可以计算各组分在绕组最内侧半径处的应力：
 \begin{align*}
 \sigma_{cu}&=\sigma_{i}\frac{E_{cu}}{\tilde{E}}=(105\ \mathrm{MPa})\frac{100\ \mathrm{GPa}}{76\ \mathrm{GPa}}\simeq 137\ \mathrm{MPa} \tag{S16.5a}\\%(S16.5a)
 \sigma_{sc}&=\sigma_{i}\frac{E_{sc}}{\tilde{E}}=(105\ \mathrm{MPa})\frac{85\ \mathrm{GPa}}{76\ \mathrm{GPa}}\simeq 117\ \mathrm{MPa}\tag{S16.5b}\\%(S16.5b)
@@ -4313,42 +4311,42 @@ c)复合材料的杨氏模量$\tilde{E}$由平行混合法则给出：
 
 
 \subsection{问题3.17：HTS磁体中的应力和轴向力}
-这里我们演示对1.75-T (75 MHz)高温超导内插螺管磁体(由48个双饼线圈堆叠组成)的应力分析[3.58]。
-每一个双饼都是由高强度HTS带材绕成的。
-HTS内插磁体，运行电流86.7 A，与一个14.1-T (600 MHz)低温超导背景NMR磁体共同组成了675 MHz LTS/HTS
-NMR磁体---以后内插磁体将运行电流提高到115.95 A以实现组合磁场16.26 T (692.2 MHz) [3.59]。
-表3.9给出了内插磁体和HTS带材(Bi2223/Ag和两层不锈钢层复合材料)的关键参数。 
-本例使用的混合法则基于银和不锈钢的机械性能。
+这里我们对1.75 T (75 MHz)高温超导内插螺管磁体的应力进行分析[3.58]。
+该磁体由48个双饼线圈堆叠组成，各双饼由高强度HTS带材绕成。
+该HTS内插磁体运行电流为86.7 A，与一个14.1 T (600 MHz)低温超导背景NMR磁体共同构成了
+675 MHz LTS/HTS NMR磁体
+---后续内插磁体会将运行电流提高到115.95 A以实现16.26 T(692.2 MHz)的复合磁场[3.59]。
+表3.9给出了内插磁体和HTS带材(由Bi2223/Ag和两层不锈钢层组成的复合材料)的关键参数。 
+本例使用基于银和不锈钢的机械性能的混合法则。
 表中给出的是双饼线圈的轴向场在中平面外侧的数值$B_z$和$B_r$，这里有最大的应力和应变。
 
 \textbf{应力应变方程}
 
-螺管绕组的径向应力$\sigma_r(r, z)$；环向应力$\sigma_\theta(r, z)$；轴向应力$\sigma_z(r, z)$；
-剪切应力$\tau_{rz}$满足的平衡方程已有3.62给出。
+螺管绕组的径向应力$\sigma_r(r, z)$；周向应力$\sigma_\theta(r, z)$；轴向应力$\sigma_z(r, z)$；
+剪切应力$\tau_{rz}$满足的平衡方程已由3.62给出：
 \begin{align*}
 \frac{\partial\sigma_{r}}{\partial r}+\frac{\sigma_{r}-\sigma_{\theta}}{r}+\frac{\partial\tau_{rz}}{\partial z}&=-\lambda JB_{z}(r,z)\tag{3.62a}\\%(3.62a)
 \frac{\partial\tau_{rz}}{\partial r}-\frac{\tau_{rz}}{r}+\frac{\partial\sigma_{z}}{\partial z}&=-\lambda JB_{r}(r,z)\tag{3.62b}%(3.62b)
 \end{align*}
-
 边界条件为：$\sigma_r(r = a_1, z) = 0; \sigma_r(a_2, z) = 0; \sigma_z(r, z = \pm b) = 0;
-\tau_{rz}(r, \pm b)=0; \tau_{rz}(a_2,\pm b)=0$，
-HTS复合材料可以视为正交各向异性的，可以使用Hook定律。当不考虑热应变时，有：
+\tau_{rz}(r, \pm b)=0; \tau_{rz}(a_2,\pm b)=0$。
+HTS复合材料可视为正交各向异性，若不考虑热应变，Hook定律为：
 \begin{subequations}
 	\begin{align}
 \epsilon_{r}&=\frac{1}{E_{r}}\sigma_{r}-\frac{v_{rh}}{E_{h}}\sigma_{\theta}-\frac{v_{rz}}{E_{z}}\sigma_{z}\\%(3.171a)
 \epsilon_{\theta}&=-\frac{v_{hr}}{E_{r}}\sigma_{r}+\frac{1}{E_{h}}\sigma_{\theta}-\frac{v_{hz}}{E_{z}}\sigma_{z}\\%(3.171b)
-\epsilon_{z}&=-\frac{v_{zr}}{E_{r}}\sigma_{r}-\frac{v_{zh}}{E_{h}}\sigma_{\theta}+\frac{1}{E_{z}}\sigma_{z}\\%(3.171c)
+\epsilon_{z}&=-\frac{v_{zr}}{E_{r}}\sigma_{r}-\frac{v_{zh}}{E_{h}}\sigma_{\theta}+\frac{1}{E_{z}}\sigma_{z}
 	\end{align}
 \end{subequations}
-
-式中，$\nu_{\xi\eta}$是给定$\epsilon_\xi$和$\sigma_\eta$的Poisson比。
+式中，$\nu_{\xi\eta}$是Poisson比，给出$\sigma_\eta$下的$\epsilon_\xi$。
+$\eta$和$\xi$分别是$\theta-,r-$或$z$向。
 
 \begin{table}[htbp]\small
 \centering
 \caption{48双饼螺管线圈参数[3.32,58]}
 \begin{tabular}{|l||c|}
 \hline
-绕组i.d.($2a_1$); o.d.($2a_2$); 长($2b$) [mm] & 78.2; 126.6; 406.6 \\ \hline
+绕组i.d.($2a_1$); o.d.($2a_2$); 长($2b$) [mm] & 78.2; 126.6; 406.6 \\ 
 匝间绝缘厚度/双饼间隙[mm] & 0.038/0.178 \\ 
 总匝数 & 6816 \\ 
 运行电流 ($I_{op}$); $\lambda J_{op}$ [A; $\mathrm{A/mm^2}$] & 86.7; 66.31 \\ 
@@ -4364,45 +4362,48 @@ $B_z(r=a_1);B_z(r=a_2)$@86.7A [T] & 15.86; 13.97 \\ \hline
 \begin{table}[htbp]\small
 \centering
 \caption{HTS内插中平面饼式线圈的应力$\sigma$和应变$\epsilon$[3.32](运行于86.7 K，背景场14.1 T)}
-	\begin{tabular}{|l|l|l|l|l|l|l|l|}
+\begin{tabular}{|l|l|l|l|l|l|l|l|}
 \hline
-$r${[}mm{]} & $\sigma_r$ & 平均$\bar{\sigma_\theta}$[MPa] & 银$\sigma_\theta$[MPa] & 钢$\sigma_\theta$[MPa] & 银$\sigma_z$[MPa] &银$\sigma_{T}^{*}$[MPa] & 带$\epsilon_\theta$[MPa] [\%] \\ \hline\hline
+$r${[}mm{]} & $\sigma_r$ & 平均$\bar{\sigma_\theta}$[MPa] & 银$\sigma_\theta$[MPa] & 钢$\sigma_\theta$[MPa] & 银$\sigma_z$[MPa] &银$\sigma_{T}^{*}$[MPa] & 带$\epsilon_\theta$[MPa] [\%] \\ \hline
 39.10 & 0 & 62.3 & 54.3 & 152.9 & -2.1 & 56.4 & 0.030 \\ \hline
 51.19 & 2.6 & 44.9 & 39.2 & 110.3 & -2.1 & 41.3 & 0.028 \\ \hline
 63.29 & 0 & 33.6 & 29.3 & 82.4 & -2.1& 31.4 & 0.026 \\ \hline
-
 \end{tabular}
 \end{table}
 
-表3.10给出了一个饼的忠平面上最内、中点、最外三个点处的应力和环箍应变的数值[3.32]。
-中平面轴向力是 −16 kN。
+表3.10给出了一个中平面饼式线圈上最内、中点、最外三个点处的应力和周向应变值[3.32]。
+中平面轴向力是$−16$ kN。
 注意到，最大应力出现在绕组最内侧($a_1 =39.10\ \mathrm{mm}$)。
 银的最大组合应力，即Tresca应力 ($\sigma_T= \sigma_{\theta} −\sigma_z$)是56.4 MPa，
-这比允许应力($\sigma_{allow}=2\sigma/3(0.2\%)$)要小：银在77K时的允许应力为$\sigma_{allow}\simeq 120\ \mathrm{MPa}$。
+这比允许应力($\sigma_{allow}=2\sigma/3(0.2\%)$)要小，所以银在77 K时的允许应力为$\sigma_{allow}\simeq 120\ \mathrm{MPa}$。
 
-通过解方程3.62和3.171可以得到应力和应变。
-但是，3.5部分推导的方程可以用来估计中平面的轴向力。
+通过解3.62和3.171可以得到应力和应变。
+但是，第3.5节推导的公式可以用来估算中平面轴向力。
 如上面讨论3.5指出的，HTS磁体在它的中平面上的轴向力计算数值为−16.2 kN (即压缩力)，
-来自HTS磁体磁场以及HTS和LTS磁体的相互作用。
-此处，我们计算HTS磁体的仅由自身磁场贡献的中平面力的近似值。
-上面的分析给出的数值是−8.6 kN [3.32]。
+该力来自HTS磁体自身磁场以及HTS磁体和LTS磁体的相互作用。
+此处，我们近似计算HTS磁体的仅由\textit{自身}磁场对中平面力的共享。
+上面的分析给出的数值是$−8.6$ kN [3.32]。
 
-a) 将HTS磁体视为``薄壁"的，使用方程3.41a计算$F_z(0)$。选择$a=39.1 \ \mathrm{mm}, b=203.3\ \mathrm{mm}, NI =5.91\times 10^6\ \mathrm{A}$。
+a) 将HTS磁体视为``薄壁"的，使用3.41a计算$F_z(0)$。选择$a=39.1 \ \mathrm{mm}, b=203.3\ \mathrm{mm}, NI =5.91\times 10^6\ \mathrm{A}$。
 
-b) 使用方程3.41b计算$F_z(0)$。分两种情况：1)取HTS磁体的$a_1$，$a=39.1\ \mathrm{mm}$；2)HTS磁体的绕组平均半，径$a=51.2\ \mathrm{mm}$。
+b) 使用3.41b计算$F_z(0)$。分两种情况：1) $a=39.1\ \mathrm{mm}$(HTS磁体的$a_1$)；
+2)$a=51.2\ \mathrm{mm}$(HTS磁体绕组的平均半径)。
 
-c) 将HTS磁体视为两个``薄壁"且``长"的子螺管A和B，两者具有相同的绕组厚度。使用方程3.55
+c) 将HTS磁体视为两个``薄壁"且``长"的子螺管A和B，两者具有相同的绕组厚度。使用3.55
 计算$F_{zT}(0)$。取$a_A=39.1\ \mathrm{mm} , a_B=51.2\ \mathrm{mm}$。
 
-d) 围绕HTS磁体的是一个14.1 T的LTS嵌套磁体。将这个LTS磁体建模为薄壁螺管，参数为：$a_B = 191.3\ \mathrm{mm};
-b_B= 337.5\ \mathrm{mm}; N_BI_B = 7.535\ \mathrm{MA}$；HTS内插磁体为薄壁螺管，参数为：$a_A = 51.2\ \mathrm{mm}; b_A = 203.3\ \mathrm{mm};
- N_A I_A = 0.591\ \mathrm{MA}$。使用方程3.57a，计算HTS内插磁体的总平面轴向力$F_{zA}(0)$。
- 这个值是−16.2 kN。解释为什么方程3.57a没有给出正确的值。
+d) 内插的HTS磁体外是14.1 T的LTS嵌套磁体。
+将该LTS磁体建模为薄壁螺管，参数为：$a_B = 191.3\ \mathrm{mm};
+b_B= 337.5\ \mathrm{mm}; N_BI_B = 7.535\ \mathrm{MA}$；
+将HTS内插磁体也建模为薄壁螺管，参数为：$a_A = 51.2\ \mathrm{mm}; b_A = 203.3\ \mathrm{mm};
+ N_A I_A = 0.591\ \mathrm{MA}$。
+ 使用3.57a计算HTS内插磁体受到的总中平面轴向力$F_{zA}(0)$。
+ 这个值是$−16.2$ kN。解释为什么3.57a\textit{没有}给出正确的值。
 
-e) 两个磁体采用相同的模型，使用方程3.60来计算当HTS内插磁体偏心5 mm后其上承受的轴向恢复力。
-某程序给出的数值是−2.1 kN。
+e) 两个磁体采用如上相同的模型，用3.60计算当HTS内插磁体偏心5 mm(式3.60中$\rho$=5 mm)时
+其上所受的轴向恢复力。某程序给出的数值是$−2.1$ kN。
 
-下面的表3.11-3.14给出了需要的椭圆积分值。
+表3.11-3.14给出了需要的椭圆积分值。
 
 \subsubsection{问题3.17之解}
 \begin{table}[htbp]\small
@@ -4416,32 +4417,30 @@ e) 两个磁体采用相同的模型，使用方程3.60来计算当HTS内插磁�
 	\end{tabular}
 \end{table}
 
-a)我们得到3.41a：
+a)我们有式3.41a：
 \begin{align*}
-F_{z}(0)=&-\frac{\mu_{o}}{2}(\frac{NI}{2b})^{2}\{2b\sqrt{4a^{2}+b^{2}}[K(k_{b})-E(k_{b})]\\
-&-2b\sqrt{4a^{2}+4b^{2}}[K(k_{2b})-E(k_{2b})]\}\tag{3.41a}
+F_{z}(0)=&-\frac{\mu_{o}}{2}\left(\frac{NI}{2b}\right)^{2}\left\{2b\sqrt{4a^{2}+b^{2}}[K(k_{b})-E(k_{b})]
+&-2b\sqrt{4a^{2}+4b^{2}}[K(k_{2b})-E(k_{2b})]\right\}\tag{3.41a}
 \end{align*}
-
-式中，$k_b,k_{2b}$是由$a$和$b$决定的模量。本例下，$a=39.1 \ \mathrm{mm},b=203.3\ \mathrm{mm}$，我们有：
+式中，$k_b,k_{2b}$是由$a$和$b$确定的模量。
+此处，$a=39.1 \ \mathrm{mm},b=203.3\ \mathrm{mm}$，有：
 \begin{align*}
 k_b^2&=\frac{4a^2}{4a^2+b^2}=0.128888\\
 k_{2b}^2&=\frac{4a^2}{4a^2+(2b)^2}=0.035670
 \end{align*}
 
-所需的完全椭圆积分参数见表3.11。如果应用方程3.38c到$k^6$项，
-我们可以在$k^2\ll 1$条件下计算$ K(k)−E(k)$：
+所需的完全椭圆积分参数见表3.11。应用3.38c到$k^6$项，我们可以计算$k^2\ll 1$条件下的$K(k)−E(k)$：
 \begin{align*}
-K(k_{2b})-E(k_{2b})\simeq XXXX=0.106515
+K(k_{2b})-E(k_{2b})\simeq 0.106515
+\end{align*}
+这和根据表3.11中给出的$K(k)$和$E(k)$计算确定的值$K(k)−E(k)=0.106557$是基本一致的(误差$0.04\%$)。
+
+代入$NI =0.591\times 10^6 A$和其他值到3.41a，有：
+\begin{align*}
+F_z(0)=-6.2\ \mathrm{kN}
 \end{align*}
 
-这大致上和表3.11中的计算值$K(k)−E(k)=0.106557$是一致的。
-
-代入$NI =0.591\times 10^6 A$和其他值到方程3.41a，有：
-\begin{align*}
-F_z(0)=XXXXXX=-6.2\ \mathrm{kN}
-\end{align*}
-
-这个计算值相比程序值低估了28\%。
+该计算值相比程序值低估了28\%。
 
 \begin{table}[htbp]\small
 \centering
@@ -4454,23 +4453,22 @@ F_z(0)=XXXXXX=-6.2\ \mathrm{kN}
 	\end{tabular}
 \end{table}
 
-b) 方程3.41b得到：
+b) 由式3.41b得到：
 \begin{align*}
-F_{z}(0)&\simeq-\frac{\mu_{o}}{2}(\frac{NI}{2b})^{2}\pi a^{2}\\%(3.41b)
-&\simeq-\frac{(4\pi\times 10^{-7}H/m)}{2}[\frac{(5.91\times 10^{5}A)}{0.4066m}]^{2}\pi(0.0391m)^{2}\\
+F_{z}(0)&\simeq-\frac{\mu_{o}}{2}\left(\frac{NI}{2b}\right)^{2}\pi a^{2}\\%(3.41b)
+&\simeq-\frac{(4\pi\times 10^{-7})}{2}\left[\frac{(5.91\times 10^{5})}{0.4066}\right]^{2}\pi(0.0391)^{2}\\
 &=-6.4 \ \mathrm{kN}\tag{3.41b}
 \end{align*}
 
-这是程序值的74\%。用平均半径51.2 mm替代 39.1 mm得到的力为10.9 kN，比程序值大 27\%。 
+该值是程序值的74\%。用平均半径51.2 mm替代39.1 mm得到的力为10.9 kN，比程序值大 27\%。 
 
-c) 如果磁体建模为两个``薄壁"且``长"的螺管，应用方程3.55：
+c) 如果磁体建模为两个``薄壁"且``长"的螺管，则应用3.55：
 \begin{align*}
-F_{zT}(0)\simeq-\mu_{o}(\frac{NI}{4b})^{2}\pi(a_{A}^{2}+a_{B}^{2}){1-\frac{(a_{A}-a_{B})^{2}}{\pi(a_{A}^{2}+a_{B}^{2})}[2\prod(c^{2},k_{b})-\prod(c^{2},k_{2b})]}\tag{3.55}%(3.55)
+F_{zT}(0)\simeq-\mu_{o}\left(\frac{NI}{4b}\right)^{2}\pi(a_{A}^{2}+a_{B}^{2})\left\{1-\frac{(a_{A}-a_{B})^{2}}{\pi(a_{A}^{2}+a_{B}^{2})}\left[2\prod(c^{2},k_{b})-\prod(c^{2},k_{2b})\right]\right\}\tag{3.55}%(3.55)
 \end{align*}
-
-对模量$k_b, k_{2b},c^2$，已知$a_T = a_A+a_B, a_A = 39.1\ \mathrm{mm}, a_B = 51.2\ \mathrm{mm}, b =203.3\ \mathrm{mm}, a_T=90.3\ \mathrm{mm}$。有：
+将$a_T = a_A+a_B, a_A = 39.1\ \mathrm{mm}, a_B = 51.2\ \mathrm{mm}, b =203.3\ \mathrm{mm}, a_T=90.3\ \mathrm{mm}$代入模量$k_b, k_{2b},c^2$，有：
 \begin{align*}
-&c^2=\frac{4a_A a_B)}{a_T^2}=0.982045\\
+&c^2=\frac{4a_A a_B}{a_T^2}=0.982045\\
 &k_b^2=\frac{4a_A a_B}{a_T^2+b^2}=0.161820\ \Rightarrow k_b=0.402269\\
 &k_{2b}^2=\frac{4a_A a_B}{a_T^2+4b^2}=0.046160\ \Rightarrow k_{2b}=0.214848
 \end{align*}
@@ -4492,29 +4490,27 @@ $$F_z(0)=-7.4\ \mathrm{kN}$$
 	\end{tabular}
 \end{table}
 
-d)式3.57a下式给出：
-\begin{equation*}
-\begin{split}
-F_{zA}(0)\simeq&-\frac{\mu_{o}}{2}\{(\frac{N_{A}I_{A}}{2b_{A}})^{2}\pi a_{A}^{2}+(\frac{N_{B}I_{B}}{2b_{B}})(\frac{N_{A}I_{A}}{2b_{A}})\times\\
-&(a_{A}-a_{B})^{2}[\prod(c^{2},k_{D})+\prod(c^{2},k_{T})-2\prod(c^{2},k_{B})]\}%(3.57a)
-\end{split}\tag{3.57a}
-\end{equation*}
-
-不同的参数为：$a_T=a_A+a_B=242.5 \ \mathrm{mm};b_T=b_A+b_B=540.8 \ \mathrm{mm}; b_D=b_A−b_B=−134.2 \ \mathrm{mm}$；以及：
+d)式3.57a为：
 \begin{align*}
-c^2&=\frac{4a_A a_B)}{a_T^2}=0.666266\\
+F_{zA}(0)\simeq-\frac{\mu_{o}}{2}&\bigg\{\left(\frac{N_{A}I_{A}}{2b_{A}}\right)^{2}\pi a_{A}^{2}+\left(\frac{N_{B}I_{B}}{2b_{B}}\right)\left(\frac{N_{A}I_{A}}{2b_{A}}\right)\times\\
+&(a_{A}-a_{B})^{2}\left[\prod(c^{2},k_{D})+\prod(c^{2},k_{T})-2\prod(c^{2},k_{B})\right]\bigg\}\tag{3.57a}
+\end{align*}
+
+和d)不同的参数为：$a_T=a_A+a_B=242.5 \ \mathrm{mm};b_T=b_A+b_B=540.8 \ \mathrm{mm}; b_D=b_A−b_B=−134.2 \ \mathrm{mm}$；以及：
+\begin{align*}
+c^2&=\frac{4a_A a_B}{a_T^2}=0.666266\\
 k_D^2&=\frac{4a_A a_B}{a_T^2+b_D^2}=0.510028\ \Rightarrow k_D=0.0.714162\\
-k_{T}^2&=\frac{4a_A a_B}{a_T^2+b_T^2}=0.111533\ \Rightarrow k_{2b}=0.333965\\
+k_{T}^2&=\frac{4a_A a_B}{a_T^2+b_T^2}=0.111533\ \Rightarrow k_{T}=0.333965\\
 k_B^2&=\frac{4a_A a_B}{a_T^2+b_B^2}=0.226841\ \Rightarrow k_{B}=0.476278
 \end{align*}
 
-将这些值代入方程3.57a，有：
+将这些值代入3.57a，有：
 \begin{equation*}
-F_{zA}(0)\simeq XXXXX =-43.3\ \mathrm{kN}
+F_{zA}(0)\simeq -43.3\ \mathrm{kN}
 \end{equation*}
 
-这是程序值16.2 kN的2.7倍。主要的错误来自方程3.57a的近似涉及到了相互作用力$F_{zAB}$。
-为了让方程3.57a可用，正如在推导时指出的，条件$b_A^2\gg  4a_A^2,b^2_B\gg  a_T^2, b_D^2\gg a_T^2$必须要满足。
+这是程序值16.2 kN的2.7倍。主要误差来自3.57a的近似涉及到了相互作用力$F_{zAB}$。
+为了让3.57a可用，正如在推导时指出的，条件$b_A^2\gg  4a_A^2,b^2_B\gg  a_T^2, b_D^2\gg a_T^2$必须要满足。
 在这个特殊的粒子中，我们有$b_A^2/4a_T^2=0.176;b^2_B/a_T^2 = 1.94; b_D^2/a_T^2 = 0.306$，也就是说，
 没有一个条件满足。
 
@@ -4533,18 +4529,18 @@ F_{zA}(0)\simeq XXXXX =-43.3\ \mathrm{kN}
 \end{table}
 
 
-e)式3.60由下式给出：
+e)式3.60为：
 \begin{align*}
-F_{zR}(\rho)=&-\frac{\mu_{o}}{2}(\frac{N_{A}I_{A}}{2b_{A}})(\frac{N_{B}I_{B}}{2b_{B}})\times\\
-&(\frac{b_{T}-\rho}{\sqrt{a_{T}^{2}+(b_{T}-\rho)^{2}}}\{[a_{T}^{2}+(b_{T}-\rho)^{2}][K(k_{T-})-E(k_{T-})]-\Upsilon(C^{2},K_{T-})\}\\
-&+\frac{b_{D}+\rho}{\sqrt{a_{T}^{2}+(b_{D}+\rho)^{2}}}\{[a_{T}^{2}+(b_{D}+\rho)^{2}][K(k_{D+})-E(k_{D+})]-\Upsilon(c^{2},k_{D+})\}\\
-&-\frac{b_{T}+\rho}{\sqrt{a_{T}^{2}+(b_{T}+\rho)^{2}}}\{[a_{T}^{2}+(b_{T}+\rho)^{2}][K(k_{T+})-E(k_{T+})]-\Upsilon(c^{2},k_{T+})\}\\
-&-\frac{b_{D}+\rho}{\sqrt{a_{T}^{2}+(b_{D}-\rho)^{2}}}\{[a_{T}^{2}+(b_{D}-\rho)^{2}][K(k_{D-})-E(k_{D-})]-\Upsilon(c^{2},k_{D-})\}\\\tag{3.60}
+F_{zR}(\rho)=&-\frac{\mu_{o}}{2}\left(\frac{N_{A}I_{A}}{2b_{A}}\right)\left(\frac{N_{B}I_{B}}{2b_{B}}\right)\times\\
+&\bigg(\frac{b_{T}-\rho}{\sqrt{a_{T}^{2}+(b_{T}-\rho)^{2}}}\left\{[a_{T}^{2}+(b_{T}-\rho)^{2}][K(k_{T-})-E(k_{T-})]-\Upsilon(C^{2},K_{T-})\right\}\\
+&+\frac{b_{D}+\rho}{\sqrt{a_{T}^{2}+(b_{D}+\rho)^{2}}}\left\{[a_{T}^{2}+(b_{D}+\rho)^{2}][K(k_{D+})-E(k_{D+})]-\Upsilon(c^{2},k_{D+})\right\}\\
+&-\frac{b_{T}+\rho}{\sqrt{a_{T}^{2}+(b_{T}+\rho)^{2}}}\left\{[a_{T}^{2}+(b_{T}+\rho)^{2}][K(k_{T+})-E(k_{T+})]-\Upsilon(c^{2},k_{T+})\right\}\\
+&-\frac{b_{D}+\rho}{\sqrt{a_{T}^{2}+(b_{D}-\rho)^{2}}}\left\{[a_{T}^{2}+(b_{D}-\rho)^{2}][K(k_{D-})-E(k_{D-})]-\Upsilon(c^{2},k_{D-})\right\}\bigg)\tag{3.60}
 \end{align*}
 
-不同的参数为：$a_T=a_A+a_B=242.5 \ \mathrm{mm};b_T=b_A+b_B=540.8 \ \mathrm{mm}; b_D=b_A−b_B=−134.2 \ \mathrm{mm}$；以及
+和e)不同的参数为：$a_T=a_A+a_B=242.5 \ \mathrm{mm};b_T=b_A+b_B=540.8 \ \mathrm{mm}; b_D=b_A−b_B=−134.2 \ \mathrm{mm}$；以及：
 \begin{align*}
-&c^2=\frac{4a_A a_B)}{a_T^2}=0.666266\\
+&c^2=\frac{4a_A a_B}{a_T^2}=0.666266\\
 &k_{T+}^2=\frac{4a_A a_B}{a_T^2+(b_T+\rho)^2}=0.109834\ \Rightarrow k_{T+}=0.331412\\
 &k_{T-}^2=\frac{4a_A a_B}{a_T^2+(b_T-\rho)^2}=0.0.113269\ \Rightarrow k_{T-}=0.336554\\
 &k_{D+}^2=\frac{4a_A a_B}{a_T^2+(b_D+\rho)^2}=0.0.518925\ \Rightarrow k_{D+}=0.720364\\
@@ -4553,7 +4549,7 @@ F_{zR}(\rho)=&-\frac{\mu_{o}}{2}(\frac{N_{A}I_{A}}{2b_{A}})(\frac{N_{B}I_{B}}{2b
 
 \begin{table}[htbp]\small
 \centering
-\caption{e)所用到的方程3.60中各项的值}
+\caption{e)所用到的3.60式各项的值}
 	\begin{tabular}{|l|l|l|}
 		\hline
 		$\frac{b_T-\rho}{\sqrt{a_{T}^{2}+(b_t-\rho)^2}}$ & $\frac{(0.5358\ \mathrm{m})}{\sqrt{(0.2425\ \mathrm{m})^2+(0.5358\ \mathrm{m})^2}}$ & 0.911035  \\  \hline	
@@ -4576,195 +4572,206 @@ F_{zR}(\rho)=&-\frac{\mu_{o}}{2}(\frac{N_{A}I_{A}}{2b_{A}})(\frac{N_{B}I_{B}}{2b
 	\end{tabular}
 \end{table}
 
-应用表3.15中的数值到方程3.60，我们计算：
+将表3.15中的数值代入3.60，有：
 \begin{align*}
 F_{zR}(\rho)=-2.2\ \mathrm{kN}
 \end{align*}
 
 相比程序值(2.1 kN)，这个计算值高估了大约4\%；负号表示这个力是恢复力。
-磁体间的``弹性常数"大约$400\ \mathrm{kN/m}$。
+磁体间的``弹簧系数"大约$400\ \mathrm{kN/m}$。
 
-紧绕六边形绕组线圈的半径公式：
+补注：紧绕六边形绕组线圈的半径公式：
 \begin{align}
-a_{2}-a_{1}=\left[1+\frac{\sqrt{3}}{2}(N_{\ell}-1\right]D_{ov}
+a_{2}-a_{1}=\left[1+\frac{\sqrt{3}}{2}(N_{\ell}-1)\right]D_{ov}
 \end{align}
 
 
 \subsection{讨论3.12：铁球上的磁力}
-出于安全考虑，将铁磁物体远离大型磁体放置时很重要的。
-举45T混合磁体为例，我们在这里推导``远离"磁体的铁球(图3.46)受到的磁力。
-螺管的边缘场(远场)已在问题311论及，可由双极场给出：
+出于安全考虑，将铁磁物体远离大型磁体放置非常重要。
+以45 T混合磁体为例，我们推导``远离"磁体的铁球(图3.46)受到的磁力。
+螺管线圈的边缘场(\textit{远}场)已在问题3.11中论及，可由二极场给出：
 \begin{align*}%(3.163)
-\vec{H}_{f}=H_{0}(\frac{R_{e}}{r})^{3}(\cos\theta\vec{\imath}_{r}+\frac{1}{2}\sin\theta\vec{\imath}_{\theta}) \tag{3.163}
+\vec{H}_{f}=H_{0}\left(\frac{R_{e}}{r}\right)^{3}(\cos\theta\vec{\imath}_{r}+\frac{1}{2}\sin\theta\vec{\imath}_{\theta}) \tag{3.163}
 \end{align*}
 
-当一个磁性物体，比如铁球，处于空间变化的磁场中时，它会受到一个磁场力$\vec{f}_m$：
+当铁球等磁性物体处于空间变化的磁场中时，它将受到磁场力$\vec{f}_m$：
 \begin{align}
 \vec{f}_{m}(r,\theta)=\nabla e_{m}%(3.173)
 \end{align}
-
-式中，$\nabla$是球坐标下的梯度算符，$e_m$是铁球因磁化而存储的磁能密度。
-对于一个$\mu/\mu_0\gg 1$的铁磁球，球内的磁场$\vec{B}_{sp}$是外加``均匀"磁场的
+式中，$\nabla$是球坐标下的算符，$e_m$是铁球因磁化而存储的磁能密度。
+对$\mu/\mu_0\gg 1$的铁球，球内的磁场$\vec{B}_{sp}$是外加``均匀"磁场的
 三倍：$\vec{B}_{sp}\simeq 3\mu_0 \vec{H}_f= 3\vec{B}_f$ (问题2.1)。
-对于一个直径远小于其到磁体中心的距离的球，$\vec{B}_f$可以认为在球上各处是一致的：
+对于一个直径远小于其到磁体中心的距离的球，可认为在球上各处$\vec{B}_f$一致。于是：
 \begin{equation}
 e_{m}=\frac{\vec{B}_{sp}\cdot\vec{B}_{f}}{2\mu_{o}}=\frac{3|\vec{B}_{f}|^{2}}{2\mu_{o}}%(3.174)
 \end{equation}
 
-当铁球在磁化$M_{sa}$下饱和时，它的磁场近似为$\vec{B}_{sa} (= \mu_{0}) M_{sa})$，该值是一个常数且与
+当铁球在磁化$M_{sa}$下饱和时，它的磁场近似为$\vec{B}_{sa} (= \mu_{0} M_{sa})$，该值是一个常数且与
 $\vec{B}_f$同向。磁能密度于是可以写为：
 \begin{align}
 e_{ms}\simeq\frac{\vec{B}_{sa}\cdot\vec{B}_{f}}{2\mu_{o}}%(3.17)
 \end{align}
 
-在方程3.174和3.175中，我们假定在计算能量密度时边缘场是均匀的，但是在计算力密度时是不均匀的。
+在式3.174和3.175中，我们假定在计算能量密度时边缘场是``均匀''的，但是在计算力密度时是不均匀的。
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.7]{chpt3/figs/fig3.46.eps}
+	\includegraphics[scale=0.6]{chpt3/figs/fig3.46.eps}
 	\caption{处于45T混合磁体平台中的铁球。}
 \end{figure}
 
 \textbf{A.不饱和球上的力}
 
-为了推导不饱和铁球上的$\vec{f}_{m}(r,\theta)$表达式，我们首先从方程3.163中计算$|\vec{B}_f|^2$。
+为了推导不饱和铁球上的力$\vec{f}_{m}(r,\theta)$表达式，我们首先根据3.163计算$|\vec{B}_f|^2$。
 \begin{align*}
 |\vec{B}_f|^2=\mu_0^2 H_0^2\left(\frac{R_e}{r}\right)^6(\cos^2\theta+\frac{1}{4}\sin^2\theta)
 \end{align*}
 
-联立上式和方程3.174，对3.173使用球坐标中的梯度算符，我们得到：
+联立上式和3.174，对3.173使用球坐标中的梯度算符，我们得到：
 \begin{align*}
-\vec{f}_{m}(r,\theta)=&\frac{3\mu_0 H_0^2}{2}\bigg[(\cos^2\theta+\frac{1}{4}\sin^2\theta\frac{\partial}{\partial r}(\frac{R_e}{r})^6)\vec{\imath}_r\\
-&+\frac{1}{r}(\frac{R_e}{r})^6\frac{\partial}{\partial \theta}(\cos^2\theta+\frac{1}{4}\sin^2\theta)\vec{\imath}_\theta\bigg]\\
-=&\frac{3\mu_0 H_0^2}{2R_e}(\frac{R_e}{r})^7\left[-6(\cos^2\theta+\frac{1}{4}\sin^2\theta)\vec{\imath}_i-\frac{3}{2}\sin\theta\cos\theta\vec{\imath}_\theta\right]
+\vec{f}_{m}(r,\theta)=&\frac{3\mu_0 H_0^2}{2}\bigg[(\cos^2\theta+\frac{1}{4}\sin^2\theta\frac{\partial}{\partial r}\left(\frac{R_e}{r}\right)^6)\vec{\imath}_r\\
+&+\frac{1}{r}\left(\frac{R_e}{r}\right)^6\frac{\partial}{\partial \theta}\left(\cos^2\theta+\frac{1}{4}\sin^2\theta\right)\vec{\imath}_\theta\bigg]\\
+=&\frac{3\mu_0 H_0^2}{2R_e}\left(\frac{R_e}{r}\right)^7\left[-6(\cos^2\theta+\frac{1}{4}\sin^2\theta)\vec{\imath}_i-\frac{3}{2}\sin\theta\cos\theta\vec{\imath}_\theta\right]
 \end{align*}
-
-我们可以简化为：
+上式可化简为：
 \begin{align}
-\vec{f}_{m}(r,\theta)=-\frac{9\mu_{o}H_{0}^{2}}{4R_{e}}(\frac{R_{e}}{r})^{2}[(1+3\cos^{2}\theta)\vec{\imath}_{r}+\sin\theta\cos\theta\vec{\imath}_{\theta}]\\%(3.176a)
+\vec{f}_{m}(r,\theta)=-\frac{9\mu_{o}H_{0}^{2}}{4R_{e}}\left(\frac{R_{e}}{r}\right)^{2}\left[(1+3\cos^{2}\theta)\vec{\imath}_{r}+\sin\theta\cos\theta\vec{\imath}_{\theta}right]%(3.176a)
 \end{align}
 
-可见，$\vec{f}_{m}(r,\theta)$随$1/r^7$变化。如我们所期的，对于任何铁磁物体，
-$\vec{f}_{m}(r,\theta)$的$r$分量指向磁体中心。
+可见，$\vec{f}_{m}(r,\theta)$依$1/r^7$变化。
+如我们所预期的，对于任何铁磁物体，$\vec{f}_{m}(r,\theta)$的$r$分量指\textit{向}磁体中心。
 
 \textbf{B.饱和球上的力}
 
-方程3.175给出的磁能密度为：
+式3.175给出的磁能密度为：
 \begin{align*}
-e_{ms}=\mu_0 M_{sa}H_0(\frac{R_e}{r})^3\sqrt{\cos^2\theta+\frac{1}{4}\sin^2\theta}
+e_{ms}=\mu_0 M_{sa}H_0\left(\frac{R_e}{r}\right)^3\sqrt{\cos^2\theta+\frac{1}{4}\sin^2\theta}
 \end{align*}
 
-类似的，对磁能密度求梯度，我们得到：
+类似的，对$e_m$求梯度，得：
 \begin{align*}
-\vec{f}_{ms}(r\theta)=&-\frac{3\mu_{o}M_{sa}H_{0}}{2R_{e}}(\frac{R_{e}}{r})^{4}\\
-&\times(\sqrt{1+3\cos^{2}\theta\vec{\imath}_{r}}+\frac{\sin\theta\cos\theta}{\sqrt{1+3\cos^{2}\theta}}\vec{\theta})\\\tag{3.176b}
+\vec{f}_{ms}(r\theta)=-\frac{3\mu_{o}M_{sa}H_{0}}{2R_{e}}\left(\frac{R_{e}}{r}\right)^{4}
+\times\left(\sqrt{1+3\cos^{2}\theta\vec{\imath}_{r}+\frac{\sin\theta\cos\theta}{\sqrt{1+3\cos^{2}\theta}}\vec{\theta}}\right)\tag{3.176b}
 \end{align*}
 
 可见，当铁球饱和时，磁力随$1/r^4$变化。
-因为它和不饱和球中一样，是$-r$向的，铁球被磁体中心所吸引。
+因为它和不饱和球中一样是$-r$向的，故铁球将被磁体中心吸引。
 
-\textbf{演示}\quad 就45T混合磁体(仅考虑超导磁体的磁场)而言，其$B_0 = 14\ \mathrm{T},R_e = 0.67\ \mathrm{m}$ (问题3.11)，我们可以
-计算$y_{0.1g}$。该点位于磁体平台中心($z=2.75\ \mathrm{m}$)为起点的y轴上，该处施于密度为$\rho$的非饱和铁球磁力密度上的磁力恰为
-$f_{my}=0.1\rho g$(0.1倍重力加速度)。$f_{my}$为：
+\textbf{示例}\qquad 就45 T混合磁体(仅考虑超导磁体的磁场)而言，其$B_0 = 14\ \mathrm{T},R_e = 0.67\ \mathrm{m}$ (问题3.11)，我们可以计算$y_{0.1g}$。
+该点位于磁体平台中心($z=2.75\ \mathrm{m}$)为起点的$y$轴上，
+该处密度为$\rho$的非饱和铁球所受磁力密度上的$y$分量$f_{my}=0.1\rho g$(0.1倍重力加速度)。
+$f_{my}$为：
 \begin{align}
 f_{my}=f_{mr}\sin\theta+f_{m\theta}\cos\theta%(3.177)
 \end{align}
-
-式中，$f_{mr}$和$f_{m\theta}$分别是磁力的$r$分量和$\theta$分量。联立
-方程3.176a和3.177，我们得到：
+式中，$f_{mr}$和$f_{m\theta}$分别是磁力的$r$分量和$\theta$分量。
+联立3.176a和3.177，得：
 \begin{align}
-f_{my}&=\frac{9\mu_{o}H_{0}^{2}}{4R_{e}}(\frac{R_{e}}{r})^{7}[-(1+3\cos^{2}\theta)\sin\theta-\sin\theta\cos^{2}\theta]\\
-&=-\frac{9\mu_{o}H_{0}^{2}}{4R_{e}}(\frac{R_{e}}{r})^{7}(1+4\cos^{2}\theta)\sin\theta\notag
+f_{my}&=\frac{9\mu_{o}H_{0}^{2}}{4R_{e}}\left(\frac{R_{e}}{r}\right)^{7}[-(1+3\cos^{2}\theta)\sin\theta-\sin\theta\cos^{2}\theta]\\
+&=-\frac{9\mu_{o}H_{0}^{2}}{4R_{e}}\left(\frac{R_{e}}{r}\right)^{7}(1+4\cos^{2}\theta)\sin\theta\notag
 \end{align}
 
-方程3.178中的符号表示$f_{my}$实际上指向图3.46中所示的相反方向。在$x=0$时的$r,\sin\theta,\cos\theta$分别为：
+式3.178中的负号表示$f_{my}$实际上指向图3.46中所示方向的反向。
+在$x=0$时的$r,\sin\theta,\cos\theta$分别为：
 \begin{align*}
 r=\sqrt{y_{0.1g}^2+z^2};\qquad \sin\theta=\frac{y_{0.1g}}{\sqrt{y_{0.1g}^2+z^2}};\qquad \cos\theta=\frac{z}{\sqrt{y_{0.1g}^2+z^2}}
 \end{align*}
 
-联立上面的表达式和方程3.178，代入$f_{my}=0.1\rho g$，得到：
+联立上面的表达式和3.178，代入$f_{my}=0.1\rho g$，得到：
 \begin{align*}
-0.1\rho g=\frac{9(\mu_0 H_0)^2R_e^6}{4\mu_0}(\frac{1}{y_{0.1g}^2+z^2})^{3.5}(1+\frac{4z^2}{y_{0.1g}^2+z^2})\frac{y_{0.1g}}{y_{0.1g}^2+z^2}
+0.1\rho g=\frac{9(\mu_0 H_0)^2R_e^6}{4\mu_0}\left(\frac{1}{y_{0.1g}^2+z^2}\right)^{3.5}\left(1+\frac{4z^2}{y_{0.1g}^2+z^2}\right)\frac{y_{0.1g}}{y_{0.1g}^2+z^2}
 \end{align*}
 
-代入上面表达式的合适值，并代入$z=2.75\ \mathrm{m}$，我们得到：
+代入$z=2.75\ \mathrm{m}$及其他数值，得：
 \begin{align*}
-0.1(8000)(9.81)=\frac{9(14)^2(0.67)^6}{4(4\pi\times 10^{-7})}[\frac{1}{y_{0.1g}^2+2.75^2}]^{3.5}\times[1+\frac{4(2.75)}{y_{0.1g}^2+2.75^2}]\frac{y_{0.1g}}{\sqrt{y_{0.1g}^+2.75^2}}
+0.1(8000)(9.81)=\frac{9(14)^2(0.67)^6}{4(4\pi\times 10^{-7})}\left[\frac{1}{y_{0.1g}^2+2.75^2}\right]^{3.5}\times\left[1+\frac{4(2.75)}{y_{0.1g}^2+2.75^2}\right]\frac{y_{0.1g}}{\sqrt{y_^2_{0.1g}+2.75^2}}
 \end{align*}
 
 解得，$y_{0.1g}\simeq 2.42\ \mathrm{m}$
 
-我们可以算出球上的总场，然后看球是否如计算时假设的那样非饱和。
+我们可以算出球上的总磁场，然后检查球是否如计算时假设的那样非饱和。
 已知$r_{0.1g} =\sqrt{(2.42 \ \mathrm{m})^2+(2.75\ \mathrm{m})^2}\simeq 3.66 \ \mathrm{m}$以及$\theta = \tan^{−1}(2.42\ \mathrm{m}/2.75\ \mathrm{m}) = 41.3^\circ$，
-代入方程3.163，有：
+代入3.163，有：
 \begin{align*}
-|\mu_0 \vec{H}_f|&=(14.0)(\frac{0.67}{3.66})\sqrt{\cos^2 41.3^\circ+\frac{1}{4}\sin^2 41.3^\circ}\\
+|\mu_0 \vec{H}_f|&=(14.0)\left(\frac{0.67}{3.66}\right)\sqrt{\cos^2 41.3^\circ+\frac{1}{4}\sin^2 41.3^\circ}\\
 &=(14.0)(6.1\times 10^{-3})(0.82)=0.070\ \mathrm{T}\qquad(\vec{M}=3\mu_0\vec{H}_f=0.21\ \mathrm{T})
 \end{align*}
 
 
 \subsection{讨论3.13：两线圈磁体的径向力}
-图3.47给出了两线圈磁体的一种布局，其中内线圈1的轴垂直于$z$轴，但相对于外线圈2的轴偏移$\Delta x$。
-两个线圈的轴向场都是指向$+z$方向，中平面都位于$z=0$。
+图3.47给出了两线圈磁体的一种布局，其中线圈1(内)的轴垂直于$z$轴，
+但相对于线圈2(外)的轴偏移$\Delta x$。
+两个线圈的轴向场都指向$+z$方向，中平面都位于$z=0$。
 
-当线圈1和线圈2同心，也即$\Delta x=0,\Delta y=0$时，单位绕组体积上的作用力$J_\theta \times B_z$
-是$r$向的；根据对称性，可被消除：净轴向力为零。如果线圈1失配$+\Delta x$，如图所示，
-那么施加于绕组体积的一半($xy$平面上$+x$侧的$180^\circ$弧度)上的$B_{z2}$
-平均起来要大于另一半上的$B_{z2}$。最终的净不平衡力$F_{x1}$可以近似表示为：
+当线圈1和线圈2同轴，也即$\Delta x=0,\Delta y=0$时，单位绕组体积上的作用力$J_\theta \times B_z$
+是$r$向的。根据对称性，它们互相抵消，即净轴向力为零。
+如果线圈1如图所示偏移$+\Delta x$，那么绕组体积的一半($xy$平面上$+x$侧的$180^\circ$弧度)上的$B_{z2}$
+平均起来要大于另一半上的$B_{z2}$。最终的净力$F_{x1}$可以近似为：
 \begin{align}%(3.179)
-F_{x1}\simeq 4\pi\triangle x\int_{0}^{b}\int_{a_{1}}^{a_{2}}J_{\theta1}\frac{\partial B_{z2}(r,z)}{\partial r}r\ dr\ dz\\
+F_{x1}\simeq 4\pi\triangle x\int_{0}^{b}\int_{a_{1}}^{a_{2}}J_{\theta1}\frac{\partial B_{z2}(r,z)}{\partial r}rdrdz
 \end{align}
-
 式中，$B_{z2}$是由线圈2产生的轴向力。
-如方程3.12b以及3.117a–3.117c(问题3.2)所指出的，$B_{z2}$随着在$xy$平面上的失配增加而增大，也即
-$\partial B_{z2}/\partial r>0$。于是，$F_{x1}$是正的，并且在$x$方向增大；进而线圈1的失配继续扩大：
-系统不稳定。
+如3.12b以及3.117a–3.117c(问题3.2)所指出的，
+$B_{z2}$随着在$xy$平面上的偏移量增加而增大，也即$\partial B_{z2}/\partial r>0$。
+于是，$F_{x1}$是正的且在$x$方向增大；进而线圈1的偏移量将继续扩大：系统不稳定。
 
-另一种看待这种情况的方法是认识到励磁线圈1总是被吸引到最高场区域。
-因此，如果线圈1径向移位，则它继续沿径向朝线圈2移动。原因如上所述：$B_{z2}$随着$xy$平面中的位移而增加； $B_{z2}$在线圈2的绕组最内圈半径处最大。
-相同的理由可用于解释为什么$z$方向上的位移是稳定的：如果线圈1轴向移位$\Delta z$，因为每个线圈的轴向场在中平面($z = 0$)处最大，线圈1试图将其最大场区域与线圈2的区域对齐，从而在$z$方向的失配是稳定的。
+另一种考察本问题的方法是认识到：励磁的线圈1总是被吸引到最高场区域。
+因此，如果线圈1径向偏移，则它继续沿径向朝线圈2移动。
+原因如上所述：$B_{z2}$随距$xy$平面的距离增加而变大，在线圈2的绕组最内侧半径处取得最大。
+相同的理由可用于解释为什么$z$方向上的位移是稳定的：如果线圈1轴向偏移$\Delta z$，
+因为每个线圈的轴向场在中平面($z = 0$)处最大，故线圈1试图将其最大场区域与线圈2的最大场区域对齐，
+从而在$z$方向的偏移是稳定的。
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.6]{chpt3/figs/fig3.47.eps}
-	\caption{两个嵌套螺管线圈，两者中轴有相对偏移。}
+	\caption{两个嵌套螺管线圈，两者中轴线存在相对偏移。}
 \end{figure}
 
 
 \subsection{讨论3.14：45 T混合磁体的结构支撑}
-45 T混合磁体的设计具有后续通过将24 MW内插电阻磁体提至35 MW从而可在50 T运行的潜力。
-设计中的一个关键要点是插入磁体和SCM之间传递故障力的结构。
+45 T混合磁体的设计具有升级至50 T的潜力，只要将24 MW内插电阻磁体升级至35 MW。
+设计中的一个要点是插入磁体和超导磁体之间传递故障力的结构，
 特别关键的是在低温恒温器内部提供热间隙的结构部件。
-在45 T混合磁体中，该部件是单个圆柱形钢柱，与SCM同轴，with heat intercepts at $\sim$80 K and $\sim$20 K。
-为了计算在插入磁体失效时支撑结构上的潜在故障负荷上限，我们对升级50T进行了下面的分析。
+在45 T混合磁体中，该部件是单条柱形钢，与超导磁体同轴，
+跨越$\sim$80 K和$\sim$20 K温区。
+为了计算在插入磁体失效时支撑结构上的预期故障负荷上限，我们对升级50 T进行了下面的分析。
 \begin{enumerate}
 	\item 分析在以下基础上进行：获取45 T电阻内插磁体的尺寸，每个子线圈在峰值时具有均匀电流密度，
-	调节每个子线圈中的电流水平调节至50 T。该分析给出了一种插入磁体，与具有$1 / r$电流分布的线圈相比，该插入磁体相对于SCM具有固有的更高的磁能和更高的失配力。
+	调节每个子线圈中的电流水平至获得50 T。
+	该分析给出了一种比$1 / r$电流分布的线圈有更高的固有磁能和更高的固有失配力的插入磁体。
 	
-	\item 基于这种配置，假设最坏情况的故障，即每个子线圈的中平面突然短路，导致电流加倍(恒定电压假设)和每个子线圈的磁中心的轴向移位$b_i$(第i个线圈的半高)。对于假设的子线圈几何结构，这个假设的故障分别导致线圈A，B和C中的力为$\sim 1.7\ \mathrm{MN} ，\sim 1.8\ \mathrm{MN}$和$\sim 2.5\ \mathrm{MN}$，即SCM上的力总共约$6\ \mathrm{MN}$ 。
-	精心选择支撑柱的壁厚以确保故障期间的平均应力不超过其$2/3$屈服。按照$1.8-20\ \mathrm{K};20-80\ \mathrm{K}$和$80-300 \ \mathrm{K}$对壁厚进行分级以匹配奥氏体钢屈服应力的温度依赖性。由此产生的传导热输入是系统总低温负荷的一小部分。由此产生的支撑柱设计具有额外的优点，即对轴向和横向载荷都非常坚硬。因此，对于典型的失配力，插入磁体和插入磁体之间的相对偏移非常小。
+	\item 基于这种配置，假设最坏情况的故障，即每个子线圈的中平面突然短路，导致电流加倍(恒定电压假设)和每个子线圈的磁中心的轴向移位$b_i$(第$i$个线圈的半高)。对于假设的子线圈几何结构，
+	这个假设的故障引起线圈A，B和C中所受的力分别为$\sim 1.7\ \mathrm{MN} ，\sim 1.8\ \mathrm{MN}$和$\sim 2.5\ \mathrm{MN}$，即超导磁体所受总力约$6\ \mathrm{MN}$ 。
+	精心选择支撑柱截面以确保故障期间的平均应力不超过其$2/3$屈服强度。
+	按照$1.8-20\ \mathrm{K};20-80\ \mathrm{K}$和$80-300 \ \mathrm{K}$对截面进行分段处理
+	以匹配奥氏体钢屈服应力的温度依赖性。由此产生的传导热输入是系统总热负荷的很小一部分。
+	由此得出的支撑柱设计还有其他优点，即对轴向和横向载荷来说，都非常坚硬。
+	因此，对典型的偏移失配力，插入磁体和插入磁体之间的相对偏移非常小。
 \end{enumerate}
 
 
 
 \subsection{讨论3.15：Nb3Sn导体上的应力}
-这里我们将讨论$\mathrm{Nb_3Sn}$导体的应力问题，主要考虑这种复合导体的青铜、紫铜和$\mathrm{Nb_3Sn}$三种材料的应力关系[3.60]。
-因为超导体的临界电流密度会因应变而退降---在拉伸时尤甚，所以，超导体的最大应变水平是磁体设计的关键参数。
-应变的效果，特别是$NbTi$和$\mathrm{Nb_3Sn}$复合超导体，已获得全面的研究[3.61, 3.62]；
-高温超导体的数据也已成形[3.63, 3.64]。
+这里我们讨论$\mathrm{Nb_3Sn}$复合导体的应力问题，
+主要考虑这种复合导体的三种主要材料青铜、紫铜和$\mathrm{Nb_3Sn}$的应力关系[3.60]。
+因为超导体的临界电流密度会因应变而退降---在拉伸时尤甚，故超导体的最大应变水平是磁体设计的关键参数。
+NbTi和$\mathrm{Nb_3Sn}$复合超导体的应变效应已有全面研究[3.61, 3.62]；
+高温超导体的数据也积累了很多[3.63, 3.64]。
 
-当$\mathrm{Nb_3Sn}$被冷却到$4.2\ \mathrm{K}$，各组分都经历了一个$\sim 1000\ \mathrm{K}$的温度下降：从
-$\sim 1000\ \mathrm{K}$的反应温度到$4.2\ \mathrm{K}$的运行温度。
-因为各组分的热缩系数不同，各组分中将出现参与残余应力。
+当$\mathrm{Nb_3Sn}$被冷却到$4.2\ \mathrm{K}$，各组分都经历了一个从
+$\sim 1000\ \mathrm{K}$的反应温度到$4.2\ \mathrm{K}$的运行温度的$\sim 1000\ \mathrm{K}$的温度下降。
+因为各组分的热缩系数不同，将出现残余应力。
 
-图3.48示意了三种应变状态：a)复合物处理反应温度$\sim 1000\ \mathrm{K}$；
-b)如果三种组分可以独立收缩时的$4.2\ \mathrm{K}$状态；c)复合物处于$4.2\ \mathrm{K}$。
-尽管有所放大，示意图指出了三种组分各自热缩系数从反应温度到运行温度的相对大小，分别记为$\epsilon_{br_0},\epsilon_{cu_0}, \epsilon_{s_0}$。
-与此同时，复合物在$4.2\ \mathrm{K}$的残余应变$\epsilon_{br_r},\epsilon_{cu_r}, \epsilon_{s_r}$
-也在图中给出。可以看出，青铜和紫铜都将处于拉伸状态，而$Nb_3Sn$处于压缩状态。
-图中的$E$和$A$分别代表杨氏模量和截面积，下标指示了组分。
-另外，图中的各应变是按照标量处理的。
+图3.48示意了我们关心的三个状态下的应变：a) 复合物在反应温度$\sim 1000\ \mathrm{K}$时；
+b)三种组分可以独立收缩时在$4.2\ \mathrm{K}$状态；c) 复合物在$4.2\ \mathrm{K}$时。
+示意图为了指出了三种组分各自热缩系数从反应温度到运行温度的相对大小，有所夸张。
+从反应温度冷却到4.2 K后的应变分别记为$\epsilon_{br_0},\epsilon_{cu_0}, \epsilon_{s_0}$。
+复合物在$4.2\ \mathrm{K}$对应的残余应变为$\epsilon_{br_r},\epsilon_{cu_r}, \epsilon_{s_r}$
+，也在图中给出。可以看出，青铜和紫铜都将为拉伸状态，而$\mathrm{Nb_3Sn}$为压缩状态。
+图中的$E$和$A$分别代表杨氏模量和截面，下标指示了组分。
+另外，这里的各应变是按\textit{标量}处理的。
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.5]{chpt3/figs/fig3.48.eps}
+	\includegraphics[scale=0.6]{chpt3/figs/fig3.48.eps}
 	\caption{$\mathrm{Nb_3Sn}$复合材料冷却后的应力应变。}
 \end{figure}
 
@@ -4780,29 +4787,28 @@ b)如果三种组分可以独立收缩时的$4.2\ \mathrm{K}$状态；c)复合�
 	\end{align}
 \end{subequations}
 
-方程3.180a表明净内力为零。
-方程3.180b –3.180d给出了青铜/$\mathrm{Nb_3Sn}$、紫铜/$\mathrm{Nb_3Sn}$、青铜/紫铜各自的应变相容性。
-注意方程3.180隐含假定了各组分都处于塑性范围，而事实并不总是这样。
+式3.180a表明净内力为零。3.180b –3.180d给出了青铜/$\mathrm{Nb_3Sn}$、紫铜/$\mathrm{Nb_3Sn}$、青铜/紫铜的应变相容性。
+注意3.180隐含假定了各组分都处于塑性范围，而事实并不总是这样。
 
 \textbf{B. 残余应变}
 
-从方程3.180b和3.180c，我们可以得到$\epsilon_{s_r}$和$\epsilon_{cu_r}$的表达式：
+根据3.180b和3.180c，我们可以得到$\epsilon_{s_r}$和$\epsilon_{cu_r}$的表达式：
 \begin{align*}% page206
 \epsilon_{s_r}&=\epsilon_{cu_0}-\epsilon_{s_0}-\epsilon_{cu_r}\\
 \epsilon_{cu_r}&=\epsilon_{br_r}-\epsilon_{br_0}+\epsilon_{cu_0}
 \end{align*}
 
-将上面的式子与方程3.180联立，有：
+将上面的式子与3.180联立，有：
 \begin{align*}
 \epsilon_{br_r}A_{br}E_{br}+(\epsilon_{br_r}-\epsilon_{br_0}+\epsilon_{cu_0})A_{cu}E_{cu}+(\epsilon_{br_r}-\epsilon_{br_0}+\epsilon_{s_0})A_sE_s=0
 \end{align*}
 
-从上面的方程解出$\epsilon_{br_r}$，有：
+从上式解出$\epsilon_{br_r}$，有：
  \begin{align}% 3.181a
 \epsilon_{br_r}=\frac{(\epsilon_{br_0}-\epsilon_{cu_0})A_{cu}E_{cu}+(\epsilon_{br_0}-\epsilon_{s_0})A_sE_s}{A_{cu}E_{cu}+A_{br}E_{br}+A_{s}E_{s}}
 \end{align}
 
-类似的，从方程3.180b–3.180d，我们可以得到$\epsilon_{s_r}$和$\epsilon_{br_r}$：
+类似的，根据3.180b–3.180d，我们可以得到$\epsilon_{s_r}$和$\epsilon_{br_r}$：
 \begin{align*}
 \epsilon_{s_r}&=\epsilon_{cu_0}-\epsilon_{s_0}-\epsilon_{cu_r}\\
 \epsilon_{br_r}&=\epsilon_{br_0}-\epsilon_{cu_0}+\epsilon_{cu_r}
@@ -4813,7 +4819,7 @@ b)如果三种组分可以独立收缩时的$4.2\ \mathrm{K}$状态；c)复合�
 (\epsilon_{br_0}-\epsilon_{cu_0}+\epsilon_{cu_r})A_{br}E_{br}+\epsilon_{cu_r}A_{cu}E_{cu}+(\epsilon_{cu_r}-\epsilon_{cu_0}+\epsilon_{s_0})A_sE_s=0
 \end{equation*}
 
-从上面的方程中解出$\epsilon_{cu_r}$：
+解出$\epsilon_{cu_r}$：
 \begin{align*}% 3.181b
 \epsilon_{cu_r}=\frac{(\epsilon_{cu_0}-\epsilon_{br_0})A_{br}E_{br}+(\epsilon_{cu_0}-\epsilon_{s_0})A_sE_s}{A_{cu}E_{cu}+A_{br}E_{br}+A_{s}E_{s}}\tag{3.181b}
 \end{align*}
@@ -4829,37 +4835,37 @@ b)如果三种组分可以独立收缩时的$4.2\ \mathrm{K}$状态；c)复合�
 (\epsilon_{br_0}-\epsilon_{s_0}-\epsilon_{s_r})A_{br}E_{br}+(\epsilon_{cu_0}-\epsilon_{s_0}-\epsilon_{s_r})A_{cu}E_{cu}-\epsilon_{s_r}A_sE_s=0
 \end{align*}
 
-从上面的方程解出$\epsilon_{sr}$，有：
+解出$\epsilon_{sr}$，有：
 \begin{align*}% 3.181c
 \epsilon_{s_r}=\frac{(\epsilon_{cu_0}-\epsilon_{s_0})A_{cu}E_{cu}+(\epsilon_{br_0}-\epsilon_{s_0})A_{br}E_{br}}{A_{cu}E_{cu}+A_{br}E_{br}+A_{s}E_{s}}\tag{3.181c}
 \end{align*}
 
-\textbf{数值解}\ 使用方程3.181a — 3.181c，以及表3.16给出的各组分数值，我们可以计算
+\textbf{数值解}\qquad 使用3.181a — 3.181c，以及表3.16给出的各组分数据，可计算
 $\epsilon_{br_r},\epsilon_{cu_r}, \epsilon_{s_r}$：
 \begin{align*}% page207
 \epsilon_{br_r}&=\frac{(1.66-1.62)(0.62)(100\ \mathrm{GPa})+(1.66-0.72)(0.14)(165\ \mathrm{GPa})}{(0.24)(100\ \mathrm{GPa})+(0.62)(100\ \mathrm{GPa})+(0.14)(165\ \mathrm{GPa})}\\
-&=(\frac{22.19\ \mathrm{GPa}}{109.1\ \mathrm{GPa}})\% \simeq0.22\% \\
+&=(\frac{22.19\ \mathrm{GPa}}{109.1\ \mathrm{GPa}})\% \simeq0.22\%\qquad(\mbox{拉伸}) \\
 \epsilon_{cu_r}&=\frac{(1.62-1.66)(0.24)(100\ \mathrm{GPa})+(1.62-0.72)(0.14)(165\ \mathrm{GPa})}{62.9\ \mathrm{GPa}}\\
-&=(\frac{19.83\ \mathrm{GPa}}{109.1\ \mathrm{GPa}}\%)\simeq0.18\% \\
+&=(\frac{19.83\ \mathrm{GPa}}{109.1\ \mathrm{GPa}}\%)\simeq0.18\% \qquad(\mbox{拉伸})\\
 \epsilon_{s_r}&=\frac{(1.62-0.72)(0.62)(100\ \mathrm{GPa})+(1.66-0.72)(0.24)(100\ \mathrm{GPa})}{62.9\ \mathrm{GPa}}\\
-&=(\frac{78.36\ \mathrm{GPa}}{109.1\ \mathrm{GPa}}\%)\simeq0.72\% 
+&=(\frac{78.36\ \mathrm{GPa}}{109.1\ \mathrm{GPa}}\%)\simeq0.72\% \qquad(\mbox{压缩})
 \end{align*}
 
-注意到两种基底材料都处于拉伸状态，而$Nb_3Sn$处于压缩状态；
-0.72\%的$\epsilon_{s_r}$还是太大了，几乎可以肯定会破坏导体。
-不过，当磁体励磁后，导体基本处于拉伸张力状态，这会令$\epsilon_{s_r}$有零应变的倾向；
-通常，磁体励磁后，Lorentz应力足以让$Nb_3Sn$处于拉伸应变状态了。
+注意到两种基底材料都处于拉伸状态，而$\mathrm{Nb_3Sn}$处于压缩状态。
+0.72\%的$\epsilon_{s_r}$还是太大了，几乎肯定会破坏导体。
+不过，当磁体励磁后，导体差不多总是处于拉伸张力状态，这会令$\epsilon_{s_r}$有零应变的倾向；
+通常，励磁后，Lorentz应力足以让$\mathrm{Nb_3Sn}$处于拉伸应变状态。
 
 \textbf{C.青铜和紫铜中的应力}
 
-从上文计算的$\epsilon_{br_r},\epsilon_{cu_r}$，我们可以计算响应的应力：
+从上文计算的$\epsilon_{br_r},\epsilon_{cu_r}$，我们可以计算相应的应力：
  \begin{align*}
-\sigma_{br_r}&=\epsilon_{br_r}E_{br}\simeq(2.2\times10^{-3})(100\times10^9Pa)\simeq220\ \mathrm{MPa}\\
-\sigma_{cr_r}&=\epsilon_{cr_r}E_{cr}\simeq(1.8\times10^{-3})(100\times10^9Pa)\simeq180\ \mathrm{MPa}
+\sigma_{br_r}&=\epsilon_{br_r}E_{br}\simeq(2.2\times10^{-3})(100\times10^9)\simeq220\ \mathrm{MPa}\\
+\sigma_{cr_r}&=\epsilon_{cr_r}E_{cr}\simeq(1.8\times10^{-3})(100\times10^9)\simeq180\ \mathrm{MPa}
 \end{align*}
 
-退火青铜的屈服应力$\sigma_{br_y}$，退火紫铜的屈服应力$\sigma_{cu_y}$仅
-$\sim 100\ \mathrm{MPa}$；青铜和紫铜在冷却过程中都是塑性屈服的。
+退火青铜的屈服应力$\sigma_{br_y}$和退火紫铜的屈服应力$\sigma_{cu_y}$仅
+$\sim 100\ \mathrm{MPa}$，可见，青铜和紫铜在冷却过程中都是塑性屈服的。
 
 \begin{table}[htbp]\small
 \centering
@@ -4874,47 +4880,52 @@ $\sim 100\ \mathrm{MPa}$；青铜和紫铜在冷却过程中都是塑性屈服�
 \end{table}
 
 
-\subsection{问题3.18：部分系统的自感}
+\subsection{问题3.18：自感举例}
 推导3.7.3节给出的``低频"自感公式。
 
-a) 半径为$a$的导线内部的单位长度电感为：
+a) 式3.83，半径为$a$的导线内部的单位长度电感为：
  \begin{equation*}% 3.83
 L=\frac{\mu_0}{8\pi} \tag{3.83}
 \end{equation*}
 
-b) N匝``特别长"($\beta\gg \alpha$)的薄线圈的自感：
+b) 式3.84c，$N$匝``特别长"($\beta\gg \alpha$)的薄线圈的自感：
  \begin{equation*}% 3.84c
-L=\mu a_1N^2\left(\frac{\pi}{2\beta}\right) \tag{3.84c}
+L=\mu_0 a_1N^2\left(\frac{\pi}{2\beta}\right) \tag{3.84c}
 \end{equation*}
 
-c) ``理想"N匝双极线圈单位长度自感：
+c) 式3.87，由$N$匝绕成的``理想"二极磁体单位长度自感：
  \begin{equation*}% 3.87
 L=\frac{1}{8}\mu_0\pi N^2 \tag{3.87}
 \end{equation*}
 
-使用两种表达式：1) $L= 2E_m/I^2$；和2)$ L=N\Phi$推导上式(方程3.87)。
+使用两种表达式：1) $L= 2E_m/I^2$；和2)$ L=N\Phi$推导上式。
+
+d) 式3.88，由$N$匝绕成的``理想"四极磁体单位长度自感：
+
 \begin{equation*}% 3.88
 L=\frac{1}{16}\mu_0\pi N^2 \tag{3.88}
 \end{equation*}
 
-e) 主半径为$R$，圆形截面半径$a$，共N匝的``理想"环形线圈的自感：
+使用两种表达式：1) $L= 2E_m/I^2$；和2)$ L=N\Phi$推导上式。
+
+e) 式3.89a，主半径为$R$，圆形截面半径$a$，共$N$匝的``理想"螺绕环线圈的自感：
  \begin{equation*}%3.89a
 L=\mu_0 R N^2\left[1-\sqrt{1-\left(\frac{a}{R}\right)}\right] \tag{3.89a}
 \end{equation*}
 
-f) 在极限$a\ll R$下，e)中理想环线圈的自感：
+f) 式3.89b，在极限$a\ll R$下，e)中理想螺绕环线圈的自感：
  \begin{equation*}% 3.89b
-L=\mu_0aN^2(\frac{a}{2R})[1+\frac{1}{4}(\frac{a}{R})^2+\frac{1}{8}(\frac{a}{R})^4\cdots] \tag{3.89b}
+L=\mu_0aN^2\left(\frac{a}{2R}\right)\left[1+\frac{1}{4}(\frac{a}{R})^2+\frac{1}{8}(\frac{a}{R})^4\cdots\right] \tag{3.89b}
 \end{equation*}
 
-g) 主半径为$R$，矩形截面宽$2a$(r轴)、高$2b$(z轴)，共N匝的``理想"环形线圈的自感：
+g) 式3.90a，主半径为$R$，矩形截面宽$2a$($r$轴)、高$2b$($z$轴)，共$N$匝的``理想"螺绕环线圈的自感：
  \begin{equation*}% 3.90a
 L=\mu_0 b N^2\left[\frac{1}{\pi}\ln\left(\frac{R+a}{R-a}\right)\right] \tag{3.90a}
 \end{equation*}
 
-h) 在极限$a\ll R$下，g)中理想环线圈的自感：
+h) 式3.90b，在极限$a\ll R$下，g)中理想螺绕环线圈的自感：
  \begin{equation*}% 3.90b
-L=\mu_0bN^2(\frac{2a}{\pi R})[1+\frac{1}{3}(\frac{a}{R})^2+\frac{1}{5}(\frac{a}{R})^4\cdots] \tag{3.90b}
+L=\mu_0bN^2\left(\frac{2a}{\pi R}\right)\left[1+\frac{1}{3}(\frac{a}{R})^2+\frac{1}{5}(\frac{a}{R})^4\cdots\right] \tag{3.90b}
 \end{equation*}
 
 \subsubsection{问题3.18之解}
@@ -4928,63 +4939,63 @@ H_\theta(r)=\frac{I}{2\pi a^2}r \tag{S18.1}
 e_m=\frac{1}{2}\mu_0\int_{0}^{a}2\pi H_{\theta}^{2}(r)rdr \tag{S18.2}
 \end{equation*}
 
-联立方程S18.1和S18.2，我们有：
+联立S18.1和S18.2，我们有：
  \begin{equation*}%S 18.3
 e_m=\frac{\mu_0}{16\pi}I^2 \tag{S18.3}
 \end{equation*}
 
-联立方程3.79 ($E_m =LI^2/2$;单位长度$e_m =LI^2/2$)和S18.3，
+联立3.79 ($E_m =LI^2/2$;单位长度$e_m =LI^2/2$)和S18.3，
 解出导线内部的自感$L$：
  \begin{equation*}% 3.83
 L=\frac{\mu_0}{8\pi} \tag{3.83}
 \end{equation*}
 
-b) 根据方程3.111d，长螺管($\beta\gg\alpha$)的中心场$B_z(0, 0)$为$\mu_0 NI/2b$。
-从方程3.117c可以得出，``薄壁"和``长"螺管的磁场在轴向和径向都是均匀分布的，并且等于中心场。
-于是，螺管的N匝交链的总磁链为：
+b) 根据3.111d，长螺管($\beta\gg\alpha$)的中心场$B_z(0, 0)$为$\mu_0 NI/2b$。
+从3.117c可以得出，``薄壁"和``长"螺管的磁场在轴向和径向都是均匀分布的，并且等于中心场。
+于是，螺管的$N$匝交链的总磁链为：
  \begin{equation*}% S18.4
 \Phi=\int_{0}^{a_1}2\pi rH_z(0,0)dr=N\left(\frac{\pi a_{1}^{2}\mu_0NI}{2b}\right) \tag{S18.4}
 \end{equation*}
 
-联立方程3.78 ($\Phi=LI$)和S18.4，我们得到：
+联立3.78 ($\Phi=LI$)和S18.4，我们得到：
  \begin{equation*}% 3.84c
-L=\mu_0a_1N^2(\frac{\pi}{2\beta}) \tag{3.84c}
+L=\mu_0a_1N^2\left(\frac{\pi}{2\beta}\right) \tag{3.84c}
 \end{equation*}
 
-c)\textbf{方法一：能量} \ 如问题3.8所给出的，理想双极线圈的总安匝($NI$)：
+c)\textbf{方法一：能量} \qquad 如问题3.8所给出的，理想二极磁体的总安匝($NI$)：
 \begin{equation*}% S18.5
 NI=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}K_f Rd\theta \tag{S18.5}
 \end{equation*}
-
-式中，$R$是双极半径。联立3.140 ($\vec{K}_f$)和S18.5，有：
+式中，$R$是二极半径。联立3.140 ($\vec{K}_f$)和S18.5，有：
 \begin{equation*}% S18.6
 NI=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}2H_0R\cos\theta d\theta=4H_0R \tag{S18.6}
 \end{equation*}
 
-双极磁体的单位长度总磁能$E_m$由方程3.143表示：
+二极磁体的单位长度总磁能$E_m$由3.143给出：
  \begin{equation*}% 3.143
 E_m=\frac{\pi R^2B_{0}^{2}}{\mu_0} \tag{3.143}
 \end{equation*}
 
-下面我们从方程S18.6计算$H_0R=NI/4$。联立3.143和3.79，解出$L_\ell$ (单位长度的$L$)，有：
+下面我们由S18.6计算$H_0R=NI/4$。联立3.143和3.79，解出$L_\ell$ (单位长度的$L$)，有：
  \begin{equation*}% 3.87
 L_\ell=\frac{1}{8}\mu_0\pi N^2 \tag{3.87}
 \end{equation*}
 
-\textbf{方法二：磁链}\ 首先，表面电流密度$\vec{K}_f$在双极绕组上不均匀。方程3.140指出，$\vec{K}_f=-2H_0\cos\theta\vec{i_z}$。
-如果$I$在绕组中均匀分布，则``匝密度"$n(\theta)$必须如下随$\theta$变化：
+\textbf{方法二：磁链}\qquad 首先，表面电流密度$\vec{K}_f$在二极绕组上不均匀。
+式3.140指出，$\vec{K}_f=-2H_0\cos\theta\vec{i_z}$。
+如果$I$在绕组中``均匀''分布，则``匝密度"$n(\theta)$必须如下随$\theta$变化：
 \begin{equation*}% S18.7
-n_(\theta)=\frac{1}{2}N\cos\theta \tag{S18.7}
+n(\theta)=\frac{1}{2}N\cos\theta \tag{S18.7}
 \end{equation*}
 
-因为双极磁体有一个均匀分布的磁场$H_0$，双极的N匝总交链为：
+因为二极磁体有均匀分布的磁场$H_0$，二极的$N$匝总交链为：
 \begin{align*}% S18.8
 N\Phi&=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}n(\theta)\mu_0H_0(2R\cos\theta)d\theta=
 \mu_0NH_0R\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\cos\theta^2d\theta \\
 &=\frac{1}{2}\mu_0\pi H_0 R=\frac{1}{8}\mu_0\pi N^2I \tag{S18.8}
 \end{align*}
 
-联立方程S18.8和3.78，我们有：
+联立S18.8和3.78，我们有：
  \begin{equation*}% 3.87
 L_\ell=\frac{1}{8}\mu_0\pi N^2 \tag{3.78}
 \end{equation*}
@@ -4993,15 +5004,14 @@ d) \textbf{方法一：能量}\ 理想四极磁体(问题3.9)的总安匝$NI$为
 \begin{equation*}% S18.9
 NI=2\times\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}K_fRd\theta \tag{S18.9}
 \end{equation*}
-
-$R$是四极磁体的半径。积分前面的乘数2的原因可由图3.35(b)看出，即电流分布被分到两个区域，我们只考虑了一极。
-联立方程3.146和 ($\vec{K}_f$)和S18.9，我们有：
+式中，$R$是四极磁体的半径。积分前面的乘数2的原因可由图3.35(b)看出，
+即电流分布被分为两个区域，我们只考虑了一极。
+联立3.146 ($\vec{K}_f$)和S18.9，我们有：
  \begin{equation*}% S18.10
 NI=2\times\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}2H_0R\cos 2\theta d\theta=4H_0R \tag{S18.10}
 \end{equation*}
 
-四极磁体单位长度的总磁能在整个表面积分$\mu_0|H(r,\theta)|^2/2$获得。
-方程3.145给出的$|H(r,\theta)|^2$与$\theta$无关，因为$\sin^2 2\theta+\cos^2 2\theta=1$：
+四极磁体单位长度的总磁能可在整个表面对$\mu_0|H(r,\theta)|^2/2$积分获得。因为$\sin^2 2\theta+\cos^2 2\theta=1$，式3.145给出的$|H(r,\theta)|^2$与$\theta$无关：
 \begin{align*}% S18.11
 E_m&=\frac{1}{2}\mu_0(\frac{H_0}{R})^2\int_{0}^{R}2\pi r^3dr+\frac{1}{2}\mu_0H_{0}^{2}R^6\int_{R}^{\infty}\frac{2\pi dr}{r^5}\\
 &=\frac{1}{2}\mu_0\pi H_{0}^{2}R^2\tag{S18.11}
@@ -5012,10 +5022,12 @@ E_m&=\frac{1}{2}\mu_0(\frac{H_0}{R})^2\int_{0}^{R}2\pi r^3dr+\frac{1}{2}\mu_0H_{
 L_\ell=\frac{1}{16}\mu_0\pi N^2 \tag{3.88}
 \end{equation*}
 
-理想四极磁体的$E_m$是理想双极磁体的$1/2$很容易理解：四极磁场在室温孔内是从$0$到$H_0$变化的，而不是像双极磁场是均匀的；
-同时，四极磁体在外部按$1/r^3$衰减，而不是像双极磁体按$1/r^2$衰减。
+理想四极磁体的$E_m$是理想二极磁体的$1/2$。
+这很容易理解：四极磁场在室温孔内是从$0$到$H_0$变化的，而不是像二极磁场是均匀的；
+同时，四极磁体在外部按$1/r^3$衰减，而不是像二极磁体按$1/r^2$衰减。
 
-\textbf{方法二：磁链}\ 类似于上面处理的双极磁体的``匝密度"，四极磁体的匝密度也必须随$\theta$按下式变化：
+\textbf{方法二：磁链}\qquad 类似于上面处理的二极磁体的``匝密度"，
+四极磁体的匝密度也必须随$\theta$按下式变化：
  \begin{equation*}% S18.12
 n(\theta)=\frac{1}{2}N\cos 2\theta \tag{S18.12}
 \end{equation*}
@@ -5023,10 +5035,10 @@ n(\theta)=\frac{1}{2}N\cos 2\theta \tag{S18.12}
 注意到，对上式在$1/4$区域内积分，比如从$-45^\circ$到$45^\circ$，它将给出也必须给出该部分的总匝数$N/2$。
 对理想四极磁体，总磁链$\Phi$由下式给出：
 \begin{equation*}% S18.13b
-n\Phi=2\times\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}n(\theta)\phi(R,\theta)d\theta \tag{S18.13b}
+N\Phi=2\times\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}n(\theta)\phi(R,\theta)d\theta \tag{S18.13b}
 \end{equation*}
 
-因为$H_{1r} = H_0(r/R) \sin 2\theta$ (方程3.145a)，我们有：
+因为$H_{1r} = H_0(r/R) \sin 2\theta$ (3.145a)，我们有：
  \begin{equation*}% 18.13b
 \phi(R,\theta)d\theta=2\mu_0H_0R\int_{0}^{\theta}\sin 2\omega d\omega=\mu_0H_0R\cos 2\theta\tag{18.13b}
 \end{equation*}
@@ -5042,12 +5054,12 @@ N\Phi=\mu_0NH_0R\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}(\cos)^22\theta d\theta
 L_\ell=\frac{1}{16}\mu_0\pi N^2 \tag{3.88}
 \end{equation*}
 
-e) 正如在问题3.10中讨论的，理想圆截面环线圈内部的场$H(r)$是绕向角$(\phi)$向的。根据方程3.161：
+e) 正如在问题3.10中讨论的，理想圆截面环线圈内部的场$H(r)$是周向$(\varphi)$的。根据3.161：
  \begin{equation*}% S18.15
 H_\varphi(r)=\frac{NI}{2\pi r} \tag{S18.15}
 \end{equation*}
 
-环形线圈的总磁链$\Phi$于是为：
+螺绕环线圈的总磁链$\Phi$为：
 \begin{equation*}% S18.16
 \Phi=\mu_0N\int_{R-a}^{R+a}\int_{z=-a}^{z=+a}H(r)dzdr \tag{S18.16}
 \end{equation*}
@@ -5057,15 +5069,15 @@ H_\varphi(r)=\frac{NI}{2\pi r} \tag{S18.15}
 z^2+(R-r)^2=a^2 \tag{S18.17}
 \end{equation*}
 
-在方程S18.16的积分中，对$r$和常数从S18.17中解出$z$并与方程S18.15联立后，有：
+在式S18.16的积分中用$r$和常数从S18.17中解出$z$，并与S18.15联立，有：
 \begin{align*}% S18.18
 \Phi&=\frac{\mu_0N^2}{2\pi}\int_{R-a}^{R+a}\int_{-\sqrt{a^2-(R-r)^2}}^{\sqrt{a^2-(R-r)^2}}\frac{dzdr}{r}\\
 &=\frac{\mu_0N^2I}{\pi}\int_{R-a}^{R+a}\frac{\sqrt{a^2-R^2+2Rr-r^2}}{r}dr\tag{S18.18}
 \end{align*}
 
 \begin{align*}% S18.19
-\Phi&=\frac{\mu_0N^2I}{\pi}\mid R(\sin)^{-1}(\frac{2r-2R}{2a})+\frac{(a^2-R^2)}{\sqrt{R^2-a^2}}(\sin)^{-1}(\frac{2Rr+2a^2-2R^2}{2ra})\mid_{R-a}^{R+a} \\
-&=\frac{\mu_0N^2I}{\pi}(R\pi+\pi\frac{a^2-R^2}{\sqrt{R^2-a^2}})=\mu_0N^2RI[1-\sqrt{1-(\frac{a}{R})^2}]\tag{S18.19}
+\Phi&=\frac{\mu_0N^2I}{\pi}\left| R(\sin)^{-1}\left(\frac{2r-2R}{2a}\right)+\frac{(a^2-R^2)}{\sqrt{R^2-a^2}}(\sin)^{-1}\left(\frac{2Rr+2a^2-2R^2}{2ra}\right)\right|_{R-a}^{R+a} \\
+&=\frac{\mu_0N^2I}{\pi}\left(R\pi+\pi\frac{a^2-R^2}{\sqrt{R^2-a^2}}\right)=\mu_0N^2RI\left[1-\sqrt{1-(\frac{a}{R})^2}\right]\tag{S18.19}
 \end{align*}
 
 联立3.78和S18.19，我们得到：
@@ -5075,20 +5087,20 @@ L=\mu_0RN^2\left[1-\sqrt{1-\left(\frac{a}{R}\right)^2}\right] \tag{3.89a}
 
 f) 对$a\ll R$，我们有：
 \begin{equation*}% S18.20
-\sqrt{1-\left(\frac{a}{R}\right)^2}=1-\frac{1}{2}(\frac{a}{R})^2-\frac{1}{8}(\frac{a}{R})^4-\frac{1}{16}(\frac{a}{R})^6\cdots \tag{S18.20}
+\sqrt{1-\left(\frac{a}{R}\right)^2}=1-\frac{1}{2}\left(\frac{a}{R}\right)^2-\frac{1}{8}\left(\frac{a}{R}\right)^4-\frac{1}{16}\left(\frac{a}{R}\right)^6\cdots \tag{S18.20}
 \end{equation*}
 
-从3.89a和S18.20，
+从3.89a和S18.20，得：
 \begin{equation*}
-L=\mu_0RN^2\left[\frac{1}{2}(\frac{a}{R})^2+\frac{1}{8}(\frac{a}{R})^4+\frac{1}{16}(\frac{a}{R})^6\cdots\right]
+L=\mu_0RN^2\left[\frac{1}{2}\left(\frac{a}{R}\right)^2+\frac{1}{8}\left(\frac{a}{R}\right)^4+\frac{1}{16}\left(\frac{a}{R}\right)^6\cdots\right]
 \end{equation*}
 
 于是：
  \begin{equation*}% 3.89b
-L=\frac{\mu_0a^2N^2}{2R}\left[1+\frac{1}{4}(\frac{a}{R})^2+\frac{1}{8}(\frac{a}{R})^4\cdots\right] \tag{3.89b}
+L=\frac{\mu_0a^2N^2}{2R}\left[1+\frac{1}{4}\left(\frac{a}{R}\right)^2+\frac{1}{8}\left(\frac{a}{R}\right)^4\cdots\right] \tag{3.89b}
 \end{equation*}
 
-g) 本理想矩形截面环线圈内部的磁场与上面研究过的圆截面环线圈是一样的，即：
+g) 本理想矩形截面螺绕环线圈内部的磁场与上面研究过的圆截面螺绕环线圈是一样的，即：
  \begin{equation*}% S18.21
 N\Phi=\frac{\mu_0N^2I}{2\pi}\int_{R-a}^{R+a}\int_{z=-b}^{z=+b}\frac{1}{r}dzdr
 =\frac{\mu_0N^2bI}{\pi}\ln\left(\frac{R+a}{R-a}\right) \tag{S18.21}
@@ -5101,13 +5113,13 @@ L=\frac{\mu_0bN^2}{\pi}\ln\left(\frac{R+a}{R-a}\right) \tag{3.90a}
 
 h) 对$a\ll R$，我们可以展开$\ln(1\pm a/R)$：
  \begin{equation*}% S18.22
-\ln(1\pm\frac{a}{R})=\pm\frac{a}{R}-\frac{1}{2}(\frac{a}{R})^2\pm\frac{1}{3}(\frac{a}{R})^3-\frac{1}{4}(\frac{a}{R})^4\pm\frac{1}{5}(\frac{a}{R})^5\cdots \tag{S18.22}
+\ln\left(1\pm\frac{a}{R}\right)=\pm\frac{a}{R}-\frac{1}{2}\left(\frac{a}{R}\right)^2\pm\frac{1}{3}\left(\frac{a}{R}\right)^3-\frac{1}{4}\left(\frac{a}{R}\right)^4\pm\frac{1}{5}\left(\frac{a}{R}\right)^5\cdots \tag{S18.22}
 \end{equation*}
 
 联立3.90a和S18.22，我们得到：
  \begin{align*}% 3.90b
-L&=\frac{\mu_0bN^2}{\pi}\left[2(\frac{a}{R})+\frac{2}{3}(\frac{a}{R})^3+\frac{2}{5}(\frac{a}{R})^5\cdots\right]\notag\\
-L&=\frac{2\mu_0abN^2}{\pi R}\left[1+\frac{1}{3}(\frac{a}{R})^2+\frac{1}{5}(\frac{a}{R})^4\cdots\right]\tag{3.90b}
+L&=\frac{\mu_0bN^2}{\pi}\left[2\left(\frac{a}{R}\right)+\frac{2}{3}\left(\frac{a}{R}\right)^3+\frac{2}{5}\left(\frac{a}{R}\right)^5\cdots\right]\notag\\
+L&=\frac{2\mu_0abN^2}{\pi R}\left[1+\frac{1}{3}\left(\frac{a}{R}\right)^2+\frac{1}{5}\left(\frac{a}{R}\right)^4\cdots\right]\tag{3.90b}
 \end{align*}
 
 
