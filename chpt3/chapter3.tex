@@ -4011,25 +4011,25 @@ F_{z}(0)\simeq-\frac{\mu_{o}}{2}\left(\frac{NI}{2b}\right)^{2}\pi a^{2}\tag{3.41
 将$a=5\ \mathrm{cm}$和$a=6\ \mathrm{cm}$代入，有：
 %%缺公式
 \begin{align*}
-1)\qquad F_z(0)\simeq XXXXXX &=-177.7\ \mathrm{kN}\\
-2)\qquad F_z(0)\simeq YYYYYY &= -255.8\ \mathrm{kN}
+1)\qquad F_z(0)\simeq  &-177.7\ \mathrm{kN}\\
+2)\qquad F_z(0)\simeq  & -255.8\ \mathrm{kN}
 \end{align*}
 
 方程3.41b在$a=5\ \mathrm{cm}$时相比于程序值低估了大约5\%；在$a=6 \ \mathrm{cm}$时高估了大约36\%。
+结果表明，令螺管内直径等于$2a$似乎更好。不过，在其他$\alpha$值下也不一定合适。
 
-d) 对每个子螺管应用方程2.111d；我们得到$B_z(0,0)$不变。
-$$B_z(0,0) = B_{zA}(0,0) + B_{zB}(0,0)$$
+d) 对每个子螺管应用式2.111d，我们发现$B_z(0,0)$不变。
+$$B_z(0,0) = B_{zA}(0,0) + B_{zB}(0,0)=7.5\ \mathrm{T}$$
 
 e)再次给出式3.54：
 \begin{align*}
-F_{zT}(0)=&-\frac{\mu_{o}}{2}(\frac{NI}{4b})^{2}\times\\
-&(2b\sqrt{4a_{A}^{2}+b^{2}}[K(k_{bA})-E(k_{bA})]-2b\sqrt{4a_{A}^{2}+4b^{2}}[K(k_{2bA})-E(k_{2bA})]\\
+F_{zT}(0)=&-\frac{\mu_{o}}{2}\left(\frac{NI}{4b}\right)^{2}\times\\
+&\bigg(2b\sqrt{4a_{A}^{2}+b^{2}}[K(k_{bA})-E(k_{bA})]-2b\sqrt{4a_{A}^{2}+4b^{2}}[K(k_{2bA})-E(k_{2bA})]\\
 &+2b\sqrt{4a_{B}^{2}+b^{2}}[K(k_{bB})-E(k_{bB})]-2b\sqrt{4a_{B}^{2}+4b^{2}}[K(k_{2bB})-E(k_{2bB})]\\
 &-\frac{4b}{\sqrt{a_{T}^{2}+b^{2}}}\{(a_{T}^{2}+b^{2})[K(k_{b})-E(k_{b})]-\Upsilon(c^{2},k_{b})\}\\
-&+\frac{4b}{\sqrt{a_{T}^{2}+4b^{2}}}\{(a_{T}^{2}+4b^{2})[K(k_{2b})-E(k_{2b})]-\Upsilon(c^{2},k_{2b})\})\tag{3.54}
+&+\frac{4b}{\sqrt{a_{T}^{2}+4b^{2}}}\{(a_{T}^{2}+4b^{2})[K(k_{2b})-E(k_{2b})]-\Upsilon(c^{2},k_{2b})\}\bigg)\tag{3.54}
 \end{align*}
-
-式中的$c^2$和其他模为：
+式中，$c^2$和其他模量分别为：
 \begin{align*}
 c^2=&\frac{4a_A a_B}{(a_A+a_B)^2}\simeq 0.991736\\
 k_{b_A}^2=&\frac{4a_A^2}{4a_A^2+b^2}\simeq 0.390244\\
@@ -4037,86 +4037,86 @@ k_{2b_A}^2=&\frac{4a_A^2}{4a_A^2+(2b)^2}\simeq 0.137931\\
 k_{b_B}^2=&\frac{4a_B^2}{4a_B^2+b^2}\simeq 0.479600\\
 k_{2b_B}^2=&\frac{4a_B^2}{4a_B^2+(2b)^2}\simeq 0.187256\\
 k_{b}^2=&\frac{4a_A a_B}{(a_A+a_B)^2+b^2}\simeq 0.432822\Rightarrow k_b\simeq 0.657892\\
-k_{2b}^2=&\frac{4a_A a_B}{(a_A+a_B)^2+(2b)^2}\simeq 0.160858\Rightarrow k_b\simeq 0.401071 
+k_{2b}^2=&\frac{4a_A a_B}{(a_A+a_B)^2+(4b)^2}\simeq 0.160858\Rightarrow k_{2b}\simeq 0.401071 
 \end{align*}
 
-将这些值和其他必要的值代入方程3.54，有：
+将这些值和其他必要的值代入3.54，有：
 \begin{align*}
-F_z(0)= XXXXXX \simeq -168.9\ \mathrm{kN}
+F_z(0)\simeq -168.9\ \mathrm{kN}
 \end{align*}
 
-计算值仍然相比程序值(−187.8 kN)有所低估，但是现在它是90\%。
-尽管方程3.54给出的值相比3.41a要准确，但它相当繁琐，并不推荐用来作为快速估算力的方法。
-很明显，将螺管分为两部分，应用方程3.54是口袋计算器手算的极限了。
-方程3.41b在$a=5\ \mathrm{cm}$时的良好结果更像是巧合，而不是一般规律。
+计算值相比程序值(−187.8 kN)仍然有所低估，但现在是90\%。
+尽管3.54给出的值相比3.41a要准确，但它极度繁琐，并不推荐用来快速估算作用力。
+很明显，将螺管分为个子线圈并应用式3.54已经是口袋计算器手算所能实现的极限了。
+
+值得注意的是，式3.41b在$a=5\ \mathrm{cm}$时给出的良好结果更像是巧合，而不是一般规律。
 
 f)在$a_A=5\ \mathrm{cm}$和$a_B=6\ \mathrm{cm}$时应用3.55，有：
 \begin{equation*}
-F_z(0)\simeq XXXXXXX = -187.3\ \mathrm{kN}
+F_z(0)\simeq -187.3\ \mathrm{kN}
 \end{equation*}
 
-方程3.55相比于方程3.54更为简单，同样给出了至少对这个特殊的例子而言比3.54更好的结果。
+式3.55相比于3.54在计算上更为简单，同样给出了至少对这个特殊的例子而言比3.54更好的结果。
 
-g) 施加于$z\ge 0$部分所有匝上载流微元$dI$的力微元为：
+g) $z\ge 0$部分一个完整匝上的载流为$dI$微元所受的力为：
 \begin{equation*}
 dF_z(z\ge 0)=-2\pi a B_r(z)d I
 \end{equation*}
 
-符号表示这个力是指向中平面的。做替换$dI = (NI/2b) dz$并在螺管的整个半区从$z=0$到$z=b$积分： 
+负号表示这个力是指向中平面的。做替换$dI = (NI/2b) dz$并在螺管的一半区域(从$z=0$到$z=b$)积分： 
 \begin{equation*}
-F_{z}(0)=-\int_{0}^{b}2\pi aB_{r}(r)\frac{NI}{2}dz=-\frac{NI}{2b}\int_{0}^{b}2\pi aB_{r}(z)dz\tag{S14.1}%(S14.1)
+F_{z}(0)=-\int_{0}^{b}2\pi aB_{r}(r)\frac{NI}{2b}dz=-\frac{NI}{2b}\int_{0}^{b}2\pi aB_{r}(z)dz\tag{S14.1}%(S14.1)
 \end{equation*}
 
-积分$\int_0^b 2\pi a B_r(z)dz$是离开这半个螺管的总径向磁通。
-根据$\nabla\cdot \vec{B}=0$，这等于从中平面($z=0$)圆面区域进入这一半螺管的总轴向磁通与在$z=b$处圆面区域离开
-的磁通之差，也即：
+积分$\int_0^b 2\pi a B_r(z)dz$是``流出''这半个螺管的总径向磁通。
+根据$\nabla\cdot \vec{B}=0$，这等于从中平面($z=0$)圆形区域``流入''这一半螺管的
+总轴向磁通与在$z=b$处圆形区域``流出''的磁通之差，即：
 \begin{equation*}
 \int_{0}^{b}2\pi aB_{r}(z)dz=\pi a^{2}[B_{z}(0)-B_{z}(b)]\tag{S14.2}%(S14.2)
 \end{equation*}
 
-方程3.41b的有效性是在假定螺管是``长"的($k^2\ll 1$或者$\beta\gg 1$)而得到的。
-$B_z(0, 0),B_z(0, b)$可以假定在圆平面区域$\pi a^2$上保持不变。
-对于长螺管，同时还有$B_z(0, b)\simeq 0.5 B_z(0,0)$(讨论3.4)，于是S14.2可如下给出：
+式3.41b的有效性是在假定螺管是``长"($k^2\ll 1$或$\beta\gg 1$)情况下得到的。
+$B_z(0, 0),B_z(0, b)$可以假定在圆形区域$\pi a^2$上保持不变。
+对于长螺管，同时还有$B_z(0, b)\simeq 0.5 B_z(0,0)$(见讨论3.4)，于是S14.2可如下给出：
 \begin{equation*}
 \int_{0}^{b}2\pi aB_{r}(z)dz\simeq\frac{\pi a^{2}}{2}B_{z}(0)\tag{S14.3}%(S14.3)
 \end{equation*}
 
-对长螺管，$B_z(0, 0)=\mu_0 NI/2b$ (方程3.111)，于是：
+对长螺管，$B_z(0, 0)=\mu_0 NI/2b$ (式3.111)，于是：
 \begin{equation*}
 \int_{0}^{b}2\pi aB_{r}(z)dz\simeq\frac{\pi a^{2}}{2}\times\frac{\mu_{o}NI}{2b}\tag{S14.4}%%(S14.4)
 \end{equation*}
 
 联立S14.1和S14.4，有：
 \begin{equation*}
-F_{z}(0)\simeq-\frac{NI}{2b}\times\frac{\pi a^{2}}{2}\times\frac{\mu_{o}NI}{2b}\simeq-\frac{\mu_{o}}{2}(\frac{NI}{2B})^{2}\pi a^{2}\tag{3.41b}%(3.41b)
+F_{z}(0)\simeq-\frac{NI}{2b}\times\frac{\pi a^{2}}{2}\times\frac{\mu_{o}NI}{2b}\simeq-\frac{\mu_{o}}{2}\left(\frac{NI}{2b}\right)^{2}\pi a^{2}\tag{3.41b}%(3.41b)
 \end{equation*}
 
-h) 对一个``长"螺管，$B_z(z)$不随$z$变化。$\nabla\cdot \vec{B}=0$要求径向分量$B_r(z)$总是零。
-因为$F_z(z)$是由$B_r(z)$产生的(方程S14.1)，$dF_z(z)=0$在线圈长度的大部分成立。
-从而$F_z(z)$在$z=b$范围内保持常数，到了$z =b$，磁通线开始偏离磁场轴线，产生了$B_r(z)$，从而
-产生$F_z(z)$。
-对于$4b^2\gg 4a^2$和$(b+z)^2\gg 4a^2$，可以证明方程3.40中括号内的2阶和3阶线抵消了，仅剩一阶项，如下：
+h) 对``长"螺管，$B_z(z)$不随$z$变化，而$\nabla\cdot \vec{B}=0$要求径向分量$B_r(z)$总是零。
+因为$F_z(z)$是由$B_r(z)$产生的(S14.1)，故$dF_z(z)=0$在线圈长度的大部分成立，
+所以$F_z(z)$在$z=b$范围内为常数，$z =b$之外磁通线开始偏离磁场中轴线，
+有了$B_r(z)$分量，从而产生$F_z(z)$。
+在$4b^2\gg 4a^2$和$(b+z)^2\gg 4a^2$时，可以证明3.40中括号内的2阶和3阶项抵消，仅剩第一项，如下：
 \begin{equation*}
-F_{z}(z\simeq b)\simeq-\frac{\mu_{o}}{2}(\frac{NI}{2b}^{2}\{(b-z)\sqrt{4a^{2}+(b-z)^{2}}[K(k_{b-})-E(k_{b-})]\}\tag{S14.5}%(S14.5)
+F_{z}(z\simeq b)\simeq-\frac{\mu_{o}}{2}(\frac{NI}{2b}^{2}\left\{(b-z)\sqrt{4a^{2}+(b-z)^{2}}[K(k_{b-})-E(k_{b-})]\right\}\tag{S14.5}%(S14.5)
 \end{equation*}
 
-因为$z$接近$b$，$k_{b−}^2 = 4a^2/[4a^2+(b−z)^2]$不满足$\ll 1$。于是，$K(k_{b−})−E(k_{b−})$不能由
-$k_{b-}^2$近似。我们简单的猜想$z$在$b$附近的位置，此处$F_z(z\sim b)$与方程3.41b给出的近似。
-如果我们猜$z=b-2a$，然后：
+因为$z$接近$b$时，$k_{b−}^2 = 4a^2/[4a^2+(b−z)^2]$不满足$\ll 1$。
+于是，$K(k_{b−})−E(k_{b−})$不能由$k_{b-}^2$近似。
+我们简单猜测$z$应当在$b$附近，此处的$F_z(z\sim b)$与3.41b给出的值应相近。
+如果我们猜$z=b-2a$，然后有：
 \begin{equation*}
-F_{z}(z=b-2a)\simeq-\frac{\mu_{o}}{2}(\frac{NI}{2b})^{2}\{2a\sqrt{4a^{2}+4a_{2}}[K(k_{b-})-E(k_{b-})]\}\tag{S14.6}%(S14.6)
+F_{z}(z=b-2a)\simeq-\frac{\mu_{o}}{2}\left(\frac{NI}{2b}\right)^{2}\left\{2a\sqrt{4a^{2}+4a_{2}}[K(k_{b-})-E(k_{b-})]\right\}\tag{S14.6}%(S14.6)
 \end{equation*}
-
-式中，$k^2_{b-}=4a^2/8a^2 =0.5$，可由表3.1查到，$K(k_{b−} =0.7071)=1.8541,E(k_{b−})=1.3506$。
-将这些值代入S14.6，有：
-\begin{equation*}
-F_{z}(z=b-2a)\simeq-\frac{\mu_{o}}{2}(\frac{NI}{2b})^{2}4a^{2}\sqrt{2}(0.5035)\\
-=-\frac{\mu_{o}}{2}(\frac{NI}{2b})^{2}2.85a^{2}\tag{S14.7}%(S14.7)
-\end{equation*}
+式中，$k^2_{b-}=4a^2/8a^2 =0.5$。差表3.1，$K(k_{b−} =0.7071)=1.8541,E(k_{b−})=1.3506$。
+将其代入S14.6，有：
+\begin{align*}
+F_{z}(z=b-2a)\simeq-\frac{\mu_{o}}{2}\left(\frac{NI}{2b}\right)^{2}4a^{2}\sqrt{2}(0.5035)
+=-\frac{\mu_{o}}{2}\left(\frac{NI}{2b}\right)^{2}2.85a^{2}\tag{S14.7}%(S14.7)
+\end{align*}
 
 因为2.85大约是$\pi$的90\%，$F_z(z)$实际上是长螺管两端向内大约$2a$处的中平面力。
-这个在长螺管轴向大部分区域的$F_z(z)$不变性也暗示了$B_z(z)$在轴向的同样长度区间内($2b-4a$)
-差不多保持$B_z(0,0)$。
+在长螺管轴向$F_z(z)$在螺管内大范围的(几乎)不变性也暗示了$B_z(z)$在轴向同样长度区间内($2b-4a$)几乎不变($\simeq B_z(0,0)$)。
 
 
 
