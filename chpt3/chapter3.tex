@@ -4633,7 +4633,7 @@ e_{ms}\simeq\frac{\vec{B}_{sa}\cdot\vec{B}_{f}}{2\mu_{o}}%(3.17)
 \end{align*}
 上式可化简为：
 \begin{align}
-\vec{f}_{m}(r,\theta)=-\frac{9\mu_{o}H_{0}^{2}}{4R_{e}}\left(\frac{R_{e}}{r}\right)^{2}\left[(1+3\cos^{2}\theta)\vec{\imath}_{r}+\sin\theta\cos\theta\vec{\imath}_{\theta}right]%(3.176a)
+\vec{f}_{m}(r,\theta)=-\frac{9\mu_{o}H_{0}^{2}}{4R_{e}}\left(\frac{R_{e}}{r}\right)^{2}\left[(1+3\cos^{2}\theta)\vec{\imath}_{r}+\sin\theta\cos\theta\vec{\imath}_{\theta}\right]%(3.176a)
 \end{align}
 
 可见，$\vec{f}_{m}(r,\theta)$依$1/r^7$变化。
@@ -4682,7 +4682,7 @@ r=\sqrt{y_{0.1g}^2+z^2};\qquad \sin\theta=\frac{y_{0.1g}}{\sqrt{y_{0.1g}^2+z^2}}
 
 代入$z=2.75\ \mathrm{m}$及其他数值，得：
 \begin{align*}
-0.1(8000)(9.81)=\frac{9(14)^2(0.67)^6}{4(4\pi\times 10^{-7})}\left[\frac{1}{y_{0.1g}^2+2.75^2}\right]^{3.5}\times\left[1+\frac{4(2.75)}{y_{0.1g}^2+2.75^2}\right]\frac{y_{0.1g}}{\sqrt{y_^2_{0.1g}+2.75^2}}
+0.1(8000)(9.81)=\frac{9(14)^2(0.67)^6}{4(4\pi\times 10^{-7})}\left[\frac{1}{y_{0.1g}^2+2.75^2}\right]^{3.5}\times\left[1+\frac{4(2.75)}{y_{0.1g}^2+2.75^2}\right]\frac{y_{0.1g}}{\sqrt{y^2_{0.1g}+2.75^2}}
 \end{align*}
 
 解得，$y_{0.1g}\simeq 2.42\ \mathrm{m}$
@@ -4869,13 +4869,20 @@ $\sim 100\ \mathrm{MPa}$，可见，青铜和紫铜在冷却过程中都是塑�
 \begin{table}[htbp]\small
 \centering
 \caption{青铜、紫铜和$\mathrm{Nb_3Sn}$在4.2 K下的性质(近似值)}
+\begin{threeparttable}
 	\begin{tabular}{|c|c|c|c|}
 		\hline
-		组分& $\epsilon_{0}^{*}[\%]$    & E{[}GPa{]} & $A^\dagger$    \\ \hline\hline
+		组分& $\epsilon_{0}[\%]\tnote{*}$    & E{[}GPa{]} & $A\tnote{$\dagger$}$    \\ \hline\hline
 		青铜     & 1.66 & 100        & 0.24 \\ \hline
 		紫铜       & 1.62 & 100        & 0.62 \\ \hline
 		$\mathrm{Nb_3Sn}$& 0.72 & 165        & 0.14 \\ \hline
 	\end{tabular}
+\begin{tablenotes}
+        \footnotesize
+        \item[*] 从$\sim$1000到4.2 K的热收缩应变。
+        \item[$\dagger$] 占复合导体总截面的比份。
+      \end{tablenotes}
+\end{threeparttable}
 \end{table}
 
 
@@ -5182,12 +5189,12 @@ M_{AB}=&-\frac{1}{I_AI_B}\int_{0}^{\rho}F_{zA}(y)dy\tag{3.185}\\
 \section*{参考文献}
 \noindent [3.1] Many codes are available, created by individuals and institutions, e.g., SOLDESIGN (M.I.T.), and by commercial outfits, e.g., COMSOL, ANSYS, ANSOFT.
 
-\noindent [3.2] D. Bruce Montgomery, Solenoid Magnet Design (Robert Krieger Publishing, New
+\noindent [3.2] D. Bruce Montgomery, \textit{Solenoid Magnet Design} (Robert Krieger Publishing, New
 York, 1980).
 
 \noindent [3.3] R.J. Weggel (personal communication, 1999).
 
-\noindent [3.4] Francis Bitter, Magnets: The Education of a Physicist (Doubleday, New York,
+\noindent [3.4] Francis Bitter, \textit{Magnets: The Education of a Physicist} (Doubleday, New York,
 1959).
 
 \noindent [3.5] Milan Wayne Garrett, ``Calculation of fields, forces, and mutual inductances of
@@ -5198,7 +5205,7 @@ current systems by elliptical integrals,” J. Appl. Phys. 34, 2567 (1963).
 E.S. Bobrov and J.E. Williams, ``Stresses in superconducting solenoid” Mechanics
 of Superconducting Structures, F.C. Moon, Ed. (ASME, New York, 1980), 13–41.
 
-\noindent [3.7] Standard Handbook for Electrical Engineers, Ed. Archer E. Knowlton (McGraw-
+\noindent [3.7] \textit{Standard Handbook for Electrical Engineers}, Ed. Archer E. Knowlton (McGraw-
 Hill Book, 1949).
 
 \noindent [3.8] Benjamin J. Haid (personal communication, 2003).
