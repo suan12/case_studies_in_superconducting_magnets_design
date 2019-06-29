@@ -1,10 +1,10 @@
-\chapter{磁体，场，力}
+\chapter{磁体、磁场和力}
 \section{引言}
-本章我们研究与磁体、磁场、力相关的关键主题。
+本章我们研究与磁体、磁场和力相关的关键主题。
 涉及到的磁体包括：1)螺管磁体。单螺管磁体及多螺管磁体；
 2)Helmhotz线圈和高均匀场磁体；
-3)理想偶极磁体；4)理想四极磁体；
-5)跑道线圈；6)理想环形磁体。
+3)理想二极磁体；4)理想四极磁体；
+5)跑道线圈；6)理想螺绕环磁体。
 将会论及的还有用于产生高场的两种重要螺管磁体---Bitter磁体和混合磁体。
 其他诸如负载线、最小体积磁体、叠加技术等问题将在专题中研究。
 
@@ -38,12 +38,12 @@ $(Id\vec{s}\times \vec{r})_z=Iar\cos\theta d\varphi$，于是
 \begin{equation}\label{eqn:bs law z1}
   H_z=\int_{0}^{2\pi}\frac{Iar\cos\theta}{4\pi r^3}d\varphi=\frac{Ia\cos\theta}{2r^2}
 \end{equation}
-式中，$\cos\theta=a/r$，$r^2=a^2+z^2$，于是$H_z(z,\rho)$在$z$轴上($\rho=0$)的场$H_z(z,0)$成为：
+式中，$\cos\theta=a/r$，$r^2=a^2+z^2$，于是可写出$H_z(z,\rho)$在$z$轴上($\rho=0$)的场$H_z(z,0)$，
+该场还可以用中心场$H_z(0,0)$表示。形式为：
 \begin{subequations}\label{eqn:bs law z2}
 	\begin{align}
 H_z(z,0)&=\frac{a^2I}{2r^3}=\frac{a^2I}{2(a^2+z^2)^{3/2}} \\
-%\mbox{用中心场$H_z(0,0)$表示，$H_z(z,0)$可写为：}&\\\nonumber
-H_z(z,0)&=\frac{H_z(0,0)}{(1+(z/z)^2)^{3/2}} %\qquad\mbox{(以中心处磁场$H_z(0,0)$表示)}
+H_z(z,0)&=\frac{H_z(0,0)}{(1+(z/a)^2)^{3/2}} 
 \end{align}
 \end{subequations}
 
@@ -120,9 +120,9 @@ $\vec{F}_L=q\vec{v}\times \vec{B}$。
 	\caption{内径、外径和长度分别为$2a_1, 2a_2, 2b$的螺管线圈的剖面图。从磁力线可以看出，线圈产生的磁场在室温孔内主要是沿轴向的；除了线圈的对称轴上和轴中平面上，磁力线都是沿径向室温孔外发散的。}
 \end{figure}
 
-在如图3.4所示的球坐标系$(r,\theta,\phi)$下，任何电流体系和/或磁性材料产生的$z$向磁场$H_z(r,\theta,\phi)$在除源以外空间可以写为：
+在如图3.4所示的球坐标系$(r,\theta,\varphi)$下，任何电流体系和/或磁性材料产生的$z$向磁场$H_z(r,\theta,\varphi)$在除源以外空间可以写为：
 \begin{equation}\label{eqn:solenoid coil hz}
-  H_z (r,\theta,\phi)=\sum_{n=0}^\infty \sum_{m=0}^n r^n (n+m+1) P_n^m(u)(A_n^m\cos m\varphi+B_n^m\sin m\varphi)
+  H_z (r,\theta,\varphi)=\sum_{n=0}^\infty \sum_{m=0}^n r^n (n+m+1) P_n^m(u)(A_n^m\cos m\varphi+B_n^m\sin m\varphi)
 \end{equation}
 式中，$\theta$是极角，$\varphi$是周向角，磁场沿$z$向。如第2章所讨论的，$P_n^m(u)$是Legendre多项式($m=0$)和$u=\cos\theta$时的伴随Legendre函数($m>0$)。
 
@@ -198,7 +198,6 @@ $F(\alpha,\beta)E_{n}(\alpha,\beta)$是一个递归式；第$n$阶项可由下�
 \begin{subequations}
 	\begin{align}
 F(\alpha,\beta)E_{n}(\alpha,\beta)&=\frac{1}{n} \frac{\partial}{\partial \beta}\left[F(\alpha=1,\beta)E_{n-1}(\alpha=1,\beta)-F(\alpha,\beta)E_{n-1}(\alpha,\beta)\right]\\
-%\mbox{$F(\alpha,\beta) E_{n}(\alpha,\beta)$还可以写为：}\notag\\
 F(\alpha,\beta) E_{n}(\alpha,\beta)&=\frac{1}{M_n \beta^{n-1}}\left[\frac{f_n(\alpha=1,\beta)}{(1+\beta^2)^{n-0.5}}-\frac{\alpha^3 f_n(\alpha,\beta)}{(\alpha^2+\beta^2)^{n-0.5}}\right]
 \end{align}
 \end{subequations}
@@ -207,12 +206,11 @@ $f_4(\alpha,\beta)=2\alpha^4+7\alpha^2\beta^2+20\beta^4,M_4=24$。
 附录IB给出了$n=2,3,4,...20$时的$M_n$值和$f_n(\alpha,\beta)$表达式。
 20之下的偶数$n$对应的$f_n$常用来求解磁场问题。
 
-根据上面的讨论(式3.12a和式3.12b)，磁场$H_z(z)$的均匀性要比$z$轴法平面上的磁场$H_z(x),H_z(y)$均匀性差(也不尽然，比如嵌套线圈磁体)。因而，我们仅考虑$z$轴向磁场。根据式3.12a，有：
+根据上面的讨论(式3.12a和式3.12b)，磁场$H_z(z)$的均匀性要比$z$轴法平面上的磁场$H_z(x),H_z(y)$均匀性差(也不尽然，比如嵌套线圈磁体)。因而，我们仅考虑$z$轴向磁场。根据式3.12a，可写出对应形式以及一般形式：
 \begin{subequations}
 	\begin{align}
 \frac{\partial^2 h_z(\zeta)}{\partial \zeta^2}=&[2 E_2(\alpha,\beta)+(4)(3)E_4(\alpha,\beta)\zeta^2+...]\nonumber\\
 &=\sum_{n=1}^{\infty} (2n)(2n-1)E_{2n}(\alpha,\beta)\zeta^{2(n-1)}\\
-\mbox{一般地：}\\\notag
  \frac{\partial^{2k} h_z(\zeta)}{\partial \zeta^{2k}}=&\sum_{n=k}^{\infty} (2n)(2n-1)(\cdots)(2n-2k+1)E_{2n}(\alpha,\beta)\zeta^{2(n-k)}
 	\end{align}
 \end{subequations}
@@ -360,11 +358,10 @@ H_z(z)=[H_z(z)]_1+[H_z(z)]_2
 这样，式3.31中的$H_z(z)$成为3.32a。若将3.32a按$z$合并同类项，有3.32b。
 \begin{subequations}
 	\begin{align}
-  H_z(z)=&H_0+3\{ [A_2^0]_1 z^2+[A_2^0]_2(z-\delta_z)^2\}\nonumber\\
-  &+5\{[A_4^0]_1 z^4+[A_4^0]_2(z-\delta)^4\}+\cdots\\
-H_z(z)=&\{H_0+3[A_2^0]_2 \delta_z^2+5[A_4^0]_2\delta_z^4+\cdots\}\nonumber\\
-&-\{6[A_2^0]_2\delta_z+20[A_4^0]_2\delta_z^3+\cdots\}z\nonumber\\
-&+{3[A_2^0]_1+3[A_2^0]_2+30[A_4^0]_2\delta_z^2+\cdots}z^2+\cdots
+  H_z(z)=&H_0+3\{ [A_2^0]_1 z^2+[A_2^0]_2(z-\delta_z)^2\}+5\{[A_4^0]_1 z^4+[A_4^0]_2(z-\delta)^4\}+\cdots\\
+H_z(z)=&\{H_0+3[A_2^0]_2 \delta_z^2+5[A_4^0]_2\delta_z^4+\cdots\}-\{6[A_2^0]_2\delta_z+20[A_4^0]_2\delta_z^3+\cdots\}z\nonumber\\
+&+\{3[A_2^0]_1+3[A_2^0]_2+30[A_4^0]_2\delta_z^2+\cdots\}z^2-\{20[A_4^0]_2\delta_z+\cdots\}z^3\notag\\
+&+\{5[A_4^0]_1+5[A_4^0]_2+\cdots\}
 \end{align}
 \end{subequations}
 
@@ -388,9 +385,9 @@ $z^3$项同样扩大了谱线，主要是在偏离中心频率之处。
 \begin{subequations}
 	\begin{align}
   H_z(x,y,z)=&A_0^0+3A_2^0[z^2-\frac{1}{2}(x^2+y^2)]+5A_4^0\left\{z^4-3(x^2+y^2)\left[z^2-\frac{1}{8}(x^2+y^2)\right]\right\}\\
-H_z(x,y,z)=&H_0+3\left([A_2^0]_1[z^2-\frac{1}{2}(x^2+y^2)]+[A_2^0]_2\left\{ z^2-\frac{1}{2}[(x-\delta_x)^2+(y-\delta_y)^2]\right\}\right)\\\notag
-&+5[A_4^0]_1\left(z^4-3(x^2+y^2)[z^2-\frac{1}{8}(x^2+y^2)]\right)\\\notag
-&+[A_4^0]_2\left(z^4-3[(x-\delta)^2+(y-\delta_y)^2]\left\{ z^2-\frac{1}{8}[(x-\delta_x)^2+(y-\delta_y)^2]\right\}\right) 
+H_z(x,y,z)=&H_0+3\left([A_2^0]_1\left[z^2-\frac{1}{2}(x^2+y^2)\right]+[A_2^0]_2\left\{ z^2-\frac{1}{2}\left[(x-\delta_x)^2+(y-\delta_y)^2\right]\right\}\right)\\\notag
+&+5[A_4^0]_1\left(z^4-3(x^2+y^2)\left[z^2-\frac{1}{8}(x^2+y^2)\right]\right)\\\notag
+&+[A_4^0]_2\left(z^4-3\left[(x-\delta)^2+(y-\delta_y)^2\right]\left\{ z^2-\frac{1}{8}\left[(x-\delta_x)^2+(y-\delta_y)^2\right]\right\}\right) 
 \end{align}
 \end{subequations}
 
@@ -421,12 +418,9 @@ H_z(x,y,z)=&H_0+3\left([A_2^0]_1[z^2-\frac{1}{2}(x^2+y^2)]+[A_2^0]_2\left\{ z^2-
 线圈A和B的直径分别为$2a_A$和$2a_B$，总安匝数分别为$N_A I_A$和$N_B I_B$。
 两线圈产生的轴向($\vec{i}_z$)场指向同一方向。
 线圈B施加给线圈A的轴向力$F_{zA}(\rho)$为：
-\begin{equation}
-\begin{split}
-  F_{zA}(\rho)=&\frac{\mu_0}{2}(N_A I_A)(N_B I_B)\frac{\rho\sqrt{(a_A+a_B)^2+\rho^2}}{(a_A-a_B)^2+\rho^2}\\
-  &\times\left\{k^2 K(k)+(k^2-2)[K(k)-E(k)]\right\}
-\end{split}
-\end{equation}
+\begin{align}
+  F_{zA}(\rho)=\frac{\mu_0}{2}(N_A I_A)(N_B I_B)\frac{\rho\sqrt{(a_A+a_B)^2+\rho^2}}{(a_A-a_B)^2+\rho^2}\times\left\{k^2 K(k)+(k^2-2)[K(k)-E(k)]\right\}
+\end{align}
 
 $F_{zA}(\rho)$的方向为$+z$，或指向线圈B的；也即，$F_{zA}(\rho)$是引力。
 若两个电流的方向相反，则符号变为$-$，$F_{zA}(\rho)$成为斥力。
@@ -567,7 +561,7 @@ F_z(0)\simeq -\frac{1}{2}\mu_0 H_z^2(0,0)\times\pi a^2  \tag{3.41c}
 \begin{align}
 F_{zS}(\rho)=&-\frac{\mu_0}{2}\left(N_R I_R\right)\left(\frac{N_S I_S}{2b_s}\right)\times\\\notag
 &\bigg(\sqrt{(a_R+a_S)^2+(\rho+2b_s)^2}\{2[K(k_s)-E(k_s)]-k_s^2K(k_s)\}\\\notag
-&-\sqrt{(a_R+a_s)^2+\rho^2}\{2[K(k_R)-E(k_R)-k_R^2K(k_R)]\}\bigg)
+&-\sqrt{(a_R+a_s)^2+\rho^2}\left\{2[K(k_R)-E(k_R)-k_R^2K(k_R)]\right\}\bigg)
 \end{align}
 式中，模量$k_S$和$k_R$为：
 $$k_{S}^2=\frac{4a_S a_R}{(a_S+a_R)^2+(2b_S+\rho)^2} ;\qquad k_{R}^2=\frac{4a_S a_R}{(a_S+a_R)^2+\rho^2} $$
@@ -583,7 +577,7 @@ $$k_{S}^2=\frac{4a_S a_R}{(a_S+a_R)^2+(2b_S+\rho)^2} ;\qquad k_{R}^2=\frac{4a_S 
 \subsubsection{特例6：相距很远的``薄壁"螺管和``环"线圈}
 当两个线圈相距很远可满足$k_s^2\ll 1$和$k_R^2\ll 1$时，可得：
 \begin{equation}
-F_{zS}(\rho)\simeq \frac{\mu_0}{2\pi}\left(\pi a_R^2N_R I_R\right)(\frac{\pi a_S^2 N_S I_S}{2 b_S})\left[\frac{1}{\rho^3}-\frac{1}{(\rho+2b_S)^3}\right]
+F_{zS}(\rho)\simeq \frac{\mu_0}{2\pi}\left(\pi a_R^2N_R I_R\right)\left(\frac{\pi a_S^2 N_S I_S}{2 b_S}\right)\left[\frac{1}{\rho^3}-\frac{1}{(\rho+2b_S)^3}\right]
 \end{equation}
 
 和上面的例子类似，力是$+z$向(朝向``环''线圈)，幅值正比于两个线圈``磁矩''的乘积。
@@ -824,14 +818,12 @@ F_{zT}(0)\simeq& -\mu_0 \left(\frac{N I}{4b}\right)^2\left\{ \pi(a_A^2+a_B^2)-(a
 其中，$F_{zAA}(0)$来自其自身左半部分，$F_{zAB}(0)$来自螺管B。
 $F_{zAA}(0)$可在式3.41a中替换下标A给出。$F_{zAB}(0)$可由式3.44采取如下替代给出：
 $b_A$替$2b_A$，$−(b_A+b_B)$替$\rho$，$2b_B$不变，$c^2$仍由式3.47给出。
-\begin{equation}
-\begin{split}
-F_{zA}(0)=&\frac{\mu_0}{2}\bigg[\left(\frac{N_A I_A}{2b_A}\right)^2\times \{2b_A\sqrt{4a_A^2+b_A^2}[K(k_{bA})-E(k_{bA})]-2b_A\sqrt{4a_A^2+4b_A^2}[K(k_{2bA})-E(k_{2bA})]\}\\
-&+\left(\frac{N_AI_A}{2b_A}\right)\left(\frac{N_BI_B}{2b_B}\right)\bigg(\frac{2b_B}{\sqrt{a_T^2+b_B^2}}\{[a_T^2+b_B^2][K(k_B)-E(k_{B})]-\Upsilon(c^2,k_B)\}\\
-&-\frac{b_D}{\sqrt{a_T^2+b_D^2}}\{{[a_T^2+b_D^2][K(k_D)-E(k_D)]-\Upsilon(c^2,k_D)}\}\\
+\begin{align}
+F_{zA}(0)=\frac{\mu_0}{2}\bigg[&\left(\frac{N_A I_A}{2b_A}\right)^2\times \{2b_A\sqrt{4a_A^2+b_A^2}[K(k_{bA})-E(k_{bA})]-2b_A\sqrt{4a_A^2+4b_A^2}[K(k_{2bA})-E(k_{2bA})]\}\\\notag
+&+\left(\frac{N_AI_A}{2b_A}\right)\left(\frac{N_BI_B}{2b_B}\right)\bigg(\frac{2b_B}{\sqrt{a_T^2+b_B^2}}\{[a_T^2+b_B^2][K(k_B)-E(k_{B})]-\Upsilon(c^2,k_B)\}\\\notag
+&-\frac{b_D}{\sqrt{a_T^2+b_D^2}}\{{[a_T^2+b_D^2][K(k_D)-E(k_D)]-\Upsilon(c^2,k_D)}\}\\\notag
 &-\frac{b_T}{\sqrt{a_T^2+b_T^2}}\{[a_T^2+b_T^2][K(k_T)-E(k_T)]-\Upsilon(c^2,k_T^2)\}\bigg)\bigg]
-\end{split}
-\end{equation}
+\end{align}
 
 其中，$a_T=a_A+a_B$，$b_D=b_B-b_A$以及$b_T=b_A+b_B$。模量$k_{b_A}, k_{2b_A}, k_A,k_B, k_{AB}$分别为：
 $$ k_{bA}^2=\frac{4a_A^2}{4a_A^2+b_A^2}; k_{2bA}^2=\frac{4a_A^2}{4a_A^2+4b_A^2}; k_B^2=\frac{4a_Aa_B}{a_T^2+b_B^2};k_D^2=\frac{4a_Aa_B}{a_T^2+b_D^2}; k_T^2=\frac{4a_Aa_b}{a_T^2+b_T^2}$$
@@ -853,7 +845,7 @@ F_{zA}(0)\simeq -\frac{\mu_0}{2}\bigg\{&\left(\frac{N_AI_A}{2b_A}\right)^2\pi a_
 当两个螺线管都如特例10中一样是``长"的但B远比A更长，
 即$b_D\rightarrow b_B$以及$b_T\rightarrow b_B$。式3.57a可进一步化简为：
 \begin{equation*}
-F_{zA}(0)\simeq F_{zAA}(0)\simeq -\frac{\mu_0}{2}\left(\frac{N_AI_A}{2b_A}\right)^2\pi a_A^2 \tag{3.57'}
+F_{zA}(0)\simeq F_{zAA}(0)\simeq -\frac{\mu_0}{2}\left(\frac{N_AI_A}{2b_A}\right)^2\pi a_A^2 \tag{3.57b}
 \end{equation*}
 
 当$b_A/b_B\rightarrow 0$时有$F_{zAB}(0)\rightarrow 0$。这在物理上很容易理解，
@@ -867,7 +859,7 @@ F_{zA}(0)\simeq F_{zAA}(0)\simeq -\frac{\mu_0}{2}\left(\frac{N_AI_A}{2b_A}\right
 其中，$F_{zBB}(0)$来自其自身左半部分，$F_{zBA}(0)$来自螺管A。
 \begin{align}
 F_{zB}(0)=&-\frac{\mu_0}{2}\bigg[\left(\frac{N_BI_B}{2b_B}\right)^2\times\\\notag
-&\{2b_B\sqrt{4a_B^2+b_B^2}[K(k_{bB})-E(k_{bB})]-2b_B\sqrt{4a_B^2+4b_B^2}[K(K_{2bB})-E(k_{2bB})]\}\\\notag
+&\left\{2b_B\sqrt{4a_B^2+b_B^2}[K(k_{bB})-E(k_{bB})]-2b_B\sqrt{4a_B^2+4b_B^2}[K(K_{2bB})-E(k_{2bB})]\right\}\\\notag
 &+\left(\frac{N_BI_B}{2b_B}\right)\left(\frac{N_AI_A}{2b_A}\right)\bigg(\frac{2b_A}{\sqrt{a_T^2+b_A^2}}\{[a_T^2+b_A^2][K(k_A)-E(k_A)]-\Upsilon(c^2,k_A)\}\\\notag
 &+\frac{b_D}{\sqrt{a_T^2+b_D^2}}\{[a_T^2+b_D^2][K(k_D)-E(k_D)]-\Upsilon(c^2,k_D)\}\\\notag
 &-\frac{b_T}{\sqrt{a_T^2+b_T^2}}\{[a_T^2+b_T^2][K(k_T)-E(k_T)]-\Upsilon(c^2,k_T)\}\bigg)\bigg]
@@ -1894,7 +1886,7 @@ J_0=\frac{1}{a_1\sqrt{4\pi\beta\ln\alpha}}\sqrt{\frac{P_B}{\rho_{cu}\lambda_B a_
 \begin{subequations}
 	\begin{align}
 {[B_z(0,0)]}_B&=\mu_0[G(\alpha,\beta)]_B\sqrt{\frac{\lambda_B P_B}{\rho_{cu}a_1}}\\%page124
-\mbox{式中，}{[G(\alpha,\beta)]}_B&=\frac{1}{\sqrt{4\pi\beta\ln\alpha}}[F(\alpha,\beta)]_B%page124
+{[G(\alpha,\beta)]}_B&=\frac{1}{\sqrt{4\pi\beta\ln\alpha}}[F(\alpha,\beta)]_B%page124
 	\end{align}
 \end{subequations}
 
@@ -1914,8 +1906,8 @@ $[G(\alpha,\beta)]_B$在$\alpha\simeq 6.42$和$\beta\simeq 2.5$时取得最大�
 
 类似式3.113c，可以将$P_B$写成$[B_z(0,0)]_B$和其他参数的表达式：
 \begin{align*}
-P_B&=\frac{\rho_{cu}a_1[B_z(0.0)]_B^2}{\mu_0^2\lambda_B[G(\alpha,\beta)]_B^2}\\
-&=\frac{(2\times 10^{-8}\ \Omega\mathrm{m})(3\times 10^{-2}\ \mathrm{m})(20\ \mathrm{T})^2}{(4\pi\times 10^{-7}\ \mathrm{H/m})^2(0.8)(0.159)^2}\simeq 7.5\ \mathrm{MW}%page124
+P_B&=\frac{\rho_{cu}a_1[B_z(0.0)]_B^2}{\mu_0^2\lambda_B[G(\alpha,\beta)]_B^2}=\frac{(2\times 10^{-8}\ \Omega\mathrm{m})(3\times 10^{-2}\ \mathrm{m})(20\ \mathrm{T})^2}{(4\pi\times 10^{-7}\ \mathrm{H/m})^2(0.8)(0.159)^2}\\
+&\simeq 7.5\ \mathrm{MW}%page124
 \end{align*}
 
 这个功率是运行于Francis Bitter国家磁体实验室的$20\ \mathrm{T}$Bitter磁体的典型值。
@@ -2480,14 +2472,14 @@ E_{20}(\alpha,0)&=\frac{3\cdot7\cdot11\cdot13\cdot17\cdot19}{2^{20}\cdot5}\cdot\
 %方程
 \begin{align*}
 \frac{d^2h_z(0)}{d\zeta^2}\mid_{\frac{1}{2}}&=-6\qquad (\mbox{仅} E_2)\\
-&=5.25  \qquad (\mbox{到}\quad E_4)\\
-&\simeq -2.9531\qquad   (\mbox{到}\ E_6)\\
+&=5.25  \qquad (\mbox{到}\ E_4)\\
+&\simeq -2.9531\quad   (\mbox{到}\ E_6)\\
 &\simeq 1.3535\qquad (\mbox{到}\ E_8)\\
-&\simeq -0.5499\qquad   (\mbox{到}\ E_{10})\\
+&\simeq -0.5499\quad   (\mbox{到}\ E_{10})\\
 &\simeq 0.2062 \qquad (\mbox{到}\ E_{12})\\
-&\simeq -0.0730\qquad   (\mbox{到}\ E_{14})\\
+&\simeq -0.0730\quad   (\mbox{到}\ E_{14})\\
 &\simeq 0.0248 \qquad  (\mbox{到}\ E_{16})\\
-&\simeq-0.0081\qquad  (\mbox{到}\ E_{18})\\
+&\simeq-0.0081\quad  (\mbox{到}\ E_{18})\\
 &\simeq 0.0026 \qquad (\mbox{到}\ E_{20})
 \end{align*}
 
@@ -3299,26 +3291,24 @@ $\ln[(a2−x)^2+(c−y)^2]$可由下式给出：
 
 在$|x|\ll 1$时，使用$\ln(1+x)\simeq x-x^2 /2$近似：
 \begin{align*}
-\ln[(a_{2}-x)^{2}+(c-y)^{2}]\simeq&\ln(a_{2}^{2}+c^{2})\\
-&+\frac{(c^{2}-a_{2}^{2})(x^{2}-y^{2})-2(a_{2}^{2}+c^{2})(a_{2}x+cy)-4a_{2}cxy}{(a_{2}^{2}+c^{2})^{2}}
+\ln[(a_{2}-x)^{2}+(c-y)^{2}]\simeq\ln(a_{2}^{2}+c^{2})+\frac{(c^{2}-a_{2}^{2})(x^{2}-y^{2})-2(a_{2}^{2}+c^{2})(a_{2}x+cy)-4a_{2}cxy}{(a_{2}^{2}+c^{2})^{2}}
 \end{align*}
 
 \begin{align*}
-\ln[(a_{1}-x)^{2}+(c-y)^{2}]\simeq&\ln(a_{1}^{2}+c^{2})\\
-&+\frac{(c^{2}-a_{1}^{2})(x^{2}-y^{2})-2(a_{1}^{2}+c^{2})(a_{1}x+cy)-4a_{1}cxy}{(a_{1}^{2}+c^{2})^{2}}
+\ln[(a_{1}-x)^{2}+(c-y)^{2}]\simeq\ln(a_{1}^{2}+c^{2})+\frac{(c^{2}-a_{1}^{2})(x^{2}-y^{2})-2(a_{1}^{2}+c^{2})(a_{1}x+cy)-4a_{1}cxy}{(a_{1}^{2}+c^{2})^{2}}
 \end{align*}
 
 于是，3.154以及类似的，$H_{y1−}, H_{y2+}, H_{y2−}$可以写成：
 \begin{subequations}
 	\begin{align}
-H_{y1+}(x,y)\simeq&-\frac{K}{4\pi}[\ln(\frac{a_{2}^{2}+c^{2}}{a_{1}^{2}+c^{2}})+\frac{(c^{2}-a_{2}^{2})(x^{2}-y^{2})-2(a_{2}^{2}+c^{2})(a_{2}x+cy)-4a_{2}cxy}{(a_{2}^{2}+c^{2})^{2}}\notag\\
-&-\frac{(c^{2}-a_{1}^{2})(x^{2}-y^{2})-2(a_{1}^{2}+c^{2})(a_{1}x+cy)-4a_{1}cxy}{(a_{1}^{2}+c^{2})^{2}}]\\
-H_{y2+}(x,y)\simeq&-\frac{K}{4\pi}[\ln(\frac{a_{2}^{2}+c^{2}}{a_{1}^{2}+c^{2}})+\frac{(c^{2}-a_{2}^{2})(x^{2}-y^{2})+2(a_{2}^{2}+c^{2})(a_{2}x+cy)-4a_{2}cxy}{(a_{2}^{2}+c^{2})^{2}}\notag\\
-&-\frac{(c^{2}-a_{1}^{2})(x^{2}-y^{2})+2(a_{1}^{2}+c^{2})(a_{1}x-cy)+4a_{1}cxy}{(a_{1}^{2}+c^{2})^{2}}]\\
-H_{y2+}(x,y)\simeq&-\frac{K}{4\pi}[\ln(\frac{a_{2}^{2}+c^{2}}{a_{1}^{2}+c^{2}})+\frac{(c^{2}-a_{2}^{2})(x^{2}-y^{2})-2(a_{2}^{2}+c^{2})(a_{2}x-cy)+4a_{2}cxy}{(a_{2}^{2}+c^{2})^{2}}\notag\\
-&-\frac{(c^{2}-a_{1}^{2})(x^{2}-y^{2})-2(a_{1}^{2}+c^{2})(a_{1}x-cy)+4a_{1}cxy}{(a_{1}^{2}+c6{2})^{2}}]\\
-H_{y2-}(x,y)\simeq&-\frac{K}{4\pi}[\ln(\frac{a_{2}^{2}+c^{2}}{a_{1}^{2}+c^{2}})+\frac{(c^{2}-a_{2}^{2})(x^{2}-y^{2})+2(a_{2}^{2}+c^{2})(a_{2}x+cy)-4a_{2}cxy}{(a_{2}^{2}+c^{2})^{2}}\notag\\
-&-\frac{(c^{2}-a_{1}^{2})(x^{2}-y^{2})+2(a_{1}^{2}+c^{2})(a_{1}x-cy)-4a_{1}cxy}{(a_{1}^{2}+c^{2})^{2}}]%3.155d)
+H_{y1+}(x,y)\simeq-\frac{K}{4\pi}\bigg[&\ln\left(\frac{a_{2}^{2}+c^{2}}{a_{1}^{2}+c^{2}}\right)+\frac{(c^{2}-a_{2}^{2})(x^{2}-y^{2})-2(a_{2}^{2}+c^{2})(a_{2}x+cy)-4a_{2}cxy}{(a_{2}^{2}+c^{2})^{2}}\notag\\
+&-\frac{(c^{2}-a_{1}^{2})(x^{2}-y^{2})-2(a_{1}^{2}+c^{2})(a_{1}x+cy)-4a_{1}cxy}{(a_{1}^{2}+c^{2})^{2}}\bigg]\\
+H_{y2+}(x,y)\simeq-\frac{K}{4\pi}\bigg[&\ln\left(\frac{a_{2}^{2}+c^{2}}{a_{1}^{2}+c^{2}}\right)+\frac{(c^{2}-a_{2}^{2})(x^{2}-y^{2})+2(a_{2}^{2}+c^{2})(a_{2}x+cy)-4a_{2}cxy}{(a_{2}^{2}+c^{2})^{2}}\notag\\
+&-\frac{(c^{2}-a_{1}^{2})(x^{2}-y^{2})+2(a_{1}^{2}+c^{2})(a_{1}x-cy)+4a_{1}cxy}{(a_{1}^{2}+c^{2})^{2}}\bigg]\\
+H_{y2+}(x,y)\simeq-\frac{K}{4\pi}\bigg[&\ln\left(\frac{a_{2}^{2}+c^{2}}{a_{1}^{2}+c^{2}}\right)+\frac{(c^{2}-a_{2}^{2})(x^{2}-y^{2})-2(a_{2}^{2}+c^{2})(a_{2}x-cy)+4a_{2}cxy}{(a_{2}^{2}+c^{2})^{2}}\notag\\
+&-\frac{(c^{2}-a_{1}^{2})(x^{2}-y^{2})-2(a_{1}^{2}+c^{2})(a_{1}x-cy)+4a_{1}cxy}{(a_{1}^{2}+c6{2})^{2}}\bigg]\\
+H_{y2-}(x,y)\simeq-\frac{K}{4\pi}\bigg[&\ln\left(\frac{a_{2}^{2}+c^{2}}{a_{1}^{2}+c^{2}}\right)+\frac{(c^{2}-a_{2}^{2})(x^{2}-y^{2})+2(a_{2}^{2}+c^{2})(a_{2}x+cy)-4a_{2}cxy}{(a_{2}^{2}+c^{2})^{2}}\notag\\
+&-\frac{(c^{2}-a_{1}^{2})(x^{2}-y^{2})+2(a_{1}^{2}+c^{2})(a_{1}x-cy)-4a_{1}cxy}{(a_{1}^{2}+c^{2})^{2}}\bigg]%3.155d)
 \end{align}
 \end{subequations}
 
@@ -4362,6 +4352,7 @@ $B_z(r=a_1);B_z(r=a_2)$@86.7A [T] & 15.86; 13.97 \\ \hline
 \begin{table}[htbp]\small
 \centering
 \caption{HTS内插中平面饼式线圈的应力$\sigma$和应变$\epsilon$[3.32](运行于86.7 K，背景场14.1 T)}
+\begin{threeparttable}
 \begin{tabular}{|l|l|l|l|l|l|l|l|}
 \hline
 $r${[}mm{]} & $\sigma_r$ & 平均$\bar{\sigma_\theta}$[MPa] & 银$\sigma_\theta$[MPa] & 钢$\sigma_\theta$[MPa] & 银$\sigma_z$[MPa] &银$\sigma_{T}^{*}$[MPa] & 带$\epsilon_\theta$[MPa] [\%] \\ \hline
@@ -4369,6 +4360,11 @@ $r${[}mm{]} & $\sigma_r$ & 平均$\bar{\sigma_\theta}$[MPa] & 银$\sigma_\theta$
 51.19 & 2.6 & 44.9 & 39.2 & 110.3 & -2.1 & 41.3 & 0.028 \\ \hline
 63.29 & 0 & 33.6 & 29.3 & 82.4 & -2.1& 31.4 & 0.026 \\ \hline
 \end{tabular}
+\begin{tablenotes}
+        \footnotesize
+        \item[*] Tresca应力：$\sigma_T=\sigma_\theta-\sigma_z$。 %此处加入注释*信息
+\end{tablenotes}
+\end{threeparttable}
 \end{table}
 
 表3.10给出了一个中平面饼式线圈上最内、中点、最外三个点处的应力和周向应变值[3.32]。
@@ -5346,67 +5342,67 @@ Schirm, M. Durante, J.M. Rifflet, and F. Simon, ``Industrialization of LHC main
 quadrupole cold masses up to series production,” IEEE Trans. Appl. Superconduc.
 14, 169 (2004).
 
-\noindent [3.47] S.H. Minnich, T.A. Keim, M.V.K. Chari, B.B. Gamble, M.J. Jefferies, D.W. Jones, E.T. Laskaris, P.A. Rios, ``Design studies of superconducting generators,” IEEE Trans. Magn. MAG-15, 703 (1979).
+\noindent [3.47] S.H. Minnich, T.A. Keim, M.V.K. Chari, B.B. Gamble, M.J. Jefferies, D.W. Jones, E.T. Laskaris, P.A. Rios, ``Design studies of superconducting generators,”\textit{ IEEE Trans. Magn.} MAG-15, 703 (1979).
 
 \noindent [3.48] A.S. Ying, P.W. Eckels, D.C. Litz, W.G. Moore, ``Mechanical and thermal design
-of the EPRI/Westinghouse 300MVA superconducting generator,” IEEE Trans.
-Magn. MAG-17, 894 (1981).
+of the EPRI/Westinghouse 300MVA superconducting generator,” \textit{IEEE Trans.
+Magn.} MAG-17, 894 (1981).
 
-\noindent [3.49] W. Nick, G. Nerowski, H.-W. Neum¨uller, M. Frank, P. van Hasselt, J. Frauenhofer, and F. Steinmeyer, ``380 kW synchronous machine with HTS rotor windings---development at Siemens and first test results,” Physica C: Superconductivity 372–
+\noindent [3.49] W. Nick, G. Nerowski, H.-W. Neum¨uller, M. Frank, P. van Hasselt, J. Frauenhofer, and F. Steinmeyer, ``380 kW synchronous machine with HTS rotor windings---development at Siemens and first test results,” \textit{Physica C: Superconductivity }372–
 376, 1470 (2002).
 
-\noindent [3.50] Greg Snitchler, Bruce Gamble, and Swarn S. Kalsi, ``The performance of a 5 MW high temperature superconductor ship propulsion motor,” IEEE Trans. Appl. Superconduc. 15, 2206 (2005).
+\noindent [3.50] Greg Snitchler, Bruce Gamble, and Swarn S. Kalsi, ``The performance of a 5 MW high temperature superconductor ship propulsion motor,” \textit{IEEE Trans. Appl. Superconduc. }15, 2206 (2005).
 
-\noindent [3.51] H. Ichikawa and H. Ogiwara, ``Design considerations of superconducting magnets as a Maglev pad,” IEEE Trans. Magn. MAG-10, 1099 (1974).
+\noindent [3.51] H. Ichikawa and H. Ogiwara, ``Design considerations of superconducting magnets as a Maglev pad,” \textit{IEEE Trans. Magn. }MAG-10, 1099 (1974).
 
-\noindent [3.52] Bruce Gamble, David Cope, and Eddie Leung, ``Design of a superconducting magnet system for Maglev applications,” IEEE Trans. Appl. Superconduc. 3, 434
+\noindent [3.52] Bruce Gamble, David Cope, and Eddie Leung, ``Design of a superconducting magnet system for Maglev applications,” \textit{IEEE Trans. Appl. Superconduc.} 3, 434
 (1993).
 
 \noindent [3.53] Kenji Tasaki, Kotaro Marukawa, Satoshi Hanai, Taizo Tosaka, Toru Kuriyama,
 Tomohisa Yamashita, Yasuto Yanase, Mutuhiko Yamaji, Hiroyuki Nako, Motohiro
 Igarashi, Shigehisa Kusada, Kaoru Nemoto, Satoshi Hirano, Katsuyuki Kuwano,
-Takeshi Okutomi, and Motoaki Terai, ``HTS magnet for Maglev applications (1)---coil characteristics,” IEEE Trans. Appl. Superconduc. 16, 2206 (2006).
+Takeshi Okutomi, and Motoaki Terai, ``HTS magnet for Maglev applications (1)---coil characteristics,” \textit{IEEE Trans. Appl. Superconduc. }16, 2206 (2006).
 
 \noindent [3.54] A. den Ouden, W.A.J. Wessel, G.A. Kirby, T. Taylor, N. Siegel, and H.H.J. ten
 Kate, ``Progress in the development of an 88-mm bore 10 T Nb3Sn dipole magnet,”
-IEEE Trans. Appl. Superconduc. 11, 2268 (2001).
+\textit{IEEE Trans. Appl. Superconduc.} 11, 2268 (2001).
 
 \noindent [3.55] G. Ambrosio, N. Andreev, S. Caspi, K. Chow, V.V. Kashikhin, I. Terechkine,
 M. Wake, S. Yadav, R. Yamada, A.V. Zlobin, ``Magnet design of the Fermilab 11
-T Nb3Sn short dipole model,” IEEE Trans. Appl. Superconduc. 10, 322 (2000).
+T Nb3Sn short dipole model,” \textit{IEEE Trans. Appl. Superconduc.} 10, 322 (2000).
 
 \noindent [3.56] A.R. Hafalia, S.E. Bartlett, S. Caspi, L. Chiesa, D.R. Dietderich, P. Ferracin,
 M. Goli, S.A. Gourlay, C.R. Hannaford, H. Higley, A.F. Lietzke, N. Liggins, S.
 Mattafirri, A.D. McInturff, M. Nyman, G.L. Sabbi, R.M. Scanlan, and J. Swanson,
-``HD 1: design and fabrication of a 16 tesla Nb3Sn dipole magnet” IEEE Trans.
-Appl. Superconduc. 14, 283 (2004).
+``HD 1: design and fabrication of a 16 tesla Nb3Sn dipole magnet” \textit{IEEE Trans.
+Appl. Superconduc.} 14, 283 (2004).
 
 \noindent [3.57] J.E.C. Williams, L.J. Neuringer, E.S. Bobrov, R. Weggel, and W.G. Harrison,
 ``Magnet system of the 500 MHz spectrometer at the FBNML: 1. Design and
-development of the magnet,” Rev. Sci. Instrum. 52, 649 (1981).
+development of the magnet,” \textit{Rev. Sci. Instrum.} 52, 649 (1981).
 
-\noindent [3.58] Haigun Lee, Emanuel S. Bobrov, Juan Bascu˜n´an, Seung-yong Hahn and Yukikazu Iwasa, ``An HTS insert for Phase 2 of a 3-phase 1-GHz LTS/HTS NMR magnet,” IEEE Trans. Appl. Superconduc. 15. 1299 (2005).
+\noindent [3.58] Haigun Lee, Emanuel S. Bobrov, Juan Bascunan, Seung-yong Hahn and Yukikazu Iwasa, ``An HTS insert for Phase 2 of a 3-phase 1-GHz LTS/HTS NMR magnet,” \textit{IEEE Trans. Appl. Superconduc.} 15. 1299 (2005).
 
 \noindent [3.59] Juan Bascunan, Wooseok Kim, Seungyong Hahn, Emanuel S. Bobrov, Haigun Lee, and Yukikazu Iwasa, ``An LTS/HTS NMR magnet operated in the range 600–
-700 MHz,” IEEE Tran. Appl. Superconduc. 17, 1446 (2007).
+700 MHz,” \textit{IEEE Tran. Appl. Superconduc. }17, 1446 (2007).
 
 \noindent [3.60] D.S. Easton, D.M. Kroeger, W. Specking, and C.C. Koch, ``A prediction of the
-stress state in Nb3Sn superconducting composites,” J. Appl. Phys. 51, 2748 (1980).
+stress state in Nb3Sn superconducting composites,” \textit{J. Appl. Phys.} 51, 2748 (1980).
 
-\noindent [3.61] J.W. Ekin, ``Strain scaling law for flux pinning in practical superconductors. Part 1: Basic relationship and application to Nb3Sn conductors,” Cryogenics 20, 611
+\noindent [3.61] J.W. Ekin, ``Strain scaling law for flux pinning in practical superconductors. Part 1: Basic relationship and application to Nb3Sn conductors,” \textit{Cryogenics }20, 611
 (1980).
 
-\noindent [3.62] J.W. Ekin, ``Four-dimensional J-B-T- critical surface for superconductors,” J. Appl. Phys. 54, 303 (1983).
+\noindent [3.62] J.W. Ekin, ``Four-dimensional J-B-T- critical surface for superconductors,”\textit{ J. Appl. Phys. }54, 303 (1983).
 
 \noindent [3.63] S.L. Bray, J.W. Ekin, and C.C. Clickner, ``Transverse compressive stress effects
-on the critical current of Bi-2223/Ag tapes reinforced with pure Ag and oxidedispersion-strengthened Ag, J. Appl. Phys. 88, 1178 (2000).
+on the critical current of Bi-2223/Ag tapes reinforced with pure Ag and oxidedispersion-strengthened Ag, \textit{J. Appl. Phys.} 88, 1178 (2000).
 
 \noindent [3.64] J.W. Ekin, S.L. Bray, N. Cheggour, C.C. Clickner, S.R. Foltyn, P.N. Arendt,
 A.A. Polyanskii, D.C. Larbalestier and C.N. McCowan, ``Transverse stress and
-fatigue effects in Y-Ba-Cu-O coated IBAD tapes,” IEEE Trans. Appl. Superconduc.
+fatigue effects in Y-Ba-Cu-O coated IBAD tapes,” \textit{IEEE Trans. Appl. Superconduc.}
 11, 3389 (2001).
 
-\noindent [3.65] F. Bitter, ``The design of powerful electromagnets Part IV. The new magnet laboratory at M.I.T.,” Rev. Sci. Inst. 10, 373 (1939).
+\noindent [3.65] F. Bitter, ``The design of powerful electromagnets Part IV. The new magnet laboratory at M.I.T.,” \textit{Rev. Sci. Inst.} 10, 373 (1939).
 
-\noindent [3.66] George R. Harrison and Francis Bitter, ``Zeeman effects in complex spectra at fields up to 100,000 gauss,” Phys. Rev. 57, 15 (1940).
+\noindent [3.66] George R. Harrison and Francis Bitter, ``Zeeman effects in complex spectra at fields up to 100,000 gauss,” \textit{Phys. Rev.} 57, 15 (1940).
 
