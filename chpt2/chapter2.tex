@@ -222,7 +222,7 @@ $p$是功率耗散密度，$w$是以电磁能存储的能量密度。
   \nabla\cdot\vec{E}=0
 \end{equation}
 
-进而，可以得到：
+进而，可得：
 \begin{equation}
 \nabla^2\phi=0
 \end{equation}
@@ -231,7 +231,7 @@ $p$是功率耗散密度，$w$是以电磁能存储的能量密度。
 
 类似的，在直流条件下，若无自由电流存在，因为$\nabla\times \vec{H}=0$，则磁场$\vec{H}$也可以由满足$\vec{H}=-\nabla \phi$的标量势方程导出。
 在电磁领域之外，Laplace方程在工程中还有其他用于求解时间无关变量的应用，比如：
-无源、各向同性传导介质中的温度($T$)；体积膨胀；无力、无动量存在，各向同性弹性介质中x-，y-和z-向的线性应力和。
+无源、各向同性传导介质中的温度($T$)；体积膨胀；无力、无动量存在，各向同性弹性介质中$x-$，$y-$和$z-$向的线性应力和。
 
 下面将给出二维圆柱坐标和三维球坐标下的Laplace方程的解。
 \subsection{二维柱坐标}
@@ -319,11 +319,12 @@ $p$是功率耗散密度，$w$是以电磁能存储的能量密度。
 	\begin{align}
 \nabla U=&\frac{\partial U}{\partial r}\vec{i_r} +\frac{1}{r}\frac{\partial U}{\partial \theta}\vec{i_{\theta}}+\frac{\partial U}{\partial z}\vec{i_z} \\
 \nabla\cdot \vec{A} =& \frac{1}{r}\frac{\partial{(r A_r)}}{\partial r} +\frac{1}{r}\frac{\partial{A_\theta}}{\partial \theta}+\frac{\partial{A_z}}{\partial z} \\
-\nabla\times \vec{A}=& \left(\frac{1}{r}\frac{\partial{A_z}}{\partial \theta} -\frac{\partial{A_\theta}}{\partial z}\right)\vec{i_r} + \left(\frac{\partial{A_r}}{\partial z} -\frac{\partial{A_z}}{\partial r}\right) \vec{i_\theta}+ \left(\frac{1}{r}\frac{\partial{(r A_\theta)}}{\partial r} -\frac{1}{r}\frac{\partial{A_r}}{\partial \theta}\right)\vec{i_z}\\
-\nabla^2 U=&\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial U}{\partial r}\right)+\frac{1}{r^2}\frac{\partial^2 U}{\partial \theta^2}+\frac{\partial^2 U}{\partial z^2}
+\nabla\times \vec{A}=& \left(\frac{1}{r}\frac{\partial{A_z}}{\partial \theta} -\frac{\partial{A_\theta}}{\partial z}\right)\vec{i_r} + \left(\frac{\partial{A_r}}{\partial z} -\frac{\partial{A_z}}{\partial r}\right) \vec{i_\theta}+ \left(\frac{1}{r}\frac{\partial{(r A_\theta)}}{\partial r} -\frac{1}{r}\frac{\partial{A_r}}{\partial \theta}\right)\vec{i_z}
   	\end{align}
 \end{subequations}
-
+\begin{align*}
+\nabla^2 U=\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial U}{\partial r}\right)+\frac{1}{r^2}\frac{\partial^2 U}{\partial \theta^2}+\frac{\partial^2 U}{\partial z^2}\tag{2.29}
+\end{align*}
 \subsubsection{球坐标}
 三个正交坐标是：$r, \theta, \varphi$。
 \begin{subequations}\label{eqn:field sphl}
@@ -332,12 +333,13 @@ $p$是功率耗散密度，$w$是以电磁能存储的能量密度。
 \nabla\cdot \vec{A} =& \frac{1}{r^2}\frac{\partial{(r^2 A_r)}}{\partial r} +\frac{1}{r\sin\theta}\frac{\partial{(A_\theta \sin\theta)}}{\partial\theta}+\frac{1}{r\sin\theta}\frac{\partial{A_\varphi}}{\partial \varphi} \\
 \nabla\times \vec{A}=& \left(\frac{1}{r\sin\theta}\frac{\partial{(A_\varphi \sin\theta)}}{\partial \theta} -\frac{1}{r\sin\theta}\frac{\partial{A_\theta}}{\partial \varphi}\right)\vec{i_r} \notag \\
 & + \left(\frac{1}{r\sin\theta}\frac{\partial{A_r}}{\partial \varphi} -\frac{1}{r}\frac{\partial{(r A_\varphi)}}{\partial r}\right) \vec{i_\theta}
-+ \left(\frac{1}{r}\frac{\partial{(r A_\theta)}}{\partial r} -\frac{1}{r}\frac{\partial{A_r}}{\partial \theta}\right)\vec{i_\varphi}  \\
-\nabla^2 U=&\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial U}{\partial r}\right)+
-\frac{1}{r^2\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial U}{\partial \theta}\right)+\frac{1}{r^2\sin^2\theta}\frac{\partial^2 U}{\partial \varphi^2}
++ \left(\frac{1}{r}\frac{\partial{(r A_\theta)}}{\partial r} -\frac{1}{r}\frac{\partial{A_r}}{\partial \theta}\right)\vec{i_\varphi} 
   	\end{align}
 \end{subequations}
-
+\begin{align*}
+\nabla^2 U=\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial U}{\partial r}\right)+
+\frac{1}{r^2\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial U}{\partial \theta}\right)+\frac{1}{r^2\sin^2\theta}\frac{\partial^2 U}{\partial \varphi^2}\tag{2.32}
+\end{align*}
 
 \subsection{Legendre函数}
 方程2.33c中的$P_n^m(\cos\theta)$在$m=0$时被称为$n$阶Legendre函数，即$P_n^0(\cos\theta)\equiv P_n(\cos\theta)\equiv P_n(u)$(此处
@@ -609,13 +611,13 @@ $$  \phi_1=H_0 r \cos \theta +\frac{A}{r} \cos \theta \eqno(S2.1)$$
 
 使用圆柱坐标系下的$\nabla$算符(式2.35a)，可以得到$\vec{H_1}$：
 \begin{align}
-\vec{H}_1=&-\frac{\partial}{\partial r}(H_0 r \cos\theta +\frac{A}{r}\cos\theta)\vec{i}_r-\frac{1}{r}\frac{\partial}{\partial \theta}(H_0 r \cos\theta +\frac{A}{r}\cos\theta)\vec{i}_\theta \tag{S2.2}\\
-=&-(H_0 \cos\theta +\frac{A}{r^2}\cos\theta)\vec{i}_r-(-H_0 \sin\theta -\frac{A}{r^2}\sin\theta)\vec{i}_\theta \tag{S2.3}
+\vec{H}_1=&-\frac{\partial}{\partial r}\left(H_0 r \cos\theta +\frac{A}{r}\cos\theta\right)\vec{i}_r-\frac{1}{r}\frac{\partial}{\partial \theta}\left(H_0 r \cos\theta +\frac{A}{r}\cos\theta\right)\vec{i}_\theta \tag{S2.2}\\
+=&-\left(H_0 \cos\theta +\frac{A}{r^2}\cos\theta\right)\vec{i}_r-\left(-H_0 \sin\theta -\frac{A}{r^2}\sin\theta\right)\vec{i}_\theta \tag{S2.3}
 \end{align}
 
 整理式S2.3，可得
 \begin{equation*}
-\vec{H}_1=H_0(-\cos \theta \vec{i}_r+\sin \theta \vec{i}_\theta) +\frac{A}{r^2}(\cos\theta \vec{i}_r+\sin\theta \vec{i}_\theta )\tag{S2.4}
+\vec{H}_1=H_0\left(-\cos \theta \vec{i}_r+\sin \theta \vec{i}_\theta\right) +\frac{A}{r^2}\left(\cos\theta \vec{i}_r+\sin\theta \vec{i}_\theta \right)\tag{S2.4}
 \end{equation*}
 
 $B$法向分量的连续性要求式S2.3中$\vec{i}_r$的系数在$r=R$处为零：
@@ -695,7 +697,7 @@ J_f=\frac{2H_0}{\lambda}=\frac{2\mu_0 H_0}{\mu_0 \lambda}\simeq 4\times 10^{12} 
 \begin{subequations}
 	\begin{align}
 \vec{H}_2=&H_0 (-\cos\theta \vec{i_r}+\sin\theta \vec{i_\theta})  \qquad(r\le R) \\
-\vec{H}_=&\frac{A}{r^3}(2\cos\theta \vec{i_r}+\sin\theta \vec{i_\theta})\qquad  (r\ge R)
+\vec{H}_1 =&\frac{A}{r^3}(2\cos\theta \vec{i_r}+\sin\theta \vec{i_\theta})\qquad  (r\ge R)
 	\end{align}
 \end{subequations}
 
@@ -1617,7 +1619,7 @@ c) 式2.70可以写为：
 
 由于$x\ll 1$时有$\sqrt{1-x}\simeq 1-(1/2)x+(1/8)x^2-...$，式S9.5截取到二阶有：
 \begin{align}
-\Phi(t)&\simeq\mu_0 N\left[R-R\left(1-\frac{1}{2}\frac{c^2}{R^2}+\cdots\right)\right]\nonumber\tag{S9.6}\\
+\Phi(t)&\simeq\mu_0 N\left[R-R\left(1-\frac{1}{2}\frac{c^2}{R^2}+\frac{1}{8}\frac{c^4}{R^4}-\cdots\right)\right]\nonumber\tag{S9.6}\\
 \Phi (t)&\simeq \frac{\mu_0 Nc^2}{2R} I(t)\nonumber\tag{2.69}
 \end{align}
 
