@@ -5075,8 +5075,8 @@ z^2+(R-r)^2=a^2 \tag{S18.17}
 \end{align*}
 
 \begin{align*}% S18.19
-\Phi&=\frac{\mu_0N^2I}{\pi}\left| R(\sin)^{-1}\left(\frac{2r-2R}{2a}\right)+\frac{(a^2-R^2)}{\sqrt{R^2-a^2}}(\sin)^{-1}\left(\frac{2Rr+2a^2-2R^2}{2ra}\right)\right|_{R-a}^{R+a} \\
-&=\frac{\mu_0N^2I}{\pi}\left(R\pi+\pi\frac{a^2-R^2}{\sqrt{R^2-a^2}}\right)=\mu_0N^2RI\left[1-\sqrt{1-(\frac{a}{R})^2}\right]\tag{S18.19}
+\Phi&=\frac{\mu_0N^2I}{\pi}\left| R \sin^{-1}\left(\frac{2r-2R}{2a}\right)+\frac{(a^2-R^2)}{\sqrt{R^2-a^2}}\sin^{-1}\left(\frac{2Rr+2a^2-2R^2}{2ra}\right)\right|_{R-a}^{R+a} \\
+&=\frac{\mu_0N^2I}{\pi}\left(R\pi+\pi\frac{a^2-R^2}{\sqrt{R^2-a^2}}\right)=\mu_0N^2RI\left[1-\sqrt{1-\left(\frac{a}{R}\right)^2}\right]\tag{S18.19}
 \end{align*}
 
 联立3.78和S18.19，我们得到：
@@ -5089,7 +5089,7 @@ f) 对$a\ll R$，我们有：
 \sqrt{1-\left(\frac{a}{R}\right)^2}=1-\frac{1}{2}\left(\frac{a}{R}\right)^2-\frac{1}{8}\left(\frac{a}{R}\right)^4-\frac{1}{16}\left(\frac{a}{R}\right)^6\cdots \tag{S18.20}
 \end{equation*}
 
-从3.89a和S18.20，得：
+由3.89a和S18.20，得：
 \begin{equation*}
 L=\mu_0RN^2\left[\frac{1}{2}\left(\frac{a}{R}\right)^2+\frac{1}{8}\left(\frac{a}{R}\right)^4+\frac{1}{16}\left(\frac{a}{R}\right)^6\cdots\right]
 \end{equation*}
@@ -5125,14 +5125,13 @@ L&=\frac{2\mu_0abN^2}{\pi R}\left[1+\frac{1}{3}\left(\frac{a}{R}\right)^2+\frac{
 
 
 \subsection{讨论3.16：Rogowski线圈的互感}
-问题2.11中研究过的Rogowski线圈的总磁链表达式为：
+问题2.11中研究过的Rogowski线圈的总磁链的表达式为：
  \begin{align*}% 2.69
 \Phi(t)\simeq\frac{\mu_0Nc^2}{2R}I(t) \tag{2.69}
 \end{align*}
-
 式中，$R$是Rogowski线圈半径，$c$是每一匝的半径。
-方程2.69在$(c/R)^4\ll 1$时有效的，大多数Rogowski线圈通常都能满足这个条件。
-电流源和Rogowski线圈之间的互感$M_{ri}$于是可由下式给出：
+式2.69的成立条件是$(c/R)^4\ll 1$，多数Rogowski线圈通常都能满足。
+于是，电流元和Rogowski线圈之间的互感$M_{ri}$可由下式给出：
 \begin{align}% 3.182
 M_{ri}\equiv\frac{\Phi}{I}\simeq\frac{\mu_0Nc^2}{2R}
 \end{align}
@@ -5140,10 +5139,10 @@ M_{ri}\equiv\frac{\Phi}{I}\simeq\frac{\mu_0Nc^2}{2R}
 
 
 \subsection{讨论3.17：力 vs. 互感}
-根据讨论3.12中的方程3.173，$\vec{f_m}(r,\theta)=\nabla e_m$，我们可以由两个``环"线圈
+根据讨论3.12给出$\vec{f_m}(r,\theta)=\nabla e_m$(式3.173)，我们可以由两个``环"线圈
 的互感$M_{AB}$导出其轴向力的表达式，反之亦然。
-这里，我们研究一个简单情况：两个``环"线圈距离``很远"，$F_{zA}(\rho)$由方程3.39c给出，
-$M_{AB}$由方程3.97给出。即：
+这里，我们研究一个简单情况：两个``环"线圈距离``很远"，$F_{zA}(\rho)$由3.39c给出，
+$M_{AB}$由3.97给出。即：
  \begin{align*}% 3.39c
 F_{zA}(\rho)=\frac{3\mu_0}{2\pi}\left(\frac{\pi a_{A}^{2}N_AI_A}{\rho^2}\right)\left(\frac{\pi a_{B}^{2}N_BI_B}{\rho^2}\right) \tag{3.39c}
 \end{align*}
@@ -5153,12 +5152,12 @@ F_{zA}(\rho)=\frac{3\mu_0}{2\pi}\left(\frac{\pi a_{A}^{2}N_AI_A}{\rho^2}\right)\
 M_{AB}\simeq\frac{\mu_0}{2\pi}\left[\frac{(\pi a_{A}^{2}N_A)(\pi a_{B}^{2}N_B)}{\rho^3}\right] \tag{3.97}
 \end{align*}
 
-对这个系统，我们有：
+对该系统，有：
 \begin{align}% 3.183
 e_m=I_AI_BM_{AB}
 \end{align}
 
-在$\rho$方向应用方程3.173，并与方程3.97和3.182联立，得：
+在$\rho$方向应用3.173，并与3.97和3.182联立，得：
 \begin{subequations}% 3.184a 3.184b 3.184c
 	\begin{align}
 F_{zB}(\rho)=&I_A I_B\frac{dM_{AB}}{d\rho}\\
@@ -5167,14 +5166,14 @@ F_{zB}(\rho)=&I_A I_B\frac{dM_{AB}}{d\rho}\\
 	\end{align}
 \end{subequations}
 
-注意方程3.184a中的$d/d\rho$运算。它是线圈B运动了距离$\partial\rho$，于是
-$F_{zB}(\rho)$指向$\rho$相反的方向。也即：
+式3.184a中的$d/d\rho$的意义是线圈B(图3.5中右侧的线圈)移动距离$\partial\rho$。
+于是，$F_{zB}(\rho)$指向$\rho$相反的方向。也即：
 \begin{align*}% 3.39c
 F_{zA}(\rho)=-F_{zB}(\rho)
 =\frac{3\mu_0}{2\pi}\left(\frac{\pi a_{A}^{2}N_A I_A}{\rho^2}\right)\left(\frac{\pi a_{A}^{2}N_B I_B}{\rho^2}\right)\tag{3.39c}
 \end{align*}
 
-很明显，上面的过程反过来就可以用于在已知$F_{zA}(\rho)$时求$M_{AB}$。再次提醒注意：一定要注意符号。
+很明显，上述过程反过来就可以用于在已知$F_{zA}(\rho)$时求$M_{AB}$。再次提醒：一定要注意符号。
 \begin{align*}% 3.185
 M_{AB}=&-\frac{1}{I_AI_B}\int_{0}^{\rho}F_{zA}(y)dy\tag{3.185}\\
 =&\frac{\mu_0}{2\pi}\left[\frac{(\pi a_{A}^{2}N_A)(\pi a_{B}^{2}N_B)}{\rho^3}\right]\tag{3.97}
