@@ -372,12 +372,12 @@ M_{cu}&=\frac{\varrho_{cu}\tau_{cn}}{\int_{T_{op}}^{T_i}\kappa(T)dT}
 \end{align}
 \end{subequations}
 
-在一些应用中，$\tau_{cu}$是主要的设计要求。可以看出，方程4.5b限制了在$\tau_{cu}$内可以冷却下来的铜的质量$\~{M}_{cu}$(这里代表磁体质量)。
-对于给定的$T_i$和$T_o$组合，$\~{M}_{cu}$正比于$\tau_{cu}$。
-表4.5给出了以图4.7中给出的$Q_r(T)$为基准的$T_i$，$T_o$和$\tau_{cu}$组合下的$\~{M}_{cu}$。
+在一些应用中，$\tau_{cu}$是主要的设计要求。可以看出，方程4.5b限制了在$\tau_{cu}$内可以冷却下来的铜的质量$\tilde{M}_{cu}$(这里代表磁体质量)。
+对于给定的$T_i$和$T_o$组合，$\tilde{M}_{cu}$正比于$\tau_{cu}$。
+表4.5给出了以图4.7中给出的$Q_r(T)$为基准的$T_i$，$T_o$和$\tau_{cu}$组合下的$\tilde{M}_{cu}$。
 这样，如果磁体经4个小时从300 K冷却至30 K，受限的冷却质量是11.6 kg。
 
-表4.5给出的结果清晰的指出了对于给定的$\tau_{cu}$，如果我们首先将磁体冷却至77 K，将可以极大的增加$\~{M}_{cu}$。
+表4.5给出的结果清晰的指出了对于给定的$\tau_{cu}$，如果我们首先将磁体冷却至77 K，将可以极大的增加$\tilde{M}_{cu}$。
 表4.3可以用于估计实现这个过程的所需LN2量。
 
 \begin{table}[htbp]\small
@@ -548,7 +548,7 @@ Q_{out}-Q_{in}=Q_{1.8}
 	超流通过压力变换通道热传导；腔体表面的热辐射和残余气体对流。
 \end{itemize}
 
-控制体的热输出，$Q_{out}$，可由$Q_{out}=\.{m}_h h_3$给出，式中，$h_3$是氦(气)在点3的焓。
+控制体的热输出，$Q_{out}$，可由$Q_{out}=\dot{m}_h h_3$给出，式中，$h_3$是氦(气)在点3的焓。
 类似的，$Q_{in}=\dot{m}_h h_2$，式中$h_2$是氦(液)在点2的焓。解方程4.8，有：
 \begin{align}% 4.9
 Q_{1.8}=\dot{m}_h(h_3-h_2)
@@ -682,7 +682,7 @@ h_g(6\ \mathrm{K},10\ \mathrm{atm})=x_\ell h_\ell(4.2\ \mathrm{K},1\ \mathrm{atm
 	\caption{基于制冷机的小型氦液化器示意图。}
 \end{figure}
 
-图4.13给出了小型液化器的细节。它由热-冷流(质量流量$\dot{m}_{he}$，压力10 atm)和冷-热氦气流($\.{m}_v$，1 atm)
+图4.13给出了小型液化器的细节。它由热-冷流(质量流量$\dot{m}_{he}$，压力10 atm)和冷-热氦气流($\dot{m}_v$，1 atm)
 和作为冷源的制冷机的一二级冷头组成。
 整个过程假设为理想的，也就是无压降；两个流之间是无温差的理想热交换。
 
@@ -700,7 +700,7 @@ h_g(6\ \mathrm{K},10\ \mathrm{atm})=x_\ell h_\ell(4.2\ \mathrm{K},1\ \mathrm{atm
 
 点$e$：二级冷头出口(J-T阀入口)：$T_e$。点d和点e之间，二级冷头从氦流中带走热量$Q_2$。
 
-点$f$：J-T阀出口：$T_f=4.22\ \mathrm{K};P_f=1\ \mathrm{atm};\.{m}_v;\dot{m}_{\ell p}$(液化质量流量)。
+点$f$：J-T阀出口：$T_f=4.22\ \mathrm{K};P_f=1\ \mathrm{atm};\dot{m}_v;\dot{m}_{\ell p}$(液化质量流量)。
 LHe到点g，由点箭头标识。
 
 \textbf{冷-热氦流}---图4.13中的虚线箭头
@@ -725,7 +725,7 @@ c) 对一台有二级冷头的制冷机，4.22 K时它的$Q_2$是多少？
 
 d) 在$T_b$ = 46 K和$T_c$ = 30 K ($P_b = P_c =$ 10 atm)时，计算30 K时一级冷头的制冷功率$Q_1$。
 
-e) 假设热交换器2是理想的，即对环境无热损耗，热-冷流($\.{m}_{he}$=1.0 kg/s)和冷-热流($\dot{m}_{v}$和$\dot{m}_{\ell r}$)之间的热交换是完全的，证明
+e) 假设热交换器2是理想的，即对环境无热损耗，热-冷流($\dot{m}_{he}$=1.0 kg/s)和冷-热流($\dot{m}_{v}$和$\dot{m}_{\ell r}$)之间的热交换是完全的，证明
 $\dot{m}_{\ell r}$=0.158 g/s，从而$\dot{m}_{\ell}$=0.044 g/s。假设$T_c=T_d$=30 K。
 
 f) 类似的，证明两个流之间的热交换器1的完全热交换与$\dot{m}_{\ell r}$=0.158 g/s一致。
@@ -822,12 +822,12 @@ g) 应用式4.10，我们可以得到理想压缩功率：
 P_s=\dot{m}_h\left(\frac{\gamma}{\gamma-1}\right)(P_jv_j)\left[\left(\frac{P_a}{P_j}\right)^{\frac{\gamma-1}{\gamma}}-1\right]\tag{S2.8}
 \end{equation*}
 式中，理想气体的$\gamma=C_p/C_v$是5/3；$v_i$是压缩机入口在$P_j$=1 atm时的比体积，对295 K的氦，
-该值$\simeq 6\ \mathrm{m^3/kg}$。代入$P_j$=1 atm$\simeq 1\times 10^5$ Pa，$P_a/P_j$=10，$\.{m}_h$=0.001 kg/s，
+该值$\simeq 6\ \mathrm{m^3/kg}$。代入$P_j$=1 atm$\simeq 1\times 10^5$ Pa，$P_a/P_j$=10，$\dot{m}_h$=0.001 kg/s，
 我们得到$P_s$=2.3 kW(或3马力)。
 上面的计算是针对理想气体的，实际的泵功率大概要到7 kW。
 
 当然，实际的小型氦液化器中，由于热交换的``不完全"以及热-冷流和冷-热流的压降，产液量必然小于理想液化器情况：
-$\.{m}_{\ell p}$以及$\.{m}_{\ell}$仅能达到理想情况的1/2。
+$\dot{m}_{\ell p}$以及$\dot{m}_{\ell}$仅能达到理想情况的1/2。
 
 
 \subsection{讨论4.7：制冷机 vs. 制冷回环器}
@@ -1547,16 +1547,16 @@ Q_{out}=\left[Ak(T)\frac{dT}{dz}\right]_z+\dot{m}_Ic_p(T)(T+\Delta T)
 Q_{I_o}=Ak(T_0)\frac{dT}{dz}\mid_{z=0}=\frac{k_0\rho_0I_{0}^{2}}{\dot{m}_Ic_{p0}}
 \end{equation}
 
-进入液体的功率$Q_{I_0}$以$\.{m}_I$的速率令液体汽化：
+进入液体的功率$Q_{I_0}$以$\dot{m}_I$的速率令液体汽化：
 \begin{equation}% 4.31a
 \dot{m}_I=\frac{Q_{I_o}}{h_L}
 \end{equation}
-式中，$h_L$是液氦的汽化潜热[K/kg]。联立是4.30和4.31a，解出$\.{m}_I$，有：
+式中，$h_L$是液氦的汽化潜热[K/kg]。联立是4.30和4.31a，解出$\dot{m}_I$，有：
 \begin{align*}% 4.31b
 \dot{m}_I=I_o\sqrt{\frac{k_0\rho_0}{c_{p0}h_L}} \tag{4.31b}
 \end{align*}
 
-将式4.31b给出的$\.{m}_I$代入式4.30，解出$Q_{I_o}/I_o$，有：
+将式4.31b给出的$\dot{m}_I$代入式4.30，解出$Q_{I_o}/I_o$，有：
 \begin{equation}% 4.32a
 \frac{Q_{I_o}}{I_o}=\sqrt{\frac{h_Lk_0\rho_0}{c_{p0}}}
 \end{equation}
@@ -1640,32 +1640,38 @@ A\tilde{k}\frac{d^2T}{dz^2}-\dot{m}_0\tilde{c}_p\frac{dT}{dz}=0
 \begin{equation}% 4.38a
 T(z)=T_0+\frac{h_L}{\tilde{c}_p}\left[\exp(\frac{\dot{m}_0\tilde{c}_pz}{A\tilde{k}})-1\right]
 \end{equation}
+
 于是：
 \begin{align*}% 4.38b
 T(\ell)\equiv T_\ell=T_0+\frac{h_L}{\tilde{c}_p}\left[\exp(\frac{\dot{m}_0\tilde{c}_p\ell}{A\tilde{k}})-1\right]\tag{4.38b}
 \end{align*}
-从方程4.38b中解出$\dot{m}_0\tilde{c}_p\ell/A\tilde{k}$，有：
+
+从式4.38b中解出$\dot{m}_0\tilde{c}_p\ell/A\tilde{k}$，有：
 \begin{equation}% 4.39a
 \frac{\dot{m}_0\tilde{c}_p\ell}{A\tilde{k}}=\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
 \end{equation}
+
 从式4.39a中，我们可以解出$\dot{m}_0$：
 \begin{align*}% 4.39b
-\dot{m}_0=\frac{\tilde{k}}{\tilde{c}_p\left(\frac{A}{\ell}\right)\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]\tag{4.39b}
+\dot{m}_0=\frac{\tilde{k}}{\tilde{c}_p}\left(\frac{A}{\ell}\right)\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right] \tag{4.39b}
 \end{align*}
+
 联立式4.39b和$Q_0=\dot{m}_0 h_L$，我们有：
 \begin{equation}% 4.40a
 Q_0=\frac{\tilde{k}h_L}{\tilde{c}_p}\left(\frac{A}{\ell}\right)\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
 \end{equation}
+
 对于优化的引线，有$(I_o \ell/A)_{ot}=\zeta_o$。于是：
 \begin{align*}% 4.40b
 Q_0=\frac{\tilde{k}h_L}{\tilde{c}_p}\left(\frac{I_o}{\zeta_o}\right)\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]\tag{4.40b}
 \end{align*}
+
 对于优化的气冷铜引线，$Q_0$和$Q_{I_o}$的比值可由下式给出：
 \begin{equation}% 4.41
 \frac{Q_0}{Q_{I_o}}=\frac{\tilde{k}}{\tilde{c}_p\zeta_o}\sqrt{\frac{h_Lc_{p0}}{k_0p_0}}\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right]
 \end{equation}
-将$\~{k}$=660 W/mK；$\tilde{c}_p\simeq$5.2 kJ/kg K；$T_{\ell}$=300 K；$T_0$=4 K；以及
-$\zeta_o\simeq2.3\times 10^7$  A/m代入方程4.11，有：
+将$\tilde{k}$=660 W/mK；$\tilde{c}_p\simeq$5.2 kJ/kg K；$T_{\ell}$=300 K；$T_0$=4 K；以及
+$\zeta_o\simeq2.3\times 10^7$  A/m代入式4.11，有：
 \begin{equation}% 4.42
 \frac{Q_0}{Q_{I_o}}\simeq 0.69
 \end{equation}
@@ -1677,8 +1683,9 @@ $\zeta_o\simeq2.3\times 10^7$  A/m代入方程4.11，有：
 \begin{equation}% 4.43a
 V_o=\frac{I_o}{A}\int_{0}^{\ell}\rho_{cu}dz
 \end{equation}
+
 有必要在引线长度$\ell$上作积分，因为铜的电阻率$\rho_{cu}$依赖于温度，也即随$z$变化。
-方程4.43a可以改写为：
+式4.43a可以改写为：
 \begin{align*}% 4.43b
 V_o=\tilde{\rho}_{cu}\left(\frac{I_o\ell}{A}\right)_{ot}=\tilde{\rho}_{cu}\zeta_o \tag{4.43b}
 \end{align*}
@@ -1686,15 +1693,16 @@ V_o=\tilde{\rho}_{cu}\left(\frac{I_o\ell}{A}\right)_{ot}=\tilde{\rho}_{cu}\zeta_
 \begin{equation}% 4.44
 \tilde{\rho}_{cu}=\frac{1}{\ell}\int_{0}^{\ell}\rho_{cu}dz\simeq\frac{1}{T_\ell-T_0}\int_{T_0}^{T_\ell}\rho_{cu}(T)dT
 \end{equation}
-方程4.44假设电流引线上的温度梯度是线性的。与方程4.43b和4.35b联立，其中$\~{\rho}_{cu}$的单位是$\Omega m$，我们有：
+
+式4.44假设电流引线上的温度梯度是线性的。与式4.43b和4.35b联立，其中$\tilde{\rho}_{cu}$的单位是$\Omega$ m，我们有：
 \begin{equation}% 4.45
 V_o\simeq2.3\times 10^7\tilde{\rho}_{cu}\ \mathrm{V}
 \end{equation}
 也即，对任意额定电流优化的引线的$V_{ot}$是相同的。
 
-对铜，$\~{\rho}_{cu}\sim 2.5\times 10^{−10}\ \mathrm{\Omega m}$ ($\sim$50 K之下)并且在
+对铜，$\tilde{\rho}_{cu}\sim 2.5\times 10^{−10}\ \mathrm{\Omega m}$ ($\sim$50 K之下)并且在
 $\sim$50 K以上时与温度呈线性，273 K时为$1.75\times 10^{−8}\ \mathrm{\Omega m}$。
-根据方程4.44，我们有：$\~{\rho}_{cu}\simeq 0.4\times 10^{-8}\ \mathrm{\Omega m}$。
+根据式4.44，我们有：$\tilde{\rho}_{cu}\simeq 0.4\times 10^{-8}\ \mathrm{\Omega m}$。
 优化引线在其额定电流运行时的压降与额定电流值无关；对铜引线，这个值$\sim$100 mV。
 这样，100 A引线在载流为100 A时，或10 kA引线在载流为10 kA时，都有$V_o\sim$100 mV；
 当热端被冷却---这在气冷引线中是很常见的---$V_{o}$将小于100 mV。
@@ -1854,7 +1862,7 @@ b) 证明，铜引线$z =\ell$处传导到FSV引线的热量，即$[Q_{in}]_{fs}
 \subsubsection{问题4.4之解}
 a) 利用式4.58，我们可以首先解出$dT/dz|_0$。然后，$[Q_{in}]_{fs}$为：
 \begin{align*}
-[Q_{in}]_{fs}=\tilde{k}[A_m]_{fs}\frac{dT}{dz\big|_0=[\dot{m}_h]_{fs}h_L \tag{S4.1}
+[Q_{in}]_{fs}=\tilde{k}[A_m]_{fs}\frac{dT}{dz}\big|_0=[\dot{m}_h]_{fs}h_L \tag{S4.1}
 \end{align*}
 
 由式4.58计算$dT/dz|_0$，将$[\alpha]_{fs}$代入式4.59，有：
@@ -2485,9 +2493,9 @@ $[Q_\ell]_{cs}^{n}$和$[Q_j]_{cs}^{n}$由岁S5.9和S5.14的变种给出：
 \end{align}
 
 \begin{align*}% 4.99
-[Q_j]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\big[&\frac{1}{2}[\alpha_\ell]_{cs}^{n}+\beta_{cs}^{n}\cot\beta_{cs}^{n}(1-\xi_{cs}) \\\notag
-&+\beta_{cs}^{n}\frac{e^{\frac{[\alpha_\ell]_{cs}^{n}\xi_{cs}}{2}}}{e^{\frac{[\alpha_\ell]_{cs}^{n}}{2}}\sin\beta_{cs}^{n}(1-\xi_{cs})}\big]
+[Q_j]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\left[\frac{1}{2}[\alpha_\ell]_{cs}^{n}+\beta_{cs}^{n}\cot\beta_{cs}^{n}(1-\xi_{cs}) +\beta_{cs}^{n}\frac{e^{\frac{[\alpha_\ell]_{cs}^{n}\xi_{cs}}{2}}}{e^{\frac{[\alpha_\ell]_{cs}^{n}}{2}}\sin\beta_{cs}^{n}(1-\xi_{cs})}\right] \tag{4.99}
 \end{align*}
+
 因为这里$\beta_{cs}^n (1-\xi_{cs})=\pi/2$，方程4.98和4.99简化为：
 \begin{equation}% 4.100
 [Q_\ell]_{cs}^{n}=\frac{[\tilde{kA}]_{cs}^{n}(T_\ell-T_{cs})}{\ell}\times\frac{1}{2}[\alpha_\ell]_{cs}^{n}
@@ -2530,7 +2538,7 @@ $[A_n]_{cs}=[A_n]_{fs}=1.735\ \mathrm{cm^2}$(表4.13)。于是：
 \end{align*}
 于是，通过计算4.81，得到$([\alpha_\ell]_{cs}^2/4$：
 \begin{align*}
-\frac{1}{4}([\alpha_\ell]_{cs}^{n})^2=2.303
+\frac{1}{4}\left([\alpha_\ell]_{cs}^{n}\right)^2=2.303
 \end{align*}
 
 \begin{table}[htbp]\small
@@ -2653,7 +2661,7 @@ $Q_{in}\sim$7.2 W：$\.{m}_h\sim$0.35 g/s($\sim$7.2 W/20.4 J/g)。77.3 K和293 K
 b) 代入$e^{\alpha_{cu}}=1846$，$\sin(159.669^\circ)$=0.3474，$\theta_{\ell_{cu}}$=216 K，以及
 其他参数到方程4.89，有：
 \begin{align*}% 4.89
-Q_o&=\frac{\tilde{k}_{cu}A_{cu}}{\ell_{cu}}\frac{d\theta(\zeta)}{d\zeta}\mid_0=\frac{\tilde{k}_{cu}A_{cu}\theta_{\ell_{cu}}\beta_{cu}}{\ell_{cu}e^{\alpha_{cu}}\sin\beta_{cu}}\simeq 0 \\ \tag{4.89}
+Q_o&=\frac{\tilde{k}_{cu}A_{cu}}{\ell_{cu}}\frac{d\theta(\zeta)}{d\zeta}\bigg|_0=\frac{\tilde{k}_{cu}A_{cu}\theta_{\ell_{cu}}\beta_{cu}}{\ell_{cu}e^{\alpha_{cu}}\sin\beta_{cu}}\simeq 0 \\ \tag{4.89}
 &=\frac{(4\ \mathrm{W/cmK})(1.19\ \mathrm{cm^2})(216\ \mathrm{K})(2.787)}{(38\ \mathrm{cm})(1846)(0.3474)}\\
 &\simeq 0.118\ \mathrm{W}\simeq 0
 \end{align*}
@@ -2773,19 +2781,19 @@ $\.{m}_{br}(I)$是气流量，依赖于电流。对于优化的黄铜引线，�
 
 为在$I>I_o$时解出方程4.105，我们做如下简化：
 \begin{enumerate}
-	\item 整根引线视为单一实体，平均温度为$\~{T}$。进一步，我们假定平均温度等于中点($z=\ell/2$)温度。
-	$C_{br}(T)$和$c_p(T)$也假定为常数，分别等于$\~{C}_{br}$和$\~{c}_p$。
-	\item 方程4.105中的$dT/dz$假定为常数，$\~{T}/(\ell/2)=2\~{T}/\ell$。
-	\item 对$I>I_o$，$\.{m}_{br}(I)=\nu_{br}I[1+\eta_{br}(I-I_o)]$，其中$\nu_{br}$和$\eta_{br}$都是常数。
-	\item $\rho_{br}(T)=[\rho_0]_{br}+\gamma_{br}(\~{T}-\~{T}_o)$，其中$\~{T}_o$是中点温度的初始值($I=I_o$时)；
+	\item 整根引线视为单一实体，平均温度为$\tilde{T}$。进一步，我们假定平均温度等于中点($z=\ell/2$)温度。
+	$C_{br}(T)$和$c_p(T)$也假定为常数，分别等于$\tilde{C}_{br}$和$\tilde{c}_p$。
+	\item 方程4.105中的$dT/dz$假定为常数，$\tilde{T}/(\ell/2)=2\tilde{T}/\ell$。
+	\item 对$I>I_o$，$\dot{m}_{br}(I)=\nu_{br}I[1+\eta_{br}(I-I_o)]$，其中$\nu_{br}$和$\eta_{br}$都是常数。
+	\item $\rho_{br}(T)=[\rho_0]_{br}+\gamma_{br}(\tilde{T}-\tilde{T}_o)$，其中$\tilde{T}_o$是中点温度的初始值($I=I_o$时)；
 	对黄铜，$[\rho_0]_{br}=21\ \mathrm{\Omega m}$，$\gamma_{br}=74\ \mathrm{p\Omega m/K}$[4.86]。
 \end{enumerate}
 
-在这些假设下，方程4.105变为：
+在这些假设下，式4.105变为：
 \begin{equation}% 4.106
 A\tilde{C}_{br}\frac{d\tilde{T}(t)}{dt}=-\upsilon_{br}I[1+\eta_{br}(I-I_o)]\tilde{c}_p\frac{\tilde{T}(t)}{(\ell/2)}+\frac{[\rho_0]_{br}}{A}I^2+\frac{\gamma_{br}}{A}[\tilde{T}(t)-\tilde{T}_o]I^2
 \end{equation}
-将$\theta(T)=\~{T}(t)-\~{T}_o$代入方程4.106，我们有$\frac{d\theta(t)}{dt}$，并可解出$\theta(t)$：
+将$\theta(T)=\tilde{T}(t)-\tilde{T}_o$代入方程4.106，我们有$\frac{d\theta(t)}{dt}$，并可解出$\theta(t)$：
 \begin{subequations}
 	\begin{align}
 \frac{d\theta(t)}{dt}=&\frac{1}{A^2\ell\tilde{C}_{br}}(\{2\upsilon_{br}\tilde{c}_pAI[1+\eta_{br}(I-I_o)]-\gamma_{br}\ell I^2\}\theta(t) \\\notag
@@ -2813,7 +2821,7 @@ e) 证明，在过电流区域，热输入$[Q_I]_{br}$由下式给出：
 [Q_I]_{br}=h_L\upsilon_{br}I[1+\eta_{br}(I-I_o)]
 \end{equation}
 
-f) 证明方程4.102给出的$[\frac{I_o\ell}{A}]_{br}$也可以由下式给出：
+f) 证明式4.102给出的$[\frac{I_o\ell}{A}]_{br}$也可以由下式给出：
 \begin{equation}% 4.111
 \left[\frac{I_o\ell}{A}\right]_{br}=\frac{2\tilde{c}_p\tilde{T}_o}{[\rho_0]_{br}}\sqrt{\frac{[k_0]_{br}[\rho_0]_{br}}{h_Lc_{p0}}}
 \end{equation}
@@ -2823,7 +2831,7 @@ g) 整个引线上的压降$V_{br}(t)$为：
 \begin{equation}% 4.112
 V_{br}(t)=V_o(\tilde{T}_o)+\Delta V(I)(1-e^{-t/\tau_j(I)})
 \end{equation}
-式中，$V_o(\~{T}_o)$是载流为$I_o$时的稳态引线电压。证明$\Delta V(I)$在常数$I$下，为：
+式中，$V_o(\tilde{T}_o)$是载流为$I_o$时的稳态引线电压。证明$\Delta V(I)$在常数$I$下，为：
 \begin{equation}% 4.113
 \Delta V(I)=\frac{\gamma_{br}\ell}{A}\{\frac{[\rho_0]_{br}\ell I^2-2\upsilon_{br}\tilde{c}_pA\tilde{T}_oI[1+\eta_{br}(I-I_o)]}{2\upsilon_{br}\tilde{c}_pAI[1+\eta_{br}(I-I_o)]-\gamma_{br}\ell I^2}\}I
 \end{equation}
@@ -2837,45 +2845,49 @@ h) 考虑一条额定电流25 kA的黄铜引线，工作于周期运行模式，
 
 
 \subsubsection{问题4.7之解}
-a) 根据方程4.35，黄铜引线的$[\frac{I_o\ell}{A}]_{br}$为：
+a) 根据式4.35，黄铜引线的$[\frac{I_o\ell}{A}]_{br}$为：
 \begin{align*}
 \left[\frac{I_o\ell}{A}\right]_{br}=\sqrt{\frac{c_{p0}[k_0]_{br}[\rho_0]_{br}}{h_L}}\int_{T_0}^{T_1}\frac{dT}{\rho_{br}(T)} \tag{S7.1}
 \end{align*}
-向方程S7.14中代入$c_{p0}$=6.0 kJ/kgK和其他物性值，有：
+
+向式S7.14中代入$c_{p0}$=6.0 kJ/kgK和其他物性值，有：
 \begin{align*}% 4.102
 \left[\frac{I_o\ell}{A}\right]_{br}=\sqrt{\frac{(6.0\ \mathrm{kJ/kgK})(22\ \mathrm{W/mK})(21\ \mathrm{n\Omega m})}{(20.7\ \mathrm{kJ/kg})}}(0.97\times10^{10}\ \mathrm{K/\Omega m})
 \end{align*}
+
 于是：
 \begin{align*}
 \left[\frac{I_o\ell}{A}\right]_{br}\equiv[\zeta_o]_{br}\simeq 0.35\times 10^7\ \mathrm{A/m} \tag{4.102}
 \end{align*}
 
-b) 由铜引线的方程4.32a，我们有：
+b) 由铜引线的式4.32a，我们有：
 \begin{align*}% 4.103
 \left[\frac{Q_{I_o}}{A}\right]_{br}=\sqrt{\frac{h_L[k_0]_{br}[\rho_0]_{br}}{c_{p0}}}=\sqrt{\frac{(20.4\ \mathrm{kJ/kg})(22\ \mathrm{W/mK})(21\ \mathrm{n\Omega m})}{(6.0\ \mathrm{kJkgK})}} \tag{S7.2}
 \end{align*}
+
 于是：
 \begin{align*}
 \left[\frac{Q_{I_o}}{A}\right]_{br}\simeq 1.25\ \mathrm{mW/A} \tag{4.103}
 \end{align*}
 
-c) 由方程4.41，代入$\~{k}_{br}$ =55 W/mK(表4.18)和其他值，包括$\ln[\~{c}_p(T_\ell−T_0)/h_L+ 1]\simeq 4.32$，我们有：
+c) 由式4.41，代入$\tilde{k}_{br}$ =55 W/mK(表4.18)和其他值，包括$\ln[\tilde{c}_p(T_\ell−T_0)/h_L+ 1]\simeq 4.32$，我们有：
 \begin{align*}
 \left[\frac{Q_0}{Q_{I_o}}\right]_{br}&=\frac{\tilde{k}_{br}}{\tilde{c}_p[\zeta_o]_{br}}\sqrt{\frac{h_Lc_{p0}}{[k_0]_{br}[\rho_0]_{br}}}\times\ln\left[\frac{\tilde{c}_p(T_\ell-T_0)}{h_L}+1\right] \\\tag{S7.3}
 &\simeq\frac{(55\ \mathrm{W/mK})}{(5.2\ \mathrm{kJ/kgK})(0.36\times 10^7\ \mathrm{A/m})}\sqrt{\frac{(20.7\ \mathrm{kJ/kg})(6.0\ \mathrm{kJ/kgK})}{(22\ \mathrm{W/mK})(21\ \mathrm{n\Omega m})}}\times 4.32
 \end{align*}
+
 于是，
 \begin{equation}%4.104
 \left[\frac{Q_0}{Q_{I_o}}\right]_{br}\simeq 0.21 \tag{4.104}
 \end{equation}
 
-d) 因为$\Delta \theta(I_o)$=0 (没有过流)，根据方程4.107a，我们有：
+d) 因为$\Delta \theta(I_o)$=0 (没有过流)，根据式4.107a，我们有：
 \begin{align*}
 [\rho_0]_{br}\ell I_{o}^{2}-2\upsilon_{br}\tilde{c}_pA\tilde{T}_oI_o=0 \tag{S7.4}
 \end{align*}
-从方程S7.4，我们得到：
+从式S7.4，我们得到：
 \begin{align*}% 4.109
-\unboldmath=\frac{[rho_0]_{br}\ell I_o}{2\tilde{c}_pA\tilde{T}_o} \tag{4.109}
+\upsilon_{br}=\frac{[rho_0]_{br}\ell I_o}{2\tilde{c}_pA\tilde{T}_o} \tag{4.109}
 \end{align*}
 
 e) 由$[Q_{I_o}]_{br}=\.{m}_{br}h_L$和$\.{m}_{br}(I)=\upsilon_{br}I[1+\eta_{br}(I-I_o)]$(假设3)：
@@ -2883,28 +2895,28 @@ e) 由$[Q_{I_o}]_{br}=\.{m}_{br}h_L$和$\.{m}_{br}(I)=\upsilon_{br}I[1+\eta_{br}
 [Q_{I_o}]_{br}=h_L\upsilon_{br}I[1+\eta_{br}(I-I_o)] \tag{4.110}
 \end{align*}
 
-f) 由方程4.109中的$[\frac{I_o\ell}{A}]_{br}$和方程4.110在$I=I_o$下的$[Q_{I_o}]_{br}$：
+f) 由式4.109中的$[\frac{I_o\ell}{A}]_{br}$和式4.110在$I=I_o$下的$[Q_{I_o}]_{br}$：
 \begin{align*}
 \left[\frac{I_o\ell}{A}\right]_{br}=\upsilon_{br}\frac{2\tilde{c}_p\tilde{T}_o}{[\rho_0]_{br}} \tag{S7.5a}
 \end{align*}
 \begin{align*}
 [Q_{I_o}]_{br}=h_L\upsilon_{br}I_o \tag{S7.5b}
 \end{align*}
-联立方程S7.5a和S7.5b，我们有：
+联立式S7.5a和S7.5b，我们有：
 \begin{align*}
 \left[\frac{I_o\ell}{A}\right]_{br}=\left[\frac{[Q_{I_o}]}{I_o}\right]_{br}\frac{2\tilde{c}_p\tilde{T}_o}{h_L[\rho_0]_{br}} \tag{S7.6}
 \end{align*}
-将方程S7.2中的$[\frac{[Q_{I_o}]}{I_o}]_{br}$代入方程S7.6，有：
+将式S7.2中的$[\frac{[Q_{I_o}]}{I_o}]_{br}$代入式S7.6，有：
 \begin{align*}% 4.111
 \left[\frac{I_o\ell}{A}\right]_{br}=\frac{2\tilde{c}_p\tilde{T}_o}{[\rho_0]_{br}}\sqrt{\frac{[k_0]_{br}[\rho_0]_{br}}{h_Lc_{p0}}} \tag{4.111}
 \end{align*}
-我们可以确定方程4.111中唯一不知道的参数$\~{T}_o$的值：
+我们可以确定式4.111中唯一不知道的参数$\tilde{T}_o$的值：
 \begin{align*}
 \tilde{T}_o&=\frac{[\rho_0]_{br}}{2\tilde{c}_p}\left[\frac{I_o\ell}{A}\right]_{br}\sqrt{\frac{h_Lc_{p0}}{[k_0]_{br}[\rho_0]_{br}}} \\ \tag{S7.7}
 &=\frac{(21\ \mathrm{n\Omega m})}{2(5.19\ \mathrm{kJ/kgK})}(0.358\times 10^7\ \mathrm{A/m})\sqrt{\frac{(20.7\ \mathrm{kJ/kg})(6.0\ \mathrm{kJ/kgK})}{(22\ \mathrm{W/mK})(21\ \mathrm{n\Omega m})}}\\
 &\simeq 120\ \mathrm{K}
 \end{align*}
-120 K是非常合理的一个值，因为$\~{T}_o$假定为整条引线在$I_o$时的稳态平均温度，即
+120 K是非常合理的一个值，因为$\tilde{T}_o$假定为整条引线在$I_o$时的稳态平均温度，即
 冷端约4 K，热端约293 K，其线性平均值为149 K。
 
 g) 由于黄铜的电阻率增加$\Delta\rho_{br}(I)$，引起给定过流水平$I$ 下的引线电压升高。
@@ -2912,21 +2924,21 @@ g) 由于黄铜的电阻率增加$\Delta\rho_{br}(I)$，引起给定过流水平
 \begin{align*}
 \Delta V(I)=\frac{\ell\Delta\rho_{br}(I)}{A}I=\frac{\gamma_{br}\ell\Delta\theta(I)}{A}I \tag{S7.8}
 \end{align*}
-将方程4.108a中给出的$\Delta \theta(I)$代入，有：
+将式4.108a中给出的$\Delta \theta(I)$代入，有：
 \begin{align*}% 4.113
 \Delta V(I)=\frac{\gamma_{br}\ell}{A}\{\frac{[\rho_0]_{br}\ell I^2-2\upsilon_{br}\tilde{c}_pA\tilde{T}_oI[1+\eta_{br}(I-I_o)]}{2\upsilon_{br}\tilde{c}_pAI[1+\eta_{br}(I-I_o)]-\gamma_{br}\ell T^2}\}I \tag{4.113}
 \end{align*}
 
 h) 对于一条25 kA气冷黄铜引线，载有过电流$I$=75 kA。将$h_L$=20.7 kJ/kg；$\nu_{br}=6.13\times 10^{-8}$ kg/sA；
-$\eta_{br}=2.2\times 10^{-5}\ \mathrm{A^{-1}}$；$I_o$=25 kA代入方程4.110，我们有：
+$\eta_{br}=2.2\times 10^{-5}\ \mathrm{A^{-1}}$；$I_o$=25 kA代入式4.110，我们有：
 \begin{align*}% 4.110
 [Q_{I_o}]_{br}&=h_L\upsilon_{br}I[1+\eta_{br}(I-I_o)] \\ \tag{4.110}
 &=(20.7\ \mathrm{kJ/kg})(6.13\times 10^{-8}\ \mathrm{kg/sA})(75\ \mathrm{kA}) \\
 &\times[1+(2.2\times 10^{-5}\ \mathrm{A^{-1}})(75\ \mathrm{kA-}-25\ \mathrm{kA})]\\
 &\simeq 200\ \mathrm{W}
 \end{align*}
-根据方程4.103，在$I_o$ = 25 kA时有$[Q_{I_o}]_{br}$= 31.5 W。
-这条25 kA黄铜引线在无载流时，由方程4.104可得$[Q_0]_{br}\simeq 0.21[Q_{I_o}]_{br}\simeq$6.6 W。
+根据式4.103，在$I_o$ = 25 kA时有$[Q_{I_o}]_{br}$= 31.5 W。
+这条25 kA黄铜引线在无载流时，由式4.104可得$[Q_0]_{br}\simeq 0.21[Q_{I_o}]_{br}\simeq$6.6 W。
 于是，75 kA持续300 s加上25 kA持续1800 s注入到冷池中的总能量$E_{br}$为：
 \begin{align*}
 E_{br}\simeq(300\ \mathrm{s})(200\ \mathrm{W})+(1,800\ \mathrm{s})(6.6\ \mathrm{W}) 
@@ -2942,7 +2954,7 @@ E_{br}\simeq(300\ \mathrm{s})(200\ \mathrm{W})+(1,800\ \mathrm{s})(6.6\ \mathrm{
 
 这里我们给出一对气冷黄铜引线的实验结果[4.87]。各引线有相同的的有效长度($\ell$= 54 cm)、横截面积(A =
 0.0613 $\mathrm{cm^2}$)，这和额定280 A的优化气冷铜引线是一致的。
-由方程4.102可知，此黄铜引线额定值$[I_o]_{br}$应为：
+由式4.102可知，此黄铜引线额定值$[I_o]_{br}$应为：
 \begin{align*}
 [I_o]_{br}=\frac{[\zeta_o]_{br}}{\zeta_o}I_o 
 \simeq\frac{(0.35\times 10^7\ \mathrm{A/m})}{(2.3\times 10^7\ \mathrm{A/m})}(280\ \mathrm{A})\sim 40\ \mathrm{A}
@@ -2968,7 +2980,7 @@ E_{br}\simeq(300\ \mathrm{s})(200\ \mathrm{W})+(1,800\ \mathrm{s})(6.6\ \mathrm{
 	\centering
 	\includegraphics[scale=0.6]{chpt4/figs/fig4.26.eps}
 	\caption{恒定过电流水平130 A、150 A和203 A下的$\Delta V(i)$ vs. $t$曲线[4.87]。实线：实验值；
-		点线：方程4.108b和4.113的分析值，其中$A=0.0613\ \mathrm{cm^2}$；$\ell$=54 cm；$c_{p0}$=5.19 J/gK；$b=7.4\ \mathrm{n \Omega cm/K}$。}
+		点线：式4.108b和4.113的分析值，其中$A=0.0613\ \mathrm{cm^2}$；$\ell$=54 cm；$c_{p0}$=5.19 J/gK；$b=7.4\ \mathrm{n \Omega cm/K}$。}
 \end{figure}
 
 
@@ -2977,13 +2989,13 @@ E_{br}\simeq(300\ \mathrm{s})(200\ \mathrm{W})+(1,800\ \mathrm{s})(6.6\ \mathrm{
 就像讨论4.14中的气冷铜电流引线，氦气可以用于跨越两个温度冷却有效长度
 (冷端$T_0$，热端$T_\ell$)$\ell$和横截面为$A$的支撑棒，从而极大的降低传导热损耗。
 
-假设棒材料的热导率是温度无关的，为$\~{k}$；氦和棒之间的传热是理想的
+假设棒材料的热导率是温度无关的，为$\tilde{k}$；氦和棒之间的传热是理想的
 我们可以证明棒在无氦冷却时从$T_\ell$到$T_0$的传导热输入$Q_{\bar{vp}}$与有氦冷却的热输入$Q_{vp}$之比为：
 \begin{equation}% 4.114
 \frac{Q_{\bar{vp}}}{Q_{vp}}=\frac{c_{p0}(T_\ell-T_0)}{h_L\ln\left[\frac{c_{p0}(T_\ell-T_0)}{h_L}+1\right]}
 \end{equation}
 我们发现，$\frac{Q_{\bar{vp}}}{Q_{vp}}$与棒的尺寸和热导率无关。
-代入$c_{p0}$=6.0 J/g K, $h_L$=20.4 J/g, $T_0$=4 K,$T_\ell$=300 K，方程4.114给出：
+代入$c_{p0}$=6.0 J/g K, $h_L$=20.4 J/g, $T_0$=4 K,$T_\ell$=300 K，式4.114给出：
 \begin{align*}
 \frac{Q_{\bar{vp}}}{Q_{vp}}=\frac{(6.0\ \mathrm{J/gK})(296\ \mathrm{K})}{(20.4\ \mathrm{J/g})\ln(88)}=19.4\sim 20
 \end{align*}
@@ -3000,11 +3012,11 @@ $Q_{\bar{vp}}$和$Q_{vp}$都正比于$\tilde{k}$。
 
 \begin{table}[htbp]\small
 \centering
-\caption{G-10,304不锈钢,黄铜,紫铜的结``结构"数据}                                                                                   
+\caption{G-10,304不锈钢,黄铜,紫铜的``结构"数据}                                                                                   
 \begin{tabular}{|l|c|c|c|c|c|}
 \hline
 \multirow{2}{*}{材料} & \multicolumn{3}{c|}{$\tilde{k}\left[\ \mathrm{W/mK}\right]$} & $\sigma_U\left[\ \mathrm{MPa}\right]$ & $\tilde{k}/\sigma_U\left[\ \mathrm{m^2/Ks}\right]\dagger$ \\ \cline{2-6} 
-& 4-80 K & 4-300 K & 80-300 K & 295 K &(80-300 K) \\ \hline\hline
+& 4-80 K & 4-300 K & 80-300 K & 295 K &(80-300 K) \\ \hline
 G-10 & 0.25 & 0.50 & 0.56 & 280 & $2\times10^{-9}$ \\ \hline
 304不锈钢 & 4.5 & 11 & 13 & 1300 & $10\times10^{-9}$ \\ \hline
 黄铜 & 24 & 55 & 65 & 400 & $2\times10^{-7}$ \\ \hline
